@@ -1,0 +1,95 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{relsize}
+ \usepackage[hyphenbreaks]{breakurl}
+ 
+ \newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+
+
+\title{A Few Notes On Taylor Series}
+\author{David Meyer \\ dmm@1-4-5.net}
+
+\date{Last update: \today}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+TBD
+
+\section{Taylor Series}
+TBD
+
+\section{Taylor Inequality}
+Suppose the Taylor polynomial $T(x) = T_n(x) + R_n(x)$, where $T_n(x) =  \sum\limits _{i=0}^{n}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}$
+and  $R_n(x) =  \sum\limits _{i=n}^{\infty}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}$. 
+
+\bigskip
+\noindent
+Then if $|f^{(n)}| \leq M$ for $|x - a| \leq d$ then the remainder $R_n(x)$ of the
+Taylor series satisfies the inequality
+
+\bigskip
+\begin{equation*}
+|R_n(x)|  \leq \frac{M}{(n+1)!} |x -a|^{n+1}
+\end{equation*}
+
+\bigskip
+\noindent
+for $|x-a| \leq d$, where $M$ and $d$ are some constants.
+
+\bigskip
+\noindent
+{\bf Sketch of Proof: }
+
+\end{document} 
+ 
