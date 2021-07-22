@@ -64,28 +64,45 @@
 \maketitle
 
 \section{Introduction}
-TBD
 
 \section{Taylor Series}
-TBD
+\label{sec:taylor_series}
 
 \section{Taylor Inequality}
-Suppose the Taylor polynomial $T(x) = T_n(x) + R_n(x)$, where $T_n(x) =  \sum\limits _{i=0}^{n}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}$
-and  $R_n(x) =  \sum\limits _{i=n}^{\infty}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}$. 
+As we saw in Section \ref{sec:taylor_series} the Taylor series for some function $f(x)$ is
+
+\medskip
+\begin{equation}
+f(x) = \sum\limits _{i=0}^{\infty}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}
+\label{eqn:taylor_series}
+\end{equation}
+
+
+\bigskip
+\noindent
+We can divide Equation \ref{eqn:taylor_series} into the Taylor polynomial $T_n(x)$ and an infinite series $R_n(x)$, called the \emph{remainder}, such that  
+
+\medskip
+\begin{equation*}
+f(x) = T_n(x) + R_n(x)
+\end{equation*}
+
+\bigskip
+\noindent
+Here  $T_n(x) =  \sum\limits _{i=0}^{n}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}$ and  $R_n(x) =  \!\! \sum\limits _{i=n+1}^{\infty}{\frac {f^{(i)}(a)}{i!}}(x-a)^{i}$. 
 
 \bigskip
 \noindent
 Then if $|f^{(n)}| \leq M$ for $|x - a| \leq d$ then the remainder $R_n(x)$ of the
 Taylor series satisfies the inequality
 
-\bigskip
 \begin{equation*}
-|R_n(x)|  \leq \frac{M}{(n+1)!} |x -a|^{n+1}
+\big | R_n(x) \big |  \leq \frac{M}{(n+1)!} |x -a|^{n+1}
 \end{equation*}
 
 \bigskip
 \noindent
-for $|x-a| \leq d$, where $M$ and $d$ are some constants.
+for $|x-a| \leq d$, where $M$ and $d$ are constants.
 
 \bigskip
 \noindent
