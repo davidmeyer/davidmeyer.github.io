@@ -114,7 +114,7 @@ polynomial of degree $n$ for $f(x)$ centered at $a$. That is
 \begin{equation*}
 \begin{array}{lllll}
 f(x)
-&=& \sum\limits _{k=0}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}                                                                                                                    &\mathrel{\#} \text{Taylor series estimate of $f(x)$}                      \\  
+&=& \sum\limits _{k=0}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}                                                                                                                    &\mathrel{\#} \text{Taylor series of $f(x)$}                                    \\  
 [12pt]
 &\Rightarrow& T_n(x) =  \sum\limits _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}                                                                                          &\mathrel{\#} \text{definition of the Taylor polynomial $T_n(x)$}  \\  
 [12pt]
@@ -128,9 +128,10 @@ f(x)
 
 \bigskip
 \noindent
-{\setstretch{1.95}The last line above, $R_n(x) = \frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}$, follows because the first $n$ terms of $f^{(n+1)}(x)= 0$ (they turn 
-into constants whose derivative is zero) and $f^{(k)}(a) = 0$ for $k > n + 1$ since for $k > n + 1$ $f^{(k)}(a)$ has an $(x-a)^k$ term which is zero at $x = a$.
-}
+\doublespace
+The last line above, $R_n(x) = \sum\limits _{k=n+1}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k} =\frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}$, follows 
+because for $k > n+1$ $f^{(k)}(a) = 0$ ($f^{(k)}(x)$ for $k > n+1$ has a $(x-a)^k$ term which is zero at $x = a$).
+\singlespace
 
 \bigskip
 \noindent
