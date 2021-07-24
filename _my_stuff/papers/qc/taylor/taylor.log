@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  24 JUL 2021 13:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  24 JUL 2021 13:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1116,14 +1116,6 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 68
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-LaTeX Warning: Reference `sec:taylor_series' on page 1 undefined on input line 
-77.
-
-
-LaTeX Warning: Reference `eqn:T(x)' on page 1 undefined on input line 108.
-
-
 Overfull \hbox (79.4994pt too wide) detected at line 127
 []
  []
@@ -1131,35 +1123,17 @@ Overfull \hbox (79.4994pt too wide) detected at line 127
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `eqn:T(x)' on page 2 undefined on input line 149.
-
-
-LaTeX Warning: Reference `eqn:R(x)' on page 2 undefined on input line 149.
-
 [2]
 No file taylor.bbl.
 [3] (./taylor.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `taylor.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `taylor.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  B78F32ED5E9FEDF9C65FE05416FC400D;345.
+Package rerunfilecheck Info: File `taylor.out' has not changed.
+(rerunfilecheck)             Checksum: B78F32ED5E9FEDF9C65FE05416FC400D;345.
  ) 
 Here is how much of TeX's memory you used:
- 36089 strings out of 478994
- 831761 string characters out of 5858184
+ 36093 strings out of 478994
+ 831796 string characters out of 5858184
  1267166 words of memory out of 5000000
- 52938 multiletter control sequences out of 15000+600000
+ 52942 multiletter control sequences out of 15000+600000
  413114 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,11n,89p,722b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1177,10 +1151,10 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on taylor.pdf (3 pages, 146449 bytes).
+Output written on taylor.pdf (3 pages, 146618 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
