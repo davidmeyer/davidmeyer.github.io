@@ -122,13 +122,13 @@ f(x)
 [12pt]
 &\Rightarrow& R_n(x) =  \sum\limits _{k=0}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k} - \sum\limits _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k} &\mathrel{\#} \text{expand $f(x)$ and $T_n(x)$}                           \\
 [12pt]
-&\Rightarrow& R_n(x) = \frac{f^{(n+1)}(a)}{(n+1)\!} (x-a)^{(n+1)}                                                                                                            &\mathrel{\#} \text{see comment below}
+&\Rightarrow& R_n(x) = \frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}                                                                                                             &\mathrel{\#} \text{see comment below}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-{\setstretch{1.95}The last line above, $R_n(x) = \frac{f^{(n+1)}(a)}{(n+1)\!} (x-a)^{(n+1)}$, follows because the first $n$ terms of $f^{(n+1)}(x)= 0$ (they turn 
+{\setstretch{1.95}The last line above, $R_n(x) = \frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}$, follows because the first $n$ terms of $f^{(n+1)}(x)= 0$ (they turn 
 into constants whose derivative is zero) and $f^{(k)}(a) = 0$ for $k > n + 1$ since for $k > n + 1$ $f^{(k)}(a)$ has an $(x-a)^k$ term which is zero at $x = a$.
 }
 
@@ -137,7 +137,7 @@ into constants whose derivative is zero) and $f^{(k)}(a) = 0$ for $k > n + 1$ si
 So now we can see that the Taylor remainder $R_n(x)$ is a kind of error in our Taylor polynomial $T_n(x)$'s  estimate of $f(x)$: 
 
 \begin{equation}
-R_n(x) = f(x) - T_n(x) = \frac{f^{(n+1)}(a)}{(n+1)\!} (x-a)^{(n+1)}
+R_n(x) = f(x) - T_n(x) = \frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}
 \label{eqn:R(x)}
 \end{equation}
 
