@@ -60,7 +60,7 @@ The Basel problem \cite{wiki:basel} is a problem in mathematical analysis with r
 Leonhard Euler in 1734. The Basel problem asks whether the infinite sum
 
 \begin{equation*}
-\mathlarger{\sum\limits_{n = 1}^{\infty} \frac{1}{n^2}}
+\mathlarger{\sum\limits_{n = 1}^{\infty} \frac{1}{n^2} = \frac{1}{1^2}  + \frac{1}{2^2} + \frac{1}{3^2} + \cdots}
 \end{equation*}
 
 \bigskip
@@ -181,22 +181,33 @@ So now we know that
 
 \bigskip
 \noindent
-Euler also noticed that since
+Said another way
+
+\begin{equation}
+\sin(x) = x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg )
+\label{eqn:sine}
+\end{equation}
+
+\bigskip
+\noindent
+Euler also noticed that since the MacLaurin series for $\sin(x)$ is 
 
 \begin{equation*}
 \sin(x) = \sum\limits_{n = 0}^\infty (-1)^2 \frac{x^{(2n+1)}} {(2n+1)!}
 \end{equation*}
 
+\bigskip
 \noindent
 if we multiply by $\sin(x)$ by $\frac{1}{x}$ term by term we get 
 
+\bigskip
 \begin{equation*}
 \frac{\sin(x)}{x} = \sum\limits_{n = 1}^\infty (-1)^n \Bigg [\frac{1}{x} \Bigg ]\frac{x^{(2n+1)}} {(2n+1)!} = \sum\limits_{n = 1}^\infty (-1)^n \frac{x^{2n}} {(2n+1)!} 
 \end{equation*}
 
 \bigskip
 \noindent
-Looking at the coefficients of the $x^2$ terms of $\frac{\sin(x)}{x}$, we see that in the MacLauren Series we have $\frac{1}{3!} = \frac{1}{6}$ and in the polynomial we have
+Looking at the coefficients of the $x^2$ terms of $\frac{\sin(x)}{x}$, we see that in the MacLauren series we have $\frac{1}{3!} = \frac{1}{6}$ and in the polynomial we have
 
 \begin{equation*}
 \dfrac{1}{\pi^2} \sum\limits_{n=1}^\infty \dfrac{1}{n^2}
@@ -221,6 +232,26 @@ and multiplying both sides by $\pi^2$ we get
 \bigskip
 \noindent
 which amazingly is Euler's identity.
+
+\section{Interesting Consequences}
+The first thing we can notice is what happens when we plug $\frac{\pi}{2}$ into Equation \ref{eqn:sine}. Noticing that $\sin \big (\frac{\pi}{2} \big ) = 1$, we see that
+
+\begin{equation*}
+1 = \frac{\pi}{2}  \prod\limits_{n =1}^\infty \bigg (1 - \frac{x^2}{4n^2} \bigg )
+\end{equation*}
+
+\bigskip
+\noindent
+Rearranging a bit we get
+
+\begin{equation*}
+\frac{\pi}{2}  = \prod\limits_{n =1}^\infty \Bigg  ( \frac{(2n)(2n)}{(2n-1)(2n+1)}  \Bigg )
+\end{equation*}
+
+\bigskip
+\noindent
+that is, the Wallis Product \cite{wiki:wallis}.
+
 
 
 
