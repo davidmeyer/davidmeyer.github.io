@@ -10,6 +10,8 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./basel.pdf">A few notes on the Basel problem</a>
+<br>
 <li><a href="./dirac_delta.pdf">A few notes on the Dirac Delta Function and
 the Laplace Transform</a>
 <br>
@@ -60,7 +62,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 06.25.2021 by dmm@1-4-5.net
+<i>Last Update: 08.06.2021 by dmm@1-4-5.net
 
 
 
