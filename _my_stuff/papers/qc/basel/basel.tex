@@ -91,15 +91,15 @@ was
 
 \section{Euler's Solution}
 So how did Euler solve the Basel problem? The summary is that his extraordinary mathematical intuition led him to look at the MacLauren series \cite{wiki:taylor}
-for $\sin(x)$ and comparing its coefficients to a polynomial constructed from the zeros a polynomial for $\sin x$ (as indicated by the Fundamental 
-Theory of Algebra \cite{wiki:ftoa} or more specifically, Weierstrass factorization \cite{wiki:weierstrass}. So how exactly did Euler arrive at his solution?
+for $\sin(x)$ and comparing its coefficients to a polynomial constructed from the zeros a polynomial for $\sin(x)$ (as indicated by the Fundamental 
+Theory of Algebra \cite{wiki:ftoa} or more specifically, Weierstrass factorization \cite{wiki:weierstrass}. So how exactly did Euler arrive at his fantastic solution?
 
 \subsection{MacLaurin (Taylor) Series for $\sin(x)$}
-This story begins with the  MacLaurin series for $f(x) = \sin(x)$. Here we are using the $f^{(n)}$ notation for the $n^{\text{th}}$ derivative of $f$ where $f^{(0)} = f$.
+The story begins with the  MacLaurin series for $f(x) = \sin(x)$. Here we are using the $f^{(n)}$ notation for the $n^{\text{th}}$ derivative of $f$ where $f^{(0)} = f$.
 
 \begin{equation*}
 \begin{array}{lllll}
-\sin x
+\sin(x)
 &=& \sum\limits_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n                                                                                                                  &\mathrel{\#} \text{MacLaurin series for $\sin(x)$}              \\
 [12pt]
 &=& \frac{f^{(0)}(0)}{0!} x^0 +  \frac{f^{(1)}(0)}{1!} x^1 +  \frac{f^{(2)}(0)}{2!} x^2 + \frac{f^{(3)}(0)}{3!} x^3 + \cdots                     &\mathrel{\#} \text{expansion of terms}                               \\
@@ -114,12 +114,12 @@ This story begins with the  MacLaurin series for $f(x) = \sin(x)$. Here we are u
 
 \bigskip
 \noindent
-Euler's key insight was to observe that if we can find a polynomial for $sin(x)$ then the coefficients of terms of the same power in the MacLaurin series and the polynomial 
+Euler's key insight was to observe that if we can find a polynomial for $\sin(x)$ then the coefficients of terms of the same power in the MacLaurin series and the polynomial 
 must equal one another.
 
-\subsection{Euler's Polynomial for $sin(x)$}
+\subsection{Euler's Polynomial for $\sin(x)$}
 We know from the Fundamental Theory of Algebra \cite{wiki:ftoa} and the Weierstrass Factorization Theorem \cite{wiki:weierstrass} that every polynomial has at least complex root (0).
-As a result if there is a polynomial for $sin(x)$ and knowing that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write down a polynomial for $\sin(x)$:
+As a result if there is a polynomial for $\sin(x)$ and knowing that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write down a polynomial for $\sin(x)$:
 
 \begin{equation*}
 \sin(x) = A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots
@@ -127,7 +127,8 @@ As a result if there is a polynomial for $sin(x)$ and knowing that the zeros of 
 
 \bigskip
 \noindent
-Here the tricky part is finding $A$. So how did Euler do it? Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, or said a different way
+Here the tricky part is finding $A$. So how did Euler do it? Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, or said in a different way\footnote{Euler is said to have said that 
+"$\sin(x) = x$ when $x$ is infinitesimally small".} 
 
 \begin{equation*}
 \lim_{x \to 0} \frac{\sin(x)}{x} = 1
@@ -242,10 +243,39 @@ The first thing we can notice is what happens when we plug $\frac{\pi}{2}$ into 
 
 \bigskip
 \noindent
-Rearranging a bit we get
+If we rearrange a bit we see that
 
 \begin{equation*}
-\frac{\pi}{2}  = \prod\limits_{n =1}^\infty \Bigg  ( \frac{(2n)(2n)}{(2n-1)(2n+1)}  \Bigg )
+\begin{array}{lllll}
+ \sin(x)
+&=&  x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )                                                                                        &\qquad \mathrel{\#}  \text{Equation \ref{eqn:sine}} \\
+[10pt]
+&=& x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )                                                                             &\qquad \mathrel{\#}  \text{multiply out and get common denominator } \\
+[14pt]
+&\Rightarrow& \sin \bigg (\dfrac{\pi}{2} \bigg ) = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg ) &\qquad \mathrel{\#}  \text{set $x = \frac{\pi}{2}$} \\
+[14pt]
+&\Rightarrow& 1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg (\pi^2 \dfrac{ \Big [ n^2 - \frac{1}{4}  \Big ]} {n^2 \pi^2} \Bigg ) &\qquad \mathrel{\#} \text{$\sin \bigg (\dfrac{\pi}{2} \bigg ) =1 $, actor out $\pi^2$} \\
+[14pt]
+&\Rightarrow&  1 = \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{n^2 - \frac{1}{4}} {n^2} \Bigg )                                     &\qquad \mathrel{\#}  \text{cancel $\pi^2$} \\
+[14pt]
+&\Rightarrow& 1 = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \bigg ( \mathlarger{ \frac {4n^2 - 1} {4n^2}} \bigg )                             &\qquad \mathrel{\#}  \text{multiply through by $\frac{1}{4}$} \\
+[14pt]
+ &\Rightarrow&  \dfrac{2}{\pi} = \prod\limits_{n=1}^\infty \bigg ( \mathlarger{ \frac {4n^2 - 1} {4n^2}} \bigg )                              &\qquad \mathrel{\#}  \text{multiply both sides by $\frac{2}{\pi}$} \\
+ [14pt]
+ &\Rightarrow& \frac{\pi}{2}  =  \prod\limits_{n=1}^\infty \bigg ( \mathlarger{ \frac  {4n^2} {4n^2 - 1}} \bigg )                             &\qquad \mathrel{\#}  \text{solve for $\frac{\pi}{2}$}  \\
+[14pt]
+&\Rightarrow& \frac{\pi}{2}  = \prod\limits_{n =1}^\infty \Bigg  ( \mathlarger{\frac{(2n)(2n)}{(2n-1)(2n+1)}} \Bigg )                    &\qquad \mathrel{\#} \text{factor numerator and denominator}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So we wind up with
+
+\begin{equation*}
+\frac{\pi}{2}  
+= \prod\limits_{n =1}^\infty \Bigg  ( \frac{(2n)(2n)}{(2n-1)(2n+1)}  \Bigg ) 
+= \Big ( \frac {2}{1} \cdot \frac {2}{3} \Big ) \cdot \Big ( \frac {4}{3} \cdot \frac {4}{5} \Big ) \cdot \Big (\frac {6}{5} \cdot \frac {6}{7} \Big ) \cdot \Big (\frac {8}{7} \cdot \frac {8}{9} \Big ) \cdots 
 \end{equation*}
 
 \bigskip
