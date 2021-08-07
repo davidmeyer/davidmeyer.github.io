@@ -181,18 +181,16 @@ So now we know that
 \begin{array}{lllll}
 \sin (x) 
 &=&  A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots                                                                                                                          &\mathrel{\#} \text{definition of the polynomial}                              \\   
-[14pt]                                                     
+[15pt]                                                     
 &=& \dfrac{x (x - \pi)(x+\pi)(x-2\pi)(x+2\pi)(x-3\pi)(x+3\pi) \cdots}{(-\pi^2)(-2^2\pi^2)(-3^2\pi^2) \cdots}                                                                      &\mathrel{\#} \text{polynomial for $\frac{\sin(x)}{x}$ as $x \to 0$}  \\
-[14pt]
+[15pt]
 &=& \dfrac{x (x^2 - \pi^2)(x^2-4\pi^2)(x^2 - 9\pi^2) \cdots}{(-\pi^2)(-2^2\pi^2)(-3^2\pi^2) \cdots}                                                                                &\mathrel{\#} \text{multiply through}                                                \\
-[14pt]
+[15pt]
 &=& x \cdot \Bigg [\dfrac{(\pi^2 - x^2)}{\pi^2} \Bigg ] \cdot  \Bigg [\dfrac{(4 \pi^2 -  x^2)}{4 \pi^2} \Bigg ]  \cdot  \Bigg [\dfrac{(9 \pi^2 - x^2)}{9 \pi^2} \Bigg ]  \cdots &\mathrel{\#} \text{collect terms}                             \\
-[14pt]
+[15pt]
 &=& x \cdot  \Bigg [1 - \dfrac{x^2}{\pi^2} \Bigg ] \cdot \Bigg [1 - \dfrac{x^2}{4\pi^2} \Bigg ] \cdot  \Bigg [1 - \dfrac{x^2}{9\pi^2} \Bigg ] \cdots           &\mathrel{\#} \text{simplify}                                                             \\
-[14pt]
-&\Rightarrow& \dfrac{\sin(x)}{x} = \Bigg [1 - \dfrac{x^2}{\pi^2} \Bigg ] \cdot \Bigg [1 - \dfrac{x^2}{4\pi^2} \Bigg ] \cdot  \Bigg [1 - \dfrac{x^2}{9\pi^2} \Bigg ] \cdots &\mathrel{\#} \text{divide both sides by $x$} \\
-[14pt]
-&\Rightarrow& \mathlarger{\sin(x) = x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                  &\mathrel{\#} \text{Euler's product formular for $\sin(x)$} 
+[15pt]]
+&=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                  &\mathrel{\#} \text{Euler's product formula for $\sin(x)$} 
 \end{array}
 \end{equation*}
 
@@ -252,8 +250,9 @@ and multiplying both sides by $\pi^2$ we get
 which amazingly is Euler's solution to the Basel problem.
 
 \section{Interesting Consequences}
-The first thing we can notice is what happens when we plug $\frac{\pi}{2}$ into Equation \ref{eqn:sine}. Noticing that $\sin \big (\frac{\pi}{2} \big ) = 1$ and with
-a bit of rearranging  we see that
+One of the first interesting consequences of Euler's product formula for $\sin(x)$ (Equation \ref{eqn:sine})  is that when we plug $\frac{\pi}{2}$ into it  we get the 
+Wallis Product \cite{wiki:wallis}. Why? Well, by noticing that $\sin \big (\frac{\pi}{2} \big ) = 1$ and with a bit of 
+rearranging we see that
 
 
 \begin{equation*}
@@ -297,7 +296,7 @@ So we wind up with
 
 \bigskip
 \noindent
-that is, the Wallis Product \cite{wiki:wallis}.
+that is, the Wallis Product.
 
 \newpage
 \bibliographystyle{plain}
