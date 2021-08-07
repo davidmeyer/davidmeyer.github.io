@@ -243,26 +243,27 @@ a bit of rearranging  we see that
 \begin{equation*}
 \begin{array}{lllll}
  \sin(x)
-&=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}                                                          &\qquad \mathrel{\#}  \text{Equation \ref{eqn:sine}} \\
+&=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}                                              &\qquad \mathrel{\#}  \text{Equation \ref{eqn:sine}} \\
 [15pt]
-&=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                               &\qquad \mathrel{\#}  \text{multiply out, get common denominator } \\
+&=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                   &\qquad \mathrel{\#}  \text{get common denominator, multiply out } \\
 [15pt]
-&\Rightarrow& \mathlarger{\sin \bigg (\dfrac{\pi}{2} \bigg ) = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg )} &\qquad \mathrel{\#}  \text{set $x = \frac{\pi}{2}$} \\
+&\Rightarrow& \mathlarger{\sin \bigg (\dfrac{\pi}{2} \bigg ) = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg )} 
+                                                                                                                                                                               &\qquad \mathrel{\#}  \text{set $\mathlarger{x = \frac{\pi}{2}}$} \\
 [15pt]
 &\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg (\pi^2 \dfrac{ \big ( n^2 - \frac{1}{4}  \big )} {n^2 \pi^2} \Bigg )} 
-                                                                                                                                                                                           &\qquad \mathrel{\#} \text{$\sin \bigg (\dfrac{\pi}{2} \bigg ) =1 $, factor out $\pi^2$} \\
+                                                                                                                                                                               &\qquad \mathrel{\#} \text{$\sin \bigg (\dfrac{\pi}{2} \bigg ) =1 $, factor out $\pi^2$} \\
 [15pt]
 &\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg (\pi^2 \dfrac{ \big ( \frac{4n^2 - 1}{4}  \big )} {n^2 \pi^2} \Bigg )} &\qquad \mathrel{\#} \text{get common denomintor} \\
 [15pt]
-&\Rightarrow&  \mathlarger{1 = \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{n^2 - \frac{1}{4}} {n^2} \Bigg )}       &\qquad \mathrel{\#}  \text{cancel $\pi^2$} \\
+&\Rightarrow&  \mathlarger{1 = \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \big ( \frac{4n^2 - 1}{4}  \big )} {n^2} \Bigg )}      &\qquad \mathrel{\#}  \text{cancel $\pi^2$} \\
 [15pt]
-&\Rightarrow& \mathlarger{1 = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \bigg ( \frac {4n^2 - 1} {4n^2} \bigg )}                    &\qquad \mathrel{\#}  \text{multiply through by $\frac{1}{4}$} \\
+&\Rightarrow& \mathlarger{1 = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \bigg ( \frac {4n^2 - 1} {4n^2} \bigg )}         &\qquad \mathrel{\#}  \text{multiply right side by $\mathlarger{\frac{\frac{1}{n^2}}{\frac{1}{n^2}}}$} \\
 [15pt]
- &\Rightarrow&  \mathlarger{\dfrac{2}{\pi} = \prod\limits_{n=1}^\infty \bigg (\frac {4n^2 - 1} {4n^2} \bigg )}                      &\qquad \mathrel{\#}  \text{multiply both sides by $\frac{2}{\pi}$} \\
+ &\Rightarrow&  \mathlarger{\dfrac{2}{\pi} = \prod\limits_{n=1}^\infty \bigg (\frac {4n^2 - 1} {4n^2} \bigg )}            &\qquad \mathrel{\#}  \text{multiply both sides by $\mathlarger{\frac{2}{\pi}}$} \\
  [15pt]
- &\Rightarrow& \mathlarger{\frac{\pi}{2}  =  \prod\limits_{n=1}^\infty \bigg ( \frac  {4n^2} {4n^2 - 1} \bigg )}                     &\qquad \mathrel{\#} \text{$x = y \Rightarrow \dfrac{1}{x} = \dfrac{1}{y}$ where $x,y \neq 0$} \\
+ &\Rightarrow& \mathlarger{\frac{\pi}{2}  =  \prod\limits_{n=1}^\infty \bigg ( \frac  {4n^2} {4n^2 - 1} \bigg )}           &\qquad \mathrel{\#} \text{$x = y \Rightarrow \dfrac{1}{x} = \dfrac{1}{y}$ where $x,y \neq 0$} \\
 [15pt]
-&\Rightarrow& \mathlarger{\frac{\pi}{2}  = \prod\limits_{n =1}^\infty \Bigg  (\frac{(2n)(2n)}{(2n-1)(2n+1)}  \Bigg )}           &\qquad \mathrel{\#} \text{factor numerator and denominator}
+&\Rightarrow& \mathlarger{\frac{\pi}{2}  = \prod\limits_{n =1}^\infty \Bigg  (\frac{(2n)(2n)}{(2n-1)(2n+1)}  \Bigg )}  &\qquad \mathrel{\#} \text{factor numerator and denominator}
 \end{array}
 \end{equation*}
 
