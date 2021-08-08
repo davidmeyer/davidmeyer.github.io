@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{wiki:basel}
 {Wikipedia contributors}.
@@ -7,6 +7,14 @@
   \url{https://en.wikipedia.org/w/index.php?title=Basel_problem&oldid=1023994680},
   2021.
 \newblock [Online; accessed 6-August-2021].
+
+\bibitem{wiki:entire_function}
+{Wikipedia contributors}.
+\newblock Entire function --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Entire_function&oldid=1034353116},
+  2021.
+\newblock [Online; accessed 8-August-2021].
 
 \bibitem{wiki:ftoa}
 {Wikipedia contributors}.
