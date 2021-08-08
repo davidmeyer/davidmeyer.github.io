@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  7 AUG 2021 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 AUG 2021 08:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -724,54 +724,63 @@ Overfull \hbox (81.6211pt too wide) detected at line 195
 []
  []
 
-[3]
-Overfull \hbox (26.78606pt too wide) detected at line 285
+[3] [4] [5] [6]
+Overfull \hbox (26.78606pt too wide) detected at line 368
 []
  []
 
-[4] [5] (./basel.bbl
+[7] (./basel.bbl
 Underfull \hbox (badness 3792) in paragraph at lines 4--10
 \OT1/cmtt/m/n/10.95 en . wikipedia . org / w / index . php ? title = Basel _ pr
 oblem & oldid = 1023994680$[]\OT1/cmr/m/n/10.95 , 2021.
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 54--61
+Underfull \hbox (badness 1968) in paragraph at lines 30--36
+[]\OT1/cmr/m/n/10.95 Wikipedia con-trib-u-tors.  New-ton's iden-ti-ties --- Wik
+ipedia, the free en-cy-clo-
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 62--69
 []\OT1/cmr/m/n/10.95 Wikipedia con-trib-u-tors.  Weier-strass fac-tor-iza-tion 
 the-o-rem --- Wikipedia, the
  []
 
-) [6] (./basel.aux)
+) [8] (./basel.aux)
 Package rerunfilecheck Info: File `basel.out' has not changed.
-(rerunfilecheck)             Checksum: 99EBA8F60329F323DF6D35EF8CC116B2;873.
+(rerunfilecheck)             Checksum: 3C52D1BBA127C6E7D1D0E7986EC59D42;1215.
  ) 
 Here is how much of TeX's memory you used:
- 15853 strings out of 478994
- 274251 string characters out of 5858184
- 595597 words of memory out of 5000000
- 33049 multiletter control sequences out of 15000+600000
- 417327 words of font info for 85 fonts, out of 8000000 for 9000
+ 15875 strings out of 478994
+ 274487 string characters out of 5858184
+ 595641 words of memory out of 5000000
+ 33060 multiletter control sequences out of 15000+600000
+ 419510 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,77p,310b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,77p,346b,737s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on basel.pdf (6 pages, 178149 bytes).
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on basel.pdf (8 pages, 212512 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 189 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
