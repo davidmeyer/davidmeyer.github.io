@@ -98,6 +98,7 @@ In particular, the harmonic series is $\zeta(1)$ and the Basel problem is $\zeta
 
 
 \section{Euler's Solution}
+\label{sec:eulers_solution}
 So how did Euler solve the Basel problem? The summary is that his extraordinary mathematical intuition led him to look at the Maclauren series \cite{wiki:taylor}
 for $\sin(x)$ and comparing its coefficients to a polynomial constructed from the zeros of $\sin(x)$ (as indicated by the Fundamental Theorem of 
 Algebra \cite{wiki:ftoa} or more specifically, the Weierstrass Factorization Theorem \cite{wiki:weierstrass}). So how exactly did Euler arrive at his 
@@ -128,8 +129,9 @@ Euler's key insight was to observe that if we can find a polynomial for $\sin(x)
 must equal one another.
 
 \subsection{Euler's Polynomial for $\sin(x)$}
-We know from the Fundamental Theory of Algebra \cite{wiki:ftoa} and the Weierstrass Factorization Theorem \cite{wiki:weierstrass} that every polynomial has at least complex root.
-As a result if there is a polynomial for $\sin(x)$ and knowing that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write down a polynomial for $\sin(x)$:
+As we saw in Section \ref{sec:eulers_solution} every polynomial has at least one complex root and that a finite polynomial can be formed from the linear product of its roots.. 
+Euler assumed that the same must be true for infinite polynomials (or at least, for $\frac{\sin(x)}{x}$). So knowing that the zeros of $\sin(x)$ occur at 
+$0, \pm \pi, \pm 2\pi, \hdots$ allows us to directly write down a polynomial for $\sin(x)$:
 
 \begin{equation*}
 \sin(x) = A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots
