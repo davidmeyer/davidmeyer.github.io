@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 AUG 2021 19:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 AUG 2021 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -715,17 +715,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 139.
 
 [2]
-Overfull \hbox (39.60234pt too wide) detected at line 186
+Overfull \hbox (39.60234pt too wide) detected at line 190
 []
  []
 
 
-Overfull \hbox (81.6211pt too wide) detected at line 206
+Overfull \hbox (81.6211pt too wide) detected at line 210
 []
  []
 
 [3] [4] [5] [6]
-Overfull \hbox (35.91106pt too wide) detected at line 404
+Overfull \hbox (35.91106pt too wide) detected at line 408
 []
  []
 
@@ -794,7 +794,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on basel.pdf (8 pages, 204017 bytes).
+Output written on basel.pdf (8 pages, 204033 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams
