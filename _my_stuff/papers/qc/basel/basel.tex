@@ -99,10 +99,13 @@ In particular, the harmonic series is $\zeta(1)$ and the Basel problem is $\zeta
 
 \section{Euler's Solution}
 \label{sec:eulers_solution}
-So how did Euler solve the Basel problem? The summary is that his extraordinary mathematical intuition led him to look at the Maclauren series \cite{wiki:taylor}
-for $\sin(x)$ and comparing its coefficients to a polynomial constructed from the zeros of $\sin(x)$ (as indicated by the Fundamental Theorem of 
-Algebra \cite{wiki:ftoa} or more specifically, the Weierstrass Factorization Theorem \cite{wiki:weierstrass}). So how exactly did Euler arrive at his 
-fantastic solution?
+So how did Euler solve the Basel problem? The summary is that Euler's extraordinary mathematical intuition led him to consider the Maclauren series \cite{wiki:taylor}
+for $\sin(x)$ and to compare its coefficients to the coefficients of a polynomial constructed from the zeros of $\sin(x)$. We know that we can construct such a polynomial
+by the Fundamental Theorem of Algebra \cite{wiki:ftoa} or more specifically, by the Weierstrass Factorization Theorem \cite{wiki:weierstrass}. 
+
+\bigskip
+\noindent
+So how exactly did Euler arrive at his fantastic solution?
 
 \subsection{Maclaurin (Taylor) Series for $\sin(x)$}
 The story begins with the  Maclaurin series for $\sin(x)$. This series was well-known in Euler's time. 
@@ -126,11 +129,15 @@ $f^{(0)} = f$.
 
 \bigskip
 \noindent
-One of Euler's key insights was to observe that if we can find a polynomial for $\sin(x)$ then the coefficients of terms of the same power in the Maclaurin series and the polynomial 
-must equal one another. So how did Euler find a polynomial for $\sin(x)$?
+As mentioned above, one of Euler's key insights was to observe that if we can find a polynomial for $\sin(x)$ then the coefficients of terms of the same power 
+in the Maclaurin series and the polynomial must equal one another. 
+
+\bigskip
+\noindent
+So how did Euler find a polynomial for $\sin(x)$?
 
 \subsection{Euler's Polynomial for $\sin(x)$}
-As we saw in Section \ref{sec:eulers_solution} every non-constant single-variable polynomial with complex coefficients has at least one complex root and that a (possibly infinite) 
+We saw in Section \ref{sec:eulers_solution} that every non-constant single-variable polynomial with complex coefficients has at least one complex root and that a (possibly infinite) 
 polynomial can be constructed  from the linear product of a function's  roots. Since we know that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write 
 down a polynomial for $\sin(x)$:
 
