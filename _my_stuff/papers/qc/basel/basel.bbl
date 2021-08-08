@@ -1,11 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{proofwikibasels}
-{Wiki contributors}.
-\newblock Basel problem -- proof wikia.
-\newblock \url{https://proofwiki.org/wiki/Basel_Problem}, 2021.
-\newblock [Online; accessed 8-August-2021].
-
 \bibitem{wiki:basel}
 {Wikipedia contributors}.
 \newblock Basel problem --- {Wikipedia}{,} the free encyclopedia.
@@ -72,5 +66,11 @@
   \url{https://en.wikipedia.org/w/index.php?title=Weierstrass_factorization_theorem&oldid=1008988155},
   2021.
 \newblock [Online; accessed 6-August-2021].
+
+\bibitem{proofwikibasels}
+{WikiProof Contributors}.
+\newblock Basel problem -- proof wiki.
+\newblock \url{https://proofwiki.org/wiki/Basel_Problem}, 2021.
+\newblock [Online; accessed 8-August-2021].
 
 \end{thebibliography}
