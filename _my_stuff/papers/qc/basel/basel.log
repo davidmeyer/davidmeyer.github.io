@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 AUG 2021 10:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 AUG 2021 11:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -531,7 +531,11 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
-) (./basel.aux)
+) (./basel.aux
+
+LaTeX Warning: Label `eqn:sine' multiply defined.
+
+)
 \openout1 = `basel.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
@@ -686,46 +690,46 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 107.
 
 
-Overfull \hbox (87.15492pt too wide) detected at line 124
+Overfull \hbox (76.24562pt too wide) detected at line 125
 []
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 131.
+(hyperref)                removing `math shift' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 131.
+(hyperref)                removing `\mathop' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 131.
+(hyperref)                removing `\mathgroup' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 131.
+(hyperref)                removing `\symoperators' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 131.
+(hyperref)                removing `\@ifnextchar' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 131.
+(hyperref)                removing `math shift' on input line 132.
 
 [2]
-Overfull \hbox (48.92384pt too wide) detected at line 176
+Overfull \hbox (39.60234pt too wide) detected at line 178
 []
  []
 
 
-Overfull \hbox (81.6211pt too wide) detected at line 197
+Overfull \hbox (81.6211pt too wide) detected at line 198
 []
  []
 
 [3] [4] [5] [6]
-Overfull \hbox (26.78606pt too wide) detected at line 376
+Overfull \hbox (26.78606pt too wide) detected at line 398
 []
  []
 
@@ -754,13 +758,16 @@ the-o-rem --- Wikipedia, the
  []
 
 ) [8] (./basel.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `basel.out' has not changed.
 (rerunfilecheck)             Checksum: 4C3CF4A5D562759964894D0A24A3F796;1213.
  ) 
 Here is how much of TeX's memory you used:
  15878 strings out of 478994
  274568 string characters out of 5858184
- 595762 words of memory out of 5000000
+ 595803 words of memory out of 5000000
  33062 multiletter control sequences out of 15000+600000
  419164 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -782,7 +789,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on basel.pdf (8 pages, 204095 bytes).
+Output written on basel.pdf (8 pages, 203725 bytes).
 PDF statistics:
  193 PDF objects out of 1000 (max. 8388607)
  161 compressed objects within 2 object streams
