@@ -2,7 +2,7 @@
 
 \bibitem{wiki:basel}
 {Wikipedia contributors}.
-\newblock Basel problem --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Basel Problem --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Basel_problem&oldid=1023994680},
   2021.
@@ -10,7 +10,7 @@
 
 \bibitem{wiki:entire_function}
 {Wikipedia contributors}.
-\newblock Entire function --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Entire Function --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Entire_function&oldid=1034353116},
   2021.
@@ -18,8 +18,8 @@
 
 \bibitem{wiki:ftoa}
 {Wikipedia contributors}.
-\newblock Fundamental theorem of algebra --- {Wikipedia}{,} the free
-  encyclopedia.
+\newblock {Fundamental Theorem of Algebra --- {Wikipedia}{,} The Free
+  Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Fundamental_theorem_of_algebra&oldid=1023272575},
   2021.
@@ -27,8 +27,8 @@
 
 \bibitem{wiki:harmonic}
 {Wikipedia contributors}.
-\newblock Harmonic series (mathematics) --- {Wikipedia}{,} the free
-  encyclopedia.
+\newblock {Harmonic Series (mathematics) --- {Wikipedia}{,} The Free
+  Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Harmonic_series_(mathematics)&oldid=1031084300},
   2021.
@@ -36,15 +36,23 @@
 
 \bibitem{wiki:newton_identies}
 {Wikipedia contributors}.
-\newblock Newton's identities --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Newton's Identities --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Newton%27s_identities&oldid=1029582702},
   2021.
 \newblock [Online; accessed 8-August-2021].
 
+\bibitem{wiki:number_theory}
+{Wikipedia contributors}.
+\newblock {Number Theory --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Number_theory&oldid=1034192174},
+  2021.
+\newblock [Online; accessed 8-August-2021].
+
 \bibitem{wiki:zeta}
 {Wikipedia contributors}.
-\newblock Riemann zeta function --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Riemann Zeta Function --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Riemann_zeta_function&oldid=1036808000},
   2021.
@@ -52,7 +60,7 @@
 
 \bibitem{wiki:taylor}
 {Wikipedia contributors}.
-\newblock Taylor series --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Taylor Series --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Taylor_series&oldid=1033135703},
   2021.
@@ -60,7 +68,7 @@
 
 \bibitem{wiki:wallis}
 {Wikipedia contributors}.
-\newblock Wallis product --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Wallis Product --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Wallis_product&oldid=1015306367},
   2021.
@@ -68,8 +76,8 @@
 
 \bibitem{wiki:weierstrass}
 {Wikipedia contributors}.
-\newblock Weierstrass factorization theorem --- {Wikipedia}{,} the free
-  encyclopedia.
+\newblock {Weierstrass Factorization Theorem --- {Wikipedia}{,} The Free
+  Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Weierstrass_factorization_theorem&oldid=1008988155},
   2021.
@@ -77,7 +85,7 @@
 
 \bibitem{proofwikibasels}
 {WikiProof Contributors}.
-\newblock Basel problem -- proof wiki.
+\newblock {Basel Problem -- Proof Wik}.
 \newblock \url{https://proofwiki.org/wiki/Basel_Problem}, 2021.
 \newblock [Online; accessed 8-August-2021].
 

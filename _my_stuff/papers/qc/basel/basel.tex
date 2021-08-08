@@ -56,12 +56,12 @@
 \maketitle
 
 \section{Introduction}
-The Basel problem \cite{wiki:basel} is an important problem in number theory that was first posed by Pietro Mengoli in 1650  and solved by 
-Leonhard Euler in 1734. 
+The Basel Problem \cite{wiki:basel} is an important problem in number theory \cite{wiki:number_theory} that was first posed by Pietro 
+Mengoli in 1650  and solved by Leonhard Euler in 1734. 
 
 \bigskip
 \noindent
-The Basel problem asks whether the infinite sum
+The Basel Problem asks whether the infinite sum
 
 \begin{equation*}
 \mathlarger{\sum\limits_{n = 1}^{\infty} \frac{1}{n^2} = \frac{1}{1^2}  + \frac{1}{2^2} + \frac{1}{3^2} + \cdots}
@@ -69,7 +69,7 @@ The Basel problem asks whether the infinite sum
 
 \bigskip
 \noindent
-evaluates to a finite number and if it does, what does it converge to? An example of a related infinite series that does
+converges to a finite number and if it does, what does it converge to? An example of a related infinite series that does
 not converge is the harmonic series \cite{wiki:harmonic}:
 
 \begin{equation*}
@@ -78,7 +78,7 @@ not converge is the harmonic series \cite{wiki:harmonic}:
 
 \bigskip
 \noindent
-The Basel problem resisted solution for some 84 years before the then 26 year old Euler finally solved it. 
+The Basel Problem resisted solution for some 84 years before the then 26 year old Euler finally solved it. 
 Euler's surprising solution is
 
 \bigskip
@@ -89,17 +89,17 @@ Euler's surprising solution is
 
 \bigskip
 \noindent
-Note that both the harmonic series and the Basel problem are instances of the famous Riemann zeta function \cite{wiki:zeta}, $\zeta(s)$. 
+Note that both the harmonic series and the Basel Problem are instances of the famous Riemann zeta function \cite{wiki:zeta}, $\zeta(s)$. 
 In particular, the harmonic series is $\zeta(1)$ and the Basel problem is $\zeta(2)$. For example
 
 \begin{equation*}
-\mathlarger{ \zeta(2) = \sum\limits_{n = 1}^{\infty} \frac{1}{n^2} = \frac{1}{1^2}  + \frac{1}{2^2} + \frac{1}{3^2} + \cdots}
+\mathlarger{ \zeta(2) = \sum\limits_{n = 1}^{\infty} \frac{1}{n^2} = \frac{1}{1^2}  + \frac{1}{2^2} + \frac{1}{3^2} + \cdots = \frac{\pi^2}{2}}
 \end{equation*}
 
 
 \section{Euler's Solution}
 \label{sec:eulers_solution}
-So how did Euler solve the Basel problem? The summary is that Euler's extraordinary mathematical intuition led him to consider the Maclauren series \cite{wiki:taylor}
+So how did Euler solve the Basel Problem? The summary is that Euler's extraordinary mathematical intuition led him to consider the Maclauren series \cite{wiki:taylor}
 for $\sin(x)$ and to compare its coefficients to the coefficients of a polynomial constructed from the zeros of $\sin(x)$. We know that we can construct such a polynomial
 from the Fundamental Theorem of Algebra \cite{wiki:ftoa} and more specifically from the Weierstrass Factorization Theorem \cite{wiki:weierstrass}. 
 
@@ -108,7 +108,7 @@ from the Fundamental Theorem of Algebra \cite{wiki:ftoa} and more specifically f
 So how exactly did Euler arrive at his fantastic solution?
 
 \subsection{Maclaurin (Taylor) Series for $\sin(x)$}
-The story begins with the  Maclaurin series for $\sin(x)$. This series was well-known in Euler's time. 
+The story begins with the  Maclaurin series \cite{wiki:taylor} for $\sin(x)$. This series was well-known in Euler's time. 
 In the following we are using the $f^{(n)}$ notation for the $n^{\text{th}}$ derivative of $f$, noting that 
 $f^{(0)} = f$. 
 
@@ -162,6 +162,7 @@ Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, that i
 \noindent
 Note that this limit occurs at the zero root of $\sin(x)$.  Now, we also know that
 
+\bigskip
 \begin{equation*}
 \lim_{x \to 0} \dfrac{x (x - \pi)(x+\pi)(x - 2\pi)(x + 2\pi)(x - 3\pi)(x + 3\pi) \cdots}{x} = (-\pi^2)(-(2\pi)^2)(-(3\pi)^2) \cdots
 \end{equation*}
@@ -224,7 +225,7 @@ and so
 
 \bigskip
 \noindent
-But we also know from the Maclaurin expansion of $\frac{\sin(x)}{x}$ is  
+But we also know that the Maclaurin series for $\frac{\sin(x)}{x}$ is  
 
 \bigskip
 \begin{equation*}
@@ -276,9 +277,8 @@ and multiplying both sides by $- \pi^2$ we get
 \end{equation*}
 
 \bigskip
-\bigskip
 \noindent
-which amazingly is Euler's solution to the Basel problem. 
+which amazingly is Euler's solution to the Basel Problem. 
 
 \newpage
 \section{Summary of Euler's Solution of the Basel Problem}
@@ -302,8 +302,8 @@ in the polynomial for $\sin(x)$.}
 
 \bigskip
 \noindent
-The Weierstrass Factorization Theorem \cite{wiki:weierstrass} asserts that every entire function \cite{wiki:entire_function} can be represented
-as a (possibly infinite) product involving its zeroes. So Euler (correctly) assumed that it must be possible to represent $\sin(x)$ as an infinite
+We also know that the Weierstrass Factorization Theorem \cite{wiki:weierstrass} tells us that every entire function \cite{wiki:entire_function} can be represented
+as a (possibly infinite) product involving its zeroes. So Euler correctly assumed that it must be possible to represent $\sin(x)$ as an infinite
 product of linear factors  given by its roots. Using this machinery and knowing that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we see that
 
 \begin{equation*}
@@ -352,7 +352,7 @@ term that means
 
 \bigskip
 \noindent
-Multiplying both sides of this equation by $-\pi^2$ gives Euler's solution to the Basel problem: 
+Multiplying both sides of this equation by $-\pi^2$ gives Euler's solution to the Basel Problem: 
 
 \bigskip
 \begin{equation*}
@@ -361,7 +361,7 @@ Multiplying both sides of this equation by $-\pi^2$ gives Euler's solution to th
 
 \bigskip
 \noindent
-Today many proofs of Euler's solution to Basel problem that are considered, at least by some,  to be more rigorous that Euler's proof exist. 
+Today many proofs of Euler's solution to Basel Problem that are considered, at least by some,  to be more rigorous than Euler's proof exist. 
 See for example \cite{proofwikibasels}.
 
 
@@ -378,7 +378,7 @@ rearranging we see that
  \sin(x)
 &=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}                                              &\qquad \mathrel{\#}  \text{Equation \ref{eqn:sine}} \\
 [15pt]
-&=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                   &\qquad \mathrel{\#}  \text{get common denominator, multiply out } \\
+&=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                   &\qquad \mathrel{\#}  \text{get a common denominator, multiply out } \\
 [15pt]
 &\Rightarrow& \mathlarger{\sin \bigg (\dfrac{\pi}{2} \bigg ) = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg )} 
                                                                                                                                                                                &\qquad \mathrel{\#}  \text{set $\mathlarger{x = \frac{\pi}{2}}$} \\
@@ -390,7 +390,7 @@ rearranging we see that
                                                                                                                                                                                 &\qquad \mathrel{\#}  \text{cancel $\pi^2$} \\
 [15pt]
 &\Rightarrow&  \mathlarger{1 = \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \big ( \frac{4n^2 - 1}{4}  \big )} {n^2} \Bigg )}                  
-                                                                                                                                                                                 &\qquad \mathrel{\#}  \text{get common denominator} \\
+                                                                                                                                                                                 &\qquad \mathrel{\#}  \text{get a common denominator} \\
 [15pt]
 &\Rightarrow& \mathlarger{1 = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \bigg ( \frac {4n^2 - 1} {4n^2} \bigg )} 
                                                                                                                                            &\qquad \mathrel{\#}  \text{multiply right side by $\mathlarger{1= \frac{\frac{1}{n^2}}{\frac{1}{n^2}}}$} \\
