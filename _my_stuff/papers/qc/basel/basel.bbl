@@ -1,5 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{wiki:analytic_number_theory}
+{Wikipedia contributors}.
+\newblock Analytic number theory --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Analytic_number_theory&oldid=1036896346},
+  2021.
+\newblock [Online; accessed 8-August-2021].
+
 \bibitem{wiki:basel}
 {Wikipedia contributors}.
 \newblock {Basel Problem --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -33,6 +41,14 @@
   \url{https://en.wikipedia.org/w/index.php?title=Harmonic_series_(mathematics)&oldid=1031084300},
   2021.
 \newblock [Online; accessed 6-August-2021].
+
+\bibitem{wiki:limits}
+{Wikipedia contributors}.
+\newblock Limit (mathematics) --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Limit_(mathematics)&oldid=1030731708},
+  2021.
+\newblock [Online; accessed 9-August-2021].
 
 \bibitem{wiki:newton_identies}
 {Wikipedia contributors}.

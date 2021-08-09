@@ -151,7 +151,7 @@ The tricky part now is finding $A$. So how did Euler do it?
 
 \newpage
 \noindent
-Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, that is
+Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, that is\footnote{Note that this limit occurs at the zero root of $\sin(x)$, that is, $\sin(0) = 0$.}
 
 \bigskip
 \begin{equation*}
@@ -160,18 +160,21 @@ Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, that i
 
 \bigskip
 \noindent
-Note that this limit occurs at the zero root of $\sin(x)$, that is, $\sin(0) = 0$.  
+As an aside,  it seems unlikely that Euler would have used limit notation (or perhaps even thought of $\sin(x) = x$ as a limit, as least as we think of it today) 
+since it wasn't until 1821 that Augustin-Louis Cauchy, followed by  Karl Weierstrass, formalized the definition of the limit of a function which became known as 
+the $(\epsilon,\delta)$-definition of limit \cite{wiki:limits}. In addition, analytic number theory seems to have originated with Peter Gustav Lejeune Dirichlet's 
+1837 introduction of Dirichlet L-functions to give the first proof of Dirichlet's theorem on arithmetic progressions \cite{wiki:analytic_number_theory}, well 
+after Euler solved the Basel Problem.
 
-\bigskip
+
 \noindent
-We also know that
+Continuing, we also know that
 
 \bigskip
 \begin{equation*}
 \lim_{x \to 0} \dfrac{x (x - \pi)(x+\pi)(x - 2\pi)(x + 2\pi)(x - 3\pi)(x + 3\pi) \cdots}{x} = (-\pi^2)(-(2\pi)^2)(-(3\pi)^2) \cdots
 \end{equation*}
 
-\bigskip
 \bigskip
 \noindent
 Together these imply that
@@ -209,7 +212,7 @@ So now we know that
 &=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                                             &\mathrel{\#} \text{Euler's product formula for $\sin(x)$} \end{array}
 \end{equation*}
 
-\newpage
+\bigskip
 \noindent
 So we see that Euler's product formula for $\sin(x)$ is
 
@@ -284,7 +287,7 @@ and multiplying both sides by $- \pi^2$ we get
 \noindent
 which amazingly is Euler's solution to the Basel Problem. 
 
-\newpage
+
 \section{Summary of Euler's Solution of the Basel Problem}
 To summarize Euler's argument, first recall that Euler knew that the Maclaurin (Taylor) series expansion of the sine function was
 
@@ -336,7 +339,7 @@ we see by induction that the $x^2$ coefficient of  $\frac{\sin(x)}{x}$ is
 \mathlarger{ - \bigg (\frac{1}{\pi^2} +  \frac{1}{4 \pi^2} +  \frac{1}{9 \pi^2} + \cdots \bigg ) = - \frac{1}{\pi^2} \sum\limits_{n = 1}^\infty \frac{1}{n^2}}
 \end{equation*}
 
-\newpage
+\bigskip
 \noindent
 But from the original Maclaurin series expansion of $\frac{\sin(x)}{x}$ we know that the coefficient of $x^2$ is 
 
