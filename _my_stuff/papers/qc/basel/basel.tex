@@ -35,7 +35,8 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
- \usepackage{relsize}
+\usepackage{relsize}
+\usepackage{setspace}
 
 
 %
@@ -56,12 +57,12 @@
 \maketitle
 
 \section{Introduction}
-The Basel Problem \cite{wiki:basel} is an important problem in number theory \cite{wiki:number_theory} that was first posed by Pietro 
+The Basel problem \cite{wiki:basel} is an important problem in number theory \cite{wiki:number_theory} that was first posed by Pietro 
 Mengoli in 1650  and solved by Leonhard Euler in 1734. 
 
 \bigskip
 \noindent
-The Basel Problem asks whether the infinite sum
+The Basel problem asks whether the infinite sum
 
 \begin{equation*}
 \mathlarger{\sum\limits_{n = 1}^{\infty} \frac{1}{n^2} = \frac{1}{1^2}  + \frac{1}{2^2} + \frac{1}{3^2} + \cdots}
@@ -78,7 +79,7 @@ not converge is the harmonic series \cite{wiki:harmonic}:
 
 \bigskip
 \noindent
-The Basel Problem resisted solution for some 84 years until the then 26 year old Euler finally solved it. 
+The Basel problem resisted solution for some 84 years until the then 26 year old Euler finally solved it. 
 Euler's surprising solution is
 
 \begin{equation*}
@@ -88,8 +89,8 @@ Euler's surprising solution is
 
 \bigskip
 \noindent
-Note that both the harmonic series and the Basel Problem are instances of the famous Riemann zeta function \cite{wiki:zeta}, $\zeta(s)$. 
-In particular, the harmonic series is $\zeta(1)$ and the Basel Problem is $\zeta(2)$. For example
+Note that both the harmonic series and the Basel problem are instances of the famous Riemann zeta function \cite{wiki:zeta}, $\zeta(s)$. 
+In particular, the harmonic series is $\zeta(1)$ and the Basel problem is $\zeta(2)$. For example
 
 
 \begin{equation*}
@@ -99,10 +100,15 @@ In particular, the harmonic series is $\zeta(1)$ and the Basel Problem is $\zeta
 
 \section{Euler's Solution}
 \label{sec:eulers_solution}
-So how did Euler solve the Basel Problem? The summary is that Euler's extraordinary mathematical intuition led him to consider the Maclauren series \cite{wiki:taylor}
-for $\sin(x)$ and to compare its coefficients to the coefficients of a polynomial constructed from the zeros of $\sin(x)$. This approach makes sense because we know 
-the Maclaurin series for $\sin(x)$, we know the zeros of $\sin(x)$, and the Fundamental Theorem of Algebra \cite{wiki:ftoa} (and more specifically the Weierstrass 
-Factorization Theorem \cite{wiki:weierstrass}) tells us that we can construct a polynomial for $\sin(x)$ from its zeros.
+So how did Euler solve the Basel problem? The summary is that Euler's extraordinary mathematical intuition led him to consider the Maclauren series \cite{wiki:taylor}
+for $\sin(x)$ and to compare its coefficients to the coefficients of a polynomial constructed from the zeros of $\sin(x)$, which he reasoned must be equal for equal powers
+of $x$. 
+
+\bigskip
+\noindent
+This approach seems practical given that we know the Maclaurin series for $\sin(x)$, we know the zeros of $\sin(x)$, and because the Fundamental Theorem of 
+Algebra \cite{wiki:ftoa} (and more specifically the Weierstrass Factorization Theorem \cite{wiki:weierstrass}) tells us that we can construct a polynomial for $\sin(x)$ 
+from its zeros\footnote{The terms "zero" and "root" appear to be used interchangeably in mathematics linterature.}
 
 
 \bigskip
@@ -141,7 +147,7 @@ So how did Euler find a polynomial for $\sin(x)$?
 
 \subsection{Euler's Polynomial for $\sin(x)$}
 We saw in Section \ref{sec:eulers_solution} that every non-constant single-variable polynomial with complex coefficients has at least one complex root and that a (possibly infinite) 
-polynomial can be constructed  from the linear product of a function's  roots. Since we know that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write 
+polynomial can be constructed  from the linear product of a function's  roots. Since we know that the roots of $\sin(x)$ are $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write 
 down a polynomial for $\sin(x)$:
 
 \begin{equation*}
@@ -164,10 +170,10 @@ Euler noticed that for infinitesimally small values of $x$ $\sin(x) = x$, that i
 \bigskip
 \noindent
 As an aside,  it seems unlikely that Euler would have used limit notation (or perhaps even thought of $\sin(x) = x$ as a limit, as least not as we think of limits today) 
-since it wasn't until 1821 that Augustin-Louis Cauchy, followed by  Karl Weierstrass, formalized the definition of the limit of a function which became known as 
+since it wasn't until 1821 that Augustin-Louis Cauchy (and later Karl Weierstrass) formalized the definition of the limit of a function which became known as 
 the $(\epsilon,\delta)$-definition of limit \cite{wiki:limits}. In addition, analytic number theory seems to have originated with Peter Gustav Lejeune Dirichlet's 
 1837 introduction of Dirichlet L-functions to give the first proof of Dirichlet's theorem on arithmetic progressions \cite{wiki:analytic_number_theory}, well 
-after Euler solved the Basel Problem.
+after Euler solved the Basel problem.
 
 \bigskip
 \noindent
@@ -288,7 +294,7 @@ and multiplying both sides by $- \pi^2$ we get
 
 \bigskip
 \noindent
-which amazingly is Euler's solution to the Basel Problem. 
+which amazingly is Euler's solution to the Basel problem. 
 
 
 \section{Summary of Euler's Solution of the Basel Problem}
@@ -313,7 +319,7 @@ in the polynomial for $\sin(x)$.}
 \bigskip
 \noindent
 We also know from the Weierstrass Factorization Theorem \cite{wiki:weierstrass}  that every entire function \cite{wiki:entire_function} can be represented
-as a (possibly infinite) product involving its zeroes. So Euler correctly assumed that it must be possible to represent $\sin(x)$ as an infinite
+as a (possibly infinite) product involving its zeroes. So Euler assumed that it must be possible to represent $\sin(x)$ as an infinite
 product of linear factors  given by its roots. Using this machinery and knowing that the zeros of $\sin(x)$ occur at $0, \pm \pi, \pm 2\pi, \hdots$ we see that
 
 \begin{equation*}
@@ -362,7 +368,7 @@ term that means
 
 \bigskip
 \noindent
-Multiplying both sides of this equation by $-\pi^2$ gives Euler's solution to the Basel Problem: 
+Multiplying both sides of this equation by $-\pi^2$ gives Euler's solution to the Basel problem: 
 
 \begin{equation*}
 \dfrac{\pi^2}{6} = \sum\limits_{n = 1}^\infty \frac{1}{n^2}
@@ -422,8 +428,9 @@ So we wind up with
 that is, the Wallis Product.
 
 \section{Conclusions}
+\doublespacing
 Today many proofs that ${\displaystyle \zeta(2) = \sum\limits_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}}$ exist. Many of these proofs are considered, at least by some,  
-to be more rigorous than original Euler's proof. See for example \cite{proofwikibasels}.
+to be more rigorous than original Euler's simple and elegant "proof". See for example \cite{proofwikibasels}.
 
 
 \newpage
