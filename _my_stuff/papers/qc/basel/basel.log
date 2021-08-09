@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  9 AUG 2021 07:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  9 AUG 2021 09:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,73 +663,73 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 110.
+(hyperref)                removing `math shift' on input line 112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 110.
+(hyperref)                removing `\mathop' on input line 112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 110.
+(hyperref)                removing `\mathgroup' on input line 112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 110.
+(hyperref)                removing `\symoperators' on input line 112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 110.
+(hyperref)                removing `\@ifnextchar' on input line 112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 110.
+(hyperref)                removing `math shift' on input line 112.
 
 
-Overfull \hbox (76.24562pt too wide) detected at line 128
+Overfull \hbox (76.24562pt too wide) detected at line 131
 []
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 139.
+(hyperref)                removing `math shift' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 139.
+(hyperref)                removing `\mathop' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 139.
+(hyperref)                removing `\mathgroup' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 139.
+(hyperref)                removing `\symoperators' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 139.
+(hyperref)                removing `\@ifnextchar' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 139.
+(hyperref)                removing `math shift' on input line 142.
 
 [2]
-Overfull \hbox (39.60234pt too wide) detected at line 193
+Overfull \hbox (39.60234pt too wide) detected at line 195
 []
  []
 
 
-Overfull \hbox (81.6211pt too wide) detected at line 213
+Overfull \hbox (81.6211pt too wide) detected at line 215
 []
  []
 
-[3] [4] [5] [6]
-Overfull \hbox (35.91106pt too wide) detected at line 411
+[3] [4] [5]
+Overfull \hbox (35.91106pt too wide) detected at line 405
 []
  []
 
-[7] (./basel.bbl
+[6] [7] [8] (./basel.bbl
 Underfull \hbox (badness 2961) in paragraph at lines 12--18
 []\OT1/cmr/m/n/10.95 Wikipedia con-trib-u-tors.  Basel Prob-lem --- Wikipedia, 
 The Free En-cy-clo-
@@ -771,15 +771,18 @@ Underfull \hbox (badness 4967) in paragraph at lines 94--101
 ikipedia . org / w / index . php ? title = Weierstrass _
  []
 
-[8]) [9] (./basel.aux)
+[9]) [10] (./basel.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `basel.out' has not changed.
-(rerunfilecheck)             Checksum: 4C3CF4A5D562759964894D0A24A3F796;1213.
+(rerunfilecheck)             Checksum: 5557D39E4AACF777571E5B2FBF6CDEFC;1311.
  ) 
 Here is how much of TeX's memory you used:
- 15886 strings out of 478994
- 274718 string characters out of 5858184
- 595890 words of memory out of 5000000
- 33065 multiletter control sequences out of 15000+600000
+ 15889 strings out of 478994
+ 274745 string characters out of 5858184
+ 594892 words of memory out of 5000000
+ 33066 multiletter control sequences out of 15000+600000
  419164 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,77p,344b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -800,10 +803,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on basel.pdf (9 pages, 208100 bytes).
+Output written on basel.pdf (10 pages, 209241 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
