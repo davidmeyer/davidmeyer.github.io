@@ -216,7 +216,8 @@ So now we know that
 [15pt]
 &=& x \cdot  \Bigg [1 - \dfrac{x^2}{\pi^2} \Bigg ] \cdot \Bigg [1 - \dfrac{x^2}{4\pi^2} \Bigg ] \cdot  \Bigg [1 - \dfrac{x^2}{9\pi^2} \Bigg ] \cdots    &\mathrel{\#} \text{simplify}   \\
 [15pt]
-&=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                                             &\mathrel{\#} \text{Euler's product formula for $\sin(x)$} \end{array}
+&=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                                             &\mathrel{\#} \sin(x) = P(x)
+\end{array}
 \end{equation*}
 
 \bigskip
@@ -307,7 +308,7 @@ To summarize Euler's argument, first recall that Euler knew that the Maclaurin s
 \bigskip
 \noindent
 Now, if we divide both sides by $x$ we get\footnote{Recall that we needed ${\displaystyle \lim_{x \to 0}} \frac{\sin(x)}{x} = 1$ to solve for $A$
-in the polynomial for $\sin(x)$.}
+in $P(x)$, the polynomial for $\sin(x)$.}
 
 \bigskip
 \begin{equation*}
@@ -381,7 +382,7 @@ we get the Wallis Product \cite{wiki:wallis}. Why? Well, since $\sin \big (\frac
 \begin{equation*}
 \begin{array}{lllll}
  \sin(x)
-&=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}                                              &\qquad \mathrel{\#}  \text{Equation \ref{eqn:sine}} \\
+&=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}                                              &\qquad \mathrel{\#}  \text{$\sin(x) = P(x)$ (Equation \ref{eqn:sine})} \\
 [15pt]
 &=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                   &\qquad \mathrel{\#}  \text{get a common denominator, multiply out } \\
 [15pt]
@@ -411,6 +412,7 @@ we get the Wallis Product \cite{wiki:wallis}. Why? Well, since $\sin \big (\frac
 \bigskip
 \noindent
 So we wind up with
+
 
 \bigskip
 
