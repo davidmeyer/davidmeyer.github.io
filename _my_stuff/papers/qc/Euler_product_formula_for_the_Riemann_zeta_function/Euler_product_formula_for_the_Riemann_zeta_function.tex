@@ -152,17 +152,16 @@ which knocks out all of the terms on the right with a factor of 3. What we can s
 
 \bigskip
 \noindent
-If we repeat this process infinitely for $\frac{1}{p^2}$ where $p$ is prime we wind up with
+Now if we repeat this process infinitely for the $\frac{1}{p^2}$ terms on the right hand side of the sieved equations we wind up with 
 
 \bigskip
-\begin{equation}
+\begin{equation*}
 \cdots \left ( 1 - \frac {1}{11^{s}} \right ) \left ( 1 - \frac {1}{7^{s}} \right ) \left ( 1 - \frac {1}{5^{s}} \right ) \left ( 1 - \frac {1}{3^{s}} \right ) \left ( 1 - \frac {1}{2^{s}} \right ) \zeta (s) = 1
-\label{sieved_euler_product_formula}
-\end{equation}
+\end{equation*}
 
 \bigskip
 \noindent
-If we now solve for $\zeta(s)$ we get
+Solving for $\zeta(s)$ we get
 
 \bigskip
 \begin{equation*}
@@ -181,12 +180,12 @@ This can be written in a perhaps more familiar way as an infinite product over a
 
 \bigskip
 \noindent
-Finally, to make this proof rigorous, we need to show that when $\Re (s) > 1$, the left hand side of Equation \ref{sieved_euler_product_formula} approaches 1.
-But this follows immediately from the convergence of the Dirichlet series \cite{wiki:dirichlet_series} for $\zeta(s)$. $\square$
+Finally, to make this proof rigorous we need to show that when $\Re (s) > 1$ the right hand side of the sieved equations approaches 1.
+Fortunately this follows immediately from the convergence of the Dirichlet series for $\zeta(s)$ \cite{wiki:dirichlet_series}. $\square$
 
 \section{Conclusions}
-As was the case with Euler's solution to the Basel problem \cite{wiki:basel}, today there are many other proofs of the Euler product formula. But Euler's proof
-is (IMO of course) still the simplest and most intuitive. 
+Euler's proof of the product formula is, IMO of course, quite clever, simple and elegant (well, what would expect from Euler?). As an aside, Mathologer 
+has a very nice video on this topic with some fancy animations that make it easy to see how the sieve works \cite{mathologer:eulers_product_formula}.
 
 \newpage
 \bibliographystyle{plain}
