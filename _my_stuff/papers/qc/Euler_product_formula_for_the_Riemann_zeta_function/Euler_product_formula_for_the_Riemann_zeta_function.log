@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  10 AUG 2021 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  10 AUG 2021 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -718,7 +718,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 Output written on Euler_product_formula_for_the_Riemann_zeta_function.pdf (4 pa
-ges, 176330 bytes).
+ges, 176350 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams
