@@ -11,7 +11,7 @@
 <h2>Notes on various mathematical topics</h2>
 
 <li><a href="./Euler_product_formula_for_the_Riemann_zeta_function.pdf">
-A`Few Notes on Euler’s Product Formula for the Riemann Zeta Function</a>
+A Few Notes on Euler’s Product Formula for the Riemann Zeta Function</a>
 <br>
 <li><a href="./basel.pdf">A Few Notes on Euler's Solution of the Basel Problem</a>
 <br>
