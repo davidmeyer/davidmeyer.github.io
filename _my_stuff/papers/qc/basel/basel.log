@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  9 AUG 2021 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  10 AUG 2021 07:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -667,69 +667,69 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 113.
+(hyperref)                removing `\mathop' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 113.
+(hyperref)                removing `\mathgroup' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 113.
+(hyperref)                removing `\symoperators' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 113.
+(hyperref)                removing `\@ifnextchar' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 114.
 
 
-Overfull \hbox (76.24562pt too wide) detected at line 132
+Overfull \hbox (76.24562pt too wide) detected at line 133
 []
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `math shift' on input line 144.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 143.
+(hyperref)                removing `\mathop' on input line 144.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 143.
+(hyperref)                removing `\mathgroup' on input line 144.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 143.
+(hyperref)                removing `\symoperators' on input line 144.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 143.
+(hyperref)                removing `\@ifnextchar' on input line 144.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `math shift' on input line 144.
 
 [2]
-Overfull \hbox (67.68683pt too wide) detected at line 195
+Overfull \hbox (67.68683pt too wide) detected at line 196
 []
  []
 
 
-Overfull \hbox (83.44533pt too wide) detected at line 215
+Overfull \hbox (83.44533pt too wide) detected at line 216
 []
  []
 
 [3] [4] [5]
-Overfull \hbox (35.91106pt too wide) detected at line 404
+Overfull \hbox (35.91106pt too wide) detected at line 405
 []
  []
 
@@ -813,7 +813,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on basel.pdf (10 pages, 210591 bytes).
+Output written on basel.pdf (10 pages, 210620 bytes).
 PDF statistics:
  223 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams
