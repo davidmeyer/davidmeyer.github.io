@@ -10,7 +10,10 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
-<li><a href="./basel.pdf">A `Few Notes on Euler's Solution of the Basel Problem</a>
+<li><a href="./Euler_product_formula_for_the_Riemann_zeta_function.pdf">
+A`Few Notes on Euler’s Product Formula for the Riemann Zeta Function</a>
+<br>
+<li><a href="./basel.pdf">A Few Notes on Euler's Solution of the Basel Problem</a>
 <br>
 <li><a href="./dirac_delta.pdf">A few notes on the Dirac Delta Function and
 the Laplace Transform</a>
@@ -62,7 +65,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 08.09.2021 by dmm@1-4-5.net
+<i>Last Update: 08.10.2021 by dmm@1-4-5.net
 
 
 
