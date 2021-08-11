@@ -1,14 +1,14 @@
 \begin{thebibliography}{1}
 
 \bibitem{mathologer:eulers_product_formula}
-{Burkard Polster}.
+{Burkard Polster (aka Mathologer)}.
 \newblock {Euler’s Pi Prime Product and Riemann’s Zeta Function}.
 \newblock \url{https://www.youtube.com/watch?v=LFwSIdLSosI}, Sep 2017.
 \newblock [Online; accessed 10-August-2021].
 
 \bibitem{mactutor:history_of_calculus}
 {J J O'Connor and E F Robertson}.
-\newblock {A history of the calculus}.
+\newblock {A History of the Calculus}.
 \newblock
   \url{https://mathshistory.st-andrews.ac.uk/HistTopics/The_rise_of_calculus/},
   Feb 1996.
@@ -20,14 +20,6 @@
 \newblock
   \url{https://www.maths.tcd.ie/pub/Maths/Courseware/428/Primes-II.pdf}, 2006.
 \newblock [Online; accessed 25-June-2021].
-
-\bibitem{wiki:basel}
-{Wikipedia contributors}.
-\newblock {Basel Problem --- {Wikipedia}{,} The Free Encyclopedia}.
-\newblock
-  \url{https://en.wikipedia.org/w/index.php?title=Basel_problem&oldid=1023994680},
-  2021.
-\newblock [Online; accessed 6-August-2021].
 
 \bibitem{wiki:dirichlet_series}
 {Wikipedia contributors}.
