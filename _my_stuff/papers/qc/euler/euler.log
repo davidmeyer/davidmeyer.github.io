@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  12 AUG 2021 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  12 AUG 2021 11:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -970,7 +970,7 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on euler.pdf (1 page, 54018 bytes).
+Output written on euler.pdf (1 page, 54015 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream

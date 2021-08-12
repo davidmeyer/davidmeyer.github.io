@@ -59,12 +59,12 @@
 
 \begin{figure}
 \centering
-  \resizebox{0.50 \textwidth}{!} {                                                                                                                                            % resize figure if you want (0.50 seems to be the same size)
+  \resizebox{0.60 \textwidth}{!} {                                                                                                                                            % resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
        \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                              % draw axes, save real part (x) to calculate angle below
        \draw[thick, ->] (0,-0.35) -- (0,5.5) 
             node[left] {$\mathbb{I}$}
-            node[draw, very thin,below right=5mm] {$z = r \cdot \mathrm{e}^{i\theta} = r \cdot [\cos \theta + i \sin \theta]$};
+            node[draw, very thin,below right=5mm] {$z = r [\cos \theta + i \sin \theta] = r \mathrm{e}^{i\theta} $};
        \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
        \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor
        \draw[dashed]   (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
