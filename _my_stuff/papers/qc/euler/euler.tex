@@ -59,17 +59,19 @@
 
 \begin{figure}
 \centering
-  \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
-     \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                              % draw axes, save real part (x) to calculate angle below
-     \draw[thick, ->] (0,-0.35) -- (0,5.5) 
+  \resizebox{0.50 \textwidth}{!} {                                                                                                                                            % resize figure if you want (0.50 seems to be the same size)
+    \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
+       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                              % draw axes, save real part (x) to calculate angle below
+       \draw[thick, ->] (0,-0.35) -- (0,5.5) 
             node[left] {$\mathbb{I}$}
             node[draw, very thin,below right=5mm] {$z = r \cdot \mathrm{e}^{i\theta} = r \cdot [\cos \theta + i \sin \theta]$};
-     \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
-     \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor
-     \draw[dashed]   (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
-     \draw[thick]    (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);
-     \pic [draw, <->,  angle radius=11mm, angle eccentricity=1.2, "$\theta$"] {angle = x--O--z};                                            % finally draw the angle
-   \end{tikzpicture}
+       \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
+       \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor
+       \draw[dashed]   (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
+       \draw[thick]    (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);
+       \pic [draw, <->,  angle radius=11mm, angle eccentricity=1.2, "$\theta$"] {angle = x--O--z};                                            % finally draw the angle
+     \end{tikzpicture}
+  }                                                                                                                                                                                             % end resizebox                                                                                           
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
