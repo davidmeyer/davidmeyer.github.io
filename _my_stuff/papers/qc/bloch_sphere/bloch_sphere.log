@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  12 AUG 2021 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  12 AUG 2021 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -975,7 +975,7 @@ File: images/bloch_sphere.png Graphic file (type png)
 Package pdftex.def Info: images/bloch_sphere.png  used on input line 129.
 (pdftex.def)             Requested size: 178.4161pt x 189.70828pt.
  [2 <./images/complex_plane_wiki.png>] [3 <./images/bloch_sphere.png>]
-Overfull \hbox (59.37709pt too wide) detected at line 191
+Overfull \hbox (56.48752pt too wide) detected at line 191
 []
  []
 
@@ -1094,14 +1094,8 @@ g / w / index . php ? title = Unitary _ matrix & oldid =
  []
 
 [17]) [18] (./bloch_sphere.aux)
-
-Package rerunfilecheck Warning: File `bloch_sphere.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `bloch_sphere.out':
-(rerunfilecheck)             Before: 8F52FCE678EBC85C68DC4E0FC900ED18;2150
-(rerunfilecheck)             After:  688747B6570BC9F6F7CADA89D05637A4;2140.
+Package rerunfilecheck Info: File `bloch_sphere.out' has not changed.
+(rerunfilecheck)             Checksum: 688747B6570BC9F6F7CADA89D05637A4;2140.
  ) 
 Here is how much of TeX's memory you used:
  26386 strings out of 478994
@@ -1133,7 +1127,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bloch_sphere.pdf (18 pages, 302681 bytes).
+Output written on bloch_sphere.pdf (18 pages, 302473 bytes).
 PDF statistics:
  343 PDF objects out of 1000 (max. 8388607)
  275 compressed objects within 3 object streams
