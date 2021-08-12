@@ -1,4 +1,8 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+\documentclass{article}
+
+
+% \documentclass[tikz, margin=3mm]{standalone}
 
 
 % \usepackage{draftwatermark}
@@ -7,7 +11,7 @@
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
-
+\usepackage{tikz}
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
@@ -35,6 +39,8 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
+\usetikzlibrary{angles, quotes}
+
 
 %
 % so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
@@ -51,19 +57,37 @@
 
 \begin{document}
 
+\begin{figure}
+\centering
+  \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
+     \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                              % draw axes, save real part (x) to calculate angle below
+     \draw[thick, ->] (0,-0.35) -- (0,5.5) 
+            node[left] {$\mathbb{I}$}
+            node[draw, very thin,below right=5mm] {$z = r \cdot \mathrm{e}^{i\theta} = r \cdot [\cos \theta + i \sin \theta]$};
+     \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
+     \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor
+     \draw[dashed]   (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
+     \draw[thick]    (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);
+     \pic [draw, <->,  angle radius=11mm, angle eccentricity=1.2, "$\theta$"] {angle = x--O--z};                                            % finally draw the angle
+   \end{tikzpicture}
+ \caption{The Complex Plane}
+ \label{fig:complex_plane}
+\end{figure}
+    
+\begin{figure}
 \begin{equation*}
 \begin{array}{lllll}
-e^{i\phi}
-&=&                   \cos \phi + i \sin \phi                    &\quad  \mathrel{\#} \text{Euler's Formula}                            \\
-&\Rightarrow&  e^{i\pi} = \cos \pi + i \sin \pi          &\quad  \mathrel{\#} \text{set $\phi = \pi$}                              \\
+e^{i\theta}
+&=&                   \cos \theta + i \sin \theta              &\quad  \mathrel{\#} \text{Euler's Formula}                            \\
+&\Rightarrow&  e^{i\pi} = \cos \pi + i \sin \pi          &\quad  \mathrel{\#} \text{set $\theta = \pi$}                          \\
 &\Rightarrow&  e^{i\pi} = -1 + i \cdot 0                  &\quad  \mathrel{\#} \text{$\cos \pi = -1$ and $\sin \pi = 0$}  \\
 &\Rightarrow&  e^{i\pi} = -1 + 0                            &\quad  \mathrel{\#} i \cdot 0 = 0                                            \\
 &\Rightarrow&  e^{i\pi} = -1                                  &\quad  \mathrel{\#} \text{simplify}                                          \\
 &\Rightarrow&  e^{i\pi} +1 = 0                              &\quad  \mathrel{\#} \text{Euler's Identity} 
 \end{array}
 \end{equation*}
-
-
+\caption{Euler's Identity (well, its really Cotes' but ...)}
+\end{figure}
 
 \end{document} 
 
