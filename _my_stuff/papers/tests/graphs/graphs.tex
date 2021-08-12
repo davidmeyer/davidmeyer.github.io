@@ -1,0 +1,120 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+%
+%	TikZ
+%
+\usepackage{tikz}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{calc}
+%
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{pgfplots}
+
+
+\begin{document} 
+\begin{figure}
+\centering   
+  \resizebox{0.40 \textwidth}{!} {                                                                                                                                            % resize figure if you want
+\begin{tikzpicture}
+  \draw[->] (-3, 0) -- (4.2, 0) node[right] {$x$};
+  \draw[->] (0, -3) -- (0, 4.2) node[above] {$y$};
+  \draw[scale=0.5, domain=-3:3, smooth, variable=\x, blue] plot ({\x}, {\x*\x});
+  \draw[scale=0.5, domain=-3:3, smooth, variable=\y, red]  plot ({\y*\y}, {\y});
+\end{tikzpicture}
+}
+\caption{This is a graphing test}
+\end{figure}
+
+
+\begin{tikzpicture}
+\begin{axis}[xmax=9,ymax=9, samples=50]
+  \addplot[blue, ultra thick] (x,x*x);
+  \addplot[red,  ultra thick] (x*x,x);
+\end{axis}
+\end{tikzpicture}
+
+
+     \pgfplotsset{%
+      every tick label/.append style = {font=\tiny},
+      every axis label/.append style = {font=\scriptsize}
+    }
+      \resizebox{0.60 \textwidth}{!} {                                                                                                                                            % resize figure if you want
+
+    \begin{tikzpicture}
+      \begin{axis}[grid=major, xmin=0, xmax=3, ymin=-1.1, ymax=1.1,
+        xlabel=$t$, ylabel={$x(t), y(t)$},
+        xtick = {0,0.5,...,3}, ytick = {-1,-0.5,...,1},
+        scale=0.3, restrict y to domain=-1:1]
+        \addplot[blue, samples=100, smooth, unbounded coords=discard]
+          plot (\x, { 1 + 2 * \x)*exp(-2*\x) * sin(180* 3.14 * \x) });
+        \addplot[red, dashed, samples=100, smooth]
+          plot (\x, { (1+2*\x) * exp(-2*\x) } );
+        \addplot[red, dashed, samples=100, smooth]
+          plot (\x, { -(1+2*\x) * exp(-2*\x) } );
+      \end{axis}
+    \end{tikzpicture}
+    }
+    
+\begin{tikzpicture}[scale=0.8, samples=100]
+\draw[->] (-3.8,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,-4) -- (0,5) node[left] {$y$};
+\node at (-2.8,-3)[above] {\footnotesize\color{gray} $y=x$};
+\draw[smooth, domain=-3.8:2.3, color=green, thick] 
+    plot (\x,{2^(\x)}) node [right] {\footnotesize $f(x)=2^x$};
+\fill [green] ($(0,1)$) circle (1.5pt) node at (0,1.2)[left] {\color{green}$(0,1)$};
+\draw[smooth, domain = 0.06:5, color=blue, thick] plot (\x,{log2(\x)});
+\fill [blue] ($(1,0)$) circle (1.5pt) node at (1.4,0)[below] {\color{blue}$(1,0)$};
+\node at (4.6,2.4)[above] {\footnotesize\color{blue}$f^{-1}(x)=\log_2 x$};
+\draw[smooth, dashed, domain=-2.5:4.5, color=gray] plot (\x,\x);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmax=6.9,
+    xmin=-5.5,
+    ymin=-0.05,
+    ymax=0.35,
+    xlabel={$x$},
+    ylabel={$y$},
+    ]
+    \addplot [domain=-4:5, samples=100, ultra thick, blue] {9*exp(x)/(exp(x)+9)^2};
+\end{axis}
+\end{tikzpicture}
+
+
+
+\end{document}
