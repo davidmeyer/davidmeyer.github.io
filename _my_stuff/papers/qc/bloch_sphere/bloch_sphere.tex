@@ -7,7 +7,8 @@
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
-
+\usepackage{tikz}
+\usetikzlibrary{angles, quotes}
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
@@ -367,36 +368,40 @@ In general for two $n \times 1$ vectors \textbf{u} and \textbf{v},  the inner pr
 \langle \mathbf{u} | \mathbf{v} \rangle = \mathbf{u}{^\text{T}}\mathbf{v}
 \end{equation*}
 
+
 \begin{figure}
-\center{\includegraphics[scale=0.07, frame] {images/complex_plane_cartoon.jpg}}
-\caption{$\alpha$ in the Complex Plane}
-\label{fig:complex_plane_cartoon}
+\centering
+  \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
+     \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                              % draw axes, save real part (x) to calculate angle below
+     \draw[thick, ->] (0,-0.35) -- (0,5.5) 
+            node[left] {$\mathbb{I}$}
+            node[draw, very thin,below right=5mm] {$\alpha = r \mathrm{e}^{i\phi} = r  [\cos \phi + i \sin \phi]$};
+     \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
+     \fill (3.5,3) coordinate[label=above right:{$\alpha = a + bi $}] (z) circle(0.05);                                                                          % draw phasor
+     \draw[dashed]   (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
+     \draw[thick]    (O) to ["$r = |\alpha|=\sqrt{\alpha \alpha^*}$"] (3.5,3);
+     \pic [draw, <->,  angle radius=11mm, angle eccentricity=1.2, "$\phi$"] {angle = x--O--z};                                            % finally draw the angle
+   \end{tikzpicture}
+ \caption{$\alpha$ in the Complex Plane}
+ \label{fig:complex_plane}
 \end{figure}
+
 
 \subsubsection{What can we say about $\alpha$ and $\beta$?}
 \label{subsub:alpha_and_beta}
 Since $\alpha$ and $\beta$ are complex numbers, we can write $\alpha$  (or $\beta$, with different $a$ and $b$) as  $\alpha = a + ib$. This is depicted
- in Figure \ref{fig:complex_plane_cartoon}.  There are a few things we can notice about $\alpha$. First, $a = r \cos \phi$; 
+ in Figure \ref{fig:complex_plane}.  There are a few things we can notice about $\alpha$. First, $a = r \cos \phi$; 
 similarly, $b = r \sin \phi$. So we can write
 
-\begin{flalign*}
-\alpha &= a + ib \\
-&= r \cos \phi+ i r \sin \phi \\
-&=  r [\cos \phi +i \sin \phi]
-\end{flalign*}
-
-\noindent
-Next we can apply Euler's Formula
-
-\begin{flalign*}
-\alpha &= a + ib 
-\; \qquad \qquad\qquad\qquad \mathrel{\#} \alpha \text{ in the complex plane (Figure \ref{fig:complex_plane_cartoon})
-} \\
-&=  r [\cos \phi +i \sin \phi] 
-\qquad\qquad \mathrel{\#} a = r \cos \phi, \:  b = r \sin \phi \text{, factor out } r\\
-&= re^{i\phi} 
-\, \quad \qquad\qquad \qquad\qquad \mathrel{\#} \text{Euler's Formula: }  e^{i\phi} = \cos \phi + i \sin \phi
-\end{flalign*}
+\begin{equation*}
+\begin{array}{lllll}
+\alpha 
+&=& a + ib                                   &\qquad \qquad \qquad \mathrel{\#} \alpha \text{ in the complex plane (Figure \ref{fig:complex_plane}) } \\
+&=&  r \cos \phi + i r \sin \phi       &\qquad \qquad \qquad \mathrel{\#} \text{definitions: $a = r \cos \phi$ and $b = r \sin \phi$} \\
+&=&  r [\cos \phi +i \sin \phi]        &\qquad \qquad \qquad \mathrel{\#} \text{factor out  $r$} \\
+&=& re^{i\phi}                              &\qquad \qquad \qquad \mathrel{\#} \text{Euler's Formula: }  e^{i\phi} = \cos \phi + i \sin \phi
+\end{array}
+\end{equation*}
 
 \bigskip
 \noindent
