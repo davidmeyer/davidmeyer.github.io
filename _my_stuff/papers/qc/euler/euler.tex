@@ -107,6 +107,8 @@ z
 All good, but how does Euler's formula, $\mathrm{e}^{i\theta} = \sin \theta + i \sin \theta$ (see Figure \ref{fig:eulers_formula}),  come about? 
 
 \bigskip
+
+
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
@@ -134,13 +136,11 @@ All good, but how does Euler's formula, $\mathrm{e}^{i\theta} = \sin \theta + i 
    \draw [dashed] (p)--(q) node [midway, right]{${\sin \theta}$};
    \draw [] (q) -- (o) node [midway, below] {${\cos \theta}$};
    \fill (q) coordinate [] (q) circle(0.02);                                                                                                      % put a dot a (q)
-
  %
  % draw the angle
  %
    \pic[draw=red,"$\theta$",angle radius=15pt,angle eccentricity=1.5,->]{angle=x--o--p};
-   \fill (o) coordinate [] (o) circle(0.02);                                                                                                       % put a dot at the orgin (o)
-
+   \fill (o) coordinate [] (o) circle(0.02);                                                                                                       % put a dot at the origin (o)
   \end{tikzpicture}
 \caption{Euler's Formula in the Complex Plane}
 \label{fig:eulers_formula}
