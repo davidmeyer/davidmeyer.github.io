@@ -13,6 +13,10 @@
 \usepackage{tikz}
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc,patterns,angles,quotes}    
+
+
 %
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
@@ -45,6 +49,43 @@
 
 
 \begin{document} 
+
+\begin{figure}
+\centering
+  \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
+    \draw[->] (-1.5,0) --node[below left]{$O$} (1.5,0) coordinate[label=below:$\mathbb{R}$](x);               % make and label the axes
+    \draw[->] (0,-1.5) -- (0,1.5) node[left]{$\mathbb{I}$};
+    \draw (0,0) coordinate(o) circle [radius=1cm];                                                                                       % draw unit circle
+    \coordinate (p) at (60:1);                                                                                                                        % 60 radians with r = 1
+    \fill (p) coordinate[label={above right: ${e^{i\theta} = \cos \theta + i \sin \theta}$}] (p) circle(0.02);       % Euler's formula
+    \coordinate (q) at (p|-o);
+%
+% draw the various 1s around the unit circle
+%
+   \coordinate (a) at (0,1);
+   \fill (a) coordinate [label={above:${1}$}] (a) circle(0.02);
+   \coordinate (b) at (-1,-0);
+   \fill (b) coordinate [label={left:${-1}$}] (b) circle(0.02);
+   \coordinate (c) at (0,-1);
+   \fill (c) coordinate [label={below:${-1}$}] (c) circle(0.02);
+   \coordinate (d) at (1,0);
+   \fill (d) coordinate [label={right:${1}$}] (d) circle(0.02);
+%
+% do the rest of the labeling
+%
+   \draw[thick,line join=round] (o)--node[above,left]{$r$}(p);
+   \draw [dashed] (p)--(q) node [midway, right]{${\sin \theta}$};
+   \draw [] (q) -- (o) node [midway, below] {${\cos x}$};
+ %
+ % draw the angle
+ %
+   \pic[draw=red,"$\theta$",angle radius=15pt,angle eccentricity=1.5,->]{angle=x--o--p};
+  \end{tikzpicture}
+\label{fig:eulers_formula}
+\caption{Euler's Formula in the Complex Plane}
+\end{figure}
+
+
 \begin{figure}
 \centering   
   \resizebox{0.40 \textwidth}{!} {                                                                                                                                            % resize figure if you want
