@@ -69,7 +69,7 @@
        \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor
        \draw[dashed]   (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
        \draw[thick]    (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);
-       \pic [draw, <->,  angle radius=11mm, angle eccentricity=1.2, "$\theta$"] {angle = x--O--z};                                            % finally draw the angle
+       \pic [draw, -> , angle radius=11mm, angle eccentricity=1.2, "$\theta$"] {angle = x--O--z};                                            % finally draw the angle
      \end{tikzpicture}
   }                                                                                                                                                                                             % end resizebox                                                                                           
  \caption{The Complex Plane}
