@@ -381,7 +381,7 @@ In general for two $n \times 1$ vectors \textbf{u} and \textbf{v},  the inner pr
        \fill (3.5,3) coordinate[label=above right:{$\alpha = a + bi $}] (z) circle(0.05);                                                            % draw phasor
        \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
        \draw[thick] (O) to ["$r = |\alpha|=\sqrt{\alpha \alpha^*}$"] (3.5,3);
-       \pic [draw, ->,  angle radius=11mm, angle eccentricity=1.2, "$\phi$"] {angle = x--O--z};                                            % finally draw the angle
+       \pic [draw, line width=0.60pt, ->, angle radius=11mm, angle eccentricity=1.25, "$\phi$"] {angle = x--O--z};             % draw and label the angle, making the arc a bit thicker
      \end{tikzpicture}
   }                                                                                                                                                                                       % end resizebox
  \caption{$\alpha$ in the Complex Plane}

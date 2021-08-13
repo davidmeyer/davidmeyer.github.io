@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  13 AUG 2021 08:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  13 AUG 2021 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1099,12 +1099,12 @@ Package rerunfilecheck Info: File `bloch_sphere.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26381 strings out of 478994
- 501969 string characters out of 5858184
+ 501970 string characters out of 5858184
  794513 words of memory out of 5000000
  43308 multiletter control sequences out of 15000+600000
  419075 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,19n,116p,424b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,19n,116p,424b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1127,7 +1127,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bloch_sphere.pdf (18 pages, 302654 bytes).
+Output written on bloch_sphere.pdf (18 pages, 302660 bytes).
 PDF statistics:
  343 PDF objects out of 1000 (max. 8388607)
  275 compressed objects within 3 object streams

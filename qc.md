@@ -10,6 +10,9 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./euler.pdf">
+A Few Notes on Euler’s Formula and Euler's Identity</a>
+<br>
 <li><a href="./Euler_product_formula_for_the_Riemann_zeta_function.pdf">
 A Few Notes on Euler’s Product Formula for the Riemann Zeta Function</a>
 <br>
