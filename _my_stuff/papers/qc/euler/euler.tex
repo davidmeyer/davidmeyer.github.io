@@ -108,14 +108,16 @@ All good, but where does Euler's formula, depicted in Figure \ref{fig:eulers_for
 
 \bigskip
 
-
+%
+% Euler's formula on the unit circle in the complex plane
+%
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
-    \draw[->] (-1.5,0) --node[below left]{$O$} (1.5,0) coordinate[label=below:$\mathbb{R}$](x);                      % make and label the axes
+    \draw[->] (-1.5,0) --node[below left]{$O$} (1.5,0) coordinate[label=below:$\mathbb{R}$](x);               % make and label the axes
     \draw[->] (0,-1.5) -- (0,1.5) node[left]{$\mathbb{I}$};
     \draw (0,0) coordinate(o) circle [radius=1cm];                                                                                       % draw unit circle
-    \coordinate (p) at (60:1);                                                                                                                        % 60 radians with r = 1
+    \coordinate (p) at (60:1);                                                                                                                        % 60 degrees with r = 1
     \fill (p) coordinate[label={above right: ${e^{i\theta} = \cos \theta + i \sin \theta}$}] (p) circle(0.02);       % Euler's formula
     \coordinate (q) at (p|-o);
 %
