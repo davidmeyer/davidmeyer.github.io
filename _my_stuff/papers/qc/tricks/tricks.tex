@@ -70,11 +70,15 @@
 \section{Trick 1: $\Big ( \frac{1}{n} \Big ) \Big ( \frac{1}{n+1} \Big ) = \frac{1}{n} - \frac{1}{n+1}$}
 \label{a_equals_b_equals_1}
 
-\bigskip
-\noindent
-This incredibly useful bit of mathematical magic works when the denominators of the two fractions are of the form $n$ and $n+1$, their numerators are both 1\footnote{The product of the 
-numerators must be equal to the absolute value of the difference of the denominators.}, and $n > 0$. 
+This incredibly useful bit of mathematical magic works when the denominators of the two fractions are of the form $n$ and $n+1$, their numerators are both 1, and $n > 0$. 
+For example, something like 
 
+\bigskip
+\begin{equation*}
+\left (\frac{1}{3} \right ) \left ( \frac{1}{4} \right ) = \frac{1}{12} \text{ and } \frac{1}{3} -  \frac{1}{4} = \frac{4 -3}{12} =  \frac{1}{12} 
+\end{equation*}
+
+\medskip
 \bigskip
 \noindent
 So why does this work? Consider
@@ -83,7 +87,7 @@ So why does this work? Consider
 \begin{equation*}
 \begin{array}{lllll}
 {\displaystyle \bigg ( \frac{1}{n} \bigg ) \bigg ( \frac{1}{n+1} \bigg )}              
-&=& {\displaystyle \frac{1}{n \cdot (n+1)}}                                                  &\qquad \qquad \mathrel{\#} \text{the product of the numerators $1 = |n - (n+1)|$} \\
+&=& {\displaystyle \frac{1}{n \cdot (n+1)}}                                                  &\qquad \qquad \mathrel{\#} \text{numerators are both 1} \\
 [10pt]
 &=& {\displaystyle \frac{(n-n) + 1}{n \cdot (n+1)}}                                      &\qquad \qquad \mathrel{\#} \text{$(n-n) = 0$ and  $0+1 = 1$} \\
 [10pt]
@@ -101,6 +105,7 @@ So why does this work? Consider
 \bigskip
 \noindent
 So we have 
+
 
 \begin{equation}
 \bigg ( \frac{1}{n} \bigg ) \bigg ( \frac{1}{n+1} \bigg ) =  \frac{1}{n} - \frac{1}{n+1}
@@ -147,7 +152,7 @@ $\left( - \frac{1}{2} + \frac{1}{2}\right)$, cancel. This allows us to evaluate 
 [12pt]
 &=& {\displaystyle \lim_{N\ to \infty} \left\lbrack {  1  - \frac{1}{N+1} } \right\rbrack} \\
 [10pt]
-&=& 1
+&=& 1            
 \end{array}
 \end{equation*}
 
@@ -200,19 +205,19 @@ Ok, but what about the sum of the reciprocals of the triangle numbers? This sum 
 [12pt]
 &=& {\displaystyle  2 \sum _{n=1}^{N} \left (\frac{1}{n} \right) \left ( \frac{1}{n+1} \right )}        &\qquad \qquad \mathrel{\#} \text{pull 2 out of sum, group terms} \\
 [12pt]
-&=& {\displaystyle  2 \sum\limits_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)}                    &\qquad \qquad \mathrel{\#} \text{This is the trick (Equation \ref{eqn:trick_1})} 
+&=& {\displaystyle  2 \sum\limits_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)}                    &\qquad \qquad \mathrel{\#} \text{this is the trick (Equation \ref{eqn:trick_1})} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
 We saw in Section \ref{subsec:sum_of_reciprocals_of_triangle_numbers} that 
-${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know that the sum of the reciprocals of the triangle numbers equals twice this 
-limit, so we know that 
+${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know from the above that the sum of the reciprocals of the triangle 
+numbers equals twice this  limit, so we know that 
 
 \bigskip
 \begin{equation*}
-{\displaystyle \sum \limits_{n=1}^{\infty} \frac{1}{T_n} = 2  \lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right) = 2}
+\sum \limits_{n=1}^{\infty} \frac{1}{T_n} = {\displaystyle 2 \left [\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right) \right ] = 2}
 \end{equation*}
 
 
@@ -299,8 +304,8 @@ Is this generalization useful? I don't know but it was fun trying to make it wor
  
  \bigskip
  \section{Conclusions}
-I'm not sure if Equation \ref{eqn:trick_1_generalization} is useful for anything but it was a fun exercise to do. OTOH, 
-Equation \ref{eqn:trick_1} is definitely useful when analyzing various infinite series.
+I'm not sure if Equation \ref{eqn:trick_1_generalization} is useful for anything but it was a fun exercise to do. On the other hand, 
+the basic trick (Equation \ref{eqn:trick_1}) turns out to be very useful, especially when evaluating infinite telescoping series. 
 
 
 
