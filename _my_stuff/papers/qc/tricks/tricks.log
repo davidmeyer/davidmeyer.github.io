@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 AUG 2021 11:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 AUG 2021 12:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1276,32 +1276,32 @@ Overfull \hbox (36.97073pt too wide) detected at line 102
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-<images/first_six_triangular_numbers.png, id=52, 441.65pt x 370.38374pt>
+<images/first_six_triangular_numbers.png, id=48, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package pdftex.def Info: images/first_six_triangular_numbers.png  used on input
  line 174.
 (pdftex.def)             Requested size: 441.64891pt x 370.38283pt.
- [3 <./images/first_six_triangular_numbers.png>]
+
+[2]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 186.
 
-
+[3 <./images/first_six_triangular_numbers.png>]
 Overfull \hbox (69.80719pt too wide) detected at line 253
 []
  []
 
-[4] [5] [6] (./tricks.bbl) [7] (./tricks.aux)
+[4] [5] (./tricks.bbl) [6] (./tricks.aux)
 Package rerunfilecheck Info: File `tricks.out' has not changed.
 (rerunfilecheck)             Checksum: 74083ADFB2D23E5FFCA5EBAEEC923CE9;1156.
  ) 
 Here is how much of TeX's memory you used:
- 26094 strings out of 478994
- 495992 string characters out of 5858184
- 788724 words of memory out of 5000000
+ 26093 strings out of 478994
+ 495986 string characters out of 5858184
+ 785724 words of memory out of 5000000
  43084 multiletter control sequences out of 15000+600000
  410430 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1318,10 +1318,10 @@ texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on tricks.pdf (7 pages, 157314 bytes).
+Output written on tricks.pdf (6 pages, 157272 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
  50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
