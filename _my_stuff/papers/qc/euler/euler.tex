@@ -81,8 +81,8 @@ Well, consider Figure \ref{fig:complex_plane}:
        \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
        \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor and a dot (circle(0.05))
        \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};                                                                                    % draw dashed lines to a and b
-       \draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};                                                                       % use [draw=none] to get a label at midway
-       \draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};                                                                    % use [draw=none] to get a label at midway
+       \draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};                                                                     % use [draw=none] to get a label at midway
+       \draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};                                                                  % use [draw=none] to get a label at midway
        \fill (0,3) circle(0.05);                                                                                                                                                         % draw a dot on the y axis at b (could do this by declaring coordinates)
        \fill (3.5,0) circle(0.05);                                                                                                                                                      % draw a dot on the y axis at a
        \draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);

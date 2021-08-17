@@ -1,0 +1,313 @@
+
+\documentclass{article}
+
+
+% \documentclass[tikz, margin=3mm]{standalone}
+
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+\usepackage{tikz}
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usetikzlibrary{angles, quotes}
+\usepackage{relsize}
+
+
+
+%
+% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\title{A Few Useful Tricks}
+\author{David Meyer \\ dmm@1-4-5.net}
+
+\date{Last update: \today}							% Activate to display a given date or no date
+
+
+\begin{document}
+\maketitle
+
+
+\section{Trick 1: $\Big ( \frac{1}{n} \Big ) \Big ( \frac{1}{n+1} \Big ) = \frac{1}{n} - \frac{1}{n+1}$}
+\label{a_equals_b_equals_1}
+
+\bigskip
+\noindent
+This incredibly useful bit of mathematical magic works when the denominators of the two fractions are of the form $n$ and $n+1$, their numerators are both 1\footnote{The product of the 
+numerators must be equal to the absolute value of the difference of the denominators.}, and $n > 0$. 
+
+\bigskip
+\noindent
+So why does this work? Consider
+
+
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \bigg ( \frac{1}{n} \bigg ) \bigg ( \frac{1}{n+1} \bigg )}              
+&=& {\displaystyle \frac{1}{n \cdot (n+1)}}                                                  &\qquad \qquad \mathrel{\#} \text{the product of the numerators $1 = |n - (n+1)|$} \\
+[10pt]
+&=& {\displaystyle \frac{(n-n) + 1}{n \cdot (n+1)}}                                      &\qquad \qquad \mathrel{\#} \text{$(n-n) = 0$ and  $0+1 = 1$} \\
+[10pt]
+&=& {\displaystyle \frac{(n+1) - n}{n \cdot (n+1)}}                                      &\qquad \qquad \mathrel{\#} \text{rearrange (+ is commutative and associative)} \\
+[10pt]
+&=& {\displaystyle \frac{(n+1)}{n \cdot (n+1)} - \frac{n}{n \cdot (n+1)}}      &\qquad \qquad \mathrel{\#} \text{split into a difference} \\
+[10pt]
+&=& {\displaystyle \frac{1}{n} - \frac{n}{n \cdot (n+1)}}                              &\qquad \qquad \mathrel{\#} \text{cancel $(n+1)$ in the first term} \\
+[10pt]
+&=& {\displaystyle \frac{1}{n} - \frac{1}{n+1}}                                            &\qquad \qquad \mathrel{\#} \text{cancel $n$ in the second term $\square$} 
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+So we have 
+
+\begin{equation}
+\bigg ( \frac{1}{n} \bigg ) \bigg ( \frac{1}{n+1} \bigg ) =  \frac{1}{n} - \frac{1}{n+1}
+\label{eqn:trick_1}
+\end{equation}
+
+\bigskip
+\noindent
+As an example,  let $n = 2$ in Equation \ref{eqn:trick_1}. Then we get 
+
+\bigskip
+\begin{equation*}
+{\displaystyle \left ( \frac{1}{2} \right ) \left ( \frac{1}{3} \right ) = \frac{1}{6}} 
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+{\displaystyle \frac{1}{2} - \frac{1}{3} = \frac{3 - 2}{6} = \frac{1}{6}}
+\end{equation*}
+
+\bigskip
+\subsection{What is the Sum of the Reciprocals of the Triangle Numbers?}
+\label{subsec:sum_of_reciprocals_of_triangle_numbers}
+Equation \ref{eqn:trick_1}  turns out to be useful when evaluating various types of infinite series, in particular telescoping series \cite{wiki:telescoping_series}. 
+In a telescoping series a term from the current index (call it $k$) is cancelled by a term in the next index (call it $k+1$), which "collapses the telescope".
+For example, when taking the infinite sum of Equation \ref{eqn:trick_1} (a telescoping series), we see that terms from consecutive indexes, such as 
+$\left( - \frac{1}{2} + \frac{1}{2}\right)$, cancel. This allows us to evaluate the infinite sum, as follows:
+
+
+
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \sum\limits_{n=1}^\infty \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+1} \right )}
+&=& {\displaystyle \sum\limits_{n=1}^\infty \left( \frac{1}{n} - \frac{1}{n+1} \right)}   \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1} (this is the trick)} \\
+[12pt]
+&=& {\displaystyle \lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} \:\; \quad \qquad \qquad \mathrel{\#} \text{take the limit} \\
+[12pt]
+&=& {\displaystyle \lim_{N \to \infty} \left\lbrack {\left(1 - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{N} - \frac{1}{N+1}\right) } \right\rbrack}  \\
+[12pt]
+&=& {\displaystyle \lim_{N \to \infty} \left\lbrack {  1 + \left( - \frac{1}{2} + \frac{1}{2}\right) + \left( - \frac{1}{3} + \frac{1}{3}\right) + \cdots + \left( - \frac{1}{N} + \frac{1}{N}\right) - \frac{1}{N+1} } \right\rbrack} \\
+[12pt]
+&=& {\displaystyle \lim_{N\ to \infty} \left\lbrack {  1  - \frac{1}{N+1} } \right\rbrack} \\
+[10pt]
+&=& 1
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+As another example, Burkard Polster (aka Mathologer) uses this trick when describing how Euler's solution to the Basel problem 
+works \cite{mathologer:eulers_real_identity}. The example I want to explore here is the (infinite) sum of the reciprocals of the triangle 
+numbers \cite{wiki:triangle_numbers}.
+ 
+ \bigskip
+ \noindent
+ So first, what is a triangle number? The first six triangle numbers are depicted in Figure \ref{fig:triangle_numbers}. But what is the general form
+ of the $n^{\text{th}}$ triangle number $T_n$?
+ 
+\bigskip
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[frame,scale=0.40] {images/first_six_triangular_numbers.png}}
+\caption{The First Six Triangle Numbers (courtesy Wikipedia \cite{wiki:triangle_numbers})}
+\label{fig:triangle_numbers}
+\end{figure}
+
+\bigskip
+\noindent
+We can see that $T_n$ is just the sum of the integers from 1 to $n$, so the first few triangle numbers are 1, 3, 6, 10, 15, 
+21, 28, 36, 45, 55, 66, 78, 91, 105,... (note that some authors include 0 as a triangle number). But what is the general form 
+of the $n^{\text{th}}$ triangle number $T_n$? Well,  since $T_n$ is the sum of the first $n$ integers we know that
+
+\begin{equation}
+T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2}
+\label{eqn:T_n}
+\end{equation}
+
+\bigskip
+\noindent
+As an aside, the German mathematician and scientist Carl Friedrich Gauss is said to have discovered the consecutive integer formula,
+${\displaystyle \sum _{k=1}^{n} k = \frac {n(n+1)}{2}}$, as a young person; this history is at least controversial  \cite{wiki:triangle_numbers}.
+
+\bigskip
+\noindent
+Ok, but what about the sum of the reciprocals of the triangle numbers? This sum looks like
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \sum \limits_{n=1}^{N} \frac{1}{T_n}}
+&=& {\displaystyle  \sum _{n=1}^{N} \frac{1}{\frac{n(n+1)}{2}}}                                                &\qquad \qquad \mathrel{\#} \text{definition of $T_n$ (Equation \ref{eqn:T_n})} \\
+[12pt]
+&=& {\displaystyle \sum _{n=1}^{N} \frac{2}{n (n+1)}}                                                              &\qquad \qquad \mathrel{\#} \text{simplify} \\
+[12pt]
+&=& {\displaystyle  2 \sum _{n=1}^{N} \left (\frac{1}{n} \right) \left ( \frac{1}{n+1} \right )}        &\qquad \qquad \mathrel{\#} \text{pull 2 out of sum, group terms} \\
+[12pt]
+&=& {\displaystyle  2 \sum\limits_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)}                    &\qquad \qquad \mathrel{\#} \text{This is the trick (Equation \ref{eqn:trick_1})} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+We saw in Section \ref{subsec:sum_of_reciprocals_of_triangle_numbers} that 
+${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know that the sum of the reciprocals of the triangle numbers equals twice this 
+limit, so we know that 
+
+\bigskip
+\begin{equation*}
+{\displaystyle \sum \limits_{n=1}^{\infty} \frac{1}{T_n} = 2  \lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right) = 2}
+\end{equation*}
+
+
+
+\bigskip
+\subsection{A Slightly More General Form Of This Trick}
+\label{sec:trick_1_generalization}
+A  slightly more general form of this trick allows for denominators of the form $n$ and $n+k$ rather than the $n$ and $n+1$ denominators we 
+saw in Section \ref{a_equals_b_equals_1}. The constraints on this form of the trick are that the denominators are of the form $n$ and $n+k$, 
+the product of the numerators must equal the absolute value of the difference of the denominators (that is, $k$), and $n > 0$.
+
+\bigskip
+\noindent
+If we consider the case in which $k = ab$ with $a \geq 0$, $b \geq 0$, and $n > 0$ we see that
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \bigg ( \frac{a}{n} \bigg ) \bigg ( \frac{b}{n+ab} \bigg )}              
+&=& {\displaystyle \frac{ab}{n \cdot (n+ab)}}                                                  &\qquad \qquad \mathrel{\#} \text{the product of the numerators $ab = | n - (n+ab)|$} \\
+[12pt]
+&=& {\displaystyle \frac{(n-n) + ab}{n \cdot (n+ ab)}}                                     &\qquad \qquad \mathrel{\#} \text{$(n-n) = 0$ and $0+ab = ab$} \\
+[12pt]
+&=& {\displaystyle \frac{(n+ab) - n}{n \cdot (n+ab)}}                                      &\qquad \qquad \mathrel{\#} \text{rearrange (+ is commutative and associative)} \\
+[12pt]
+&=& {\displaystyle \frac{(n+ab)}{n \cdot (n+ab)} - \frac{n}{n \cdot (n+ab)}}    &\qquad \qquad \mathrel{\#} \text{split into a difference} \\
+[12pt]
+&=& {\displaystyle \frac{1}{n} - \frac{n}{n \cdot (n+ab)}}                                 &\qquad \qquad \mathrel{\#} \text{cancel $(n+ab)$ in the first term} \\
+[12pt]
+&=& {\displaystyle \frac{1}{n} - \frac{1}{n+ab}}                                               &\qquad \qquad \mathrel{\#} \text{cancel $n$ in the second term $\square$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\bigskip
+\noindent
+So for $a \geq 0$, $b \geq 0$, and $n > 0$ we have 
+
+\bigskip
+ \begin{equation}
+ {\displaystyle \bigg ( \frac{a}{n} \bigg ) \bigg ( \frac{b}{n+ab} \bigg ) =  \frac{1}{n} - \frac{1}{n+ab}}
+ \label{eqn:trick_1_generalization}
+ \end{equation}
+
+\bigskip
+\bigskip
+\noindent
+To see how this works consider the following example: let  $a = 2$,  $b = 5$  and $n = 3$. Then
+
+\bigskip
+\bigskip
+\begin{equation*}
+{\displaystyle \left ( \frac{2}{3} \right ) \left ( \frac{5}{3 +(2 \cdot 5)} \right ) = \left ( \frac{2}{3} \right ) \left ( \frac{5}{3 +10} \right ) = \left ( \frac{2}{3} \right ) \left ( \frac{5}{13} \right ) = \frac{10}{39}}
+\end{equation*} 
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+{\displaystyle \frac{1}{3} - \frac{1}{3+ (2 \cdot 5)}  = \frac{1}{3} - \frac{1}{3+ 10} = \frac{1}{3} - \frac{1}{13} = \frac{13}{39} - \frac{3}{39} = \frac{13-3}{39}  = \frac{10}{39}}
+\end{equation*}
+
+\bigskip
+\bigskip
+\bigskip
+\noindent
+We can also note that if $a = b = 1$ in Equation \ref{eqn:trick_1_generalization} we get the special case we considered in Section \ref{a_equals_b_equals_1}:
+
+\bigskip
+\begin{equation*}
+ {\displaystyle \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+(1 \cdot 1)} \right ) = \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+1} \right ) =  \frac{1}{n} - \frac{1}{n+(1 \cdot 1)}  = \frac{1}{n} - \frac{1}{n+1}}
+ \end{equation*}
+ 
+ \bigskip
+ \bigskip
+ \noindent
+ Equation \ref{eqn:trick_1_generalization} also works correctly for $a = 0$ and $b \neq 0$, $a \neq 0$ and $b = 0$, and  $a = b = 0$.
+
+\bigskip
+\noindent
+Is this generalization useful? I don't know but it was fun trying to make it work.
+
+ 
+ \bigskip
+ \section{Conclusions}
+I'm not sure if Equation \ref{eqn:trick_1_generalization} is useful for anything but it was a fun exercise to do. OTOH, 
+Equation \ref{eqn:trick_1} is definitely useful when analyzing various infinite series.
+
+
+
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{/Users/dmm/papers/bib/qc}
+\end{document} 
+

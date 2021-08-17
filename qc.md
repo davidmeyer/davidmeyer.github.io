@@ -1,5 +1,4 @@
 <!-- 
-
 #
 #	David Meyer
 #	dmm@m1-4-5.net
@@ -10,6 +9,9 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./tricks.pdf">
+A Few Useful Mathematical Tricks</a>
+<br>
 <li><a href="./euler.pdf">
 A Few Notes on Euler’s Formula and Euler's Identity</a>
 <br>
@@ -68,7 +70,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 08.10.2021 by dmm@1-4-5.net
+<i>Last Update: 08.17.2021 by dmm@1-4-5.net
 
 
 
