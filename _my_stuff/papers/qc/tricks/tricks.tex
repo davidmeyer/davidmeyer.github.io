@@ -139,14 +139,14 @@ Euler's solution to the Basel problem works \cite{mathologer:eulers_real_identit
 \bigskip
 \subsection{Telescoping Series}
 \label{subsec:telescoping_series}
-What is a telescoping series? Briefly, a telescoping series is an sum that is characterized by the fact that the partial sums of the series (called telescoping sums) 
+What is a telescoping series? Briefly, a telescoping series is a sum that is characterized by the fact that the partial sums of the series (called telescoping sums) 
 contain pairs of consecutive terms which cancel each other, leaving only the first and final terms. This cancellation of adjacent terms is whimsically 
 called "collapsing the telescope".
 
 \bigskip
 \noindent
-For example, consider the infinite series whose terms are described by Equation \ref{eqn:trick_1}. This is a telescoping series which can
-be seen in the following 
+For example, consider the infinite series whose terms are described by Equation \ref{eqn:trick_1}. This is a telescoping series, which can
+be seen in the following
 
 %
 % the comments are really hacked up in the following since one of the lines is too long to allow the array comments
@@ -230,12 +230,13 @@ triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
 \bigskip
 \noindent
 As an aside, the German mathematician and scientist Carl Friedrich Gauss is said to have discovered the consecutive integer formula,
-${\displaystyle \sum _{k=1}^{n} k = \frac {n(n+1)}{2}}$, as a young person; this history is at least controversial  \cite{wiki:triangle_numbers}.
+${\displaystyle \sum _{k=1}^{n} k = \frac {n(n+1)}{2}}$, as a young person; however, this history is at the very least 
+controversial \cite{wiki:triangle_numbers}.
 
 \subsection{So What is the Sum of the Reciprocals of the Triangular Numbers?}
 \bigskip
 \noindent
-Ok, but what about the sum of the reciprocals of the triangular numbers? This sum looks like
+All of this is good, but back to the question: what is the sum of the reciprocals of the triangular numbers? Well, first, the sum looks like
 
 \bigskip
 \begin{equation*}
@@ -255,7 +256,7 @@ Ok, but what about the sum of the reciprocals of the triangular numbers? This su
 \noindent
 We saw in Section \ref{subsec:telescoping_series} that 
 ${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know from the above that the infinite sum of the reciprocals of the triangular 
-numbers equals twice this  limit, so we know that 
+numbers is twice this  limit. So we know that 
 
 \bigskip
 \begin{equation*}
