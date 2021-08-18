@@ -139,16 +139,14 @@ Euler's solution to the Basel problem works \cite{mathologer:eulers_real_identit
 \bigskip
 \subsection{Telescoping Series}
 \label{subsec:telescoping_series}
-Equation \ref{eqn:trick_1}  turns out to be useful when evaluating telescoping series \cite{wiki:telescoping_series}.
-What is a telescoping series? Briefly, a telescoping series is an sum that is characterized by the fact that the partial sums (called telescoping sums) contain 
-pairs of consecutive terms which cancel each other, leaving only the initial and final terms in the sum. This cancellation of adjacent terms is metaphorically 
+What is a telescoping series? Briefly, a telescoping series is an sum that is characterized by the fact that the partial sums of the series (called telescoping sums) 
+contain pairs of consecutive terms which cancel each other, leaving only the first and final terms. This cancellation of adjacent terms is whimsically 
 called "collapsing the telescope".
 
 \bigskip
 \noindent
-For example, when calculating the infinite sum of Equation \ref{eqn:trick_1} we see that terms from consecutive indexes, such as 
-$\left( - \frac{1}{2} + \frac{1}{2}\right)$ and $\left( - \frac{1}{3} + \frac{1}{3}\right)$ cancel. This infinite sum can thus be evaluated as follows:
-
+For example, consider the infinite series whose terms are described by Equation \ref{eqn:trick_1}. This is a telescoping series which can
+be seen in the following 
 
 %
 % the comments are really hacked up in the following since one of the lines is too long to allow the array comments
@@ -156,7 +154,7 @@ $\left( - \frac{1}{2} + \frac{1}{2}\right)$ and $\left( - \frac{1}{3} + \frac{1}
 \begin{equation*}
 \begin{array}{lllll}
 {\displaystyle \sum\limits_{n=1}^\infty \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+1} \right )}
-&=& {\displaystyle \sum\limits_{n=1}^\infty \left( \frac{1}{n} - \frac{1}{n+1} \right)}   \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1} (this is the trick)} \\
+&=& {\displaystyle \sum\limits_{n=1}^\infty \left( \frac{1}{n} - \frac{1}{n+1} \right)}   \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1} (this is trick 1)} \\
 [12pt]
 &=& {\displaystyle \lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} \:\; \quad \qquad \qquad \mathrel{\#} \text{we are interested in the limit} \\
 [12pt]
@@ -182,13 +180,13 @@ structure of its terms a telescoping series has the following property:
 [12pt]
 &=& a_1 + (a_2 - a_2) + (a_3 - a_3) + \cdots + (a_n - a_n) - a_{n+1}                 &\quad \mathrel{\#} \text{group like terms} \\
 [12pt]
-&=& a_1 - a_{n+1}                                                                                                &\quad \mathrel{\#} \text{simplify (collapse the telescope)} \\
+&=& a_1 - a_{n+1}                                                                                                &\quad \mathrel{\#} \text{simplify} \\
 \end{array}
 \end{equation*}
 
 \bigskip
 \subsection{Triangular Numbers}
-The example I want to explore here is the infinite sum of the reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.  So 
+The example I want to explore here is the infinite sum of the reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.  So first,
 what is a triangular number? The first six triangular numbers are depicted as triangles in Figure \ref{fig:triangle_numbers}. We can see 
 from the figure that a triangular number $T_n$ is the sum of the integers from 1 to $n$. 
   
@@ -249,7 +247,7 @@ Ok, but what about the sum of the reciprocals of the triangular numbers? This su
 [12pt]
 &=& {\displaystyle  2 \sum _{n=1}^{N} \left (\frac{1}{n} \right) \left ( \frac{1}{n+1} \right )}        &\qquad \qquad \mathrel{\#} \text{pull 2 out of the sum and group terms} \\
 [12pt]
-&=& {\displaystyle  2 \sum\limits_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)}                    &\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1} (this is the trick)}
+&=& {\displaystyle  2 \sum\limits_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)}                    &\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1}}
 \end{array}
 \end{equation*}
 
@@ -351,10 +349,7 @@ I'm not sure if Equation \ref{eqn:trick_1_generalization} is useful for anything
 the basic trick (Equation \ref{eqn:trick_1}) turns out to be very useful, especially when evaluating infinite telescoping series. 
 
 
-
-
-
-\newpage
+% \newpage
 \bibliographystyle{plain}
 \bibliography{/Users/dmm/papers/bib/qc}
 \end{document} 
