@@ -130,15 +130,16 @@ and
 \end{equation*}
 
 \bigskip
-\subsection{What is the Sum of the Reciprocals of the Triangle Numbers?}
+\subsection{What is the Sum of the Reciprocals of the Triangular Numbers?}
 \label{subsec:sum_of_reciprocals_of_triangle_numbers}
-Equation \ref{eqn:trick_1}  turns out to be useful when evaluating various types of infinite series, in particular telescoping series \cite{wiki:telescoping_series}. 
-In a telescoping series a term from the current index (call it $k$) is cancelled by a term in the next index (call it $k+1$), which "collapses the telescope".
+Equation \ref{eqn:trick_1}  turns out to be useful when evaluating various types of infinite series such as the telescoping series \cite{wiki:telescoping_series}
+we are interested in here. In an infinite telescoping series the partial sums (called telescoping sums) contain pairs of consecutive terms which cancel each other
+leaving only the initial and final terms, which is called "collapsing the telescope".
 
 \bigskip
 \noindent
 For example, when calculating the infinite sum of Equation \ref{eqn:trick_1} (a telescoping series), we see that terms from consecutive indexes, such as 
-$\left( - \frac{1}{2} + \frac{1}{2}\right)$, cancel. This allows us to evaluate the infinite sum as follows:
+$\left( - \frac{1}{2} + \frac{1}{2}\right)$ and $\left( - \frac{1}{3} + \frac{1}{3}\right)$ cancel. The infinite sum can thus be evaluated as follows:
 
 
 \bigskip
@@ -161,20 +162,23 @@ $\left( - \frac{1}{2} + \frac{1}{2}\right)$, cancel. This allows us to evaluate 
 
 \bigskip
 \noindent
-As another example, Burkard Polster (aka Mathologer) uses this trick when describing how Euler's solution to the Basel problem 
-works \cite{mathologer:eulers_real_identity}. The example I want to explore here is the (infinite) sum of the reciprocals of the triangle 
-numbers \cite{wiki:triangle_numbers}.
+In another example Burkard Polster (aka Mathologer) uses this trick when describing how Euler's solution to the Basel problem 
+works \cite{mathologer:eulers_real_identity}. 
+
+\bigskip
+\noindent
+The example I want to explore here is the infinite sum of the reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.
  
  \bigskip
  \noindent
- So first, what is a triangle number? The first six triangle numbers are depicted in Figure \ref{fig:triangle_numbers}. But what is the general form
+ So first, what is a triangular number? The first six triangular numbers are depicted in Figure \ref{fig:triangle_numbers}. But what is the general form
  of the $n^{\text{th}}$ triangle number $T_n$?
  
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.50] {images/first_six_triangular_numbers.png}}
-\caption{The First Six Triangle Numbers (courtesy Wikipedia \cite{wiki:triangle_numbers})}
+\center{\includegraphics[frame,scale=0.38] {images/first_six_triangular_numbers.png}}
+\caption{The First Six Triangular Numbers (courtesy Wikipedia \cite{wiki:triangle_numbers})}
 \label{fig:triangle_numbers}
 \end{figure}
 
@@ -182,7 +186,7 @@ numbers \cite{wiki:triangle_numbers}.
 \noindent
 We can see that $T_n$ is just the sum of the integers from 1 to $n$, so the first few triangle numbers are 1, 3, 6, 10, 15, 
 21, 28, 36, 45, 55, 66, 78, 91, 105,... (note that some authors include 0 as a triangle number). But what is the general form 
-of the $n^{\text{th}}$ triangle number $T_n$? Well,  since $T_n$ is the sum of the first $n$ integers we know that
+of the $n^{\text{th}}$ triangular number $T_n$? Well,  since $T_n$ is the sum of the first $n$ integers we know that
 
 \begin{equation}
 T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2}
@@ -191,12 +195,26 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 
 \bigskip
 \noindent
+Interestingly if you start with the number one in row two of Pascal's Triangle \cite{wiki:pascals_triangle} this diagonal contains the 
+triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
+
+\bigskip
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[frame,scale=0.38] {images/pascals_triangle.jpg}}
+\caption{Number Sequences Found In Pascal's Triangle}
+\label{fig:pascals_triangle}
+\end{figure}
+
+
+\bigskip
+\noindent
 As an aside, the German mathematician and scientist Carl Friedrich Gauss is said to have discovered the consecutive integer formula,
 ${\displaystyle \sum _{k=1}^{n} k = \frac {n(n+1)}{2}}$, as a young person; this history is at least controversial  \cite{wiki:triangle_numbers}.
 
 \bigskip
 \noindent
-Ok, but what about the sum of the reciprocals of the triangle numbers? This sum looks like
+Ok, but what about the sum of the reciprocals of the triangular numbers? This sum looks like
 
 \bigskip
 \begin{equation*}
@@ -204,7 +222,7 @@ Ok, but what about the sum of the reciprocals of the triangle numbers? This sum 
 {\displaystyle \sum \limits_{n=1}^{N} \frac{1}{T_n}}
 &=& {\displaystyle  \sum _{n=1}^{N} \frac{1}{\frac{n(n+1)}{2}}}                                                &\qquad \qquad \mathrel{\#} \text{definition of $T_n$ (Equation \ref{eqn:T_n})} \\
 [12pt]
-&=& {\displaystyle \sum _{n=1}^{N} \frac{2}{n (n+1)}}                                                              &\qquad \qquad \mathrel{\#} \text{simplify} \\
+&=& {\displaystyle \sum _{n=1}^{N} \frac{2}{n (n+1)}}                                                              &\qquad \qquad \mathrel{\#} \text{simplify fraction} \\
 [12pt]
 &=& {\displaystyle  2 \sum _{n=1}^{N} \left (\frac{1}{n} \right) \left ( \frac{1}{n+1} \right )}        &\qquad \qquad \mathrel{\#} \text{pull 2 out of sum, group terms} \\
 [12pt]
@@ -215,7 +233,7 @@ Ok, but what about the sum of the reciprocals of the triangle numbers? This sum 
 \bigskip
 \noindent
 We saw in Section \ref{subsec:sum_of_reciprocals_of_triangle_numbers} that 
-${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know from the above that the sum of the reciprocals of the triangle 
+${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know from the above that the infinite sum of the reciprocals of the triangular 
 numbers equals twice this  limit, so we know that 
 
 \bigskip

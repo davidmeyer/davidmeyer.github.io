@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  13 AUG 2021 18:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  18 AUG 2021 06:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -961,24 +961,24 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 (./graphs.aux)
 \openout1 = `graphs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1006,7 +1006,7 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 51.
+ on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1042,7 +1042,7 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 52.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1055,9 +1055,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count348
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
  (./graphs.out) (./graphs.out)
 \@outlinefile=\write4
 \openout4 = `graphs.out'.
@@ -1073,164 +1073,44 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 51
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 52
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
- [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+./graphs.tex:57: Undefined control sequence.
+<argument> \xa ,\xb 
+                    
+l.57 ...a,\xb)node[rectangle,fill=green!30]{\xc};}
+                                                  
+? 
+./graphs.tex:57: Emergency stop.
+<argument> \xa ,\xb 
+                    
+l.57 ...a,\xb)node[rectangle,fill=green!30]{\xc};}
+                                                  
+End of file on the terminal!
 
-]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-
-NOTE: coordinate (2Y5.0e0],2Y1.60375214e5]) has been dropped because it is unbo
-unded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.8990002e0],2Y1.4773393e5]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.7980005e0],2Y2.5912978e4]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.6970007e0],1Y7.1633215e4]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.596001e0],1Y7.8567455e4]) has been dropped because it is 
-unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.4950012e0],1Y2.2523991e4]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.3940015e0],2Y3.03714363e4]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.2930017e0],2Y4.05481642e4]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.192002e0],2Y1.58229575e4]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y4.0910022e0],1Y1.19637912e4]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.9900024e0],1Y2.03117995e4]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.8890027e0],1Y9.9765767e3]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.788003e0],2Y4.1808444e3]) has been dropped because it is 
-unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.6870032e0],2Y9.8623712e3]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.5860034e0],2Y5.8604296e3]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.4850037e0],1Y1.13331926e3]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.3840039e0],1Y4.6288552e3]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.2830042e0],1Y3.2610882e3]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.1820044e0],2Y8.320808e1]) has been dropped because it is 
-unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y3.0810046e0],2Y2.09037007e3]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.9800049e0],2Y1.73220197e3]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.8790051e0],2Y1.8920464e2]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.7780054e0],1Y9.014203e2]) has been dropped because it is 
-unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.6770056e0],1Y8.80602567e2]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.5760059e0],1Y1.97214314e2]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.4750061e0],2Y3.6676202e2]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.3740063e0],2Y4.27896387e2]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.2730066e0],2Y1.3967508e2]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.1720068e0],1Y1.37918549e2]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y2.0710071e0],1Y1.97699637e2]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.9700073e0],1Y8.3316368e1]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.8690076e0],2Y4.6117805e1]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.7680078e0],2Y8.59142195e1]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.667008e0],2Y4.39692043e1]) has been dropped because it is
- unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.5660083e0],1Y1.25578084e1]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.4650085e0],1Y3.43706151e1]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.3640088e0],1Y2.05307333e1]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.263009e0],2Y2.0427168e0]) has been dropped because it is 
-unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.1620093e0],2Y1.20769943e1]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y1.0610095e0],2Y8.08487364e0]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y8.590099e-1],1Y3.25719243e0]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (2Y7.5801001e-1],1Y2.18515587e0]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-[2] [3] (./graphs.aux)
-Package rerunfilecheck Info: File `graphs.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 37361 strings out of 478994
- 867386 string characters out of 5858184
- 1299671 words of memory out of 5000000
- 54219 multiletter control sequences out of 15000+600000
- 413441 words of font info for 69 fonts, out of 8000000 for 9000
+ 36240 strings out of 478994
+ 840621 string characters out of 5858184
+ 1207742 words of memory out of 5000000
+ 53115 multiletter control sequences out of 15000+600000
+ 409981 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,11n,116p,702b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on graphs.pdf (3 pages, 108961 bytes).
-PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 113i,3n,116p,702b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+./graphs.tex:57:  ==> Fatal error occurred, no output PDF file produced!
