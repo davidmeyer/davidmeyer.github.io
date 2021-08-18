@@ -165,28 +165,28 @@ $\left( - \frac{1}{2} + \frac{1}{2}\right)$ and $\left( - \frac{1}{3} + \frac{1}
 In another example Burkard Polster (aka Mathologer) uses this trick when describing how Euler's solution to the Basel problem 
 works \cite{mathologer:eulers_real_identity}. 
 
-\bigskip
-\noindent
-The example I want to explore here is the infinite sum of the reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.
- 
- \bigskip
- \noindent
- So first, what is a triangular number? The first six triangular numbers are depicted in Figure \ref{fig:triangle_numbers}. 
- We can see that the triangular number $T_n$ is defined to be the sum of the integers from one to $n$. 
+\subsection{Triangular Numbers}
+The example I want to explore here is the infinite sum of the reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.  So 
+what is a triangular number? The first six triangular numbers are depicted in Figure \ref{fig:triangle_numbers}. We can see from the figure
+that a triangular number $T_n$ is the sum of the integers from 1 to $n$. 
   
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.38] {images/first_six_triangular_numbers.png}}
-\caption{The First Six Triangular Numbers (courtesy Wikipedia \cite{wiki:triangle_numbers})}
+\center{\includegraphics[frame,scale=0.34] {images/first_six_triangular_numbers.png}}
+\caption{The First Six Triangular Numbers \cite{wiki:triangle_numbers}}
 \label{fig:triangle_numbers}
 \end{figure}
 
 \bigskip
 \noindent
-Since $T_n$ is just the sum of the integers from 1 to $n$ we see that the first few triangle numbers are 1, 3, 6, 10, 15, 
-21, 28, 36, 45, 55, 66, 78, 91, 105,... (note that some authors include 0 as a triangle number). But what is the general form 
-of the $n^{\text{th}}$ triangular number $T_n$? Well,  since $T_n$ is the sum of the first $n$ integers we know that
+Since $T_n$ is just the sum of the integers from 1 to $n$ we can easily calculate the first few values of $T_n$, which are
+1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105 and so on (note that some authors include 0 in the triangular numbers).
+
+\bigskip
+\noindent
+Ok, but what is the general form of $T_n$?  Since $T_n$ is the sum of the first $n$ integers 
+we know that
 
 \begin{equation}
 T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2}
@@ -195,13 +195,13 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 
 \bigskip
 \noindent
-Interestingly if you start with the number one in row two of Pascal's Triangle \cite{wiki:pascals_triangle} the corresponding diagonal contains the 
+Interestingly if you start with the number 1 in row 2 of Pascal's Triangle \cite{wiki:pascals_triangle} the corresponding diagonal contains the 
 triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
 
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.38] {images/pascals_triangle.jpg}}
+\center{\includegraphics[frame,scale=0.32] {images/pascals_triangle.jpg}}
 \caption{Number Sequences Found In Pascal's Triangle}
 \label{fig:pascals_triangle}
 \end{figure}
