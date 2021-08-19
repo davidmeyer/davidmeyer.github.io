@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  18 AUG 2021 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  19 AUG 2021 06:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1310,7 +1310,7 @@ Package rerunfilecheck Info: File `tricks.out' has not changed.
 Here is how much of TeX's memory you used:
  26108 strings out of 478994
  496291 string characters out of 5858184
- 788741 words of memory out of 5000000
+ 788740 words of memory out of 5000000
  43093 multiletter control sequences out of 15000+600000
  410430 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1327,7 +1327,7 @@ texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on tricks.pdf (6 pages, 273389 bytes).
+Output written on tricks.pdf (6 pages, 273538 bytes).
 PDF statistics:
  165 PDF objects out of 1000 (max. 8388607)
  130 compressed objects within 2 object streams
