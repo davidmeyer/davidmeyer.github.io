@@ -139,31 +139,31 @@ Euler's solution to the Basel problem works \cite{mathologer:eulers_real_identit
 \bigskip
 \subsection{Telescoping Series}
 \label{subsec:telescoping_series}
-What is a telescoping series? Briefly, a telescoping series is a sum that is characterized by the fact that the partial sums of the series (called telescoping sums) 
+What is a telescoping series? Briefly, a telescoping series is a sum that is characterized by partial sums (called telescoping sums) 
 contain pairs of consecutive terms which cancel each other, leaving only the first and final terms. This cancellation of adjacent terms is whimsically 
 called "collapsing the telescope".
 
 \bigskip
 \noindent
-For example, consider the infinite series whose terms are described by Equation \ref{eqn:trick_1}. This is a telescoping series, which can
-be seen in the following
+For example, consider the infinite series whose terms are described by Equation \ref{eqn:trick_1}. This is perhaps the canonical example of a telescoping series, which can
+be seen as follows:
 
 %
 % the comments are really hacked up in the following since one of the lines is too long to allow the array comments
 %
 \begin{equation*}
 \begin{array}{lllll}
-{\displaystyle \sum\limits_{n=1}^\infty \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+1} \right )}
-&=& {\displaystyle \sum\limits_{n=1}^\infty \left( \frac{1}{n} - \frac{1}{n+1} \right)}   \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1} (this is trick 1)} \\
-[12pt]
-&=& {\displaystyle \lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} \:\; \quad \qquad \qquad \mathrel{\#} \text{we are interested in the limit} \\
-[12pt]
+{\displaystyle \mathlarger{\sum\limits_{n=1}^\infty} \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+1} \right )}
+&=& {\displaystyle \mathlarger{\sum\limits_{n=1}^\infty} \left( \frac{1}{n} - \frac{1}{n+1} \right)}   \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:trick_1}} \\
+[15pt]
+&=& {\displaystyle \lim_{N \to \infty}\mathlarger{ \sum_{n=1}^N} \left( \frac{1}{n} - \frac{1}{n+1} \right)} \:\; \quad \qquad \qquad \mathrel{\#} \text{we are interested in the limit} \\
+[15pt]
 &=& {\displaystyle \lim_{N \to \infty} \left\lbrack {\left(1 - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{N} - \frac{1}{N+1}\right) } \right\rbrack}  \\
-[12pt]
+[15pt]
 &=& {\displaystyle \lim_{N \to \infty} \left\lbrack {  1 + \left( - \frac{1}{2} + \frac{1}{2}\right) + \left( - \frac{1}{3} + \frac{1}{3}\right) + \cdots + \left( - \frac{1}{N} + \frac{1}{N}\right) - \frac{1}{N+1} } \right\rbrack} \\
-[12pt]
+[15pt]
 &=& {\displaystyle \lim_{N\ \to \infty} \left\lbrack {  1  - \frac{1}{N+1} } \right\rbrack}      \; \quad \qquad \qquad \qquad \mathrel{\#} \text{collapse the telescope} \\
-[10pt]
+[15pt]
 &=& 1            
 \end{array}
 \end{equation*}
@@ -193,7 +193,7 @@ from the figure that a triangular number $T_n$ is the sum of the integers from 1
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.35] {images/first_six_triangular_numbers.png}}
+\center{\includegraphics[frame,scale=0.40] {images/first_six_triangular_numbers.png}}
 \caption{The First Six Triangular Numbers \cite{wiki:triangle_numbers}}
 \label{fig:triangle_numbers}
 \end{figure}
@@ -215,13 +215,13 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 
 \bigskip
 \noindent
-Interestingly if you start with the number 1 in row 2 of Pascal's Triangle \cite{wiki:pascals_triangle} the corresponding diagonal contains the 
-triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
+An interesting factoid involving the triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle} is that if you start with the number 1 in row 2 of Pascal's 
+Triangle the corresponding diagonal contains the triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
 
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.34] {images/pascals_triangle.jpg}}
+\center{\includegraphics[frame,scale=0.40] {images/pascals_triangle.jpg}}
 \caption{Number Sequences Found In Pascal's Triangle}
 \label{fig:pascals_triangle}
 \end{figure}
@@ -229,9 +229,8 @@ triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
 
 \bigskip
 \noindent
-As an aside, the German mathematician and scientist Carl Friedrich Gauss is said to have discovered the consecutive integer formula,
-${\displaystyle \sum _{k=1}^{n} k = \frac {n(n+1)}{2}}$, as a young person; however, this history is at the very least 
-controversial \cite{wiki:triangle_numbers}.
+Another possibly interesting fact is that the great German mathematician and scientist Carl Friedrich Gauss is said to have (re)discovered the 
+consecutive integer formula (Equation \ref{eqn:T_n})  as a young person \cite{wiki:triangle_numbers}.
 
 \subsection{So What is the Sum of the Reciprocals of the Triangular Numbers?}
 \label{subsec:reciprocals}
