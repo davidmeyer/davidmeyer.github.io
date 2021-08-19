@@ -264,92 +264,20 @@ numbers is twice this  limit. So we know that
 \end{equation*}
 
 
-\bigskip
-\subsection{A Slightly More General Form Of This Trick}
-\label{sec:trick_1_generalization}
-A  slightly more general form of this trick allows for denominators of the form $n$ and $n+k$ rather than the $n$ and $n+1$ denominators we 
-saw in Section \ref{a_equals_b_equals_1}. The constraints on this form of the trick are that the denominators are of the form $n$ and $n+k$, 
-the product of the numerators must equal the absolute value of the difference of the denominators (that is, $k$), and $n > 0$.
-
-\bigskip
-\noindent
-If we consider the case in which $k = ab$ with $a \geq 0$, $b \geq 0$, and $n > 0$ we see that
-
-\bigskip
-\begin{equation*}
-\begin{array}{lllll}
-{\displaystyle \bigg ( \frac{a}{n} \bigg ) \bigg ( \frac{b}{n+ab} \bigg )}              
-&=& {\displaystyle \frac{ab}{n \cdot (n+ab)}}                                                  &\qquad \qquad \mathrel{\#} \text{the product of the numerators $ab = | n - (n+ab)|$} \\
-[12pt]
-&=& {\displaystyle \frac{(n-n) + ab}{n \cdot (n+ ab)}}                                     &\qquad \qquad \mathrel{\#} \text{$(n-n) = 0$ and $0+ab = ab$} \\
-[12pt]
-&=& {\displaystyle \frac{(n+ab) - n}{n \cdot (n+ab)}}                                      &\qquad \qquad \mathrel{\#} \text{rearrange (+ is commutative and associative)} \\
-[12pt]
-&=& {\displaystyle \frac{(n+ab)}{n \cdot (n+ab)} - \frac{n}{n \cdot (n+ab)}}    &\qquad \qquad \mathrel{\#} \text{split into a difference} \\
-[12pt]
-&=& {\displaystyle \frac{1}{n} - \frac{n}{n \cdot (n+ab)}}                                 &\qquad \qquad \mathrel{\#} \text{cancel $(n+ab)$ in the first term} \\
-[12pt]
-&=& {\displaystyle \frac{1}{n} - \frac{1}{n+ab}}                                               &\qquad \qquad \mathrel{\#} \text{cancel $n$ in the second term $\square$}
-\end{array}
-\end{equation*}
-
-\bigskip
-\bigskip
-\noindent
-So for $a \geq 0$, $b \geq 0$, and $n > 0$ we have 
-
-\bigskip
- \begin{equation}
- {\displaystyle \bigg ( \frac{a}{n} \bigg ) \bigg ( \frac{b}{n+ab} \bigg ) =  \frac{1}{n} - \frac{1}{n+ab}}
- \label{eqn:trick_1_generalization}
- \end{equation}
-
-\bigskip
-\bigskip
-\noindent
-To see how this works consider the following example: let  $a = 2$,  $b = 5$  and $n = 3$. Then
-
-\bigskip
-\bigskip
-\begin{equation*}
-{\displaystyle \left ( \frac{2}{3} \right ) \left ( \frac{5}{3 +(2 \cdot 5)} \right ) = \left ( \frac{2}{3} \right ) \left ( \frac{5}{3 +10} \right ) = \left ( \frac{2}{3} \right ) \left ( \frac{5}{13} \right ) = \frac{10}{39}}
-\end{equation*} 
-
-\bigskip
-\noindent
-and
-
-\begin{equation*}
-{\displaystyle \frac{1}{3} - \frac{1}{3+ (2 \cdot 5)}  = \frac{1}{3} - \frac{1}{3+ 10} = \frac{1}{3} - \frac{1}{13} = \frac{13}{39} - \frac{3}{39} = \frac{13-3}{39}  = \frac{10}{39}}
-\end{equation*}
-
-\bigskip
-\bigskip
-\bigskip
-\noindent
-We can also note that if $a = b = 1$ in Equation \ref{eqn:trick_1_generalization} we get the special case we considered in Section \ref{a_equals_b_equals_1}:
-
-\bigskip
-\begin{equation*}
- {\displaystyle \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+(1 \cdot 1)} \right ) = \left ( \frac{1}{n} \right ) \left ( \frac{1}{n+1} \right ) =  \frac{1}{n} - \frac{1}{n+(1 \cdot 1)}  = \frac{1}{n} - \frac{1}{n+1}}
- \end{equation*}
- 
- \bigskip
- \bigskip
- \noindent
- Equation \ref{eqn:trick_1_generalization} also works correctly for $a = 0$ and $b \neq 0$, $a \neq 0$ and $b = 0$, and  $a = b = 0$.
-
-\bigskip
-\noindent
-Is this generalization useful? I don't know but it was fun trying to make it work. I'll just note here that if you sum terms of the "generalized" form it does not form
-a telescoping series, so that's a big loss of functionality.
-
  
  \bigskip
  \section{Conclusions}
-I'm not sure if Equation \ref{eqn:trick_1_generalization} is useful for anything but it was a fun exercise to do. On the other hand, 
-the basic trick (Equation \ref{eqn:trick_1}) turns out to be very useful, especially when evaluating infinite telescoping series. 
+Equation \ref{eqn:trick_1} turns out to be very useful, especially when evaluating infinite telescoping series. We also saw that interestingly, the infinite sum
+of the reciprocals of the triangular numbers equals two, that is
 
+
+\begin{equation*}
+\sum \limits_{n=1}^{\infty} \frac{1}{T_n} =  2
+\end{equation*}
+
+\bigskip
+\noindent
+As we saw in Section \ref{subsec:telescoping_series}, the evaluation of this sum makes heavy use of a telescoping series described by Equation \ref{eqn:trick_1}.
 
 % \newpage
 \bibliographystyle{plain}
