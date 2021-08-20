@@ -10,7 +10,8 @@
 <h2>Notes on various mathematical topics</h2>
 
 <li><a href="./tricks.pdf">
-A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the Reciprocals of the Triangular Numbers</a>
+A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the\\
+Reciprocals of the Triangular Numbers</a>
 <br>
 <li><a href="./euler.pdf">
 A Few Notes on Euler’s Formula and Euler's Identity</a>
