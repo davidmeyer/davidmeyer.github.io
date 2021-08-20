@@ -19,7 +19,7 @@
     note = "[Online; accessed 18-August-2021]"
 }
 
-wiki:telescoping_series,@misc{wiki:telescoping_series,
+@misc{wiki:telescoping_series,
     author = "{Wikipedia contributors}",
     title = "{Telescoping Series --- {Wikipedia}{,} The Free Encyclopedia}",
     year = "2021",
