@@ -70,7 +70,7 @@
 \section{A Useful Mathematical Trick: $\Big ( \frac{1}{n} \Big ) \Big ( \frac{1}{n+1} \Big ) = \frac{1}{n} - \frac{1}{n+1}$}
 \label{a_equals_b_equals_1}
 
-This incredibly useful bit of mathematical magic works when the denominators of the two fractions are of the form $n$ and $n+1$, their numerators are both 1, and $n > 0$. 
+This useful bit of mathematical magic works when the denominators of the two fractions are of the form $n$ and $n+1$, their numerators are both 1, and $n > 0$. 
 These are the so-called pronic numbers \cite{wiki:pronic_numbers}. As an example, for $n = 3$ we get 
 
 \bigskip
@@ -192,22 +192,22 @@ from the figure that a triangular number $T_n$ is the sum of the integers from 1
   
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.30] {images/first_six_triangular_numbers.png}}
+\center{\includegraphics[frame,scale=0.33] {images/first_six_triangular_numbers.png}}
 \caption{The First Six Triangular Numbers \cite{wiki:triangle_numbers}}
 \label{fig:triangle_numbers}
 \end{figure}
 
-\bigskip
-\noindent
-Since $T_n$ is just the sum of the integers from 1 to $n$ we can easily calculate the first few values of $T_n$, which are
-1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105 and so on (note that some authors include 0 in the triangular number sequence).
+
+% \noindent
+% Since $T_n$ is just the sum of the integers from 1 to $n$ we can easily calculate the first few values of $T_n$, which are
+% 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105 and so on (note that some authors include 0 in the triangular number sequence).
 
 \bigskip
 \noindent
 Ok, but what is the general form of $T_n$?  Since $T_n$ is the sum of the first $n$ integers we know that\footnote{The great German mathematician 
 Carl Friedrich Gauss (1777-1855) is said to have discovered the consecutive integer formula while still at primary school \cite{clever_carl}.}
 
-
+\medskip
 \begin{equation}
 T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2}
 \label{eqn:T_n}
@@ -216,13 +216,12 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 \bigskip
 \noindent
 There is an interesting factoid involving the triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle}. If you start with the number 1 in row 2 of Pascal's 
-Triangle the corresponding diagonal contains the triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
+Triangle the corresponding diagonal contains the triangular numbers. This is shown in green in Figure \ref{fig:pascals_triangle}.
 
-\medskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.26] {images/pascals_triangle.jpg}}
-\caption{Pascal's Triangle}
+\center{\includegraphics[frame,scale=0.22] {images/pascals_triangle_2.jpg}}
+\caption{Pascal's Triangle \cite{mathaletes_corner_pascals_triangle}}
 \label{fig:pascals_triangle}
 \end{figure}
 

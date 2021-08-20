@@ -11,7 +11,6 @@
 
 <li><a href="./tricks.pdf">
 A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the
-<br>
 Reciprocals of the Triangular Numbers</a>
 <br>
 <li><a href="./euler.pdf">
