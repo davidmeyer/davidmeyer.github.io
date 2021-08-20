@@ -5,15 +5,15 @@ The style file: plain.bst
 Database file #1: /Users/dmm/papers/bib/qc.bib
 You've used 8 entries,
             2118 wiz_defined-function locations,
-            534 strings with 5362 characters,
-and the built_in function-call counts, 1750 in all, are:
-= -- 174
+            532 strings with 5396 characters,
+and the built_in function-call counts, 1746 in all, are:
+= -- 173
 > -- 56
 < -- 0
 + -- 24
 - -- 16
-* -- 50
-:= -- 303
+* -- 49
+:= -- 302
 add.period$ -- 32
 call.type$ -- 8
 change.case$ -- 32
@@ -22,17 +22,17 @@ cite$ -- 8
 duplicate$ -- 56
 empty$ -- 177
 format.name$ -- 16
-if$ -- 383
+if$ -- 382
 int.to.chr$ -- 0
 int.to.str$ -- 8
 missing$ -- 0
 newline$ -- 51
 num.names$ -- 16
-pop$ -- 68
+pop$ -- 70
 preamble$ -- 1
 purify$ -- 24
 quote$ -- 0
-skip$ -- 46
+skip$ -- 45
 stack$ -- 0
 substring$ -- 40
 swap$ -- 8
@@ -43,4 +43,4 @@ type$ -- 32
 warning$ -- 0
 while$ -- 16
 width$ -- 9
-write$ -- 96
+write$ -- 95
