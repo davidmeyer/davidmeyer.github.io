@@ -57,7 +57,7 @@
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
-\title{A Few Useful Tricks}
+\title{A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the Reciprocals of the Triangular Numbers}
 \author{David Meyer \\ dmm@1-4-5.net}
 
 \date{Last update: \today}							% Activate to display a given date or no date
@@ -67,7 +67,7 @@
 \maketitle
 
 
-\section{Trick 1: $\Big ( \frac{1}{n} \Big ) \Big ( \frac{1}{n+1} \Big ) = \frac{1}{n} - \frac{1}{n+1}$}
+\section{A Useful Mathematical Trick: $\Big ( \frac{1}{n} \Big ) \Big ( \frac{1}{n+1} \Big ) = \frac{1}{n} - \frac{1}{n+1}$}
 \label{a_equals_b_equals_1}
 
 This incredibly useful bit of mathematical magic works when the denominators of the two fractions are of the form $n$ and $n+1$, their numerators are both 1, and $n > 0$. 
@@ -86,7 +86,7 @@ So why does this work? Consider
 \begin{equation*}
 \begin{array}{lllll}
 {\displaystyle \bigg ( \frac{1}{n} \bigg ) \bigg ( \frac{1}{n+1} \bigg )}              
-&=& {\displaystyle \frac{1}{n \cdot (n+1)}}                                                  &\qquad \qquad \mathrel{\#} \text{numerators are both 1} \\
+&=& {\displaystyle \frac{1}{n \cdot (n+1)}}                                                  &\qquad \qquad \mathrel{\#} \text{multiply through, $1 \cdot 1 = 1$} \\
 [10pt]
 &=& {\displaystyle \frac{(n-n) + 1}{n \cdot (n+1)}}                                      &\qquad \qquad \mathrel{\#} \text{$(n-n) = 0$ and  $0+1 = 1$} \\
 [10pt]
@@ -137,8 +137,8 @@ An example of the use of this trick in evaluating infinite series is Burkard Pol
 Euler's solution to the Basel problem works \cite{mathologer:eulers_real_identity}. 
 
 \bigskip
-\subsection{Telescoping Series}
-\label{subsec:telescoping_series}
+\section{Telescoping Series}
+\label{sec:telescoping_series}
 What is a telescoping series? Briefly, a telescoping series is a sum that is characterized by partial sums (called telescoping sums) 
 contain pairs of consecutive terms which cancel each other, leaving only the first and final terms. This cancellation of adjacent terms is whimsically 
 called "collapsing the telescope".
@@ -184,16 +184,16 @@ structure of its terms a telescoping series has the following property:
 \end{array}
 \end{equation*}
 
-\bigskip
-\subsection{Triangular Numbers}
+\smallskip
+\section{Triangular Numbers}
 The example I want to explore here is the infinite sum of the reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.  So first,
 what is a triangular number? The first six triangular numbers are depicted as triangles in Figure \ref{fig:triangle_numbers}. We can see 
 from the figure that a triangular number $T_n$ is the sum of the integers from 1 to $n$. 
   
-\bigskip
+\medskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.40] {images/first_six_triangular_numbers.png}}
+\center{\includegraphics[frame,scale=0.30] {images/first_six_triangular_numbers.png}}
 \caption{The First Six Triangular Numbers \cite{wiki:triangle_numbers}}
 \label{fig:triangle_numbers}
 \end{figure}
@@ -221,14 +221,14 @@ Triangle the corresponding diagonal contains the triangular numbers. This is sho
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.35] {images/pascals_triangle.jpg}}
+\center{\includegraphics[frame,scale=0.30] {images/pascals_triangle.jpg}}
 \caption{Number Sequences Found In Pascal's Triangle}
 \label{fig:pascals_triangle}
 \end{figure}
 
 
-\subsection{So What is the Sum of the Reciprocals of the Triangular Numbers?}
-\label{subsec:reciprocals}
+\section{The Sum of the Reciprocals of the Triangular Numbers}
+\label{sec:reciprocals}
 \bigskip
 \noindent
 All of this is good, but back to the question: what is the sum of the reciprocals of the triangular numbers? Well, first, the sum looks like
@@ -249,7 +249,7 @@ All of this is good, but back to the question: what is the sum of the reciprocal
 
 \bigskip
 \noindent
-We saw in Section \ref{subsec:telescoping_series} that 
+We saw in Section \ref{sec:telescoping_series} that 
 ${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know from the above that the infinite sum of the reciprocals of the triangular 
 numbers is twice this  limit. So we know that 
 
@@ -262,7 +262,7 @@ numbers is twice this  limit. So we know that
  
  \bigskip
  \section{Conclusions}
-Equation \ref{eqn:trick_1} turns out to be very useful, especially when evaluating infinite telescoping series. We also saw in Section \ref{subsec:reciprocals}
+Equation \ref{eqn:trick_1} turns out to be very useful, especially when evaluating infinite telescoping series. We also saw in Section \ref{sec:reciprocals}
 that interestingly, the infinite sum of the reciprocals of the triangular numbers equals two, that is
 
 
@@ -272,7 +272,7 @@ that interestingly, the infinite sum of the reciprocals of the triangular number
 
 \bigskip
 \noindent
-As we saw in Section \ref{subsec:telescoping_series}, the evaluation of this sum makes heavy use of a telescoping series described by Equation \ref{eqn:trick_1}.
+As we saw in Section \ref{sec:telescoping_series}, the evaluation of this sum makes heavy use of a telescoping series described by Equation \ref{eqn:trick_1}.
 
 % \newpage
 \bibliographystyle{plain}

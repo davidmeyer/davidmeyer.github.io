@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  19 AUG 2021 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  20 AUG 2021 06:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1280,19 +1280,20 @@ Overfull \hbox (4.44554pt too wide) detected at line 185
 []
  []
 
-<images/first_six_triangular_numbers.png, id=51, 441.65pt x 370.38374pt>
+[2]
+<images/first_six_triangular_numbers.png, id=61, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package pdftex.def Info: images/first_six_triangular_numbers.png  used on input
  line 196.
 (pdftex.def)             Requested size: 441.64891pt x 370.38283pt.
-[2]
+
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 212.
 
-<images/pascals_triangle.jpg, id=69, 659.5842pt x 394.5942pt>
+<images/pascals_triangle.jpg, id=67, 659.5842pt x 394.5942pt>
 File: images/pascals_triangle.jpg Graphic file (type jpg)
 <use images/pascals_triangle.jpg>
 Package pdftex.def Info: images/pascals_triangle.jpg  used on input line 224.
@@ -1300,16 +1301,16 @@ Package pdftex.def Info: images/pascals_triangle.jpg  used on input line 224.
 [3 <./images/first_six_triangular_numbers.png> <./images/pascals_triangle.jpg>]
 (./tricks.bbl [4]) [5] (./tricks.aux)
 Package rerunfilecheck Info: File `tricks.out' has not changed.
-(rerunfilecheck)             Checksum: 5098C5E8806B372BB3DD5365CF5CE94E;1196.
+(rerunfilecheck)             Checksum: 7DF56344E53C825CA1676D8336528D38;1191.
  ) 
 Here is how much of TeX's memory you used:
- 26136 strings out of 478994
- 496586 string characters out of 5858184
- 785695 words of memory out of 5000000
- 43117 multiletter control sequences out of 15000+600000
- 416683 words of font info for 83 fonts, out of 8000000 for 9000
+ 26135 strings out of 478994
+ 496535 string characters out of 5858184
+ 785800 words of memory out of 5000000
+ 43116 multiletter control sequences out of 15000+600000
+ 416376 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,12n,116p,753b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,12n,116p,773b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1325,7 +1326,7 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on tricks.pdf (5 pages, 289337 bytes).
+Output written on tricks.pdf (5 pages, 292734 bytes).
 PDF statistics:
  165 PDF objects out of 1000 (max. 8388607)
  128 compressed objects within 2 object streams

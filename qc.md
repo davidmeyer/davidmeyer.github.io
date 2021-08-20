@@ -10,7 +10,7 @@
 <h2>Notes on various mathematical topics</h2>
 
 <li><a href="./tricks.pdf">
-A Few Useful Mathematical Tricks</a>
+A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the Reciprocals of the Triangular Numbers</a>
 <br>
 <li><a href="./euler.pdf">
 A Few Notes on Euler’s Formula and Euler's Identity</a>
@@ -70,7 +70,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 08.17.2021 by dmm@1-4-5.net
+<i>Last Update: 08.20.2021 by dmm@1-4-5.net
 
 
 
