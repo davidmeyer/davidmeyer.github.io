@@ -190,7 +190,6 @@ The example I want to explore here is the infinite sum of the reciprocals of the
 what is a triangular number? The first six triangular numbers are depicted as triangles in Figure \ref{fig:triangle_numbers}. We can see 
 from the figure that a triangular number $T_n$ is the sum of the integers from 1 to $n$. 
   
-\medskip
 \bigskip
 \begin{figure}[H]
 \center{\includegraphics[frame,scale=0.30] {images/first_six_triangular_numbers.png}}
@@ -205,8 +204,9 @@ Since $T_n$ is just the sum of the integers from 1 to $n$ we can easily calculat
 
 \bigskip
 \noindent
-Ok, but what is the general form of $T_n$?  Since $T_n$ is the sum of the first $n$ integers 
-we know that
+Ok, but what is the general form of $T_n$?  Since $T_n$ is the sum of the first $n$ integers we know that\footnote{The great German mathematician 
+Carl Friedrich Gauss (1777-1855) is said to have discovered the consecutive integer formula while still at primary school \cite{clever_carl}.}
+
 
 \begin{equation}
 T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2}
@@ -218,11 +218,11 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 There is an interesting factoid involving the triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle}. If you start with the number 1 in row 2 of Pascal's 
 Triangle the corresponding diagonal contains the triangular numbers. This is shown in blue in Figure \ref{fig:pascals_triangle}.
 
-\bigskip
+\medskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.30] {images/pascals_triangle.jpg}}
-\caption{Number Sequences Found In Pascal's Triangle}
+\center{\includegraphics[frame,scale=0.26] {images/pascals_triangle.jpg}}
+\caption{Pascal's Triangle}
 \label{fig:pascals_triangle}
 \end{figure}
 
