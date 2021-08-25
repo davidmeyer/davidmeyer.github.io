@@ -1,0 +1,414 @@
+
+\documentclass{article}
+
+
+% \documentclass[tikz, margin=3mm]{standalone}
+
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+\usepackage{tikz}
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usetikzlibrary{angles, quotes}
+\usepackage{relsize}
+
+
+%
+% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\title{A Few Notes on the Principle of Least Action \\ and Newton's Second Law of Motion}
+\author{David Meyer \\ dmm@1-4-5.net}
+
+\date{Last update: \today}							% Activate to display a given date or no date
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The principle of least action, which is also known as the stationary-action principle, is a variational principle that, when applied to the action of a mechanical system, 
+amazingly yields the equations of motion for that system. The principle states that the trajectories (i.e. the solutions of the equations of motion) are stationary points of the 
+system's action functional. The term "least action" is a historical misnomer since the principle has no minimality requirement: the value of the action functional need not be 
+minimal (even locally) on the trajectories \cite{malham2016}.
+
+\bigskip
+\noindent
+Also amazingly, the principle can be used to derive Newton's Second Law for constant mass $(F = ma)$, Lagrangian and Hamiltonian equations of motion, and even 
+general relativity (see Einstein–Hilbert action). These notes explore the connection between the Principle of Least Action and Newton's Second Law.
+
+\section{Using Calculus to Find The Minimum of a Function}
+\label{sec:minimum}
+The story starts with how we use calculus to find the minimum of a function. In particular, suppose we have a function $f(x)$. We know that if we move a 
+small distance from $x$, say $\epsilon$, we know that $x \to \epsilon \Rightarrow f(x) \to f(x + \epsilon)$. We also know that we can evaluate $f(x + \epsilon)$ 
+using a Taylor series. In particular
+
+
+\begin{equation*}
+\begin{array}{lllll}
+f(x + \epsilon)
+&=&  f(x) + \epsilon \dfrac{df}{dx} + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots                               &\qquad  \qquad \mathrel{\#} \text{definition of the Taylor series for $f(x + \epsilon)$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+We also know that 
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta f
+&=& f(x + \epsilon) - f(x)                                                                                                                & \qquad \qquad \mathrel{\#} \text{definition of $\Delta$}  \\
+[10pt]
+&=&  f(x) + \epsilon \dfrac{df}{dx} + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots  - f(x)                       &\qquad  \qquad \mathrel{\#} \text{substitute Taylor series for $f(x + \epsilon)$} \\
+[10pt]
+&=& \epsilon \dfrac{df}{dx} + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots                                           &\qquad  \qquad \mathrel{\#} \text{$f(x)$ cancels} \\
+[10pt]
+&=& 0 + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots                                                                           &\qquad  \qquad \mathrel{\#} \text{$\dfrac{df}{dx} = 0$ at $f$'s minimum} \\
+[10pt]
+&=&  \epsilon^2 \dfrac{d^2 f}{dx^2}  + \cdots                                                                                &\qquad  \qquad \mathrel{\#} \text{simplify} \\
+[10pt]
+&\approx&  \epsilon^2 \dfrac{d^2 f}{dx^2}                                                                                     &\qquad  \qquad \mathrel{\#} \text{$\epsilon$ is close to zero ignore higher order terms}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So we can say that $\Delta f \sim \epsilon^2$, that is, the difference is a second order effect. In summary we know that for normal functions $f$ at the minimum
+
+\begin{equation*}
+\Delta f =  f(x + \epsilon) - f(x)  = 0
+\label{eqn:Delta}
+\end{equation*}
+
+\noindent
+to first order in $\epsilon$.
+
+\bigskip
+\noindent
+In the Principle of Least Action we are trying to find the minimum \emph{path} for a trajectory rather than the minimum value of some function $f$.
+
+\section{The Principle of Least Action}
+\label{sec:pola}
+"Action" is defined to be the difference between a particle's kinetic energy and its potential energy at every point along its path. The Principle of Least 
+Action states that the path for which the sum of these differences in minimum is the actual path the particle will take. To study this problem we will
+rely on the calculus of variation.
+
+\bigskip
+\noindent
+Consider the setup shown in Figure \ref{fig:pola} and imagine that the actual path is represented by the function $x(t)$. That is, $x(t)$ represents
+the path of a particle that starts out at position $x_1$ at time $t_1$ and ends up at $x_2$ at time $t_2$. Then what we want to do is to look at 
+another path that is some small deviation away from $x(t)$ (we know from Equation \ref{eqn:Delta} that this will be close to $x(t)$). We hope that if 
+we look at the change in the action of the path with the small deviation that change should be close to zero as well.
+
+\bigskip
+\noindent
+As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ and we call the deviated path $x(t) + \eta(t)$ (the red dashed curve). Now recall
+that the action $\mathcal{S}$ is defined at the time integral from $t_1$ to $t_2$, that is
+
+\bigskip
+\begin{equation}
+\mathcal{S} = \int_{t_1}^{t_2} (KE - PE) \; dt
+\label{eqn:S}
+\end{equation}
+
+
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.65  \textwidth}{!} {                                                                                                                                                 % resize figure if you want
+    \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
+       \draw[thick, ->] (-0.35,0) -- (13,0) coordinate [label={[xshift=0.30cm, below]  $t$}] (t);                                                        % xshift -- get some extra space
+       \draw[thick, ->] (0,-0.35) -- (0,11) coordinate [label={[xshift=-0.30cm, left]  $x$}] (x);                                                          % xshift -- get some extra space
+       \coordinate[label=below left:$ O $] (O); 
+%
+% draw legend
+%        
+       \draw (7,8) node[right,rectangle] {$x(t)$}; 
+       \draw [very thick] (9.5,8) -- (11,8);
+       \draw (7,7)  node [right,rectangle] {${x(t) + \eta(t)}$};
+       \draw [very thick,red,dashed] (9.5,7) -- (11,7);
+
+%
+% make some coordinates for later use
+%
+       \coordinate (x2) at (0,5);
+       \coordinate (x1) at (0,2);
+       \coordinate (t2) at (6,0);
+       \coordinate (t1) at (2,0);
+       \coordinate (t1x1) at (2,2);
+       \coordinate (t2x2) at (6,5);
+         
+       \draw[draw=none] (x2) node[left] {$x_2$};
+       \draw [] (t2) node[below] {$t_2$};
+       \draw[draw=none] (x1) node[left] {$x_1$};     
+       \draw[draw=none] (t1) node[below] {$t_1$};    
+%
+% draw points
+%
+         \fill (x2) circle(0.05);      
+         \fill (x1) circle(0.05);                                                                                                                                                   % draw dots on axes
+         \fill (t2) circle(0.05); 
+         \fill (t1) circle(0.05);  
+         \fill (t1x1) circle(0.05);   
+         \fill (t2x2) circle(0.05);       
+         
+%
+% the coordinates of the parabolas are unfortunately pretty much eyeballed
+%
+         
+        \draw[yshift=-2cm, very thick,black] (2, 4) parabola[bend={+(0, 3)}, bend pos=0.5] (6, 7);                                       % draw parabolas
+        \draw[yshift=-2cm, dashed, very thick,red] (2, 4) parabola[bend={+(0, 5)}, bend pos=0.5] (6, 7);     
+        \coordinate (p1) at (4,6.5);                                                                                                                                         % coordinates on curves 
+        \coordinate (p2) at (4,8.5);
+        \draw[dashed,thick, <->] (p1) -- (p2) coordinate [label={[midway, right]  $\eta(t)$}];                                                 % draw \eta(t) between curves                                                                              
+      
+ %
+ % draw the S integral in a box to the right
+ %        
+       \draw (9.5,2.5) node[draw,thick,rectangle] {$\mathlarger {\mathlarger {{\displaystyle \mathcal{S} = \int_{t_1}^{t_2} (KE - PE) \; dt}}}$}; 
+    \end{tikzpicture}
+  }                                                                                                                                                                                             % end resizebox                                                                                           
+ \caption{Principle of Least Action Setup}
+ \label{fig:pola}
+\end{figure}
+
+\bigskip
+\noindent
+Now, consider a particle moving in one dimension a constant gravitational field $g$ with potential energy $V(x)$. In this case $V(x) = m \cdot g \cdot x$ (note that
+here $x$ is shorthand for $x(t)$). Then
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{S}
+&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}                                                                                 & \qquad \mathrel{\#} \text{definition of $\mathcal{S}$}  \\
+[14pt]
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   & \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 = \frac{1}{2} m v^2 \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Now define $\delta \mathcal{S} = \mathcal{S}(x + \eta) - \mathcal{S}(x)$. We know that $\delta \mathcal{S} = 0$ to the first order in $\eta$ (here $\eta$ is shorthand for $\eta(t)$). So
+now we can expand $\mathcal{S}(x + \eta)$ as follows
+
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{S}(x + \eta)
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} (x+\eta) \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{substitute $x + \eta$ for $x$}  \\
+[12pt]
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{sum rule for derivatives (linear operator)} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Next notice that 
+
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+ \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 
+&=&  \left (\dfrac{dx}{dt} \right)^2 + \left (\dfrac{d\eta }{dt} \right)^2  +2 \left ( \dfrac{dx}{dt} \right ) \left ( \dfrac{d\eta}{dt} \right )          &\qquad \mathrel{\#} \text{multiply out} \\
+[12pt]
+&=&  \left (\dfrac{dx}{dt} \right)^2 + 2 \left ( \dfrac{dx}{dt} \right ) \left ( \dfrac{d\eta}{dt} \right )                                                              
+                                                                                                                                        &\qquad \mathrel {\#} \text{$\left ( \dfrac{d\eta }{dt} \right )^2 \approx 0$ is a second order term (Section \ref{sec:minimum})}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Next want to expand our potential energy term using a Taylor series:
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+ V(x + \eta)
+&=& V(x) + \eta \dfrac{dV}{dx} + \dfrac{\eta^2}{2!}  \dfrac{d^2V}{dx^2} + \cdots     &\qquad \mathrel{\#} \text{expand Taylor series} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{S}(x + \eta)
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) 
++ \dfrac{1}{2} m \left (2 \dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} + \text{higher order terms}  \right ] dt}  & \mathrel{\#} \text{expand terms}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+We also know that
+
+\begin{equation*}
+\delta \mathcal{S} = \mathcal{S}(x+\eta) - \mathcal{S}(x) = 0
+\end{equation*}
+
+\bigskip
+\noindent
+and we saw earlier that
+
+
+\begin{equation*}
+\mathcal{S}(x + \eta)
+= {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) 
++ \dfrac{1}{2} m \left (2 \dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} + \text{higher order terms}  \right ] dt}  
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+
+\begin{equation*}
+\mathcal{S}(x) = {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
+\end{equation*}
+
+
+\bigskip
+\noindent
+So now we know that 
+
+\begin{equation*}
+\delta \mathcal{S} =  {\displaystyle \mathlarger{ \int_{t_1}^{t_2}}  
+\left [  m \left (\dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} \right ] dt }  = 0
+\end{equation*}
+
+
+\bigskip
+\noindent
+What we would like is to have this integral be zero regardless of the value of $\eta$. So how can we "factor out" $\eta$? The first thing to notice is that
+by the chain rule
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) 
+&=&  \dfrac{d^2x}{dt^2} \eta + \dfrac{dx}{dt} \dfrac{d \eta}{dt} \\
+[12pt]
+&\Rightarrow&  \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ = \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right )  - \dfrac{d^2x}{dt^2} \eta \\
+[12pt]
+&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \int_{t_1}^{t_2} \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) dt   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } \\
+[12pt]
+&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \dfrac{dx}{dt} \eta \bigg |^{t_2}_{t_1} - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } & \mathrel{\#} \text{integral and derivative in $2^{nd}$ term undo eo} \\
+[12pt]
+&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt }                   & \mathrel{\#} \text{by definition $\eta(t_1) = \eta(t_2) = 0$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that
+
+\begin{equation}
+ {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt }  
+ \label{eqn:intermediate}
+\end{equation}
+
+\bigskip
+\noindent
+and we saw earlier that 
+
+\begin{equation}
+\delta \mathcal{S} =  {\displaystyle \mathlarger{ \int_{t_1}^{t_2}}  
+\left [  m \left (\dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \dfrac{dV}{dx} \eta  \right ] dt }  = 0
+\label{eqn:prod}
+\end{equation}
+
+\bigskip
+\noindent
+so
+
+\begin{equation*}
+\begin{array}{lllll}
+\delta \mathcal{S} 
+&=&  {\displaystyle \mathlarger{ \int_{t_1}^{t_2}}   \left [  - m \dfrac{d^2x}{dt^2} \eta - \dfrac{dV}{dx} \eta \right ] dt }            &\qquad \mathrel{\#} \text{substitute result from Equation \ref{eqn:intermediate} into Equation \ref{eqn:prod}} \\
+[12pt]
+&=&  {\displaystyle \mathlarger{ \int_{t_1}^{t_2}}   \left [  - m \dfrac{d^2x}{dt^2} -  \dfrac{dV}{dx} \right ] \eta \; dt }                &\qquad \mathrel{\#} \text{factor out $\eta$} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Since $\delta \mathcal{S}$ must equal zero (Equation \ref{eqn:prod}) and we know $\eta \neq 0$ then it must be that
+
+\bigskip
+\begin{equation*}
+- m \dfrac{d^2x}{dt^2} -  \dfrac{dV}{dx} = 0
+\end{equation*}
+
+\bigskip
+\noindent
+But now note that 
+
+\begin{equation*}
+ -  \dfrac{dV}{dx} =  m \dfrac{d^2x}{dt^2}
+\end{equation*}
+
+\bigskip
+\noindent
+and since ${\displaystyle -  \dfrac{dV}{dx} = F}$ and ${\displaystyle  \dfrac{d^2x}{dt^2} = a}$ we amazingly have arrived at Newton's Second Law:
+
+\bigskip
+\begin{equation*}
+F = ma
+\end{equation*}
+
+
+
+\section{Conclusions}
+It's amazing that two such different approaches lead to the same result...
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{/Users/dmm/papers/bib/qc}
+\end{document} 
+

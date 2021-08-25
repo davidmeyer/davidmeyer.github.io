@@ -9,6 +9,10 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./pola.pdf">
+A Few Notes on the Principle of Least Action and
+Newton’s Second Law of Motion</a>
+<br>
 <li><a href="./tricks.pdf">
 A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the
 Reciprocals of the Triangular Numbers</a>
@@ -65,13 +69,11 @@ Quantum Teleportation
 <br>
 <li><a href="./merry_x-mas.pdf">Merry Christmas!</a>
 
-
-
 <br>
 <br>
 <br>
 <hr>
-<i>Last Update: 08.20.2021 by dmm@1-4-5.net
+<i>Last Update: 08.25.2021 by dmm@1-4-5.net
 
 
 
