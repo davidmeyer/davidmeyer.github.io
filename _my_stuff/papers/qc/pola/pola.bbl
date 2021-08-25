@@ -2,8 +2,16 @@
 
 \bibitem{malham2016}
 {Simon J.A. Malham}.
-\newblock {An introduction to Lagrangian and Hamiltonian mechanics}.
+\newblock {An Introduction to Lagrangian and Hamiltonian Mechanics}.
 \newblock \url{http://www.macs.hw.ac.uk/~simonm/mechanics.pdf}, 2016.
+\newblock [Online; accessed 25-August-2021].
+
+\bibitem{wiki:kinetic_energy}
+{Wikipedia contributors}.
+\newblock {Kinetic Energy --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Kinetic_energy&oldid=1037284151},
+  2021.
 \newblock [Online; accessed 25-August-2021].
 
 \bibitem{wiki:newtons_laws}
@@ -11,6 +19,14 @@
 \newblock {Newton's Laws of Motion --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Newton%27s_laws_of_motion&oldid=1037183516},
+  2021.
+\newblock [Online; accessed 25-August-2021].
+
+\bibitem{wiki:potential_energy}
+{Wikipedia contributors}.
+\newblock {Potential Energy --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Potential_energy&oldid=1028956270},
   2021.
 \newblock [Online; accessed 25-August-2021].
 
