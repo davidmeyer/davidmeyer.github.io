@@ -73,14 +73,14 @@ minimal (even locally) on the trajectories \cite{malham2016}.
 
 \bigskip
 \noindent
-Also amazingly, the principle can be used to derive Newton's Second Law for constant mass $(F = ma)$, Lagrangian and Hamiltonian equations of motion, and even 
+Also amazingly, the principle can be used to derive Newton's Second Law,  $F = ma$, Lagrangian and Hamiltonian equations of motion, and even 
 general relativity (see Einstein–Hilbert action). These notes explore the connection between the Principle of Least Action and Newton's Second Law.
 
 \section{Using Calculus to Find The Minimum of a Function}
 \label{sec:minimum}
 The story starts with how we use calculus to find the minimum of a function. In particular, suppose we have a function $f(x)$. We know that if we move a 
 small distance from $x$, say $\epsilon$, we know that $x \to \epsilon \Rightarrow f(x) \to f(x + \epsilon)$. We also know that we can evaluate $f(x + \epsilon)$ 
-using a Taylor series. In particular
+using a Taylor series \cite{wiki:taylor}. In particular
 
 
 \begin{equation*}
@@ -107,7 +107,7 @@ We also know that
 [10pt]
 &=&  \epsilon^2 \dfrac{d^2 f}{dx^2}  + \cdots                                                                                &\qquad  \qquad \mathrel{\#} \text{simplify} \\
 [10pt]
-&\approx&  \epsilon^2 \dfrac{d^2 f}{dx^2}                                                                                     &\qquad  \qquad \mathrel{\#} \text{$\epsilon$ is close to zero ignore higher order terms}
+&\approx&  \epsilon^2 \dfrac{d^2 f}{dx^2}                                                                                     &\qquad  \qquad \mathrel{\#} \text{$\epsilon$ is close to zero ignore so we can higher order terms}
 \end{array}
 \end{equation*}
 
@@ -214,19 +214,21 @@ that the action $\mathcal{S}$ is defined at the time integral from $t_1$ to $t_2
 
 \bigskip
 \noindent
-Now, consider a particle moving in one dimension a constant gravitational field $g$ with potential energy $V(x)$. In this case $V(x) = m \cdot g \cdot x$ (note that
-here $x$ is shorthand for $x(t)$). Then
+Now, consider a particle moving in one dimension a constant gravitational field $g$ with potential energy $V(x)$ (also less formally called $PE$) In this case 
+$V(x) = m \cdot g \cdot x$ (note thathere $x$ is shorthand for $x(t)$). Then
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{S}
-&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}                                                                                 & \qquad \mathrel{\#} \text{definition of $\mathcal{S}$}  \\
+&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}           & \qquad \mathrel{\#} \text{definition of $\mathcal{S}$}  \\
 [14pt]
-&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   & \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 = \frac{1}{2} m v^2 \\
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
+                                                                                                              & \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 = \frac{1}{2} m v^2, \; PE = V(x) = m \cdot g \cdot x \\
 \end{array}
 \end{equation*}
 
+\bigskip
 \bigskip
 \noindent
 Now define $\delta \mathcal{S} = \mathcal{S}(x + \eta) - \mathcal{S}(x)$. We know that $\delta \mathcal{S} = 0$ to the first order in $\eta$ (here $\eta$ is shorthand for $\eta(t)$). So
@@ -239,7 +241,7 @@ now we can expand $\mathcal{S}(x + \eta)$ as follows
 \mathcal{S}(x + \eta)
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} (x+\eta) \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{substitute $x + \eta$ for $x$}  \\
 [12pt]
-&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{sum rule for derivatives (linear operator)} 
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{derivative is a linear operator} 
 \end{array}
 \end{equation*}
 
@@ -261,9 +263,9 @@ Next notice that
 
 \bigskip
 \noindent
-Next want to expand our potential energy term using a Taylor series:
+Next want to expand $ V(x + \eta)$ using a Taylor series:
 
-\bigskip
+\medskip
 \begin{equation*}
 \begin{array}{lllll}
  V(x + \eta)
@@ -273,20 +275,20 @@ Next want to expand our potential energy term using a Taylor series:
 
 \bigskip
 \noindent
-So now we know
+So now if we substitute in these expressions and group terms we see that
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{S}(x + \eta)
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) 
-+ \dfrac{1}{2} m \left (2 \dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} + \text{higher order terms}  \right ] dt}  & \mathrel{\#} \text{expand terms}
++ \dfrac{1}{2} m \left (2 \dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} + \text{higher order terms}  \right ] dt} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-We also know that
+We also have the constraint that
 
 \begin{equation*}
 \delta \mathcal{S} = \mathcal{S}(x+\eta) - \mathcal{S}(x) = 0
@@ -296,18 +298,6 @@ We also know that
 \noindent
 and we saw earlier that
 
-
-\begin{equation*}
-\mathcal{S}(x + \eta)
-= {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) 
-+ \dfrac{1}{2} m \left (2 \dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} + \text{higher order terms}  \right ] dt}  
-\end{equation*}
-
-\bigskip
-\noindent
-and
-
-
 \begin{equation*}
 \mathcal{S}(x) = {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
 \end{equation*}
@@ -315,30 +305,32 @@ and
 
 \bigskip
 \noindent
-So now we know that 
+Putting the last three equations together we find that
 
+\bigskip
 \begin{equation*}
 \delta \mathcal{S} =  {\displaystyle \mathlarger{ \int_{t_1}^{t_2}}  
 \left [  m \left (\dfrac{dx}{dt} \dfrac{d \eta}{dt} \right ) - \eta \dfrac{dV}{dx} \right ] dt }  = 0
 \end{equation*}
 
-
+\medskip
 \bigskip
 \noindent
 What we would like is to have this integral be zero regardless of the value of $\eta$. So how can we "factor out" $\eta$? The first thing to notice is that
-by the chain rule
+by the product rule \cite{wiki:product_rule} we have
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) 
-&=&  \dfrac{d^2x}{dt^2} \eta + \dfrac{dx}{dt} \dfrac{d \eta}{dt} \\
+&=&  \dfrac{d^2x}{dt^2} \eta + \dfrac{dx}{dt} \dfrac{d \eta}{dt}                                    & \mathrel{\#} \text{product rule: $ {\displaystyle {\dfrac {d}{dx}}(u\cdot v)={\dfrac {du}{dx}}\cdot v+u\cdot {\dfrac {dv}{dx}}}$} \\
 [12pt]
-&\Rightarrow&  \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ = \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right )  - \dfrac{d^2x}{dt^2} \eta \\
+&\Rightarrow&  \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ = \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right )  - \dfrac{d^2x}{dt^2} \eta & \mathrel{\#} \text{solve for $\dfrac{dx}{dt} \dfrac{d \eta}{dt}$} \\
 [12pt]
-&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \int_{t_1}^{t_2} \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) dt   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } \\
+&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \int_{t_1}^{t_2} \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) dt   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } 
+&  \mathrel{\#} \text{integrate both sides} \\
 [12pt]
-&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \dfrac{dx}{dt} \eta \bigg |^{t_2}_{t_1} - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } & \mathrel{\#} \text{integral and derivative in $2^{nd}$ term undo eo} \\
+&\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \dfrac{dx}{dt} \eta \bigg |^{t_2}_{t_1} - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } & \mathrel{\#} \text{integral and derivative in $2^{nd}$ term cancel} \\
 [12pt]
 &\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt }                   & \mathrel{\#} \text{by definition $\eta(t_1) = \eta(t_2) = 0$}
 \end{array}
@@ -378,7 +370,7 @@ so
 
 \bigskip
 \noindent
-Since $\delta \mathcal{S}$ must equal zero (Equation \ref{eqn:prod}) and we know $\eta \neq 0$ then it must be that
+Since $\delta \mathcal{S}$ must equal zero (Equation \ref{eqn:prod}) and we know $\eta(t)$ is not the constant function 0  it must be that
 
 \bigskip
 \begin{equation*}
@@ -395,7 +387,7 @@ But now note that
 
 \bigskip
 \noindent
-and since ${\displaystyle -  \dfrac{dV}{dx} = F}$ and ${\displaystyle  \dfrac{d^2x}{dt^2} = a}$ we amazingly have arrived at Newton's Second Law:
+and since ${\displaystyle -  \dfrac{dV}{dx} = F}$ and ${\displaystyle  \dfrac{d^2x}{dt^2} = a}$ we amazingly have arrived at Newton's Second Law \cite{wiki:newtons_laws}:
 
 \bigskip
 \begin{equation*}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  25 AUG 2021 12:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  25 AUG 2021 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -954,7 +954,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 65
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (12.72266pt too wide) detected at line 112
+Overfull \hbox (58.05602pt too wide) detected at line 112
 []
  []
 
@@ -962,22 +962,17 @@ Overfull \hbox (12.72266pt too wide) detected at line 112
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (39.7979pt too wide) detected at line 244
+Overfull \hbox (6.7136pt too wide) detected at line 229
 []
  []
 
 
-Overfull \hbox (62.03299pt too wide) detected at line 260
+Overfull \hbox (62.03299pt too wide) detected at line 262
 []
  []
 
 [3]
-Overfull \hbox (56.42436pt too wide) detected at line 285
-[]
- []
-
-
-Overfull \hbox (75.11826pt too wide) detected at line 345
+Overfull \hbox (67.34044pt too wide) detected at line 337
 []
  []
 
@@ -986,10 +981,10 @@ Package rerunfilecheck Info: File `pola.out' has not changed.
 (rerunfilecheck)             Checksum: 5D2E236BE7B3FA418E58AC50753E8728;708.
  ) 
 Here is how much of TeX's memory you used:
- 26293 strings out of 478994
- 499488 string characters out of 5858184
- 788487 words of memory out of 5000000
- 43280 multiletter control sequences out of 15000+600000
+ 26299 strings out of 478994
+ 499599 string characters out of 5858184
+ 789601 words of memory out of 5000000
+ 43283 multiletter control sequences out of 15000+600000
  416722 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,17n,116p,487b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1008,10 +1003,10 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (7 pages, 168801 bytes).
+Output written on pola.pdf (7 pages, 174214 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

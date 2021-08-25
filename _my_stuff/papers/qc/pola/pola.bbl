@@ -6,4 +6,28 @@
 \newblock \url{http://www.macs.hw.ac.uk/~simonm/mechanics.pdf}, 2016.
 \newblock [Online; accessed 25-August-2021].
 
+\bibitem{wiki:newtons_laws}
+{Wikipedia contributors}.
+\newblock {Newton's Laws of Motion --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Newton%27s_laws_of_motion&oldid=1037183516},
+  2021.
+\newblock [Online; accessed 25-August-2021].
+
+\bibitem{wiki:product_rule}
+{Wikipedia contributors}.
+\newblock {Product Rule --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Product_rule&oldid=1025722701},
+  2021.
+\newblock [Online; accessed 25-August-2021].
+
+\bibitem{wiki:taylor}
+{Wikipedia contributors}.
+\newblock {Taylor Series --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Taylor_series&oldid=1033135703},
+  2021.
+\newblock [Online; accessed 6-August-2021].
+
 \end{thebibliography}
