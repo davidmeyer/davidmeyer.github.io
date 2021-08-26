@@ -229,6 +229,16 @@ $V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
 \end{equation*}
 
 \bigskip
+\noindent
+So we know that
+
+\begin{equation}
+\mathcal{S}(x) = {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}  
+\label{eqn:S(x)}
+\end{equation}
+
+
+\bigskip
 \bigskip
 \noindent
 Now define $\delta \mathcal{S} = \mathcal{S}(x + \eta) - \mathcal{S}(x)$. We know that the path taken by the system, $x(t)$,  has a stationary action ($\delta \mathcal{S} = 0$) 
@@ -395,7 +405,74 @@ and since ${\displaystyle -  \dfrac{dV}{dx} = F}$ and ${\displaystyle  \dfrac{d^
 F = ma
 \end{equation*}
 
+\section{The Euler-Lagrange Equations}
+Consider the following seemingly counter-intuitive combination of the kinetic and potential energies ($T$ and $V$ respectively):
 
+\begin{equation}
+L = T  - V
+\label{eqn:lagrangian}
+\end{equation}
+
+\bigskip
+\noindent
+$L$ here is called the \emph{Lagrangian}.  An application of the Lagrangian involves a mass on the end of a spring. In this case we have $T = \dfrac{m}{2} \dot{x}^2$  (where
+$\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. So now we have
+
+\begin{equation}
+L = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
+\label{eqn:moeos}
+\end{equation}
+
+\bigskip
+\noindent
+Now we can write 
+
+\begin{equation}
+\dfrac{d}{dx} \left ( \dfrac{\partial L}{\partial \dot{x}} \right ) = \dfrac{\partial L}{\partial x}
+\label{eqn:euler-lagrange}
+\end{equation}
+
+\bigskip
+\noindent
+Equation \ref{eqn:euler-lagrange} is called the \emph{Euler-Lagrange} equation. For the mass on the end of a spring problem we can see from Equation \ref{eqn:moeos}
+that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$ and $\frac{\partial L}{\partial x} = -kx$ so Equation \ref{eqn:euler-lagrange} give us
+
+\begin{equation*}
+m \ddot{x} = -kx
+\end{equation*}
+
+\bigskip
+\noindent
+which is exactly the result obtained by using $F = ma$. An equation such as Equation \ref{eqn:euler-lagrange} which is derived from the Euler-Lagrange equation, is called an 
+equation of motion\footnote{AFAICT the term “equation of motion” is somewhat ambiguous. It is understood to refer to the second-order differential equation satisfied by $x$ 
+and not the actual equation for $x$ as a function of $t$, namely $x(t) = A \cos(\omega t + \phi)$ in this problem, which is obtained by integrating the equation of motion twice.}.
+
+\bigskip
+\noindent
+I'll just note here that in the general case the Lagrangian looks like this:
+
+\begin{equation*}
+L = \dfrac{1}{2} m \dot{x}^2 - V(x)
+\end{equation*}
+
+\bigskip
+\noindent
+The integral of $L$ between two points $t_1$ and $t_2$ gives us the action of the path, which we saw in Equation \ref{eqn:S(x)}.  
+
+\bigskip
+\noindent
+If we combine the Lagrangian (Equation \ref{eqn:lagrangian}) with the Euler-Lagrange equation (Equation \ref{eqn:euler-lagrange}) we get
+
+
+\begin{equation*}
+m \ddot{x} = - \dfrac{d V} {d x}
+\end{equation*}
+
+\bigskip
+\noindent
+But  $- \frac{dV}{dx}$ is just the force on the particle. So as we saw at the end of Section \ref{sec:pola}
+Equations \ref{eqn:lagrangian} and \ref{eqn:euler-lagrange} (written in different notation) together again 
+tell us that $F = ma$.
 
 \section{Conclusions}
 It's amazing that two such different approaches lead to the same result...

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 AUG 2021 08:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 AUG 2021 10:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -967,24 +967,24 @@ Overfull \hbox (9.49152pt too wide) detected at line 229
  []
 
 [3]
-Overfull \hbox (62.03299pt too wide) detected at line 263
+Overfull \hbox (62.03299pt too wide) detected at line 273
 []
  []
 
 
-Overfull \hbox (67.34044pt too wide) detected at line 338
+Overfull \hbox (67.34044pt too wide) detected at line 348
 []
  []
 
-[4] [5] (./pola.bbl) [6] (./pola.aux)
+[4] [5] [6] (./pola.bbl) [7] (./pola.aux)
 Package rerunfilecheck Info: File `pola.out' has not changed.
-(rerunfilecheck)             Checksum: 5D2E236BE7B3FA418E58AC50753E8728;708.
+(rerunfilecheck)             Checksum: 45F2F676F1D76FE5CEB9731F48549514;897.
  ) 
 Here is how much of TeX's memory you used:
- 26301 strings out of 478994
- 499680 string characters out of 5858184
- 788635 words of memory out of 5000000
- 43284 multiletter control sequences out of 15000+600000
+ 26313 strings out of 478994
+ 499822 string characters out of 5858184
+ 790852 words of memory out of 5000000
+ 43289 multiletter control sequences out of 15000+600000
  416722 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,17n,116p,487b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1000,13 +1000,14 @@ l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (6 pages, 175437 bytes).
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pola.pdf (7 pages, 199517 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
