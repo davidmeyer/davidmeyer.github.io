@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 AUG 2021 11:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 AUG 2021 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1421,7 +1421,7 @@ Overfull \hbox (143.06064pt too wide) detected at line 110
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (94.49614pt too wide) detected at line 246
+Overfull \hbox (1.12538pt too wide) detected at line 246
 []
  []
 
@@ -1479,7 +1479,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (8 pages, 216739 bytes).
+Output written on pola.pdf (8 pages, 216676 bytes).
 PDF statistics:
  227 PDF objects out of 1000 (max. 8388607)
  173 compressed objects within 2 object streams
