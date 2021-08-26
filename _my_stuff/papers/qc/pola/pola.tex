@@ -108,7 +108,7 @@ We also know that
 [10pt]
 &=&  \epsilon^2 \dfrac{d^2 f}{dx^2}  + \cdots                                                                                &\qquad  \qquad \mathrel{\#} \text{simplify} \\
 [10pt]
-&\approx&  \epsilon^2 \dfrac{d^2 f}{dx^2}                                                                                     &\qquad  \qquad \mathrel{\#} \text{$\epsilon$ is close to zero ignore so we can higher order terms}
+&\approx&  \epsilon^2 \dfrac{d^2 f}{dx^2}                                                                                     &\qquad  \qquad \mathrel{\#} \text{$\epsilon$ is close to zero so we can ignore higher order terms}
 \end{array}
 \end{equation*}
 
@@ -140,10 +140,12 @@ we rely on the calculus of variation.
 \noindent
 Perhaps a bit more formally:
 
+\medskip
 \begin{definition}
 {\bf The Principle of Least (Stationary) Action}: The path of a particle is the one that yields a stationary value of the action.
 \end{definition}
 
+\medskip
 \noindent
 A stationary point of some function is a point where its gradient is equal to zero. In other words, the first-order variation in the 
 value of the function is constant in some neighborhood around the stationary point. As we will see below, this condition can be
@@ -175,7 +177,7 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {                                                                                                                                                 % resize figure if you want
+  \resizebox{0.55 \textwidth}{!} {                                                                                                                                                 % resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
        \draw[thick, ->] (-0.35,0) -- (13,0) coordinate [label={[xshift=0.30cm, below]  $t$}] (t);                                                        % xshift -- get some extra space
        \draw[thick, ->] (0,-0.35) -- (0,11) coordinate [label={[xshift=-0.30cm, left]  $x$}] (x);                                                          % xshift -- get some extra space
@@ -318,8 +320,7 @@ So now if we substitute in these expressions and group terms we see that
 \end{array}
 \end{equation*}
 
-\newpage
-% \bigskip
+\bigskip
 \noindent
 We also have the constraint that
 
