@@ -2,30 +2,32 @@
 \documentclass{article}
 
 
-% \documentclass[tikz, margin=3mm]{standalone}
-
-
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
+%
+%	TikZ
+%
 \usepackage{tikz}
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes, calc, decorations}    
+\usepackage{tkz-euclide}
+\usepackage{pgfplots}								
+%%
 \usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{mathrsfs}
-\usepackage{hyperref}
+\usepackage[hyphens,spaces,obeyspaces]{url}
 \usepackage{url}
+\usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{authblk}
-\usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
@@ -39,22 +41,22 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
-\usetikzlibrary{angles, quotes}
+\usepackage{mathtools}
 \usepackage{relsize}
-
-
-%
-% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
-%
-
-\makeatletter
-\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
-  \array{*\c@MaxMatrixCols #1}}
-\makeatother
-
+\usepackage[hyphenbreaks]{breakurl}
+ %%
+ \newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+%%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%%									
+
 
 \title{A Few Notes on the Principle of Least Action \\ and Newton's Second Law of Motion}
 \author{David Meyer \\ dmm@1-4-5.net}
@@ -133,6 +135,21 @@ we rely on the calculus of variation.
 
 \bigskip
 \noindent
+Perhaps a bit more formally, 
+
+\begin{definition}
+{\bf The Principle of Least (Stationary) Action}: The path of a particle is the one that yields a stationary value of the action.
+\end{definition}
+
+\noindent
+A stationary point of some function is a point where its gradient is equal to zero. In other words, the first-order variation in the 
+value of the function is constant in some neighborhood around the stationary point. As we will see below, this condition can be
+expressed as $\delta \mathcal{S} = 0$.
+
+
+
+\bigskip
+\noindent
 Consider the setup shown in Figure \ref{fig:pola} and imagine that the actual path is represented by the function $x(t)$. That is, $x(t)$ represents
 the path of a particle that starts out at position $x_1$ at time $t_1$ and ends up at $x_2$ at time $t_2$. Then what we want to do is to look at 
 another path that is some small deviation away from $x(t)$ (we know from Equation \ref{eqn:Delta} that this will be close to $x(t)$). We hope that if 
@@ -152,7 +169,7 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
 % \end{equation}
 
 
-
+\bigskip
 \begin{figure}[H]
 \centering
   \resizebox{0.75  \textwidth}{!} {                                                                                                                                                 % resize figure if you want
@@ -205,7 +222,7 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
  %
  % draw the S integral in a box to the right
  %        
-       \draw (9.5,2.5) node[draw,very thin,rectangle] {$\mathlarger {\mathlarger {{\displaystyle \mathcal{S} = \int_{t_1}^{t_2} (KE - PE) \; dt}}}$}; 
+       \draw (9.5,2.5) node[draw,very thin,rectangle] {$\mathlarger {\mathlarger {{\displaystyle \; \mathcal{S} = \int_{t_1}^{t_2} (KE - PE) \; dt \;}}}$}; 
     \end{tikzpicture}
   }                                                                                                                                                                                             % end resizebox                                                                                           
  \caption{Principle of Least Action Setup}
@@ -228,7 +245,8 @@ $V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
 \end{array}
 \end{equation*}
 
-\bigskip
+
+\newpage
 \noindent
 So we know that
 
