@@ -418,6 +418,7 @@ L = T  - V
 $L$ here is called the \emph{Lagrangian}.  An application of the Lagrangian involves a mass on the end of a spring. In this case we have $T = \dfrac{m}{2} \dot{x}^2$  (where
 $\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. So now we have
 
+\bigskip
 \begin{equation}
 L = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 \label{eqn:moeos}
@@ -425,8 +426,9 @@ L = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 
 \bigskip
 \noindent
-Now we can write 
+As we saw above (in slightly different notation) we can write 
 
+\bigskip
 \begin{equation}
 \dfrac{d}{dx} \left ( \dfrac{\partial L}{\partial \dot{x}} \right ) = \dfrac{\partial L}{\partial x}
 \label{eqn:euler-lagrange}
@@ -434,8 +436,9 @@ Now we can write
 
 \bigskip
 \noindent
-Equation \ref{eqn:euler-lagrange} is called the \emph{Euler-Lagrange} equation. For the mass on the end of a spring problem we can see from Equation \ref{eqn:moeos}
-that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$ and $\frac{\partial L}{\partial x} = -kx$ so Equation \ref{eqn:euler-lagrange} give us
+Equation \ref{eqn:euler-lagrange} is called the \emph{Euler-Lagrange} equation. For the mass on the end of a spring problem we looked at above we can see 
+that from Equation \ref{eqn:moeos} that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$ and $\frac{\partial L}{\partial x} = -kx$. Combining these results in 
+Equation \ref{eqn:euler-lagrange} gives us
 
 \begin{equation*}
 m \ddot{x} = -kx
@@ -457,11 +460,11 @@ L = \dfrac{1}{2} m \dot{x}^2 - V(x)
 
 \bigskip
 \noindent
-The integral of $L$ between two points $t_1$ and $t_2$ gives us the action of the path, which we saw in Equation \ref{eqn:S(x)}.  
+The integral of $L$ between two points $t_1$ and $t_2$ gives us the \emph{action} of the path between those points, as we saw in Equation \ref{eqn:S(x)}.  
 
 \bigskip
 \noindent
-If we combine the Lagrangian (Equation \ref{eqn:lagrangian}) with the Euler-Lagrange equation (Equation \ref{eqn:euler-lagrange}) we get
+Now, if we combine the Lagrangian (Equation \ref{eqn:lagrangian}) with the Euler-Lagrange equation (Equation \ref{eqn:euler-lagrange}) we get
 
 
 \begin{equation*}
@@ -471,7 +474,7 @@ m \ddot{x} = - \dfrac{d V} {d x}
 \bigskip
 \noindent
 But  $- \frac{dV}{dx}$ is just the force on the particle. So as we saw at the end of Section \ref{sec:pola}
-Equations \ref{eqn:lagrangian} and \ref{eqn:euler-lagrange} (written in different notation) together again 
+Equations \ref{eqn:lagrangian} and \ref{eqn:euler-lagrange} (albeit written in different notation) together again 
 tell us that $F = ma$.
 
 \section{Conclusions}
