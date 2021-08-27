@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 AUG 2021 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 AUG 2021 06:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1461,12 +1461,12 @@ Overfull \hbox (18.30562pt too wide) detected at line 113
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] [4] [5] (./pola.bbl) [6] (./pola.aux)
 Package rerunfilecheck Info: File `pola.out' has not changed.
-(rerunfilecheck)             Checksum: 45F2F676F1D76FE5CEB9731F48549514;897.
+(rerunfilecheck)             Checksum: D9A52DAB194F3E567E0D4A2383482870;897.
  ) 
 Here is how much of TeX's memory you used:
  43062 strings out of 478994
  1009392 string characters out of 5858184
- 1506986 words of memory out of 5000000
+ 1506985 words of memory out of 5000000
  59637 multiletter control sequences out of 15000+600000
  417030 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1488,7 +1488,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (6 pages, 215512 bytes).
+Output written on pola.pdf (6 pages, 215445 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams
