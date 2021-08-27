@@ -105,18 +105,19 @@ Now if we define $\Delta f = f(x + \epsilon) - f(x)$ we see that
 \begin{equation*}
 \begin{array}{lllll}
 \Delta f
-&=& f(x + \epsilon) - f(x)                                                                                                                                                                               & \qquad \mathrel{\#} \text{definition of $\Delta f$}  \\
+&=& f(x + \epsilon) - f(x)                                                                                                                     &\qquad \mathrel{\#} \text{definition of $\Delta f$}  \\
 [10pt]
-&=&  f(x) + \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} + \dfrac{\epsilon^3}{3!} \dfrac{d^3 f}{dx^3}  + \cdots  - f(x)  &\qquad \mathrel{\#} \text{substitute Taylor series for $f(x + \epsilon)$} \\
+&=&  \left [f(x) + \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} + \dfrac{\epsilon^3}{3!} \dfrac{d^3 f}{dx^3}  + \cdots \right ]  - f(x)  
+                                                                                                                                                           &\qquad \mathrel{\#} \text{substitute Taylor series for $f(x + \epsilon)$} \\
 [10pt]
-&=& \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!}  \dfrac{d^2 f}{dx^2} +  \cdots                                                                                        &\qquad \mathrel{\#} \text{$f(x)$ cancels} \\
+&=& \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!}  \dfrac{d^2 f}{dx^2} +  \text{higher order terms}  &\qquad \mathrel{\#} \text{$f(x)$ cancels} \\
 [10pt]
-&=& 0 + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} +  \cdots                                                                                                                         &\qquad \mathrel{\#} \text{$\dfrac{df}{dx} = 0$ at $f$'s minimum} \\
+&=& 0 + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} +  \cdots                                                                &\qquad \mathrel{\#} \text{$\dfrac{df}{dx} = 0$ at $f$'s minimum} \\
 [10pt]
-&=&  \dfrac{\epsilon^2}{2!}  \dfrac{d^2 f}{dx^2}  + \cdots                                                                                                                             &\qquad \mathrel{\#} \text{simplify} \\
+&=&  \dfrac{\epsilon^2}{2!}  \dfrac{d^2 f}{dx^2}  + \cdots                                                                   &\qquad \mathrel{\#} \text{simplify} \\
 [10pt]
 &\approx& \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2}                                                                                                   
-                 &\qquad \mathrel{\#} \text{$\epsilon$ is close to zero so we can ignore higher order terms}
+                                                                                                                                                          &\qquad \mathrel{\#} \text{$\epsilon$ is close to zero so we can ignore higher order terms}
 \end{array}
 \end{equation*}
 
@@ -137,7 +138,7 @@ So in summary we know that for normal functions $f$ at the minimum
 
 \bigskip
 \noindent
-to the first order in $\epsilon$. The constraint specified by Equation \ref{eqn:Delta} will become important when we study $\delta \mathcal{S}$.
+at least to the first order in $\epsilon$. The constraint specified by Equation \ref{eqn:Delta} will become important when we study $\delta \mathcal{S}$.
 
 \bigskip
 \noindent
@@ -148,12 +149,12 @@ two approaches turn out to be (amazingly) equivalent.
 \section{The Principle of Least Action}
 \label{sec:pola}
 The action, denoted $\mathcal{S}$,  is defined to be the sum of the difference between a particle's kinetic energy \cite{wiki:kinetic_energy} and its potential energy \cite{wiki:potential_energy} at every 
-point along its path.  The Principle of Least  Action states that the path for which the sum of these differences has the minimum sum is the actual path the particle will take. To study this problem
-we rely on the calculus of variation.
+point along its path.  The Principle of Least  Action states that the path for which the sum of these differences has the minimum sum is the actual path the particle will take. To show that this is the case
+all of the proofs that I have seen rely on the fact that the Principle of Least  Action and Newton's Second Law ($F=ma$) are equivalent. These notes show this result below.
 
 \bigskip
 \noindent
-Perhaps a bit more formally:
+To give a bit more formal definition of the Principle of Least  Action:
 
 \medskip
 \begin{definition}
@@ -187,10 +188,10 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.55 \textwidth}{!} {                                                                                                                                                 % resize figure if you want
+  \resizebox{0.60 \textwidth}{!} {                                                                                                                                                 % resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
        \draw[thick, ->] (-0.35,0) -- (13.5,0) coordinate [label={[xshift=0.30cm, below]  $t$}] (t);                                                        % xshift -- get some extra space
-       \draw[thick, ->] (0,-0.35) -- (0,11) coordinate [label={[xshift=-0.30cm, left]  $x$}] (x);                                                          % xshift -- get some extra space
+       \draw[thick, ->] (0,-0.35) -- (0,10.5) coordinate [label={[xshift=-0.30cm, left]  $x$}] (x);                                                          % xshift -- get some extra space
        \coordinate[label=below left:$ O $] (O); 
 %
 % draw legend
@@ -210,9 +211,9 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
        \coordinate (t1x1) at (2,2);
        \coordinate (t2x2) at (6,5);
          
-       \draw[draw=none] (x2) node[left] {$x_2$};
+       \draw[draw=none] (x2) node[left] {$x(t_2)$};
        \draw [] (t2) node[below] {$t_2$};
-       \draw[draw=none] (x1) node[left] {$x_1$};     
+       \draw[draw=none] (x1) node[left] {$x(t_1)$};     
        \draw[draw=none] (t1) node[below] {$t_1$};    
 %
 % draw points
@@ -246,8 +247,8 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
 
 \bigskip
 \noindent
-Now, consider a particle moving in one dimension in a uniform gravitational field $g$ with potential energy $V(x)$ (also less formally called $PE$). In this case 
-$V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
+Now, consider a particle moving in one dimension in a uniform gravitational field $g$ with potential energy $V[x(t)]$\footnote{$V[x(t)]$ is sometimes called $U[x(t)]$ or simply $U(x)$, 
+and is also informally referred to as $PE$.}. In this case $V[x(t)] = m \cdot g \cdot x(t)$. Then
 
 \bigskip
 \begin{equation*}
@@ -255,15 +256,15 @@ $V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
 \mathcal{S}\big [ (x(t) \big ]
 &=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}           &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of $\mathcal{S}\big [ (x(t) \big ]$}  \\
 [14pt]
-&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
-                                                                                                              &\qquad \qquad \qquad \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2\!\!\!\!, \; PE = V(x)
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} x(t) \right )^2 - V \big  [ x(t) \big ] \right  ] dt}   
+                                                                                                              &\qquad \qquad \qquad \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{d}{dt} x(t)\right )^2\!\!\!\!, \; PE = V  \big  [ x(t) \big ] 
 \end{array}
 \end{equation*}
 
 
 \bigskip
 \noindent
-So we know that for a value of $x(t)$ in the interval $[t_1,t_2]$, call it $x$, $\mathcal{S}(x)$  is defined as follows:
+So letting $x = x(t)$ we know that 
 
 \bigskip
 \begin{equation}
