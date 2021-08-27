@@ -79,13 +79,16 @@ Hamiltonian equations of motion, and even  general relativity (see Einstein–Hi
 
 \bigskip
 \noindent
-These notes explore the connection between the Principle of Least Action \cite{wiki:stationary_action_principle} and Newton's Second Law \cite{wiki:newtons_laws}.
+These notes explore a bit of the connection between the Principle of Least Action \cite{wiki:stationary_action_principle} and Newton's Second Law \cite{wiki:newtons_laws}.
 
 \section{Finding the Minimum of a Function}
 \label{sec:minimum}
 The story starts with how we use calculus to find the minimum of a function. In particular, suppose we have a function $f(x)$. We know that if we move a 
-small distance from $x$, say $\epsilon$, we know that $x \to \epsilon \Rightarrow f(x) \to f(x + \epsilon)$. We also know that we can evaluate $f(x + \epsilon)$ 
-using a Taylor series \cite{wiki:taylor}. In particular
+small distance from $x$, say $\epsilon$, we know that $x \to \epsilon \Rightarrow f(x) \to f(x + \epsilon)$. 
+
+\bigskip
+\noindent
+We also know that we can evaluate $f(x + \epsilon)$ using a Taylor series \cite{wiki:taylor}. In particular
 
 
 \begin{equation*}
@@ -97,12 +100,12 @@ f(x + \epsilon)
 
 \bigskip
 \noindent
-Putting these last two equations together we see that
+Now if we define $\Delta f = f(x + \epsilon) - f(x)$ we see that
 
 \begin{equation*}
 \begin{array}{lllll}
 \Delta f
-&=& f(x + \epsilon) - f(x)                                                                                                                                                                               & \qquad \mathrel{\#} \text{definition of $\Delta$}  \\
+&=& f(x + \epsilon) - f(x)                                                                                                                                                                               & \qquad \mathrel{\#} \text{definition of $\Delta f$}  \\
 [10pt]
 &=&  f(x) + \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} + \dfrac{\epsilon^3}{3!} \dfrac{d^3 f}{dx^3}  + \cdots  - f(x)  &\qquad \mathrel{\#} \text{substitute Taylor series for $f(x + \epsilon)$} \\
 [10pt]
@@ -169,7 +172,7 @@ we look at the change in the action of the path with the small deviation that ch
 
 \bigskip
 \noindent
-As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ and we call the deviated path $x(t) + \eta(t)$ (the red dashed curve). 
+As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ and we call the deviated path $x(t) + \eta(t)$. 
 
 % Now recall
 % that the action $\mathcal{S}$ is defined at the time integral from $t_1$ to $t_2$, that is
@@ -186,7 +189,7 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
 \centering
   \resizebox{0.55 \textwidth}{!} {                                                                                                                                                 % resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
-       \draw[thick, ->] (-0.35,0) -- (13,0) coordinate [label={[xshift=0.30cm, below]  $t$}] (t);                                                        % xshift -- get some extra space
+       \draw[thick, ->] (-0.35,0) -- (13.5,0) coordinate [label={[xshift=0.30cm, below]  $t$}] (t);                                                        % xshift -- get some extra space
        \draw[thick, ->] (0,-0.35) -- (0,11) coordinate [label={[xshift=-0.30cm, left]  $x$}] (x);                                                          % xshift -- get some extra space
        \coordinate[label=below left:$ O $] (O); 
 %
@@ -234,7 +237,7 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
  %
  % draw the S integral in a box to the right
  %        
-       \draw (9.5,2.5) node[draw,very thin,rectangle] {$\mathlarger {\mathlarger {{\displaystyle \; \mathcal{S} = \int_{t_1}^{t_2} (KE - PE) \; dt \;}}}$}; 
+       \draw (9.5,2.25) node[draw,very thin,rectangle] {$\mathlarger {\mathlarger {{\displaystyle \; \mathcal{S} \big [ (x(t) \big ]= \int_{t_1}^{t_2} (KE - PE) \; dt \;}}}$}; 
     \end{tikzpicture}
   }                                                                                                                                                                                             % end resizebox                                                                                           
  \caption{Principle of Least Action Setup}
@@ -249,8 +252,8 @@ $V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
-\mathcal{S}
-&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}           &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of $\mathcal{S}$}  \\
+\mathcal{S}\big [ (x(t) \big ]
+&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}           &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of $\mathcal{S}\big [ (x(t) \big ]$}  \\
 [14pt]
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
                                                                                                               &\qquad \qquad \qquad \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2\!\!\!\!, \; PE = V(x)
@@ -260,8 +263,9 @@ $V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
 
 \bigskip
 \noindent
-So we know that
+So we know that for a value of $x(t)$ in the interval $[t_1,t_2]$, call it $x$, $\mathcal{S}(x)$  is defined as follows:
 
+\bigskip
 \begin{equation}
 \mathcal{S}(x) = {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}  
 \label{eqn:S(x)}
@@ -272,8 +276,8 @@ So we know that
 \bigskip
 \noindent
 Now define $\delta \mathcal{S} = \mathcal{S}(x + \eta) - \mathcal{S}(x)$. We know that the path taken by the system, $x(t)$,  has a stationary action ($\delta \mathcal{S} = 0$) 
-under small changes to the configuration of the system. Said another way, we know that $\delta \mathcal{S} = 0$ to the first order in $\eta$ (here $\eta$ is shorthand for $\eta(t)$). 
-So now we can expand $\mathcal{S}(x + \eta)$ as follows:
+under small changes to the configuration of the system. Said another way, we know that $\delta \mathcal{S} = 0$ to the first order in $\eta$ (here again $x$ is shorthand for $x(t)$ 
+and $\eta$ is shorthand for $\eta(t)$).  So now we can expand $\mathcal{S}(x + \eta)$ as follows:
 
 
 \bigskip
@@ -281,7 +285,7 @@ So now we can expand $\mathcal{S}(x + \eta)$ as follows:
 \begin{array}{lllll}
 \mathcal{S}(x + \eta)
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} (x+\eta) \right )^2 - V(x+\eta) \right  ] dt}   &\qquad \qquad \mathrel{\#} \text{substitute $x + \eta$ for $x$}  \\
-[12pt]
+[14pt]
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   &\qquad  \qquad \mathrel{\#} \text{derivative is a linear operator} 
 \end{array}
 \end{equation*}
@@ -316,7 +320,7 @@ Next want to expand $ V(x + \eta)$ using a Taylor series:
 
 \bigskip
 \noindent
-So now if we substitute in these expressions and group terms we see that
+So now if we substitute these last two expressions into Equation \ref{eqn:S(x)} and group terms we see that
 
 \bigskip
 \begin{equation*}
@@ -327,9 +331,7 @@ So now if we substitute in these expressions and group terms we see that
 \end{array}
 \end{equation*}
 
-\bigskip
-\bigskip
-\bigskip
+\newpage
 \noindent
 We also have the constraint that
 
