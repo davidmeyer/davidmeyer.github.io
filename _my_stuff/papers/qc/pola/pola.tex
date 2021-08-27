@@ -12,7 +12,7 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{margin=1.0in}
+\geometry{margin=0.75in}
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
@@ -77,7 +77,7 @@ system's action functional  \cite{malham2016}. One of the many amazing aspects o
 Hamiltonian equations of motion, and even  general relativity (see Einstein–Hilbert action). These notes explore the connection between the Principle of Least Action and 
 Newton's Second Law.
 
-\section{Using Calculus to Find the Minimum of a Function}
+\section{Finding the Minimum of a Function}
 \label{sec:minimum}
 The story starts with how we use calculus to find the minimum of a function. In particular, suppose we have a function $f(x)$. We know that if we move a 
 small distance from $x$, say $\epsilon$, we know that $x \to \epsilon \Rightarrow f(x) \to f(x + \epsilon)$. We also know that we can evaluate $f(x + \epsilon)$ 
@@ -353,8 +353,9 @@ by the product rule \cite{wiki:product_rule} we have
 
 \begin{equation*}
 \begin{array}{lllll}
-\dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) 
-&=&  \dfrac{d^2x}{dt^2} \eta + \dfrac{dx}{dt} \dfrac{d \eta}{dt}                                & \mathrel{\#} {\displaystyle {\dfrac {d}{dx}}(u\cdot v)={\dfrac {du}{dx}}\cdot v+u\cdot {\dfrac {dv}{dx}}} \\
+\dfrac{d}{dx} \left ( \dfrac{dx}{dt} \cdot \eta \right ) 
+&=&  \dfrac{d^2x}{dt^2} \cdot  \eta + \dfrac{dx}{dt} \cdot \dfrac{d \eta}{dt}                                
+                                                                                                                               & \mathrel{\#} \text{product rule: ${\displaystyle {\dfrac {d}{dx}}(u\cdot v)={\dfrac {du}{dx}}\cdot v+u\cdot {\dfrac {dv}{dx}}}$}\\
 [12pt]
 &\Rightarrow&  \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ = \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right )  - \dfrac{d^2x}{dt^2} \eta 
                                                                                                                                & \mathrel{\#} \text{solve for $\dfrac{dx}{dt} \dfrac{d \eta}{dt}$} \\
@@ -411,6 +412,8 @@ Since $\delta \mathcal{S}$ must equal zero (Equation \ref{eqn:prod}) and we know
 - m \dfrac{d^2x}{dt^2} -  \dfrac{dV}{dx} = 0
 \end{equation*}
 
+
+\newpage
 \bigskip
 \noindent
 But now note that 

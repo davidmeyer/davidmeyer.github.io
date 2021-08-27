@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 AUG 2021 06:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 AUG 2021 07:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1349,15 +1349,15 @@ LaTeX Font Info:    ... okay on input line 70.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=505.89pt
+* \textheight=686.56499pt
+* \oddsidemargin=-18.06749pt
+* \evensidemargin=-18.06749pt
+* \topmargin=-55.06749pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1451,26 +1451,22 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 70
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Overfull \hbox (18.30562pt too wide) detected at line 113
-[]
- []
+) [1
 
-[1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] [5] (./pola.bbl) [6] (./pola.aux)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4]
+(./pola.bbl [5]) [6] (./pola.aux)
 Package rerunfilecheck Info: File `pola.out' has not changed.
-(rerunfilecheck)             Checksum: D9A52DAB194F3E567E0D4A2383482870;897.
+(rerunfilecheck)             Checksum: 7496266B572E30EDB1116D7AA585648C;813.
  ) 
 Here is how much of TeX's memory you used:
  43062 strings out of 478994
  1009392 string characters out of 5858184
- 1506985 words of memory out of 5000000
+ 1506979 words of memory out of 5000000
  59637 multiletter control sequences out of 15000+600000
  417030 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,17n,111p,727b,842s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,17n,111p,727b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1488,7 +1484,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (6 pages, 215445 bytes).
+Output written on pola.pdf (6 pages, 214973 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams
