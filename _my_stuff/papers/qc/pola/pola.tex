@@ -248,9 +248,9 @@ As we can see from Figure \ref{fig:pola} we call the small deviation $\eta(t)$ a
 \bigskip
 \noindent
 Now, consider a particle moving in one dimension in a uniform gravitational field $g$ with potential energy $V[x(t)]$\footnote{$V[x(t)]$ is sometimes called $U[x(t)]$ or simply $U(x)$, 
-and is also informally referred to as $PE$.}. In this case $V[x(t)] = m \cdot g \cdot x(t)$. Then
+and is also informally referred to as $PE$.}. In this case $V[x(t)] = m \cdot g \cdot x(t)$. So
 
-\bigskip
+
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{S}\big [ (x(t) \big ]
@@ -264,7 +264,7 @@ and is also informally referred to as $PE$.}. In this case $V[x(t)] = m \cdot g 
 
 \bigskip
 \noindent
-So letting $x = x(t)$ we know that 
+Hopefully simplifying by setting $x = x(t)$ we can see that 
 
 \bigskip
 \begin{equation}
@@ -274,7 +274,6 @@ So letting $x = x(t)$ we know that
 
 
 \bigskip
-\bigskip
 \noindent
 Now define $\delta \mathcal{S} = \mathcal{S}(x + \eta) - \mathcal{S}(x)$. We know that the path taken by the system, $x(t)$,  has a stationary action ($\delta \mathcal{S} = 0$) 
 under small changes to the configuration of the system. Said another way, we know that $\delta \mathcal{S} = 0$ to the first order in $\eta$ (here again $x$ is shorthand for $x(t)$ 
@@ -282,14 +281,15 @@ and $\eta$ is shorthand for $\eta(t)$).  So now we can expand $\mathcal{S}(x + \
 
 
 \bigskip
-\begin{equation*}
+\begin{equation}
 \begin{array}{lllll}
 \mathcal{S}(x + \eta)
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} (x+\eta) \right )^2 - V(x+\eta) \right  ] dt}   &\qquad \qquad \mathrel{\#} \text{substitute $x + \eta$ for $x$}  \\
 [14pt]
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   &\qquad  \qquad \mathrel{\#} \text{derivative is a linear operator} 
 \end{array}
-\end{equation*}
+\label{eqn:s_x_plus_eta}
+\end{equation}
 
 \bigskip
 \noindent
@@ -321,8 +321,9 @@ Next want to expand $ V(x + \eta)$ using a Taylor series:
 
 \bigskip
 \noindent
-So now if we substitute these last two expressions into Equation \ref{eqn:S(x)} and group terms we see that
+So now if we substitute these last two expressions into Equation \ref{eqn:s_x_plus_eta}  and group terms we see that
 
+\bigskip
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
@@ -343,7 +344,7 @@ We also have the constraint that
 
 \bigskip
 \noindent
-and we saw earlier that
+and we saw earlier (Equation \ref{eqn:S(x)}) that
 
 \begin{equation*}
 \mathcal{S}(x) = {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
