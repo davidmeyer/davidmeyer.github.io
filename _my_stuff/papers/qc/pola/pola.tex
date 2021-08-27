@@ -40,6 +40,7 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
+\usepackage{setspace}
 %
 %	TikZ
 %
@@ -90,42 +91,50 @@ using a Taylor series \cite{wiki:taylor}. In particular
 \begin{equation*}
 \begin{array}{lllll}
 f(x + \epsilon)
-&=&  f(x) + \epsilon \dfrac{df}{dx} + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots                               &\qquad  \qquad \mathrel{\#} \text{definition of the Taylor series for $f(x + \epsilon)$}
+&=&  f(x) + \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} +  \dfrac{\epsilon^3}{3!}  \dfrac{d^3 f}{dx^3} + \cdots      &\qquad \mathrel{\#} \text{definition of the Taylor series for $f(x + \epsilon)$}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-We also know that 
+Putting these last two equations together we see that
 
 \begin{equation*}
 \begin{array}{lllll}
 \Delta f
-&=& f(x + \epsilon) - f(x)                                                                                                                & \qquad \qquad \mathrel{\#} \text{definition of $\Delta$}  \\
+&=& f(x + \epsilon) - f(x)                                                                                                                                                                               & \qquad \mathrel{\#} \text{definition of $\Delta$}  \\
 [10pt]
-&=&  f(x) + \epsilon \dfrac{df}{dx} + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots  - f(x)                       &\qquad  \qquad \mathrel{\#} \text{substitute Taylor series for $f(x + \epsilon)$} \\
+&=&  f(x) + \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} + \dfrac{\epsilon^3}{3!} \dfrac{d^3 f}{dx^3}  + \cdots  - f(x)  &\qquad \mathrel{\#} \text{substitute Taylor series for $f(x + \epsilon)$} \\
 [10pt]
-&=& \epsilon \dfrac{df}{dx} + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots                                           &\qquad  \qquad \mathrel{\#} \text{$f(x)$ cancels} \\
+&=& \epsilon \dfrac{df}{dx} + \dfrac{\epsilon^2}{2!}  \dfrac{d^2 f}{dx^2} +  \cdots                                                                                        &\qquad \mathrel{\#} \text{$f(x)$ cancels} \\
 [10pt]
-&=& 0 + \epsilon^2 \dfrac{d^2 f}{dx^2} +  \cdots                                                                           &\qquad  \qquad \mathrel{\#} \text{$\dfrac{df}{dx} = 0$ at $f$'s minimum} \\
+&=& 0 + \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2} +  \cdots                                                                                                                         &\qquad \mathrel{\#} \text{$\dfrac{df}{dx} = 0$ at $f$'s minimum} \\
 [10pt]
-&=&  \epsilon^2 \dfrac{d^2 f}{dx^2}  + \cdots                                                                                &\qquad  \qquad \mathrel{\#} \text{simplify} \\
+&=&  \dfrac{\epsilon^2}{2!}  \dfrac{d^2 f}{dx^2}  + \cdots                                                                                                                             &\qquad \mathrel{\#} \text{simplify} \\
 [10pt]
-&\approx&  \epsilon^2 \dfrac{d^2 f}{dx^2}                                                                                     &\qquad  \qquad \mathrel{\#} \text{$\epsilon$ is close to zero so we can ignore higher order terms}
+&\approx& \dfrac{\epsilon^2}{2!} \dfrac{d^2 f}{dx^2}                                                                                                   
+                 &\qquad \mathrel{\#} \text{$\epsilon$ is close to zero so we can ignore higher order terms}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So we can say that $\Delta f \sim \epsilon^2$, that is, the difference is a second order effect. In summary we know that for normal functions $f$ at the minimum
+So we can say that $\Delta f \sim \epsilon^2$, that is, the difference is a second order effect. Said from the perspective of first-order variation we can say that the first-order 
+variation in the value of $f$ is constant in some neighborhood around $f$'s stationary point (that is, where the gradient of $f$ equals zero).  
 
+\bigskip
+\noindent
+So in summary we know that for normal functions $f$ at the minimum
+
+\smallskip
 \begin{equation}
 \Delta f =  f(x + \epsilon) - f(x)  = 0
 \label{eqn:Delta}
 \end{equation}
 
+\bigskip
 \noindent
-to first order in $\epsilon$.
+to the first order in $\epsilon$. The constraint specified by Equation \ref{eqn:Delta} will become important when we study $\delta \mathcal{S}$.
 
 \bigskip
 \noindent
@@ -443,9 +452,11 @@ L = T  - V
 \end{equation}
 
 \bigskip
+{\setstretch{1.35} 
 \noindent
-$L$ here is called the \emph{Lagrangian}.  An application of the Lagrangian involves a mass on the end of a spring. In this case we have $T = \dfrac{m}{2} \dot{x}^2$  (where
-$\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. So now we have
+$L$ here is called the \emph{Lagrangian}.  The Lagrangian is essentially the action per unit time. An application of the Lagrangian involves a mass on the end of a spring.
+In this case we have $T = \dfrac{m}{2} \dot{x}^2$  (where $\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. So now we have \par}
+
 
 \bigskip
 \begin{equation}
@@ -464,10 +475,12 @@ As we saw above (in slightly different notation) we can write
 \end{equation}
 
 \bigskip
+{\setstretch{1.35} 
 \noindent
 Equation \ref{eqn:euler-lagrange} is called the \emph{Euler-Lagrange} equation. For the mass on the end of a spring problem we looked at above we can see 
 that from Equation \ref{eqn:moeos} that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$ and $\frac{\partial L}{\partial x} = -kx$. Combining these results in 
-Equation \ref{eqn:euler-lagrange} gives us
+Equation \ref{eqn:euler-lagrange} gives us \par}
+
 
 \begin{equation*}
 m \ddot{x} = -kx
@@ -489,7 +502,7 @@ L = \dfrac{1}{2} m \dot{x}^2 - V(x)
 
 \bigskip
 \noindent
-The integral of $L$ between two points $t_1$ and $t_2$ gives us the \emph{action} of the path between those points, as we saw in Equation \ref{eqn:S(x)}.  
+The integral of $L$ between two points $t_1$ and $t_2$ gives us the \emph{action} of the path between those points (Equation \ref{eqn:S(x)}).
 
 \bigskip
 \noindent
