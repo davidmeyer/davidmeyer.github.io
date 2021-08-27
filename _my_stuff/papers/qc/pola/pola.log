@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 AUG 2021 07:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 AUG 2021 07:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,20 +1451,133 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 70
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
+LaTeX Warning: Citation `malham2016' on page 1 undefined on input line 76.
+
+
+LaTeX Warning: Citation `wiki:einstein_hilbert_action' on page 1 undefined on i
+nput line 77.
+
+
+LaTeX Warning: Citation `wiki:stationary_action_principle' on page 1 undefined 
+on input line 81.
+
+
+LaTeX Warning: Citation `wiki:newtons_laws' on page 1 undefined on input line 8
+1.
+
+
+LaTeX Warning: Citation `wiki:taylor' on page 1 undefined on input line 87.
+
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `wiki:kinetic_energy' on page 2 undefined on input line
+ 138.
+
+
+LaTeX Warning: Citation `wiki:potential_energy' on page 2 undefined on input li
+ne 138.
+
+
+LaTeX Warning: Reference `fig:pola' on page 2 undefined on input line 156.
+
+
+LaTeX Warning: Reference `eqn:Delta' on page 2 undefined on input line 158.
+
+
+LaTeX Warning: Reference `fig:pola' on page 2 undefined on input line 163.
+
+[2]
+
+LaTeX Warning: Reference `sec:minimum' on page 3 undefined on input line 292.
+
+[3]
+
+LaTeX Warning: Citation `wiki:product_rule' on page 4 undefined on input line 3
+55.
+
+
+Overfull \hbox (15.04012pt too wide) detected at line 375
+[]
+ []
+
+
+LaTeX Warning: Reference `eqn:intermediate' on page 4 undefined on input line 4
+03.
+
+
+LaTeX Warning: Reference `eqn:prod' on page 4 undefined on input line 403.
+
+
+LaTeX Warning: Reference `eqn:prod' on page 4 undefined on input line 411.
+
+[4]
+
+LaTeX Warning: Citation `wiki:newtons_laws' on page 5 undefined on input line 4
+30.
+
+
+LaTeX Warning: Reference `eqn:euler-lagrange' on page 5 undefined on input line
+ 468.
+
+
+LaTeX Warning: Reference `eqn:moeos' on page 5 undefined on input line 469.
+
+
+LaTeX Warning: Reference `eqn:euler-lagrange' on page 5 undefined on input line
+ 470.
+
+
+LaTeX Warning: Reference `eqn:euler-lagrange' on page 5 undefined on input line
+ 478.
+
+
+LaTeX Warning: Reference `eqn:S(x)' on page 5 undefined on input line 492.
+
+
+LaTeX Warning: Reference `eqn:lagrangian' on page 5 undefined on input line 496
+.
+
+
+LaTeX Warning: Reference `eqn:euler-lagrange' on page 5 undefined on input line
+ 496.
+
+
+LaTeX Warning: Reference `sec:pola' on page 5 undefined on input line 505.
+
+
+LaTeX Warning: Reference `eqn:lagrangian' on page 5 undefined on input line 506
+.
+
+
+LaTeX Warning: Reference `eqn:euler-lagrange' on page 5 undefined on input line
+ 506.
+
 (./pola.bbl [5]) [6] (./pola.aux)
-Package rerunfilecheck Info: File `pola.out' has not changed.
-(rerunfilecheck)             Checksum: 7496266B572E30EDB1116D7AA585648C;813.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `pola.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `pola.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  7496266B572E30EDB1116D7AA585648C;813.
  ) 
 Here is how much of TeX's memory you used:
- 43062 strings out of 478994
- 1009392 string characters out of 5858184
+ 43064 strings out of 478994
+ 1009507 string characters out of 5858184
  1506979 words of memory out of 5000000
- 59637 multiletter control sequences out of 15000+600000
- 417030 words of font info for 84 fonts, out of 8000000 for 9000
+ 59635 multiletter control sequences out of 15000+600000
+ 417649 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,17n,111p,727b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1484,10 +1597,10 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (6 pages, 214973 bytes).
+Output written on pola.pdf (6 pages, 215883 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

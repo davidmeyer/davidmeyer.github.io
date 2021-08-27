@@ -74,8 +74,11 @@
 The principle of least action, which is also known as the stationary-action principle, is a variational principle that, when applied to the action of a mechanical system, 
 amazingly yields the equations of motion for that system. The principle states that the trajectories (i.e. the solutions of the equations of motion) are stationary points of the 
 system's action functional  \cite{malham2016}. One of the many amazing aspects of the principle is that it can be used to derive Newton's Second Law, Lagrangian and 
-Hamiltonian equations of motion, and even  general relativity (see Einstein–Hilbert action). These notes explore the connection between the Principle of Least Action and 
-Newton's Second Law.
+Hamiltonian equations of motion, and even  general relativity (see Einstein–Hilbert action \cite{wiki:einstein_hilbert_action}). 
+
+\bigskip
+\noindent
+These notes explore the connection between the Principle of Least Action \cite{wiki:stationary_action_principle} and Newton's Second Law \cite{wiki:newtons_laws}.
 
 \section{Finding the Minimum of a Function}
 \label{sec:minimum}
@@ -238,10 +241,10 @@ $V(x) = m \cdot g \cdot x$ (note that here $x$ is shorthand for $x(t)$). Then
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{S}
-&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}           & \qquad \mathrel{\#} \text{definition of $\mathcal{S}$}  \\
+&=& {\displaystyle \mathlarger {\int_{t_1}^{t_2}} (KE - PE) \; dt}           &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of $\mathcal{S}$}  \\
 [14pt]
 &=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2 - V(x) \right  ] dt}   
-                                                                                                              & \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2\!\!\!\!, \; PE = V(x) \\
+                                                                                                              &\qquad \qquad \qquad \qquad \mathrel{\#}  KE = \frac{1}{2} m \left ( \dfrac{dx}{dt} \right )^2\!\!\!\!, \; PE = V(x)
 \end{array}
 \end{equation*}
 
@@ -268,9 +271,9 @@ So now we can expand $\mathcal{S}(x + \eta)$ as follows:
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{S}(x + \eta)
-&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} (x+\eta) \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{substitute $x + \eta$ for $x$}  \\
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{d}{dt} (x+\eta) \right )^2 - V(x+\eta) \right  ] dt}   &\qquad \qquad \mathrel{\#} \text{substitute $x + \eta$ for $x$}  \\
 [12pt]
-&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   & \qquad \mathrel{\#} \text{derivative is a linear operator} 
+&=& {\displaystyle \mathlarger{ \int_{t_1}^{t_2}} \left [ \frac{1}{2} m \left ( \dfrac{dx}{dt} + \dfrac{d\eta}{dt} \right )^2 - V(x+\eta) \right  ] dt}   &\qquad  \qquad \mathrel{\#} \text{derivative is a linear operator} 
 \end{array}
 \end{equation*}
 
@@ -298,7 +301,7 @@ Next want to expand $ V(x + \eta)$ using a Taylor series:
 \begin{equation*}
 \begin{array}{lllll}
  V(x + \eta)
-&=& V(x) + \eta \dfrac{dV}{dx} + \dfrac{\eta^2}{2!}  \dfrac{d^2V}{dx^2} + \cdots     &\qquad \mathrel{\#} \text{expand Taylor series} \\
+&=& V(x) + \eta \dfrac{dV}{dx} + \dfrac{\eta^2}{2!}  \dfrac{d^2V}{dx^2} + \cdots     &\quad \qquad \qquad \mathrel{\#} \text{expand Taylor series} \\
 \end{array}
 \end{equation*}
 
@@ -355,19 +358,19 @@ by the product rule \cite{wiki:product_rule} we have
 \begin{array}{lllll}
 \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \cdot \eta \right ) 
 &=&  \dfrac{d^2x}{dt^2} \cdot  \eta + \dfrac{dx}{dt} \cdot \dfrac{d \eta}{dt}                                
-                                                                                                                               & \mathrel{\#} \text{product rule: ${\displaystyle {\dfrac {d}{dx}}(u\cdot v)={\dfrac {du}{dx}}\cdot v+u\cdot {\dfrac {dv}{dx}}}$}\\
+                                                                                                                               &\qquad  \mathrel{\#} \text{product rule: ${\displaystyle {\dfrac {d}{dx}}(u\cdot v)={\dfrac {du}{dx}}\cdot v+u\cdot {\dfrac {dv}{dx}}}$}\\
 [12pt]
 &\Rightarrow&  \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ = \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right )  - \dfrac{d^2x}{dt^2} \eta 
-                                                                                                                               & \mathrel{\#} \text{solve for $\dfrac{dx}{dt} \dfrac{d \eta}{dt}$} \\
+                                                                                                                               &\qquad  \mathrel{\#} \text{solve for $\dfrac{dx}{dt} \dfrac{d \eta}{dt}$} \\
 [12pt]
 &\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \int_{t_1}^{t_2} \dfrac{d}{dx} \left ( \dfrac{dx}{dt} \eta \right ) dt   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } 
-                                                                                                                                &  \mathrel{\#} \text{integrate both sides} \\
+                                                                                                                                &\qquad \mathrel{\#} \text{integrate both sides} \\
 [12pt]
 &\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =  \dfrac{dx}{dt} \eta \bigg |^{t_2}_{t_1} - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt } 
-                                                                                                                                 & \mathrel{\#} \text{$\int$ \& $\frac{d}{dx}$ in $2^{nd}$ term cancel} \\
+                                                                                                                                 &\qquad \mathrel{\#} \text{integral \& derivative in $2^{nd}$ term cancel} \\
 [12pt]
 &\Rightarrow& {\displaystyle  \int_{t_1}^{t_2} \dfrac{dx}{dt} \dfrac{d \eta}{dt} \ =   - \int_{t_1}^{t_2}  \dfrac{d^2x}{dt^2} \eta \; dt }                   
-                                                                                                                               & \mathrel{\#} \text{by definition $\eta(t_1) = \eta(t_2) = 0$}
+                                                                                                                               &\qquad \mathrel{\#} \text{$\eta(t_1) = \eta(t_2) = 0$ (by definition)}
 \end{array}
 \end{equation*}
 
