@@ -14,7 +14,7 @@
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes, calc, decorations}    
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,calc,decorations,through}    
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 
@@ -55,6 +55,35 @@
 
 
 \begin{document}
+
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.50 \textwidth}{!} {                                                                                                                                                % resize figure if you want
+  \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}, declare function={f(\x)=\x*\x + 1;}]             % define f(x)
+       \draw[thick, ->] (-5,0) -- (5,0) coordinate [label={[xshift=0.30cm, below] $x$}];                                                                 % horizontal axis
+       \draw[thick, ->] (0,-1) -- (0,5) coordinate [label={[xshift=-0.30cm, left] $f(x)$}];                                                                 % xshift -- get some extra space
+       \draw plot[very thick, smooth,samples=100,domain=-1.75:1.75] (\x,{f(\x)});                                                                      % draw f(x)
+       \path (0,0) node[below left] {$O$};                                                                                                                                     % draw origin
+       \fill (0,{f(0)}) coordinate (p) circle (0.05);                                                                                                                            % draw a dot at minimum
+       \coordinate (x) at (0,{1/(4*f(1))});                                                                                                                                        % coordinate for tangent line
+       \node[very thick, circle through={(p)}] (cir) at (x) {};
+       \draw[red] (-3,{f(0)})-- (3,{f(0)});
+%
+% draw dots on curve and axis
+%
+       \coordinate (e0) at (0.15,0);
+       \fill (e0) circle(0.05);      
+       \coordinate (e1) at (0.15,{f(0)});
+       \fill (e1) circle(0.05);      
+       \draw[dashed] (0.15,{f(0)}) -- (0.15,0) coordinate [label={[scale=1.10, below]  $\epsilon$}];         
+       \draw (5.5,1) node[rectangle, draw, very thin] {$\displaystyle \dfrac{d}{dx} f(x)  = \dfrac{d}{dx} f(x + \epsilon) = 0$};      % show derivatives at zero in box to the right
+  \end{tikzpicture}
+   }                                                                                                                                                                                             % end resizebox                                                                                           
+ \caption{${\displaystyle f(x)= x^2 + 1}$}
+ \label{fig:parabola}
+\end{figure}
+
 
 \begin{figure}[H]
 \centering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 AUG 2021 05:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 AUG 2021 07:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -665,34 +665,34 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
-<images/e_to_the_minus_pi_over_two.png, id=8, 656.4525pt x 192.72pt>
+<images/e_to_the_minus_pi_over_two.png, id=12, 656.4525pt x 192.72pt>
 File: images/e_to_the_minus_pi_over_two.png Graphic file (type png)
 <use images/e_to_the_minus_pi_over_two.png>
 Package pdftex.def Info: images/e_to_the_minus_pi_over_two.png  used on input l
-ine 88.
+ine 87.
 (pdftex.def)             Requested size: 656.4509pt x 192.71951pt.
 
-(./i_to_the_i_is_real.bbl
-Underfull \hbox (badness 1424) in paragraph at lines 4--10
+(./i_to_the_i_is_real.bbl [1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
+s/e_to_the_minus_pi_over_two.png>]
+Underfull \hbox (badness 1424) in paragraph at lines 10--16
 []\OT1/cmr/m/n/10.95 Wikipedia con-trib-u-tors.  Eu-ler's For-mula --- Wikipedi
 a, The Free En-cy-clo-pe-
  []
 
-) [1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
-s/e_to_the_minus_pi_over_two.png>] (./i_to_the_i_is_real.aux)
+) [2] (./i_to_the_i_is_real.aux)
 Package rerunfilecheck Info: File `i_to_the_i_is_real.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15792 strings out of 478994
- 274022 string characters out of 5858184
- 583292 words of memory out of 5000000
- 33003 multiletter control sequences out of 15000+600000
+ 15795 strings out of 478994
+ 274075 string characters out of 5858184
+ 582335 words of memory out of 5000000
+ 33004 multiletter control sequences out of 15000+600000
  417281 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,77p,312b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,77p,312b,863s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -707,10 +707,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on i_to_the_i_is_real.pdf (1 page, 157047 bytes).
+Output written on i_to_the_i_is_real.pdf (2 pages, 159282 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
