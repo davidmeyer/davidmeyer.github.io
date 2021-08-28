@@ -86,25 +86,26 @@ These notes explore a bit of the connection between the Principle of Least Actio
 
 \section{Finding the Minimum of a Function}
 \label{sec:minimum}
-{\setstretch{1.65} 
+{\setstretch{1.75} 
 The story starts with how we use calculus to find the minimum of a function. In particular, suppose we have some function $f(x)$. We know that 
 if we move a small distance from $x$, call it $\epsilon$, around $f$'s minimum\footnote{$\frac{df}{dx}= 0$ at $f$'s minimum, also known as a 
-\emph{stationary point} of $f$.} then $f(x) = f(x + \epsilon)$ and so $f(x + \epsilon) - f(x) = 0$. For example consider the scenario shown in 
-Figure \ref{fig:parabola},  where $f(0) = f(0+\epsilon) = 1$ and $ \dfrac{d}{dx} f(0)  = \dfrac{d}{dx} f(0 + \epsilon) = 0$. \par}
+\emph{stationary point} of $f$.} then $f(x) = f(x + \epsilon)$ and so $f(x + \epsilon) - f(x) = 0$. For example consider $f(x) = x^2 +1$. This case
+ is shown in Figure \ref{fig:parabola}, where we can see that $f(0) = f(0+\epsilon) = 1$ and $ \dfrac{d}{dx} f(0)  = \dfrac{d}{dx} f(0 + \epsilon) = 0$. \par}
 
-
+\bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {                                                                                                                                                % resize figure if you want
+  \resizebox{0.65 \textwidth}{!} {                                                                                                                                                % resize figure if you want
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}, declare function={f(\x)=\x*\x + 1;}]             % define f(x)
        \draw[thick, ->] (-5,0) -- (5,0) coordinate [label={[xshift=0.30cm, below] $x$}];                                                                 % horizontal axis
        \draw[thick, ->] (0,-1) -- (0,5) coordinate [label={[xshift=-0.30cm, left] $f(x)$}];                                                                 % xshift -- get some extra space
-       \draw plot [smooth,samples=100,domain=-1.75:1.75] (\x,{f(\x)});                                                                                     % draw f(x)
-       \path (0,0) node[below left] {$O$};                                                                                                                                     % draw origin
-       \fill (0,{f(0)}) coordinate (p) circle (0.05);                                                                                                                            % draw a dot at minimum
+       \draw [line width=0.20mm, smooth,samples=100,domain=-1.75:1.75] plot (\x,{f(\x)});                                                                                     % draw f(x)
+       \path (0,0) node[below left] {$O$};    
+       \coordinate (p) at (0,{f(0)});                                                                                                                                                % draw a dot at minimum
        \coordinate (x) at (0,{1/(4*f(1))});                                                                                                                                        % coordinate for tangent line
        \node[very thick, circle through={(p)}] (cir) at (x) {};
-       \draw[red] (-3,{f(0)})-- (3,{f(0)});
+       \draw[line width=0.25mm,red] (-3,{f(0)})-- (3,{f(0)});
+       \fill (p)circle (0.05);                                                                                                                                                             % draw a dot at minimum (draw last to ensure it's black)
 %
 % draw dots on curve and axis
 %
@@ -112,9 +113,9 @@ Figure \ref{fig:parabola},  where $f(0) = f(0+\epsilon) = 1$ and $ \dfrac{d}{dx}
        \fill (e0) circle(0.05);      
        \coordinate (e1) at (0.15,{f(0)});
        \fill (e1) circle(0.05);      
-       \draw[dashed] (0.15,{f(0)}) -- (0.15,0) coordinate [label={[scale=1.10, below]  $\epsilon$}];         
+       \draw[dashed] (0.15,{f(0)}) -- (0.15,0) coordinate [label={[scale=1.10, below]  $\epsilon$}];                                            % draw epsilon under dot     
        \draw (5.5,1) node[rectangle, draw, very thin] {$\displaystyle \dfrac{d}{dx} f(x)  = \dfrac{d}{dx} f(x + \epsilon) = 0$};      % show derivatives at zero in box to the right
-  \end{tikzpicture}
+   \end{tikzpicture}
    }                                                                                                                                                                                             % end resizebox                                                                                           
  \caption{${\displaystyle f(x)= x^2 + 1}$}
  \label{fig:parabola}
@@ -122,7 +123,7 @@ Figure \ref{fig:parabola},  where $f(0) = f(0+\epsilon) = 1$ and $ \dfrac{d}{dx}
 
 
 
-\bigskip
+\newpage
 \noindent
 We also know that we can evaluate $f(x + \epsilon)$ using a Taylor series \cite{wiki:taylor}. In particular
 
