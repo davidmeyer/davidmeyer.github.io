@@ -86,7 +86,7 @@ These notes explore a bit of the connection between the Principle of Least Actio
 
 \section{Finding the Minimum of a Function}
 \label{sec:minimum}
-{\setstretch{1.75} 
+{\setstretch{1.0} 
 The story starts with how we use calculus to find the minimum of a function. In particular, suppose we have some function $f(x)$. We know that 
 if we move a small distance from $x$, call it $\epsilon$, around $f$'s minimum\footnote{$\frac{df}{dx}= 0$ at $f$'s minimum, also known as a 
 \emph{stationary point} of $f$.} then $f(x) = f(x + \epsilon)$ and so $f(x + \epsilon) - f(x) = 0$. For example consider $f(x) = x^2 +1$. This case
@@ -95,7 +95,7 @@ if we move a small distance from $x$, call it $\epsilon$, around $f$'s minimum\f
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.65 \textwidth}{!} {                                                                                                                                                % resize figure if you want
+  \resizebox{0.75 \textwidth}{!} {                                                                                                                                                % resize figure if you want
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}, declare function={f(\x)=\x*\x + 1;}]             % define f(x)
        \draw[thick, ->] (-5,0) -- (5,0) coordinate [label={[xshift=0.30cm, below] $x$}];                                                                 % horizontal axis
        \draw[thick, ->] (0,-1) -- (0,5) coordinate [label={[xshift=-0.30cm, left] $f(x)$}];                                                                 % xshift -- get some extra space
@@ -370,7 +370,7 @@ So now if we substitute these last two expressions into Equation \ref{eqn:s_x_pl
 \end{array}
 \end{equation*}
 
-\newpage
+\bigskip
 \noindent
 We also have the constraint that
 
@@ -466,7 +466,6 @@ Since $\delta \mathcal{S}$ must equal zero (Equation \ref{eqn:prod}) and we know
 \end{equation*}
 
 
-\newpage
 \bigskip
 \noindent
 But now note that 
