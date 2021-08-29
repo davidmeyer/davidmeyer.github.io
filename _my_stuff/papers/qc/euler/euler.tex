@@ -122,7 +122,7 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
   \resizebox{0.60 \textwidth}{!} {                                                                                                                   % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0) coordinate[label=below:$\mathbb{R}$](x);               % make and label the axes
-      \draw[->] (0,-1.5) -- (0,1.5) node[left]{$\mathbb{I}$};
+      \draw[->] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
       \draw (0,0) coordinate(o) circle [radius=1cm];                                                                                       % draw unit circle
       \coordinate (p) at (60:1);                                                                                                                        % 60 degrees with r = 1
       \fill (p) coordinate[label={above right: ${e^{i\theta} = \cos \theta + i \sin \theta}$}] (p) circle(0.02);       % Euler's formula
@@ -131,13 +131,13 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 % draw the various 1s around the unit circle
 %
      \coordinate (a) at (0,1);
-     \fill (a) coordinate [label={above left:${i}$}] (a) circle(0.02);
+     \fill (a) coordinate [label={above left: ${\scalebox {0.80} {(0,i)}} $}] (a) circle(0.02);                               % draw coordinates (making them a bit smaller)
      \coordinate (b) at (-1,0);
-     \fill (b) coordinate [label={below left:${-1}$}] (b) circle(0.02);
+     \fill (b) coordinate [label={below left:${\scalebox {0.80} {(-1,0)}}$}] (b) circle(0.02);                               % draw coordinates (making them a bit smaller)
      \coordinate (c) at (0,-1);
-     \fill (c) coordinate [label={below left:${-i}$}] (c) circle(0.02);
+     \fill (c) coordinate [label={below left:${\scalebox {0.80} {(0,-i)}}$}] (c) circle(0.02);                                 % draw coordinates (making them a bit smaller)
      \coordinate (d) at (1,0);
-     \fill (d) coordinate [label={below right:${1}$}] (d) circle(0.02);
+     \fill (d) coordinate [label={below right:${\scalebox {0.80} {(1,0)}}$}] (d) circle(0.02);                               % draw coordinates (making them a bit smaller)
 %
 % do the rest of the labeling and draw the angle
 %
