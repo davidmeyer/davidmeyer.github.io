@@ -225,65 +225,69 @@ that is, Euler's formula.
 \newpage
 \subsection{Deriving Euler's Formula Without Maclaurin Series}
 \label{subsec:without_maclaurin}
-{\setstretch{1.35} 
-Dave Neary\footnote{dneary@redhat.com} showed us a different way to derive Euler's formula without using Maclaurin series.  In this case 
-Euler's formula can be derived from the definition of a point in the complex plane and the derivative of the exponential function, 
-$\dfrac{d}{dx}e^x = e^x$.  The derivation goes as follows:\par}
+Dave Neary\footnote{dneary@redhat.com} suggested a different way to derive Euler's formula without using Maclaurin series.  The following
+derivation is a slight modification on the approach he suggested. We start by defining $f(\theta) = e^{-i\theta} \left ( \cos \theta + i\sin \theta \right )$
+for all real $\theta$. Then 
 
 
 \begin{equation*}
 \begin{array}{lllll}
-e^{i\theta} 
-&=&  r\cos \theta + i r \sin \theta                                                                                                                                                    &\qquad \mathrel{\#} \text{original equation (Figure \ref{fig:complex_plane})} \\
-[11pt]
-&=&  r \cdot \Big [\cos \theta + i \sin \theta \Big ]                                                                                                                           &\qquad \mathrel{\#} \text{set up to use the chain and product rules} \\
-[11pt]
-&\Rightarrow&  \dfrac{d}{d\theta} e^{i\theta} = \dfrac{d}{d\theta} \Big [ r \cdot \big [ \cos \theta + i \sin \theta \big ]  \Big ]            &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
-[11pt]
-&\Rightarrow&  ie^{i\theta} = \dfrac{d}{d\theta} \Big [ r \cdot \big [ \cos \theta + i \sin \theta \big ]  \Big ]                       
-                                     &\qquad \mathrel{\#} \text{chain rule: $\dfrac{d}{dx} e^{kx} = e^{kx} \cdot \dfrac{d}{dx} kx = k \cdot e^{kx}$} \\
-[11pt]
-&\Rightarrow&  ie^{i\theta} = \dfrac{dr}{d\theta} \cdot \Big [\cos \theta + i \sin \theta \Big ]  + r \cdot  \dfrac{d}{d\theta} \Big [\cos \theta + i \sin \theta \Big ]   
-                                   &\qquad \mathrel{\#} \text{product rule: $\dfrac {d}{dx} (u \cdot v)= \dfrac {du}{dx} \cdot v + u \cdot \dfrac {dv}{dx}$} \\
-[11pt]
-&\Rightarrow&  ie^{i\theta} = \dfrac{dr}{d \theta} \cdot \Big [\cos \theta + i \sin \theta  \Big ]  + r  \cdot \Big [-\sin \theta   + i \cos \theta  \Big ]
-                                    &\qquad \mathrel{\#} \dfrac{d}{d\theta } \Big [\cos \theta  + i \sin \theta  \Big ]  = -\sin \theta   + i \cos \theta    \\
-[11pt]
-&\Rightarrow&  ie^{i\theta}  =  \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} e^{i\theta}  + r  \cdot \Big [-\sin \theta   + i \cos \theta  \Big ]      &\qquad \mathrel{\#} \cos \theta  + i \sin \theta =  \dfrac{1}{r} e^{i\theta} \\
-[11pt]
-&\Rightarrow&  ie^{i\theta}  =  \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} e^{i\theta}  + \Big [  -r\sin \theta   + i r  \cos \theta  \Big ]            &\qquad \mathrel{\#} \text{multiply $2^{nd}$ term through} \\
-[11pt]
-&\Rightarrow&  ie^{i\theta}  =  \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} e^{i\theta}  +   i \cdot e^{i\theta}                                                 &\qquad \mathrel{\#} i r\cos \theta  - r \sin \theta   =  i \cdot e^{i\theta}  \\
-[11pt]
-&\Rightarrow& i = \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} + i                                                                                                                  &\qquad \mathrel{\#} \text{divide both sides by $e^{i\theta}$} \\
-[11pt]
-&\Rightarrow& \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r}  = 0                                                                                                                     &\qquad \mathrel{\#} \text{subtract $i$ from both sides} \\
+ f(\theta)
+ &=&  e^{-i\theta} \left ( \cos \theta + i\sin \theta \right)                                                                                                  &\mathrel{\#} \text{definition of $f(\theta)$} \\
+ [10pt]
+&\Rightarrow& f^{\prime}(\theta)  = \dfrac{d}{d \theta} \Big [ e^{-i\theta} \left ( \cos \theta + i\sin \theta \right) \Big ]     &\mathrel{\#}  \text{take derivative of both sides} \\
+[14pt]
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta} \cdot  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta)
+                                                     + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )                                        &\mathrel{\#}  \text{product rule} \\
+[14pt]
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )    
+                                                                                                                                                                                       &\mathrel{\#}  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta) = i\cos \theta -\sin \theta \\
+[14pt]
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + ie^{-i\theta} (\cos \theta + i\sin \theta )       &\mathrel{\#} \text{chain rule} \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) - i (\cos \theta +i\sin \theta)  \Big ]  &\mathrel{\#} \text{factor out $e^{-i\theta}$} \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]    &\mathrel{\#} \text{multiply through by $i$} \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot 0                                                                                                     &\mathrel{\#} \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]  = 0 \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) =  0                                                                                                                               &\mathrel{\#} \text{simplify} \\
 \end{array}
 \end{equation*}
 
+\bigskip
+\noindent
+Since $f^{\prime}(\theta) = 0$ we know that $f(\theta)$ is a constant (that is, $f(x) = a$ for some constant $a$). We also know that 
+
+\medskip
+\begin{equation*}
+f(0) = e^{-i0} \cdot \big [\cos 0 + i \sin 0 \big ]  = 1 \cdot \big [1 + 0 \big ] = 1
+\end{equation*}
 
 \medskip
 \bigskip
-{\setstretch{1.55} 
 \noindent
-Since $\dfrac{dr}{d \theta} \cdot  \dfrac{1}{r}  = 0$ we know that $r \neq 0$ and so $\dfrac{dr}{d \theta}$ must be zero. This implies that $r$ is a constant; call it $k$.
-\par}
-
-\bigskip
-\noindent
-If we next set $\theta = 0$ in our original equation we get $e^{0i} = k \cos 0 + i k \sin 0 = 1$. So now we know that $1 = k \cdot \left [ 1 + 0 \right ]$ and so $k = 1$.
-
-\bigskip
-\noindent
-Since $k = r$ and substituting  $k = r = 1$  back into our original equation we get Euler's formula: 
+Now, since $f(\theta)$ is a constant and $f(0) = 1$ we know that $f(\theta) = 1$ for all real $\theta$.  Dividing both sides by
+$e^{-i\theta}$ yields
 
 \bigskip
 \begin{equation*}
-e^{i\theta} = \cos \theta + i \sin \theta
+\dfrac{f(\theta)}{e^{-i\theta}} = \dfrac{1}{e^{-i\theta}} = \dfrac{e^{-i\theta} \cdot (\cos \theta + i \sin \theta)}{e^{-i\theta}}
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+and we wind up with Euler's formula:
+
+
+\begin{equation*}
+e^{i\theta }=\cos \theta +i\sin \theta
 \end{equation*}
 \bigskip
 
-\subsection{Euler's Identity}
+\newpage
+\section{Euler's Identity}
 Something interesting happens when we set $\theta = \pi$ into Euler's formula (Equation \ref{eqn:eulers_formula}). We get 
 Euler's identity \cite{wiki:eulers_identity}:
 
