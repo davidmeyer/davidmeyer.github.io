@@ -40,6 +40,7 @@
 \usepackage{braket}
 \usepackage{siunitx}
 \usetikzlibrary{angles, quotes}
+\usepackage{setspace}
 
 
 %
@@ -155,9 +156,10 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 
 \bigskip
 \noindent
-The short answer it that it falls out of the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see why, notice that the 
+One way to derive Euler's formula falls out of the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see why, notice that the 
 Maclaurin series for $\cos \theta$ is 
 
+\bigskip
 \begin{equation}
 \cos \theta = 1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \frac{\theta^6}{6!} + \cdots 
 \label{eqn:cos}
@@ -167,6 +169,7 @@ Maclaurin series for $\cos \theta$ is
 \noindent
 while the Maclaurin series for $\sin \theta$ is 
 
+\bigskip
 \begin{equation}
 \sin \theta = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \frac{\theta^7}{7!} + \cdots 
 \label{eqn:sin}
@@ -176,6 +179,7 @@ while the Maclaurin series for $\sin \theta$ is
 \noindent
 Finally, the Maclaurin series for $\mathrm{e}^x$ is 
 
+\bigskip
 \begin{equation}
 \mathrm{e}^x = 1 +  x +  \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots 
 \label{eqn:e_to_the_x}
@@ -206,11 +210,81 @@ e^{i\theta}
 
 \bigskip
 \noindent
-So $\mathrm{e}^{i\theta} = \cos \theta + i \sin \theta$, which is known as Euler's formula. 
+So we wind up with
 
 \bigskip
+\begin{equation}
+\mathrm{e}^{i\theta} = \cos \theta + i \sin \theta
+\label{eqn:eulers_formula}
+\end{equation}
+
+\bigskip
+\noindent
+that is, Euler's formula.
+
+\newpage
+\subsection{Deriving Euler's Formula Without Maclaurin Series}
+\label{subsec:without_maclaurin}
+{\setstretch{1.35} 
+Dave Neary\footnote{dneary@redhat.com} showed us a different way to derive Euler's formula without using Maclaurin series.  In this case 
+Euler's formula can be derived from the definition of a point in the complex plane and the derivative of the exponential function, 
+$\dfrac{d}{dx}e^x = e^x$.  The derivation goes as follows:\par}
+
+
+\begin{equation*}
+\begin{array}{lllll}
+e^{i\theta} 
+&=&  r\cos \theta + i r \sin \theta                                                                                                                                                    &\qquad \mathrel{\#} \text{original equation (Figure \ref{fig:complex_plane})} \\
+[11pt]
+&=&  r \cdot \Big [\cos \theta + i \sin \theta \Big ]                                                                                                                           &\qquad \mathrel{\#} \text{set up to use the chain and product rules} \\
+[11pt]
+&\Rightarrow&  \dfrac{d}{d\theta} e^{i\theta} = \dfrac{d}{d\theta} \Big [ r \cdot \big [ \cos \theta + i \sin \theta \big ]  \Big ]            &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
+[11pt]
+&\Rightarrow&  ie^{i\theta} = \dfrac{d}{d\theta} \Big [ r \cdot \big [ \cos \theta + i \sin \theta \big ]  \Big ]                       
+                                     &\qquad \mathrel{\#} \text{chain rule: $\dfrac{d}{dx} e^{kx} = e^{kx} \cdot \dfrac{d}{dx} kx = k \cdot e^{kx}$} \\
+[11pt]
+&\Rightarrow&  ie^{i\theta} = \dfrac{dr}{d\theta} \cdot \Big [\cos \theta + i \sin \theta \Big ]  + r \cdot  \dfrac{d}{d\theta} \Big [\cos \theta + i \sin \theta \Big ]   
+                                   &\qquad \mathrel{\#} \text{product rule: $\dfrac {d}{dx} (u \cdot v)= \dfrac {du}{dx} \cdot v + u \cdot \dfrac {dv}{dx}$} \\
+[11pt]
+&\Rightarrow&  ie^{i\theta} = \dfrac{dr}{d \theta} \cdot \Big [\cos \theta + i \sin \theta  \Big ]  + r  \cdot \Big [-\sin \theta   + i \cos \theta  \Big ]
+                                    &\qquad \mathrel{\#} \dfrac{d}{d\theta } \Big [\cos \theta  + i \sin \theta  \Big ]  = -\sin \theta   + i \cos \theta    \\
+[11pt]
+&\Rightarrow&  ie^{i\theta}  =  \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} e^{i\theta}  + r  \cdot \Big [-\sin \theta   + i \cos \theta  \Big ]      &\qquad \mathrel{\#} \cos \theta  + i \sin \theta =  \dfrac{1}{r} e^{i\theta} \\
+[11pt]
+&\Rightarrow&  ie^{i\theta}  =  \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} e^{i\theta}  + \Big [  -r\sin \theta   + i r  \cos \theta  \Big ]            &\qquad \mathrel{\#} \text{multiply $2^{nd}$ term through} \\
+[11pt]
+&\Rightarrow&  ie^{i\theta}  =  \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} e^{i\theta}  +   i \cdot e^{i\theta}                                                 &\qquad \mathrel{\#} i r\cos \theta  - r \sin \theta   =  i \cdot e^{i\theta}  \\
+[11pt]
+&\Rightarrow& i = \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r} + i                                                                                                                  &\qquad \mathrel{\#} \text{divide both sides by $e^{i\theta}$} \\
+[11pt]
+&\Rightarrow& \dfrac{dr}{d \theta} \cdot  \dfrac{1}{r}  = 0                                                                                                                     &\qquad \mathrel{\#} \text{subtract $i$ from both sides} \\
+\end{array}
+\end{equation*}
+
+
+\medskip
+\bigskip
+{\setstretch{1.55} 
+\noindent
+Since $\dfrac{dr}{d \theta} \cdot  \dfrac{1}{r}  = 0$ we know that $r \neq 0$ and so $\dfrac{dr}{d \theta}$ must be zero. This implies that $r$ is a constant; call it $k$.
+\par}
+
+\bigskip
+\noindent
+If we next set $\theta = 0$ in our original equation we get $e^{0i} = k \cos 0 + i k \sin 0 = 1$. So now we know that $1 = k \cdot \left [ 1 + 0 \right ]$ and so $k = 1$.
+
+\bigskip
+\noindent
+Since $k = r$ and substituting  $k = r = 1$  back into our original equation we get Euler's formula: 
+
+\bigskip
+\begin{equation*}
+e^{i\theta} = \cos \theta + i \sin \theta
+\end{equation*}
+\bigskip
+
 \subsection{Euler's Identity}
-Something interesting happens when we set $\theta = \pi$ in Euler's formula. We get 
+Something interesting happens when we set $\theta = \pi$ into Euler's formula (Equation \ref{eqn:eulers_formula}). We get 
 Euler's identity \cite{wiki:eulers_identity}:
 
 \bigskip
@@ -228,11 +302,14 @@ e^{i\theta}
 
 \bigskip
 \section{Conclusions}
-Finally, I'll just note that it's not that all that surprising that Euler resorted to the Maclaurin series for trigonometric functions in these derivations, since
-the Maclaurin series for $\sin x$ forms (at least part of) the basis of his solution for the Basel problem \cite{notes:basel_problem,wiki:basel}.
 
 
-\newpage
+\bigskip
+\section{Acknowledgements}
+Thanks to Dave Neary for suggesting a non-Maclaurin series derivation of Euler's formula (see Section \ref{subsec:without_maclaurin}).
+
+
+
 \bibliographystyle{plain}
 \bibliography{/Users/dmm/papers/bib/qc}
 \end{document} 
