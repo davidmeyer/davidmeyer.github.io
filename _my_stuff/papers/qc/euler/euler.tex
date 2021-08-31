@@ -294,8 +294,7 @@ e^{i\theta }=\cos \theta +i\sin \theta
 
 \subsection{Another Approach To Euler's Formula Without Maclaurin Series}
 \label{subsec:without_maclaurin1}
-Some people prefer this approach as it seems to require fewer assumptions. To that 
-end
+Some people prefer this approach as it seems to require fewer assumptions. To that end
 
 
 \begin{equation*}
@@ -303,9 +302,13 @@ end
  z
  &=& \cos{\theta}+i\sin{\theta}                                                                                  &\qquad \mathrel{\#} \text{definition of a complex number (Figure \ref{fig:complex_plane})} \\
  [12pt]
- &\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}                              &\qquad \mathrel{\#} \text{take the derivative of both sides (derivative is a linear operator)} \\
- [12pt]
-&\Rightarrow& \dfrac{dz}{d\theta} = iz                                                                      &\qquad \mathrel{\#}  i z  = i \left [ \cos{\theta}+i\sin{\theta}  \right ] =  -\sin{\theta} + i\cos{\theta} \\
+ &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \left [  \cos{\theta}+i\sin{\theta}  \right ]                         &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
+ [14pt]
+ &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \cos{\theta} + \dfrac{d}{d \theta} i\sin{\theta}               &\qquad \mathrel{\#} \text{derivative is a linear operator} \\
+ [14pt]
+ &\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}                              &\qquad \mathrel{\#} \text{$ \dfrac{d}{d \theta} \cos{\theta} = - \sin \theta$ and $\dfrac{d}{d \theta} i\sin{\theta} =  i\cos{\theta}$} \\
+ [14pt]
+&\Rightarrow& \dfrac{dz}{d\theta} = iz                                                                     &\qquad \mathrel{\#}  i z  = i \left [ \cos{\theta}+i\sin{\theta}  \right ] =  -\sin{\theta} + i\cos{\theta} \\
 \end{array}
 \end{equation*}
 
@@ -332,8 +335,194 @@ So now we know that $\dfrac{dz}{d\theta} = iz$, which implies that  $\dfrac{dz}{
 Now, we know $z(0) = \cos 0 + i \sin 0 = 1 + i \cdot 0 =1$. We also know that $z(0) = e^{0i +C} = e^{C} = 1$. Since $e^{C} = 1$ we know that $C$
 must equal $0$. Putting all of this together we see that  $z = e^{i\theta}=\cos{\theta}+i\sin{\theta}$, that is, Euler's formula.
 
+\subsection{One More Approach: Using Polar Coordinates}
+\label{subsec:without_maclaurin2}
+There is also a clever way to derive Euler's formula using polar coordinates. This approach seems to require the fewest assumptions. To see how this works, 
+first notice that all non-zero complex numbers can be expressed in polar coordinates in a unique way. In particular, any number of the form $e^{ix}$  
+(with $x \in \mathbb{R}$), which is non-zero can be expressed as:
+
+\bigskip
+\begin{equation}
+e^{ix} = r \left ( \cos \theta + i \sin \theta \right )
+\label{eqn:polar}
+\end{equation}
+
+\bigskip
+\noindent
+This is shown in Figure \ref{fig:complex_plane}. In this case $\theta$ is the principal angle from the positive real axis (with say, $0 \leq \theta \leq 2 \pi$ )
+and $r$  is its radius ($r > 0$). One of the features of this proof is that it makes no assumption about the values of $r$ and $\theta$, except for the fact 
+that they are functions of $x$  (we can think of $r$ as shorthand for $r(x)$; likewise $\theta$ is shorthand for $\theta(x)$). These values will be 
+determined in the course of the proof. 
+
+\bigskip
+\noindent
+What we do know, however, is that when $x = 0$ the left-hand side of Equation \ref{eqn:polar} equals $1$, which implies that $r$ and $\theta$, being functions
+of $x$,  satisfy the initial  conditions that $r(0) = 1$ and  $\theta(0) = 0$ (since $1 = 1 \cdot \left  [ \cos \theta(0) + i \sin \theta(0) \right ]$).
+
+\bigskip
+\noindent
+Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to $x$ we see that
 
 
+\begin{equation*}
+\begin{array}{lllll}
+\dfrac{d}{dx} e^{ix} 
+&=& \dfrac{d}{dx} \left [  r \left ( \cos \theta + i \sin \theta \right ) \right ]    &\qquad  \mathrel{\#} \text{differentiate both sides}  \\
+[12pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{d}{dx} \left [  r \left ( \cos \theta + i \sin \theta \right ) \right ]    &\qquad  \mathrel{\#} \text{apply the chain rule to the LHS}  \\
+[12pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \, ( - \sin \theta + i \cos \theta) \dfrac{d\theta}{dx}   &\qquad  \mathrel{\#} \text{apply the product rule to the RHS}  \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Note that we are looking for an expression that is unique in terms of $r$ and $\theta$, so we would like to get rid  $e^{ix}$. One way to do this is to substitute $r (\cos \theta + i \sin \theta)$ for 
+$e^{ix}$ (Equation \ref{eqn:polar}) on the left hand side, which gives us
+
+\begin{equation*}
+i r (\cos \theta + i \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d \theta}{dx}
+\end{equation*}
+
+\bigskip
+\noindent
+Multiplying through by $i$ on the left hand side gives
+
+\begin{equation*}
+r (i \cos \theta - \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d \theta}{dx}
+\end{equation*}
+
+\bigskip
+\noindent
+Multiplying through on both sides side gives
+
+
+\begin{equation}
+ir \cos \theta -  r \sin \theta = (\cos \theta) \dfrac{dr}{dx} + (i \sin \theta) \dfrac{dr}{dx} + (-r \sin \theta) \dfrac{d \theta}{dx}  + (i r \cos \theta) \dfrac{d \theta}{dx}
+\label{eqn:eqn0}
+\end{equation}
+
+\bigskip
+\noindent
+Next, equating the imaginary and real parts on both sides of Equation \ref{eqn:eqn0} we see that
+
+\bigskip
+\begin{equation*}
+ir \cos \theta =  i \sin \theta \dfrac{dr}{dx} +  i r \cos \theta \dfrac{d \theta}{dx}
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+-  r \sin \theta = \cos \theta \dfrac{dr}{dx} -r \sin \theta \dfrac{d \theta}{dx} 
+\end{equation*}
+
+\bigskip
+\noindent
+Now we have is a system of two equations in two variables, where  $\dfrac{dr}{dx}$ and $\dfrac{d \theta}{dx}$ are the variables. 
+To solve this system, first assign $\alpha = \dfrac{dr}{dx}$ and $\beta = \dfrac{d \theta}{dx}$ so that
+
+\bigskip
+\begin{equation}
+r \cos \theta = (\sin \theta) \alpha + (r \cos \theta) \beta 
+\label{eqn:eqn1}
+\end{equation}
+
+\bigskip
+\noindent
+and
+
+\begin{equation}
+- r \sin \theta = (\cos \theta) \alpha - (r \sin \theta) \beta 
+\label{eqn:eqn2}
+\end{equation}
+
+\bigskip
+\noindent
+Next,  by multiplying Equation \ref{eqn:eqn1} by $\cos \theta$ and Equation \ref{eqn:eqn2} by $\sin \theta$ we get
+
+\bigskip
+\begin{equation}
+r \cos^2 \theta = (\sin \theta \cos \theta) \alpha + (r \cos^2 \theta) \beta 
+\label{eqn:eqn3}
+\end{equation}
+
+\bigskip
+\noindent
+and
+
+\begin{equation}
+- r \sin^2 \theta = (\sin \theta\cos \theta) \alpha - (r \sin^2 \theta) \beta 
+\label{eqn:eqn4}
+\end{equation}
+
+
+\bigskip
+\noindent
+We can eliminate $\alpha$ by subtracting Equation \ref{eqn:eqn4} from Equation \ref{eqn:eqn3} to get
+
+\medskip
+\begin{equation}
+r (\cos^2 \theta + \sin^2 \theta)  = r (\cos^2 \theta + \sin^2 \theta)\beta
+\label{eqn:eqn5}
+\end{equation}
+
+\bigskip
+\noindent
+and since $\cos^2 \theta + \sin^2 \theta = 1$ Equation \ref{eqn:eqn5} simplifies to 
+
+\medskip
+\begin{equation}
+r  = r \beta
+\label{eqn:eqn6}
+\end{equation}
+
+\bigskip
+\noindent
+Now, since $r > 0$ for all $x$ Equation \ref{eqn:eqn6} tells us that $\beta$, which we set equal to $\dfrac{d \theta}{dx}$,  must equal 1. 
+If substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} and \ref{eqn:eqn2} we see that
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+& 0 = (\sin \theta) \alpha \\
+& 0 =  (\cos \theta) \alpha 
+\end{array}
+\end{equation*}
+
+\bigskip
+{\setstretch{1.95}
+\noindent
+which implies that $(\sin \theta) \alpha = (\cos \theta) \alpha$, which further implies that $\alpha = 0$. But remember that $\alpha = \dfrac{dr}{dx}$
+so now we know that $\dfrac{dr}{dx} = 0$. $\dfrac{dr}{dx} = 0$ implies that $r(x) = a$ for some constant $a$. Similarly, since $\dfrac{d\theta}{dx} = 1$
+we know that $\theta(x) = x + C$ for some constant $C$ (get this by integrating both sides of $d\theta = dx$). \par}
+
+\bigskip
+\noindent
+Going back to the very beginning where we saw that $r(0) = 1$ and since we know that $r(x) = a$ for all $x$, $r$ must
+equal 1 for all $x$. Similarly because $\theta(0) = 0$ we see that $\theta(0) = 0 + C$, so it must be that $C$ equals zero. 
+Said another way,  $\theta = x$. 
+
+\bigskip
+\noindent
+So now we know that $r = 1$ and $\theta = x$. Substituting these values back into Equation \ref{eqn:polar} we see that 
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+e^{ix} 
+&=& r \cdot \left [ \cos \theta + i \sin \theta \right ]    &\qquad  \mathrel{\#} \text{Equation \ref{eqn:polar}} \\
+[8pt]
+&=& 1 \cdot \left [ \cos x + i \sin x \right ]                 &\qquad  \mathrel{\#} \text{$r = 1$ and $\theta = x$} \\
+[8pt]
+&=& \cos x + i \sin x                                                &\qquad  \mathrel{\#} \text{Euler's formula}
+\end{array}
+\end{equation*}
+
+
+\bigskip
 \section{Euler's Identity}
 Something interesting happens when we set $\theta = \pi$ into Euler's formula (Equation \ref{eqn:eulers_formula}). We get 
 Euler's identity \cite{wiki:eulers_identity}:
@@ -357,8 +546,9 @@ e^{i\theta}
 
 \bigskip
 \section{Acknowledgements}
-Thanks to Dave Neary for suggesting a non-Maclaurin series derivation of Euler's formula (see Sections \ref{subsec:without_maclaurin0} and 
- \ref{subsec:without_maclaurin1}).
+Thanks to Dave Neary for suggesting a non-Maclaurin series derivation of Euler's formula (see Sections \ref{subsec:without_maclaurin0}, 
+ \ref{subsec:without_maclaurin1} and \ref{subsec:without_maclaurin2}).
+
 
 
 

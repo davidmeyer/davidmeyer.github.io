@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: euler.aux
 The style file: plain.bst
 Database file #1: /Users/dmm/papers/bib/qc.bib
-You've used 5 entries,
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            520 strings with 4909 characters,
-and the built_in function-call counts, 1101 in all, are:
-= -- 109
-> -- 35
+            512 strings with 4607 characters,
+and the built_in function-call counts, 671 in all, are:
+= -- 66
+> -- 21
 < -- 0
-+ -- 15
-- -- 10
-* -- 31
-:= -- 193
-add.period$ -- 20
-call.type$ -- 5
-change.case$ -- 20
++ -- 9
+- -- 6
+* -- 20
+:= -- 120
+add.period$ -- 12
+call.type$ -- 3
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 35
-empty$ -- 111
-format.name$ -- 10
-if$ -- 240
+cite$ -- 3
+duplicate$ -- 21
+empty$ -- 67
+format.name$ -- 6
+if$ -- 145
 int.to.chr$ -- 0
-int.to.str$ -- 5
+int.to.str$ -- 3
 missing$ -- 0
-newline$ -- 33
-num.names$ -- 10
-pop$ -- 42
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 9
 quote$ -- 0
-skip$ -- 29
+skip$ -- 18
 stack$ -- 0
-substring$ -- 25
-swap$ -- 5
+substring$ -- 15
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 12
 warning$ -- 0
-while$ -- 10
-width$ -- 6
-write$ -- 61
+while$ -- 6
+width$ -- 4
+write$ -- 38

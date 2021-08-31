@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  31 AUG 2021 07:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  31 AUG 2021 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -989,20 +989,20 @@ Overfull \hbox (62.03226pt too wide) detected at line 263
 []
  []
 
-[4]
-Overfull \hbox (28.53183pt too wide) detected at line 310
+[4] [5]
+Overfull \hbox (41.2598pt too wide) detected at line 376
 []
  []
 
-(./euler.bbl [5]) [6] (./euler.aux)
+[6] [7] (./euler.bbl [8]) [9] (./euler.aux)
 Package rerunfilecheck Info: File `euler.out' has not changed.
-(rerunfilecheck)             Checksum: 5F1C2FCDFFEC2E5004F69473D6203AC7;1400.
+(rerunfilecheck)             Checksum: 1898FBF9B7C10029247D433C0A21D535;1682.
  ) 
 Here is how much of TeX's memory you used:
- 26349 strings out of 478994
- 501687 string characters out of 5858184
- 786836 words of memory out of 5000000
- 43336 multiletter control sequences out of 15000+600000
+ 26367 strings out of 478994
+ 501870 string characters out of 5858184
+ 787384 words of memory out of 5000000
+ 43344 multiletter control sequences out of 15000+600000
  410430 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,116p,488b,1140s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1019,10 +1019,10 @@ exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on euler.pdf (6 pages, 152166 bytes).
+Output written on euler.pdf (9 pages, 161351 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 

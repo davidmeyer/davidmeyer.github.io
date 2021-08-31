@@ -1,11 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{notes:basel_problem}
-{David Meyer}.
-\newblock {A Few Notes on the Basel Problem}.
-\newblock \url{https://davidmeyer.github.io/qc/basel.pdf}.
-\newblock [See \url{https://davidmeyer.github.io/qc/}].
-
 \bibitem{wiki:eulers_formula}
 {Wikipedia contributors}.
 \newblock {Euler's Formula --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -21,14 +15,6 @@
   \url{https://en.wikipedia.org/w/index.php?title=Euler%27s_identity&oldid=871855485},
   2018.
 \newblock [Online; accessed 5-December-2018].
-
-\bibitem{wiki:basel}
-{Wikipedia contributors}.
-\newblock {Basel Problem --- {Wikipedia}{,} The Free Encyclopedia}.
-\newblock
-  \url{https://en.wikipedia.org/w/index.php?title=Basel_problem&oldid=1023994680},
-  2021.
-\newblock [Online; accessed 6-August-2021].
 
 \bibitem{wiki:taylor}
 {Wikipedia contributors}.
