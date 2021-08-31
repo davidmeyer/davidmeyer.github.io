@@ -120,7 +120,7 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {                                                                                                                   % resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {                                                                                                                   % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0) coordinate[label=below:$\mathbb{R}$](x);               % make and label the axes
       \draw[->] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
@@ -222,122 +222,10 @@ So we wind up with
 \noindent
 that is, Euler's formula.
 
-\newpage
-\subsection{Deriving Euler's Formula Without Maclaurin Series}
+
+\subsection{Deriving Euler's Formula Using Polar Coordinates}
 \label{subsec:without_maclaurin0}
-A different way to derive Euler's formula without using Maclaurin series starts by defining 
-
-\bigskip
-\begin{equation*}
-f(\theta) = e^{-i\theta} \left ( \cos \theta + i\sin \theta \right )
-\end{equation*}
-
-\bigskip
-\noindent
-for all real $\theta$. Then 
-
-
-\begin{equation*}
-\begin{array}{lllll}
- f(\theta)
- &=&  e^{-i\theta} \left ( \cos \theta + i\sin \theta \right)                                                                                                  &\mathrel{\#} \text{definition of $f(\theta)$} \\
- [10pt]
-&\Rightarrow& f^{\prime}(\theta)  = \dfrac{d}{d \theta} \Big [ e^{-i\theta} \left ( \cos \theta + i\sin \theta \right) \Big ]     &\mathrel{\#}  \text{take derivative of both sides} \\
-[14pt]
-&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta} \cdot  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta)
-                                                     + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )                                        &\mathrel{\#}  \text{product rule} \\
-[14pt]
-&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )    
-                                                                                                                                                                                       &\mathrel{\#}  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta) = i\cos \theta -\sin \theta \\
-[14pt]
-&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + ie^{-i\theta} (\cos \theta + i\sin \theta )       &\mathrel{\#} \text{chain rule} \\
-[14pt]
-&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) - i (\cos \theta +i\sin \theta)  \Big ]  &\mathrel{\#} \text{factor out $e^{-i\theta}$} \\
-[14pt]
-&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]    &\mathrel{\#} \text{multiply through by $i$} \\
-[14pt]
-&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot 0                                                                                                     &\mathrel{\#} \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]  = 0 \\
-[14pt]
-&\Rightarrow&f^{\prime}(\theta) =  0                                                                                                                               &\mathrel{\#} \text{simplify} \\
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-Since $f^{\prime}(\theta) = 0$ we know that $f(\theta)$ is a constant (that is, $f(x) = a$ for some constant $a$). We also know that 
-
-\medskip
-\begin{equation*}
-f(0) = e^{-i0} \cdot \big [\cos 0 + i \sin 0 \big ]  = 1 \cdot \big [1 + 0 \big ] = 1
-\end{equation*}
-
-\medskip
-\bigskip
-\noindent
-Now, since $f(\theta)$ is a constant and $f(0) = 1$ we know that $f(\theta) = 1$ for all real $\theta$.  Dividing both sides by
-$e^{-i\theta}$ yields
-
-\bigskip
-\begin{equation*}
-\dfrac{f(\theta)}{e^{-i\theta}} = \dfrac{1}{e^{-i\theta}} = \dfrac{e^{-i\theta} \cdot (\cos \theta + i \sin \theta)}{e^{-i\theta}}
-\end{equation*}
-
-\medskip
-\bigskip
-\noindent
-and we wind up with Euler's formula:
-
-
-\begin{equation*}
-e^{i\theta }=\cos \theta +i\sin \theta
-\end{equation*}
-
-\subsection{Another Approach To Euler's Formula Without Maclaurin Series}
-\label{subsec:without_maclaurin1}
-Some people prefer this approach as it seems to require fewer assumptions. To that end
-
-
-\begin{equation*}
-\begin{array}{lllll}
- z
- &=& \cos{\theta}+i\sin{\theta}                                                                                  &\qquad \mathrel{\#} \text{definition of a complex number (Figure \ref{fig:complex_plane})} \\
- [12pt]
- &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \left [  \cos{\theta}+i\sin{\theta}  \right ]                         &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
- [14pt]
- &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \cos{\theta} + \dfrac{d}{d \theta} i\sin{\theta}               &\qquad \mathrel{\#} \text{derivative is a linear operator} \\
- [14pt]
- &\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}                              &\qquad \mathrel{\#} \text{$ \dfrac{d}{d \theta} \cos{\theta} = - \sin \theta$ and $\dfrac{d}{d \theta} i\sin{\theta} =  i\cos{\theta}$} \\
- [14pt]
-&\Rightarrow& \dfrac{dz}{d\theta} = iz                                                                     &\qquad \mathrel{\#}  i z  = i \left [ \cos{\theta}+i\sin{\theta}  \right ] =  -\sin{\theta} + i\cos{\theta} \\
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-So now we know that $\dfrac{dz}{d\theta} = iz$, which implies that  $\dfrac{dz}{z} = i \, d\theta$.  This means that
-
-
-\begin{equation*}
-\begin{array}{lllll}
-\dfrac{dz}{z} 
-&=& {\displaystyle  i \, d\theta}                                                                   &\qquad \mathrel{\#} \text{result from above} \\
-[12pt]
-&\Rightarrow& {\displaystyle \int \frac{dz}{z} =  \int i \, d\theta}                  &\qquad \mathrel{\#} \text{integrate both sides} \\
-[12pt]
-&\Rightarrow&  {\displaystyle \ln{|z|} = i \theta + C}                                    &\qquad \mathrel{\#} \text{${\displaystyle \int \frac{dz}{z} =  \ln{|z|}}$ and ${\displaystyle \int i \: d\theta = {i \, \theta +C}}$} \\
-[12pt]
- &\Rightarrow&  {\displaystyle z = e^{i\theta +C}}                                       &\qquad \mathrel{\#} \text{exponentiate both sides: $e^{\ln |z|} = z$ and $e^{i \theta +C} = e^{i \theta +C}$} \\
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-Now, we know $z(0) = \cos 0 + i \sin 0 = 1 + i \cdot 0 =1$. We also know that $z(0) = e^{0i +C} = e^{C} = 1$. Since $e^{C} = 1$ we know that $C$
-must equal $0$. Putting all of this together we see that  $z = e^{i\theta}=\cos{\theta}+i\sin{\theta}$, that is, Euler's formula.
-
-\subsection{One More Approach: Using Polar Coordinates}
-\label{subsec:without_maclaurin2}
-There is also a clever way to derive Euler's formula using polar coordinates. This approach seems to require the fewest assumptions. To see how this works, 
+There is a clever way to derive Euler's formula using polar coordinates. This approach seems to require the fewest assumptions. To see how this works, 
 first notice that all non-zero complex numbers can be expressed in polar coordinates in a unique way. In particular, any number of the form $e^{ix}$  
 (with $x \in \mathbb{R}$), which is non-zero can be expressed as:
 
@@ -357,7 +245,13 @@ determined in the course of the proof.
 \bigskip
 \noindent
 What we do know, however, is that when $x = 0$ the left-hand side of Equation \ref{eqn:polar} equals $1$, which implies that $r$ and $\theta$, being functions
-of $x$,  satisfy the initial  conditions that $r(0) = 1$ and  $\theta(0) = 0$ (since $1 = 1 \cdot \left  [ \cos \theta(0) + i \sin \theta(0) \right ]$).
+of $x$,  satisfy the initial  conditions that $r(0) = 1$ and  $\theta(0) = 0$ (since $1 
+= 1 \cdot \left  [ \cos \theta(0) + i \sin \theta(0) \right ] 
+= 1 \cdot \left [ \cos 0 + i \sin 0 \right ]
+= 1 \cdot \left [ 1 + i\cdot 0 \right] 
+= 1 \cdot \left [1 + 0 \right ] 
+= 1$).
+
 
 \bigskip
 \noindent
@@ -522,20 +416,138 @@ e^{ix}
 \end{equation*}
 
 
+
+\subsection{Another Approach To Euler's Formula Without Maclaurin Series}
+\label{subsec:without_maclaurin1}
+A different way to derive Euler's formula without using Maclaurin series starts by defining 
+
+\bigskip
+\begin{equation*}
+f(\theta) = e^{-i\theta} \left ( \cos \theta + i\sin \theta \right )
+\end{equation*}
+
+\bigskip
+\noindent
+for all real $\theta$. Then 
+
+
+\begin{equation*}
+\begin{array}{lllll}
+ f(\theta)
+ &=&  e^{-i\theta} \left ( \cos \theta + i\sin \theta \right)                                                                                                  &\mathrel{\#} \text{definition of $f(\theta)$} \\
+ [10pt]
+&\Rightarrow& f^{\prime}(\theta)  = \dfrac{d}{d \theta} \Big [ e^{-i\theta} \left ( \cos \theta + i\sin \theta \right) \Big ]     &\mathrel{\#}  \text{take derivative of both sides} \\
+[14pt]
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta} \cdot  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta)
+                                                     + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )                                        &\mathrel{\#}  \text{product rule} \\
+[14pt]
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )    
+                                                                                                                                                                                       &\mathrel{\#}  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta) = i\cos \theta -\sin \theta \\
+[14pt]
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + ie^{-i\theta} (\cos \theta + i\sin \theta )       &\mathrel{\#} \text{chain rule} \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) - i (\cos \theta +i\sin \theta)  \Big ]  &\mathrel{\#} \text{factor out $e^{-i\theta}$} \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]    &\mathrel{\#} \text{multiply through by $i$} \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot 0                                                                                                     &\mathrel{\#} \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]  = 0 \\
+[14pt]
+&\Rightarrow&f^{\prime}(\theta) =  0                                                                                                                               &\mathrel{\#} \text{simplify} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Since $f^{\prime}(\theta) = 0$ we know that $f(\theta)$ is a constant (that is, $f(x) = a$ for some constant $a$). We also know that 
+
+\medskip
+\begin{equation*}
+f(0) = e^{-i0} \cdot \big [\cos 0 + i \sin 0 \big ]  = 1 \cdot \big [1 + 0 \big ] = 1
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+Now, since $f(\theta)$ is a constant and $f(0) = 1$ we know that $f(\theta) = 1$ for all real $\theta$.  Dividing both sides by
+$e^{-i\theta}$ yields
+
+\bigskip
+\begin{equation*}
+\dfrac{f(\theta)}{e^{-i\theta}} = \dfrac{1}{e^{-i\theta}} = \dfrac{e^{-i\theta} \cdot (\cos \theta + i \sin \theta)}{e^{-i\theta}}
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+and we wind up with Euler's formula: $e^{i\theta }=\cos \theta +i\sin \theta$
+
+
+
+\subsection{One More Approach To Euler's Formula}
+\label{subsec:without_maclaurin2}
+Finally, while the approach in this section is similar to the approach taken in Section \ref{subsec:without_maclaurin2}, some people prefer this approach 
+as it seems to require fewer assumptions (as I mentioned above, the approach taken in Section \ref{subsec:without_maclaurin0} seems to require the 
+fewest assumptions). In any event, the proof goes as follows:
+
+
+\begin{equation*}
+\begin{array}{lllll}
+ z
+ &=& \cos{\theta}+i\sin{\theta}                                                                                  &\qquad \mathrel{\#} \text{definition of a complex number (Figure \ref{fig:complex_plane})} \\
+ [12pt]
+ &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \left [  \cos{\theta}+i\sin{\theta}  \right ]                         &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
+ [14pt]
+ &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \cos{\theta} + \dfrac{d}{d \theta} i\sin{\theta}               &\qquad \mathrel{\#} \text{derivative is a linear operator} \\
+ [14pt]
+ &\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}                              &\qquad \mathrel{\#} \text{$ \dfrac{d}{d \theta} \cos{\theta} = - \sin \theta$ and $\dfrac{d}{d \theta} i\sin{\theta} =  i\cos{\theta}$} \\
+ [14pt]
+&\Rightarrow& \dfrac{dz}{d\theta} = iz                                                                     &\qquad \mathrel{\#}  i z  = i \left [ \cos{\theta}+i\sin{\theta}  \right ] =  -\sin{\theta} + i\cos{\theta} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that $\dfrac{dz}{d\theta} = iz$, which implies that  $\dfrac{dz}{z} = i \, d\theta$.  This means that
+
+
+\begin{equation*}
+\begin{array}{lllll}
+\dfrac{dz}{z} 
+&=& {\displaystyle  i \, d\theta}                                                                   &\qquad \mathrel{\#} \text{result from above} \\
+[12pt]
+&\Rightarrow& {\displaystyle \int \frac{dz}{z} =  \int i \, d\theta}                  &\qquad \mathrel{\#} \text{integrate both sides} \\
+[12pt]
+&\Rightarrow&  {\displaystyle \ln{|z|} = i \theta + C}                                    &\qquad \mathrel{\#} \text{${\displaystyle \int \frac{dz}{z} =  \ln{|z|}}$ and ${\displaystyle \int i \: d\theta = {i \, \theta +C}}$} \\
+[12pt]
+ &\Rightarrow&  {\displaystyle z = e^{i\theta +C}}                                       &\qquad \mathrel{\#} \text{exponentiate both sides: $e^{\ln |z|} = z$ and $e^{i \theta +C} = e^{i \theta +C}$} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Now, we know $z(0) = \cos 0 + i \sin 0 = 1 + i \cdot 0 =1$. We also know that $z(0) = e^{0i +C} = e^{C} = 1$. Since $e^{C} = 1$ we know that $C$
+must equal $0$. Putting all of this together we see that  $z = e^{i\theta}=\cos{\theta}+i\sin{\theta}$, that is, Euler's formula.
+
+
 \bigskip
 \section{Euler's Identity}
 Something interesting happens when we set $\theta = \pi$ into Euler's formula (Equation \ref{eqn:eulers_formula}). We get 
 Euler's identity \cite{wiki:eulers_identity}:
 
-\bigskip
+
 \begin{equation*}
 \begin{array}{lllll}
 e^{i\theta}
 &=& \cos \theta + i \sin \theta                           &\qquad \qquad \qquad \quad  \mathrel{\#} \text{Euler's formula}                               \\
+[5pt]
 &\Rightarrow&  e^{i\pi} = \cos \pi + i \sin \pi     &\qquad \qquad \qquad \quad  \mathrel{\#} \text{set $\theta = \pi$}                            \\
+[5pt]
 &\Rightarrow&  e^{i\pi} = -1 + i \cdot 0             &\qquad \qquad \qquad \quad  \mathrel{\#} \text{$\cos \pi = -1$ and $\sin \pi = 0$}   \\
+[5pt]
 &\Rightarrow&  e^{i\pi} = -1 + 0                        &\qquad \qquad \qquad \quad  \mathrel{\#} i \cdot 0 = 0                                            \\
+[5pt]
 &\Rightarrow&  e^{i\pi} = -1                              &\qquad \qquad \qquad \quad  \mathrel{\#} \text{simplify}                                          \\
+[5pt]
 &\Rightarrow&  e^{i\pi} +1 = 0                          &\qquad \qquad \qquad \quad  \mathrel{\#} \text{Euler's identity} 
 \end{array}
 \end{equation*}
@@ -546,10 +558,7 @@ e^{i\theta}
 
 \bigskip
 \section{Acknowledgements}
-Thanks to Dave Neary for suggesting a non-Maclaurin series derivation of Euler's formula (see Sections \ref{subsec:without_maclaurin0}, 
- \ref{subsec:without_maclaurin1} and \ref{subsec:without_maclaurin2}).
-
-
+Thanks to Dave Neary for suggesting a non-Maclaurin series derivation of Euler's formula.
 
 
 \bibliographystyle{plain}
