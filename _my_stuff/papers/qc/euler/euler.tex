@@ -225,8 +225,15 @@ that is, Euler's formula.
 \newpage
 \subsection{Deriving Euler's Formula Without Maclaurin Series}
 \label{subsec:without_maclaurin}
-Dave Neary\footnote{dneary@redhat.com} suggested a different way to derive Euler's formula without using Maclaurin series.  The following
-derivation is a slight modification on the approach he suggested. We start by defining $f(\theta) = e^{-i\theta} \left ( \cos \theta + i\sin \theta \right )$
+A different way to derive Euler's formula without using Maclaurin series starts by defining 
+
+\bigskip
+\begin{equation*}
+f(\theta) = e^{-i\theta} \left ( \cos \theta + i\sin \theta \right )
+\end{equation*}
+
+\bigskip
+\noindent
 for all real $\theta$. Then 
 
 
@@ -284,9 +291,48 @@ and we wind up with Euler's formula:
 \begin{equation*}
 e^{i\theta }=\cos \theta +i\sin \theta
 \end{equation*}
-\bigskip
 
-\newpage
+\subsection{Another Approach To Euler's Formula Without Maclaurin Series}
+Some people prefer this approach as it seems to start without fewer assumptions. To that 
+end
+
+
+\begin{equation*}
+\begin{array}{lllll}
+ z
+ &=& \cos{\theta}+i\sin{\theta}                                                                                  &\qquad \mathrel{\#} \text{definition of complex number (Figure \ref{fig:complex_plane})} \\
+ [12pt]
+ &\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}                              &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
+ [12pt]
+&\Rightarrow& \dfrac{dz}{d\theta} = iz                                                                      &\qquad \mathrel{\#} i \cdot z  = i \cdot \left [ \cos{\theta}+i\sin{\theta}  \right ] =  -\sin{\theta} + i\cos{\theta} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that $\dfrac{dz}{d\theta} = iz$, which implies that  $\dfrac{dz}{z} = i \, d\theta$.  This means that
+
+
+\begin{equation*}
+\begin{array}{lllll}
+\dfrac{dz}{z} 
+&=& {\displaystyle  i \, d\theta}                                                                   &\qquad \mathrel{\#} \text{result from above} \\
+[12pt]
+&\Rightarrow& {\displaystyle \int \frac{dz}{z} =  \int i \, d\theta}                  &\qquad \mathrel{\#} \text{integrate both sides} \\
+[12pt]
+&\Rightarrow&  {\displaystyle \ln{|z|} = i \theta + C}                                    &\qquad \mathrel{\#} \text{${\displaystyle \int \frac{dz}{z} =  \ln{|z|}}$ and ${\displaystyle \int i \: d\theta = e^{i\theta +C}}$} \\
+[12pt]
+ &\Rightarrow&  {\displaystyle z = e^{i\theta +C}}                                       &\qquad \mathrel{\#} \text{exponentiate both sides: $e^{\ln |z|} = z$ and $e^{i \theta +C} = e^{i \theta +C}$} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Now, we know $z(0) = \cos 0 + i \sin 0 = 1 + i \cdot 0 =1$. We also know that $z(0) = e^{0i +C} = e^{C} = 1$. Since $e^{C} = 1$ we know that $C = 0$.
+Putting all of this together we see that  $z=e^{i\theta}=\cos{\theta}+i\sin{\theta}$. That is, Euler's formula.
+
+
+
 \section{Euler's Identity}
 Something interesting happens when we set $\theta = \pi$ into Euler's formula (Equation \ref{eqn:eulers_formula}). We get 
 Euler's identity \cite{wiki:eulers_identity}:
