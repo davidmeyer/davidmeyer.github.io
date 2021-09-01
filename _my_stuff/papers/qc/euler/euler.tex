@@ -11,8 +11,10 @@
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
-\usepackage{tikz}
+
+
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{margin=0.75in}
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
@@ -26,6 +28,7 @@
 \usepackage{subcaption}
 \usepackage{authblk}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
@@ -39,22 +42,30 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
-\usetikzlibrary{angles, quotes}
 \usepackage{setspace}
-
-
 %
-% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%	TikZ et al
 %
-
-\makeatletter
-\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
-  \array{*\c@MaxMatrixCols #1}}
-\makeatother
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,calc,intersections,decorations}    
+\usepackage{tkz-euclide}
+\usepackage{pgfplots}	
+\usepackage{relsize}	
+\usepackage{pgfplots}
+%						
+ %
+ %
+\newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
 
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
 
 \title{A Few Notes on Euler's Formula and Euler's Identity}
 \author{David Meyer \\ dmm@1-4-5.net}
@@ -239,12 +250,13 @@ e^{ix} = r \left ( \cos \theta + i \sin \theta \right )
 \noindent
 This is shown in Figure \ref{fig:complex_plane}. In this case $\theta$ is the principal angle from the positive real axis (with say, $0 \leq \theta \leq 2 \pi$ )
 and $r$  is its radius ($r > 0$). One of the features of this proof is that it makes no assumption about the values of $r$ and $\theta$, except for the fact 
-that they are functions of $x$  (we can think of $r$ as shorthand for $r(x)$; likewise $\theta$ is shorthand for $\theta(x)$). These values will be 
-determined in the course of the proof. 
+that they are functions of $x$  (we can think of $r$ as shorthand for $r(x)$; likewise $\theta$ is shorthand for $\theta(x)$). One of the interesting problems
+that has to be solves in this proof is what the relationship is between $r, x, \text{ and } \theta$. These relationships (and the values of $r$ and
+$\theta$) will be determined in the course of the proof. 
 
 \bigskip
 \noindent
-What we do know, however, is that when $x = 0$ the left-hand side of Equation \ref{eqn:polar} equals $1$, which implies that $r$ and $\theta$, being functions
+So to start, what we do know? Well, we know that when $x = 0$ the left-hand side of Equation \ref{eqn:polar} equals $1$, which implies that $r$ and $\theta$, being functions
 of $x$,  satisfy the initial  conditions that $r(0) = 1$ and  $\theta(0) = 0$ (since $1 
 = 1 \cdot \left  [ \cos \theta(0) + i \sin \theta(0) \right ] 
 = 1 \cdot \left [ \cos 0 + i \sin 0 \right ]
@@ -261,18 +273,27 @@ Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to 
 \begin{equation*}
 \begin{array}{lllll}
 \dfrac{d}{dx} e^{ix} 
-&=& \dfrac{d}{dx} \left [  r \left ( \cos \theta + i \sin \theta \right ) \right ]    &\qquad  \mathrel{\#} \text{differentiate both sides}  \\
-[12pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{d}{dx} \left [  r \left ( \cos \theta + i \sin \theta \right ) \right ]    &\qquad  \mathrel{\#} \text{apply the chain rule to the LHS}  \\
-[12pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \, ( - \sin \theta + i \cos \theta) \dfrac{d\theta}{dx}   &\qquad  \mathrel{\#} \text{apply the product rule to the RHS}  \\
+&=& \dfrac{d}{dx} \bigg [  r \left ( \cos \theta + i \sin \theta \right ) \bigg ]                                                                                                       &\mathrel{\#} \text{differentiate both sides}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{d}{dx} \bigg [  r \left ( \cos \theta + i \sin \theta \right ) \bigg ]                                                                     &\mathrel{\#} \text{apply the chain rule to the LHS}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \dfrac{d}{dx} \bigg [ \cos \theta + i \sin \theta \bigg ]                     &\mathrel{\#} \text{apply the product rule to the RHS}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +\dfrac{d}{dx} i \sin \theta \bigg ]  &\mathrel{\#} \text{derivative is a linear operator}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [(- \sin \theta) \dfrac{d \theta}{dx} + (i \cos \theta) \dfrac{d \theta}{dx} \bigg ] 
+                                                                                              &\mathrel{\#} \dfrac{d}{dx} \cos u = - \sin u \dfrac{du}{dx}, \,  \dfrac{d}{dx} \sin u = \cos u \dfrac{du}{dx}\\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r (- \sin \theta + i \cos \theta )\dfrac{d\theta}{dx}                             &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = ( \cos \theta + i \sin \theta )  \dfrac{dr}{dx} + r (- \sin \theta + i \cos \theta )\dfrac{d\theta}{dx}                             &\mathrel{\#} \text{put the RHS into a more convenient form}  \\
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Note that we are looking for an expression that is unique in terms of $r$ and $\theta$, so we would like to get rid  $e^{ix}$. One way to do this is to substitute $r (\cos \theta + i \sin \theta)$ for 
-$e^{ix}$ (Equation \ref{eqn:polar}) on the left hand side, which gives us
+Note that we are looking for an expression that is unique in terms of $r$ and $\theta$ so we would like to get rid the $e^{ix}$ term. One way to do this is to substitute 
+$r (\cos \theta + i \sin \theta)$ for $e^{ix}$ (Equation \ref{eqn:polar}) on the left hand side of the last equation above, which gives us
 
 \begin{equation*}
 i r (\cos \theta + i \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d \theta}{dx}
@@ -288,7 +309,7 @@ r (i \cos \theta - \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx} +
 
 \bigskip
 \noindent
-Multiplying through on both sides side gives
+and multiplying through on both sides side gives
 
 
 \begin{equation}
@@ -315,7 +336,7 @@ and
 
 \bigskip
 \noindent
-Now we have is a system of two equations in two variables, where  $\dfrac{dr}{dx}$ and $\dfrac{d \theta}{dx}$ are the variables. 
+Now we have is a system of two equations in two unknowns: $\dfrac{dr}{dx}$ and $\dfrac{d \theta}{dx}$. 
 To solve this system, first assign $\alpha = \dfrac{dr}{dx}$ and $\beta = \dfrac{d \theta}{dx}$ so that
 
 \bigskip
@@ -376,7 +397,7 @@ r  = r \beta
 \bigskip
 \noindent
 Now, since $r > 0$ for all $x$ Equation \ref{eqn:eqn6} tells us that $\beta$, which we set equal to $\dfrac{d \theta}{dx}$,  must equal 1. 
-If substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} and \ref{eqn:eqn2} we see that
+If we substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} and \ref{eqn:eqn2} we see that
 
 \bigskip
 \begin{equation*}
@@ -390,14 +411,23 @@ If substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} and
 {\setstretch{1.95}
 \noindent
 which implies that $(\sin \theta) \alpha = (\cos \theta) \alpha$, which further implies that $\alpha = 0$. But remember that $\alpha = \dfrac{dr}{dx}$
-so now we know that $\dfrac{dr}{dx} = 0$. $\dfrac{dr}{dx} = 0$ implies that $r(x) = a$ for some constant $a$. Similarly, since $\dfrac{d\theta}{dx} = 1$
-we know that $\theta(x) = x + C$ for some constant $C$ (get this by integrating both sides of $d\theta = dx$). \par}
+so now we know that $\dfrac{dr}{dx} = 0$ and $\dfrac{dr}{dx} = 0 \Rightarrow r(x) = a$ for some constant $a$. Similarly, since $\dfrac{d\theta}{dx} = 1$
+we know that $d \theta = dx$ and integrating both sides we see that \par}
+
+\begin{equation}
+\int d \theta  = \int dx \Rightarrow \theta(x) = x + C
+\label{eqn:int}
+\end{equation}
+
+\bigskip
+\noindent
+for some constant $C$.
 
 \bigskip
 \noindent
 Going back to the very beginning where we saw that $r(0) = 1$ and since we know that $r(x) = a$ for all $x$, $r$ must
-equal 1 for all $x$. Similarly because $\theta(0) = 0$ we see that $\theta(0) = 0 + C$, so it must be that $C$ equals zero. 
-Said another way,  $\theta = x$. 
+equal 1 for all $x$. Similarly because $\theta(0) = 0$ we see that $\theta(0) = 0 + C$ (Equation \ref{eqn:int}), so it must 
+be that $C$ equals zero. Said another way,  now we know that $\theta(x) = x$ or more concisely, $\theta = x$.
 
 \bigskip
 \noindent
@@ -416,7 +446,7 @@ e^{ix}
 \end{equation*}
 
 
-
+\bigskip
 \subsection{Another Approach To Euler's Formula Without Maclaurin Series}
 \label{subsec:without_maclaurin1}
 A different way to derive Euler's formula without using Maclaurin series starts by defining 
@@ -482,7 +512,7 @@ $e^{-i\theta}$ yields
 and we wind up with Euler's formula: $e^{i\theta }=\cos \theta +i\sin \theta$
 
 
-
+\bigskip
 \subsection{One More Approach To Euler's Formula}
 \label{subsec:without_maclaurin2}
 Finally, while the approach in this section is similar to the approach proposed in Section \ref{subsec:without_maclaurin1}, some people prefer this approach 
