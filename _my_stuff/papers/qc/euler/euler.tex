@@ -84,7 +84,7 @@ Well, consider Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.45  \textwidth}{!} {                                                                                                                                             % resize figure if you want
+  \resizebox{0.40 \textwidth}{!} {                                                                                                                                             % resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
        \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);                                      % draw axes, save real part (x) to calculate angle below
        \draw[thick, ->] (0,-0.35) -- (0,5.5) 
@@ -131,7 +131,7 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {                                                                                                                               % resize figure if you want
+  \resizebox{0.43 \textwidth}{!} {                                                                                                                               % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0) coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);  % make and label the axes
       \draw[->] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
@@ -167,7 +167,7 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 
 \bigskip
 \noindent
-There are several ways to derive Euler's formula. One method falls out of the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see why, notice that the 
+There are several ways to derive Euler's formula. One method uses the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see how, notice that the 
 Maclaurin series for $\cos \theta$ is 
 
 \bigskip
@@ -279,20 +279,15 @@ Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to 
 [14pt]
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \dfrac{d}{dx} \bigg [ \cos \theta + i \sin \theta \bigg ]                      &\mathrel{\#} \text{apply the product rule to the RHS}  \\
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +\dfrac{d}{dx} (i \sin \theta) \bigg ]  &\mathrel{\#} \text{derivative is a linear operator}  \\
-[14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \Bigg [\dfrac{d}{dx} \cos \theta + \bigg [\dfrac{di}{dx} \sin \theta + i \dfrac{d}{dx} \sin \theta \bigg ]  \Bigg ]  
-                                                                                               &\mathrel{\#} \text{apply the product rule to $\dfrac{d}{dx} (i \sin \theta)$}  \\
-[14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta + i \dfrac{d}{dx} \sin \theta \bigg ]  
-                                                                                               &\mathrel{\#} \dfrac{di}{dx} = 0  \Rightarrow \dfrac{di}{dx} \sin \theta = 0 \\                                                  
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +i \dfrac{d}{dx} \sin \theta \bigg ]  
+                                                                                               &\mathrel{\#} \text{differentiation is a linear operator \cite{wiki:linearity_of_differentiation}} \\
 [14pt]
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [(- \sin \theta) \dfrac{d \theta}{dx} + (i \cos \theta) \dfrac{d \theta}{dx} \bigg ] 
                                                                                                &\mathrel{\#} \dfrac{d}{dx} \cos u = - \sin u \dfrac{du}{dx}, \,  \dfrac{d}{dx} \sin u = \cos u \dfrac{du}{dx}\\
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [ - \sin \theta + i \cos \theta \bigg ] \dfrac{d\theta}{dx}            &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r (- \sin \theta + i \cos \theta ) \dfrac{d\theta}{dx}                               &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\
 [14pt]
-&\Rightarrow & i  e^{ix}  = ( \cos \theta + i \sin \theta )  \dfrac{dr}{dx} + r (- \sin \theta + i \cos \theta )\dfrac{d\theta}{dx}                               &\mathrel{\#} \text{put the RHS into a more convenient form}  \\
+&\Rightarrow & i  e^{ix}  = ( \cos \theta + i \sin \theta )  \dfrac{dr}{dx} + r (- \sin \theta + i \cos \theta ) \dfrac{d\theta}{dx}                               &\mathrel{\#} \text{put the RHS into a more convenient form}  \\
 \end{array}
 \end{equation*}
 
@@ -402,10 +397,10 @@ r  = r \beta
 
 \bigskip
 \noindent
-Now, since $r > 0$ for all $x$ Equation \ref{eqn:eqn6} tells us that $\beta$, which we set equal to $\dfrac{d \theta}{dx}$,  must equal 1. 
+Since $r > 0$ for all $x$ Equation \ref{eqn:eqn6} tells us that $\beta$, which we set equal to $\dfrac{d \theta}{dx}$,  must equal 1. 
 If we substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} and \ref{eqn:eqn2} we see that
 
-\bigskip
+
 \begin{equation*}
 \begin{array}{lllll}
 & 0 = (\sin \theta) \alpha \\
@@ -414,12 +409,20 @@ If we substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} 
 \end{equation*}
 
 \bigskip
-{\setstretch{1.95}
+{\setstretch{1.5}
 \noindent
-which implies that $(\sin \theta) \alpha = (\cos \theta) \alpha$, which further implies that $\alpha = 0$. But remember that $\alpha = \dfrac{dr}{dx}$
-so now we know that $\dfrac{dr}{dx} = 0$ and $\dfrac{dr}{dx} = 0 \Rightarrow r(x) = a$ for some constant $a$. Similarly, since $\dfrac{d\theta}{dx} = 1$
-we know that $d \theta = dx$ and integrating both sides we see that \par}
+which implies that $\alpha \sin \theta  =  \alpha \cos \theta$ which in turn implies that $\alpha = 0$. But why does $\alpha = 0$? One way
+to think about this is to consider that  $\alpha \sin \theta  =  \alpha \cos \theta \Rightarrow  \dfrac{\sin \theta}{\cos \theta} = \tan \theta = 1$. 
+This occurs when $\theta = \dfrac{\pi}{4} + n \pi$ for $n \in \mathbb{Z}$. Since neither $\sin \theta$ nor $\cos \theta$ 
+equals zero for these values of $\theta$ we can conclude that $\alpha$ must equal zero. \par}
 
+
+\bigskip
+\noindent
+Now, recall that $\alpha = \dfrac{dr}{dx}$ so now we know that $\dfrac{dr}{dx} = 0$ and $\dfrac{dr}{dx} = 0 \Rightarrow r(x) = a$ for some constant $a$. 
+Similarly, since $\dfrac{d\theta}{dx} = 1$ we know that $d \theta = dx$ and integrating both sides we see that 
+
+\bigskip
 \begin{equation}
 \int d \theta  = \int dx \Rightarrow \theta(x) = x + C
 \label{eqn:int}
