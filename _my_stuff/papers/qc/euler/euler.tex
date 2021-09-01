@@ -279,12 +279,18 @@ Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to 
 [14pt]
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \dfrac{d}{dx} \bigg [ \cos \theta + i \sin \theta \bigg ]                     &\mathrel{\#} \text{apply the product rule to the RHS}  \\
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +\dfrac{d}{dx} i \sin \theta \bigg ]  &\mathrel{\#} \text{derivative is a linear operator}  \\
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +\dfrac{d}{dx} (i \sin \theta) \bigg ]  &\mathrel{\#} \text{derivative is a linear operator}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \Bigg [\dfrac{d}{dx} \cos \theta + \bigg [\dfrac{di}{dx} \sin \theta + i \dfrac{d}{dx} \sin \theta \bigg ]  \Bigg ]  
+                                                                                               &\mathrel{\#} \text{apply product rule to $\dfrac{d}{dx} (i \sin \theta)$}  \\
+[14pt]
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta + i \dfrac{d}{dx} \sin \theta \bigg ]  
+                                                                                               &\mathrel{\#} \dfrac{di}{dx} = 0  \Rightarrow \dfrac{di}{dx} \sin \theta = 0 \\                                                  
 [14pt]
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [(- \sin \theta) \dfrac{d \theta}{dx} + (i \cos \theta) \dfrac{d \theta}{dx} \bigg ] 
                                                                                               &\mathrel{\#} \dfrac{d}{dx} \cos u = - \sin u \dfrac{du}{dx}, \,  \dfrac{d}{dx} \sin u = \cos u \dfrac{du}{dx}\\
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r (- \sin \theta + i \cos \theta )\dfrac{d\theta}{dx}                             &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\
+&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [ - \sin \theta + i \cos \theta \bigg ] \dfrac{d\theta}{dx}                             &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\
 [14pt]
 &\Rightarrow & i  e^{ix}  = ( \cos \theta + i \sin \theta )  \dfrac{dr}{dx} + r (- \sin \theta + i \cos \theta )\dfrac{d\theta}{dx}                             &\mathrel{\#} \text{put the RHS into a more convenient form}  \\
 \end{array}
