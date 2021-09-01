@@ -86,11 +86,11 @@ Well, consider Figure \ref{fig:complex_plane}:
 \centering
   \resizebox{0.45  \textwidth}{!} {                                                                                                                                             % resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
-       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                              % draw axes, save real part (x) to calculate angle below
+       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);                                      % draw axes, save real part (x) to calculate angle below
        \draw[thick, ->] (0,-0.35) -- (0,5.5) 
-            node[left] {$\mathbb{I}$}
+            node[xshift=-0.2cm,left] {$\mathbb{I}$}
             node[draw, very thin,below right=5mm] {$z = r [\cos \theta + i \sin \theta] = r \mathrm{e}^{i\theta} $};
-       \coordinate[label=below left:$ O $] (O);                                                                                                                           % save origin (O) to calculate \theta below                                                
+       \coordinate[label=below left:$ O $] (O);                                                                                                                            % save origin (O) to calculate \theta below                                                
        \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor and a dot (circle(0.05))
        \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};                                                                                    % draw dashed lines to a and b
        \draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};                                                                     % use [draw=none] to get a label at midway
@@ -131,25 +131,25 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {                                                                                                                   % resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {                                                                                                                               % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
-      \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0) coordinate[label=below:$\mathbb{R}$](x);               % make and label the axes
+      \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0) coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);  % make and label the axes
       \draw[->] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
-      \draw (0,0) coordinate(o) circle [radius=1cm];                                                                                       % draw unit circle
-      \coordinate (p) at (60:1);                                                                                                                        % 60 degrees with r = 1
-      \fill (p) coordinate[label={above right: ${e^{i\theta} = \cos \theta + i \sin \theta}$}] (p) circle(0.02);       % Euler's formula
+      \draw (0,0) coordinate(o) circle [radius=1cm];                                                                                                  % draw unit circle
+      \coordinate (p) at (60:1);                                                                                                                                   % 60 degrees with r = 1
+      \fill (p) coordinate[label={above right: ${e^{i\theta} = \cos \theta + i \sin \theta}$}] (p) circle(0.02);                  % Euler's formula
       \coordinate (q) at (p|-o);
 %
 % draw the various 1s around the unit circle
 %
      \coordinate (a) at (0,1);
-     \fill (a) coordinate [label={above left: ${\scalebox {0.80} {(0,i)}} $}] (a) circle(0.02);                               % draw coordinates (making them a bit smaller)
+     \fill (a) coordinate [label={above left: ${\scalebox {0.80} {(0,i)}} $}] (a) circle(0.02);                                          % draw coordinates (making them a bit smaller)
      \coordinate (b) at (-1,0);
-     \fill (b) coordinate [label={below left:${\scalebox {0.80} {(-1,0)}}$}] (b) circle(0.02);                               % draw coordinates (making them a bit smaller)
+     \fill (b) coordinate [label={below left:${\scalebox {0.80} {(-1,0)}}$}] (b) circle(0.02);                                          % draw coordinates (making them a bit smaller)
      \coordinate (c) at (0,-1);
-     \fill (c) coordinate [label={below left:${\scalebox {0.80} {(0,-i)}}$}] (c) circle(0.02);                                 % draw coordinates (making them a bit smaller)
+     \fill (c) coordinate [label={below left:${\scalebox {0.80} {(0,-i)}}$}] (c) circle(0.02);                                            % draw coordinates (making them a bit smaller)
      \coordinate (d) at (1,0);
-     \fill (d) coordinate [label={below right:${\scalebox {0.80} {(1,0)}}$}] (d) circle(0.02);                               % draw coordinates (making them a bit smaller)
+     \fill (d) coordinate [label={below right:${\scalebox {0.80} {(1,0)}}$}] (d) circle(0.02);                                         % draw coordinates (making them a bit smaller)
 %
 % do the rest of the labeling and draw the angle
 %
