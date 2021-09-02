@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  1 SEP 2021 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  2 SEP 2021 06:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1474,12 +1474,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (4.41649pt too wide) detected at line 220
+Overfull \hbox (4.41649pt too wide) detected at line 221
 []
  []
 
 [2]
-Overfull \hbox (5.91689pt too wide) detected at line 292
+Overfull \hbox (5.91689pt too wide) detected at line 293
 []
  []
 
@@ -1490,7 +1490,7 @@ Package rerunfilecheck Info: File `euler.out' has not changed.
 Here is how much of TeX's memory you used:
  43174 strings out of 478994
  1012325 string characters out of 5858184
- 1510269 words of memory out of 5000000
+ 1510268 words of memory out of 5000000
  59747 multiletter control sequences out of 15000+600000
  410430 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1508,7 +1508,7 @@ exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on euler.pdf (7 pages, 164687 bytes).
+Output written on euler.pdf (7 pages, 164740 bytes).
 PDF statistics:
  237 PDF objects out of 1000 (max. 8388607)
  176 compressed objects within 2 object streams

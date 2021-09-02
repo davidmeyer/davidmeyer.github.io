@@ -143,11 +143,11 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 % draw the various 1s around the unit circle
 %
      \coordinate (a) at (0,1);
-     \fill (a) coordinate [label={above left: ${\scalebox {0.80} {(0,i)}} $}] (a) circle(0.02);                                          % draw coordinates (making them a bit smaller)
+     \fill (a) coordinate [label={above left: ${\scalebox {0.80} {(0,1)}} $}] (a) circle(0.02);                                          % draw coordinates (making them a bit smaller)
      \coordinate (b) at (-1,0);
      \fill (b) coordinate [label={below left:${\scalebox {0.80} {(-1,0)}}$}] (b) circle(0.02);                                          % draw coordinates (making them a bit smaller)
      \coordinate (c) at (0,-1);
-     \fill (c) coordinate [label={below left:${\scalebox {0.80} {(0,-i)}}$}] (c) circle(0.02);                                            % draw coordinates (making them a bit smaller)
+     \fill (c) coordinate [label={below left:${\scalebox {0.80} {(0,-1)}}$}] (c) circle(0.02);                                            % draw coordinates (making them a bit smaller)
      \coordinate (d) at (1,0);
      \fill (d) coordinate [label={below right:${\scalebox {0.80} {(1,0)}}$}] (d) circle(0.02);                                         % draw coordinates (making them a bit smaller)
 %
@@ -167,7 +167,7 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 
 \bigskip
 \noindent
-There are several ways to derive Euler's formula. One method uses the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see how, notice that the 
+There are several ways to derive Euler's formula. One method uses the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see how this works, notice that the 
 Maclaurin series for $\cos \theta$ is 
 
 \bigskip
@@ -196,6 +196,7 @@ Finally, the Maclaurin series for $\mathrm{e}^x$ is
 \label{eqn:e_to_the_x}
 \end{equation}
 
+\medskip
 \bigskip
 \noindent
 Now, if we set $x = i\theta$ in Equation \ref{eqn:e_to_the_x} we see that
@@ -236,9 +237,9 @@ that is, Euler's formula.
 
 \subsection{Deriving Euler's Formula Using Polar Coordinates}
 \label{subsec:without_maclaurin0}
-There is a clever way to derive Euler's formula using polar coordinates. This approach seems to require the fewest assumptions of the non-Maclaurin series
-derivations described in the this and the following sections. To see how this works,  first notice that all non-zero complex numbers can be expressed in polar 
-coordinates in a unique way. In particular, any number of the form $e^{ix}$ (with $x \in \mathbb{R}$) which is non-zero can be expressed as
+There is also a clever way to derive Euler's formula using polar coordinates. This approach seems to require the fewest assumptions of the non-Maclaurin 
+series derivations described in the this and the following sections. To see how this works,  first notice that all non-zero complex numbers can be expressed 
+in polar coordinates in a unique way. In particular, any number of the form $e^{ix}$ (with $x \in \mathbb{R}$) which is non-zero can be expressed as
 
 \bigskip
 \begin{equation}
@@ -280,7 +281,7 @@ Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to 
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \dfrac{d}{dx} \bigg [ \cos \theta + i \sin \theta \bigg ]                      &\mathrel{\#} \text{apply the product rule to the RHS}  \\
 [14pt]
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +i \dfrac{d}{dx} \sin \theta \bigg ]  
-                                                                                               &\mathrel{\#} \text{differentiation is a linear operation \cite{wiki:linearity_of_differentiation}} \\
+                                                                                               &\mathrel{\#} \text{derivative is a linear operator \cite{wiki:linearity_of_differentiation}} \\
 [14pt]
 &\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [(- \sin \theta) \dfrac{d \theta}{dx} + (i \cos \theta) \dfrac{d \theta}{dx} \bigg ] 
                                                                                                &\mathrel{\#} \dfrac{d}{dx} \cos u = - \sin u \dfrac{du}{dx}, \,  \dfrac{d}{dx} \sin u = \cos u \dfrac{du}{dx}\\
