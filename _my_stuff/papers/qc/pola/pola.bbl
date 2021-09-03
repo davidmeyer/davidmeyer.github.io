@@ -1,4 +1,12 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{harmonic_oscillartors}
+{Ethan Neil}.
+\newblock {Harmonic oscillators and complex numbers}.
+\newblock
+  \url{https://physicscourses.colorado.edu/phys2210/phys2210_fa20/lecture/lec3x-harmonic-oscillators-complex},
+  2020.
+\newblock [Online; accessed 3-September-2021].
 
 \bibitem{youtube:kenneth_young_pola}
 {Kenneth Young}.
@@ -22,6 +30,14 @@
   2021.
 \newblock [Online; accessed 27-August-2021].
 
+\bibitem{wiki:harmonic_oscillator}
+{Wikipedia contributors}.
+\newblock {Harmonic Oscillator --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Harmonic_oscillator&oldid=1038847541},
+  2021.
+\newblock [Online; accessed 3-September-2021].
+
 \bibitem{wiki:kinetic_energy}
 {Wikipedia contributors}.
 \newblock {Kinetic Energy --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -29,6 +45,15 @@
   \url{https://en.wikipedia.org/w/index.php?title=Kinetic_energy&oldid=1037284151},
   2021.
 \newblock [Online; accessed 25-August-2021].
+
+\bibitem{wiki:linearity_of_differentiation}
+{Wikipedia contributors}.
+\newblock {Linearity of Differentiation --- {Wikipedia}{,} The Free
+  Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Linearity_of_differentiation&oldid=1026177205},
+  2021.
+\newblock [Online; accessed 1-September-2021].
 
 \bibitem{wiki:newtons_laws}
 {Wikipedia contributors}.

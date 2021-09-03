@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  29 AUG 2021 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 SEP 2021 11:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1466,18 +1466,24 @@ Overfull \hbox (15.04012pt too wide) detected at line 425
 []
  []
 
-[4] [5] (./pola.bbl [6]) [7] (./pola.aux)
+[4] [5]
+Overfull \hbox (9.1311pt too wide) in paragraph at lines 562--562
+[]\OT1/cmr/bx/n/14.4 Solving the Sim-ple Har-monic Os-cil-la-tor Prob-lem Us-in
+g the La-grangian 
+ []
+
+[6] [7] (./pola.bbl) [8] (./pola.aux)
 Package rerunfilecheck Info: File `pola.out' has not changed.
-(rerunfilecheck)             Checksum: 7496266B572E30EDB1116D7AA585648C;813.
+(rerunfilecheck)             Checksum: DD94494E3EBB3FC806A9C20D080AF4F8;1215.
  ) 
 Here is how much of TeX's memory you used:
- 43640 strings out of 478994
- 1021242 string characters out of 5858184
- 1508268 words of memory out of 5000000
- 60202 multiletter control sequences out of 15000+600000
+ 43753 strings out of 478994
+ 1023704 string characters out of 5858184
+ 1511268 words of memory out of 5000000
+ 60309 multiletter control sequences out of 15000+600000
  417382 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,21n,111p,721b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,21n,111p,721b,861s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1506,10 +1512,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pola.pdf (7 pages, 244598 bytes).
+Output written on pola.pdf (8 pages, 255524 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 37 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

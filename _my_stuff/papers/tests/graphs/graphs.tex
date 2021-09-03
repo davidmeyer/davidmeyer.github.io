@@ -56,6 +56,67 @@
 
 \begin{document}
 
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.45 \textwidth}{!} {                                                                                                                                                            % resize figure if you want
+   \begin{tikzpicture}[black!75,thick]
+        \draw[thick, ->] (-1,0) -- (12,0) coordinate [label={[xshift=0.30cm, below] $t$}];                                                                          % horizontal axis
+        \draw[thick, ->] (0,-1) -- (0,5) coordinate [label={[xshift=-0.30cm, left] $x(t)$}];                                                                           % xshift -- get some extra space
+        \draw[draw=none] (-1,0) -- (12,0) coordinate [label={[yshift=-0.3cm,midway,below] 
+                                      ${\text{L} = \text{KE} - \text{PE}, \; \text{KE} = \frac{1}{2} m v^2 \!\!, \text{ and PE} = \frac{1}{2} k x^2}$}];    % draw the equations below the x axis
+        \draw (9,4) node[rectangle, draw, very thin] 
+                         {$\mathlarger {\dfrac{d}{dt} \Big ( \dfrac{\partial L}{\partial \dot{x}} \Big ) - \dfrac{\partial L}{\partial x} = 0}$};             % draw the Euler-Lagrange equation to the right
+       \path (0,0) node[below left] {$O$};    
+
+%
+% draw the spring 
+%
+        \draw [
+              decoration={
+                 coil,
+                 aspect=0.3, 
+                 segment length=2mm, 
+                 amplitude=2mm, 
+                 pre length=3mm,
+                 post length=3mm},
+             decorate] (0,0.40) -- (5.75,0.40);
+        \fill (0,0.40) circle(0.05);                                                                                                                                                                 % draw a dot connecting the spring to the y axis
+
+ %
+ % draw the mass
+ %
+       \node[draw,
+	     fill=yellow!60,
+	     minimum width=1cm,
+	     minimum height=0.75cm,
+	     anchor=north,
+	     label=center:$m$] at (6,0.80) {};
+      \fill (5.5,0.40) circle(0.05);                                                                                                                                                                 % draw a dot connecting the mass to the spring
+
+       
+      \draw[->] (6.5,0.40)-- (7.5,0.40) coordinate [label={[right] ${v = \dot{x}}$}];                                                                                              % draw velocity vector (v) to the right of the mass
+      
+%
+% other annotation of axes etc
+%
+      \coordinate (k) at (2,1.25);
+      \draw[draw=none] (k) node[below] {$k$};    
+      \coordinate (c1) at (3.5,0);
+      \coordinate (c2) at (3.5,4);
+      \coordinate (c3) at (3.5,2.5);
+      \coordinate (c4) at (6,2.5);
+      \draw[dashed] (c1) -- (c2) coordinate [label={[above] EP}];   
+      \draw[->] (c3) -- (c4) coordinate [label={[right] $x$}];   
+      \fill (c1) circle(0.05);      
+      \fill (c3) circle(0.05);      
+    \end{tikzpicture}
+  }                                                                                                                                                                                                                     % end resizebox                                                                                           
+\caption{Simple Harmonic Motion Setup}
+\label{fig:shm}
+\end{figure}
+
+
 \begin{figure}[H]
 \centering
   \resizebox{0.65 \textwidth}{!} {                                                                                                                                                % resize figure if you want

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 AUG 2021 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 SEP 2021 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1574,18 +1574,15 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-[3] [4] (./graphs.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[3] [4] [5] (./graphs.aux)
 Package rerunfilecheck Info: File `graphs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44468 strings out of 478994
- 1042630 string characters out of 5858184
- 1516275 words of memory out of 5000000
- 61054 multiletter control sequences out of 15000+600000
+ 44570 strings out of 478994
+ 1044839 string characters out of 5858184
+ 1515293 words of memory out of 5000000
+ 61154 multiletter control sequences out of 15000+600000
  422686 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,17n,116p,702b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1603,10 +1600,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on graphs.pdf (4 pages, 143089 bytes).
+Output written on graphs.pdf (5 pages, 149951 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
