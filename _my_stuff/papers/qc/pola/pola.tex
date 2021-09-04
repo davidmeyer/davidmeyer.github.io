@@ -567,7 +567,7 @@ and equilibrium point EP.
 
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {                                                                                                                                                           % resize figure if you want
+  \resizebox{0.65 \textwidth}{!} {                                                                                                                                                           % resize figure if you want
    \begin{tikzpicture}[black!75,thick]
         \draw[thick, ->] (-1,0) -- (11,0) coordinate [label={[xshift=0.30cm, below] $x$}];                                                                          % horizontal axis
         \draw[thick, ->] (0,-1) -- (0,5.5) coordinate [label={[]}];                                                                                                                 % xshift -- get some extra space
@@ -628,6 +628,7 @@ and equilibrium point EP.
 In this example we will be using generalized coordinates so we use $v = \dot{x}$ and write the kinetic energy $KE = \dfrac{1}{2} m \dot{x}^2$. So we can
 write the Lagrangian as follows:
 
+\bigskip
 \begin{equation*}
 L = KE - PE = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 \end{equation*}
@@ -635,18 +636,18 @@ L = KE - PE = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 
 \bigskip
 \noindent
-The first step is to solve the Euler–Lagrange equation (Equation \ref{eqn:euler-lagrange}) for this value of $L$. Recall that 
+To find the position of the mass $m$ as a function of time (call it $x(t)$) we need to solve the Euler–Lagrange equation (Equation \ref{eqn:euler-lagrange}) for this value of $L$. Recall that 
 the  Euler–Lagrange equation is
 
 
-
+\bigskip
 \begin{equation*}
 \dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial \dot{x}} \right ) -  \dfrac{\partial L}{\partial x} = 0
 \end{equation*}
 
 \bigskip
 \noindent
-So we first want to compute $\dfrac{\partial L}{\partial x} = \dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  - \dfrac{1}{2} k x^2 \bigg ]$. 
+So first we want to compute $\dfrac{\partial L}{\partial x} = \dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  - \dfrac{1}{2} k x^2 \bigg ]$. 
 Since differentiation is a linear operation \cite{wiki:linearity_of_differentiation} and we know that 
 $\dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m \dot{x}^2  \bigg ] = 0$ we can see that 
 
@@ -683,7 +684,7 @@ Here we recognize that $\ddot{x} - \dfrac{k}{m} x = 0$ is a differential equatio
  the angular frequency. If we let $\omega = \sqrt{\dfrac{k}{m}}$ then $\omega^2 = \dfrac{k}{m}$ and so $\ddot{x} + \omega^2 x = 0$. But this 
  is a differential equation that  we recognize has the general solution \cite{harmonic_oscillartors} \par}
 
- 
+ \bigskip
  \begin{equation*}
  x(t) = A \cos (\omega t)
  \end{equation*}
