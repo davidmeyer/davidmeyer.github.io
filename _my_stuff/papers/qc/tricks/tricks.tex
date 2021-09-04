@@ -41,6 +41,8 @@
 \usepackage{siunitx}
 \usetikzlibrary{angles, quotes}
 \usepackage{relsize}
+\usepackage{setspace}
+
 
 
 
@@ -214,8 +216,9 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 
 \bigskip
 \noindent
-There is an interesting relationship between the triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle}: if you start with the number 1 in row 2 of Pascal's 
-Triangle the corresponding diagonal contains the triangular numbers. This is shown in green in Figure \ref{fig:pascals_triangle}.
+As an aside, there is an interesting relationship between the triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle}: if you start 
+with the number 1 in row 2 of Pascal's  Triangle the corresponding diagonal contains the triangular numbers. This is shown in green in 
+Figure \ref{fig:pascals_triangle}.
 
 \bigskip
 \begin{figure}[H]
@@ -229,7 +232,7 @@ Triangle the corresponding diagonal contains the triangular numbers. This is sho
 \label{sec:reciprocals}
 All of this is good, but back to the question: what is the sum of the reciprocals of the triangular numbers? Well, first, the sum looks like
 
-\bigskip
+
 \begin{equation*}
 \begin{array}{lllll}
 {\displaystyle \sum \limits_{n=1}^{N} \frac{1}{T_n}}
@@ -244,20 +247,19 @@ All of this is good, but back to the question: what is the sum of the reciprocal
 \end{equation*}
 
 \bigskip
+{\setstretch{1.90} 
 \noindent
 We saw in Section \ref{sec:telescoping_series} that 
-${\displaystyle {\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right)} = 1}$ and we know from the above that the infinite sum of the reciprocals of the triangular 
-numbers is twice this  limit. So we know that 
+${\displaystyle  \lim_{N \to \infty} \sum\limits_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right )  = \lim_{N \to \infty} \left  [ 1  - \frac{1}{N+1} \right ] = 1}$ and we know from the above that the infinite sum of the reciprocals of the triangular 
+numbers is twice this  limit. So we know that \par}
 
-\bigskip
+
 \begin{equation*}
-\sum \limits_{n=1}^{\infty} \frac{1}{T_n} = {\displaystyle 2 \left [\lim_{N \to \infty} \sum_{n=1}^N \left( \frac{1}{n} - \frac{1}{n+1} \right) \right ] = 2 \cdot 1 =  2}
+\sum \limits_{n=1}^{\infty} \frac{1}{T_n} = 2 \Bigg [  \lim_{N \to \infty} \left  [ 1  - \frac{1}{N+1} \right ] \Bigg ]= 2 \cdot 1 =  2
 \end{equation*}
 
-
- 
- \bigskip
- \section{Conclusions}
+\smallskip
+\section{Conclusions}
 Equation \ref{eqn:trick_1} turns out to be very useful, especially when evaluating infinite telescoping series. We also saw in Section \ref{sec:reciprocals}
 that interestingly, the infinite sum of the reciprocals of the triangular numbers equals two, that is
 
