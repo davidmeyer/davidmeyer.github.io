@@ -495,8 +495,15 @@ L = T  - V
 
 {\setstretch{1.35} 
 \noindent
-$L$ here is called the \emph{Lagrangian}.  The Lagrangian is essentially the action per unit time. An application of the Lagrangian involves a mass on the end of a spring.
-In this case we have $T = \dfrac{m}{2} \dot{x}^2$  (where $\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. So now we have \par}
+$L$ is called the \emph{Lagrangian}.  The Lagrangian is essentially the action per unit time and as we saw above,  in classical mechanics this particular 
+Lagrangian ($L = T - V$) is precisely the Lagrangian that generates Newton’s second law ($F = ma$). Next we'll briefly look at an application of the Lagrangian
+which involves a simple harmonic oscillator, specifically a mass on the end of a spring. We will study this problem in a bit more detail in 
+Section \ref{sec:simple_harmonic_oscillator}. \par}
+
+\bigskip
+\noindent
+For our discussion here we have $T = \dfrac{m}{2} \dot{x}^2$  (where $\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. 
+So the Lagrangian for this case is
 
 
 \begin{equation}
@@ -506,7 +513,7 @@ L = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 
 \bigskip
 \noindent
-Now we can state we can write \emph{Euler-Lagrange} equation:
+We need one more piece of the puzzle before we can solve for $x$ as a function of time, the  \emph{Euler-Lagrange} equation:
 
 \bigskip
 \begin{equation}
@@ -518,7 +525,7 @@ Now we can state we can write \emph{Euler-Lagrange} equation:
 {\setstretch{1.35} 
 \noindent
 For the mass on the end of a spring problem we looked at above we can see 
-that from Equation \ref{eqn:moeos} that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$ and $\frac{\partial L}{\partial x} = -kx$. Combining these results in 
+that from Equation \ref{eqn:moeos} that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$, $\frac{d}{d t}  m\dot{x} = m\ddot{x}$ and $\frac{\partial L}{\partial x} = -kx$. Combining these results in 
 Equation \ref{eqn:euler-lagrange} gives us \par}
 
 
@@ -528,7 +535,7 @@ m \ddot{x} = -kx
 
 \bigskip
 \noindent
-which is exactly the result obtained by using $F = ma$. An equation such as Equation \ref{eqn:euler-lagrange} which is derived from the Euler-Lagrange equation, is called an 
+which is exactly the result obtained by using $F = ma$. An equation such as Equation \ref{eqn:euler-lagrange} which is derived from the Euler-Lagrange equation is called an 
 equation of motion\footnote{AFAICT the term “equation of motion” is somewhat ambiguous. It is understood to refer to the second-order differential equation satisfied by $x$ 
 and not the actual equation for $x$ as a function of $t$, namely $x(t) = A \cos(\omega t + \phi)$ in this problem, which is obtained by integrating the equation of motion twice.}.
 
@@ -560,6 +567,7 @@ Equations \ref{eqn:lagrangian} and \ref{eqn:euler-lagrange} (albeit written in d
 tell us that $F = ma$.
 
 \section{A Bit More Detail on the Simple Harmonic Oscillator Problem}
+\label{sec:simple_harmonic_oscillator}
 In Section \ref{sec:euler_lagrange} we briefly considered the dynamics of a mass on the end of a spring and 
 introduced the Euler-Lagrange equation (Equation \ref{eqn:euler-lagrange}) as a method to solve the system. 
 In this section we'll consider this problem in a bit more detail and use the Euler–Lagrange equation to solve 
