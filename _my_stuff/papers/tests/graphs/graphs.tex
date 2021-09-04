@@ -56,6 +56,39 @@
 
 \begin{document}
 
+\begin{figure}[H]
+\centering
+  \resizebox{0.45 \textwidth}{!} {                                                                                                                                                            % resize figure if you want
+
+\begin{tikzpicture}[font=\footnotesize]
+
+% Support
+\fill (-1.5,0) rectangle(1.5,0.1);
+
+% Bob's trajectory
+\draw[dashed] (-60:4) arc(-60:-120:4);
+
+% Rod + Bob
+\draw (0,0) -- (-60:4) node[fill,circle](m){};
+
+% Weight Force
+\draw[-latex] (m) -- node[right]{$\vec{P}$}++(0,-1) ;
+
+% Tension Force
+\draw [-latex] (m) -- node[right]{$\vec{T}$}(-60:3);
+
+
+% Light gray pendulum
+\draw[black!10] (0,0) -- (-90:4) node[fill,circle]{};
+\draw[black!10] (0,0) -- (-120:4) node[fill,circle]{};
+
+\end{tikzpicture}
+}
+\caption{Pendulum}
+\label{fig:pendulum}
+\end{figure}
+
+
 
 \begin{figure}[H]
 \centering

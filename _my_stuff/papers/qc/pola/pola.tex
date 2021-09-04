@@ -483,7 +483,8 @@ and since ${\displaystyle -  \dfrac{dV}{dx} = F}$ and ${\displaystyle  \dfrac{d^
 F = ma
 \end{equation*}
 
-\section{The Euler-Lagrange Equations}
+\section{The Euler-Lagrange Equation}
+\label{sec:euler_lagrange}
 Consider the following seemingly counter-intuitive combination of the kinetic and potential energies ($T$ and $V$ respectively):
 
 \begin{equation}
@@ -491,14 +492,13 @@ L = T  - V
 \label{eqn:lagrangian}
 \end{equation}
 
-\bigskip
+
 {\setstretch{1.35} 
 \noindent
 $L$ here is called the \emph{Lagrangian}.  The Lagrangian is essentially the action per unit time. An application of the Lagrangian involves a mass on the end of a spring.
 In this case we have $T = \dfrac{m}{2} \dot{x}^2$  (where $\dot{x}$ is shorthand for $\frac{dx}{dt}$)  and $V = \frac{k}{2}x^2$. So now we have \par}
 
 
-\bigskip
 \begin{equation}
 L = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 \label{eqn:moeos}
@@ -506,7 +506,7 @@ L = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 
 \bigskip
 \noindent
-As we saw above (in slightly different notation) we can write 
+Now we can state we can write \emph{Euler-Lagrange} equation:
 
 \bigskip
 \begin{equation}
@@ -517,7 +517,7 @@ As we saw above (in slightly different notation) we can write
 \bigskip
 {\setstretch{1.35} 
 \noindent
-Equation \ref{eqn:euler-lagrange} is called the \emph{Euler-Lagrange} equation. For the mass on the end of a spring problem we looked at above we can see 
+For the mass on the end of a spring problem we looked at above we can see 
 that from Equation \ref{eqn:moeos} that $\frac{\partial L}{\partial \dot{x}} = m\dot{x}$ and $\frac{\partial L}{\partial x} = -kx$. Combining these results in 
 Equation \ref{eqn:euler-lagrange} gives us \par}
 
@@ -559,10 +559,17 @@ But  $- \frac{dV}{dx}$ is just the force on the particle. So as we saw at the en
 Equations \ref{eqn:lagrangian} and \ref{eqn:euler-lagrange} (albeit written in different notation) together again 
 tell us that $F = ma$.
 
-\section{Solving the Simple Harmonic Oscillator Problem Using the Lagrangian}
-Consider the simple harmonic oscillator \cite{wiki:harmonic_oscillator} example shown in Figure \ref{fig:shm}.
-Here the mass $m$ is moving back and forth in one dimension on a frictionless surface with spring constant $k$
-and equilibrium point EP.
+\section{A Bit More Detail on the Simple Harmonic Oscillator Problem}
+In Section \ref{sec:euler_lagrange} we briefly considered the dynamics of a mass on the end of a spring and 
+introduced the Euler-Lagrange equation (Equation \ref{eqn:euler-lagrange}) as a method to solve the system. 
+In this section we'll consider this problem in a bit more detail and use the Euler–Lagrange equation to solve 
+for the position of the mass as a function of time. 
+
+\bigskip
+\noindent
+To start, consider the simple harmonic oscillator \cite{wiki:harmonic_oscillator} 
+shown in Figure \ref{fig:shm}. Here the mass $m$ is moving back and forth in one dimension on a frictionless surface with 
+spring constant $k$ and equilibrium point EP.
 
 
 \begin{figure}[H]
@@ -636,7 +643,7 @@ L = KE - PE = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 
 \bigskip
 \noindent
-To find the position of the mass $m$ as a function of time (call it $x(t)$) we need to solve the Euler–Lagrange equation (Equation \ref{eqn:euler-lagrange}) for this value of $L$. Recall that 
+To find the position of the mass $m$ as a function of time (call it $x(t)$) we need to solve the Euler–Lagrange equation for this value of $L$. Recall that 
 the  Euler–Lagrange equation is
 
 
@@ -653,18 +660,24 @@ $\dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m \dot{x}^2  \bigg ] = 0$ we c
 
 \bigskip
 \begin{equation*}
-\dfrac{\partial L}{\partial x} = \dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  - \dfrac{1}{2} k x^2 \bigg ] = \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m \dot{x}^2  \bigg ] - \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} k x^2  \bigg ]  =  0 - \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} k x^2  \bigg ] = - \dfrac{\partial}{\partial x} \bigg [ \dfrac{1}{2} k x^2  \bigg ]  = - \dfrac{1}{2} 2 k x = -kx
+\dfrac{\partial L}{\partial x} = \dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  - \dfrac{1}{2} k x^2 \bigg ] 
+= \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m \dot{x}^2  \bigg ] - \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} k x^2  \bigg ]  
+=  0 - \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} k x^2  \bigg ] 
+= - \dfrac{\partial}{\partial x} \bigg [ \dfrac{1}{2} k x^2  \bigg ]  
+= - \dfrac{1}{2} 2 k x = -kx
 \end{equation*}
 
 \bigskip
 \noindent
-Next, we need to find  $\dfrac{\partial L}{\partial \dot{x}}$ and then take its derivative with respect to $t$ (time). Here we know that $\dfrac{\partial}{\partial \dot{x}} \Bigg [ \dfrac{1}{2} k x^2 \Bigg ] = 0$
-which tells us that 
+Next, we want to find  $\dfrac{\partial L}{\partial \dot{x}}$ and then take its derivative with respect to $t$ (time). Here we know that 
+$\dfrac{\partial}{\partial \dot{x}} \Bigg [ \dfrac{1}{2} k x^2 \Bigg ] = 0$ and so
 
 
 \begin{equation*}
-\dfrac{\partial L}{\partial \dot{x}} = \dfrac{\partial}{\partial \dot{x}} \Bigg [   \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2 \Bigg ] = \dfrac{\partial}{\partial \dot{x}} \Bigg [   \dfrac{1}{2} m \dot{x}^2 \Bigg ]  -  \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} k x^2 \Bigg ] = \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} m \dot{x}^2 \Bigg ]  - 0
-=  \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} m \dot{x}^2 \Bigg ] =  \dfrac{1}{2} 2 m \dot{x} = m \dot{x}
+\dfrac{\partial L}{\partial \dot{x}} = \dfrac{\partial}{\partial \dot{x}} \Bigg [   \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2 \Bigg ] 
+= \dfrac{\partial}{\partial \dot{x}} \Bigg [ \dfrac{1}{2} m \dot{x}^2 \Bigg ] - \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} k x^2 \Bigg ] 
+= \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} m \dot{x}^2 \Bigg ]  - 0
+= \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} m \dot{x}^2 \Bigg ] =  \dfrac{1}{2} 2 m \dot{x} = m \dot{x}
 \end{equation*}
 
 \bigskip
@@ -674,13 +687,13 @@ Euler–Lagrange equation we find that
 
 \bigskip
 \begin{equation*}
-\dfrac{d}{dt} \bigg ( \dfrac{\partial L}{\partial \dot{x}} \bigg ) - \dfrac{\partial L}{\partial x} = m \ddot{x} - (-kx) = m \ddot{x} + kx \Rightarrow \ddot{x} - \dfrac{k}{m} x = 0
+\dfrac{d}{dt} \bigg ( \dfrac{\partial L}{\partial \dot{x}} \bigg ) - \dfrac{\partial L}{\partial x} = m \ddot{x} - (-kx) = m \ddot{x} + kx \Rightarrow \ddot{x} + \dfrac{k}{m} x = 0
 \end{equation*}
 
 \bigskip
 {\setstretch{1.80}
 \noindent
-Here we recognize that $\ddot{x} - \dfrac{k}{m} x = 0$ is a differential equation that has a solution in sine or cosine (doesn't matter which) where $\dfrac{k}{m}$ represents
+Here we recognize that $\ddot{x} + \dfrac{k}{m} x = 0$ is a differential equation that has a solution in sine or cosine (doesn't matter which) where $\dfrac{k}{m}$ represents
  the angular frequency. If we let $\omega = \sqrt{\dfrac{k}{m}}$ then $\omega^2 = \dfrac{k}{m}$ and so $\ddot{x} + \omega^2 x = 0$. But this 
  is a differential equation that  we recognize has the general solution \cite{harmonic_oscillartors} \par}
 
