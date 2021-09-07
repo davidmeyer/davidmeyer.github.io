@@ -14,7 +14,7 @@
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,calc,decorations,through}    
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,calc,decorations,through,lindenmayersystems}    
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 
@@ -53,8 +53,30 @@
 \usepackage{siunitx}
 \usepackage{relsize}
 
+% \def\level{5}
+
 
 \begin{document}
+\def\level{5}
+\begin{figure}[H]
+  \centering
+  \resizebox{0.45 \textwidth}{!} {                                                                                                                                                            % resize figure if you want
+      \begin{tikzpicture}[l-system={step=5pt, order=\level, angle=120},rotate=180]
+         \pgfdeclarelindenmayersystem{Sierpinski triangle}{
+         \symbol{X}{\pgflsystemdrawforward}
+         \symbol{Y}{\pgflsystemdrawforward}
+          \rule{X -> X-Y+X+Y-X}
+          \rule{Y -> YY}
+        }
+        \draw [black] (3,2) l-system [l-system={Sierpinski triangle, axiom=X, anchor=north east},fill=white];
+      \end{tikzpicture}
+    }
+  \caption{Sierpiński triangle/gasket}
+  \label{fig:sierpinski}
+\end{figure}
+
+
+\newpage
 
 \begin{figure}[H]
 \centering

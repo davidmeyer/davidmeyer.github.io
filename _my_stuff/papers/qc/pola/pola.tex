@@ -179,9 +179,33 @@ at least to the first order in $\epsilon$. The constraint specified by Equation 
 
 \bigskip
 \noindent
+Another way to see this is that if we only consider the first order terms of the Taylor series we see that
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta f 
+&=&  f(x + \epsilon) - f(x)                                           &\mathrel{\#} \text{definition of $\Delta f$ (Equation \ref{eqn:Delta})} \\
+[4pt]
+&=& f(x) + \epsilon \dfrac{df}{dx} - f(x)                      &\mathrel{\#} \text{consider only $1^{\text{st}}$ order effects so only use the first 2 terms of the Taylor series for $f(x + \epsilon)$} \\
+[4pt]
+&=& \epsilon \dfrac{df}{dx}                                        &\mathrel{\#} \text{$f(x)$ cancels} \\
+[4pt]
+&=& 0                                                                        &\mathrel{\#} \text{$\dfrac{df}{dx} = 0$ at the extremum} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So we can see that $\Delta f$ must equal zero, at least to the first order in $\epsilon$.
+
+
+\bigskip
+\noindent
 An important (or maybe, the most important) difference between the approach taken by the Principle of Least Action and Newton's Second Law is that the Principle 
-of Least Action looks at the value of an entire  \emph{path}, where as Newton's Second Law looks at points along the path. As we will see, these
-two approaches turn out to be (amazingly) equivalent.
+of Least Action looks at the value of an entire  \emph{path}, where as Newton's Second Law looks at points along the path. More specifically, in Newton's case we 
+are given initial conditions (the initial position and the initial velocity) and then we integrate Newton's second law ($F=ma$) to find $x(t)$. As we will see in Section
+\ref{sec:pola},  unlike in Newtonian mechanics in Lagrangian mechanics (that is, the Principle of Least Action) we find $x(t)$ from an object's beginning 
+and ending positions. Amazingly these two approaches turn out to be  equivalent.
 
 \section{The Principle of Least Action}
 \label{sec:pola}
