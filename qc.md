@@ -9,7 +9,7 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
-<li><a href="./pola.pdf">
+<li><a href="./pola.pdf" garget="_blank">>
 A Few Notes on the Principle of Least Action and
 Newton’s Second Law of Motion</a>
 <br>
@@ -73,7 +73,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 08.25.2021 by dmm@1-4-5.net
+<i>Last Update: 09.16.2021 by dmm@1-4-5.net
 
 
 
