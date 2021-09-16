@@ -14,8 +14,8 @@ A Few Notes on the Principle of Least Action and
 Newton’s Second Law of Motion</a>
 <br>
 <li><a href="./tricks.pdf" target="_blank">
-A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum of the
-Reciprocals of the Triangular Numbers</a>
+A Useful Mathematical Trick, Telescoping Series, and the Infinite Sum
+of the Reciprocals of the Triangular Numbers</a>
 <br>
 <li><a href="./euler.pdf" target="_blank">
 A Few Notes on Euler’s Formula and Euler's Identity</a>
