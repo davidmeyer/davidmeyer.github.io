@@ -4,9 +4,11 @@
 <li>My guess at the
 <a href="./images/twiv648.jpg" target="_blank">table</a>
 that
-<a href="https://parasiteswithoutborders.com/daniel-griffin-md-phd/">
+<a href="https://parasiteswithoutborders.com/daniel-griffin-md-phd/" 
+  target="_blank"> 
 Daniel Griffin</a> was talking about on
-<a href="https://www.microbe.tv/twiv/twiv-648/">TWiV 648</a>    
+<a href="https://www.microbe.tv/twiv/twiv-648/" target="_blank">
+TWiV 648</a>    
 <br>
 <br>
 <br>
