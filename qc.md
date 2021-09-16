@@ -9,7 +9,7 @@
 -->
 <h2>Notes on various mathematical topics</h2>
 
-<li><a href="./pola.pdf" garget="_blank">>
+<li><a href="./pola.pdf" target="_blank">
 A Few Notes on the Principle of Least Action and
 Newton’s Second Law of Motion</a>
 <br>
