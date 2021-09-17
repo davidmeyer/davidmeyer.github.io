@@ -10,9 +10,10 @@
 -->
 <h2>Notes on various astronomy topics</h2>
 
-<li><a href="./prices_metonic_gear_train.pdf" target="_blank" rel="noopener noreferrer>
+<li><a href="./prices_metonic_gear_train.pdf" 
+       target="_blank" 
+       rel="noopener noreferrer">
 A bit on Derek de Solla Price’s Metonic Gear Train (Antikythera Mechanism)</a>
-
 <br>
 <br>
 <br>
