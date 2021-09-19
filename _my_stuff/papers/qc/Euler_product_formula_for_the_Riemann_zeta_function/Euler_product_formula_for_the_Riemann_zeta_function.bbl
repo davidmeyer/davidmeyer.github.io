@@ -6,6 +6,14 @@
 \newblock \url{https://www.youtube.com/watch?v=LFwSIdLSosI}, Sep 2017.
 \newblock [Online; accessed 10-August-2021].
 
+\bibitem{nichols2016}
+{Dan Nichols}.
+\newblock {Riemann’s Zeta Function and the Prime Number Theorem}.
+\newblock
+  \url{https://people.math.umass.edu/~nichols/talks/2016mathclub-zeta.pdf}, Dec
+  2016.
+\newblock [Online; accessed 19-September-2021].
+
 \bibitem{book:prime_obsession}
 John Derbyshire.
 \newblock {\em {Prime Obsession: Bernhard Riemann and the Greatest Unsolved
@@ -19,12 +27,6 @@ John Derbyshire.
   \url{https://mathshistory.st-andrews.ac.uk/HistTopics/The_rise_of_calculus/},
   Feb 1996.
 \newblock [Online; accessed 10-August-2021].
-
-\bibitem{riemann_1859_manuscript}
-{The Clay Mathematics Institute}.
-\newblock {Riemann's 1859 Manuscript}.
-\newblock \url{https://www.claymath.org/publications/riemanns-1859-manuscript}.
-\newblock [Online; accessed 12-August-2021].
 
 \bibitem{euler_product_formula}
 {Timothy Murphy}.
