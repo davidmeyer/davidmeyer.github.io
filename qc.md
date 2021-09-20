@@ -21,7 +21,7 @@ of the Reciprocals of the Triangular Numbers</a>
 A Few Notes on Euler’s Formula and Euler's Identity</a>
 <br>
 <li><a href="./Euler_product_formula_for_the_Riemann_zeta_function.pdf" target="_blank" rel="noopener noreferrer">
-A Few Notes on Euler’s Product Formula for the Riemann Zeta Function</a>
+A Few Notes on Euler’s Product Formula and the Riemann Zeta Function</a>
 <br>
 <li><a href="./basel.pdf" target="_blank" rel="noopener noreferrer">A Few Notes on Euler's Solution of the Basel Problem</a>
 <br>
@@ -72,7 +72,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 09.16.2021 by dmm@1-4-5.net
+<i>Last Update: 09.20.2021 by dmm@1-4-5.net
 
 
 
