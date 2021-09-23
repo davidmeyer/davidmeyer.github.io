@@ -100,9 +100,9 @@
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.65 \textwidth}{!} {    
-   \simplebox {                                                                                                                                               % resize figure if you want
-     \begin{tikzpicture}
+  \resizebox{0.65 \textwidth}{!} {                                                                                                                       % resize the figure if you want
+   \simplebox {                                                                                                                                                  % put a frame around the tikzpicture
+     \begin{tikzpicture}                                                                                                                                       % draw the picture
 %
 % set up some coordinates
 %
@@ -117,7 +117,7 @@
 % draw the curve in blue
 %
        \draw[blue, thick] (A) to [bend right=50] (B);                                                                                             % draw the curve in blue
-       \node[circle, draw=black, fill=red, scale=0.75] at (Ball)  {};                                                                       % draw red ball with a black outline on the curve 
+       \node[circle, draw=black, fill=red, scale=0.75] at (Ball)  {};                                                                       % draw a red ball with a black outline on the curve 
        \fill (A) circle(0.05);                                                                                                                                    % put a dot on the curve at A
        \fill (B) circle(0.05);                                                                                                                                    % put a dot on the curve at B
        \draw[draw=none] (A) node[xshift=-0.30cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};                          % label A
