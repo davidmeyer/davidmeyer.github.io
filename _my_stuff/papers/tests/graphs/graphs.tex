@@ -53,10 +53,56 @@
 \usepackage{siunitx}
 \usepackage{relsize}
 
+
 % \def\level{5}
 
+\newcommand \simplebox [1]
+  {%
+    \fbox{\scantokens{#1\ignorespaces}}%
+  }
 
 \begin{document}
+
+%
+% Brachistochrone Problem Setup
+%
+\begin{figure}[H]
+  \centering
+  \resizebox{0.65 \textwidth}{!} {                                                                                                      % resize figure if you want
+  \simplebox{
+    \begin{tikzpicture}
+%
+% set up some coordinates
+%
+      \coordinate (A) at (0,0,0);
+      \coordinate (Ay) at (0,-1.20,0);
+      \coordinate (Ax) at (1.20,0,0);
+      \coordinate(ball) at (0.5,-0.5,0);
+      \coordinate (B) at (4,-1,0);
+      \coordinate (Gy) at (3.5,0.25,0);
+      \coordinate (Gy1) at (3.5,-0.5,0);
+%
+% draw the curve in blue
+%
+      \draw[blue,thick] (A) to [bend right=50] (B);  
+      \fill [red] (ball) circle (0.125);                                                                                                            % draw red ball on curve
+      \fill (A) circle(0.05);                                                                                                                           % put a dot on the curve at A
+      \fill (B) circle(0.05);                                                                                                                           % put a dot on the curve at B
+      \draw[draw=none] (A) node[xshift=-0.30cm, font=\footnotesize,left] {$A \; (x_1,y_1)$};                  % label A
+      \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize,right] {$B \; (x_2,y_2)$};                 % label B
+      \draw[-stealth,thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];                               % draw x axis
+      \draw[-stealth,thick] (Gy) -- (Gy1) coordinate [label={[font=\scriptsize, midway,right] $\vec{g}$}];   % draw y axis
+      \draw[-stealth,very thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];
+     \end{tikzpicture} }
+    }                                                                                                                                                    % end \resizebox 
+
+  \caption{The Brachistochrone Problem Setup}
+  \label{fig:brachistochrone}
+\end{figure}
+
+
+
+
 \def\level{5}
 \begin{figure}[H]
   \centering
