@@ -85,7 +85,8 @@
 % draw the curve in blue
 %
       \draw[blue,thick] (A) to [bend right=50] (B);  
-      \fill [red] (ball) circle (0.125);                                                                                                            % draw red ball on curve
+      \node[circle,draw=black, fill=red, scale=0.60] at (ball)  {};
+     % \fill [red] (ball) circle (0.125);                                                                                                            % draw red ball on curve
       \fill (A) circle(0.05);                                                                                                                           % put a dot on the curve at A
       \fill (B) circle(0.05);                                                                                                                           % put a dot on the curve at B
       \draw[draw=none] (A) node[xshift=-0.30cm, font=\footnotesize,left] {$A \; (x_1,y_1)$};                  % label A
