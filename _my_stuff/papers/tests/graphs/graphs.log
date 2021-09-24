@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  23 SEP 2021 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  24 SEP 2021 06:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -847,7 +847,14 @@ x)
 \pgfplots@ymax@reg=\dimen287
 \pgfplots@zmin@reg=\dimen288
 \pgfplots@zmax@reg=\dimen289
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/helvet.sty
+))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@layerbox@background=\box84
+\pgf@layerboxsaved@background=\box85
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/sansmath/sansmath.sty
@@ -1101,8 +1108,8 @@ LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box84
-\strutbox@=\box85
+\Mathstrutbox@=\box86
+\strutbox@=\box87
 \big@size=\dimen311
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
@@ -1161,7 +1168,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_intertext_sep=\dimen324
 \l_MT_above_shortintertext_sep=\dimen325
 \l_MT_below_shortintertext_sep=\dimen326
-\xmathstrut@box=\box86
+\xmathstrut@box=\box88
 \xmathstrut@dim=\dimen327
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
@@ -1187,7 +1194,7 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box87
+\collectedbox=\box89
 )
 \tc@llx=\dimen328
 \tc@lly=\dimen329
@@ -1213,7 +1220,7 @@ Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box88
+\@vwid@box=\box90
 \sift@deathcycles=\count346
 \@vwid@loff=\dimen340
 \@vwid@roff=\dimen341
@@ -1263,9 +1270,9 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count349
 \float@exts=\toks47
-\float@box=\box89
+\float@box=\box91
 \@float@everytoks=\toks48
-\@floatcapt=\box90
+\@floatcapt=\box92
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/bigints/bigints.sty
 Package: bigints 2010/02/15 Writing big integrals
@@ -1283,7 +1290,7 @@ Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
-\l__siunitx_tmp_box=\box91
+\l__siunitx_tmp_box=\box93
 \l__siunitx_tmp_dim=\dimen343
 \l__siunitx_tmp_int=\count350
 \l__siunitx_number_mantissa_length_int=\count351
@@ -1295,8 +1302,8 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_process_integer_min_int=\count357
 \l__siunitx_process_precision_int=\count358
 \l__siunitx_group_min_int=\count359
-\l__siunitx_angle_marker_box=\box92
-\l__siunitx_angle_unit_box=\box93
+\l__siunitx_angle_marker_box=\box94
+\l__siunitx_angle_unit_box=\box95
 \l__siunitx_angle_marker_dim=\dimen344
 \l__siunitx_angle_unit_dim=\dimen345
 \l__siunitx_unit_int=\count360
@@ -1317,10 +1324,10 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_fill_pre_dim=\dimen352
 \l__siunitx_table_fill_post_dim=\dimen353
 \l__siunitx_table_fill_mid_dim=\dimen354
-\l__siunitx_table_pre_box=\box94
-\l__siunitx_table_post_box=\box95
-\l__siunitx_table_mantissa_box=\box96
-\l__siunitx_table_result_box=\box97
+\l__siunitx_table_pre_box=\box96
+\l__siunitx_table_post_box=\box97
+\l__siunitx_table_mantissa_box=\box98
+\l__siunitx_table_result_box=\box99
 \l__siunitx_table_number_align_skip=\skip67
 \l__siunitx_table_text_align_skip=\skip68
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
@@ -1332,30 +1339,30 @@ Package: relsize 2013/03/29 ver 4.1
 (./graphs.aux)
 \openout1 = `graphs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count367
 \scratchdimen=\dimen355
-\scratchbox=\box98
+\scratchbox=\box100
 \nofMPsegments=\count368
 \nofMParguments=\count369
 \everyMPshowfont=\toks49
@@ -1377,7 +1384,7 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 64.
+ on input line 59.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1413,7 +1420,7 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 59.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1426,9 +1433,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count373
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
  (./graphs.out) (./graphs.out)
 \@outlinefile=\write4
 \openout4 = `graphs.out'.
@@ -1444,25 +1451,25 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+eur on input line 64.
+LaTeX Font Info:    Trying to load font information for U+eur on input line 59.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueur.fd
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 64
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 59
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -1582,17 +1589,20 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 [4] [5] [6] (./graphs.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `graphs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44814 strings out of 478994
- 1050639 string characters out of 5858184
- 1519081 words of memory out of 5000000
- 61388 multiletter control sequences out of 15000+600000
+ 44887 strings out of 478994
+ 1053075 string characters out of 5858184
+ 1520682 words of memory out of 5000000
+ 61458 multiletter control sequences out of 15000+600000
  422686 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,17n,116p,1135b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,17n,116p,730b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1607,7 +1617,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on graphs.pdf (6 pages, 157018 bytes).
+Output written on graphs.pdf (6 pages, 156810 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream

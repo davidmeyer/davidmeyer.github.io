@@ -50,6 +50,8 @@
 \usepackage{pgfplots}	
 \usepackage{relsize}	
 \usepackage{pgfplots}
+\usetikzlibrary{backgrounds}
+
 %						
  %
  %
@@ -64,13 +66,10 @@
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
-
  
 \title{A Few Notes on the Brachistochrone Problem}
 \author{David Meyer \\ dmm@1-4-5.net}
-
 \date{Last update: \today}							% Activate to display a given date or no date
-
 
 \begin{document}
 \maketitle
@@ -89,44 +88,33 @@
 %
 % Brachistochrone Problem Setup
 %
-% First, make a command to put a frame around a tikzpicture
-%
-\newcommand \simplebox [1]
-  {%
-    \fbox{\scantokens{#1\ignorespaces}}%
- }
-%
-% Now make the figure
-%
 \begin{figure}[H]
   \centering
-  \resizebox{0.65 \textwidth}{!} {                                                                                                                       % resize the figure if you want
-   \simplebox {                                                                                                                                                  % put a frame around the tikzpicture
-     \begin{tikzpicture}                                                                                                                                       % draw the picture
+  \resizebox{0.65 \textwidth}{!} {                                                                                                                      % resize the figure if you want
+     \begin{tikzpicture} [framed]                                                                                                                        % draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
 %
 % set up some coordinates
 %
-       \coordinate (A)       at (0,0,0);
-       \coordinate (Ax)     at (1.20,0,0);
-       \coordinate (Ay)     at (0,-1.20,0);
-       \coordinate (Ball)   at (0.5,-0.5,0);
-       \coordinate (B)       at (4,-1,0);
-       \coordinate (Gy0)   at (3.5,0.25,0);
-       \coordinate (Gy1)   at (3.5,-0.5,0);
+       \coordinate (A)       at (0,0);                                                                                                                       % put the origin at A
+       \coordinate (Ax)     at (1.20,0);
+       \coordinate (Ay)     at (0,-1.20);                                                                                                                 % y axis positive in the down direction
+       \coordinate (Ball)   at (0.5,-0.5);
+       \coordinate (B)       at (4,-1.0);                                                                                                                   % other end of the curve
+       \coordinate (Gy0)   at (3.5,0.25);                                                                                                               % draw the gravity vector here
+       \coordinate (Gy1)   at (3.5,-0.5);
 %
 % draw the curve in blue
 %
        \draw[blue, thick] (A) to [bend right=50] (B);                                                                                             % draw the curve in blue
-       \node[circle, draw=black, fill=red, scale=0.75] at (Ball)  {};                                                                       % draw a red ball with a black outline on the curve 
-       \fill (A) circle(0.05);                                                                                                                                    % put a dot on the curve at A
-       \fill (B) circle(0.05);                                                                                                                                    % put a dot on the curve at B
+       \node[circle, draw=black, fill=red, scale=0.70] at (Ball)  {};                                                                       % draw a red ball with a black outline on the curve 
+       \fill (A) circle(0.035);                                                                                                                                  % put a dot on the curve at A
+       \fill (B) circle(0.035);                                                                                                                                  % put a dot on the curve at B
        \draw[draw=none] (A) node[xshift=-0.30cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};                          % label A
        \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize, right] {$B \; (x_2,y_2)$};                         % label B
        \draw[-stealth, thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];                                    % draw x axis
        \draw[-stealth, thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];                                         % draw y axis
        \draw[-stealth, thick] (Gy0) -- (Gy1) coordinate [label={[font=\footnotesize, midway, right] $\vec{g}$}];   % draw the gravity vector (g)
       \end{tikzpicture}                                                                                                                                         % end \tikzipcture
-      }                                                                                                                                                                  % end \simplebox
     }                                                                                                                                                                    % end \resizebox
   \caption{The Brachistochrone Problem Setup}
   \label{fig:brachistochrone}
