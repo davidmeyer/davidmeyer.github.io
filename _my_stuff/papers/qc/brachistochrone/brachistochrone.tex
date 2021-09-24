@@ -1,56 +1,33 @@
-
 \documentclass{article}
-
-
+%
+%   get various packages
+%
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{margin=0.75in}
+\geometry{letterpaper}                   	  	% ... or a4paper or a5paper or ... 
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{patterns,angles,quotes,shapes,intersections,decorations,backgrounds}    
+\usepackage{pgfplots}	
+\usepackage{relsize}	
+\usepackage{float}
+%
+%	amsmath stuff
+%
+\usepackage{amsthm}
+\usepackage{amsmath}
+%
+%	watermarks, if you want that
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{margin=0.75in}
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
-\usepackage{setspace}
 %
-%	TikZ et al
 %
-\usepackage{tikz}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,calc,intersections,decorations}    
-\usepackage{tkz-euclide}
-\usepackage{pgfplots}	
-\usepackage{relsize}	
-\usepackage{pgfplots}
-\usetikzlibrary{backgrounds}
-
-%						
- %
- %
 \newtheorem{thm}{Theorem}[section]
 % \newtheorem{defn}[thm]{Definition}
 \theoremstyle{definition}
@@ -58,24 +35,26 @@
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
-
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
-
- 
+%
+%	title, etc
+%
 \title{A Few Notes on the Brachistochrone Problem}
 \author{David Meyer \\ dmm@1-4-5.net}
 \date{Last update: \today}							% Activate to display a given date or no date
-
 %
-% compatability
+%	be compatible
 %
 \pgfplotsset{compat=1.17} 
 %
 %
 \begin{document}
 \maketitle
-
+%
+%
+%
 \section{Introduction}
 
 \begin{equation*}
@@ -84,8 +63,6 @@
 &=&  f(x + \epsilon) - f(x)                                           &\mathrel{\#} \text{definition of $\Delta f$ (Equation \ref{eqn:Delta})} \\
 \end{array}
 \end{equation*}
-
-\newpage
 
 %
 % Brachistochrone Problem Setup
