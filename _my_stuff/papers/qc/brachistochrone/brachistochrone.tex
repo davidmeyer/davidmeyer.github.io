@@ -2,9 +2,9 @@
 %
 %   get various packages
 %
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\usepackage{geometry}							% See geometry.pdf to learn the layout options. There are lots.
 \geometry{margin=0.75in}
-\geometry{letterpaper}                   	  	% ... or a4paper or a5paper or ... 
+\geometry{letterpaper}							% ... or a4paper or a5paper or ... 
 %
 %   tikz et al
 %
@@ -29,7 +29,6 @@
 %
 %
 \newtheorem{thm}{Theorem}[section]
-% \newtheorem{defn}[thm]{Definition}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
@@ -60,41 +59,42 @@
 \begin{equation*}
 \begin{array}{lllll}
 \Delta f 
-&=&  f(x + \epsilon) - f(x)                                           &\mathrel{\#} \text{definition of $\Delta f$ (Equation \ref{eqn:Delta})} \\
+&=&  f(x + \epsilon) - f(x)												&\mathrel{\#} \text{definition of $\Delta f$ (Equation \ref{eqn:Delta})} \\
 \end{array}
 \end{equation*}
 
+
 %
-% Brachistochrone Problem Setup
+%	brachistochrone problem setup
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.65 \textwidth}{!} {                                                                                                                      % resize the figure if you want
-     \begin{tikzpicture} [framed]                                                                                                                        % draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
+  \resizebox{0.65 \textwidth}{!} {										% resize the figure if you want
+     \begin{tikzpicture} [framed]										% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
 %
-% set up some coordinates
+%	set up some coordinates
 %
-       \coordinate (A)       at (0,0);                                                                                                                       % put the origin at A
-       \coordinate (Ax)     at (1.20,0);
-       \coordinate (Ay)     at (0,-1.20);                                                                                                                 % y axis positive in the down direction
-       \coordinate (Ball)   at (0.5,-0.5);
-       \coordinate (B)       at (4,-1.0);                                                                                                                   % other end of the curve
-       \coordinate (Gy0)   at (3.5,0.25);                                                                                                               % draw the gravity vector here
-       \coordinate (Gy1)   at (3.5,-0.5);
+        \coordinate (A)		at (0.0,  0.0);								% put the origin at A
+        \coordinate (Ax)	at (1.2,  0.0);
+        \coordinate (Ay)	at (0.0, -1.2);								% y axis positive in the down direction
+        \coordinate (Ball)	at (0.5, -0.5);
+        \coordinate (B)		at (4.0, -1.0);								% other end of the curve
+        \coordinate (Gy0)	at (3.5, 0.25);								% draw the gravity vector here
+        \coordinate (Gy1)	at (3.5, -0.5);
 %
-% draw the curve in blue
+%	draw the curve
 %
-       \draw[blue, thick] (A) to [bend right=50] (B);                                                                                             % draw the curve in blue
-       \node[circle, draw=black, fill=red, scale=0.70] at (Ball)  {};                                                                       % draw a red ball with a black outline on the curve 
-       \fill (A) circle(0.035);                                                                                                                                  % put a dot on the curve at A
-       \fill (B) circle(0.035);                                                                                                                                  % put a dot on the curve at B
-       \draw[draw=none] (A) node[xshift=-0.30cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};                          % label A
-       \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize, right] {$B \; (x_2,y_2)$};                         % label B
-       \draw[-stealth, thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];                                    % draw x axis
-       \draw[-stealth, thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];                                         % draw y axis
-       \draw[-stealth, thick] (Gy0) -- (Gy1) coordinate [label={[font=\footnotesize, midway, right] $\vec{g}$}];   % draw the gravity vector (g)
-      \end{tikzpicture}                                                                                                                                         % end \tikzipcture
-    }                                                                                                                                                                    % end \resizebox
+        \draw[blue, thick] (A) to [bend right=50] (B);					% draw the curve in blue
+        \node[circle, draw=black, fill=red, scale=0.70] at (Ball) {};	% draw a red ball with a black outline on the curve
+        \fill (A) circle(0.035);										% put a dot on the curve at A
+        \fill (B) circle(0.035);										% put a dot on the curve at B
+        \draw[draw=none] (A) node[xshift=-0.30cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};						% label A
+        \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize, right] {$B \; (x_2,y_2)$};						% label B
+        \draw[-stealth, thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];						% draw x axis
+        \draw[-stealth, thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];						% draw y axis
+        \draw[-stealth, thick] (Gy0) -- (Gy1) coordinate [label={[font=\footnotesize, midway, right] $\vec{g}$}];	% draw the gravity vector (g)
+      \end{tikzpicture}													% end \tikzipcture
+    }																	% end \resizebox
   \caption{The Brachistochrone Problem Setup}
   \label{fig:brachistochrone}
 \end{figure}
