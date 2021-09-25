@@ -48,10 +48,18 @@
 \author{David Meyer \\ dmm@1-4-5.net}
 \date{Last update: \today}
 %
+%	be compatible
+%
+\pgfplotsset{compat=1.17} 
+%
+%
+
+%
 %       make the document
 %
 \begin{document}
 \maketitle
+
 %
 \section{Introduction}
 The principle of least action, which is also known as the
@@ -591,8 +599,6 @@ $x$ here can refer to any number of coordinates, the so-called
 conventionally denoted  $q_i$. \par } 
 
 
-
-
 \section{The Euler-Lagrange Equation}
 \label{sec:euler_lagrange}
 Consider the following seemingly counter-intuitive combination of
@@ -625,6 +631,25 @@ spring potential energy $V,$ given by Hooke's Law
 \begin{equation*}
 L = KE - PE = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 \end{equation*}
+
+\bigskip
+\noindent
+We need one more piece of the puzzle before we can solve for $x$
+as a function of time, the  \emph{Euler-Lagrange} equation: 
+
+\bigskip
+\begin{equation}
+\dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial \dot{x}} \right ) -  \dfrac{\partial L}{\partial x} = 0
+\label{eqn:euler-lagrange}
+\end{equation}
+
+\bigskip
+\noindent
+Essentially the Euler-Lagrange equation is a constraint that the
+Lagrangian must satisfy in order for the principle of stationary
+action to be true. It is essentially what generates the equations
+of motion of a system given a specific Lagrangian, just as
+Newton’s second law does for a given set of forces. 
 
 
 \bigskip
@@ -714,6 +739,174 @@ of time is given by $ x(t) = A \cos (\omega_0 t - \phi)$ for some
 amplitude $A$ and where the angular frequency is given by the
 spring constant ($k$) divided by the mass of the object ($m$). 
 
+
+\section{A Bit More Detail on the Simple Harmonic Oscillator Problem}
+\label{sec:simple_harmonic_oscillator}
+In Section \ref{sec:euler_lagrange} we briefly considered the
+dynamics of a mass on the end of a spring and introduced the
+Euler-Lagrange equation (Equation \ref{eqn:euler-lagrange}) as a
+method to solve the system. In this section we'll consider this
+problem in a bit more detail and use the Euler–Lagrange equation
+to solve for the position of the mass as a function of time. 
+
+\bigskip
+\noindent
+To start, consider the simple harmonic oscillator
+\cite{wiki:harmonic_oscillator} shown in Figure
+\ref{fig:shm}. Here the mass $m$ is moving back and forth in one
+dimension on a frictionless surface with spring constant $k$ and
+equilibrium point EP. 
+
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.65 \textwidth}{!} {                                                              % resize figure if you want
+   \begin{tikzpicture}[black!75,thick]
+        \draw[thick, ->] (-1,0) -- (11,0) coordinate [label={[xshift=0.30cm, below] $x$}];      % horizontal axis
+        \draw[thick, ->] (0,-1) -- (0,5.5) coordinate [label={[]}];
+        \draw[draw=none] (-1,0) -- (11,0) coordinate [label={[yshift=-0.3cm,midway,below] 
+                                      ${L = KE- PE, \; KE = \frac{1}{2} m v^2  \text{ and } PE = \frac{1}{2} k x^2}$}];
+        \draw (8,4) node[rectangle, draw, very thin] 
+                         {$\mathlarger {\; \dfrac{d}{dt} \bigg ( \dfrac{\partial L}{\partial \dot{x}} \bigg ) - \dfrac{\partial L}{\partial x} = 0 \;}$};
+       \path (0,0) node[below left] {$O$};    
+
+%
+% draw the spring 
+%
+        \draw [
+              decoration={
+                 coil,
+                 aspect=0.3, 
+                 segment length=2mm, 
+                 amplitude=2mm, 
+                 pre length=3mm,
+                 post length=3mm},
+             decorate] (0,0.40) -- (5.75,0.40);
+        \fill (0,0.40) circle(0.05);                            % draw a dot connecting the spring to the y axis
+
+ %
+ % draw the mass
+ %
+       \node[draw,
+	     fill=yellow!60,
+	     minimum width=1cm,
+	     minimum height=0.75cm,
+	     anchor=north,
+	     label=center:$m$] at (6,0.80) {};
+      \fill (5.5,0.40) circle(0.05);                            % draw a dot connecting the mass to the spring
+       
+      \draw[->] (6.5,0.40)-- (7.5,0.40) coordinate [label={[right] ${v = \dot{x}}$}]; % draw velocity vector
+      
+%
+% other annotation of axes etc
+%
+      \coordinate (k) at (2,1.25);
+      \draw[draw=none] (k) node[below] {$k$};    
+      \coordinate (c1) at (3.5,0);
+      \coordinate (c2) at (3.5,4);
+      \coordinate (c3) at (3.5,2.5);
+      \coordinate (c4) at (6,2.5);
+      \draw[dashed] (c1) -- (c2) coordinate [label={[above] EP}];   
+      \draw[<-] (4,2.5) -- (5,2.5) coordinate [label={[right] $\vec{F}$}];   
+      \fill (c1) circle(0.05);      
+    \end{tikzpicture}
+  }                                             % end resizebox
+ \caption{Simple Harmonic Oscillator Setup}
+ \label{fig:shm}
+\end{figure}
+
+
+\noindent
+In this example we will be using generalized coordinates so we
+use $v = \dot{x}$ and write the kinetic energy $KE = \dfrac{1}{2}
+m \dot{x}^2$. So we can write the Lagrangian as follows:
+
+\bigskip
+\begin{equation*}
+L = KE - PE = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
+\end{equation*}
+
+
+\bigskip
+\noindent
+To find the position of the mass $m$ as a function of time (call
+it $x(t)$) we need to solve the Euler–Lagrange equation for this
+value of $L$. Recall that the  Euler–Lagrange equation is
+
+
+\bigskip
+\begin{equation*}
+\dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial \dot{x}} \right ) -  \dfrac{\partial L}{\partial x} = 0
+\end{equation*}
+
+\bigskip
+\noindent
+So first we want to compute $\dfrac{\partial L}{\partial x} =
+\dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  -
+\dfrac{1}{2} k x^2 \bigg ]$. Since differentiation is a linear
+operation \cite{wiki:linearity_of_differentiation} and we know
+that $\dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m
+\dot{x}^2  \bigg ] = 0$ we can see that  
+
+\bigskip
+\begin{equation*}
+\dfrac{\partial L}{\partial x} = \dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  - \dfrac{1}{2} k x^2 \bigg ] 
+= \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m \dot{x}^2  \bigg ] - \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} k x^2  \bigg ]  
+=  0 - \dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} k x^2  \bigg ] 
+= - \dfrac{\partial}{\partial x} \bigg [ \dfrac{1}{2} k x^2  \bigg ]  
+= - \dfrac{1}{2} 2 k x = -kx
+\end{equation*}
+
+\bigskip
+\noindent
+Next, we want to find  $\dfrac{\partial L}{\partial \dot{x}}$ and
+then take its derivative with respect to $t$ (time). Here we know
+that $\dfrac{\partial}{\partial \dot{x}} \Bigg [ \dfrac{1}{2} k
+x^2 \Bigg ] = 0$ and so 
+
+
+\begin{equation*}
+\dfrac{\partial L}{\partial \dot{x}} = \dfrac{\partial}{\partial \dot{x}} \Bigg [   \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2 \Bigg ] 
+= \dfrac{\partial}{\partial \dot{x}} \Bigg [ \dfrac{1}{2} m \dot{x}^2 \Bigg ] - \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} k x^2 \Bigg ] 
+= \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} m \dot{x}^2 \Bigg ]  - 0
+= \dfrac{\partial}{\partial \dot{x}} \Bigg [  \dfrac{1}{2} m \dot{x}^2 \Bigg ] =  \dfrac{1}{2} 2 m \dot{x} = m \dot{x}
+\end{equation*}
+
+\bigskip
+\noindent
+Now we can see that $\dfrac{d}{dt} \bigg ( \dfrac{\partial
+L}{\partial \dot{x}} \bigg )   = \dfrac{d}{dt} \big ( m \dot{x}
+\big ) = m \ddot{x}$. Plugging these values back into the
+Euler–Lagrange equation we find that 
+
+\bigskip
+\begin{equation*}
+\dfrac{d}{dt} \bigg ( \dfrac{\partial L}{\partial \dot{x}} \bigg ) - \dfrac{\partial L}{\partial x} = m \ddot{x} - (-kx) = m \ddot{x} + kx \Rightarrow \ddot{x} + \dfrac{k}{m} x = 0
+\end{equation*}
+
+\bigskip
+{\setstretch{1.80}
+\noindent
+Here we recognize that $\ddot{x} + \dfrac{k}{m} x = 0$ is a
+differential equation that has a solution in sine or cosine
+(doesn't matter which) where $\dfrac{k}{m}$ represents the
+angular frequency. If we let $\omega_0 = \sqrt{\dfrac{k}{m}}$
+then $\omega_0^2 = \dfrac{k}{m}$ and so $\ddot{x} + \omega_0^2 x
+= 0$. But this is a differential equation that has the general
+solution \cite{harmonic_oscillartors} \par} 
+
+ \bigskip
+ \begin{equation*}
+ x(t) = A \cos (\omega_0 t - \phi)
+ \end{equation*}
+ 
+\bigskip
+\noindent
+where $A$ is the amplitude, $\omega_0$ is the angular frequency
+and $\phi$ is phase. Note that $A$ and $\phi$ depend on initial
+conditions while  $\omega_0$ does not. 
+
+\bigskip
 \section{Conclusions}
 It's amazing that two such different approaches, Newtonian
 mechanics and Lagrangian mechanics, turn out to be
