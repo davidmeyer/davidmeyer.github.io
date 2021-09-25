@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pola.aux
 The style file: plain.bst
 Database file #1: /Users/dmm/papers/bib/qc.bib
-You've used 15 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            559 strings with 6881 characters,
-and the built_in function-call counts, 3277 in all, are:
-= -- 330
-> -- 105
+            556 strings with 6710 characters,
+and the built_in function-call counts, 3060 in all, are:
+= -- 308
+> -- 98
 < -- 0
-+ -- 45
-- -- 30
-* -- 92
-:= -- 566
-add.period$ -- 60
-call.type$ -- 15
-change.case$ -- 60
++ -- 42
+- -- 28
+* -- 86
+:= -- 529
+add.period$ -- 56
+call.type$ -- 14
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 105
-empty$ -- 331
-format.name$ -- 30
-if$ -- 721
+cite$ -- 14
+duplicate$ -- 98
+empty$ -- 309
+format.name$ -- 28
+if$ -- 673
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 14
 missing$ -- 0
-newline$ -- 93
-num.names$ -- 30
-pop$ -- 120
+newline$ -- 87
+num.names$ -- 28
+pop$ -- 112
 preamble$ -- 1
-purify$ -- 45
+purify$ -- 42
 quote$ -- 0
-skip$ -- 89
+skip$ -- 83
 stack$ -- 0
-substring$ -- 75
-swap$ -- 15
+substring$ -- 70
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 56
 warning$ -- 0
-while$ -- 30
-width$ -- 17
-write$ -- 182
+while$ -- 28
+width$ -- 16
+write$ -- 170
