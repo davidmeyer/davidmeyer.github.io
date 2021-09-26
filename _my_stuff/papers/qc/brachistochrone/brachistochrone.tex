@@ -2,11 +2,11 @@
 %
 %   get various packages
 %
-\usepackage{geometry}							% See geometry.pdf to learn the layout options. There are lots.
-\geometry{margin=0.75in}
-\geometry{letterpaper}							% ... or a4paper or a5paper or ... 
-\usepackage{url}								% need this to use URLs in bibtex
-\usepackage{scrextend}							% need this for addmargin
+\usepackage{geometry}													% See geometry.pdf to learn the layout options
+\geometry{margin=0.75in}												% get more space on the page
+\geometry{letterpaper}													% ... or a4paper or a5paper or ... 
+\usepackage{url}														% need this to use URLs in bibtex
+\usepackage{scrextend}													% need this for addmargin
 %
 %   tikz et al
 %
@@ -44,7 +44,7 @@
 %
 \title{A Few Notes on the Brachistochrone Problem}
 \author{David Meyer \\ dmm@1-4-5.net}
-\date{Last update: \today}										% Activate to display a given date or no date
+\date{Last update: \today}												% Activate to display a given date or no date
 %
 %	be compatible
 %
@@ -57,19 +57,20 @@
 %
 %
 \section{Introduction}
-The Brachistochrone problem, posed by Johann Bernoulli in June of 1696 \cite{brachistochrone_problem}, 
-asks the following question:
+The Brachistochrone problem, posed by Johann Bernoulli in June of
+1696 \cite{brachistochrone_problem}, asks the following question:
 
 \bigskip 
-\begin{addmargin}[3em]{7em}										% 3em left, 7em right
-Given two points A and B in a vertical plane\footnote{We label $\text{A} = (x_1,y_1)$ and $\text{B} = (x_2,y_2)$.}, 
-what is the curve traced out by a point acted on only by gravity, which starts at A and reaches B in the 
-shortest time? 
+\begin{addmargin}[3em]{8em}												% 3em left, 8em right
+Given two points $A$ and $B$ in a vertical plane, what is the
+curve traced out by a point acted on only by gravity, which
+starts at $A$ and reaches $B$ in the shortest time?  
 \end{addmargin}
 
 \bigskip
 \noindent
-The scenario Bernoulli envisioned is shown in Figure \ref{fig:brachistochrone}.
+The scenario Bernoulli envisioned is shown in Figure
+\ref{fig:brachistochrone}. 
 
 \bigskip
 \bigskip
@@ -79,7 +80,7 @@ The scenario Bernoulli envisioned is shown in Figure \ref{fig:brachistochrone}.
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.65 \textwidth}{!} {										% resize the figure if you want
+  \resizebox{0.75 \textwidth}{!} {										% resize the figure if you want
      \begin{tikzpicture} [framed]										% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
 %
 %	set up some coordinates
@@ -115,10 +116,9 @@ The scenario Bernoulli envisioned is shown in Figure \ref{fig:brachistochrone}.
 \medskip
 \section{A Bit of History}
 \label{sec:history}
-TBD
 
-% \newpage
-\bigskip
+\section*{Acknowledgements}
+
 \bibliographystyle{plain}
 \bibliography{/Users/dmm/papers/bib/qc}
 \end{document} 
