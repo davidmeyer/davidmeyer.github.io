@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  24 SEP 2021 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 SEP 2021 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -788,10 +788,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 25679 strings out of 478994
- 672203 string characters out of 5858184
+ 25696 strings out of 478994
+ 672439 string characters out of 5858184
  1112032 words of memory out of 5000000
- 42725 multiletter control sequences out of 15000+600000
+ 42742 multiletter control sequences out of 15000+600000
  409125 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,11n,116p,732b,847s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -806,7 +806,7 @@ al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on brachistochrone.pdf (1 page, 103553 bytes).
+Output written on brachistochrone.pdf (1 page, 103786 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream

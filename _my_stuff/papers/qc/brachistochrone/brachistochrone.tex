@@ -75,19 +75,22 @@
 %	set up some coordinates
 %
         \coordinate (A)		at (0.0,  0.0);								% put the origin at A
-        \coordinate (Ax)	at (1.2,  0.0);
+        \coordinate (Ax)	at (1.2,  0.0);								% x axis here
         \coordinate (Ay)	at (0.0, -1.2);								% y axis positive in the down direction
-        \coordinate (Ball)	at (0.5, -0.5);
+        \coordinate (Ball)	at (0.5, -0.5);								% draw the ball here
         \coordinate (B)		at (4.0, -1.0);								% other end of the curve
-        \coordinate (Gy0)	at (3.5, 0.25);								% draw the gravity vector here
-        \coordinate (Gy1)	at (3.5, -0.5);
+        \coordinate (Gy0)	at (3.5,  0.25);							% draw the gravity vector starting here
+        \coordinate (Gy1)	at (3.5, -0.5);								% gravity vector ends here
+        \coordinate (D0)	at (0.65,-0.65);							% draw motion arrow starting here
+        \coordinate (D1)	at (1.0, -0.945);							% motion arrow ends here
 %
-%	draw the curve
+%	draw the picture
 %
         \draw[blue, thick] (A) to [bend right=50] (B);					% draw the curve in blue
         \node[circle, draw=black, fill=red, scale=0.70] at (Ball) {};	% draw a red ball with a black outline on the curve
-        \fill (A) circle(0.035);										% put a dot on the curve at A
-        \fill (B) circle(0.035);										% put a dot on the curve at B
+        \draw[-stealth, thin] (D0) -- (D1);								% draw an arrow in the direction the ball is moving
+        \fill (A) circle (0.035);										% put a dot on the curve at A
+        \fill (B) circle (0.035);										% put a dot on the curve at B
         \draw[draw=none] (A) node[xshift=-0.10cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};						% label A
         \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize, right] {$B \; (x_2,y_2)$};						% label B
         \draw[-stealth, thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];						% draw x axis
