@@ -2,13 +2,15 @@
 #
 #	David Meyer
 #	dmm@m1-4-5.net
-#	Sun Oct 30 13:33:40 2016
-#
-#	$Header: /mnt/disk0/dmm/public_html/qc/RCS/index.html,v 1.17 2019/10/04 18:11:15 dmm Exp $
+#	Sun Sep 26 11:51:03 PDT 2021
 #
 -->
+
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./brachistochrone.pdf" target="_blank" rel="noopener noreferrer">
+A Few Notes on the Brachistochrone Problem</a>
+<br>
 <li><a href="./pola.pdf" target="_blank" rel="noopener noreferrer">
 A Few Notes on the Principle of Least Action and
 Newton’s Second Law of Motion</a>
@@ -72,7 +74,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 09.20.2021 by dmm@1-4-5.net
+<i>Last Update: 09.26.2021 by dmm@1-4-5.net
 
 
 
