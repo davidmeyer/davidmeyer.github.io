@@ -209,7 +209,7 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 
      \draw[-latex] (O) -- (A) node[anchor=south] {$y$};
      \draw[-latex] (O) -- (2.6*pi,0) node[anchor=west] {$x$};
-     \draw[red,domain=-0.5*pi:2.5*pi,samples=50, line width=1] plot ({\x - sin(\x r)},{1 - cos(\x r)});
+     \draw[red, domain=-0.5*pi:2.5*pi, samples=50, line width=1] plot ({\x - sin(\x r)},{1 - cos(\x r)});
      \draw[blue, line width=1] (C) circle (\r);
      \draw[] (C) circle (\r);
 %
@@ -219,12 +219,12 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
      \def\y{0.83}															% y
      \def\xa{0.3} 															% coordinate x for arc left
      \def\ya{1.2} 															% coordinate y for arc left
-     \coordinate (X) at (\x, 0 );
-     \coordinate (Y) at (0, \y );
-     \coordinate (XY) at (\x, \y );
-     \node[anchor=north] at (X) {$x$} ;
-
-     \draw[fill=blue] (C) circle (1pt);   									% draw center of circle
+     \coordinate (X)     at (\x, 0 );
+     \coordinate (Y)     at (0, \y );
+     \coordinate (XY)    at (\x, \y );
+     \node[anchor=north] at (X) {$x$};
+     \draw[fill=black] (O) circle (1pt);									% draw a dot at the origin
+     \draw[fill=blue]  (C) circle (1pt);   									% draw center of circle
      \draw[] (C) -- node[anchor=south] {\; $a$} (XY);   					% draw radius of the circle
      \coordinate (B) at (\c, 0);    										% bottom of circle, radius to the bottom
      \draw[] (C) -- (B) node[anchor=north] {$a \, \theta$};
@@ -271,6 +271,8 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 %
      \coordinate (TPA) at (2*pi, 0);
      \node[anchor=north] at (TPA) {$2 \pi a$};
+     \draw[fill=black] (TPA) circle (1pt);										% draw a dot on the x axis at 2 \pi a
+
     \end{tikzpicture}
   }
  \caption{The Cycloid Curve}
@@ -315,7 +317,7 @@ problem in the pages of \emph{Acta Eruditorum}.
 \end{array}
 \end{equation*}
 
-\bigskip
+\medskip
 \section{The Calculus of Variations and the Brachistrochrone Problem}
 \label{sec:cov}
 
