@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: brachistochrone.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 1 entry,
+You've used 7 entries,
             2118 wiz_defined-function locations,
-            504 strings with 4220 characters,
-and the built_in function-call counts, 239 in all, are:
-= -- 22
-> -- 7
+            526 strings with 5137 characters,
+and the built_in function-call counts, 1543 in all, are:
+= -- 152
+> -- 50
 < -- 0
-+ -- 3
-- -- 2
-* -- 10
-:= -- 46
-add.period$ -- 4
-call.type$ -- 1
-change.case$ -- 4
++ -- 21
+- -- 14
+* -- 48
+:= -- 270
+add.period$ -- 27
+call.type$ -- 7
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 23
-format.name$ -- 2
-if$ -- 49
+cite$ -- 7
+duplicate$ -- 55
+empty$ -- 156
+format.name$ -- 14
+if$ -- 337
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 9
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 7
+missing$ -- 1
+newline$ -- 43
+num.names$ -- 15
+pop$ -- 54
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 21
 quote$ -- 0
-skip$ -- 6
+skip$ -- 43
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 35
+swap$ -- 7
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 26
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 14
+while$ -- 14
+width$ -- 8
+write$ -- 83

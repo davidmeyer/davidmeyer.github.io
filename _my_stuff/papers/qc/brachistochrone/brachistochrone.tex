@@ -2,11 +2,11 @@
 %
 %   get various packages
 %
-\usepackage{geometry}													% See geometry.pdf to learn the layout options
-\geometry{margin=0.75in}												% get more space on the page
-\geometry{letterpaper}													% ... or a4paper or a5paper or ... 
-\usepackage{url}														% need this to use URLs in bibtex
-\usepackage{scrextend}													% need this for addmargin
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
 %
 %   tikz et al
 %
@@ -57,8 +57,9 @@
 %
 %
 \section{Introduction}
-The Brachistochrone problem, posed by Johann Bernoulli in June of
-1696 \cite{brachistochrone_problem}, asks the following question:
+Johann Bernoulli posed the "problem of the brachistochrone" to the
+readers of \emph{Acta Eruditorum} in June, 1696 \cite{1696acta}, 
+which asks the following question:
 
 \bigskip 
 \begin{addmargin}[3em]{8em}												% 3em left, 8em right
@@ -66,6 +67,7 @@ Given two points $A$ and $B$ in a vertical plane, what is the
 curve traced out by a point acted on only by gravity, which
 starts at $A$ and reaches $B$ in the shortest time?  
 \end{addmargin}
+
 
 \bigskip
 \noindent
@@ -79,7 +81,7 @@ The scenario Bernoulli envisioned is depicted in Figure
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.75 \textwidth}{!} {										% resize the figure if you want
+  \resizebox{0.80 \textwidth}{!} {										% resize the figure if you want
      \begin{tikzpicture} [framed]										% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
 %
 %	set up some coordinates
@@ -115,8 +117,199 @@ The scenario Bernoulli envisioned is depicted in Figure
 \medskip
 \section{A Bit of History}
 \label{sec:history}
+The problem posed by Johann Bernoulli was the called the Brachistochrone\footnote{The word 
+brachistochrone comes from the Ancient Greek: \emph{brachis} (shortest) + \emph{chronos} 
+(time) \cite{enwikisource:6202943}.} problem, or the path of fastest descent. Bernoulli 
+issued his challenge in \emph{Acta Eruditorum} \cite{1696acta}, writing
 
-\section{The Calculus of Variations}
+\bigskip
+\begin{addmargin}[2em]{7em}                             			% 3em left, 8em right
+I, Johann Bernoulli, address the most brilliant mathematicians in
+the world. Nothing is more attractive to intelligent people than
+an honest, challenging problem, whose possible solution will
+bestow fame and remain as a lasting monument. Following the
+example set by Pascal, Fermat, etc., I hope to gain the gratitude
+of the whole scientific community by placing before the finest
+mathematicians of our time a problem which will test their
+methods and the strength of their intellect. If someone
+communicates to me the solution of the proposed problem, I shall
+publicly declare him worthy of praise.
+\end{addmargin}
+
+
+\noindent
+Bernoulli wrote the problem statement as:
+
+\bigskip
+\begin{addmargin}[2em]{7em}
+Given two points A and B in a vertical plane, what is the curve traced 
+out by a point acted on only by gravity, which starts at A and reaches 
+B in the shortest time.
+\end{addmargin}
+
+\bigskip
+\noindent
+Figure \ref{fig:brachistochrone} attempts to capture Bernoulli's
+problem statement.
+
+\bigskip
+\noindent
+Galileo had attempted to solve this problem in his \emph{Two New Sciences} 
+\cite{wiki:two_new_sciences} and had concluded, based on geometric arguments, 
+that the solution was a circular path. Galileo's approach is shown in Figure 
+\ref{fig:galileo}. Apparently Galileo hedged a bit on his solution. In fact,  
+it is said that he had reservations about his conclusion and suggested that 
+a “higher mathematics” would possibly find a better solution.
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[frame,scale=0.35] {images/galileo.png}}
+\caption{Galileo considered a mass falling along different chords
+of a circle starting at A.  He proved that the path along ABG was
+quicker than along AG, and ABCG was quicker than ABG, and ABCDG
+was quicker than ABCG, etc.  In this way he showed that the path
+along the circular arc was quicker than any set of chords. From
+this he (incorrectly) inferred that the circle was the path of 
+quickest descent. Galileo held out reservations about his solution, 
+and rightfully so.} 
+\label{fig:galileo}
+\end{figure}
+
+
+\noindent
+Then in 1659, while studying the physics of
+pendulums and time keeping, Christiaan Huygens \cite{wiki:huygens}
+recognized that a perfect harmonic oscillator, one whose restoring 
+force was linear in the displacement of the oscillator, would produce 
+the perfect time piece. Unfortunately, while the pendulum (as proposed 
+by Galileo) was the simplest oscillator to construct, Huygens knew that 
+it was not a perfect harmonic oscillator. In particular, he knew that 
+the period of oscillation became smaller when the amplitude of the oscillation 
+became larger. In order to “fix” the pendulum, he searched for a curve of equal 
+time, called the \emph{tautochrone} \cite{wiki:tautochrone}, that would allow all 
+amplitudes of the pendulum to have the same period. He found the solution and 
+recognized it to be a cycloid curve. A generic cycloid curve is shown in 
+Figure \ref{fig:cycloid}.
+
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.75 \textwidth}{!} {											% resize the figure if you want
+    \begin{tikzpicture} [framed]											% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
+     \coordinate (O) at (0,0);
+     \coordinate (A) at (0,3);
+     \def\r{1}                                                          	% r is the radius
+     \def\c{1.4}                                                        	% c is the center
+     \coordinate (C) at (\c, \r);
+
+     \draw[-latex] (O) -- (A) node[anchor=south] {$y$};
+     \draw[-latex] (O) -- (2.6*pi,0) node[anchor=west] {$x$};
+     \draw[red,domain=-0.5*pi:2.5*pi,samples=50, line width=1] plot ({\x - sin(\x r)},{1 - cos(\x r)});
+     \draw[blue, line width=1] (C) circle (\r);
+     \draw[] (C) circle (\r);
+%
+%       set up some variables and coordinates
+%
+     \def\x{0.4}                                                        	% x
+     \def\y{0.83}															% y
+     \def\xa{0.3} 															% coordinate x for arc left
+     \def\ya{1.2} 															% coordinate y for arc left
+     \coordinate (X) at (\x, 0 );
+     \coordinate (Y) at (0, \y );
+     \coordinate (XY) at (\x, \y );
+     \node[anchor=north] at (X) {$x$} ;
+
+     \draw[fill=blue] (C) circle (1pt);   									% draw center of circle
+     \draw[] (C) -- node[anchor=south] {\; $a$} (XY);   					% draw radius of the circle
+     \coordinate (B) at (\c, 0);    										% bottom of circle, radius to the bottom
+     \draw[] (C) -- (B) node[anchor=north] {$a \, \theta$};
+%
+%       projections of point XY
+%
+     \draw[dotted] (XY) -- (X);
+     \draw[dotted] (XY) -- (Y) node[anchor=east, xshift=1mm] {$\quad y$};
+%
+%       arc theta
+%       start arc
+%
+     \coordinate (S) at (\c, 0.4);
+     \draw[->] (S) arc (-90:-165:0.6);
+     \node[xshift=-2mm, yshift=-2mm] at (C) {\scriptsize $\theta$};
+%
+%       arc above
+%
+     \coordinate (AA) at (\xa, \ya);
+     \draw[-latex, rotate=25] (AA) arc (-220:-260:1.3);
+%
+%       arc below
+%
+     \def\xb{2.5}                                                               % coordinate x for arc bottom
+     \def\yb{0.8}                                                               % coordinate y for arc bottom
+     \coordinate (AB) at (\xb, \yb);
+     \draw[-latex, rotate=-10] (AB) arc (-5:-45:1.3);
+     \draw[fill=black] (XY) circle (1pt);                                        % draw XY dot
+%
+%       top label
+%
+     \coordinate (T) at (pi, 2);
+     \node[anchor=south] at (T)  {$(\pi a, 2 a )$} ;
+     \draw[fill=black] (T) circle (1pt);
+%
+%       equations
+%
+     \coordinate (E) at ( 4,1.2);
+     \coordinate (F) at ( 4,0.9);
+     \node[] at (E) {\scriptsize $x=a(\theta - \sin \theta)$};
+     \node[] at (F) {\scriptsize $y=a(1 - \cos \theta)$};
+%
+%       label 2pi a
+%
+     \coordinate (TPA) at (2*pi, 0);
+     \node[anchor=north] at (TPA) {$2 \pi a$};
+    \end{tikzpicture}
+  }
+ \caption{The Cycloid Curve}
+ \label{fig:cycloid}
+\end{figure}
+
+
+\bigskip
+\noindent
+Almost thirty years later, during the infancy of the
+infinitesimal calculus, the Tautochrone problem was held up as a master
+example of an “optimal” solution whose derivation should yield to
+the much more powerful and elegant methods of the calculus.
+Jakob Bernoulli, Johann’s brother, succeeded in deriving the
+tautochrone in 1690 using the calculus, using the term “integral”
+for the first time in print, but it was not at first clear what
+other problems could yield in a similar way. 
+
+\bigskip
+\noindent
+Then, in 1696, Johann Bernoulli posed the Brachistrochrone problem in the pages of \emph{Acta Eruditorum}.  
+
+\subsection{A (Very) Brief Timeline of the Brachistrochrone Problem}
+
+\bigskip
+\begin{equation*}
+\begin{array}{lll}
+&\bullet \; 1638    & - \; \text{Galileo proposes arc of a circle as the least time solution (Figure \ref{fig:galileo})}            \\
+&\bullet \; 1658    & - \; \text{Pascal puts forth a challenge involving finding the area under a segment of a cycloid}             \\
+&\bullet \; 1659    & - \; \text{Huygens shows experimentally that the cycloid is the solution to the Tautochrone problem}          \\
+&\bullet \; 1662    & - \; \text{Fermat's Principle \cite{wiki:fermats_principle} (Principle of Least Time)}                        \\
+&\bullet \; 1696    & - \; \text{Johann Bernoulli poses the Brachistrochrone problem in \emph{Acta Eruditorum} (edited by Leibniz)} \\
+&\bullet \; 1697    & - \; \text{Solutions provided by the Bernoulli brothers, L'H\^{o}pital, Leibniz, and Newton (anonymously)}    \\
+&\bullet \; 1707    & - \; \text{Leonhard Euler is born}                                                                            \\
+&\bullet \; 1726    & - \; \text{Newton dies}                                                                                       \\
+&\bullet \; 1726    & - \; \text{Euler completes his Ph.D under Johann Bernoulli}                                                   \\
+&\bullet \; 1755    & - \; \text{Lagrange, at age 19,  provides an analytic solution to the Tautochrone problem}                    \\
+&\bullet \; 1755    & - \; \text{Euler drops his own (partly geometric) approach in favor of Lagrange's purely analytic approach}   \\
+&\bullet \; 1756    & - \; \text{Euler renames the subject the "Calculus of Variations" in his lecture \emph{Elementa Calculi Variationum} \cite{cov}}
+\end{array}
+\end{equation*}
+
+\bigskip
+\section{The Calculus of Variations and the Brachistrochrone Problem}
 \label{sec:cov}
 
 \section{Conclusions}
