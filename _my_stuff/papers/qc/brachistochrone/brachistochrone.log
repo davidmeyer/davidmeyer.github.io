@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 SEP 2021 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 SEP 2021 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -947,46 +947,73 @@ Package pdftex.def Info: images/galileo.png  used on input line 170.
 (pdftex.def)             Requested size: 603.25227pt x 589.1998pt.
 
 [2 <./images/galileo.png>]
-Overfull \hbox (51.38394pt too wide) detected at line 318
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 309.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 309.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 310.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 312.
+
+<images/cycloid_coordinates.png, id=27, 361.35pt x 333.245pt>
+File: images/cycloid_coordinates.png Graphic file (type png)
+<use images/cycloid_coordinates.png>
+Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 318
+.
+(pdftex.def)             Requested size: 216.81168pt x 199.94853pt.
+[3 <./images/cycloid_coordinates.png>]
+Overfull \hbox (51.38394pt too wide) detected at line 359
 []
  []
 
-(./brachistochrone.bbl [3]
-Underfull \hbox (badness 10000) in paragraph at lines 9--15
+(./brachistochrone.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 17--23
 \OT1/cmtt/m/n/10 ocw / pluginfile . php / 1118521 / mod _ resource / content / 
 3 / Introduction % 20to % 20the % 20calculus %
  []
 
-) [4] (./brachistochrone.aux) ) 
+[4]) [5] (./brachistochrone.aux) ) 
 Here is how much of TeX's memory you used:
- 28004 strings out of 478994
- 713288 string characters out of 5858184
- 1178595 words of memory out of 5000000
- 44986 multiletter control sequences out of 15000+600000
- 411216 words of font info for 54 fonts, out of 8000000 for 9000
+ 28015 strings out of 478994
+ 713562 string characters out of 5858184
+ 1177595 words of memory out of 5000000
+ 44995 multiletter control sequences out of 15000+600000
+ 411551 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,10n,116p,732b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
+{/usr/local/texlive/2021/texmf-dist/fonts/enc
+/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
 b>
-Output written on brachistochrone.pdf (4 pages, 501750 bytes).
+Output written on brachistochrone.pdf (5 pages, 520397 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

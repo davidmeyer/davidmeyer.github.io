@@ -279,10 +279,51 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
  \label{fig:cycloid}
 \end{figure}
 
+\bigskip
+\noindent
+BTW, how are the cycloid's coordinates computed? Consider the
+scenario depicted in Figure \ref{fig:cycloid_coordinates}. To
+find the coordinates of the point D in Figure \ref{fig:cycloid_coordinates} 
+we look at the distances involved. So first, we know a few things:
+
+\medskip
+\begin{itemize}
+ \item The x-coordinate is the length of OT minus the length of DB.
+ \item The y-coordinate is the length of CT minus the length of CB.
+ \item The length of an arc that is subtended by a central angle is 
+       equal to the radius times the central angle.  
+\end{itemize} 
 
 \bigskip
 \noindent
-Almost thirty years later, during the infancy of the
+Now, since the distance that circle C has rolled must be equal to
+the length of arc DT and arc DT is equal to a$\theta$ then
+$a\theta = \text{arc DT} = \text{OT}$. Also, we know from
+trigometry that $\text{DB} = a \sin \theta \text{ and } \text{CB}
+= a \cos \theta$.  
+
+\bigskip
+\noindent
+Therefore the coordinates of D are:
+\begin{itemize}
+\item x-coordinate:  $\text{OT} – \text{DB} = a\theta – a \sin
+\theta = a (\theta – \sin \theta)$ 
+\item y-coordinate: $\text{CT} – \text{CB} = a – a \cos \theta =
+a(1 – \cos \theta)$ 
+\end{itemize}
+
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.60] {images/cycloid_coordinates.png}}
+\caption{Computing Cycloid Coordinates \cite{cycloid_coordinates}} 
+\label{fig:cycloid_coordinates}
+\end{figure}
+
+
+\bigskip
+\noindent
+Back to the history. So almost thirty years later, during the infancy of the
 infinitesimal calculus, the Tautochrone problem was held up as a
 master example of an “optimal” solution whose derivation should
 yield to the much more powerful and elegant methods of the
