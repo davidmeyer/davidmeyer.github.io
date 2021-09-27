@@ -199,7 +199,7 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 
 \begin{figure}[H]
   \centering
-  \resizebox{0.85 \textwidth}{!} {											% resize the figure if you want
+  \resizebox{0.80 \textwidth}{!} {											% resize the figure if you want
     \begin{tikzpicture} [framed]											% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
      \coordinate (O) at (0,0);
      \coordinate (A) at (0,3);
@@ -283,13 +283,13 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 \noindent
 BTW, how are the cycloid's coordinates computed? Consider the
 scenario depicted in Figure \ref{fig:cycloid_coordinates}. To
-find the coordinates of the point D in Figure \ref{fig:cycloid_coordinates} 
-we look at the distances involved. So first, we know a few things:
+find the coordinates of the point D we look at the distances 
+involved. From the figure we can see that:
 
 \medskip
 \begin{itemize}
  \item The x-coordinate is the length of OT minus the length of DB.
- \item The y-coordinate is the length of CT minus the length of CB.
+ \item The y-coordinate is the length of CT minus the length of CB (note that CT = $a$).
  \item The length of an arc that is subtended by a central angle is 
        equal to the radius times the central angle.  
 \end{itemize} 
@@ -315,7 +315,7 @@ a(1 – \cos \theta)$
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.60] {images/cycloid_coordinates.png}}
+\center{\includegraphics[scale=0.65] {images/cycloid_coordinates.png}}
 \caption{Computing Cycloid Coordinates \cite{cycloid_coordinates}} 
 \label{fig:cycloid_coordinates}
 \end{figure}
