@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 SEP 2021 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 SEP 2021 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1434,7 +1434,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 59
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -1445,7 +1445,7 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
- [3]
+ [4]
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -1546,18 +1546,15 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-[4] [5] (./graphs.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[5] [6] (./graphs.aux)
 Package rerunfilecheck Info: File `graphs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45044 strings out of 478994
- 1055774 string characters out of 5858184
- 1529545 words of memory out of 5000000
- 61632 multiletter control sequences out of 15000+600000
+ 45065 strings out of 478994
+ 1056147 string characters out of 5858184
+ 1529872 words of memory out of 5000000
+ 61651 multiletter control sequences out of 15000+600000
  420139 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,17n,116p,730b,2067s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1576,10 +1573,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on graphs.pdf (5 pages, 168075 bytes).
+Output written on graphs.pdf (6 pages, 168684 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

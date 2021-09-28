@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{conservation_of_energy}
+{James Pazun}.
+\newblock {Potential Energy and Energy Conservation}.
+\newblock \url{http://people.tamu.edu/~mahapatra/teaching/ch7.pdf}, 2008.
+\newblock [Online; accessed 28-September-2021].
+
 \bibitem{1696acta}
 Gottfried~Wilhelm Leibniz, editor.
 \newblock {\em Acta eruditorum}.
@@ -28,6 +34,14 @@ Gottfried~Wilhelm Leibniz, editor.
   \url{https://www.open.edu/openlearn/ocw/pluginfile.php/1118521/mod_resource/content/3/Introduction%20to%20the%20calculus%20of%20variations_ms327.pdf},
   2021.
 \newblock [Online; accessed 8-September-2021].
+
+\bibitem{wiki:cov}
+{Wikipedia contributors}.
+\newblock {Calculus of Variations --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Calculus_of_variations&oldid=1044285542},
+  2021.
+\newblock [Online; accessed 28-September-2021].
 
 \bibitem{wiki:huygens}
 {Wikipedia contributors}.

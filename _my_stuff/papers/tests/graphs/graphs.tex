@@ -60,6 +60,24 @@
 
 \begin{figure}[H]
   \centering
+  \resizebox{0.30 \textwidth}{!} {											% resize the figure if you want
+    \begin{tikzpicture}
+      \draw (0,0) coordinate[] (a) --
+            (3,0) coordinate[] (c) --
+            (3,3) coordinate[] (b) -- cycle;
+       \draw[draw=none] (a) -- (c) coordinate [label={[yshift=-0.1cm,midway,below]	${dx}$}];    % dx
+       \draw[draw=none] (c) -- (b) coordinate [label={[midway,right]  				${dy}$}];    % dy
+       \draw[draw=none] (a) -- (b) coordinate [label={[xshift=-0.2cm,midway,left]	${ds}$}];    % ds
+    \end{tikzpicture}
+  }
+ \caption{$ds^2 = dx^2 + dy^2$}
+ \label{fig:ds}
+\end{figure}
+
+
+
+\begin{figure}[H]
+  \centering
   \resizebox{0.65 \textwidth}{!} {											% resize the figure if you want
     \begin{tikzpicture} [framed]											% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
      \coordinate (O) at (0,0);

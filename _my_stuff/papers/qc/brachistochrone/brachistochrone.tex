@@ -297,11 +297,11 @@ the figure that
 
 \medskip
 \begin{itemize}
- \item The x-coordinate is the length of OT minus the length of DB.
+ \item The x-coordinate is the length of OT minus the length of DB
  \item The y-coordinate is the length of CT minus the length of CB 
- (note that CT = $a$ is the radius of C).
+ (note that CT = $a$ is the radius of C)
  \item The length of an arc that is subtended by a central angle is 
-       equal to the radius times the central angle.  
+       equal to the radius times the central angle
 \end{itemize} 
 
 \bigskip
@@ -319,7 +319,7 @@ If we work out these lengths we see that
 \begin{equation*}
 \begin{array}{lllll}
 x
-&=& \text{OT - DB}   			&\qquad \qquad \qquad \mathrel{\#} \text{See Figure \ref{fig:cycloid_coordinates}} \\
+&=& \text{OT - DB}   					&\qquad \qquad \qquad \mathrel{\#} \text{See Figure \ref{fig:cycloid_coordinates}} \\
 [5pt]
 &=& a\theta \; – \; a \sin \theta       &\qquad \qquad \qquad \mathrel{\#} \text{OT = radius times the central angle = $a \theta$ and DB $= a \sin \theta$} \\
 [5pt]
@@ -328,7 +328,7 @@ x
 \hspace{-2em} \text{and} \\
 [10pt]
 y
-&=& \text{CT - CB}   			&\qquad \qquad \qquad \mathrel{\#} \text{Figure \ref{fig:cycloid_coordinates}} \\
+&=& \text{CT - CB}   					&\qquad \qquad \qquad \mathrel{\#} \text{Figure \ref{fig:cycloid_coordinates}} \\
 [5pt]
 &=& a \; – \; a \cos \theta             &\qquad \qquad \qquad \mathrel{\#} \text{CT = $a$ and CB $= a \cos \theta$} \\
 [5pt]
@@ -383,6 +383,96 @@ problem in the pages of \emph{Acta Eruditorum}.
 \medskip
 \section{The Calculus of Variations and the Brachistrochrone Problem}
 \label{sec:cov}
+Recall the Brachistochrone problem setup shown in Figure \ref{fig:brachistochrone}. 
+Here we are trying to find the \emph{path} that takes the shortest time from point 
+$A$ to $B$. In the language of the calculus of variations \cite{wiki:cov} we want
+to evaluate the functional
+
+\begin{equation*}
+I[t] = \int_{0}^{t} dt
+\end{equation*}
+
+\bigskip
+\noindent
+Consider a curve over in which we call an infinitesimal segment of the path is $ds$. Then
+we know that the velocity of the ball (or bead, in Bernoulli's original problem statement) 
+is
+
+\begin{equation}
+V = \dfrac{ds}{dt}
+\label{eqn:v}
+\end{equation}
+
+\bigskip
+\noindent
+Now, treating the derivative as a fraction\footnote{Care needs to be taken when 
+treating a derivative as a fraction.} we can see from Equation \ref{eqn:v} that
+
+\begin{equation*}
+dt = \dfrac{ds}{V}
+\end{equation*}
+
+\bigskip
+\noindent
+and so 
+
+\begin{equation*}
+I = \int_{0}^{t} dt = \int_A^B \dfrac{ds}{V}
+\end{equation*}
+
+\bigskip
+\noindent
+Next, what can se say about $ds$? Well, we know from Pythagoras that 
+$ds^2 = dx^2 + dy^2$ which is shown in Figure \ref{fig:pythagorean_theorem}.
+
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.27 \textwidth}{!} {																				% resize the figure if you want
+    \begin{tikzpicture}
+      \draw (0,0) coordinate[] (a) --
+            (3,0) coordinate[] (c) --
+            (3,3) coordinate[] (b) -- cycle;
+       \draw[draw=none] (a) -- (c) coordinate [label={[yshift=-0.1cm,midway,below]					${dx}$}];    % dx
+       \draw[draw=none] (c) -- (b) coordinate [label={[xshift=0.025,midway,right]  					${dy}$}];    % dy
+       \draw[draw=none] (a) -- (b) coordinate [label={[xshift=-0.2cm,yshift=0.025cm,midway,left]	${ds}$}];    % ds
+    \end{tikzpicture}
+  }
+ \caption{$ds^2 = dx^2 + dy^2$}
+ \label{fig:pythagorean_theorem}
+\end{figure}
+
+\bigskip
+\noindent
+Now we can compute $ds$:
+
+\begin{equation*}
+\begin{array}{lllll}
+ds^2
+&=& dx^2 + dy^2   												&\qquad \qquad \qquad \mathrel{\#} \text{Pythagorean Theorem (Figure \ref{fig:pythagorean_theorem})} \\
+[10pt]
+&=& \left ( 1 + \dfrac{dy^2}{dx^2} \right ) dx^2				&\qquad \qquad \qquad \mathrel{\#} \text{factor out $dx^2$} \\
+[12pt]
+&=& \left ( 1 + \left (\dfrac{dy}{dx} \right )^2 \right ) dx^2	&\qquad \qquad \qquad \mathrel{\#} \text{group $\dfrac{dy}{dx}$} \\
+[12pt]
+&=& \left ( 1 + {y^{\prime}}^2 \right ) dx^2					&\qquad \qquad \qquad \mathrel{\#} y^{\prime} = \dfrac{dy}{dx} \\
+[10pt]
+&\Rightarrow& ds = \sqrt{1 + {y^{\prime}}^2} dx					&\qquad \qquad \qquad \mathrel{\#} \text{note: here we're treating $\dfrac{dy}{dx}$ as a fraction}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+Next, we know from the Law of Conservation of Energy \cite{conservation_of_energy}
+that 
+
+\begin{equation*}
+\dfrac{1}{2} mV^2 - mgy = 0 \Rightarrow \dfrac{1}{2} mV^2 = mgy \Rightarrow 
+\dfrac{1}{2} V^2 = gy \Rightarrow V = \sqrt{2gy}
+\end{equation*}
+
+
 
 \section{Conclusions}
 
