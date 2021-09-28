@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  27 SEP 2021 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 SEP 2021 08:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -945,52 +945,58 @@ File: images/galileo.png Graphic file (type png)
 <use images/galileo.png>
 Package pdftex.def Info: images/galileo.png  used on input line 170.
 (pdftex.def)             Requested size: 603.25227pt x 589.1998pt.
+<images/cycloid_coordinates.png, id=23, 361.35pt x 333.245pt>
+File: images/cycloid_coordinates.png Graphic file (type png)
+<use images/cycloid_coordinates.png>
+Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 285
+.
+(pdftex.def)             Requested size: 216.81168pt x 199.94853pt.
 
 [2 <./images/galileo.png>]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 309.
+LaTeX Warning: Command \textendash invalid in math mode on input line 324.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 309.
+LaTeX Warning: Command \textendash invalid in math mode on input line 326.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 310.
+LaTeX Warning: Command \textendash invalid in math mode on input line 326.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 311.
+LaTeX Warning: Command \textendash invalid in math mode on input line 333.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 311.
+LaTeX Warning: Command \textendash invalid in math mode on input line 335.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 312.
+LaTeX Warning: Command \textendash invalid in math mode on input line 335.
 
-<images/cycloid_coordinates.png, id=27, 361.35pt x 333.245pt>
-File: images/cycloid_coordinates.png Graphic file (type png)
-<use images/cycloid_coordinates.png>
-Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 318
-.
-(pdftex.def)             Requested size: 234.87471pt x 216.60667pt.
-[3 <./images/cycloid_coordinates.png>]
-Overfull \hbox (51.38394pt too wide) detected at line 359
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 342.
+
+
+Overfull \hbox (51.38394pt too wide) detected at line 381
 []
  []
 
-(./brachistochrone.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
+[3 <./images/cycloid_coordinates.png>] (./brachistochrone.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 25--31
 \OT1/cmtt/m/n/10 ocw / pluginfile . php / 1118521 / mod _ resource / content / 
 3 / Introduction % 20to % 20the % 20calculus %
  []
 
 [4]) [5] (./brachistochrone.aux) ) 
 Here is how much of TeX's memory you used:
- 28015 strings out of 478994
- 713562 string characters out of 5858184
- 1177595 words of memory out of 5000000
- 44995 multiletter control sequences out of 15000+600000
+ 28017 strings out of 478994
+ 713601 string characters out of 5858184
+ 1179594 words of memory out of 5000000
+ 44997 multiletter control sequences out of 15000+600000
  411551 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,10n,116p,732b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,11n,116p,732b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc
 /dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
@@ -1010,7 +1016,7 @@ sy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 .pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
 b>
-Output written on brachistochrone.pdf (5 pages, 520418 bytes).
+Output written on brachistochrone.pdf (5 pages, 522127 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

@@ -44,7 +44,7 @@
 %
 \title{A Few Notes on the Brachistochrone Problem}
 \author{David Meyer \\ dmm@1-4-5.net}
-\date{Last update: \today}												% Activate to display a given date or no date
+\date{Last update: \today}                                                                           % Activate to display a given date or no date
 %
 %	be compatible
 %
@@ -62,7 +62,7 @@ readers of \emph{Acta Eruditorum} in June, 1696 \cite{1696acta},
 which asks the following question:
 
 \bigskip 
-\begin{addmargin}[2em]{7em}												% 2em left, 7em right
+\begin{addmargin}[2em]{7em}                                                                             % 2em left, 7em right
 Given two points $A$ and $B$ in a vertical plane, what is the
 curve traced out by a point acted on only by gravity, which
 starts at $A$ and reaches $B$ in the shortest time?  
@@ -81,8 +81,8 @@ The scenario Bernoulli envisioned is depicted in Figure
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.80 \textwidth}{!} {										% resize the figure if you want
-     \begin{tikzpicture} [framed]										% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
+  \resizebox{0.80 \textwidth}{!} {                                                                      % resize the figure if you want
+     \begin{tikzpicture} [framed]                                                                       % draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
 %
 %	set up some coordinates
 %
@@ -98,15 +98,15 @@ The scenario Bernoulli envisioned is depicted in Figure
 %
 %	draw the picture
 %
-        \draw[blue, thick] (A) to [bend right=50] (B);					% draw the curve in blue
+        \draw[blue, thick] (A) to [bend right=50] (B);                 	% draw the curve in blue
         \node[circle, draw=black, fill=red, scale=0.70] at (Ball) {};	% draw a red ball with a black outline on the curve
         \draw[-stealth, thin] (D0) -- (D1);								% draw an arrow in the direction the ball is moving
         \fill (A) circle (0.035);										% put a dot on the curve at A
         \fill (B) circle (0.035);										% put a dot on the curve at B
-        \draw[draw=none] (A) node[xshift=-0.10cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};						% label A
-        \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize, right] {$B \; (x_2,y_2)$};						% label B
-        \draw[-stealth, thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];						% draw x axis
-        \draw[-stealth, thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];						% draw y axis
+        \draw[draw=none] (A) node[xshift=-0.10cm, font=\footnotesize, left] {$A \; (x_1,y_1)$};		% label A
+        \draw[draw=none] (B) node[xshift=0.10cm, font=\footnotesize, right] {$B \; (x_2,y_2)$};		% label B
+        \draw[-stealth, thin] (A) -- (Ax) coordinate [label={[font=\scriptsize, above] $x$}];		% draw x axis
+        \draw[-stealth, thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];		% draw y axis
         \draw[-stealth, thick] (Gy0) -- (Gy1) coordinate [label={[font=\footnotesize, midway, right] $\vec{g}$}];	% draw the gravity vector (g)
       \end{tikzpicture}													% end \tikzipcture
     }																	% end \resizebox
@@ -163,11 +163,11 @@ path. Galileo's approach is shown in Figure
 \ref{fig:galileo}. Apparently Galileo hedged a bit on his
 solution. In fact, it is said that he had reservations about his
 conclusion and suggested that a “higher mathematics” would
-possibly find a better solution. 
+possibly find a better solution \cite{brachistochrone_problem}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.35] {images/galileo.png}}
+\center{\includegraphics[frame,scale=0.27] {images/galileo.png}}
 \caption{Galileo considered a mass falling along different chords 
 of a circle starting at A.  He proved that the path along ABG was
 quicker than along AG, and ABCG was quicker than ABG, and ABCDG
@@ -193,18 +193,18 @@ amplitude of the oscillation became larger. In order to “fix” the
 pendulum, he searched for a curve of equal time, called the
 \emph{tautochrone} \cite{wiki:tautochrone}, that would allow all
 amplitudes of the pendulum to have the same period. He found the
-solution and recognized it to be a cycloid curve. A generic
-cycloid curve is shown in Figure \ref{fig:cycloid}.
+solution and recognized it to be a cycloid \cite{wiki:cycloid}. 
+The cycloid is shown in Figure \ref{fig:cycloid}.
 
-
+\bigskip
 \begin{figure}[H]
   \centering
-  \resizebox{0.80 \textwidth}{!} {											% resize the figure if you want
-    \begin{tikzpicture} [framed]											% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
+  \resizebox{0.63 \textwidth}{!} {										% resize the figure if you want
+    \begin{tikzpicture} [framed]										% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
      \coordinate (O) at (0,0);
      \coordinate (A) at (0,3);
-     \def\r{1}                                                          	% r is the radius
-     \def\c{1.4}                                                        	% c is the center
+     \def\r{1}															% r is the radius
+     \def\c{1.4}														% c is the center
      \coordinate (C) at (\c, \r);
 
      \draw[-latex] (O) -- (A) node[anchor=south] {$y$};
@@ -215,18 +215,18 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 %
 %       set up some variables and coordinates
 %
-     \def\x{0.4}                                                        	% x
-     \def\y{0.83}															% y
-     \def\xa{0.3} 															% coordinate x for arc left
-     \def\ya{1.2} 															% coordinate y for arc left
+     \def\x{0.4}														% x
+     \def\y{0.83}														% y
+     \def\xa{0.3} 														% coordinate x for arc left
+     \def\ya{1.2}														% coordinate y for arc left
      \coordinate (X)     at (\x, 0 );
      \coordinate (Y)     at (0, \y );
      \coordinate (XY)    at (\x, \y );
      \node[anchor=north] at (X) {$x$};
-     \draw[fill=black] (O) circle (1pt);									% draw a dot at the origin
-     \draw[fill=blue]  (C) circle (1pt);   									% draw center of circle
-     \draw[] (C) -- node[anchor=south] {\; $a$} (XY);   					% draw radius of the circle
-     \coordinate (B) at (\c, 0);    										% bottom of circle, radius to the bottom
+     \draw[fill=black] (O) circle (1pt);								% draw a dot at the origin
+     \draw[fill=blue]  (C) circle (1pt);   								% draw center of circle
+     \draw[] (C) -- node[anchor=south] {\; $a$} (XY);					% draw radius of the circle
+     \coordinate (B) at (\c, 0);    									% bottom of circle, radius to the bottom
      \draw[] (C) -- (B) node[anchor=north] {$a \, \theta$};
 %
 %       projections of point XY
@@ -248,11 +248,11 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 %
 %       arc below
 %
-     \def\xb{2.5}                                                               % coordinate x for arc bottom
-     \def\yb{0.8}                                                               % coordinate y for arc bottom
+     \def\xb{2.5}														% coordinate x for arc bottom
+     \def\yb{0.8}														% coordinate y for arc bottom
      \coordinate (AB) at (\xb, \yb);
      \draw[-latex, rotate=-10] (AB) arc (-5:-45:1.3);
-     \draw[fill=black] (XY) circle (1pt);                                        % draw XY dot
+     \draw[fill=black] (XY) circle (1pt);								% draw XY dot
 %
 %       top label
 %
@@ -271,7 +271,7 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
 %
      \coordinate (TPA) at (2*pi, 0);
      \node[anchor=north] at (TPA) {$2 \pi a$};
-     \draw[fill=black] (TPA) circle (1pt);										% draw a dot on the x axis at 2 \pi a
+     \draw[fill=black] (TPA) circle (1pt);								% draw a dot on the x axis at 2 \pi a
 
     \end{tikzpicture}
   }
@@ -279,17 +279,27 @@ cycloid curve is shown in Figure \ref{fig:cycloid}.
  \label{fig:cycloid}
 \end{figure}
 
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.60] {images/cycloid_coordinates.png}}
+\caption{Finding The Coordinates Of The Point D On A Cycloid}
+\label{fig:cycloid_coordinates}
+\end{figure}
+
 \bigskip
 \noindent
-BTW, how are the cycloid's coordinates computed? Consider the
-scenario depicted in Figure \ref{fig:cycloid_coordinates}. To
-find the coordinates of the point D we look at the distances 
-involved. From the figure we can see that:
+BTW, how are the cycloid's $(x,y)$ coordinates computed? Consider
+the scenario depicted in Figure \ref{fig:cycloid_coordinates}
+\cite{cycloid_coordinates}. To find the $(x,y)$ coordinates of
+the point D we look at the distances involved. We can see from
+the figure that  
 
 \medskip
 \begin{itemize}
  \item The x-coordinate is the length of OT minus the length of DB.
- \item The y-coordinate is the length of CT minus the length of CB (note that CT = $a$).
+ \item The y-coordinate is the length of CT minus the length of CB 
+ (note that CT = $a$ is the radius of C).
  \item The length of an arc that is subtended by a central angle is 
        equal to the radius times the central angle.  
 \end{itemize} 
@@ -297,64 +307,76 @@ involved. From the figure we can see that:
 \bigskip
 \noindent
 Now, since the distance that circle C has rolled must be equal to
-the length of arc DT and arc DT is equal to a$\theta$ then
-$a\theta = \text{arc DT} = \text{OT}$. Also, we know from
-trigometry that $\text{DB} = a \sin \theta \text{ and } \text{CB}
+the length of arc DT and the arc DT is equal to $a \theta$ we know
+that $a\theta = \text{arc DT} = \text{OT}$. We also know from
+trigonometry that $\text{DB} = a \sin \theta \text{ and } \text{CB}
 = a \cos \theta$.  
 
 \bigskip
 \noindent
-Therefore the coordinates of D are:
-\begin{itemize}
-\item x-coordinate:  $\text{OT} – \text{DB} = a\theta – a \sin
-\theta = a (\theta – \sin \theta)$ 
-\item y-coordinate: $\text{CT} – \text{CB} = a – a \cos \theta =
-a(1 – \cos \theta)$ 
-\end{itemize}
+If we work out these lengths we see that
 
+\begin{equation*}
+\begin{array}{lllll}
+x
+&=& \text{OT - DB}   			&\qquad \qquad \qquad \mathrel{\#} \text{See Figure \ref{fig:cycloid_coordinates}} \\
+[5pt]
+&=& a\theta \; – \; a \sin \theta       &\qquad \qquad \qquad \mathrel{\#} \text{OT = radius times the central angle = $a \theta$ and DB $= a \sin \theta$} \\
+[5pt]
+&=& a (\theta \; – \; \sin \theta)      &\qquad \qquad \qquad \mathrel{\#} x = a (\theta – \sin \theta) \\
+[10pt]
+\hspace{-2em} \text{and} \\
+[10pt]
+y
+&=& \text{CT - CB}   			&\qquad \qquad \qquad \mathrel{\#} \text{Figure \ref{fig:cycloid_coordinates}} \\
+[5pt]
+&=& a \; – \; a \cos \theta             &\qquad \qquad \qquad \mathrel{\#} \text{CT = $a$ and CB $= a \cos \theta$} \\
+[5pt]
+&=& a (1 \; – \; \cos \theta)           &\qquad \qquad \qquad \mathrel{\#} y = a (1 – \cos \theta) 
+\end{array}
+\end{equation*}
 
 \bigskip
-\begin{figure}[H]
-\center{\includegraphics[scale=0.65] {images/cycloid_coordinates.png}}
-\caption{Computing Cycloid Coordinates \cite{cycloid_coordinates}} 
-\label{fig:cycloid_coordinates}
-\end{figure}
+\noindent
+So as we saw in Figure \ref{fig:cycloid}, $x = a (\theta – \sin
+\theta)$ and $y = a (1 – \cos \theta)$. 
 
 
 \bigskip
 \noindent
-Back to the history. So almost thirty years later, during the infancy of the
-infinitesimal calculus, the Tautochrone problem was held up as a
-master example of an “optimal” solution whose derivation should
-yield to the much more powerful and elegant methods of the
-calculus. Jakob Bernoulli, Johann’s brother, succeeded in
-deriving the Tautochrone problem in 1690 using the calculus, 
-using the term “integral” for the first time in print, but it 
-was not at first clear what other problems could yield in a 
-similar way. 
+Ok, back to the history. So almost thirty years later, during the
+infancy of the infinitesimal calculus, the Tautochrone problem
+was held up as a master example of an “optimal” solution whose
+derivation should yield to the much more powerful and elegant
+methods of the calculus. Jakob Bernoulli, Johann’s brother,
+succeeded in deriving the Tautochrone problem in 1690 using the
+calculus, using the term “integral” for the first time in print,
+but it was not at first clear what other problems could yield in
+a similar way. 
 
 \bigskip
 \noindent
 Then, in 1696, Johann Bernoulli posed the Brachistrochrone
 problem in the pages of \emph{Acta Eruditorum}.   
 
-\subsection{A (Very) Brief Timeline of the Brachistrochrone Problem}
+\subsection{A (Very) Brief Timeline of Brachistrochrone Related Events}
 
 \bigskip
+
 \begin{equation*}
 \begin{array}{lll}
 &\bullet \; 1638    & - \; \text{Galileo proposes arc of a circle as the least time solution (Figure \ref{fig:galileo})}            \\
 &\bullet \; 1658    & - \; \text{Pascal puts forth a challenge involving finding the area under a segment of a cycloid}             \\
 &\bullet \; 1659    & - \; \text{Huygens shows experimentally that the cycloid is the solution to the Tautochrone problem}          \\
-&\bullet \; 1662    & - \; \text{Fermat's Principle \cite{wiki:fermats_principle} (Principle of Least Time)}                        \\
+&\bullet \; 1662    & - \; \text{Fermat's proposes the Principle of Least Time \cite{wiki:fermats_principle}}                       \\
 &\bullet \; 1696    & - \; \text{Johann Bernoulli poses the Brachistrochrone problem in \emph{Acta Eruditorum} (edited by Leibniz)} \\
 &\bullet \; 1697    & - \; \text{Solutions provided by the Bernoulli brothers, L'H\^{o}pital, Leibniz, and Newton (anonymously)}    \\
 &\bullet \; 1707    & - \; \text{Euler is born}                                                                                     \\
 &\bullet \; 1726    & - \; \text{Newton dies}                                                                                       \\
 &\bullet \; 1726    & - \; \text{Euler completes his Ph.D under Johann Bernoulli}                                                   \\
-&\bullet \; 1755    & - \; \text{Lagrange, at age 19, provides an analytic solution to the Tautochrone problem}                     \\
-&\bullet \; 1755    & - \; \text{Euler drops his own (partly geometric) approach in favor of Lagrange's purely analytic approach}   \\
-&\bullet \; 1756    & - \; \text{Euler renames the subject the "Calculus of Variations" in his lecture \emph{Elementa Calculi Variationum} \cite{cov}}
+&\bullet \; 1755    & - \; \text{Lagrange, at age 19, finds an analytic solution to the Tautochrone problem}                        \\
+&\bullet \; 1755    & - \; \text{Euler drops his own approach in favor of Lagrange's purely analytic approach}                      \\
+&\bullet \; 1756    & - \; \text{Euler renames the subject the "Calculus of Variations" in his \emph{Elementa Calculi Variationum} lecture \cite{cov}}
 \end{array}
 \end{equation*}
 

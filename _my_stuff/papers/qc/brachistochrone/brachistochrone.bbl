@@ -1,9 +1,17 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{1696acta}
 Gottfried~Wilhelm Leibniz, editor.
 \newblock {\em Acta eruditorum}.
 \newblock Acta eruditorum. Christoph G{\"u}nther, 1696.
+
+\bibitem{brachistochrone_problem}
+{Marco Tavora}.
+\newblock {The Famous Problem of the Brachistochrone}.
+\newblock
+  \url{https://www.cantorsparadise.com/the-famous-problem-of-the-brachistochrone-8b955d24bdf7},
+  Nov 2020.
+\newblock [Online; accessed 26-September-2021].
 
 \bibitem{cycloid_coordinates}
 {Susan Sexton}.
@@ -28,6 +36,14 @@ Gottfried~Wilhelm Leibniz, editor.
   \url{https://en.wikipedia.org/w/index.php?title=Christiaan_Huygens&oldid=1046113855},
   2021.
 \newblock [Online; accessed 27-September-2021].
+
+\bibitem{wiki:cycloid}
+{Wikipedia contributors}.
+\newblock {Cycloid --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Cycloid&oldid=1021814700},
+  2021.
+\newblock [Online; accessed 28-September-2021].
 
 \bibitem{wiki:fermats_principle}
 {Wikipedia contributors}.
