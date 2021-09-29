@@ -388,7 +388,7 @@ Consider a definite integral that depends on an unknown function $y(x)$ and its 
 $y^{\prime}(x) = \frac{dy}{dx}$
 
 \begin{equation}
-I[y(x)] = \int_a^b F(x, y, y^{\prime}) \; dx
+I[y(x)] = \int_a^b L(y(x), y^{\prime}(x)) \; dx
 \label{eqn:I[y]}
 \end{equation}
 
@@ -399,7 +399,8 @@ maximizes or minimizes the integral $I[y(t)]$ (Equation \ref{eqn:I[y]}), subject
 $y(a) = A$ and $y(b) = B$. The integral $I[y(t)]$ is an example of a \emph{functional}, which (more generally) 
 is a mapping from a set of allowable functions to the reals. We say that $I[y(x)]$ has an \emph{extremum}
 when $I[y(x)]$ takes its maximum or minimum value. Note that we use square brackets to indicate that $I$
-is a functional (rather than a function) and usually abbreviate $y(x)$ as just $y$.
+is a functional (rather than a function) and we frequently see $y(x)$ abbreviated as $y$ and $I[y(x)]$ 
+as $I[y]$ (or just $I$). 
 
 \subsection{The Euler-Lagrange Equation}
 Let $C^k [a,b]$ denote the set of continuous functions defined on the interval $a \leq x \leq b$ whose 
@@ -408,7 +409,7 @@ extremum of the functional
 
 \medskip
 \begin{equation*}
-I[y] = \int_a^b F(x, y, y^{\prime}) \; dx
+I[y(x)] = \int_a^b L(y(x), y^{\prime}(x)) \; dx
 \end{equation*}
 
 \bigskip
