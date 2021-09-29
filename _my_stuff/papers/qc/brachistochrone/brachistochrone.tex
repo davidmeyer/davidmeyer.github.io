@@ -366,36 +366,86 @@ problem in the pages of \emph{Acta Eruditorum}.
 
 \begin{equation*}
 \begin{array}{lll}
-&\bullet \; 1638    & - \; \text{Galileo proposes arc of a circle as the least time solution (Figure \ref{fig:galileo})}            \\
-&\bullet \; 1658    & - \; \text{Pascal puts forth a challenge involving finding the area under a segment of a cycloid}             \\
-&\bullet \; 1659    & - \; \text{Huygens shows experimentally that the cycloid is the solution to the Tautochrone problem}          \\
-&\bullet \; 1662    & - \; \text{Fermat's proposes the Principle of Least Time \cite{wiki:fermats_principle}}                       \\
-&\bullet \; 1696    & - \; \text{Johann Bernoulli poses the Brachistrochrone problem in \emph{Acta Eruditorum} (edited by Leibniz)} \\
-&\bullet \; 1697    & - \; \text{Solutions provided by the Bernoulli brothers, L'H\^{o}pital, Leibniz, and Newton (anonymously)}    \\
-&\bullet \; 1707    & - \; \text{Euler is born}                                                                                     \\
-&\bullet \; 1726    & - \; \text{Newton dies}                                                                                       \\
-&\bullet \; 1726    & - \; \text{Euler completes his Ph.D under Johann Bernoulli}                                                   \\
-&\bullet \; 1755    & - \; \text{Lagrange, at age 19, finds an analytic solution to the Tautochrone problem}                        \\
-&\bullet \; 1755    & - \; \text{Euler drops his own approach in favor of Lagrange's purely analytic approach}                      \\
-&\bullet \; 1756    & - \; \text{Euler renames the subject the "Calculus of Variations" in his \emph{Elementa Calculi Variationum} lecture \cite{cov}}
+&\bullet \; 1638  & - \; \text{Galileo proposes arc of a circle as the least time solution (Figure \ref{fig:galileo})}            \\
+&\bullet \; 1658  & - \; \text{Pascal puts forth a challenge involving finding the area under a segment of a cycloid}             \\
+&\bullet \; 1659  & - \; \text{Huygens shows experimentally that the cycloid is the solution to the Tautochrone problem}          \\
+&\bullet \; 1662  & - \; \text{Fermat's proposes the Principle of Least Time \cite{wiki:fermats_principle}}                       \\
+&\bullet \; 1696  & - \; \text{Johann Bernoulli poses the Brachistrochrone problem in \emph{Acta Eruditorum} (edited by Leibniz)} \\
+&\bullet \; 1697  & - \; \text{Solutions provided by the Bernoulli brothers, L'H\^{o}pital, Leibniz, and Newton (anonymously)}    \\
+&\bullet \; 1707  & - \; \text{Euler is born}                                                                                     \\
+&\bullet \; 1726  & - \; \text{Newton dies}                                                                                       \\
+&\bullet \; 1726  & - \; \text{Euler completes his Ph.D under Johann Bernoulli}                                                   \\
+&\bullet \; 1755  & - \; \text{Lagrange, at age 19, finds an analytic solution to the Tautochrone problem}                        \\
+&\bullet \; 1755  & - \; \text{Euler drops his own approach in favor of Lagrange's purely analytic approach}                      \\
+&\bullet \; 1756  & - \; \text{Euler renames the subject the "Calculus of Variations" in his \emph{Elementa Calculi Variationum} lecture \cite{cov}}
 \end{array}
 \end{equation*}
 
 \medskip
 \section{The Calculus of Variations and the Brachistrochrone Problem}
 \label{sec:cov}
-Recall the Brachistochrone problem setup shown in Figure \ref{fig:brachistochrone}. 
-Here we are trying to find the \emph{path} that takes the shortest time from point 
-$A$ to $B$. In the language of the calculus of variations \cite{wiki:cov} we want
-to evaluate the functional
+Consider a definite integral that depends on an unknown function $y(x)$ and its derivative 
+$y^{\prime}(x) = \frac{dy}{dx}$
 
+\begin{equation}
+I[y(x)] = \int_a^b F(x, y, y^{\prime}) \; dx
+\label{eqn:I[y]}
+\end{equation}
+
+\bigskip
+\noindent
+A typical problem in the Calculus of Variations involves finding a particular function $y(x)$ that 
+maximizes or minimizes the integral $I[y(t)]$ (Equation \ref{eqn:I[y]}), subject to the boundary conditions 
+$y(a) = A$ and $y(b) = B$. The integral $I[y(t)]$ is an example of a \emph{functional}, which (more generally) 
+is a mapping from a set of allowable functions to the reals. We say that $I[y(x)]$ has an \emph{extremum}
+when $I[y(x)]$ takes its maximum or minimum value. Note that we use square brackets to indicate that $I$
+is a functional (rather than a function) and usually abbreviate $y(x)$ as just $y$.
+
+\subsection{The Euler-Lagrange Equation}
+Let $C^k [a,b]$ denote the set of continuous functions defined on the interval $a \leq x \leq b$ whose 
+first $k$-derivatives are also continuous on $a \leq x \leq b$. Now, suppose that $I[Y(x)]$ is an 
+extremum of the functional
+
+\medskip
 \begin{equation*}
-I[t] = \int_{0}^{t} dt
+I[y] = \int_a^b F(x, y, y^{\prime}) \; dx
 \end{equation*}
 
 \bigskip
 \noindent
-Consider a curve over in which we call an infinitesimal segment of the path is $ds$. Then
+that is defined defined on all functions $y(x) \in C^2 [a,b]$ such that $y(a) = A$ and $y(b) = B$.
+Then its solution $Y(x)$ satisfies the second order ordinary differential equation
+
+
+\bigskip
+\begin{equation}
+\dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial y^{\prime}} \right ) -  \dfrac{\partial L}{\partial y} = 0
+\label{eqn:euler-lagrange}
+\end{equation}
+
+\bigskip
+\noindent
+Equation \ref{eqn:euler-lagrange} is known as the Euler-Lagrange equation (see \cite{notes:pola} for a proof of
+the Equation \ref{eqn:euler-lagrange}). It is the constraint imposed by the Euler-Lagrange equation
+that allows us to find the extremum of the functional.
+
+
+
+\bigskip
+\noindent
+Recall the Brachistochrone problem setup shown in Figure \ref{fig:brachistochrone}. 
+Here we are trying to find the path that takes the \emph{shortest time} from point 
+$A$ to $B$\footnote{$I[y]$ could also involve minimizing distance, potential energy,
+or the Lagrangian (as well as other quantities).}. In the language of the calculus 
+of variations \cite{wiki:cov} the Brachistochrone problem  is to minimize the functional
+
+\begin{equation*}
+I[y] = \int_{0}^{t} dt
+\end{equation*}
+
+\bigskip
+\noindent
+Consider a curve over in which we call an infinitesimal segment of the path $ds$. Then
 we know that the velocity of the ball (or bead, in Bernoulli's original problem statement) 
 is
 
@@ -406,9 +456,10 @@ V = \dfrac{ds}{dt}
 
 \bigskip
 \noindent
-Now, treating the derivative as a fraction\footnote{Care needs to be taken when 
+Now, treating $\dfrac{ds}{dt}$ as a fraction\footnote{Care needs to be taken when 
 treating a derivative as a fraction.} we can see from Equation \ref{eqn:v} that
 
+\bigskip
 \begin{equation*}
 dt = \dfrac{ds}{V}
 \end{equation*}
@@ -418,15 +469,16 @@ dt = \dfrac{ds}{V}
 and so 
 
 \begin{equation*}
-I = \int_{0}^{t} dt = \int_A^B \dfrac{ds}{V}
+I[y] = \int_{0}^{t} dt = \int_A^B \dfrac{ds}{V}
 \end{equation*}
+
 
 \bigskip
 \noindent
-Next, what can se say about $ds$? Well, we know from Pythagoras that 
-$ds^2 = dx^2 + dy^2$ which is shown in Figure \ref{fig:pythagorean_theorem}.
+Can we say more about $ds$? Well, we know from Pythagoras that 
+$ds^2 = dx^2 + dy^2$ (Figure \ref{fig:pythagorean_theorem}).
 
-
+\bigskip
 \begin{figure}[H]
   \centering
   \resizebox{0.30 \textwidth}{!} {																				% resize the figure if you want
@@ -445,7 +497,7 @@ $ds^2 = dx^2 + dy^2$ which is shown in Figure \ref{fig:pythagorean_theorem}.
 
 \bigskip
 \noindent
-Now we can compute $ds$:
+Armed with this information we can solve for $ds$:
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -476,14 +528,26 @@ ds = \sqrt{1 + (y^{\prime})^2} dx
 Next, we know from the Law of Conservation of Energy \cite{conservation_of_energy}
 that 
 
+\medskip
 \begin{equation*}
-\dfrac{1}{2} mV^2 - mgy = 0 \Rightarrow \dfrac{1}{2} mV^2 = mgy \Rightarrow 
-\dfrac{1}{2} V^2 = gy \Rightarrow V = \sqrt{2gy}
+\begin{array}{lllll}
+\dfrac{1}{2} mV^2 - mgy  
+&=& 0										&\qquad \mathrel{\#} \text{$\dfrac{1}{2} mV^2$ is the kinetic energy and $mgy$ is the potential energy} \\
+[10pt]
+&\Rightarrow& \dfrac{1}{2} mV^2 = mgy		&\qquad \mathrel{\#} \text{add $mgy$ to both sides} \\
+[10pt]
+&\Rightarrow& \dfrac{1}{2} V^2 = gy			&\qquad \mathrel{\#} \text{cancel $m$} \\
+[10pt]
+&\Rightarrow& V^2 = 2gy						&\qquad \mathrel{\#} \text{multiply both sides by 2} \\
+[10pt]
+&\Rightarrow& V = \sqrt{2gy}				&\qquad \mathrel{\#} \text{solve for $V$}
+\end{array}
 \end{equation*}
+
 
 \bigskip
 \noindent
-So
+So now we know that
 
 \begin{equation}
 V = \sqrt{2gy}
@@ -493,13 +557,13 @@ V = \sqrt{2gy}
 
 \bigskip
 \noindent
-Now we can write
+and we can write $I[y]$ as follows
 
 \begin{equation*}
 \begin{array}{lllll}
-I 
+I[y]
 &=& {\displaystyle \mathlarger{\mathlarger{\int_A^B}} \dfrac{ds}{V}}
-									&\qquad \qquad \mathrel{\#} \text{definition of $I$} \\
+									&\qquad \qquad \mathrel{\#} \text{definition of $I[y]$} \\
 [15pt]
 &=& {\displaystyle \mathlarger{\mathlarger{\int_A^B}} \dfrac{\sqrt{1 + (y^{\prime})^2}}{\sqrt{2gy}} dx}	
 									&\qquad \qquad \mathrel{\#} \text{Equations \ref{eqn:ds} and \ref{eqn:V}} \\
@@ -510,37 +574,190 @@ I
 \end{array}
 \end{equation*}
 
+\medskip
 \bigskip
 \noindent
-So we have this expression for $I$
+So now we have this expression for $I[y]$:
 
+\medskip
+\bigskip
 \begin{equation*}
-I = \dfrac{1}{\sqrt{2g}} \mathlarger{\mathlarger{\int_A^B}}  \sqrt{\dfrac{1 + (y^{\prime})^2}{y}} \; dx
+I[y] = \dfrac{1}{\sqrt{2g}} \mathlarger{\mathlarger{\int_A^B}}  \sqrt{\dfrac{1 + (y^{\prime})^2}{y}} \; dx
 \end{equation*}
 
+\medskip
 \bigskip
 \noindent
 Recall that the Calculus of Variations is about finding a function that minimizes some other function. That 
-"other function", which takes a function as an argument, is called a functional. Here $I$ is the functional 
-the function that is trying to be minimized, $F$, is
+"other function", which takes a function as an argument, is called a functional. Here $I[y]$ is the functional 
+the function that is trying to be minimized, $L(y,y^{\prime})$, is
 
 \medskip
+\begin{equation}
+L(y,y^{\prime}) = \sqrt{\dfrac{1 + (y^{\prime})^2}{y}}
+\label{eqn:L}
+\end{equation}
+
+\bigskip
+\noindent
+The last piece of machinery we need is the Beltrami Identity \cite{wiki:beltrami_identity},
+which is a special case of the Euler–Lagrange equation where 
+$\dfrac{\partial L}{\partial y} = 0$. In this case the Euler-Lagrange equation reduces
+to
+
+\bigskip
+\begin{equation}
+L - y^{\prime} \dfrac{\partial L}{\partial y^{\prime}} = C
+\label{eqn:beltrami}
+\end{equation}
+
+\bigskip
+\noindent
+where $C$ is some constant (see \cite{wiki:beltrami_identity} for a derivation). Plugging
+Equation \ref{eqn:L} into Equation \ref{eqn:beltrami} we get
+
+\begin{equation}
+\sqrt{\dfrac{1 + (y^{\prime})^2}{y}} - y^{\prime} 
+\dfrac{\partial \sqrt{\dfrac{1 + (y^{\prime})^2}{y}}}{\partial y^{\prime}} = C
+\label{eqn:bel0}
+\end{equation}
+
+
+\bigskip
+\noindent
+Taking the partial derivatives in Equation \ref{eqn:bel0} we get
+
 \begin{equation*}
-F = \sqrt{\dfrac{1 + (y^{\prime})^2}{y}} \; dx
+\begin{array}{lllll}
+\sqrt{\dfrac{1 + (y^{\prime})^2}{y}}  - \dfrac{1}{\sqrt{y}} 
+\cdot  y^{\prime} 
+\cdot \dfrac{1}{2} (1 + (y^{\prime})^2)^{- \frac{1}{2}}
+\cdot 2 y^{\prime} 
+= C							&\qquad \qquad \mathrel{\#} \text{take $\dfrac{\partial L}{\partial y^{\prime}}$} \\
+[15pt]
+\Rightarrow \sqrt{1 + (y^{\prime})^2} - \dfrac{(y^{\prime})^2}{\sqrt{1 + (y^{\prime})^2}} = \sqrt{y} \cdot C
+							&\qquad \qquad \mathrel{\#} \text{multiply both sides by $\sqrt{y}$, cancel 2 and $\dfrac{1}{2}$} \\
+[15pt]
+\Rightarrow 1 + (y^{\prime})^2 -(y^{\prime})^2 = \sqrt{y (1 + (y^{\prime})^2)} \cdot C
+							&\qquad \qquad \mathrel{\#} \text{multiply both sides by $\sqrt{1 + (y^{\prime})^2}$} \\
+[15pt]
+\Rightarrow 1 = \sqrt{y (1 + (y^{\prime})^2)} \cdot C
+							&\qquad \qquad \mathrel{\#} \text{cancel $(y^{\prime})^2$} \\
+[15pt]
+\Rightarrow 1 = y (1 + (y^{\prime})^2) \cdot C^2
+							&\qquad \qquad \mathrel{\#} \text{square both sides} \\
+[15pt]
+\Rightarrow \dfrac{1}{C^2} = y + y (y^{\prime})^2
+							&\qquad \qquad \mathrel{\#} \text{divide both sides by $C^2$, multiply though by $y$} \\
+[15pt]
+\text{Now, let } \dfrac{1}{C^2} = C_1 = y + y (y^{\prime})^2
+							&\qquad \qquad \mathrel{\#} \text{define constant $C_1$} \\
+[15pt]
+\Rightarrow (y^{\prime})^2 = \dfrac{C_1 - y}{y}
+							&\qquad \qquad \mathrel{\#} \text{solve for $(y^{\prime})^2$} \\
+[15pt]
+\Rightarrow y^{\prime} = \sqrt{\dfrac{C_1 - y}{y}}
+							&\qquad \qquad \mathrel{\#} \text{take the square root of both sides} \\
+[15pt]
+\Rightarrow \dfrac{dy}{dx} = \sqrt{\dfrac{C_1 - y}{y}}
+							&\qquad \qquad \mathrel{\#} y^{\prime} = \dfrac{dy}{dx} \\
+
+\end{array}
+\end{equation*}
+						
+\bigskip
+\noindent
+So know we know that 
+
+
+
+\begin{equation*}
+\begin{array}{lllll}
+\dfrac{dy}{dx}
+&=& \sqrt{\dfrac{C_1 - y}{y}}																		&\qquad\qquad \mathrel{\#} \text{previous derivation} \\
+[15pt]
+&\Rightarrow& dx = \sqrt{\dfrac{y}{C_1 -y}} \; dy													&\qquad\qquad \mathrel{\#} \text{solve for $dx$} \\
+[15pt]
+&\Rightarrow& x + C_2  = \mathlarger{\mathlarger{\mathlarger{\int}}} \sqrt{\dfrac{y}{C_1 -y}} \; dy	&\qquad\qquad \mathrel{\#} \text{integrate both sides}
+\end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-The Beltrami Identity \cite{wiki:beltrami_identity} ...
+Now let $y = C_1 \sin^2 \theta$ for $0 < \theta < \dfrac{\pi}{2}$, so that 
+$dy = 2 \: C_1 \sin \theta \: \cos \theta \: d\theta$. Then
 
-\medskip
+\bigskip
 \begin{equation*}
-F - y^{\prime} \dfrac{\partial F}{\partial y^{\prime}} = C
+\begin{array}{lllll}
+x + C_2
+&=& \mathlarger{\mathlarger{\mathlarger{\int}}}	
+\sqrt{\dfrac{C_1 \sin^2 \theta}{C_1 - C_1 \sin^2 \theta}} \cdot	2 \: C_1 \sin \theta \: \cos \theta \: d\theta
+			&\qquad \mathrel{\#} \text{substitue in $y$ and $dy$} \\
+[15pt]
+&=& \mathlarger {\mathlarger{\mathlarger{\int}}}	
+\sqrt{\dfrac{C_1 \sin^2 \theta}{C_1 (1 - \sin^2 \theta)}} \cdot	2 \: C_1 \sin \theta \: \cos \theta \: d\theta												
+			&\qquad \mathrel{\#} \text{factor out $C_1$} \\
+[15pt]
+&=& \mathlarger{\mathlarger{\mathlarger{\int}}}	\sqrt{\dfrac{C_1 \sin^2 \theta}{C_1 \cos^2 \theta}}
+\cdot 2 \: C_1 \sin \theta \: \cos \theta \: d\theta												
+			&\qquad \mathrel{\#} \cos^2 \theta = 1 - \sin^2 \theta \\
+[15pt]
+&=& \mathlarger{\mathlarger{\mathlarger{\int}}}	\dfrac{\sin \theta}{\cos \theta}
+\cdot 2 \: C_1 \sin \theta \: \cos \theta \: d\theta												
+			&\qquad \mathrel{\#} \text{take square root, cancel $C_1$}\\
+[15pt]
+&=& 2 \; C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} \sin^2 \theta \; d\theta												
+			&\qquad \mathrel{\#} \text{cancel $\cos \theta$, factor out $2 \; C_1$}\\
+[15pt]
+&=& 2 \; C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} \dfrac{1}{2} (1 - \cos 2\theta) \; d\theta												
+			&\qquad \mathrel{\#} \text{double-angle trig identity} \\
+[15pt]
+&=& C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} 1 - \cos 2\theta \; d\theta												
+			&\qquad \mathrel{\#} \text{cancel $2$ and $\dfrac{1}{2}$} \\
+[15pt]
+&=& C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} 1 \; d\theta - 
+C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} \cos 2\theta \; d\theta									
+			&\qquad \mathrel{\#} \text{integral is a linear operator} \\
+[15pt]
+&=& C_1 \theta - C_1 \left ( \dfrac{1}{2} \sin 2\theta \right )									
+			&\qquad \mathrel{\#} \text{integrate} \\
+[15pt]
+&=& C_1 \theta -  \dfrac{C_1}{2} \sin 2\theta									
+			&\qquad \mathrel{\#} \text{simplify}
+\end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-where $C$ is some constant.
+Now we can state the solution for the Brachistochrone problem:
+
+\bigskip
+\begin{equation}
+x = C_1 \theta -  \dfrac{C_1}{2} \sin 2\theta - C_2
+\label{eqn:cycloid_x}
+\end{equation}
+
+\bigskip
+\noindent
+and
+
+\bigskip
+\begin{equation}
+y = C_1 \sin^2 \theta = \dfrac{C_1}{2} \left ( 1 - \cos 2 \theta \right )
+\label{eqn:cycloid_y}
+\end{equation}
+
+\medskip
+\bigskip
+\noindent
+Note that the constants $C_1$ and $C_2$ can be found from the 
+boundary conditions.
+
+\bigskip
+\noindent
+Finally Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} turn out the be 
+the equations for a cycloid. 
 
 \section{Conclusions}
 
