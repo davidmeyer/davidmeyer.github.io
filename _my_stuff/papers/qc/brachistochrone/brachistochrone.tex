@@ -469,9 +469,10 @@ dt = \dfrac{ds}{V}
 \noindent
 and so 
 
-\begin{equation*}
+\begin{equation}
 I[y] = \int_{0}^{t} dt = \int_A^B \dfrac{ds}{V}
-\end{equation*}
+\label{eqn:I}
+\end{equation}
 
 
 \bigskip
@@ -511,13 +512,13 @@ ds^2
 [12pt]
 &=& \left ( 1 + (y^{\prime})^2 \right ) dx^2					&\qquad \qquad \qquad \mathrel{\#} \text{$y^{\prime} = \dfrac{dy}{dx}$; note that here we're treating $\dfrac{dy}{dx}$ as a fraction}\\
 [10pt]
-&\Rightarrow& ds = \sqrt{1 + (y^{\prime})^2} dx					&\qquad \qquad \qquad \mathrel{\#} \text{expression for $ds$}
+&\Rightarrow& ds = \sqrt{1 + (y^{\prime})^2} \; dx				&\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Now we know that 
+So now we know that 
 
 \begin{equation}
 ds = \sqrt{1 + (y^{\prime})^2} dx	
@@ -541,7 +542,7 @@ that
 [10pt]
 &\Rightarrow& V^2 = 2gy						&\qquad \mathrel{\#} \text{multiply both sides by 2} \\
 [10pt]
-&\Rightarrow& V = \sqrt{2gy}				&\qquad \mathrel{\#} \text{solve for $V$}
+&\Rightarrow& V = \sqrt{2gy}				&\qquad \mathrel{\#} \text{take the square root of both sides}
 \end{array}
 \end{equation*}
 
@@ -564,7 +565,7 @@ and we can write $I[y]$ as follows
 \begin{array}{lllll}
 I[y]
 &=& {\displaystyle \mathlarger{\mathlarger{\int_A^B}} \dfrac{ds}{V}}
-									&\qquad \qquad \mathrel{\#} \text{definition of $I[y]$} \\
+									&\qquad \qquad \mathrel{\#} \text{definition of $I[y]$ (Equation \ref{eqn:I})} \\
 [15pt]
 &=& {\displaystyle \mathlarger{\mathlarger{\int_A^B}} \dfrac{\sqrt{1 + (y^{\prime})^2}}{\sqrt{2gy}} dx}	
 									&\qquad \qquad \mathrel{\#} \text{Equations \ref{eqn:ds} and \ref{eqn:V}} \\
@@ -589,8 +590,8 @@ I[y] = \dfrac{1}{\sqrt{2g}} \mathlarger{\mathlarger{\int_A^B}}  \sqrt{\dfrac{1 +
 \medskip
 \bigskip
 \noindent
-The Calculus of Variations is about finding a function (rather than a point) that minimizes (or
-maximizes) some other function. The other function, which takes a function as an argument, 
+The Calculus of Variations is about finding a function (rather than a point) that minimizes or
+maximizes some other function. The other function, which takes a function as an argument, 
 is called a functional. Here $I[y]$ is the functional and the the function to be minimized, 
 $L(y,y^{\prime})$, is
 
@@ -621,21 +622,27 @@ Equation \ref{eqn:L} into Equation \ref{eqn:beltrami} we get
 \bigskip
 \begin{equation}
 \sqrt{\dfrac{1 + (y^{\prime})^2}{y}} - y^{\prime} 
-\dfrac{\partial \sqrt{\dfrac{1 + (y^{\prime})^2}{y}}}{\partial y^{\prime}} = C
+\dfrac{\partial}{\partial y^{\prime}} 
+\mathlarger{\mathlarger{\Bigg [}} \sqrt{\dfrac{1 + (y^{\prime})^2}{y}} \mathlarger{\mathlarger{\Bigg ]}} 
+= C
 \label{eqn:bel0}
 \end{equation}
 
 
 \bigskip
 \noindent
-Taking the partial derivatives in Equation \ref{eqn:bel0} we get
+Taking the partial derivative in Equation \ref{eqn:bel0} we get
 
 \begin{equation*}
 \begin{array}{lllll}
-\sqrt{\dfrac{1 + (y^{\prime})^2}{y}}  - \dfrac{1}{\sqrt{y}} 
-\cdot  y^{\prime} 
-\cdot \dfrac{1}{2} (1 + (y^{\prime})^2)^{- \frac{1}{2}}
-\cdot 2 y^{\prime} 
+\sqrt{\dfrac{1 + (y^{\prime})^2}{y}}  - y^{\prime} \cdot  
+\Bigg [
+  \dfrac{1}{\sqrt{y}} \cdot
+  \bigg ( 
+    \dfrac{1}{2} \Big (1 + (y^{\prime})^2 \Big )^{- \frac{1}{2}} 
+    \cdot 2 y^{\prime} 
+  \bigg )
+\Bigg ]
 = C							&\qquad \qquad \mathrel{\#} \text{take $\dfrac{\partial L}{\partial y^{\prime}}$} \\
 [15pt]
 \Rightarrow \sqrt{1 + (y^{\prime})^2} - \dfrac{(y^{\prime})^2}{\sqrt{1 + (y^{\prime})^2}} = \sqrt{y} \cdot C
@@ -721,7 +728,7 @@ x + C_2
 [15pt]
 &=& C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} \; d\theta - 
 C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} \cos 2\theta \; d\theta									
-			&\qquad \mathrel{\#} \text{integral is a linear operator} \\
+			&\qquad \mathrel{\#} \text{integration is a linear operator} \\
 [15pt]
 &=& C_1 \theta - C_1 \left ( \dfrac{1}{2} \sin 2\theta \right )									
 			&\qquad \mathrel{\#} \text{integrate} \\
