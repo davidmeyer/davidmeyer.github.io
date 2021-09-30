@@ -7,7 +7,7 @@
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{scrextend}                                                  % need this for addmargin
 \usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
-\usepackage{bigints}													% bigger integral symbol
+\usepackage{bigints}                                                    % bigger integral symbol
 %
 %   tikz et al
 %
@@ -778,8 +778,9 @@ Finally, recall the cycloid:
 
 \bigskip
 \noindent
-If we set $C_1 = 2 a$, $C_2 = 0$, and $\theta = \dfrac{\phi}{2}$ in 
-Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} we see that
+If we set $C_1 = 2 a$, $C_2 = 0$, and $\theta = \dfrac{\phi}{2}$
+in Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} we see
+that 
 
 \bigskip
 \begin{equation*}
@@ -831,10 +832,93 @@ y
 
 \bigskip
 \noindent
-So Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} turn out the be 
-the equations for a cycloid (as we saw in Figures \ref{fig:cycloid} and 
-\ref{fig:cycloid1}) and hence the "shortest time curve" (that is, the 
-solution to the Brachistochrone problem) is a cycloid.
+So Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} turn out
+the be the equations for a cycloid (as we saw in Figures
+\ref{fig:cycloid} and \ref{fig:cycloid1}) and hence the "shortest
+time curve" (that is, the solution to the Brachistochrone
+problem) is a cycloid. 
+
+\section{Other Path Minimization Problems}
+There are many path minimization problems we can solve with the 
+Calculus of Variations. Here are a few examples (TBD).
+
+\subsection{Minimize the Distance}
+In Figure \ref{fig:pythagorean_theorem} we saw that we can solve
+for an infinitesimal distance $ds$ using the Pythagorean Theorem: 
+
+
+\begin{equation*}
+\begin{array}{lllll}
+ds^2
+&=& dx^2 + dy^2   												&\qquad \qquad \qquad \mathrel{\#} \text{Pythagorean Theorem (Figure \ref{fig:pythagorean_theorem})} \\
+[10pt]
+&=& \left ( 1 + \dfrac{dy^2}{dx^2} \right ) dx^2				&\qquad \qquad \qquad \mathrel{\#} \text{factor out $dx^2$} \\
+[12pt]
+&=& \left ( 1 + \left (\dfrac{dy}{dx} \right )^2 \right ) dx^2	&\qquad \qquad \qquad \mathrel{\#} \text{group $\dfrac{dy}{dx}$} \\
+[12pt]
+&=& \left ( 1 + (y^{\prime})^2 \right ) dx^2					&\qquad \qquad \qquad \mathrel{\#} \text{$y^{\prime} = \dfrac{dy}{dx}$; note that here we're treating $\dfrac{dy}{dx}$ as a fraction}\\
+[10pt]
+&\Rightarrow& ds = \sqrt{1 + (y^{\prime})^2} \; dx				&\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+To minimize the distance we set $I[y]$ to the following integral: 
+
+\bigskip
+\begin{equation*}
+I[y] = \int_{x_1}^{x_2} ds = \int_{x_1}^{x_2} \sqrt{1 + (y^{\prime})^2} \; dx
+\end{equation*}	
+
+\subsection{Minimize the Time (The Brachistochrone Problem)}
+We saw above that $V = \sqrt{2gy}$ (Equation \ref{eqn:V}) so the
+integral we want to solve to find the curve that minimizes the
+time taken between two points $A$ and $B$ works out to be 
+
+\bigskip
+\begin{equation*}
+I[y] =  \mathlarger{\mathlarger{\int_A^B}} \dfrac{ds}{V} = 
+\dfrac{1}{\sqrt{2g}} \mathlarger{\mathlarger{\int_A^B}} \sqrt{\dfrac{1 + (y^{\prime})^2}{y}} \; dx
+\end{equation*}
+
+\medskip
+\subsection{Minimize the Energy (The Catenary Problem)}
+This is the hanging chain problem. Here $\rho$ is the density of
+the chain, $g$ is the acceleration of gravity, and $A$ is the cross 
+sectional area of the chain (which is assumed to be constant). Note that 
+$\rho A = m$ since the units of $\rho$ are $\frac{\text{mass}}{\text{volume}}$ 
+and since ${\displaystyle \lim_{ds \to 0} \text{Volume} = \text{Area}}$ 
+for a differential piece of the chain of length $ds$.
+
+
+\bigskip
+\noindent
+In the Catenary Problem the chain is assumed to be
+stationary so the kinetic energy is zero. So the total energy is
+the just potential energy $mgy$. So here $I[y]$ is
+
+
+\bigskip
+\begin{equation*}
+I[y] =  \int_{x_1}^{x_2} mgy \; ds
+= \int_{x_1}^{x_2} (\rho A) g y \: ds 
+= \rho A g \int_{x_1}^{x_2} y \; ds 
+= \rho A g\int_{x_1}^{x_2} y \; \sqrt{1 + (y^{\prime})^2} \; dx
+\end{equation*}
+
+\medskip
+\subsection{Minimize the Lagrangian}
+This one is discussed in detail in \cite{notes:pola} but briefly
+here $I[y]$ is the integral of the Lagrangian:
+
+
+\bigskip
+\begin{equation*}
+I[y] =  \int_{x_1}^{x_2} L(y,y^{\prime}) \; dx
+\end{equation*}
+
 
 \section{Conclusions}
 
