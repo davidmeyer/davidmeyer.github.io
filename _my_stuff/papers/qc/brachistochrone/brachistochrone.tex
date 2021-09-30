@@ -403,6 +403,7 @@ is a functional (rather than a function) and we frequently see $y(x)$ abbreviate
 as $I[y]$ (or just $I$). 
 
 \subsection{The Euler-Lagrange Equation}
+\label{subsec:euler-lagrange}
 Let $C^k [a,b]$ denote the set of continuous functions defined on the interval $a \leq x \leq b$ whose 
 first $k$-derivatives are also continuous on $a \leq x \leq b$. Now, suppose that $I[Y(x)]$ is an 
 extremum of the functional
@@ -446,7 +447,7 @@ I[y] = \int_{0}^{t} dt
 
 \bigskip
 \noindent
-Consider a curve over in which we call an infinitesimal segment of the path $ds$. Then
+Consider a curve over in which we call an differential segment of the path $ds$. Then
 we know that the velocity of the ball (or bead, in Bernoulli's original problem statement) 
 is
 
@@ -843,8 +844,12 @@ There are many path minimization problems we can solve with the
 Calculus of Variations. Here are a few examples (TBD).
 
 \subsection{Minimize the Distance}
-In Figure \ref{fig:pythagorean_theorem} we saw that we can solve
-for an infinitesimal distance $ds$ using the Pythagorean Theorem: 
+In Section \ref{subsec:euler-lagrange} we saw that we can 
+solve for a differential distance $ds$ on some curve using 
+the Pythagorean Theorem (Figure \ref{fig:pythagorean_theorem}).
+This approach requires that we treat $\dfrac{dy}{dx}$ as a 
+fraction; as mentioned above, care needs to be taken when 
+doing this. 
 
 
 \begin{equation*}
@@ -856,7 +861,7 @@ ds^2
 [12pt]
 &=& \left ( 1 + \left (\dfrac{dy}{dx} \right )^2 \right ) dx^2	&\qquad \qquad \qquad \mathrel{\#} \text{group $\dfrac{dy}{dx}$} \\
 [12pt]
-&=& \left ( 1 + (y^{\prime})^2 \right ) dx^2					&\qquad \qquad \qquad \mathrel{\#} \text{$y^{\prime} = \dfrac{dy}{dx}$; note that here we're treating $\dfrac{dy}{dx}$ as a fraction}\\
+&=& \left ( 1 + (y^{\prime})^2 \right ) dx^2					&\qquad \qquad \qquad \mathrel{\#} \text{$y^{\prime} = \dfrac{dy}{dx}$; here we're treating $\dfrac{dy}{dx}$ as a fraction}\\
 [10pt]
 &\Rightarrow& ds = \sqrt{1 + (y^{\prime})^2} \; dx				&\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
 \end{array}
@@ -885,11 +890,15 @@ I[y] =  \mathlarger{\mathlarger{\int_A^B}} \dfrac{ds}{V} =
 
 \medskip
 \subsection{Minimize the Energy (The Catenary Problem)}
-This is the hanging chain problem. Here $\rho$ is the density of
-the chain, $g$ is the acceleration of gravity, and $A$ is the cross 
-sectional area of the chain (which is assumed to be constant). Note that 
-$\rho A = m$ since the units of $\rho$ are $\frac{\text{mass}}{\text{volume}}$ 
-and since ${\displaystyle \lim_{ds \to 0} \text{Volume} = \text{Area}}$ 
+The Catenary Problem \cite{wiki:catenary}, also known as
+the hanging chain problem, considers the shape of a stationary
+chain hanging from two stationary points where the only force
+acting on the chain is gravity. In the problem setup $\rho$ 
+is the density of the chain, $g$ is the acceleration of gravity, 
+and $A$ is the constant cross sectional area of the chain. 
+Note that $\rho A = m$ since the units of 
+$\rho$ are $\frac{\text{mass}}{\text{volume}}$ and since 
+${\displaystyle \lim_{ds \to 0} \text{Volume} = \text{Area}}$ 
 for a differential piece of the chain of length $ds$.
 
 
