@@ -757,10 +757,77 @@ y = C_1 \sin^2 \theta = \dfrac{C_1}{2} \left ( 1 - \cos 2 \theta \right )
 Note that the constants $C_1$ and $C_2$ can be found from the 
 boundary conditions.
 
+
+\newpage
+\noindent
+Finally, recall the cycloid:
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.55] {images/cycloid1.png}}
+\caption{The Cycloid Curve}
+\label{fig:cycloid1}
+\end{figure}
+
 \bigskip
 \noindent
-Finally Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} turn out the be 
-the equations for a cycloid. 
+If we set $C_1 = 2 a$, $C_2 = 0$, and $\theta = \dfrac{\phi}{2}$ in 
+Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} we see that
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+x 
+&=& C_1 \theta -  \dfrac{C_1}{2} \sin 2\theta - C_2
+			&\qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:cycloid_x}} \\
+[10pt]
+&=& C_1 \theta -  \dfrac{C_1}{2} \sin 2\theta
+			&\qquad \qquad \qquad \qquad \mathrel{\#} C_2 = 0 \\
+[10pt]
+&=& 2 a \theta -  \dfrac{2 a}{2} \sin 2\theta 									
+			&\qquad \qquad \qquad \qquad \mathrel{\#} C_1 = 2a  \\
+[10pt]
+&=& 2 a \dfrac{\phi}{2} -  \dfrac{2 a}{2} \sin \Bigg [ 2 \left (\dfrac{\phi}{2} \right ) \Bigg ]
+			&\qquad \qquad \qquad \qquad \mathrel{\#} \theta = \dfrac{\phi}{2} \\
+[10pt]
+&=& a \phi -  a \sin \phi 														
+			&\qquad \qquad \qquad \qquad \mathrel{\#} \text{cancel $\dfrac{1}{2}$ and $2$} \\
+[10pt]
+&=& a (\phi -  \sin \phi) 														
+			&\qquad \qquad \qquad \qquad \mathrel{\#} x = a (\phi -  \sin \phi) \\
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+and
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+y	
+&=& \dfrac{C_1}{2} \left ( 1 - \cos 2 \theta \right )
+			&\qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:cycloid_y}} \\
+[10pt]
+&=& \dfrac{2a}{2} \left ( 1 - \cos 2 \theta \right )
+			&\qquad \qquad \qquad \qquad \mathrel{\#} C_1 = 2 a \\
+[10pt]
+&=& \dfrac{2a}{2} \Bigg ( 1 - \cos \left [ 2 \left (\dfrac{\phi}{2} \right ) \right ] \Bigg )
+			&\qquad \qquad \qquad \qquad \mathrel{\#} \theta = \dfrac{\phi}{2} \\
+[10pt]
+&=& a \left ( 1 - \cos \phi \right )
+			&\qquad \qquad \qquad \qquad \mathrel{\#} y = a \left (1 - \cos \phi \right)
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+So Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} turn out the be 
+the equations for a cycloid (as we saw in Figures \ref{fig:cycloid} and 
+\ref{fig:cycloid1}) and hence the "shortest time curve" (that is, the 
+solution to the Brachistochrone problem) is a cycloid.
 
 \section{Conclusions}
 
