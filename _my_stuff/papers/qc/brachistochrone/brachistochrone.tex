@@ -489,8 +489,8 @@ $ds^2 = dx^2 + dy^2$. This is shown in Figure \ref{fig:pythagorean_theorem}.
 \centering
   \resizebox{0.70 \textwidth}{!} {																							% resize figure if you want
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}, declare function={f(\x)=1 + \x*\x*\x;}]	% define f(x)
-       \draw[thick, -latex] (-2,0) -- (5,0) coordinate [label={[xshift=0.30cm, below] $x$}];  								% x axis
-       \draw[thick, -latex] (0,-1) -- (0,5) coordinate [label={[xshift=-0.30cm, left] $y$}]; 								% y axis
+       \draw[thick, -latex] (-2,0) -- (5,0) coordinate [label={[right] $x$}];  								% x axis
+       \draw[thick, -latex] (0,-1) -- (0,5) coordinate [label={[above] $y$}]; 								% y axis
        \draw [line width=0.25mm, smooth, samples=100,domain=-1.0:1.25] plot (\x,{f(\x)});									% draw f(x)
        \draw [draw=none] (1.25, {f(1.25)}) coordinate [label={[above] $f(x)$}];												% label f(x)
        \coordinate (O) at (0,0); 
@@ -831,13 +831,13 @@ Note that the constants $C_1$ and $C_2$ can be found from the
 boundary conditions.
 
 
-\newpage
+\bigskip
 \noindent
 Finally, recall the cycloid:
 
 
 \begin{figure}[H]
-\center{\includegraphics[scale=0.55] {images/cycloid1.png}}
+\center{\includegraphics[scale=0.45] {images/cycloid1.png}}
 \caption{The Cycloid Curve}
 \label{fig:cycloid1}
 \end{figure}
