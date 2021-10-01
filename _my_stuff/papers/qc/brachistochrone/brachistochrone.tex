@@ -481,9 +481,10 @@ I[y] = \int_{0}^{t} dt = \int_A^B \dfrac{ds}{V}
 Can we say more about $ds$? Well, we know from Pythagoras that 
 $ds^2 = dx^2 + dy^2$. This is shown in Figure \ref{fig:pythagorean_theorem}.
 
+%
+%	draw Pythagorean theorem stuff
+%
 \bigskip
-
-
 \begin{figure}[H]
 \centering
   \resizebox{0.70 \textwidth}{!} {																							% resize figure if you want
@@ -497,19 +498,14 @@ $ds^2 = dx^2 + dy^2$. This is shown in Figure \ref{fig:pythagorean_theorem}.
 %
 %	various coordinates
 %     
-
        \coordinate (x1y1) at (0.5,{f(0.5)});
        \coordinate (x1y0) at (0.5,0.0);
        \coordinate (x2y2) at (1.1,{f(1.1});
        \coordinate (x2y0) at (1.1,0.0);
        \coordinate (cir) at (0.85,{f(0.85)});
-
-       
+%
        \fill (x1y1) circle (0.05);																					% put a dot on the curve at x1y1
        \fill (x2y2) circle (0.05);																					% put a dot on the curve at x2y2
-
-
-       
 	   \draw [very thick,blue,smooth,samples=100,domain=0.5:1.0] plot (\x,{f(\x)});									% draw blue segment on f(x)
        \draw[draw=none] (x1y1) -- (x2y2) coordinate [label={[font=\footnotesize, yshift=-0.05cm, xshift=-0.10cm, midway,left] \color{black} $ds$}];
        \draw[dashed] (x1y1) -- (x1y0) coordinate [label={[font=\scriptsize,below] \color{black} $x_1$}];
@@ -521,7 +517,7 @@ $ds^2 = dx^2 + dy^2$. This is shown in Figure \ref{fig:pythagorean_theorem}.
 %
 %	draw triangle and circle to show ds
 %   
-
+%
 %
 %	set up trianglel coordinates
 %
