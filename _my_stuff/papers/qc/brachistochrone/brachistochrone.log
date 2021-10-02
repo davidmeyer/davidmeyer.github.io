@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  1 OCT 2021 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  2 OCT 2021 08:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -958,7 +958,7 @@ Overfull \hbox (16.1454pt too wide) detected at line 382
  []
 
 [3 <./images/cycloid_coordinates.png>] [4] [5] [6]
-Overfull \hbox (42.08412pt too wide) detected at line 742
+Overfull \hbox (42.08412pt too wide) detected at line 752
 []
  []
 
@@ -966,7 +966,7 @@ Overfull \hbox (42.08412pt too wide) detected at line 742
 <images/cycloid1.png, id=53, 711.65875pt x 338.26375pt>
 File: images/cycloid1.png Graphic file (type png)
 <use images/cycloid1.png>
-Package pdftex.def Info: images/cycloid1.png  used on input line 840.
+Package pdftex.def Info: images/cycloid1.png  used on input line 850.
 (pdftex.def)             Requested size: 320.24347pt x 152.21727pt.
  [9 <./images/cycloid1.png>] [10] (./brachistochrone.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 38--44
@@ -976,10 +976,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--44
 
 [11]) [12] (./brachistochrone.aux) ) 
 Here is how much of TeX's memory you used:
- 28467 strings out of 478994
- 723159 string characters out of 5858184
+ 28468 strings out of 478994
+ 723174 string characters out of 5858184
  1193254 words of memory out of 5000000
- 45470 multiletter control sequences out of 15000+600000
+ 45471 multiletter control sequences out of 15000+600000
  412390 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,19n,116p,732b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1004,7 +1004,7 @@ y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-Output written on brachistochrone.pdf (12 pages, 638068 bytes).
+Output written on brachistochrone.pdf (12 pages, 638698 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
