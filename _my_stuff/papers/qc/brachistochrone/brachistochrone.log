@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  2 OCT 2021 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 OCT 2021 08:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1007,7 +1007,7 @@ y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-Output written on brachistochrone.pdf (12 pages, 638864 bytes).
+Output written on brachistochrone.pdf (12 pages, 639080 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
