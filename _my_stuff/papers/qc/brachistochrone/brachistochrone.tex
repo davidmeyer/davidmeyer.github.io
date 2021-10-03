@@ -565,10 +565,10 @@ depicted in Figure \ref{fig:pythagorean_theorem}.
 % \resizebox{0.30 \textwidth}{!} {																				% resize the figure if you want
 %    \begin{tikzpicture}[framed]
 %      \draw [red] (0,0) coordinate[] (a) --
-%            (3,0) coordinate[] (c) --
-%            (3,3) coordinate[] (b) -- cycle;
+%            	   (3,0) coordinate[] (c) --
+%            	   (3,3) coordinate[] (b) -- cycle;
 %       \draw[draw=none] (a) -- (c) coordinate [label={[yshift=-0.1cm,midway,below]					${dx}$}];    % dx
-%       \draw[draw=none] (c) -- (b) coordinate [label={[xshift=0.025,midway,right]  					${dy}$}];    % dy
+%       \draw[draw=none] (c) -- (b) coordinate [label={[xshift=0.025,midway,right]  				${dy}$}];    % dy
 %       \draw[draw=none] (a) -- (b) coordinate [label={[xshift=-0.2cm,yshift=0.025cm,midway,left]	${ds}$}];    % ds
 %    \end{tikzpicture}
 %  }
@@ -671,8 +671,8 @@ I[y] = \dfrac{1}{\sqrt{2g}} \mathlarger{\mathlarger{\int_A^B}}  \sqrt{\dfrac{1 +
 \noindent
 The Calculus of Variations is about finding a function (rather than a point) that minimizes or
 maximizes some other function. The other function, which takes a function as an argument, 
-is called a functional. Here $I[y]$ is the functional and the the function to be minimized, 
-$L(y,y^{\prime})$, is
+is called a functional. Here $I[y]$ is the functional and we want to find a function
+$L(y,y^{\prime})$ that minimizes $I[y]$. $L(y,y^{\prime})$ looks like
 
 \medskip
 \begin{equation}
@@ -712,6 +712,7 @@ Equation \ref{eqn:L} into Equation \ref{eqn:beltrami} we get
 \noindent
 Taking the partial derivative in Equation \ref{eqn:bel0} we get
 
+\medskip
 \begin{equation*}
 \begin{array}{lllll}
 \sqrt{\dfrac{1 + (y^{\prime})^2}{y}}  - y^{\prime} \cdot 
@@ -722,7 +723,7 @@ Taking the partial derivative in Equation \ref{eqn:bel0} we get
     \cdot 2 y^{\prime} 
   \bigg )
 \Bigg ]
-= C							&\qquad \qquad \mathrel{\#} \text{take $\dfrac{\partial L}{\partial y^{\prime}}$} \\
+= C							&\qquad \qquad \mathrel{\#} \text{power rule: $\dfrac{d}{dx} u^n = n u^{n-1} \dfrac{du}{dx}, \, u^n = \sqrt{1 + (y^{\prime})^2}$} \\
 [15pt]
 \Rightarrow \sqrt{1 + (y^{\prime})^2} - \dfrac{(y^{\prime})^2}{\sqrt{1 + (y^{\prime})^2}} = \sqrt{y} \cdot C
 							&\qquad \qquad \mathrel{\#} \text{multiply both sides by $\sqrt{y}$, cancel 2 and $\dfrac{1}{2}$} \\
@@ -731,7 +732,7 @@ Taking the partial derivative in Equation \ref{eqn:bel0} we get
 							&\qquad \qquad \mathrel{\#} \text{multiply both sides by $\sqrt{1 + (y^{\prime})^2}$} \\
 [15pt]
 \Rightarrow 1 = \sqrt{y (1 + (y^{\prime})^2)} \cdot C
-							&\qquad \qquad \mathrel{\#} \text{cancel $(y^{\prime})^2$} \\
+							&\qquad \qquad \mathrel{\#} (y^{\prime})^2 - (y^{\prime})^2 = 0 \\
 [15pt]
 \Rightarrow 1 = y (1 + (y^{\prime})^2) \cdot C^2
 							&\qquad \qquad \mathrel{\#} \text{square both sides} \\
