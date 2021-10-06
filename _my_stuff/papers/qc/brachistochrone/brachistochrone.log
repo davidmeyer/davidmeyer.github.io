@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  5 OCT 2021 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  6 OCT 2021 06:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -981,7 +981,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--44
 Here is how much of TeX's memory you used:
  28505 strings out of 478994
  723845 string characters out of 5858184
- 1193533 words of memory out of 5000000
+ 1193532 words of memory out of 5000000
  45504 multiletter control sequences out of 15000+600000
  412390 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1007,7 +1007,7 @@ y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-Output written on brachistochrone.pdf (12 pages, 640655 bytes).
+Output written on brachistochrone.pdf (12 pages, 640825 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
