@@ -778,18 +778,20 @@ So know we know that
 \end{array}
 \end{equation*}
 
+\smallskip
 \bigskip
 \noindent
-Now let $y = C_1 \sin^2 \theta$ for $0 < \theta < \dfrac{\pi}{2}$, so that 
-$dy = 2 \: C_1 \sin \theta \: \cos \theta \: d\theta$. Then
+Now let $y = C_1 \sin^2 \theta$ so that
+$dy = 2 \: C_1 \sin \theta \: \cos \theta \: d\theta$. 
+Then
 
-\bigskip
+\medskip
 \begin{equation*}
 \begin{array}{lllll}
 x + C_2
 &=& \mathlarger{\mathlarger{\mathlarger{\int}}}	
 \sqrt{\dfrac{C_1 \sin^2 \theta}{C_1 - C_1 \sin^2 \theta}} \cdot	2 \: C_1 \sin \theta \: \cos \theta \: d\theta
-			&\qquad \mathrel{\#} \text{substitue in $y$ and $dy$} \\
+			&\qquad \mathrel{\#} \text{substitute for $y$ and $dy$} \\
 [15pt]
 &=& \mathlarger {\mathlarger{\mathlarger{\int}}}	
 \sqrt{\dfrac{C_1 \sin^2 \theta}{C_1 (1 - \sin^2 \theta)}} \cdot	2 \: C_1 \sin \theta \: \cos \theta \: d\theta												
@@ -819,14 +821,21 @@ C_1 \mathlarger{\mathlarger{\mathlarger{\int}}} \cos 2\theta \; d\theta
 &=& C_1 \theta - C_1 \left ( \dfrac{1}{2} \sin 2\theta \right )									
 			&\qquad \mathrel{\#} \text{integrate} \\
 [15pt]
-&=& C_1 \theta -  \dfrac{C_1}{2} \sin 2\theta									
-			&\qquad \mathrel{\#} \text{simplify}
+&=& C_1 \theta - \dfrac{C_1}{2} \sin 2\theta									
+			&\qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&\Rightarrow& 									
+x + C_2  = C_1 \theta - \dfrac{C_1}{2} \sin 2\theta			
+			&\qquad \mathrel{\#} x = C_1 \theta - \dfrac{C_1}{2} \sin 2\theta - C_2
 \end{array}
 \end{equation*}
 
+
 \bigskip
 \noindent
-Now we can state the solution for the Brachistochrone problem:
+Given these results we can state the solution for the Brachistochrone 
+problem:
+
 
 \bigskip
 \begin{equation}
@@ -836,15 +845,17 @@ x = C_1 \theta -  \dfrac{C_1}{2} \sin 2\theta - C_2
 
 \bigskip
 \noindent
-and
+and since $y = C_1 \sin^2 \theta$ (definition) and $\sin^2 \theta = \dfrac{1}{2} (1- \cos 2 \theta)$ 
+(double-angle trig identity)
+
 
 \bigskip
 \begin{equation}
-y = C_1 \sin^2 \theta = \dfrac{C_1}{2} \left ( 1 - \cos 2 \theta \right )
+y = \dfrac{C_1}{2} \left ( 1 - \cos 2 \theta \right )
 \label{eqn:cycloid_y}
 \end{equation}
 
-\medskip
+\smallskip
 \bigskip
 \noindent
 Note that the constants $C_1$ and $C_2$ can be found from the 
@@ -853,11 +864,11 @@ boundary conditions.
 
 \bigskip
 \noindent
-Finally, recall the cycloid:
+Finally, recall the cycloid shown in Figure \ref{fig:cycloid} (reproduced here):
 
-
+\bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.45] {images/cycloid1.png}}
+\center{\includegraphics[scale=0.40] {images/cycloid1.png}}
 \caption{The Cycloid Curve}
 \label{fig:cycloid1}
 \end{figure}
@@ -918,11 +929,11 @@ y
 
 \bigskip
 \noindent
-So Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} turn out
-the be the equations for a cycloid (as we saw in Figures
+So we see that Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} 
+turn out to be the equations for a cycloid (as we saw in Figures
 \ref{fig:cycloid} and \ref{fig:cycloid1}) and hence the "shortest
-time curve" (that is, the solution to the Brachistochrone
-problem) is a cycloid. 
+time curve", that is, the solution to the Brachistochrone
+problem, is a cycloid. 
 
 \section{Other Path Minimization Problems}
 There are many path minimization problems we can solve with the 
