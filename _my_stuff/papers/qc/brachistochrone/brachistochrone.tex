@@ -396,11 +396,11 @@ I[y(x)] = \int_a^b F(y(x), y^{\prime}(x)) \; dx
 \bigskip
 \noindent
 A typical problem in the Calculus of Variations involves finding a particular function $y(x)$ that 
-maximizes or minimizes the integral $I[y(t)]$ (Equation \ref{eqn:I[y]}), subject to the boundary conditions 
-$y(a) = A$ and $y(b) = B$. The integral $I[y(t)]$ is an example of a \emph{functional}, which (more generally) 
+maximizes or minimizes the integral $I[y(x)]$ (Equation \ref{eqn:I[y]}), subject to the boundary conditions 
+$y(a) = A$ and $y(b) = B$. The integral $I[y(x)]$ is an example of a \emph{functional}, which (more generally) 
 is a mapping from a set of allowable functions to the reals. We say that $I[y(x)]$ has an \emph{extremum}
 when $I[y(x)]$ takes its maximum or minimum value. Note that we use square brackets to indicate that $I$
-is a functional (rather than a function) and we frequently see $y(x)$ abbreviated as $y$ and $I[y(x)]$ 
+is a functional (rather than a function) and we frequently see $y(t)$ abbreviated as $y$ and $I[y(x)]$ 
 as $I[y]$ (or just $I$). 
 
 \subsection{The Euler-Lagrange Equation}
@@ -438,12 +438,11 @@ that allows us to find the extremum of the functional.
 \noindent
 Recall the Brachistochrone problem setup shown in Figure \ref{fig:brachistochrone}. 
 Here we are trying to find the path that takes the \emph{shortest time} from point 
-$A$ to $B$\footnote{$I[y]$ could also involve minimizing distance, potential energy,
-or the Lagrangian (as well as other quantities).}. In the language of the calculus 
-of variations \cite{wiki:cov} the Brachistochrone problem  is to minimize the functional
+$A$ to $B$. In the language of the calculus of variations \cite{wiki:cov} the 
+Brachistochrone problem is to minimize the functional
 
 \begin{equation*}
-I[y] = \int_{0}^{t} dt
+I[y(t)] = \int_{0}^{t} dt
 \end{equation*}
 
 \bigskip
