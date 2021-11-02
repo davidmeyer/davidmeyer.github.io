@@ -47,7 +47,10 @@
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
+\usepackage{framed}
 
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 
 %
 % compatability
@@ -55,6 +58,41 @@
 \pgfplotsset{compat=1.17} 
 
 \begin{document}
+
+
+%
+%	open epsilon ball
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.60 \textwidth}{!} {														% resize the tikzpicture if you like
+  \tikzstyle{background rectangle}=[thin,draw=black]									% make the frame thinner (there must be an easier way to do this)
+     \begin{tikzpicture}[show background rectangle]										% couldn't control frame thickness with \begin{tikzpicture} [framed]
+       \coordinate (C)  at (0.00, 0.00);												% center
+       \coordinate (R)  at (2.00, 0.00);												% radius
+       \coordinate (A)  at (-2.00,0.00);												% arc (3D effect)
+       \coordinate (RC) at (2.00, 2.25);												% Right Corner (RC)
+       \coordinate (S)  at (-2.20,2.25);												% Spacing
+       \shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);					% draw the ball
+       \draw [densely dashed] (C) circle (2cm);											% draw the circle (use dashed because its an open ball)
+       \draw [densely dashed] (A) arc (180:360:2 and 0.6);								% 3D effect
+       \draw [densely dashed] (R) arc (0:180:2 and 0.6);								% draw the dashed line
+       \fill [fill=black] (C) circle (1pt);												% draw a dot in the center
+       \draw [draw=none]  (C) node[font=\scriptsize, below] {$x$};        				% label x
+       \draw [thin] (C) -- (R) node[font=\scriptsize,midway,above]{$\epsilon$};			% draw the radius (epsilon)
+       \node [] at  (RC) {$X$};															% show X in the lower right corner
+       \draw [draw=none] (-2,-1.5) -- (2,-1.5) 											% draw the definition of the epsilon ball
+				node[font=\fontsize{6.0}{1.0}\selectfont,rectangle, draw, very thin, below, midway, yshift=-0.85cm] 
+				{$B_{\epsilon}(x) =\{y \in X \mid d(x,y) < \epsilon\}$};				% defn of open epsilon ball
+       \node[] at (S) {};																% stretch out the frame so the ball is centered (Spacing)
+     \end{tikzpicture}																	% end tikzpicture
+    }                                                                   				% end resizebox
+    \bigskip																			% move the caption down a bit
+    \caption{Open epsilon ball $B_{\epsilon}(x)$ centered at $x$ with radius $\epsilon$}
+    \label{fig:open_epsilon_ball}
+\end{figure}
+
+
 
 %
 % bloch sphere
