@@ -10,7 +10,7 @@
 
 <li><a href="./functional_analysis.pdf" target="_blank" 
     rel="noopener noreferrer">
-A Few Notes on Functional Analysis (WIP</a>
+A Few Notes on Functional Analysis (WIP)</a>
 <br>
 <li><a href="./brachistochrone.pdf" target="_blank" rel="noopener noreferrer">
 A Few Notes on the Brachistochrone Problem</a>
