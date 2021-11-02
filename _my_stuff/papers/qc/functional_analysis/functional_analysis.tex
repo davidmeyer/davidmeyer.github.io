@@ -61,24 +61,30 @@
 %
 %
 \section{Introduction}
-Functional Analysis (FA) \cite{fa_mit} is an interesting topic because, among other reasons, it sits between
-infinite dimensional linear algebra and real and complex analysis. As we shall see later,
-the connection is the norm $\left\lVert x\right\rVert$ of a vector space $V$. As we shall 
-see, if $(V,\left\lVert \cdot \right\rVert)$ is a \emph{normed space} then $(V,d)$ is a
-\emph{metric space} with metric $d(x,y) \coloneqq \left\lVert x-y \right\rVert$. Moreover, if 
-$(V,\langle\cdot,\cdot\rangle)$ is an \emph{inner product space} (that is, 
-$\langle\cdot,\cdot\rangle$ is an inner product on vector space $V$), then 
-$(V,\left\lVert \cdot \right\rVert)$ is a normed space with norm
-$\left\lVert x\right\rVert \coloneqq \sqrt{\langle x,x\rangle}$ and so $(V,d)$ is a
-metric space with metric $d(x,y) = \sqrt{\langle x-y,x-y\rangle}$.  
-Functional Analysis is inhabited by all kinds of interesting objects like these.
+Functional Analysis (FA) \cite{fa_mit} is an interesting topic
+because, among other reasons, it sits between infinite
+dimensional linear algebra and real and complex analysis. As we
+shall see later, the connection is the norm $\left\lVert
+x\right\rVert$ of a vector space $V$. As we shall see, if
+$(V,\left\lVert \cdot \right\rVert)$ is a \emph{normed space}
+then $(V,d)$ is a \emph{metric space} with metric $d(x,y)
+\coloneqq \left\lVert x-y \right\rVert$. Moreover, if
+$(V,\langle\cdot,\cdot\rangle)$ is an \emph{inner product space}
+(that is, $\langle\cdot,\cdot\rangle$ is an inner product on
+vector space $V$), then $(V,\left\lVert \cdot \right\rVert)$ is a
+normed space with norm $\left\lVert x\right\rVert \coloneqq
+\sqrt{\langle x,x\rangle}$ and so $(V,d)$ is a metric space with
+metric $d(x,y) = \sqrt{\langle x-y,x-y\rangle}$.  Functional
+Analysis is inhabited by all kinds of interesting objects like
+these.
 
 \section{Metric Spaces}
 \label{sec:metric_spaces}
-Metric spaces, along with vector spaces are among the most fundamental objects
-in FA. So suppose we have an arbitrary set $X$ 
-with two points $x,y \in X$. We would like to measure the distance between 
-$x$ and $y$ in $X$ as shown in Figure \ref{fig:set}.
+Metric spaces, along with vector spaces are among the most
+fundamental objects in FA. So suppose we have an arbitrary set
+$X$ with two points $x,y \in X$. We would like to measure the
+distance between $x$ and $y$ in $X$ as shown in Figure
+\ref{fig:set}.
 
 \bigskip
 \begin{figure}[H]
@@ -134,11 +140,14 @@ following three properties:
 
 \bigskip
 \noindent
-We can see that we want the distance between $x$ and itself to be zero, hence property $(a)$. However,
-more than that we want this only to be the case when $x = y$ (so if and only if). Of course we want 
-the distance from $x$ to $y$ to be the same as the distance from $y$ to $x$; this is property $(b)$. 
-Finally,  we will see the triangle inequality (property $(c)$) in many forms but here we see that if 
-you take a "detour", say through $z$, the detour path will be longer (have a greater or possibly equal 
+We can see that we want the distance between $x$ and itself to be
+zero, hence property $(a)$. However, more than that we want this
+only to be the case when $x = y$ (so if and only if). Of course
+we want the distance from $x$ to $y$ to be the same as the
+distance from $y$ to $x$; this is property $(b)$.  Finally, we
+will see the triangle inequality (property $(c)$) in many forms
+but here we see that if you take a "detour", say through $z$, the
+detour path will be longer (have a greater or possibly equal
 distance) than the direct path between $x$ and $y$.
 
 \section{Conclusions}
