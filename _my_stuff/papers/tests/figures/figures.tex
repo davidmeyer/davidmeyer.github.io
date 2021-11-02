@@ -14,7 +14,7 @@
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
-\usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,lindenmayersystems}    
+\usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,hobby,lindenmayersystems}
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 %
@@ -58,6 +58,38 @@
 \pgfplotsset{compat=1.17} 
 
 \begin{document}
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.60 \textwidth}{!} {	
+     \begin{tikzpicture}[use Hobby shortcut]
+%														
+%	coordinate system
+%
+		\coordinate (x)  at (1.50,-5.50);															% endpoint of dashed line
+		\coordinate (xb) at (1.80,-5.15);															% endpoint of the brace
+		\coordinate (y)  at (4.50,-6.00);															% endpoint of the dashed line
+		\coordinate (yb) at (4.40,-5.58);															% endpoint of the brace					
+		\coordinate (X)  at (5.75,-7.50);															% show X in lower right
+%
+%	draw everything
+%
+		\draw [rotate=-90,scale=2] (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0); 			% draw the set boundary (make this up)
+		\fill [fill=black] (x) circle (1pt);														% x dot										
+		\draw [] (x) node[below]{$x$}; 																% label x
+		\fill [fill=black] (y) circle (1pt);														% y dot												
+		\draw [] (y) node[below]{$y$}; 																% label y
+		\draw[densely dashed, draw=red] (x) -- (y);    												% draw the dashed line between x and y
+		\draw [decoration={brace,mirror,raise=0.5cm},decorate] (xb) -- (yb) 						% draw the underbrace
+			node [rotate=-8.00,pos=0.5,anchor=north,yshift=-0.60cm] {${\small \text{distance}}$};	% label it with "distance"	
+		\node [] at (X) {$X$};																		% draw X in the lower right corner
+  \end{tikzpicture} 																				% end tikzpicture
+  }                                                                   								% end resizebox
+  \caption{$X,x \text{ and } y$}
+  \label{fig:set}
+\end{figure}
+
+
 
 
 %

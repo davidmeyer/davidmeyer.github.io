@@ -13,15 +13,17 @@
 %   tikz et al
 %
 \usepackage{tikz}
-\usetikzlibrary{patterns,angles,quotes,shapes,intersections,decorations,backgrounds}    
+\usetikzlibrary{patterns,angles,quotes,shapes,intersections,decorations,hobby,backgrounds}    
 \usepackage{pgfplots}	
 \usepackage{relsize}	
 \usepackage{float}
+\usepackage{enumitem}													% get alpha in enumerate
 %
 %	amsmath stuff
 %
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{mathtools}
 %
 %	watermarks
 %
@@ -59,8 +61,86 @@
 %
 %
 \section{Introduction}
+Functional Analysis is an interesting topic because, among other reasons, it sits between
+infinite dimensional linear algebra and real and complex analysis. As we shall see later,
+the connection is the norm $\left\lVert x\right\rVert$ of a vector space $V$. As we shall 
+see, if $(V,\left\lVert \cdot \right\rVert)$ is a \emph{normed space} then $(V,d)$ is a
+\emph{metric space} with metric $d(x,y) \coloneqq \left\lVert x-y \right\rVert$. Moreover, if 
+$(V,\langle\cdot,\cdot\rangle)$ is an \emph{inner product space} (that is, 
+$\langle\cdot,\cdot\rangle$ is an inner product on vector space $V$), then 
+$(V,\left\lVert \cdot \right\rVert)$ is a normed space with norm
+$\left\lVert x\right\rVert \coloneqq \sqrt{\langle x,x\rangle}$ and so $(V,d)$ is a
+metric space with metric $d(x,y) = \sqrt{\langle x-y,x-y\rangle}$.  
+Functional Analysis is inhabited by all kinds of interesting objects like these.
+
+\section{Metric Spaces}
+\label{sec:metric_spaces}
+Suppose we have an arbitrary set $X$ with two points $x,y \in X$. 
+We would like to measure the distance between $x$ and $y$ in $X$
+as shown in Figure \ref{fig:set}.
+
+\bigskip
+\begin{figure}[H]
+\centering
+  \resizebox{0.70 \textwidth}{!} {	
+    \tikzstyle{background rectangle}=[thin,draw=black]												% make the frame thinner (there must be an easier way
+    \begin{tikzpicture}[use Hobby shortcut, show background rectangle]								% couldn't control thickness with \begin{tikzpicture} [framed]
+%
+%     \begin{tikzpicture}[use Hobby shortcut]
+%														
+%	coordinate system
+%
+		\coordinate (x)  at (1.50,-5.50);															% endpoint of dashed line
+		\coordinate (xb) at (1.80,-5.15);															% endpoint of the brace
+		\coordinate (y)  at (4.50,-6.00);															% endpoint of the dashed line
+		\coordinate (yb) at (4.40,-5.58);															% endpoint of the brace					
+		\coordinate (X)  at (5.75,-7.50);															% show X in lower right
+%
+%	draw everything
+%
+		\draw [rotate=-90,scale=2] (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0); 			% draw the set boundary (make this up)
+		\fill [fill=black] (x) circle (1pt);														% x dot										
+		\draw [] (x) node[below]{$x$}; 																% label x
+		\fill [fill=black] (y) circle (1pt);														% y dot												
+		\draw [] (y) node[below]{$y$}; 																% label y
+		\draw[densely dashed, draw=red] (x) -- (y);    												% draw the dashed line between x and y
+		\draw [decoration={brace,mirror,raise=0.5cm},decorate] (xb) -- (yb) 						% draw the underbrace
+			node [rotate=-8.00,pos=0.5,anchor=north,yshift=-0.60cm] {${\small \text{distance}}$};	% label it with "distance"	
+		\node [] at (X) {$X$};																		% draw X in the lower right corner
+  \end{tikzpicture} 																				% end tikzpicture
+  }                                                                   								% end resizebox
+  \caption{$X,x \text{ and } y$}
+  \label{fig:set}
+\end{figure}
+
+\bigskip
+\noindent
+To measure this distance we define a map 
+$d: X \times X \rightarrow [0,\infty)$, which we 
+call a metric and which has the 
+following three properties:
 
 
+\begin{equation*}
+\begin{array}{llllll}
+(a) & d(x,y) = 0 \Leftrightarrow x = y				&& \qquad \qquad \mathrel{\#} \text{this property is called "positive definite"} \\
+[8pt]
+(b) & d(x,y) = d(y,x)								&& \qquad \qquad \mathrel{\#} \text{this property is called "symmetric"} \\
+[8pt]
+(c) & d(x,y) \leq d(x,z) + d(z,y)					&& \qquad \qquad \mathrel{\#} \text{this is called "triangle inequality"}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+We can see that we want the distance between $x$ and itself to be zero, hence property $(a)$. However,
+more than that we want this only to be the case when $x = y$ (so if and only if). Of course we want 
+the distance from $x$ to $y$ to be the same as the distance from $y$ to $x$; this is property $(b)$. 
+Finally,  we will see the triangle inequality (property $(c)$) in many forms but here we see that if 
+you take a "detour", say through $z$, the detour path will be longer (have a greater or possibly equal 
+distance) than the direct path between $x$ and $y$.
+
+\newpage
 %
 %	open epsilon ball
 %

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  2 NOV 2021 12:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  2 NOV 2021 14:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -475,12 +475,36 @@ s.code.tex
 s/tikzlibrarythrough.code.tex
 File: tikzlibrarythrough.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/tikzlibraryhobby.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/pgflibraryhobby.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/hobby.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box81
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
+01.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
+tex))) (/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/pml3array.sty
+\l_array_base_int=\count277
+\l_array_top_int=\count278
+\l_array_tmp_int=\count279
+\g_array_base_int=\count280
+)
+\l_hobby_npoints_int=\count281
+\l_hobby_draw_int=\count282
+)))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarylindenmayersystems.code.tex
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarylindenm
 ayersystems.code.tex
 \pgflsystemstep=\dimen199
-\c@pgf@lsystem@iteration=\count276
+\c@pgf@lsystem@iteration=\count283
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tkz-euclide/tkz-euclide.sty
 2020/03/18 3.06c tkz-euclide.sty
@@ -517,9 +541,9 @@ brarydecorations.shapes.code.tex))
 s/tikzlibrarydecorations.text.code.tex
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.text.code.tex
-\pgf@lib@dec@text@box=\box81
+\pgf@lib@dec@text@box=\box82
 )
-\tikz@lib@dec@te@box=\box82
+\tikz@lib@dec@te@box=\box83
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
@@ -555,17 +579,17 @@ Package: numprint 2012/08/20 v1.39 Print numbers (HH)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen260
-\ar@mcellbox=\box83
+\ar@mcellbox=\box84
 \extrarowheight=\dimen261
 \NC@list=\toks28
 \extratabsurround=\skip49
 \backup@length=\skip50
-\ar@cellbox=\box84
+\ar@cellbox=\box85
 )
-\c@nprt@mantissa@digitsbefore=\count277
-\c@nprt@mantissa@digitsafter=\count278
-\c@nprt@exponent@digitsbefore=\count279
-\c@nprt@exponent@digitsafter=\count280
+\c@nprt@mantissa@digitsbefore=\count284
+\c@nprt@mantissa@digitsafter=\count285
+\c@nprt@exponent@digitsbefore=\count286
+\c@nprt@exponent@digitsafter=\count287
 \nprt@digitwidth=\skip51
 \nprt@sepwidth=\skip52
 \nprt@decimalwidth=\skip53
@@ -573,49 +597,36 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \nprt@digittoks=\toks29
 \nprt@pretoks=\toks30
 \nprt@posttoks=\toks31
-\nprt@thisdigit=\count281
-\nprt@curpos=\count282
-\nprt@rndpos=\count283
-\c@nprt@digitsfirstblock=\count284
-\c@nprt@blockcnt=\count285
-\c@nprt@cntprint=\count286
+\nprt@thisdigit=\count288
+\nprt@curpos=\count289
+\nprt@rndpos=\count290
+\c@nprt@digitsfirstblock=\count291
+\c@nprt@blockcnt=\count292
+\c@nprt@cntprint=\count293
 
 No configuration file `numprint.cfg' found.)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xfp/xfp.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count287
-\l__pdf_internal_box=\box85
-))
 Package: xfp 2021-03-12 L3 Floating point unit
-
-LaTeX3 Info: Defining command \fpeval with sig. 'm' on line 37.
-
-
-LaTeX3 Info: Defining command \inteval with sig. 'm' on line 38.
-
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/fp/fp.sty
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fp/fp.sty
 Package: fp 1995/04/02
 
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/local/texlive/2021/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count288
+\actioncount=\count294
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count289
-\FP@xia=\count290
-\FP@xib=\count291
-\FP@xfa=\count292
-\FP@xfb=\count293
-\FP@rega=\count294
-\FP@regb=\count295
-\FP@regs=\count296
-\FP@times=\count297
+\FP@xs=\count295
+\FP@xia=\count296
+\FP@xib=\count297
+\FP@xfa=\count298
+\FP@xfb=\count299
+\FP@rega=\count300
+\FP@regb=\count301
+\FP@regs=\count302
+\FP@times=\count303
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -634,7 +645,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count298
+\FPseed=\count304
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -664,7 +675,7 @@ Package: fp-eval 1995/04/03
 \tkz@tcy=\dimen278
 \tkz@tdx=\dimen279
 \tkz@tdy=\dimen280
-\tkz@cntmk=\count299
+\tkz@cntmk=\count305
 
 Local configuration file tkz-base.cfg found and used
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tkz-base/tkz-base.cfg
@@ -782,8 +793,8 @@ Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 \t@pgfplots@tokb=\toks33
 \t@pgfplots@tokc=\toks34
 \pgfplots@tmpa=\dimen283
-\c@pgfplots@coordindex=\count300
-\c@pgfplots@scanlineindex=\count301
+\c@pgfplots@coordindex=\count306
+\c@pgfplots@scanlineindex=\count307
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
 .code.tex))
@@ -799,13 +810,13 @@ liststructure.code.tex)
 liststructureext.code.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 array.code.tex
-\c@pgfplotsarray@tmp=\count302
+\c@pgfplotsarray@tmp=\count308
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 matrix.code.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
-\c@pgfplotstable@counta=\count303
+\c@pgfplotstable@counta=\count309
 \t@pgfplotstable@a=\toks35
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
@@ -818,7 +829,7 @@ ta.code.tex))
 .code.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
 s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count304
+\c@pgfplotslibrarysurf@no=\count310
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
 .surfshading.pgfsys-pdftex.def)))
@@ -846,7 +857,7 @@ tex)
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
 x)
-\pgfplots@numplots=\count305
+\pgfplots@numplots=\count311
 \pgfplots@xmin@reg=\dimen284
 \pgfplots@xmax@reg=\dimen285
 \pgfplots@ymin@reg=\dimen286
@@ -862,9 +873,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count306
-\Gm@cntv=\count307
-\c@Gm@tempcnt=\count308
+\Gm@cnth=\count312
+\Gm@cntv=\count313
+\c@Gm@tempcnt=\count314
 \Gm@bindingoffset=\dimen290
 \Gm@wd@mp=\dimen291
 \Gm@odd@mp=\dimen292
@@ -930,8 +941,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen298
-\Hy@linkcounter=\count309
-\Hy@pagecounter=\count310
+\Hy@linkcounter=\count315
+\Hy@pagecounter=\count316
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
@@ -947,7 +958,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count311
+\Hy@SavedSpaceFactor=\count317
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
@@ -961,7 +972,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count312
+\c@Hy@tempcnt=\count318
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
@@ -977,7 +988,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count313
+\Fld@menulength=\count319
 \Field@Width=\dimen300
 \Fld@charsize=\dimen301
 Package hyperref Info: Hyper figures OFF on input line 6075.
@@ -995,9 +1006,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count314
-\c@Item=\count315
-\c@Hfootnote=\count316
+\Hy@abspage=\count320
+\c@Item=\count321
+\c@Hfootnote=\count322
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1009,8 +1020,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count317
-\c@bookmark@seq@number=\count318
+\Fld@listcount=\count323
+\c@bookmark@seq@number=\count324
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -1039,20 +1050,20 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen308
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count319
-\c@continuedfloat=\count320
+\c@caption@flags=\count325
+\c@continuedfloat=\count326
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count321
-\c@subtable=\count322
+\c@subfigure=\count327
+\c@subtable=\count328
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip56
 \@affilsep=\skip57
-\c@Maxaffil=\count323
-\c@authors=\count324
-\c@affil=\count325
+\c@Maxaffil=\count329
+\c@authors=\count330
+\c@affil=\count331
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
@@ -1074,13 +1085,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count326
+\inf@bad=\count332
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count327
-\leftroot@=\count328
+\uproot@=\count333
+\leftroot@=\count334
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count329
-\DOTSCASE@=\count330
+\classnum@=\count335
+\DOTSCASE@=\count336
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -1089,15 +1100,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen311
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count331
-\c@MaxMatrixCols=\count332
+\macc@depth=\count337
+\c@MaxMatrixCols=\count338
 \dotsspace@=\muskip17
-\c@parentequation=\count333
-\dspbrk@lvl=\count334
+\c@parentequation=\count339
+\dspbrk@lvl=\count340
 \tag@help=\toks39
-\row@=\count335
-\column@=\count336
-\maxfields@=\count337
+\row@=\count341
+\column@=\count342
+\maxfields@=\count343
 \andhelp@=\toks40
 \eqnshift@=\dimen312
 \alignsep@=\dimen313
@@ -1117,15 +1128,15 @@ Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count338
-\calc@Bcount=\count339
+\calc@Acount=\count344
+\calc@Bcount=\count345
 \calc@Adimen=\dimen318
 \calc@Bdimen=\dimen319
 \calc@Askip=\skip61
 \calc@Bskip=\skip62
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count340
+\calc@Ccount=\count346
 \calc@Cskip=\skip63
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1135,7 +1146,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count341
+\g_MT_multlinerow_int=\count347
 \l_MT_multwidth_dim=\dimen320
 \origjot=\skip64
 \l_MT_shortvdotswithinadjustabove_dim=\dimen321
@@ -1158,7 +1169,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks43
 \XKV@tempa@toks=\toks44
 )
-\XKV@depth=\count342
+\XKV@depth=\count348
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -1192,12 +1203,12 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count343
+\c@checkoddpage=\count349
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box90
-\sift@deathcycles=\count344
+\sift@deathcycles=\count350
 \@vwid@loff=\dimen340
 \@vwid@roff=\dimen341
 ))
@@ -1214,14 +1225,14 @@ Package: babel 2021/03/24 3.56 The Babel package
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2021/03/24 3.56 Babel common definitions
-\babel@savecnt=\count345
+\babel@savecnt=\count351
 \U@D=\dimen342
 \l@babelnohyphens=\language87
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
 )
-\bbl@dirlevel=\count346
+\bbl@dirlevel=\count352
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
@@ -1234,7 +1245,7 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count347
+\c@float@type=\count353
 \float@exts=\toks47
 \float@box=\box91
 \@float@everytoks=\toks48
@@ -1246,11 +1257,6 @@ Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/braket/braket.sty)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
-01.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
-tex)))
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
@@ -1258,27 +1264,27 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box93
 \l__siunitx_tmp_dim=\dimen343
-\l__siunitx_tmp_int=\count348
-\l__siunitx_number_mantissa_length_int=\count349
-\l__siunitx_number_uncert_length_int=\count350
-\l__siunitx_round_int=\count351
-\l__siunitx_process_decimal_int=\count352
-\l__siunitx_process_uncertainty_int=\count353
-\l__siunitx_process_fixed_int=\count354
-\l__siunitx_process_integer_min_int=\count355
-\l__siunitx_process_precision_int=\count356
-\l__siunitx_group_min_int=\count357
+\l__siunitx_tmp_int=\count354
+\l__siunitx_number_mantissa_length_int=\count355
+\l__siunitx_number_uncert_length_int=\count356
+\l__siunitx_round_int=\count357
+\l__siunitx_process_decimal_int=\count358
+\l__siunitx_process_uncertainty_int=\count359
+\l__siunitx_process_fixed_int=\count360
+\l__siunitx_process_integer_min_int=\count361
+\l__siunitx_process_precision_int=\count362
+\l__siunitx_group_min_int=\count363
 \l__siunitx_angle_marker_box=\box94
 \l__siunitx_angle_unit_box=\box95
 \l__siunitx_angle_marker_dim=\dimen344
 \l__siunitx_angle_unit_dim=\dimen345
-\l__siunitx_unit_int=\count358
-\l__siunitx_unit_denominator_int=\count359
-\l__siunitx_unit_numerator_int=\count360
-\l__siunitx_unit_prefix_int=\count361
-\l__siunitx_unit_prefix_base_int=\count362
-\l__siunitx_unit_prefix_gram_int=\count363
-\l__siunitx_number_product_int=\count364
+\l__siunitx_unit_int=\count364
+\l__siunitx_unit_denominator_int=\count365
+\l__siunitx_unit_numerator_int=\count366
+\l__siunitx_unit_prefix_int=\count367
+\l__siunitx_unit_prefix_base_int=\count368
+\l__siunitx_unit_prefix_gram_int=\count369
+\l__siunitx_number_product_int=\count370
 \c__siunitx_one_fill_skip=\skip65
 \l__siunitx_table_unit_align_skip=\skip66
 \l__siunitx_table_exponent_dim=\dimen346
@@ -1379,16 +1385,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count365
+\scratchcounter=\count371
 \scratchdimen=\dimen359
 \scratchbox=\box100
-\nofMPsegments=\count366
-\nofMParguments=\count367
+\nofMPsegments=\count372
+\nofMParguments=\count373
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count368
+\MPscratchCnt=\count374
 \MPscratchDim=\dimen360
-\MPnumerator=\count369
-\makeMPintoPDFobject=\count370
+\MPnumerator=\count375
+\makeMPintoPDFobject=\count376
 \everyMPtoPDFconversion=\toks50
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1455,7 +1461,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count371
+\c@section@level=\count377
 )
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
@@ -1533,14 +1539,22 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 87.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 89.
- [1
+(Font)              <10> on input line 87.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 87.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 87.
+[1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [2] [3] (./figures.aux)
+
+[2] [3] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1548,17 +1562,17 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 44538 strings out of 478994
- 1040609 string characters out of 5858184
- 1486113 words of memory out of 5000000
- 61094 multiletter control sequences out of 15000+600000
- 451957 words of font info for 73 fonts, out of 8000000 for 9000
+ 45138 strings out of 478994
+ 1055325 string characters out of 5858184
+ 1501818 words of memory out of 5000000
+ 61676 multiletter control sequences out of 15000+600000
+ 469374 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,12n,116p,788b,1118s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,12n,117p,788b,1118s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-21/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/
-fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2021/texmf-dist/fonts/type
+21/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2021/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type
 1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
 m/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/loca
@@ -1567,10 +1581,10 @@ l/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2
 ist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
 m/lmsy6.pfb>
-Output written on figures.pdf (3 pages, 102305 bytes).
+Output written on figures.pdf (3 pages, 103602 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 
