@@ -61,7 +61,7 @@
 %
 %
 \section{Introduction}
-Functional Analysis is an interesting topic because, among other reasons, it sits between
+Functional Analysis (FA) \cite{fa_mit} is an interesting topic because, among other reasons, it sits between
 infinite dimensional linear algebra and real and complex analysis. As we shall see later,
 the connection is the norm $\left\lVert x\right\rVert$ of a vector space $V$. As we shall 
 see, if $(V,\left\lVert \cdot \right\rVert)$ is a \emph{normed space} then $(V,d)$ is a
@@ -75,14 +75,15 @@ Functional Analysis is inhabited by all kinds of interesting objects like these.
 
 \section{Metric Spaces}
 \label{sec:metric_spaces}
-Suppose we have an arbitrary set $X$ with two points $x,y \in X$. 
-We would like to measure the distance between $x$ and $y$ in $X$
-as shown in Figure \ref{fig:set}.
+Metric spaces, along with vector spaces are among the most fundamental objects
+in FA. So suppose we have an arbitrary set $X$ 
+with two points $x,y \in X$. We would like to measure the distance between 
+$x$ and $y$ in $X$ as shown in Figure \ref{fig:set}.
 
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.70 \textwidth}{!} {	
+  \resizebox{0.50 \textwidth}{!} {	
     \tikzstyle{background rectangle}=[thin,draw=black]												% make the frame thinner (there must be an easier way
     \begin{tikzpicture}[use Hobby shortcut, show background rectangle]								% couldn't control thickness with \begin{tikzpicture} [framed]
 %
@@ -127,7 +128,7 @@ following three properties:
 [8pt]
 (b) & d(x,y) = d(y,x)								&& \qquad \qquad \mathrel{\#} \text{this property is called "symmetric"} \\
 [8pt]
-(c) & d(x,y) \leq d(x,z) + d(z,y)					&& \qquad \qquad \mathrel{\#} \text{this is called "triangle inequality"}
+(c) & d(x,y) \leq d(x,z) + d(z,y)					&& \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"}
 \end{array}
 \end{equation*}
 
@@ -140,7 +141,27 @@ Finally,  we will see the triangle inequality (property $(c)$) in many forms but
 you take a "detour", say through $z$, the detour path will be longer (have a greater or possibly equal 
 distance) than the direct path between $x$ and $y$.
 
-\newpage
+\section{Conclusions}
+
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX Source}
+\url{https://www.overleaf.com/read/gzwbyvcbtswp}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+
+
+\section*{Figures Holding}
+
+
 %
 %	open epsilon ball
 %
@@ -175,22 +196,6 @@ distance) than the direct path between $x$ and $y$.
 
 
 
-\section{Conclusions}
-
-\section*{Acknowledgements}
-%
-%	LaTeX source on overleaf.com
-%
-\section*{\LaTeX Source}
-\url{https://www.overleaf.com/read/}
-%
-%	get a bibliography
-%
-%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
-%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
-%
-\bibliographystyle{plain}
-\bibliography{qc}
 %
 %	done
 %
