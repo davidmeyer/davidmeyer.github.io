@@ -62,31 +62,32 @@
 %
 %
 \section{Introduction}
-Functional Analysis (FA) \cite{fa_mit} is an interesting topic
-because, among other reasons, it sits between infinite
-dimensional linear algebra and real and complex analysis. As we
-shall see later, the connection is the norm $\left\lVert
-x\right\rVert$ of a vector space $V$. As we shall see, if
-$(V,\left\lVert \cdot \right\rVert)$ is a \emph{normed space}
-then $(V,d)$ is a \emph{metric space} with metric $d(x,y)
-\coloneqq \left\lVert x-y \right\rVert$. Moreover, if
+Functional Analysis is an interesting topic because, among other
+reasons, it sits between infinite dimensional linear algebra and
+real and complex analysis \cite{fa_mit}. The connection is the
+norm $\norm{\mathbf{x}}$ of a vector space $V$. As we shall see,
+if $(V,\norm{\cdot})$ is a \emph{normed space} then $(V,d)$ is a
+\emph{metric space} with metric $d(\mathbf{x},\mathbf{y})
+\coloneqq \norm{\mathbf{x}-\mathbf{y}}$. Moreover, if
 $(V,\langle\cdot,\cdot\rangle)$ is an \emph{inner product space}
 (that is, $\langle\cdot,\cdot\rangle$ is an inner product on
-vector space $V$) then $(V,\left\lVert \cdot \right\rVert)$ is a
-normed space with norm $\left\lVert x\right\rVert \coloneqq
-\sqrt{\langle x,x\rangle}$ and so $(V,d)$ is a metric space with
-metric $d(x,y) = \sqrt{\langle x-y,x-y\rangle}$.  Functional
+vector space $V$) then $(V,\norm{\cdot})$ is a normed space with
+norm $\norm{\mathbf{x}} \coloneqq \sqrt{\langle
+\mathbf{x},\mathbf{x}\rangle}$ and consequently $(V,d)$ is a
+metric space with metric $d(\mathbf{x},\mathbf{y}) =
+\sqrt{\langle
+\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.  Functional
 Analysis is inhabited by all kinds of interesting objects like
 these.
 
 \section{Metric Spaces}
 \label{sec:metric_spaces}
 Metric spaces, along with vector spaces are among the most
-fundamental objects in Functional Analysis \cite{metric_spaces}. 
-The setup we consider is that we have an arbitrary set $X$ 
-and we look at two points $x,y \in X$. What we would like to
-do is measure the distance between $x$ and $y$ in $X$ as shown 
-in Figure \ref{fig:set}.
+fundamental objects in Functional Analysis \cite{metric_spaces}.
+The setup we consider is that we have an arbitrary set $X$ and we
+look at two points $x,y \in X$. What we would like to do is
+measure the distance between $x$ and $y$ in $X$ as shown in
+Figure \ref{fig:set}.
 
 \bigskip
 
@@ -127,40 +128,39 @@ in Figure \ref{fig:set}.
 
 \bigskip
 \noindent
-To measure this distance we define a map 
-$d: X \times X \rightarrow [0,\infty)$, which we 
-call a metric and which has the 
+To measure this distance we define a map $d: X \times X
+\rightarrow [0,\infty)$, which we call a metric and which has the
 following three properties:
 
 
 \begin{equation*}
 \begin{array}{llll}
-1. & d(x,y) = 0 \Leftrightarrow x = y			&& \qquad \qquad \mathrel{\#} \text{this property is called "positive definiteness"} \\
+1. & d(x,y) = 0 \Leftrightarrow x = y	&& \qquad \qquad \mathrel{\#} \text{this property is called "positive definiteness"} \\
 [8pt]
-2. & d(x,y) = d(y,x)							&& \qquad \qquad \mathrel{\#} \text{this property is called "symmetry"} \\
+2. & d(x,y) = d(y,x)					&& \qquad \qquad \mathrel{\#} \text{this property is called "symmetry"} \\
 [8pt]
-3. & d(x,y) \leq d(x,z) + d(z,y)				&& \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"} 
+3. & d(x,y) \leq d(x,z) + d(z,y)		&& \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-We want the distance between $x$ and itself to be zero, 
-hence property 1. However, more than that we want this
-only to be the case when $x = y$ (so if and only if). Of course
-we want the distance from $x$ to $y$ to be the same as the
-distance from $y$ to $x$; this is property 2.  Finally, property
-3, the triangle inequality, is what we would expect in normal
-Euclidian space \cite{euclidian_space}. The triangle inequality 
-tells us that if we take a "detour" through a third point $z$ 
-then the detour path will have a greater or possibly 
-equal  than the direct path between $x$ and $y$ 
-(see Figure \ref{fig:triangle_inequality}). Note that
-there are important differences (which we will get to later) 
-between distance, as measured by a metric $d(x,y)$ and 
-length, as measured by a norm $\norm{\mathbf{x}}$, but 
-for now we'll consider the "distance version" of the 
-triangle inequality as shown in Figure \ref{fig:triangle_inequality}.
+We want the distance between $x$ and itself to be zero, hence
+property 1. However, more than that we want this only to be the
+case when $x = y$ (so if and only if). Of course we want the
+distance from $x$ to $y$ to be the same as the distance from $y$
+to $x$; this is property 2.  Finally, property 3, the triangle
+inequality, is what we would expect in normal Euclidian space
+\cite{euclidian_space}. The triangle inequality tells us that if
+we take a "detour" through a third point $z$ then the detour path
+will have a greater or possibly equal than the direct path
+between $x$ and $y$ (see Figure
+\ref{fig:triangle_inequality}). Note that there are important
+differences (which we will get to later) between distance, as
+measured by a metric $d(x,y)$ and length, as measured by a norm
+$\norm{\mathbf{x}}$, but for now we'll consider the "distance
+version" of the triangle inequality as shown in Figure
+\ref{fig:triangle_inequality}.
 
 \bigskip
 %

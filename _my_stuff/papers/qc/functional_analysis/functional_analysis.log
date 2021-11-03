@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 NOV 2021 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 NOV 2021 11:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1005,18 +1005,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 123.
+LaTeX Font Warning: Command \small invalid in math mode on input line 124.
 
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./functional_analysis.bbl) [2] [3] (./functional_analysis.aux) ) 
 Here is how much of TeX's memory you used:
- 29463 strings out of 478994
- 739394 string characters out of 5858184
+ 29465 strings out of 478994
+ 739413 string characters out of 5858184
  1204685 words of memory out of 5000000
- 46400 multiletter control sequences out of 15000+600000
- 415223 words of font info for 73 fonts, out of 8000000 for 9000
+ 46401 multiletter control sequences out of 15000+600000
+ 415531 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,11n,117p,736b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/te
@@ -1037,7 +1037,7 @@ ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb>
-Output written on functional_analysis.pdf (3 pages, 179714 bytes).
+Output written on functional_analysis.pdf (3 pages, 179940 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
