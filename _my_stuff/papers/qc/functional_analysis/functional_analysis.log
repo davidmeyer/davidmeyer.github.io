@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 NOV 2021 07:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 NOV 2021 08:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -986,10 +986,10 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 121.
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./functional_analysis.bbl) [2] (./functional_analysis.aux) ) 
 Here is how much of TeX's memory you used:
- 28801 strings out of 478994
- 732232 string characters out of 5858184
- 1203684 words of memory out of 5000000
- 45767 multiletter control sequences out of 15000+600000
+ 28802 strings out of 478994
+ 732247 string characters out of 5858184
+ 1203685 words of memory out of 5000000
+ 45768 multiletter control sequences out of 15000+600000
  410996 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,11n,117p,736b,822s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1010,7 +1010,7 @@ s/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on functional_analysis.pdf (2 pages, 167280 bytes).
+Output written on functional_analysis.pdf (2 pages, 168780 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

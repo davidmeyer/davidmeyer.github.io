@@ -1,5 +1,13 @@
 \begin{thebibliography}{1}
 
+\bibitem{metric_spaces}
+{John O'Connor}.
+\newblock {Definition and examples of metric spaces}.
+\newblock
+  \url{http://www-groups.mcs.st-andrews.ac.uk/~john/MT4522/Lectures/L5.html},
+  Feb 2004.
+\newblock [Online; accessed 03-November-2021].
+
 \bibitem{fa_mit}
 {Richard Melrose}.
 \newblock {Introduction to Functional Analysis}.
