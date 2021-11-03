@@ -76,9 +76,34 @@ norm $\norm{\mathbf{x}} \coloneqq \sqrt{\langle
 \mathbf{x},\mathbf{x}\rangle}$ and consequently $(V,d)$ is a
 metric space with metric $d(\mathbf{x},\mathbf{y}) =
 \sqrt{\langle
-\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.  Functional
-Analysis is inhabited by all kinds of interesting objects like
-these.
+\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.  
+
+\bigskip
+\noindent
+One quick thing is to notice is that as we go from metric 
+to norm to inner product we are adding structure to a vector 
+space. Specifically 
+
+\begin{equation*}
+\begin{array}{rclll}
+\text{metric:}        & d(x,y)                    & \longrightarrow & \text{measures distances} \\
+\text{norm:}          & \norm{\mathbf{x}}         & \longrightarrow & \text{measures distances, lengths} \\
+\text{inner product:} & \langle\mathbf{x},\mathbf{y}\rangle & \longrightarrow & \text{measures distances, lengths and angles}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+If we consider an arbitrary set $X$ with no other structure we can 
+only tell if two points are equal. A metric adds structure
+to such a set which allows us to calculate the distance between
+any two points (as well as whether they are equal or now). Similarly,
+a norm adds structure to a vector space that allows us to calculate
+length (as well as distance and equality). A inner product
+adds the ability to calculate angles, etc. Both the algebraic 
+and geometric aspects of this increasing structure are pretty 
+interesting.
 
 \section{Metric Spaces}
 \label{sec:metric_spaces}
