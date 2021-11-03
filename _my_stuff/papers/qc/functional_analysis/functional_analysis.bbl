@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{euclidian_space}
+{Frank Jones}.
+\newblock {Euclidean space}.
+\newblock \url{http://www.owlnet.rice.edu/~fjones/chap1.pdf}, Aug 2004.
+\newblock [Online; accessed 03-November-2021].
+
 \bibitem{metric_spaces}
 {John O'Connor}.
 \newblock {Definition and examples of metric spaces}.
