@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 NOV 2021 09:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 NOV 2021 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1540,21 +1540,22 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 107.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 107.
+(Font)              <5> on input line 106.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 143.
+LaTeX Font Warning: Command \small invalid in math mode on input line 142.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 143.
+(Font)              <10> on input line 142.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 143.
+(Font)              <7> on input line 142.
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] (./figures.aux)
+[2]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 1.
+ [3] [4] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1562,16 +1563,16 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45164 strings out of 478994
- 1055682 string characters out of 5858184
- 1501232 words of memory out of 5000000
- 61700 multiletter control sequences out of 15000+600000
+ 45166 strings out of 478994
+ 1055721 string characters out of 5858184
+ 1501234 words of memory out of 5000000
+ 61702 multiletter control sequences out of 15000+600000
  469374 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,117p,777b,1118s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-21/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-d
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
 ist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type
 1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
 m/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
@@ -1580,12 +1581,12 @@ l/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
-m/lmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on figures.pdf (4 pages, 128163 bytes).
+m/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pf
+b>
+Output written on figures.pdf (4 pages, 109992 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 
