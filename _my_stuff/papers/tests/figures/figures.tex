@@ -47,7 +47,6 @@
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
-\usepackage{framed}
 
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
@@ -58,6 +57,22 @@
 \pgfplotsset{compat=1.17} 
 
 \begin{document}
+
+\begin{figure}[H]
+ \centering
+  \fbox{\begin{minipage}{34em}
+    \begin{equation*}
+     \begin{array}{rlrlrlr}
+       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 81     \\
+       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
+       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
+       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
+       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
+     \end{array}
+    \end{equation*}
+  \end{minipage}}
+  \caption{A Few Example Kaprekar Numbers}
+\end{figure}
 
 %
 %	triangle inequality
