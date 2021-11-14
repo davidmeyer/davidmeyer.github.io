@@ -109,7 +109,12 @@ f_a(n) \thicksim f_b(n)
 That is, the $\thicksim$ symbol means that the ratio of its two arguments tends towards $1$ as its arguments tend toward $\infty$.
 
 \section{Proof Using Sequences}
-Consider the "ratio of our ages" sequence of the form
+Recall our previous definitions: your age is $x_t$ and my age is $y_t$ at some time $t$. 
+Then in $n$ years your age is $x_t + n$ and my age is $y_t + n$ for $n \in \mathbb{N}$.
+
+\bigskip
+\noindent
+Now, consider the "ratio of our ages" sequence:
 
 \begin{equation*}
 (a_n)_{n \in \mathbb{N}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
@@ -118,9 +123,8 @@ Consider the "ratio of our ages" sequence of the form
 \bigskip
 \noindent
 and ask the question "what happens as $n$ goes to $\infty$"? In other words,
-does this sequence converge, and if it does, to what value? Well,
-first, assume that $y_t + n \neq n$ for all $n \in \mathbb{N}$. Then take 
-the limit of both sides
+does this sequence converge, and if it does, to what value? The first step
+is to take the limit of both sides:
 
 \begin{equation*}
 \lim_{n \to \infty} (a_n)_{n \in \mathbb{N}} = \lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
@@ -128,35 +132,39 @@ the limit of both sides
 
 \bigskip
 \noindent
-Now,  we know that the limit operator is a linear operator \cite{fa_mit} so we see that
+We do have some machinery we can use to evaluate this limit, including algebraic rules for limits \cite{properties_of_limits} 
+and the fact that the limit is a linear operator \cite{fa_mit}. 
 
+\bigskip
+\noindent
+Putting all of this together we can see that
 
 \begin{equation*}
 \begin{array}{lllll}
 {\displaystyle \lim_{n \to \infty} \left (\dfrac{x_t + n}{y_t + n}\right )}
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}} {{\displaystyle  \lim_{n \to \infty} \left (y_t + n \right)}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{quotient rule for limits \cite{properties_of_limits}} \\
-[17pt]
+[20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}\left (\frac{1}{n}\right )} 
           {{\displaystyle \lim_{n \to \infty} \left (y_t + n \right)} \left ( \frac{1}{n} \right )}
-			&\qquad \qquad \qquad \mathrel{\#} \text{multiply by $1 = \frac{\frac{1}{n}}{\frac{1}{n}}$}\\
-[17pt]
+			&\qquad \qquad \qquad \mathrel{\#} \text{multiply by $1 = \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
+[20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (\frac{x_t}{n} + \frac{n}{n} \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + \frac{n}{n} \right)}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{multiply through by $\frac{1}{n}$}\\
-[19pt]
+[20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \left (\frac{x_t}{n} + 1 \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + 1 \right)}}
 			&\qquad \qquad \qquad \mathrel{\#} \frac{n}{n} = 1\\
-[19pt]
+[20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}   \frac{x_t}{n} + \lim_{n \to \infty} 1}} 
            {{\displaystyle \lim_{n \to \infty}  \frac{y_t}{n} + \lim_{n \to \infty} 1}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator} \\
-[19pt]
+[20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \frac{x_t}{n} + 1}} 
            {{\displaystyle \lim_{n \to \infty} \frac{y_t}{n} + 1}}
 			&\qquad \qquad \qquad \mathrel{\#} {\displaystyle \lim_{n \to \infty} 1 = 1} \\
-[19pt]
+[20pt]
 &=& \dfrac{0 + 1} {0 + 1}
 			&\qquad \qquad \qquad \mathrel{\#} {\displaystyle \lim_{n \to \infty} \frac{a}{n} = a \lim_{n \to \infty} \frac{1}{n} = 0} \text{ for constant $a$ \cite{limits_of_sequences}} \\
 [10pt]
