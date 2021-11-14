@@ -65,10 +65,11 @@
 \begin{document}
 \maketitle
 
-\bigskip
-\noindent
-Suppose your age is $x_t$ and my age is $y_t$ at some time $t$. Then in $n$ years your age is $x_t + n$ and my age is $y_t + n$. This implies
-that as time goes by (as measured by $n \in \mathbb{N}$) the difference in our ages vanishes!
+\section{Introduction}
+Suppose your age is $x_t$ and my age is $y_t$ at some time $t$. 
+Then in $n$ years your age is $x_t + n$ and my age is $y_t + n$. This implies
+that as time goes by (as measured by $n \in \mathbb{N}$) the difference 
+in our ages vanishes!
 
 \bigskip
 \noindent
@@ -107,6 +108,77 @@ f_a(n) \thicksim f_b(n)
 \noindent
 That is, the $\thicksim$ symbol means that the ratio of its two arguments tends towards $1$ as its arguments tend toward $\infty$.
 
+\section{Proof Using Sequences}
+Consider the "ratio of our ages" sequence of the form
+
+\begin{equation*}
+(a_n)_{n \in \mathbb{N}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+\end{equation*}
+
+\bigskip
+\noindent
+and ask the question "what happens as $n$ goes to $\infty$"? In other words,
+what does this sequence converge, and if it does, to what value? Well,
+first, assume that $y_t + n \neq n$ for all $n \in \mathbb{N}$. Then take 
+the limit of both sides
+
+\begin{equation*}
+\lim_{n \to \infty} (a_n)_{n \in \mathbb{N}} = \lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+\end{equation*}
+
+\bigskip
+\noindent
+Now,  we know that the limit operator is a linear operator \cite{fa_mit} so we see that
+
+
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \lim_{n \to \infty} \left (\dfrac{x_t + n}{y_t + n}\right )}
+&=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}} {{\displaystyle  \lim_{n \to \infty} \left (y_t + n \right)}}
+			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator} \\
+[17pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}\left (\frac{1}{n}\right )} 
+          {{\displaystyle \lim_{n \to \infty} \left (y_t + n \right)} \left ( \frac{1}{n} \right )}
+			&\qquad \qquad \qquad \mathrel{\#} \text{multiply by $1 = \frac{\frac{1}{n}}{\frac{1}{n}}$}\\
+[17pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (\frac{x_t}{n} + \frac{n}{n} \right )}} 
+           {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + \frac{n}{n} \right)}}
+			&\qquad \qquad \qquad \mathrel{\#} \text{multiply through by $\frac{1}{n}$}\\
+[19pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty}  \left (\frac{x_t}{n} + 1 \right )}} 
+           {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + 1 \right)}}
+			&\qquad \qquad \qquad \mathrel{\#} \frac{n}{n} = 1\\
+[19pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty}   \frac{x_t}{n} + \lim_{n \to \infty} 1}} 
+           {{\displaystyle \lim_{n \to \infty}  \frac{y_t}{n} + \lim_{n \to \infty} 1}}
+			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator} \\
+[19pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty}  \frac{x_t}{n} + 1}} 
+           {{\displaystyle \lim_{n \to \infty} \frac{y_t}{n} + 1}}
+			&\qquad \qquad \qquad \mathrel{\#} {\displaystyle \lim_{n \to \infty} 1 = 1} \\
+[19pt]
+&=& \dfrac{0 + 1} {0 + 1}
+			&\qquad \qquad \qquad \mathrel{\#} {\displaystyle \lim_{n \to \infty} \frac{a}{n} = a \lim_{n \to \infty} \frac{1}{n} = 0} \text{ for constant $a$ \cite{limits_of_sequences}} \\
+[10pt]
+&=& \dfrac{1}{1}	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
+[10pt]
+&=& 1				&\qquad \qquad \qquad \mathrel{\#} \text{apparently we're all roughly the same age}
+\end{array}
+\end{equation*}
+
+
+\section{Conclusions}
+So I guess that while in our short lives our ages appear to vary widely
+across our life spans, when we look at a bigger picture that difference
+disappears.
+
+\section*{Acknowledgements}
+
+%
+%   get a bibliography
+%
+\bibliographystyle{plain}
+\bibliography{/Users/dmm/papers/bib/qc}
 
 \end{document} 
 
