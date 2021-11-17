@@ -1,14 +1,14 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\documentclass[11pt, oneside]{article}          % use "amsart" instead of "article" for AMSLaTeX format
 
 
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
-
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}                  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+%
+%
+%
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -121,8 +121,21 @@ Now, consider the "ratio of our ages" sequence:
 \end{equation*}
 
 \bigskip
+\noindent 
+The notation $(a_n)_{n \in \mathbb{N}}$ means that $a$ is a map from
+$\mathbb{N}$ to $\mathbb{R}$, namely
+
+\begin{equation*}
+a: \mathbb{N} \to \mathbb{R}
+\end{equation*}
+
+\bigskip
 \noindent
-and ask the question "what happens as $n$ goes to $\infty$"? In other words,
+That is, $(a_n)_{n \in \mathbb{N}}$ is a sequence of real numbers.
+
+\bigskip
+\noindent
+Now we want to ask the question "what happens as $n$ goes to $\infty$"? In other words,
 does this sequence converge, and if it does, to what value? The first step
 is to take the limit of both sides:
 
