@@ -32,6 +32,8 @@
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{mathtools}
+\usepackage{setspace}
+
 
 
 \usepackage{tikz}
@@ -106,7 +108,8 @@ f_a(n) \thicksim f_b(n)
 
 \bigskip
 \noindent
-That is, the $\thicksim$ symbol means that the ratio of its two arguments tends towards $1$ as its arguments tend toward $\infty$.
+That is, the $\thicksim$ symbol means that the ratio of its two arguments tends 
+towards $1$ as its arguments tend toward $\infty$.
 
 \section{Proof Using Sequences}
 Recall our previous definitions: your age is $x_t$ and my age is $y_t$ at some time $t$. 
@@ -134,10 +137,26 @@ a: \mathbb{N} \to \mathbb{R}
 That is, $(a_n)_{n \in \mathbb{N}}$ is a sequence of real numbers.
 
 \bigskip
+\noindent 
+\begin{definition}{\bf Convergent Sequence: }  We say that a sequence 
+$(a_n)_{n \in \mathbb{N}}$ is convergent to $a \in \mathbb{R}$ if
+forall $\epsilon$ greater that zero there exists an $N$ in $\mathbb{N}$ 
+such that if $n \in \mathbb{N}$ is greater than or equal to $N$ then
+$\mid a_n - a \mid < \epsilon$. Put another way
+
+\bigskip
+$\forall \epsilon > 0 \;\; \exists N \in \mathbb{N} \;\; \forall n \geq N : \;\; \mid a_n - a \mid < \epsilon$
+
+\bigskip
 \noindent
-Now we want to ask the question "what happens as $n$ goes to $\infty$"? In other words,
-does this sequence converge, and if it does, to what value? The first step
-is to take the limit of both sides:
+Then we write $\lim_{n \to \infty} a_n = a$ (or sometimes $a_n \xrightarrow{n \to \infty}{} a$).
+\end{definition}
+
+
+\noindent
+So now we want to ask the question "what happens as $n$ goes to $\infty$"? 
+In other words, does this sequence converge, and if it does, to what value? 
+The first step is to take the limit of both sides:
 
 \begin{equation*}
 \lim_{n \to \infty} (a_n)_{n \in \mathbb{N}} = \lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
@@ -145,12 +164,17 @@ is to take the limit of both sides:
 
 \bigskip
 \noindent
-We do have some machinery we can use to evaluate this limit, including algebraic rules for limits \cite{properties_of_limits} 
-and the fact that the limit is a linear operator \cite{fa_mit}. 
+As we will see in Section \ref{subsec:putting_it_all_together}, we do have some machinery we can use to 
+evaluate this limit such as the algebraic rules for limits \cite{properties_of_limits} and the 
+fact that the limit is a linear operator \cite{fa_mit}. 
 
-\bigskip
-\noindent
-Putting all of this together we can see that
+\subsection{Putting It All Together}
+\label{subsec:putting_it_all_together}
+\setstretch{1.75}
+Now we can see that the "ratio of our ages" sequence 
+$\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ is a convergent sequence 
+with limit equal to one, since
+
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -179,7 +203,9 @@ Putting all of this together we can see that
 			&\qquad \qquad \qquad \mathrel{\#} {\displaystyle \lim_{n \to \infty} 1 = 1} \\
 [20pt]
 &=& \dfrac{0 + 1} {0 + 1}
-			&\qquad \qquad \qquad \mathrel{\#} {\displaystyle \lim_{n \to \infty} \frac{a}{n} = a \lim_{n \to \infty} \frac{1}{n} = 0} \text{ for constant $a$ \cite{limits_of_sequences}} \\
+			&\qquad \qquad \qquad \mathrel{\#} 
+			{\displaystyle \lim_{n \to \infty} \frac{a}{n} = a \lim_{n \to \infty} \frac{1}{n} = 0} 
+			\text{ for constant $a$ \cite{limits_of_sequences}} \\
 [10pt]
 &=& \dfrac{1}{1}	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
 [10pt]
@@ -189,6 +215,7 @@ Putting all of this together we can see that
 
 
 \section{Conclusions}
+\setstretch{1.25}
 So I guess that while in our short lives our ages appear to vary widely
 across our life spans, when we look at a bigger picture that difference
 disappears.
