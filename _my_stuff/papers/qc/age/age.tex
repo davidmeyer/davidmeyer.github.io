@@ -62,7 +62,7 @@
 \title{Why Is There No Difference In Our Ages?}
 \author{David Meyer \\ dmm@1-4-5.net}
 
-\date{Last update: June 25, 2021}							% Activate to display a given date or no date
+% \date{Last update: June 25, 2021}							% Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -84,10 +84,14 @@ Why? Consider that
 
 \bigskip
 \noindent
-which is another way of saying the same thing. This result is reassuring since it pretty much models our experience. 
+which is another way of saying the same thing. This result is reassuring since 
+it pretty much models our experience. But why is this true? As we will see
+in Section \ref{subsec:putting_it_all_together}, this "ratio of our
+ages" sequence is a \emph{convergent sequence} in $\mathbb{R}$ with 
+limit one.
 
-\bigskip
-\noindent
+
+\subsection{A Perhaps More General Formulation}
 More generally consider the function $f_a(n) = a + n$ where $a,n \in \mathbb{N}$. Then
 
 \bigskip
@@ -119,8 +123,9 @@ Then in $n$ years your age is $x_t + n$ and my age is $y_t + n$ for $n \in \math
 \noindent
 Now, consider the "ratio of our ages" sequence:
 
+\medskip
 \begin{equation*}
-(a_n)_{n \in \mathbb{N}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+(a_n)_{n \in \mathbb{N}} \coloneqq \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
 \end{equation*}
 
 \bigskip
@@ -139,28 +144,41 @@ That is, $(a_n)_{n \in \mathbb{N}}$ is a sequence of real numbers.
 \bigskip
 \noindent 
 \begin{definition}{\bf Convergent Sequence: }  We say that a sequence 
-$(a_n)_{n \in \mathbb{N}}$ is convergent to $a \in \mathbb{R}$ if
-forall $\epsilon$ greater that zero there exists an $N$ in $\mathbb{N}$ 
+$(a_n)_{n \in \mathbb{N}}$ is \emph{convergent} to $a \in \mathbb{R}$ if
+for all $\epsilon$ greater that zero there exists an $N$ in $\mathbb{N}$ 
 such that if $n \in \mathbb{N}$ is greater than or equal to $N$ then
-$\mid a_n - a \mid < \epsilon$. Put another way
+$\mid a_n - a \mid < \epsilon$. Put more concisely
 
-\bigskip
-$\forall \epsilon > 0 \;\; \exists N \in \mathbb{N} \;\; \forall n \geq N : \;\; \mid a_n - a \mid < \epsilon$
+\begin{equation*}
+\forall \epsilon > 0 \;\; \exists N \in \mathbb{N} \;\; \forall n \geq N : \;\; \mid a_n - a \mid \; < \epsilon
+\end{equation*}
 
 \bigskip
 \noindent
-Then we write $\lim_{n \to \infty} a_n = a$ (or sometimes $a_n \xrightarrow{n \to \infty}{} a$).
+Here $a$ is called the \emph{limit} of the sequence $(a_n)_{n \in \mathbb{N}}$
+and we write ${\displaystyle \lim_{n \to \infty} a_n = a}$ (or 
+sometimes $a_n \xrightarrow{n \to \infty}{} a$).
 \end{definition}
 
 
 \noindent
-So now we want to ask the question "what happens as $n$ goes to $\infty$"? 
-In other words, does this sequence converge, and if it does, to what value? 
-The first step is to take the limit of both sides:
+So now we want to ask the obvious question: what happens to the ratio of our ages sequence
+as $n$ goes to $\infty$? In other words, does this sequence converge, and if it does, 
+to what value? 
 
+\bigskip
+\noindent
+All of this means that we want to know if this limit 
+
+\bigskip
 \begin{equation*}
-\lim_{n \to \infty} (a_n)_{n \in \mathbb{N}} = \lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+\lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}} = \;\; ?
 \end{equation*}
+
+\bigskip
+\noindent
+exists and if it does, what is its value.
+
 
 \bigskip
 \noindent
@@ -172,9 +190,9 @@ fact that the limit is a linear operator \cite{fa_mit}.
 \label{subsec:putting_it_all_together}
 \setstretch{1.75}
 Now we can see that the "ratio of our ages" sequence 
-$\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ is a convergent sequence 
-with limit equal to one, since
-
+$\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ is indeed
+a convergent sequence with limit equal to one, since
+\setstretch{1.0}
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -184,7 +202,7 @@ with limit equal to one, since
 [20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}\left (\frac{1}{n}\right )} 
           {{\displaystyle \lim_{n \to \infty} \left (y_t + n \right)} \left ( \frac{1}{n} \right )}
-			&\qquad \qquad \qquad \mathrel{\#} \text{multiply by $1 = \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
+			&\qquad \qquad \qquad \mathrel{\#} \text{multiply the fraction by $1 = \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
 [20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (\frac{x_t}{n} + \frac{n}{n} \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + \frac{n}{n} \right)}}
@@ -196,7 +214,7 @@ with limit equal to one, since
 [20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}   \frac{x_t}{n} + \lim_{n \to \infty} 1}} 
            {{\displaystyle \lim_{n \to \infty}  \frac{y_t}{n} + \lim_{n \to \infty} 1}}
-			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator} \\
+			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator \cite{fa_mit}} \\
 [20pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \frac{x_t}{n} + 1}} 
            {{\displaystyle \lim_{n \to \infty} \frac{y_t}{n} + 1}}
