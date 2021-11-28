@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 NOV 2021 08:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 NOV 2021 09:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -978,12 +978,7 @@ Overfull \hbox (85.12042pt too wide) detected at line 401
  []
 
 
-Overfull \hbox (12.60649pt too wide) detected at line 424
-[]
- []
-
-
-Overfull \hbox (6.15726pt too wide) in paragraph at lines 449--461
+Overfull \hbox (6.15726pt too wide) in paragraph at lines 452--464
  [][] 
  []
 
@@ -994,18 +989,15 @@ trices & oldid = 868880007$[]\OT1/cmr/m/n/10.95 , 2018.
  []
 
 ) [13] (./bell.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `bell.out' has not changed.
 (rerunfilecheck)             Checksum: BD58B6F3FE702C42325BB85D49850DC2;2154.
  ) 
 Here is how much of TeX's memory you used:
- 15884 strings out of 478994
- 274894 string characters out of 5858184
- 602941 words of memory out of 5000000
- 33041 multiletter control sequences out of 15000+600000
- 417785 words of font info for 83 fonts, out of 8000000 for 9000
+ 15899 strings out of 478994
+ 275076 string characters out of 5858184
+ 602940 words of memory out of 5000000
+ 33054 multiletter control sequences out of 15000+600000
+ 420729 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,20n,77p,402b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1023,20 +1015,21 @@ l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on bell.pdf (13 pages, 296347 bytes).
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1095.pfb>
+Output written on bell.pdf (13 pages, 303530 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 277 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
  48 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

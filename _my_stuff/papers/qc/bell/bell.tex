@@ -395,7 +395,7 @@ Then
 &=& \frac{1}{2} \bigg [ \alpha \Big (\ket{000} + \ket{100}  +  \ket{011} + \ket{111}) \Big)  +
 		\beta \Big (\ket{010} - \ket{110} + \ket{001} - \ket{101}  \Big ) \bigg ] \\
 [5pt]
-&=&\frac{1}{2} \bigg [ \alpha \ket{000} + \alpha \ket{100}  +  \alpha \ket{011} + \alpha \ket{111})  +
+&=&\frac{1}{2} \bigg [ \alpha \ket{000} + \alpha \ket{100}  +  \alpha \ket{011} + \alpha \ket{111} +
 		\beta \ket{010} - \beta\ket{110} + \beta \ket{001} - \beta \ket{101}  \bigg ] \\
 \end{array}
 \end{equation*}
@@ -405,7 +405,8 @@ Then
 
 \bigskip
 \noindent
-Now Alice measures her two qubits ($\ket{\psi} \otimes \ket{\phi^{+}_A} $) and observes $b_0b_1 \in \{00, 01, 10, 11\}$ with $P(b_0b_1) = \frac{1}{4}$. 
+Now Alice measures her two qubits ($\ket{\psi} \otimes \ket{\phi^{+}_A} $) 
+and observes $b_0b_1 \in \{00, 01, 10, 11\}$ with $P(b_0b_1) = \frac{1}{4}$. 
 
 
 \bigskip
@@ -417,11 +418,13 @@ Bob sees the value $00$, he knows that his qubit $\ket{\phi^{+}_{B}} = \alpha \k
 \noindent
 First, as shown above
 
+{\small
 \begin{flalign}
 \label{eqn:psi_otimes_phi+}
-\ket{\psi} \otimes \ket{\phi^+} = \frac{1}{2} \bigg [ \alpha \ket{000} + \alpha \ket{100}  +  \alpha \ket{011} + \alpha \ket{111})  +
+\ket{\psi} \otimes \ket{\phi^+} = \frac{1}{2} \bigg [ \alpha \ket{000} + \alpha \ket{100}  +  \alpha \ket{011} + \alpha \ket{111} +
 \beta \ket{010} - \beta\ket{110} + \beta \ket{001} - \beta \ket{101}  \bigg ] 
 \end{flalign}
+\par}
  
  
  \bigskip
