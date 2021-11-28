@@ -60,7 +60,72 @@
 
 \begin{document}
 
-rightsquigarrow $\rightsquigarrow$
+
+
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.55 \textwidth}{!} {	
+
+\begin{tikzpicture}
+    \def\lzero{(-5,1) cos (-2.5,1.5) sin (0,2) cos (2.5,1.5) sin (5,1)};
+  \fill[blue,opacity=0.2] \lzero;
+  \draw[blue!75!black] \lzero node[right,black] {$\Psi_0(x)$};
+
+  \def\lone{(-5,2.5) cos (-3.33,2.25) sin (-1.66,2) cos (0,2.5) sin (1.66,3) cos (3.33,2.75) sin (5,2.5)}
+  \fill[red,opacity=0.2] \lone;
+  \draw[red!75!black] \lone node[right,black] {$\Psi_1(x)$};
+
+  \def\ltwo{(-5,4) cos (-3.75,4.25) sin (-2.5,4.5) cos (-1.25,4) sin (0,3.5) cos (1.25,4) sin (2.5,4.5) cos (3.75,4.25) sin (5,4)}
+  \fill[green,opacity=0.2] \ltwo;
+  \draw[green!75!black] \ltwo node[right,black] {$\Psi_2(x)$};
+
+  \draw (0,0) parabola (5,10);
+  \draw (0,0) parabola (-5,10);
+
+  \begin{scope}[decoration={border, segment length=1cm, amplitude=1mm, angle=90}]
+    \draw[postaction={decorate,draw}] (-5,0) -- (5.1,0);
+    \draw[postaction={decorate,draw}] (0,0) -- (0,10.1); 
+  \end{scope}
+\end{tikzpicture}
+  }                                                                   								% end resizebox
+  \caption{Wave Functions}
+  \label{fig:wave_functions}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.55 \textwidth}{!} {	
+
+\begin{tikzpicture}
+\draw[->] (0,0) -- (0,4.5);
+
+\def\lzero{(3,0.4) cos (4,0.6) sin (5,0.8) cos (6,0.6) sin (7,0.4)};
+\fill[blue,opacity=0.2] \lzero;
+\draw[blue!75!black] \lzero node[right,black] {$\Psi_0(x)$ \textendash ~Even};
+\draw (-0.632,0.4) -- (2,0.4) node[right] {$E_0$};
+
+\def\lone{(3,1.5) cos (3.66,1.4) sin (4.33,1.3) cos (5,1.5) sin (5.66,1.7) cos (6.33,1.6) sin (7,1.5)};
+\fill[red,opacity=0.2] \lone;
+\draw[red!75!black] \lone node[right,black] {$\Psi_1(x)$ \textendash ~Odd};
+\draw (-1.224,1.5) -- (2,1.5) node[right] {$E_1$};
+
+\def\ltwo{(3,2.6) cos (3.5,2.7) sin (4,2.8) cos (4.5,2.6) sin (5,2.4) cos (5.5,2.6) sin (6,2.8) cos (6.5,2.7) sin (7,2.6)};
+\fill[green,opacity=0.2] \ltwo;
+\draw[green!75!black] \ltwo node[right,black] {$\Psi_2(x)$ \textendash ~Even};
+\draw (-1.61,2.6) -- (2,2.6) node[right] {$E_2$};
+
+
+\draw (0,0) parabola (2,4);
+\draw (0,0) parabola (-2,4);
+\end{tikzpicture}
+  }                                                                   								% end resizebox
+  \caption{Wave Functions}
+  \label{fig:wave_functions}
+\end{figure}
+
+
 
 \begin{figure}[H]
  \centering

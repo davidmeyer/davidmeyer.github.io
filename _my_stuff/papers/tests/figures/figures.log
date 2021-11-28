@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  15 NOV 2021 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  22 NOV 2021 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1350,11 +1350,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (./figures.aux
-
-LaTeX Warning: Label `fig:pythagorean_theorem' multiply defined.
-
-)
+)) (./figures.aux)
 \openout1 = `figures.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
@@ -1375,7 +1371,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count371
 \scratchdimen=\dimen355
@@ -1531,34 +1528,37 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 125.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 161.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 161.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 161.
-[1
+(Font)              <5> on input line 190.
+ [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 226.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 226.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 226.
+[2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [3] [4] (./figures.aux)
+ [4] [5] (./figures.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45115 strings out of 478994
- 1055017 string characters out of 5858184
- 1499829 words of memory out of 5000000
- 61654 multiletter control sequences out of 15000+600000
+ 45143 strings out of 478994
+ 1055441 string characters out of 5858184
+ 1499609 words of memory out of 5000000
+ 61679 multiletter control sequences out of 15000+600000
  469374 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,15n,117p,777b,1118s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1574,12 +1574,11 @@ l/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2
 ist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
 m/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb>
-Output written on figures.pdf (4 pages, 120205 bytes).
+b>
+Output written on figures.pdf (5 pages, 116514 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

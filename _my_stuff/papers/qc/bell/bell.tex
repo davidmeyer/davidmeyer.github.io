@@ -333,7 +333,7 @@ Alice now transmits her qubit to Bob and Bob applies the Reverse Bell Circuit to
 \noindent
 Now Bob can measure the two qubits and recover Alice's message ($b_0b_1 = 11)$.
 
-
+% \newpage
 \section{Quantum Teleportation}
 Quantum teleportation can be thought of as the dual task to super dense coding. Whereas super dense coding is concerned with conveying classical information 
 via a qubit, quantum teleportation is concerned with conveying quantum information with classical bits \cite{Bennett:1992tv}.
@@ -351,33 +351,57 @@ via a qubit, quantum teleportation is concerned with conveying quantum informati
 
 \bigskip
 \noindent
-Alice uses the circuit in Figure \ref{fig:a_reverse_bell_circuit} to prepare her two qubits (step 3 above). How exactly does this work? 
-First, notice that the input to the Reverse Bell Circuit shown in Figure \ref{fig:a_reverse_bell_circuit} is $\ket{\psi} \otimes \ket{\phi^{+}_A}$. 
-To see how this works, first recall that $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$.  Then 
+Alice uses the circuit in Figure \ref{fig:reverse_bell_circuit}
+to prepare her two qubits (step 3 above). How exactly does this work? 
+First, notice that the input to the Reverse Bell Circuit shown in 
+Figure \ref{fig:reverse_bell_circuit} is $\ket{\psi} \otimes \ket{\phi^{+}_A}$. 
+To see how this works, first recall that $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$.  
+Then 
 
 
-\begin{figure}[t]]
-\center{\includegraphics[scale=0.45, frame] {images/a_reverse_bell_circuit.png}}
-\caption{Reverse Bell Circuit}
-\label{fig:a_reverse_bell_circuit}
-\end{figure}
+% \begin{figure}[H]]
+% \center{\includegraphics[scale=0.45, frame] {images/a_reverse_bell_circuit.png}}
+% \caption{Reverse Bell Circuit}
+% \label{fig:a_reverse_bell_circuit}
+% \end{figure}
 
-\begin{flalign*}
-\ket{\psi} \otimes \ket{\phi^{+}_A} &= (\alpha \ket{0} + \beta \ket{1}) \otimes \frac{1}{\sqrt{2}} (\ket{00} + \ket{11}) \\
-&= \frac{1}{\sqrt{2}} \Big ( \alpha (\ket{000} + \alpha \ket{011}) + \beta (\ket{100} + \ket{111}) \Big ) \xrightarrow {\scriptsize \text{CNOT}}  
-\quad\qquad \mathrel{\#} \ket{b_0b_1b_2}: b_0 \text{ is control, } b_1  \text{ is target} \\
-& \frac{1}{\sqrt{2}} \Big ( \alpha \ket{000} + \alpha \ket{011})+ \beta (\ket{110} + \ket{101}) \Big ) \xrightarrow {\scriptsize \text{H}}  
-\; \qquad \qquad\qquad \mathrel{\#} \text{apply $H$ to $b_0$} \\
-& \frac{1}{\sqrt{2}} \bigg [ \alpha \Big ( \frac{1}{\sqrt{2}} \ket{0} + \ket{1} \Big ) \ket{00} + \alpha \Big (  \frac{1}{\sqrt{2}} \ket{0} + \ket{1}) \Big )  \ket{11}  + 
-\beta \Big ( \frac{1}{\sqrt{2}} \ket{0} - \ket{1} \Big ) \ket{10} + \beta \Big (  \frac{1}{\sqrt{2}} \ket{0} - \ket{1} \Big )  \ket{01}  \bigg ]\\
-&= \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}}  
-\bigg [ \alpha \Big ( \big (\ket{0} + \ket{1} \big ) \ket{00} +  \big (\ket{0} + \ket{1} \big )  \ket{11} \Big)  +
-\beta \Big ( \big (\ket{0} - \ket{1} \big ) \ket{10} + \big ( \ket{0} - \ket{1} \big )  \ket{01} \Big ) \bigg] \\
-&= \frac{1}{2} \bigg [ \alpha \Big (\ket{000} + \ket{100}  +  \ket{011} + \ket{111}) \Big)  +
-\beta \Big (\ket{010} - \ket{110} + \ket{001} - \ket{101}  \Big ) \bigg ] \\
-&= \frac{1}{2} \bigg [ \alpha \ket{000} + \alpha \ket{100}  +  \alpha \ket{011} + \alpha \ket{111})  +
- \beta \ket{010} - \beta\ket{110} + \beta \ket{001} - \beta \ket{101}  \bigg ] \\
-\end{flalign*}
+
+{\footnotesize
+\begin{equation*}
+\begin{array}{llllll}
+\ket{\psi} \otimes \ket{\phi^{+}_A} 
+&=& (\alpha \ket{0} + \beta \ket{1}) \otimes \frac{1}{\sqrt{2}} (\ket{00} + \ket{11})
+		\hspace{3.5cm} \mathrel{\#} \text{defintion of } \ket{\psi} \text{ and } \ket{\phi^{+}_A} \\
+[5pt]
+&=& \frac{1}{\sqrt{2}} \Big ( \alpha (\ket{000} + \alpha \ket{011}) + \beta (\ket{100} + \ket{111}) \Big )
+		\hspace{2.0cm} \mathrel{\#} \ket{b_0b_1b_2}\!: b_0 \text{ is the control, } b_1  \text{ is the target} \\
+[5pt]
+&\xrightarrow {\scriptsize \text{CNOT}}& \frac{1}{\sqrt{2}} \Big ( \alpha \ket{000} + \alpha \ket{011}) + 
+		\beta (\ket{110} + \ket{101}) \Big ) 
+		\hspace{2.1cm} \mathrel{\#} \text{apply CNOT controlled by $b_0$ (target is $b_1$)} \\
+[5pt]
+&\xrightarrow {\scriptsize \text{H}}&\frac{1}{\sqrt{2}} \bigg [ \alpha 
+		\Big ( \frac{1}{\sqrt{2}} \ket{0} + \ket{1} \Big ) \ket{00} + 
+		\alpha \Big (  \frac{1}{\sqrt{2}} \ket{0} + \ket{1}) \Big )  \ket{11} + 
+		\hspace{0.90cm} \mathrel{\#} \text{apply } H = \frac{1}{\sqrt{2}}  \begin{bmatrix}[r] 1 & 1 \\ 1 &  -1 \end{bmatrix}  \\
+		&& \qquad \beta \Big ( \frac{1}{\sqrt{2}} \ket{0} - \ket{1} \Big ) \ket{10} + 
+		\beta \Big (  \frac{1}{\sqrt{2}} \ket{0} - \ket{1} \Big )  \ket{01}  \bigg ] \\
+[5pt]
+&=&\frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}}  
+		\bigg [ \alpha \Big ( \big (\ket{0} + \ket{1} \big ) \ket{00} +  \big (\ket{0} + \ket{1} \big )  
+		\ket{11} \Big) + \beta \Big ( \big (\ket{0} - \ket{1} \big ) \ket{10} + \big ( \ket{0} - \ket{1} \big )  
+		\ket{01} \Big ) \bigg] \\
+[5pt]
+&=& \frac{1}{2} \bigg [ \alpha \Big (\ket{000} + \ket{100}  +  \ket{011} + \ket{111}) \Big)  +
+		\beta \Big (\ket{010} - \ket{110} + \ket{001} - \ket{101}  \Big ) \bigg ] \\
+[5pt]
+&=&\frac{1}{2} \bigg [ \alpha \ket{000} + \alpha \ket{100}  +  \alpha \ket{011} + \alpha \ket{111})  +
+		\beta \ket{010} - \beta\ket{110} + \beta \ket{001} - \beta \ket{101}  \bigg ] \\
+\end{array}
+\end{equation*}
+\par}
+
+
 
 \bigskip
 \noindent
