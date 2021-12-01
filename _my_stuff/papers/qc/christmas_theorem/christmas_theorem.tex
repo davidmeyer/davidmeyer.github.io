@@ -1,4 +1,4 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\documentclass[11pt, oneside]{article}          % use "amsart" instead of "article" for AMSLaTeX format
 
 
 % \usepackage{draftwatermark}
@@ -8,14 +8,14 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
 
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                           % Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
+%\usepackage[parfill]{parskip}    				% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}							% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+                                                % TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
 
-								% TeX will automatically convert eps --> pdf in pdflatex		
+                                                % TeX will automatically convert eps --> pdf in pdflatex
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -76,12 +76,16 @@
 \section*{Fermat's Christmas Theorem}
 
 \noindent
-Fermat's Christmas Theorem \cite{wiki:christmas_theorem} is a beautiful and simply stated theorem. It is called Fermat's Christmas Theorem because Fermat announced 
-a proof of the theorem in a letter to Mersenne dated December 25, 1640. And of course, Fermat didn't include a proof in the letter. 
+Fermat's Christmas Theorem \cite{wiki:christmas_theorem} is a
+beautiful and simply stated theorem. It is called Fermat's
+Christmas Theorem because Fermat announced a proof of the theorem
+in a letter to Mersenne dated December 25, 1640. And of course,
+Fermat didn't include a proof in the letter.
 
 \bigskip
 \noindent
-Fermat's Christmas Theorem (aka Fermat's theorem on sums of two squares) states that an odd prime number $p$ can be expressed as
+Fermat's Christmas Theorem (aka Fermat's theorem on sums of two
+squares) states that an odd prime number $p$ can be expressed as 
 
 \bigskip
 \begin{center}
@@ -90,36 +94,49 @@ Fermat's Christmas Theorem (aka Fermat's theorem on sums of two squares) states 
 \bigskip
 
 \noindent
-where $r,s \in \mathbb{N}$, if and only if $p \equiv 1 \textrm{ (mod  $4$)}$.
+where $r,s \in \mathbb{N}$, if and only if $p \equiv 1 \textrm{
+(mod  $4$)}$. 
 
 \bigskip
 \noindent
-For example, the primes 5, 13, 17, 29, 37 and 41 are all congruent to 1 modulo 4 and can be expressed as sums of two squares in the following ways:
+For example, the primes 5, 13, 17, 29, 37 and 41 are all
+congruent to 1 modulo 4 and can be expressed as sums of two
+squares in the following ways: 
 
 \begin{equation*}
 \begin{array}{rcll} 
 5   &=& 1^{2} + 2^{2}   \\
-13 &=& 2^{2} + 3^{2}   \\
-17 &=&1^{2}  + 4^{2}    \\
-29 &=& 2^{2} + 5^{2}    \\
-37 &=& 1^{2} + 6^{2}    \\
-41 &=& 4^{2} + 5^{2}
+13  &=& 2^{2} + 3^{2}   \\
+17  &=& 1^{2} + 4^{2}   \\
+29  &=& 2^{2} + 5^{2}   \\
+37  &=& 1^{2} + 6^{2}   \\
+41  &=& 4^{2} + 5^{2}
 \end{array}
 \end{equation*}
 
+
 \bigskip
 \noindent
-The prime numbers $p$ for which Fermat's Christmas Theorem is true are called Pythagorean primes. See \cite{wiki:pythagorean_primes} for more on Pythagorean primes.
+On the other hand, the primes 3, 7, 11, 19, 23 and 31 are all
+congruent to 3 modulo 4 and none of them can be expressed as the
+sum of two squares. This is the easier part of the theorem since it
+follows immediately from the observation that all squares are
+congruent to 0 or 1 modulo 4.
 
 
 \bigskip
 \noindent
-A variety of proofs of Fermat's Christmas Theorem can be found in \cite{wiki:christmas_theorem_proofs}.
+The prime numbers $p$ for which Fermat's Christmas Theorem is
+true are called Pythagorean primes.  See
+\cite{wiki:pythagorean_primes} for more on Pythagorean primes.
+
+
+\bigskip
+\noindent
+A variety of proofs of Fermat's Christmas Theorem can be found in
+\cite{wiki:christmas_theorem_proofs}. 
 
 
 \bibliographystyle{plain}
 \bibliography{/Users/dmm/papers/bib/qc}
-
-
-
 \end{document} 
