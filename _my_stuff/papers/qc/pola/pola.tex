@@ -764,12 +764,9 @@ equilibrium point EP.
   \resizebox{0.65 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]
         \draw[thick, ->] (-1,0) -- (11,0) coordinate [label={[xshift=0.30cm, below] $x$}];      % horizontal axis
-        \draw[thick, ->] (0,-1) -- (0,5.5) coordinate [label={[]}];
+        \draw[ultra thick] (0,-1) -- (0,5.5) coordinate [label={[]}];
         \draw[draw=none] (-1,0) -- (11,0) coordinate [label={[yshift=-0.3cm,midway,below] 
                                       ${L = KE- PE, \; KE = \frac{1}{2} m v^2  \text{ and } PE = \frac{1}{2} k x^2}$}];
-        \draw (8,4) node[rectangle, draw, very thin] 
-                         {$\mathlarger {\; \dfrac{d}{dt} \bigg ( \dfrac{\partial L}{\partial \dot{x}} \bigg ) - \dfrac{\partial L}{\partial x} = 0 \;}$};
-       \path (0,0) node[below left] {$O$};    
 
 %
 % draw the spring 
@@ -807,12 +804,12 @@ equilibrium point EP.
       \coordinate (c2) at (3.5,4);
       \coordinate (c3) at (3.5,2.5);
       \coordinate (c4) at (6,2.5);
-      \draw[dashed] (c1) -- (c2) coordinate [label={[above] EP}];   
-      \draw[<-] (4,2.5) -- (5,2.5) coordinate [label={[right] $\vec{F}$}];   
+      \draw[dashed] (c1) -- (c2) coordinate [label={[above] \text{\underline{Equilibrium Point}}}];   
+      \draw[<-] (4,2.5) -- (5,2.5) coordinate [label={[right] $\vec{F} = -kx$}];   
       \fill (c1) circle(0.05);      
     \end{tikzpicture}
   }                                             % end resizebox
- \caption{Simple Harmonic Oscillator Setup}
+ \caption{Simple Harmonic Oscillator with Spring Constant $k$ and Mass $m$}
  \label{fig:shm}
 \end{figure}
 

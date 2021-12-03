@@ -58,6 +58,90 @@
 
 \begin{document}
 
+
+
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.80 \textwidth}{!} {												% resize figure if you want
+   \begin{tikzpicture}[black!75,thick]
+        \draw[thick, ->] (0,0) -- (8,0) coordinate [label={[right] $x$}];		% draw x axis     
+        \draw[ultra thick] (0,0) -- (0,5);										% draw vertical spring support
+
+%
+% draw the first spring 
+%
+        \draw [
+              decoration={
+                 coil,
+                 aspect=0.3, 
+                 segment length=2mm, 
+                 amplitude=2mm, 
+                 pre length=3mm,
+                 post length=3mm},
+             decorate] (0,0.40) -- (5.75,0.40);
+        \fill (0,0.40) circle(0.05);											% draw a dot connecting the spring to the vertical support
+
+ %
+ % draw the first mass
+ %
+       \node[draw,
+	     fill=yellow!60,
+	     minimum width=1cm,
+	     minimum height=0.75cm,
+	     anchor=north,
+	     label=center:$m$] at (6,0.80) {};
+	     
+      \fill (5.5,0.40) circle(0.05);   
+      \fill (5.5,0.00) circle(0.05);   
+      \path (5.5,0.0) node[yshift=-0.75mm, below] {$x$}; 
+%
+%	some coordinates
+%        
+      \coordinate (c1) at (3.5,0);
+      \coordinate (c2) at (3.5,4);
+      \draw[dashed] (c1) -- (c2) coordinate [label={[above] \text{{\footnotesize \underline{Equilibrium Point}}}}];   
+      \fill (c1) circle(0.05);  
+      \path (c1) node[yshift=-0.5mm, below] {$0$};
+      \draw[latex-] (3.50,1.20) -- (5.50,1.20) coordinate [label={[font=\footnotesize,color=black,midway,above] {$\vec{F} = -kx\hat{i}$}}]; 
+      \draw[dashed] (5.50,1.20) -- (5.50,0.00);
+      \fill (5.50,1.20) circle(0.05);            
+      \fill (3.50,1.20) circle(0.05);
+%
+% draw the second spring 
+%
+        \draw [
+              decoration={
+                 coil,
+                 aspect=0.3, 
+                 segment length=1.5mm, 
+                 amplitude=2mm, 
+                 pre length=3mm,
+                 post length=3mm},
+             decorate] (0,2.50) -- (3.5,2.50);
+        \draw [draw=none] (0,2.50) -- (3.5,2.50) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];  
+        \fill (0,2.50) circle(0.05);											% draw a dot connecting the spring to the y axis
+        \fill (3.5,2.50) circle(0.05);											% draw a dot connecting the spring to the mass
+
+ %
+ % draw the second mass
+ %
+       \node[draw,
+	     fill=yellow!60,
+	     minimum width=1cm,
+	     minimum height=0.75cm,
+	     anchor=north,
+	     label=center:$m$] at (4.00, 2.90) {};
+	   \fill (3.50,2.50) circle(0.05);											% draw a dot connecting the spring to the mass
+    \end{tikzpicture}
+  }																				% end resizebox                                                                                           
+\caption{Simple Spring and Mass System with Spring Constant $k$ and Mass $m$}
+\label{fig:simple_spring_and_mass_system}
+\end{figure}
+
+\bigskip
+\bigskip
+
 %
 %	draw Pythagorean theorem stuff
 %
