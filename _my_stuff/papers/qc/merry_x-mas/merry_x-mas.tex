@@ -36,33 +36,14 @@
 \usepackage{siunitx}
 \usepackage{mathtools}
 \usepackage{xcolor}
-
-
-
 \usepackage[hyphenbreaks]{breakurl}
 
-\newtheorem{thm}{Theorem}[section]
-% \newtheorem{defn}[thm]{Definition}
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{example}{Example}[section]
 
-
-
-
-\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
-\DeclareMathOperator{\bda}{\Big \downarrow}
-
-
-\DeclareMathOperator{\E}{\mathbb{E}}
-\newcommand{\argmax}{\operatornamewithlimits{argmax}}
-\newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
 \title{Merry X-mas!}
-\author{David Meyer \\ dmm@\{1-4-5.net,uoregon.edu\}}
-
+\author{David Meyer \\ 
+  \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net} \\ 
+  \smallskip \url{https://davidmeyer.github.io/qc/merry_x-mas.pdf}}
 \date{Last update: December 25, 2019}
 
 
@@ -70,24 +51,28 @@
 \maketitle
 
 \Large {
-\begin{equation*}
-\begin{array}{rcll} 
-y
-&=& \frac{\ln \big (\frac{x}{m} -  sa  \big ) }{r^2}                                              &\qquad \qquad \mathrel{\#} \text{define $y$}                                                                   \\
+  \begin{equation*}
+   \begin{array}{rcll} 
+		y
+		&\coloneqq& \frac{\ln \big (\frac{x}{m} -  sa  \big ) }{r^2}                                              
+				&\qquad \qquad \mathrel{\#} \text{define $y$} \\
 [5pt]
-&\Rightarrow& r^2 y                                = \ln \big (\frac{x}{m} -  sa  \big )    &\qquad \qquad  \mathrel{\#} \text{multiply both sides on the left by $r^2$}                      \\
+		&\Rightarrow& r^2 y                                = \ln \big (\frac{x}{m} -  sa  \big )    
+				&\qquad \qquad  \mathrel{\#} \text{multiply both sides on the left by $r^2$} \\
 [5pt]
-&\Rightarrow& e^{r^2y}                           = \frac{x}{m} -  sa                           &\qquad \qquad \mathrel{\#} \text{exponentiate both sides, noting that $e^{\ln(x)} = x$}  \\
+		&\Rightarrow& e^{r^2y}                           = \frac{x}{m} -  sa                           
+				&\qquad \qquad \mathrel{\#} \text{exponentiate both sides $(e^{\ln(x)} = x)$} \\
 [5pt]
-&\Rightarrow& e^{r^2y}                           = \frac{x}{m} -  as						&\qquad \qquad \mathrel{\#} \text{assume multiplication is commutative $(sa = as)$} \\ 
+		&\Rightarrow& e^{r^2y}                           = \frac{x}{m} -  as						
+				&\qquad \qquad \mathrel{\#} \text{assume multiplication is commutative $(sa = as)$} \\ 
 [5pt]
-&\Rightarrow& m e^{r^2y}                       = x - mas                                        &\qquad \qquad \mathrel{\#} \text{multiply both sides on the left by $m$}                         \\
-% [5pt]
-% &\Rightarrow& m e^{r^2y}                       = x - mas                                        &\qquad \qquad \mathrel{\#} \text{$sa = as$ (assume multiplication is commutative)}      \\
+		&\Rightarrow& m e^{r^2y}                       = x - mas                                        
+				&\qquad \qquad \mathrel{\#} \text{multiply both sides on the left by $m$} \\
 [5pt]
-&\Rightarrow& \bf{\color{red}{m e^{rry}   = x - mas}}                                     &\qquad \qquad \mathrel{\#} \text{$r^2 = rr \Rightarrow$ \bf{Merry X-mas!}}
-\end{array}
-\end{equation*}
+		&\Rightarrow& \bf{\color{red}{m e^{rry}   = x - mas}}                                     
+				&\qquad \qquad \mathrel{\#} \text{$r^2 = rr \Rightarrow$ \bf{Merry X-mas!}}
+    \end{array}
+   \end{equation*}
 }
 
 
