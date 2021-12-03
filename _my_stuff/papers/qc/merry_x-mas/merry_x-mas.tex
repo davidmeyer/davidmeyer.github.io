@@ -1,5 +1,4 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-
+\documentclass[11pt, oneside]{article}
 %
 %   get various packages
 %
@@ -41,15 +40,16 @@
 
 
 \title{Merry X-mas!}
-\author{David Meyer \\ 
-  \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net} \\ 
-  \smallskip \url{https://davidmeyer.github.io/qc/merry_x-mas.pdf}}
+\author{David Meyer \\ \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net}}
 \date{Last update: December 25, 2019}
 
 
 \begin{document}
 \maketitle
 
+\section{Merry X-mas!}
+
+\bigskip
 \Large {
   \begin{equation*}
    \begin{array}{rcll} 
@@ -57,23 +57,31 @@
 		&\coloneqq& \frac{\ln \big (\frac{x}{m} -  sa  \big ) }{r^2}                                              
 				&\qquad \qquad \mathrel{\#} \text{define $y$} \\
 [5pt]
-		&\Rightarrow& r^2 y                                = \ln \big (\frac{x}{m} -  sa  \big )    
+		&\Rightarrow& r^2 y = \ln \big (\frac{x}{m} -  sa  \big )    
 				&\qquad \qquad  \mathrel{\#} \text{multiply both sides on the left by $r^2$} \\
 [5pt]
-		&\Rightarrow& e^{r^2y}                           = \frac{x}{m} -  sa                           
+		&\Rightarrow& e^{r^2y} = \frac{x}{m} -  sa                           
 				&\qquad \qquad \mathrel{\#} \text{exponentiate both sides $(e^{\ln(x)} = x)$} \\
 [5pt]
-		&\Rightarrow& e^{r^2y}                           = \frac{x}{m} -  as						
+		&\Rightarrow& e^{r^2y} = \frac{x}{m} -  as						
 				&\qquad \qquad \mathrel{\#} \text{assume multiplication is commutative $(sa = as)$} \\ 
 [5pt]
-		&\Rightarrow& m e^{r^2y}                       = x - mas                                        
+		&\Rightarrow& m e^{r^2y} = x - mas                                        
 				&\qquad \qquad \mathrel{\#} \text{multiply both sides on the left by $m$} \\
 [5pt]
-		&\Rightarrow& \bf{\color{red}{m e^{rry}   = x - mas}}                                     
+		&\Rightarrow& \bf{\color{red}{m e^{rry} = x - mas}}                                     
 				&\qquad \qquad \mathrel{\#} \text{$r^2 = rr \Rightarrow$ \bf{Merry X-mas!}}
     \end{array}
    \end{equation*}
 }
+
+%
+%	LaTeX source on overleaf.com
+%
+\section{\LaTeX \hspace{0.1mm} Source}
+\url{https://www.overleaf.com/read/sjrwjgkzzmmd}
+
+
 
 
 \end{document} 
