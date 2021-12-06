@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  3 DEC 2021 07:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  6 DEC 2021 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -700,7 +700,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (33.62645pt too wide) detected at line 75
+Overfull \hbox (33.62645pt too wide) detected at line 78
 []
  []
 
@@ -714,7 +714,7 @@ Package rerunfilecheck Info: File `merry_x-mas.out' has not changed.
 Here is how much of TeX's memory you used:
  16297 strings out of 478994
  280195 string characters out of 5858184
- 590781 words of memory out of 5000000
+ 591781 words of memory out of 5000000
  33495 multiletter control sequences out of 15000+600000
  417601 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -731,7 +731,7 @@ al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on merry_x-mas.pdf (1 page, 109565 bytes).
+Output written on merry_x-mas.pdf (1 page, 109618 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
