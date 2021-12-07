@@ -63,10 +63,10 @@
 
 \begin{figure}[H]
 \centering
-  \resizebox{0.80 \textwidth}{!} {												% resize figure if you want
+  \resizebox{0.90 \textwidth}{!} {															% resize figure if you want
    \begin{tikzpicture}[black!75,thick]
-        \draw[thick, ->] (0,0) -- (8,0) coordinate [label={[right] $x$}];		% draw x axis     
-        \draw[ultra thick] (0,0) -- (0,5);										% draw vertical spring support
+        \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];		% draw x axis     
+        \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);										% draw vertical spring support
 
 %
 % draw the first spring 
@@ -80,7 +80,7 @@
                  pre length=3mm,
                  post length=3mm},
              decorate] (0,0.40) -- (5.75,0.40);
-        \fill (0,0.40) circle(0.05);											% draw a dot connecting the spring to the vertical support
+        \fill (0,0.40) circle(0.05);														% draw a dot connecting the spring to the vertical support
 
  %
  % draw the first mass
@@ -93,20 +93,25 @@
 	     label=center:$m$] at (6,0.80) {};
 	     
       \fill (5.5,0.40) circle(0.05);   
-      \fill (5.5,0.00) circle(0.05);   
       \path (5.5,0.0) node[yshift=-0.75mm, below] {$x$}; 
 %
-%	some coordinates
+%	make some coordinates
 %        
-      \coordinate (c1) at (3.5,0);
-      \coordinate (c2) at (3.5,4);
-      \draw[dashed] (c1) -- (c2) coordinate [label={[above] \text{{\footnotesize \underline{Equilibrium Point}}}}];   
-      \fill (c1) circle(0.05);  
-      \path (c1) node[yshift=-0.5mm, below] {$0$};
-      \draw[latex-] (3.50,1.20) -- (5.50,1.20) coordinate [label={[font=\footnotesize,color=black,midway,above] {$\vec{F} = -kx\hat{i}$}}]; 
-      \draw[dashed] (5.50,1.20) -- (5.50,0.00);
-      \fill (5.50,1.20) circle(0.05);            
-      \fill (3.50,1.20) circle(0.05);
+      \coordinate (c1) at (5.50,6.50);
+      \coordinate (c2) at (3.5,0);
+      \coordinate (c3) at (3.5,4);            
+ %
+ %	draw some text
+ %  
+ 
+
+ 
+      \path (c1) node[left] {\bf Hooke's Law Setup};
+      \path (c2) node[yshift=-0.5mm, below] {$0$};
+      \draw[thin,red] (c2) -- (c3) coordinate [label={[above, yshift=0.5mm] \text{{\footnotesize \color{black}{{\underline{Equilibrium Point}}}}}}];   
+      \draw[-latex]   (3.50,1.75) -- (5.50,1.75) coordinate [label={[font=\footnotesize,color=black,midway,above] {$x$}}];
+      \draw[latex-]   (3.50,1.00) -- (5.50,1.00) coordinate [label={[font=\footnotesize,color=black,midway,above] {$\vec{F}$}}]; 
+      \draw[thin,red] (5.50,4.00) -- (5.50,0.00);
 %
 % draw the second spring 
 %
@@ -118,10 +123,10 @@
                  amplitude=2mm, 
                  pre length=3mm,
                  post length=3mm},
-             decorate] (0,2.50) -- (3.5,2.50);
-        \draw [draw=none] (0,2.50) -- (3.5,2.50) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];  
-        \fill (0,2.50) circle(0.05);											% draw a dot connecting the spring to the y axis
-        \fill (3.5,2.50) circle(0.05);											% draw a dot connecting the spring to the mass
+             decorate] (0,2.750) -- (3.5,2.750);
+        \draw [draw=none] (0,2.750) -- (3.5,2.750) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];  
+        \fill (0,2.750) circle(0.05);											% draw a dot connecting the spring to the y axis
+        \fill (3.5,2.750) circle(0.05);											% draw a dot connecting the spring to the mass
 
  %
  % draw the second mass
@@ -131,8 +136,25 @@
 	     minimum width=1cm,
 	     minimum height=0.75cm,
 	     anchor=north,
-	     label=center:$m$] at (4.00, 2.90) {};
-	   \fill (3.50,2.50) circle(0.05);											% draw a dot connecting the spring to the mass
+	     label=center:$m$] at (4.00, 3.150) {};
+	     
+	     \begin{footnotesize}
+	       \draw [draw=none] (12.00,7.00)  -- (13.00,7.00) coordinate [label={[midway] \underline{{\bf Hooke's Law}}}]; 
+	   	   \draw [draw=none] (12.00,6.50)  -- (13.00,6.50) coordinate [label={[midway] {${\mathbf {\displaystyle F \propto -x}}$}}];
+		   \draw [draw=none] (12.00,5.50)  -- (13.00,5.50) coordinate [label={[midway] \underline{{\bf Hooke's Law with Spring Constant ($\mathbf {k}$)}}}]; 
+		   \draw [draw=none] (12.00,5.00)  -- (13.00,5.00) coordinate [label={[midway] {${\mathbf {\displaystyle F = -kx}}$}}];
+		   \draw [draw=none] (12.00,4.00)  -- (13.00,4.00) coordinate [label={[midway] \underline{{\bf Newton's ${\mathbf 2^{\text{nd}}}$ Law of Motion}}}]; 
+		   \draw [draw=none] (12.00,3.50)  -- (13.00,3.50) coordinate [label={[midway] {${\mathbf {\displaystyle F = ma}}$}}];
+		   
+		   	\draw [draw=none] (12.00,2.50)  -- (13.00,2.50) coordinate [label={[midway] \underline{{\bf Newton's Force Equals Hooke's Force}}}];
+
+
+		  % \draw [draw=none] (12.00,2.50)  -- (13.00,2.50) coordinate [label={[midway] \underline{{\bf Newton's ${\mathbf 2^{\text{nd}}}$ Law = Hooke's Law}}}]; 
+
+		   \draw [draw=none] (12.00,1.65)  -- (13.00,1.65) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx \Rightarrow a = -\dfrac{k}{m} x}}$}}];
+		   \draw [draw=none] (12.00,0.75)  -- (13.00,0.75) coordinate [label={[midway] \underline{{\bf Equation of Motion}}}]; 
+		   \draw [draw=none] (12.00,0.00) -- (13.00,0.00) node[draw,rectangle,midway] {${\; \mathbf {a = \ddot{x} = \dfrac{d^2 x}{dt^2} = -\dfrac{k}{m} x \;}}$};
+		 \end{footnotesize}
     \end{tikzpicture}
   }																				% end resizebox                                                                                           
 \caption{Simple Spring and Mass System with Spring Constant $k$ and Mass $m$}
