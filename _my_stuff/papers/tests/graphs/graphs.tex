@@ -66,7 +66,7 @@
   \resizebox{0.90 \textwidth}{!} {															% resize figure if you want
    \begin{tikzpicture}[black!75,thick]
         \draw[thick, ->] (0.00,0.00) -- (9.00,0.00) coordinate [label={[right] $x$}];		% draw x axis     
-        \draw[ultra thick] (0.00,-1.00) -- (0.00,9.00);										% this is the support (y axis, I guess)
+        \draw[ultra thick] (0.00,-1.50) -- (0.00,9.00);										% this is the support (y axis, I guess)
 
 %
 % draw the first spring 
@@ -155,13 +155,15 @@
 		   \draw [draw=none] (12.00,2.00) -- (13.00,2.00) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx}}$}}];
 		   \draw [draw=none] (12.00,0.75) -- (13.00,0.75) coordinate [label={[midway] \underline{{\bf Equation of Motion}}}]; 
 		   \draw [draw=none] (12.00,0.10) -- (13.00,0.10) node[thin, draw,rectangle,midway] 
-		   					 {${\; \mathbf {a = \ddot{x} = \dfrac{d^2 x}{dt^2} = -\dfrac{k}{m} x \;}}$};
+		   					 {${\; \mathbf {\dfrac{d^2 x}{dt^2} = -\dfrac{k}{m} x\;}}$};			 
+		   \draw [draw=none] (12.00,-0.85) -- (13.00,-0.85) node[thin, draw,rectangle,midway] 
+		   					 {${\; \mathbf {x(t) = A \,{\boldsymbol\cos} \, ({\boldsymbol \omega} t)\;}}$};
 		 \end{footnotesize}
 		 
     \end{tikzpicture}
   }																				% end resizebox                                                                                           
-\caption{Simple Spring and Mass System with Spring Constant $k$ and Mass $m$}
-\label{fig:simple_spring_and_mass_system}
+\caption{Spring and Mass System with Spring Constant $k$ and Mass $m$}
+\label{fig:spring_and_mass_system}
 \end{figure}
 
 \bigskip
