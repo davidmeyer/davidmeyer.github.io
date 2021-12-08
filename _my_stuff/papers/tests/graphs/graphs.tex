@@ -58,13 +58,12 @@
 
 \begin{document}
 
-
-
+\section{Introduction}
 
 \begin{figure}[H]
 \centering
   \resizebox{0.90 \textwidth}{!} {															% resize figure if you want
-   \begin{tikzpicture}[black!75,thick]
+   \begin{tikzpicture}[black!75,thick]														% draw the picture
         \draw[thick, ->] (0.00,0.00) -- (9.00,0.00) coordinate [label={[right] $x$}];		% draw x axis     
         \draw[ultra thick] (0.00,-1.50) -- (0.00,9.00);										% this is the support (y axis, I guess)
 
@@ -123,8 +122,8 @@
                  pre length=3mm,
                  post length=3mm},
              decorate] (0.00,2.75) -- (3.5,2.75);
-        \draw [draw=none] (0.00,2.75) -- (3.50,2.75) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];  
-        \fill (0,20.75) circle(0.05);																				% draw a dot connecting the spring to the y axis
+        \draw [draw=none] (0.00,2.75) -- (3.50,2.75) coordinate [label={[midway,above,yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];  
+        \fill (0.00,2.75) circle(0.05);																				% draw a dot connecting the spring to the y axis
         \fill (3.50,2.75) circle(0.05);																				% draw a dot connecting the spring to the mass
         \draw [draw=none] (0,2.75) -- (3.5,2.75) coordinate [label={[midway,below,yshift=-0.25cm] {\tiny $k$}}];	% draw k
 
@@ -136,7 +135,7 @@
 	     minimum width=1cm,
 	     minimum height=0.75cm,
 	     anchor=north,
-	     label=center:$m$] at (4.00, 3.150) {};
+	     label=center:$m$] at (4.00, 3.15) {};
 	     
 %	
 %	draw information about the graphic to the right ((12.00,Y))

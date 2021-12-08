@@ -8,6 +8,10 @@
 
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./oscillators.pdf" target="_blank" 
+    rel="noopener noreferrer">
+A Few Notes on Harmonic Oscillators and Fields (WIP)</a>
+<br>
 <li><a href="./functional_analysis.pdf" target="_blank" 
     rel="noopener noreferrer">
 A Few Notes on Functional Analysis (WIP)</a>
@@ -78,7 +82,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 11.02.2021 by dmm@1-4-5.net
+<i>Last Update: 12.08.2021 by dmm@1-4-5.net
 
 
 
