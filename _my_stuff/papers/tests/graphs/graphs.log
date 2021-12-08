@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 DEC 2021 06:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 DEC 2021 06:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1551,17 +1551,14 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 [7] [8] (./graphs.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `graphs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45910 strings out of 478994
- 1072902 string characters out of 5858184
- 1534095 words of memory out of 5000000
- 62479 multiletter control sequences out of 15000+600000
+ 45911 strings out of 478994
+ 1072920 string characters out of 5858184
+ 1533095 words of memory out of 5000000
+ 62480 multiletter control sequences out of 15000+600000
  424750 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,17n,116p,730b,2067s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1585,7 +1582,7 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on graphs.pdf (8 pages, 234907 bytes).
+Output written on graphs.pdf (8 pages, 234799 bytes).
 PDF statistics:
  167 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams
