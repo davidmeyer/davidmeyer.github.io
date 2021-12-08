@@ -87,7 +87,7 @@
   \resizebox{0.80 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
-        \draw[ultra thick] (0.00,-1.50) -- (0.00,9.00);                                         % this is the support (y axis, I guess)        
+        \draw[ultra thick] (0.00,-2.00) -- (0.00,9.00);                                         % this is the support (y axis, I guess)        
 %
 % draw the first spring 
 %
@@ -162,7 +162,7 @@
 %
 %	mostly eyeballed
 %
-        \draw[dashed] (8.75,-1.50) -- (8.75,9.00);						% draw dashed vertical separator
+        \draw[dashed] (8.75,-2.00) -- (8.75,9.00);						% draw dashed vertical separator
         \begin{footnotesize}
 	      \draw [draw=none] (12.00,7.00) -- (12.00,7.00) coordinate [label={[midway] \underline{{\bf Hooke's Law}}}]; 
    	      \draw [draw=none] (12.00,6.50) -- (12.00,6.50) coordinate [label={[midway] {${\mathbf {\displaystyle F \propto -x}}$}}];
@@ -177,6 +177,9 @@
                                 {${\; \mathbf {\dfrac{d^2 x}{dt^2} = -\dfrac{k}{m} x\;}}$};			 
 	      \draw [draw=none] (12.00,-0.50) -- (12.00,-0.50) node[thin,draw,rectangle,midway] 
                                 {${\; \mathbf {x(t) = A \,{\boldsymbol\cos} \, ({\boldsymbol \omega} t)\;}}$};
+      	 \draw [draw=none] (12.00,-1.40) -- (12.00,-1.40) node[thin,draw,rectangle,midway] 
+                                {${\; \mathbf {{\boldsymbol \omega} = \sqrt{\dfrac{k}{m}}\;}}$};
+
         \end{footnotesize}
 		 
     \end{tikzpicture}
