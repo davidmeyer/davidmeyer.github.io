@@ -5,7 +5,7 @@
 \usepackage[margin=1.0in]{geometry}                                     % adjust margins
 \geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
-\usepackage{setspace}													% need this for \setstrech{...}
+\usepackage{setspace}                                                   % need this for \setstrech{...}
 \usepackage{scrextend}                                                  % need this for addmargin
 \usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
 \usepackage{bigints}                                                    % bigger integral symbol
@@ -15,16 +15,15 @@
 \usepackage{tikz}
 \usetikzlibrary{patterns,angles,quotes,shapes,intersections,decorations,hobby,backgrounds}    
 \usepackage{pgfplots}	
-\usepackage{relsize}	
+\usepackage{relsize}
 \usepackage{float}
-\usepackage{enumitem}							% get alpha in enumerate
+\usepackage{enumitem}                                                   % get alpha in enumerate
 %
 %	math stuff
 %
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{commath}							% get \norm{x}
-
 %
 %	watermarks
 %
@@ -49,7 +48,7 @@
 %
 \title{A Few Notes Harmonic Oscillators and Fields}
 \author{David Meyer \\ dmm@1-4-5.net}
-\date{Last update: \today}                                                                           % Activate to display a given date or no date
+\date{Last update: \today}							% Activate to display a given date or no date
 %
 %	be compatible
 %
@@ -81,15 +80,14 @@
 \bibliography{qc}
 
 
-%\section*{Figures}
+\section*{Figures}
 
 \begin{figure}[H]
 \centering
-  \resizebox{0.80 \textwidth}{!} {															% resize figure if you want
-   \begin{tikzpicture}[black!75,thick]														% make a picture
-        \draw[thick, ->] (0.00,0.00) -- (9.00,0.00) coordinate [label={[right] $x$}];		% draw x axis     
-        \draw[ultra thick] (0.00,-1.50) -- (0.00,9.00);										% this is the support (y axis, I guess)
-
+  \resizebox{0.80 \textwidth}{!} {                                                              % resize figure if you want
+   \begin{tikzpicture}[black!75,thick]                                                          % make a picture
+        \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
+        \draw[ultra thick] (0.00,-1.50) -- (0.00,9.00);                                         % this is the support (y axis, I guess)        
 %
 % draw the first spring 
 %
@@ -102,8 +100,7 @@
                  pre length=3mm,
                  post length=3mm},
              decorate] (0,0.40) -- (5.75,0.40);
-        \fill (0.00,0.40) circle(0.05);														% draw a dot connecting the spring to the vertical support
- %      \draw[draw=none] (0,0.15) -- (1.75,0.15) coordinate [label={[yshift=0.5cm] k}];		% draw k
+        \fill (0.00,0.40) circle(0.05);                                                         % draw a dot connecting the spring to the vertical support
  %      
  %
  %
@@ -121,7 +118,7 @@
 %
 %	make some coordinates
 %        
-      \coordinate (c1) at (5.50,6.50);
+      \coordinate (c1) at (6.00,7.25);
       \coordinate (c2) at (3.50,0.00);
       \coordinate (c3) at (3.50,4.00);            
  %
@@ -144,10 +141,10 @@
                  amplitude=2mm, 
                  pre length=3mm,
                  post length=3mm},
-             decorate] (0.00,2.75) -- (3.5,2.75);
+             decorate]    (0.00,2.75) -- (3.50,2.75);
         \draw [draw=none] (0.00,2.75) -- (3.50,2.75) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];
-        \fill (0.00,2.75) circle(0.05);																				% draw a dot connecting the spring to the y axis
-        \fill (3.50,2.75) circle(0.05);																				% draw a dot connecting the spring to the mass
+        \fill (0.00,2.75) circle(0.05);                                                                 % draw a dot connecting the spring to the y axis
+        \fill (3.50,2.75) circle(0.05);                                                                 % draw a dot connecting the spring to the mass
         \draw [draw=none] (0,2.75) -- (3.5,2.75) coordinate [label={[midway,below,yshift=-0.25cm] {\tiny $k$}}];	% draw k
 
  %
@@ -158,38 +155,35 @@
 	     minimum width=1cm,
 	     minimum height=0.75cm,
 	     anchor=north,
-	     label=center:$m$] at (4.00, 3.150) {};
+	     label=center:$m$] at (4.00,3.15) {};
 	     
 %	
-%	draw information about the graphic to the right ((12.00,Y))
+%	draw information about the graphic to the right ((12.50,Y))
 %
 %	mostly eyeballed
 %
-
-	     \begin{footnotesize}
-	       \draw [draw=none] (12.00,7.00) -- (13.00,7.00) coordinate [label={[midway] \underline{{\bf Hooke's Law}}}]; 
-	   	   \draw [draw=none] (12.00,6.50) -- (13.00,6.50) coordinate [label={[midway] {${\mathbf {\displaystyle F \propto -x}}$}}];
-		   \draw [draw=none] (12.00,5.50) -- (13.00,5.50) coordinate [label={[midway] \underline{{\bf Hooke's Law with Spring Constant $\mathbf {k}$}}}]; 
-		   \draw [draw=none] (12.00,5.00) -- (13.00,5.00) coordinate [label={[midway] {${\mathbf {\displaystyle F = -kx}}$}}];
-		   \draw [draw=none] (12.00,4.00) -- (13.00,4.00) coordinate [label={[midway] \underline{{\bf Newton's ${\mathbf 2^{\text{nd}}}$ Law of Motion}}}]; 
-		   \draw [draw=none] (12.00,3.50) -- (13.00,3.50) coordinate [label={[midway] {${\mathbf {\displaystyle F = ma}}$}}];
-		   \draw [draw=none] (12.00,2.50) -- (13.00,2.50) coordinate [label={[midway] \underline{{\bf Newton's Force Equals Hooke's Force}}}];
-		   \draw [draw=none] (12.00,2.00) -- (13.00,2.00) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx}}$}}];
-		   \draw [draw=none] (12.00,1.00) -- (13.00,1.00) coordinate [label={[midway] \underline{{\bf Equation of Motion}}}]; 
-		   \draw [draw=none] (12.00,0.40) -- (13.00,0.40) node[thin,draw,rectangle,midway] 
-		   					 {${\; \mathbf {\dfrac{d^2 x}{dt^2} = -\dfrac{k}{m} x\;}}$};			 
-		   \draw [draw=none] (12.00,-0.50) -- (13.00,-0.50) node[thin,draw,rectangle,midway] 
-		   					 {${\; \mathbf {x(t) = A \,{\boldsymbol\cos} \, ({\boldsymbol \omega} t)\;}}$};
-		 \end{footnotesize}
+        \draw[dashed] (8.75,-1.50) -- (8.75,9.00);						% draw dashed vertical separator
+        \begin{footnotesize}
+	      \draw [draw=none] (12.00,7.00) -- (12.00,7.00) coordinate [label={[midway] \underline{{\bf Hooke's Law}}}]; 
+   	      \draw [draw=none] (12.00,6.50) -- (12.00,6.50) coordinate [label={[midway] {${\mathbf {\displaystyle F \propto -x}}$}}];
+	      \draw [draw=none] (12.00,5.50) -- (12.00,5.50) coordinate [label={[midway] \underline{{\bf Hooke's Law with Spring Constant $\mathbf {k}$}}}]; 
+	      \draw [draw=none] (12.00,5.00) -- (12.00,5.00) coordinate [label={[midway] {${\mathbf {\displaystyle F = -kx}}$}}];
+	      \draw [draw=none] (12.00,4.00) -- (12.00,4.00) coordinate [label={[midway] \underline{{\bf Newton's ${\mathbf 2^{\text{nd}}}$ Law of Motion}}}]; 
+	      \draw [draw=none] (12.00,3.50) -- (12.00,3.50) coordinate [label={[midway] {${\mathbf {\displaystyle F = ma}}$}}];
+	      \draw [draw=none] (12.00,2.50) -- (12.00,2.50) coordinate [label={[midway] \underline{{\bf Newton's Force Equals Hooke's Force}}}];
+	      \draw [draw=none] (12.00,2.00) -- (12.00,2.00) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx}}$}}];
+	      \draw [draw=none] (12.00,1.00) -- (12.00,1.00) coordinate [label={[midway] \underline{{\bf Equation of Motion}}}]; 
+	      \draw [draw=none] (12.00,0.40) -- (12.00,0.40) node[thin,draw,rectangle,midway] 
+                                {${\; \mathbf {\dfrac{d^2 x}{dt^2} = -\dfrac{k}{m} x\;}}$};			 
+	      \draw [draw=none] (12.00,-0.50) -- (12.00,-0.50) node[thin,draw,rectangle,midway] 
+                                {${\; \mathbf {x(t) = A \,{\boldsymbol\cos} \, ({\boldsymbol \omega} t)\;}}$};
+        \end{footnotesize}
 		 
     \end{tikzpicture}
-  }																				% end resizebox                                                                                           
+  }                                                             			% end resizebox
 \caption{Spring and Mass System with Spring Constant $k$ and Mass $m$}
 \label{fig:spring_and_mass_system}
 \end{figure}
-
-
-
 
 %
 %	done
