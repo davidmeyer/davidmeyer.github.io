@@ -48,7 +48,7 @@
 %
 \title{A Few Notes Harmonic Oscillators and Fields}
 \author{David Meyer \\ dmm@1-4-5.net}
-\date{Last update: \today}							% Activate to display a given date or no date
+\date{Last update: \today}									% Activate to display a given date or no date
 %
 %	be compatible
 %
@@ -61,30 +61,103 @@
 %
 %
 \section{Introduction}
+This story begins somewhere around 1658 when Robert Hooke
+\cite{robert_hooke} began experimenting with springs and
+masses. By 1660 Hooke had made two significant steps, namely the
+use of a balance controlled by a spiral spring and an improved
+escapement called the anchor escapement. In 1660 he discovered an
+instance of Hooke's law while working on designs for the balance
+springs of clocks. However he only announced the general law of
+elasticity in his lecture Of Spring given in 1678
+\cite{hooke_of_spring}.
 
-\section{Conclusions}
-
-\section*{Acknowledgements}
-%
-%	LaTeX source on overleaf.com
-%
-\section*{\LaTeX Source}
-\url{https://www.overleaf.com/read/xjmyvksvtztb}
-%
-%	get a bibliography
-%
-%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
-%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
-%
-\bibliographystyle{plain}
-\bibliography{qc}
+\bigskip
+\noindent
+Interestingly, it was the addition of the balance spring to the
+balance wheel around 1658 by Robert Hooke (and Christiaan Huygens
+\cite{wiki:huygens}) that greatly increased the accuracy of
+portable timepieces, transforming early pocket watches from
+expensive novelties to useful timekeepers.
 
 
-\section*{Figures}
+\bigskip
+\noindent
+These notes are organized (I hope) as follows: Section
+\ref{sec:hookes_law} looks at Hooke's Law in some detail. Section
+\ref{sec:other_smo} looks at the pendulum and RLC circuits as
+examples of other simple harmonic oscillators. Section
+\ref{sec:quantum_harmonic_oscillator} looks at the Quantum
+Harmonic Oscillator. Section \ref{sec:quantum_fields} outlines
+how quantum fields fit into all of this. Finally,
+\ref{sec:conclusions} offers a few observations and conclusions.
+
+
+\section{Hooke's Law}
+\label{sec:hookes_law}
+Hooke's law \cite{wiki:hookes_law} is a law of physics that states
+that the force ($F_s$) needed to extend or compress a spring by
+some distance ($x$) scales linearly with respect to that
+distance, that is, $F_s = -kx$, where $k$ is a constant factor
+characteristic of the spring (i.e., its stiffness), and $x$ is
+small compared to the total possible deformation of the
+spring. The law is named after 17th-century British physicist
+Robert Hooke \cite{robert_hooke}. He first stated the law in
+1676 as a Latin anagram, and he published the solution of his
+anagram in 1678 as: ut tensio, sic vis ("as the extension, so the
+force" or "the extension is proportional to the force")
+\cite{hooke_of_spring}. 
+
+\subsection{The Mathematics of Hooke's Law}
+\label{subsec:mathematics_of_hookes_law}
+Hooke's Law is most frequently stated as 
+$F \propto -x$, that is, the force $F$
+is proportional to the displacement $x$.
+However, more frequently this relationship
+is changed into an equality by the use
+of a spring constant $k$ so that
+we have
+
+\begin{equation}
+F =-kx
+\label{eqn:hookes_law}
+\end{equation}
+
+\bigskip
+\noindent
+We also know that Newton's Second Law of Motion 
+\cite{wiki:newtons_laws} tells us that 
+
+\begin{equation}
+F = ma
+\label{eqn:newtons_2nd_law}
+\end{equation}
+
+\bigskip
+\noindent
+Now, if we set Equation \ref{eqn:hookes_law} equal to
+Equation \ref{eqn:newtons_2nd_law} we see that
+
+\begin{equation*}
+\begin{array}{llll}
+ma
+&=& -kx											&\qquad\qquad\mathrel{\#} \text{Newton's Force equals Hooke's Force} \\
+[7pt]
+&\Rightarrow& a(t) = - \dfrac{k}{m} x(t)		&\qquad\qquad\mathrel{\#} \text{Solve for $a$, noting that $a$ and $x$ are functions of time ($t$)} \\
+[7pt]
+&\Rightarrow& \dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x(t)	
+						&\qquad\qquad\mathrel{\#} a(t) = \dfrac{d}{dt} (v) = \dfrac{d}{dt} \left( \dfrac{dx}{dt} \right ) = \dfrac{d^2 x}{dt^2} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+This situation is shown in Figure \ref{fig:spring_and_mass_system}.
+
+
 
 \begin{figure}[H]
 \centering
-  \resizebox{0.80 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.65 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
         \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)        
@@ -190,6 +263,104 @@
 \label{fig:spring_and_mass_system}
 \end{figure}
 
+
+\bigskip
+\noindent
+So now we know that
+
+\begin{equation}
+\dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x(t)
+\label{eqn:d2xdt2}
+\end{equation}
+
+\bigskip
+\noindent
+The next question is how do we solve the second order ordinary 
+differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$?
+
+
+
+\section{Other Simple Harmonic Oscillators}
+\label{sec:other_smo}
+
+\section{The Quantum Harmonic Oscillator}
+\label{sec:quantum_harmonic_oscillator}
+
+\section{Quantum Fields}
+\label{sec:quantum_fields}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX Source}
+\url{https://www.overleaf.com/read/xjmyvksvtztb}
+%
+%	Holding for figures
+%
+\section*{Figures}
+
+\begin{figure}[H]
+\centering
+  \resizebox{0.70 \textwidth}{!} {																% resize figure if you want
+  
+  
+\begin{tikzpicture}
+  \def \A {1.0}																					% x(t) = A cos (wt)
+  \def \w {1.0}																					% x(t) = A cos (wt)
+  \begin{axis}[
+    axis line style = thick,
+    ticks=none,
+    ymin=-1.5,
+    ymax=1.5,
+    axis x line=middle,
+    axis y line=middle,
+    xlabel=$t$,
+    ylabel={$x(t)$},
+    every axis x label/.style={
+      at={(ticklabel* cs:1.05)},
+      anchor=east,
+    },
+    every axis y label/.style={
+      at={(ticklabel* cs:1.05)},
+      anchor=south,
+    },
+  ]
+  \addplot[domain=0:(4*2*pi),samples=100,smooth,brown]{\A*cos(\w*deg(x))};
+ \end{axis}
+ 
+%
+%
+% \fill [red] (0.0,4.75) circle (0.05);															% draw a dot at (0,1) (not really sure how to compute this)
+  \path (0.0,4.75) node[font=\small,xshift=-1.0mm,left,red] {${A}$};							% label with A
+  \draw[thick,red] (-0.20,4.75) -- (0.20,4.75);													% draw a short line
+  
+% \fill [red] (1.71,4.75) circle (0.05);														% again, not really sure how to compute these (eyeballed)
+% \fill [red]  ({2*1.71},4.75) circle (0.05);
+  \draw[thick,red] (1.71,4.50) -- (1.71,5.00); 
+  \draw[thick,red] ({2*1.71},4.50) -- ({2*1.71},5.00); 
+  \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75) coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
+  \path (6.00,6.25) node[font=\footnotesize,draw,rectangle] {$\; \omega = \dfrac{2 \pi}{T} = 2 \pi f \;$}; 
+  \path (6.00,5.45) node[font=\footnotesize,draw,rectangle] {$\; x(t) = A \cos (2 \pi f t) \;$}; 
+  \draw[draw=none] (0.00,0.15) -- ({4*1.71},0.15) coordinate [label={[draw,rectangle,font=\footnotesize,midway] {$x(t) = A \cos (\omega t)$}}];
+ \end{tikzpicture}
+}
+\caption{SMH Displacement Function}
+\label{fig:smh_displacement_function}
+\end{figure}
+
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
 %
 %	done
 %
