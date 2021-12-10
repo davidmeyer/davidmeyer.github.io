@@ -115,7 +115,10 @@ is proportional to the displacement $x$.
 However, more frequently this relationship
 is changed into an equality by the use
 of a spring constant $k$ so that
-we have
+we have\footnote{I'll just note here that 
+it seems to be convention to use $x$ and 
+$x(t)$ interchangeably.}
+
 
 \begin{equation}
 F =-kx
@@ -154,10 +157,10 @@ ma
 This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 
 
-
+\bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.65 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.55 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
         \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)        
@@ -276,9 +279,140 @@ So now we know that
 \bigskip
 \noindent
 The next question is how do we solve the second order ordinary 
-differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$?
+differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$? Well,
+if we imagine the displacement ($x(t)$) plotted on the y axis against
+$t$ (plotted on the x axis) we see the familiar pattern shown in 
+Figure \ref{fig:smh_displacement_function}.
 
 
+\bigskip
+\begin{figure}[H]
+\centering
+  \resizebox{0.50 \textwidth}{!} {																% resize figure if you want
+  \begin{tikzpicture}
+    \def \A {1.0}																					% x(t) = A cos (wt)
+    \def \w {1.0}																					% x(t) = A cos (wt)
+    \begin{axis}[
+      axis line style = thick,
+      ticks=none,
+      ymin=-1.5,
+      ymax=1.5,
+      axis x line=middle,
+      axis y line=middle,
+      xlabel=$t$,
+      ylabel={$x(t)$},
+      every axis x label/.style={
+        at={(ticklabel* cs:1.05)},
+        anchor=east,
+      },
+      every axis y label/.style={
+        at={(ticklabel* cs:1.05)},
+        anchor=south,
+      },
+    ]
+   \addplot[domain=0:(4*2*pi),samples=100,smooth,brown]{\A*cos(\w*deg(x))};
+ \end{axis}
+ 
+%
+%
+% \fill [red] (0.0,4.75) circle (0.05);															% draw a dot at (0,1) (not really sure how to compute this)
+%
+  \path (0.0,4.75) node[font=\small,xshift=-1.0mm,left,red] {${A}$};							% label with A
+  \draw[thick,red] (-0.20,4.75) -- (0.20,4.75);													% draw a short line
+% 
+% \fill [red] (1.71,4.75) circle (0.05);														% again, not really sure how to compute these (eyeballed)
+% \fill [red]  ({2*1.71},4.75) circle (0.05);
+  \draw[thick,red] (1.71,4.50) -- (1.71,5.00); 
+  \draw[thick,red] ({2*1.71},4.50) -- ({2*1.71},5.00); 
+  \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75) coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
+%  \path (6.00,6.25) node[font=\footnotesize,draw,rectangle] {$\; \omega = \dfrac{2 \pi}{T} = 2 \pi f \;$}; 
+%  \path (6.00,5.45) node[font=\footnotesize,draw,rectangle] {$\; x(t) = A \cos (2 \pi f t) \;$}; 
+  \draw[draw=none] (0.00,0.05) -- ({4*1.71},0.05) 
+  				coordinate [label={[draw,blue,thick,rectangle,font=\footnotesize,midway] {\color{black}{$\; x(t) = A \cos (\omega t) \; $}}}];
+ \end{tikzpicture}
+}
+\caption{Simple Harmonic Motion Displacement Function}
+\label{fig:smh_displacement_function}
+\end{figure}
+
+\bigskip
+\noindent
+Here we can think of the spring being stretched to its maximum displacement $(A)$ 
+and then let go at time $t = 0$. The mass ($m$) will continue oscillating since
+in the Hooke's Law setup the only force acting on the mass is the force
+due to the spring, that is, $-kx$. This is shown in Figure 
+\ref{fig:smh_displacement_function}.
+
+
+\bigskip
+\noindent
+We can check to see if our guess, $x(t) = A \cos (\omega t)$, is really a 
+solution to Equation \ref{eqn:d2xdt2} as follows:
+
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{d^2 x}{dt^2}
+&=& - \dfrac{k}{m} x													&\qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2xdt2}} \\
+[10pt]
+&\Rightarrow& \dfrac{d^2}{dt^2}  \left [A \cos (\omega t) \right ] = -\dfrac{k}{m} x
+				&\qquad \qquad \qquad \mathrel{\#} \text{guess that $x(t) = A \cos (\omega t)$} \\
+[10pt]
+&\Rightarrow& \dfrac{d}{dt}  \left [-\omega A \sin (\omega t) \right ] = -\dfrac{k}{m} x
+				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+[10pt]
+&\Rightarrow& -\omega^2 A \cos (\omega t) = -\dfrac{k}{m} x
+				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\sin (u) = \cos (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+[10pt]
+&\Rightarrow& \omega^2 A \cos (\omega t) = \dfrac{k}{m} x				&\qquad \qquad \qquad \mathrel{\#} \text{cancel minus} \\
+[10pt]
+&\Rightarrow& \omega^2 x = \dfrac{k}{m} x								&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
+[10pt]
+&\Rightarrow& \omega^2  = \dfrac{k}{m}									&\qquad \qquad \qquad \mathrel{\#} \text{cancel $x$} \\
+[10pt]
+&\Rightarrow& \omega  = \sqrt{\dfrac{k}{m}}								&\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation \ref{eqn:d2xdt2} 
+in the case that
+
+\bigskip
+\begin{equation}
+\omega  = \sqrt{\dfrac{k}{m}}	
+\label{eqn:omega}
+\end{equation}
+
+\bigskip
+\noindent
+Here $A$ is the maximum displacement (or amplitude) and $\omega$ is the angular 
+frequency (in radians per second). Once we know this we know that
+
+\begin{equation*}
+\omega = \dfrac{2 \pi}{T} = 2 \pi f
+\end{equation*}
+
+\bigskip
+\noindent
+where $T$ is the period (time for one cycle in seconds) and $f$ is the
+frequency in cycles/second or hertz (Hz). Note that $f = \dfrac{1}{T}$
+and so $f$ has units of $\dfrac{1}{s}$.  
+
+\bigskip
+\noindent
+Now we can write
+the displacement function $x(t)$ as (also shown in 
+Figure \ref{fig:smh_displacement_function}) in terms
+of the frequency $f$ as follows:
+
+\begin{equation*}
+x(t) = A \cos (2 \pi f t)
+\end{equation*}
+
+
+
+\subsection{Energy of the Classical Spring and Mass System}
 
 \section{Other Simple Harmonic Oscillators}
 \label{sec:other_smo}
@@ -303,56 +437,6 @@ differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$?
 %	Holding for figures
 %
 \section*{Figures}
-
-\begin{figure}[H]
-\centering
-  \resizebox{0.70 \textwidth}{!} {																% resize figure if you want
-  
-  
-\begin{tikzpicture}
-  \def \A {1.0}																					% x(t) = A cos (wt)
-  \def \w {1.0}																					% x(t) = A cos (wt)
-  \begin{axis}[
-    axis line style = thick,
-    ticks=none,
-    ymin=-1.5,
-    ymax=1.5,
-    axis x line=middle,
-    axis y line=middle,
-    xlabel=$t$,
-    ylabel={$x(t)$},
-    every axis x label/.style={
-      at={(ticklabel* cs:1.05)},
-      anchor=east,
-    },
-    every axis y label/.style={
-      at={(ticklabel* cs:1.05)},
-      anchor=south,
-    },
-  ]
-  \addplot[domain=0:(4*2*pi),samples=100,smooth,brown]{\A*cos(\w*deg(x))};
- \end{axis}
- 
-%
-%
-% \fill [red] (0.0,4.75) circle (0.05);															% draw a dot at (0,1) (not really sure how to compute this)
-  \path (0.0,4.75) node[font=\small,xshift=-1.0mm,left,red] {${A}$};							% label with A
-  \draw[thick,red] (-0.20,4.75) -- (0.20,4.75);													% draw a short line
-  
-% \fill [red] (1.71,4.75) circle (0.05);														% again, not really sure how to compute these (eyeballed)
-% \fill [red]  ({2*1.71},4.75) circle (0.05);
-  \draw[thick,red] (1.71,4.50) -- (1.71,5.00); 
-  \draw[thick,red] ({2*1.71},4.50) -- ({2*1.71},5.00); 
-  \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75) coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
-  \path (6.00,6.25) node[font=\footnotesize,draw,rectangle] {$\; \omega = \dfrac{2 \pi}{T} = 2 \pi f \;$}; 
-  \path (6.00,5.45) node[font=\footnotesize,draw,rectangle] {$\; x(t) = A \cos (2 \pi f t) \;$}; 
-  \draw[draw=none] (0.00,0.15) -- ({4*1.71},0.15) coordinate [label={[draw,rectangle,font=\footnotesize,midway] {$x(t) = A \cos (\omega t)$}}];
- \end{tikzpicture}
-}
-\caption{SMH Displacement Function}
-\label{fig:smh_displacement_function}
-\end{figure}
-
 %
 %	get a bibliography
 %
