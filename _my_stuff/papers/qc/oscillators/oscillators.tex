@@ -340,7 +340,8 @@ Figure \ref{fig:smh_displacement_function}.
 Here we can think of the spring being stretched to its maximum displacement $(A)$ 
 and then let go at time $t = 0$. The mass ($m$) will continue oscillating since
 in the Hooke's Law setup the only force acting on the mass is the force
-due to the spring, that is, $-kx$. This is shown in Figure 
+due to the spring, that is, $-kx$. This force is frequently referred to as 
+the \emph{restoring} force and is shown in Figure 
 \ref{fig:smh_displacement_function}.
 
 
@@ -381,7 +382,7 @@ in the case that
 \bigskip
 \begin{equation}
 \omega  = \sqrt{\dfrac{k}{m}}	
-\label{eqn:omega}
+\label{eqn:omega0}
 \end{equation}
 
 \bigskip
@@ -389,9 +390,10 @@ in the case that
 Here $A$ is the maximum displacement (or amplitude) and $\omega$ is the angular 
 frequency (in radians per second). Once we know this we know that
 
-\begin{equation*}
+\begin{equation}
 \omega = \dfrac{2 \pi}{T} = 2 \pi f
-\end{equation*}
+\label{eqn:omega1}
+\end{equation}
 
 \bigskip
 \noindent
@@ -410,9 +412,109 @@ of the frequency $f$ as follows:
 x(t) = A \cos (2 \pi f t)
 \end{equation*}
 
+\bigskip
+\noindent
+We can also put Equations \ref{eqn:omega0} and \ref{eqn:omega1} 
+together to find
+
+\begin{equation*}
+f = \dfrac{1}{2 \pi} \sqrt{\dfrac{k}{m}}
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+T = 2 \pi \sqrt{\dfrac{m}{k}}
+\end{equation*}
 
 
-\subsection{Energy of the Classical Spring and Mass System}
+
+\subsection{Total Energy of a Simple Harmonic Oscillator}
+We know that the total energy of an oscillator  
+such as the spring and mass system we looked 
+at above is
+
+
+\begin{equation*}
+E_{\text{total}} = \text{KE} + \text{PE}
+\end{equation*}
+
+\bigskip
+\noindent
+All good, but what is the kinetic energy (KE) and potential energy (PE)
+of such as system? 
+
+\bigskip
+\noindent
+Well, we know that \cite{oscillations_and_waves}
+
+\smallskip
+\begin{equation*}
+E_{\text{total}} = \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 
+\end{equation*}
+
+\smallskip
+\noindent
+so that
+
+\begin{equation*}
+\begin{array}{llll}
+E_{\text{total}}
+&=& \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 									
+						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}} = \text{KE} + \text{PE} \\
+[12pt]
+&=& \dfrac{1}{2} m \left (\dfrac{dx}{dt} \right )^2 + \dfrac{1}{2}kx^2 		
+						&\qquad \qquad \qquad \mathrel{\#} v = \dfrac{dx}{dt} \\
+[12pt]
+&=& \dfrac{1}{2} m \left (\dfrac{d}{dt} \left [A \cos (\omega t) \right ] \right )^2 + \dfrac{1}{2}kx^2 
+						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
+[12pt]
+&=& \dfrac{1}{2} m \left (- \omega A \sin (\omega t) \right )^2 + \dfrac{1}{2}kx^2 
+						&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}kx^2 
+						&\qquad \qquad \qquad \mathrel{\#} \left (- \omega A \sin (\omega t) \right )^2 = \omega^2 A^2 \sin^2 (\omega t) \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k\left (A \cos (\omega t) \right )^2 
+						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t)\\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k A^2 \cos^2 (\omega t) 
+						&\qquad \qquad \qquad \mathrel{\#} \left ( A \cos (\omega t) \right )^2 = A^2 \cos^2 (\omega t) \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2} m \omega^2 A^2 \cos^2 (\omega t) 
+						&\qquad \qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m \omega^2 \text{ (Equation \ref{eqn:omega0})} \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \left (\sin^2 (\omega t) + \cos^2 (\omega t) \right )
+						&\qquad \qquad \qquad \mathrel{\#} \text{factor out $\dfrac{1}{2} m \omega^2 A^2$} \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2
+						&\qquad \qquad \qquad \mathrel{\#} \sin^2 (\omega t) + \cos^2 (\omega t) = 1 \\
+[12pt]
+&=& \dfrac{1}{2} m (2 \pi f)^2 A^2 
+						&\qquad \qquad \qquad \mathrel{\#} \omega = 2 \pi f \\
+[12pt]
+&=& \dfrac{1}{2} 4 \pi^2 f^2 A^2 m
+						&\qquad \qquad \qquad \mathrel{\#} \text{expand $\left (2 \pi f \right)^2$ and rearrange} \\
+[12pt]
+&=& 2 \pi^2 f^2 A^2 m
+						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}} = 2 \pi^2 f^2 A^2 m\\
+[12pt]
+&\Rightarrow& E_{\text{total}} \propto f^2 A^2 
+						&\qquad \qquad \qquad \mathrel{\#} \text{$E_{\text{total}}$ is proportional to $f^2 A^2$}\\
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that the oscillator has $E_{\text{total}} = 2 \pi^2 f^2 A^2 m$, 
+or said another way $E_{\text{total}} \propto f^2 A^2$. This result will 
+become useful when we consider the quantum harmonic oscillator.
+
+
+
 
 \section{Other Simple Harmonic Oscillators}
 \label{sec:other_smo}
