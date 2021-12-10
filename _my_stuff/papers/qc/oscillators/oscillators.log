@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  10 DEC 2021 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  10 DEC 2021 11:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1009,10 +1009,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [4]
 (./oscillators.bbl) [5] (./oscillators.aux) ) 
 Here is how much of TeX's memory you used:
- 29904 strings out of 478994
- 752081 string characters out of 5858184
- 1265502 words of memory out of 5000000
- 46839 multiletter control sequences out of 15000+600000
+ 29905 strings out of 478994
+ 752105 string characters out of 5858184
+ 1265505 words of memory out of 5000000
+ 46840 multiletter control sequences out of 15000+600000
  416147 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,15n,116p,727b,2220s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1035,13 +1035,14 @@ fonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
-10.pfb>
-Output written on oscillators.pdf (5 pages, 236243 bytes).
+msy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
+.pfb>
+Output written on oscillators.pdf (5 pages, 243723 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
