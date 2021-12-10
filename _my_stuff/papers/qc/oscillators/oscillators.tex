@@ -66,9 +66,9 @@ This story begins somewhere around 1658 when Robert Hooke
 masses. By 1660 Hooke had made two significant steps, namely the
 use of a balance controlled by a spiral spring and an improved
 escapement called the anchor escapement. In 1660 he discovered an
-instance of what we now call Hooke's Law while working on designs 
-for the balance springs of clocks. However he only announced 
-the general law of elasticity in his lecture Of Spring given in 1678
+instance of what we now call Hooke's Law while working on designs
+for the balance springs of clocks. However he only announced the
+general law of elasticity in his lecture Of Spring given in 1678
 \cite{hooke_of_spring}.
 
 \bigskip
@@ -94,18 +94,18 @@ how quantum fields fit into all of this. Finally,
 
 \section{Hooke's Law}
 \label{sec:hookes_law}
-Hooke's law \cite{wiki:hookes_law} is a law of physics that states
-that the force ($F_s$) needed to extend or compress a spring by
-some distance ($x$) scales linearly with respect to that
-distance, that is, $F_s = -kx$, where $k$ is a constant factor
-characteristic of the spring (i.e., its stiffness), and $x$ is
-small compared to the total possible deformation of the
-spring. The law is named after 17th-century British physicist
-Robert Hooke \cite{robert_hooke}. He first stated the law in
-1676 as a Latin anagram, and he published the solution of his
-anagram in 1678 as: ut tensio, sic vis ("as the extension, so the
-force" or "the extension is proportional to the force")
-\cite{hooke_of_spring}. 
+Hooke's law \cite{wiki:hookes_law} is a law of physics that
+states that the force (I'll just call it $F$) needed to extend or
+compress a spring by some distance ($x$) scales linearly with
+respect to that distance, that is, $F_s = -kx$, where $k$ is a
+constant factor characteristic of the spring (i.e., its
+stiffness), and $x$ is small compared to the total possible
+deformation of the spring. The law is named after 17th-century
+British physicist Robert Hooke \cite{robert_hooke}. He first
+stated the law in 1676 as a Latin anagram, and he published the
+solution of his anagram in 1678 as: ut tensio, sic vis ("as the
+extension, so the force" or "the extension is proportional to the
+force") \cite{hooke_of_spring}.
 
 \subsection{The Mathematics of Hooke's Law}
 \label{subsec:mathematics_of_hookes_law}
@@ -143,12 +143,14 @@ Equation \ref{eqn:newtons_2nd_law} we see that
 \begin{equation*}
 \begin{array}{llll}
 ma
-&=& -kx											&\qquad\qquad\mathrel{\#} \text{Newton's force equals Hooke's force} \\
+&=& -kx
+        &\qquad\qquad\mathrel{\#} \text{Newton's force equals Hooke's force} \\
 [7pt]
-&\Rightarrow& a = - \dfrac{k}{m} x				&\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
+&\Rightarrow& a = - \dfrac{k}{m} x
+        &\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
 [7pt]
 &\Rightarrow& \dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x	
-						&\qquad\qquad\mathrel{\#} a = \dfrac{d}{dt} (v) = \dfrac{d}{dt} \left( \dfrac{dx}{dt} \right ) = \dfrac{d^2 x}{dt^2} \\
+        &\qquad\qquad\mathrel{\#} a = \dfrac{d}{dt} (v) = \dfrac{d}{dt} \left( \dfrac{dx}{dt} \right ) = \dfrac{d^2 x}{dt^2} \\
 \end{array}
 \end{equation*}
 
@@ -278,11 +280,11 @@ So now we know that
 
 \bigskip
 \noindent
-The next question is how do we solve the second order ordinary 
-differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$? Well,
-if we imagine the displacement ($x(t)$) plotted on the y axis against
-$t$ (plotted on the x axis) we see the familiar pattern shown in 
-Figure \ref{fig:smh_displacement_function}.
+The next question is how do we solve the second order ordinary
+differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$?
+Well, if we imagine the displacement ($x(t)$) plotted on the y
+axis against $t$ (plotted on the x axis) we see the familiar
+pattern shown in Figure \ref{fig:smh_displacement_function}.
 
 
 \bigskip
@@ -337,19 +339,20 @@ Figure \ref{fig:smh_displacement_function}.
 
 \bigskip
 \noindent
-Here we can think of the spring being stretched to its maximum displacement $(A)$ 
-and then let go at time $t = 0$. The mass ($m$) will continue oscillating since
-in the Hooke's Law setup the only force acting on the mass is the force
-due to the spring, that is, $-kx$. This force is frequently referred to as 
-the \emph{restoring} force and is shown in Figure 
+Here we can think of the spring being stretched to its maximum
+displacement $(A)$ and then let go at time $t = 0$. The mass
+($m$) will continue oscillating since in the Hooke's Law setup
+the only force acting on the mass is the force due to the spring,
+that is, $-kx$. This force is frequently referred to as the
+\emph{restoring} force and is shown in Figure
 \ref{fig:spring_and_mass_system}.
 
 
 
 \bigskip
 \noindent
-We can check to see if our guess, $x(t) = A \cos (\omega t)$, is really a 
-solution to Equation \ref{eqn:d2xdt2} as follows:
+We can check to see if our guess, $x(t) = A \cos (\omega t)$, is
+really a solution to Equation \ref{eqn:d2xdt2} as follows:
 
 \begin{equation*}
 \begin{array}{llll}
@@ -388,9 +391,9 @@ in the case that
 
 \bigskip
 \noindent
-Here $A$ is the maximum displacement (or amplitude) and $\omega$ is the angular 
-frequency (in radians per second). We also know that the definition of angular
-frequency is
+Here $A$ is the maximum displacement (or amplitude) and $\omega$
+is the angular frequency (in radians per second). We also know
+that the definition of angular frequency is
 
 
 \begin{equation}
@@ -400,15 +403,15 @@ frequency is
 
 \bigskip
 \noindent
-where $T$ is the period (time for one cycle in seconds) and $f$ is the
-frequency in cycles/second \cite{wiki:angular_frequency}. 
-Note that $f = \dfrac{1}{T}$ so $f$ has units of $\text{seconds}^{-1}$.  
+where $T$ is the period (time for one cycle in seconds) and $f$
+is the frequency in cycles/second \cite{wiki:angular_frequency}.
+Note that $f = \dfrac{1}{T}$ so $f$ has units of
+$\text{seconds}^{-1}$.
 
 \bigskip
 \noindent
-Give this information we can write
-the displacement function $x(t)$ as 
-in terms of the frequency $f$ as follows:
+Give this information we can write the displacement function
+$x(t)$ as in terms of the frequency $f$ as follows:
 
 \begin{equation*}
 x(t) = A \cos (2 \pi f t)
@@ -445,8 +448,8 @@ E_{\text{total}} = \text{KE} + \text{PE}
 
 \bigskip
 \noindent
-All good, but what is the kinetic energy (KE) and potential energy (PE)
-of such as system? 
+All good, but what is the kinetic energy (KE) and potential
+energy (PE) of such as system?
 
 \bigskip
 \noindent
@@ -511,11 +514,10 @@ E_{\text{total}}
 
 \bigskip
 \noindent
-So now we know that the oscillator has $E_{\text{total}} = 2 \pi^2 f^2 A^2 m$, 
-or said another way $E_{\text{total}} \propto f^2 A^2$. This result will 
-become useful when we consider the quantum harmonic oscillator.
-
-
+So now we know that the oscillator has $E_{\text{total}} = 2
+\pi^2 f^2 A^2 m$, or said another way $E_{\text{total}} \propto
+f^2 A^2$. This result will become useful when we consider the
+quantum harmonic oscillator.
 
 
 \section{Other Simple Harmonic Oscillators}
