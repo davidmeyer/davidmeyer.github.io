@@ -13,9 +13,11 @@
 %   tikz et al
 %
 \usepackage{tikz}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,through,intersections,lindenmayersystems,backgrounds}    
-\usepackage{pgfplots}
+\usetikzlibrary{patterns,angles,arrows,quotes,shapes,intersections,decorations,hobby,backgrounds}    
 \usepackage{pgfplots}	
+\usepackage{relsize}
+\usepackage{float}
+\usepackage{enumitem}                                                   % get alpha in enumerate
 %
 %	math stuff
 %
@@ -567,8 +569,6 @@ quantum harmonic oscillator.
 %
 \section*{Figures}
 
-
-
 \begin{figure}[H]
   \centering
   \resizebox{0.45 \textwidth}{!} {																% resize figure if you want
@@ -581,8 +581,8 @@ quantum harmonic oscillator.
 %	make some coordinates
 %
       \coordinate (centro) at (0,0);
-      \draw[dashed] (0,0.5) -- ++(0,-3.5) node (mary) [black,below]{};
-      \fill (centro) circle (0.03);
+      \draw[dashed] (0,0.5) -- ++ (0,-3.5) node (mary) [black,below]{};
+      \fill (centro) circle (0.04);
       \draw[thick] (centro) -- ++(270+\myAngle:3) coordinate (bob);
       \path (1.00,-1.25) node[] {$\Scale[0.5] {L}$}; 
       \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) node[left,midway] {${\Scale[0.50] T}$};
@@ -595,10 +595,10 @@ quantum harmonic oscillator.
 %
      \draw [-stealth] (bob) -- ($(bob)!-\Gcos cm!(centro)$)
        coordinate (gcos)
-      node[midway,below, yshift=-0.5cm, xshift=0.50cm] {$\Scale[0.60] {m {\bf g} \cos\theta}$};
+       node[midway,below, yshift=-0.5cm, xshift=0.50cm] {$\Scale[0.60] {m {\bf g} \cos\theta}$};
      \draw [-stealth] (bob) -- ($(bob)!\Gsin cm!90:(centro)$)
        coordinate (gsin)
-     node[midway,below,yshift=-0.20cm, xshift=-0.50cm] {$\Scale[0.60] {m {\bf g} \sin \theta}$};
+       node[midway,below,yshift=-0.20cm, xshift=-0.50cm] {$\Scale[0.60] {m {\bf g} \sin \theta}$};
      \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec)
        coordinate (g)
        node[below,brown] {$\Scale [0.60] {{\bf F_{g}} = m {\bf g}}$};
@@ -608,10 +608,10 @@ quantum harmonic oscillator.
 %
 %	draw the x-y coordinate system
 %
-     \draw [-stealth] (2.00,-2.25) -- (2.50,-1.90) node[xshift=0.10cm, yshift=0.10cm] {$\Scale[0.50] {x}$};
-     \draw [-stealth] (2.00,-2.25) -- (1.65,-1.75) node[xshift=-0.05cm,yshift=0.10cm] {$\Scale[0.50] {y}$};
+     \draw [-stealth] (2.00,-2.25) -- (2.50,-1.90)  node[xshift=0.10cm, yshift=0.10cm] {$\Scale[0.50] {x}$};
+     \draw [-stealth] (2.00,-2.25) -- (1.65,-1.750) node[xshift=-0.05cm,yshift=0.10cm] {$\Scale[0.50] {y}$};
    \end{tikzpicture}
-  }																							% end \resizebox
+}
 \caption{Free Body Diagram of a Simple Pendulum}
 \label{fig:simple_pendulum}
 \end{figure}
