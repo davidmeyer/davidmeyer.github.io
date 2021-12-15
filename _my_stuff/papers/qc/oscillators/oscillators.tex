@@ -591,25 +591,33 @@ quantum harmonic oscillator.
 %
      \pic [draw, ->, "${\Scale[0.60]{\theta}}$", angle eccentricity=1.5] {angle = mary--centro--bob};
 %
-%	draw the rest of the pendulum
+%	draw the rest of the pendulum (except draw the bob last)
 %
-     \draw [->] (bob) -- ($(bob)!-\Gcos cm!(centro)$)
-       coordinate (gcos)
-       node[midway,below, yshift=-0.5cm, xshift=0.50cm, scale=0.60] {$m {\bf g}\cos \theta $};
-     \draw [->] (bob) -- ($(bob)!\Gsin cm!90:(centro)$)
-       coordinate (gsin)
-       node[midway,below,yshift=-0.20cm, xshift=-0.50cm,scale=0.60] {$m {\bf g} \sin \theta $};
-     \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec)
-       coordinate (g)
-       node[below,brown,scale=0.60] {${\bf F_{g}} = m {\bf g}$};
+     \draw [->] (bob) -- ($(bob)!-\Gcos cm!(centro)$)   coordinate (gcos); 
+     \draw [->] (bob) -- ($(bob)!\Gsin cm!90:(centro)$) coordinate (gsin);
+     \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec) coordinate (g)
+       node[below,brown,yshift=-1.0mm, scale=0.60] {${\bf F_{g}} = m {\bf g}$};
      \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.5] {angle = g--bob--gcos};
+     \draw [densely dotted, thin, blue] (g) -- (gsin) 
+       node[midway, xshift=-0.15cm, rotate=-60, scale=0.50] {$\color{black}{mg \cos \theta}$};
+     \draw [densely dotted, thin, blue] (g) -- (gcos) 
+       node[midway,below, rotate=30, scale=0.50] {$\color{black}{mg \sin \theta}$};  
+%
+%	draw bob at origin and on the other side
+%
+     \draw[dashed] (bob) arc(-60:-120:3);
+     \coordinate (bob1) at ($(mary) + (0,{0.150/2})$);
+     \filldraw [densely dotted, fill=black!10,draw=black] (bob1) circle[radius=0.150];
+     \path (bob1) node[scale=0.50] {$m$};
+     \coordinate (bob2) at ($(bob) + (-3,{0.150/2})$);
+     \draw [dashed] (centro) -- (bob2);
+     \filldraw [densely dotted, fill=black!10,draw=black] (bob2) circle[radius=0.150];
+     \path (bob2) node[scale=0.50] {$m$};
+%
+%	make sure bob at right position is on top, so draw last
+%
      \filldraw [fill=black!20,draw=black] (bob) circle[radius=0.150];
      \path (bob) node[scale=0.60] {${\bf m}$};
-%
-%	draw the x-y coordinate system
-%
-%     \draw [-stealth] (2.00,-2.25) -- (2.50,-1.90) node[xshift=0.10cm, yshift=0.10cm] {$\Scale[0.50] {x}$};
-%     \draw [-stealth] (2.00,-2.25) -- (1.65,-1.75) node[xshift=-0.05cm,yshift=0.10cm] {$\Scale[0.50] {y}$};
    \end{tikzpicture}
   }																							% end \resizebox
 \caption{Free Body Diagram for a Simple Pendulum}
