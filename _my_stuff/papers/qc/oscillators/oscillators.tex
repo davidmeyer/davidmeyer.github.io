@@ -584,8 +584,8 @@ quantum harmonic oscillator.
       \draw[dashed] (0,0.5) -- ++(0,-3.5) node (mary) [black,below]{};
       \fill (centro) circle (0.04);
       \draw[thick] (centro) -- ++(270+\myAngle:3) coordinate (bob);
-      \path (1.00,-1.25) node[] {$\Scale[0.5] {L}$}; 
-      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) node[left,midway] {${\Scale[0.50] T}$};
+      \path (1.00,-1.25) node[scale=0.50] {$L$}; 
+      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) node[left,midway,xshift=-0.75mm,scale=0.50] {$T$};
 %
 %	draw the angle
 %
@@ -595,16 +595,16 @@ quantum harmonic oscillator.
 %
      \draw [->] (bob) -- ($(bob)!-\Gcos cm!(centro)$)
        coordinate (gcos)
-       node[midway,below, yshift=-0.5cm, xshift=0.50cm] {$\Scale[0.60] {m {\bf g} \cos\theta}$};
+       node[midway,below, yshift=-0.5cm, xshift=0.50cm, scale=0.60] {$m {\bf g}\cos \theta $};
      \draw [->] (bob) -- ($(bob)!\Gsin cm!90:(centro)$)
        coordinate (gsin)
-       node[midway,below,yshift=-0.20cm, xshift=-0.50cm] {$\Scale[0.60] {m {\bf g} \sin \theta}$};
+       node[midway,below,yshift=-0.20cm, xshift=-0.50cm,scale=0.60] {$m {\bf g} \sin \theta $};
      \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec)
        coordinate (g)
-       node[below,brown] {$\Scale [0.60] {{\bf F_{g}} = m {\bf g}}$};
+       node[below,brown,scale=0.60] {${\bf F_{g}} = m {\bf g}$};
      \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.5] {angle = g--bob--gcos};
      \filldraw [fill=black!20,draw=black] (bob) circle[radius=0.150];
-     \path (bob) node[] {$\Scale[0.35] {\bf m}$};
+     \path (bob) node[scale=0.60] {${\bf m}$};
 %
 %	draw the x-y coordinate system
 %
