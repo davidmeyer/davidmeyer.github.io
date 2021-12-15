@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  15 DEC 2021 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  15 DEC 2021 12:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1300,19 +1300,159 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 81
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
+LaTeX Warning: Citation `robert_hooke' on page 1 undefined on input line 88.
+
+
+LaTeX Warning: Citation `hooke_of_spring' on page 1 undefined on input line 95.
+
+
+
+LaTeX Warning: Citation `wiki:huygens' on page 1 undefined on input line 101.
+
+
+LaTeX Warning: Reference `sec:hookes_law' on page 1 undefined on input line 109
+.
+
+
+LaTeX Warning: Reference `subsec:simple_pendulum' on page 1 undefined on input 
+line 110.
+
+
+LaTeX Warning: Reference `subsec:rlc_circuit' on page 1 undefined on input line
+ 111.
+
+
+LaTeX Warning: Reference `sec:quantum_harmonic_oscillator' on page 1 undefined 
+on input line 113.
+
+
+LaTeX Warning: Reference `sec:quantum_fields' on page 1 undefined on input line
+ 114.
+
+
+LaTeX Warning: Reference `sec:conclusions' on page 1 undefined on input line 11
+6.
+
+
+LaTeX Warning: Citation `wiki:hookes_law' on page 1 undefined on input line 121
+.
+
+
+LaTeX Warning: Citation `robert_hooke' on page 1 undefined on input line 128.
+
+
+LaTeX Warning: Citation `hooke_of_spring' on page 1 undefined on input line 132
+.
+
+
+LaTeX Warning: Citation `wiki:newtons_laws' on page 1 undefined on input line 1
+55.
+
+
+LaTeX Warning: Reference `eqn:hookes_law' on page 1 undefined on input line 164
+.
+
+
+LaTeX Warning: Reference `eqn:newtons_2nd_law' on page 1 undefined on input lin
+e 165.
+
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `fig:spring_and_mass_system' on page 2 undefined on in
+put line 183.
+
+
+LaTeX Warning: Reference `eqn:d2xdt2' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Reference `fig:smh_displacement_function' on page 2 undefined on
+ input line 311.
+
+[2]
+
+LaTeX Warning: Reference `fig:spring_and_mass_system' on page 3 undefined on in
+put line 370.
+
+
+LaTeX Warning: Reference `eqn:d2xdt2' on page 3 undefined on input line 377.
+
+
+LaTeX Warning: Reference `eqn:d2xdt2' on page 3 undefined on input line 382.
+
+
+LaTeX Warning: Reference `eqn:d2xdt2' on page 3 undefined on input line 405.
+
+[3]
+
+LaTeX Warning: Citation `wiki:angular_frequency' on page 4 undefined on input l
+ine 429.
+
+
+LaTeX Warning: Reference `eqn:omega0' on page 4 undefined on input line 444.
+
+
+LaTeX Warning: Reference `eqn:omega1' on page 4 undefined on input line 444.
+
+
+LaTeX Warning: Citation `oscillations_and_waves' on page 4 undefined on input l
+ine 478.
+
+
+LaTeX Warning: Reference `eqn:omega0' on page 4 undefined on input line 514.
+
+
+Overfull \hbox (0.85712pt too wide) detected at line 535
+[]
+ []
+
+[4]
+
+LaTeX Warning: Citation `wiki:pendulum' on page 5 undefined on input line 551.
+
+
+LaTeX Warning: Citation `wiki:free_body_diagram' on page 5 undefined on input l
+ine 560.
+
+
+LaTeX Warning: Reference `fig:simple_pendulum' on page 5 undefined on input lin
+e 561.
+
+
+LaTeX Warning: Citation `quartz_crystal_clock' on page 5 undefined on input lin
+e 569.
+
+
+LaTeX Warning: Citation `wiki:huygens' on page 5 undefined on input line 571.
+
+
+LaTeX Warning: Citation `american_heritage_dictionary' on page 5 undefined on i
+nput line 580.
+
 [5] (./oscillators.bbl [6]) [7] (./oscillators.aux)
-Package rerunfilecheck Info: File `oscillators.out' has not changed.
-(rerunfilecheck)             Checksum: 610781EF69F4B32143A910F0670AB1BF;1653.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `oscillators.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `oscillators.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  610781EF69F4B32143A910F0670AB1BF;1653.
  ) 
 Here is how much of TeX's memory you used:
- 40521 strings out of 478994
- 947105 string characters out of 5858184
- 1447719 words of memory out of 5000000
- 57237 multiletter control sequences out of 15000+600000
+ 40510 strings out of 478994
+ 946973 string characters out of 5858184
+ 1446178 words of memory out of 5000000
+ 57226 multiletter control sequences out of 15000+600000
  419180 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,15n,131p,729b,2249s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1339,10 +1479,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on oscillators.pdf (7 pages, 265741 bytes).
+Output written on oscillators.pdf (7 pages, 264056 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
+ 200 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
