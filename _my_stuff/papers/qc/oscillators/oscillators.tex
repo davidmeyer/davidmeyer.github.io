@@ -106,8 +106,9 @@ expensive novelties to useful timekeepers.
 \bigskip
 \noindent
 These notes are organized (I hope) as follows: Section
-\ref{sec:hookes_law} looks at Hooke's Law in some detail. Section
-\ref{sec:other_smo} looks at the pendulum and RLC circuits as
+\ref{sec:hookes_law} looks at Hooke's Law in some detail. 
+Section \ref{subsec:simple_pendulum} considers the simple pendulum 
+and Section \ref{subsec:rlc_circuit} considers the RLC circuits as
 examples of other simple harmonic oscillators. Section
 \ref{sec:quantum_harmonic_oscillator} looks at the Quantum
 Harmonic Oscillator. Section \ref{sec:quantum_fields} outlines
@@ -540,9 +541,124 @@ So now we know that the oscillator has $E_{\text{total}} = 2
 f^2 A^2$. This result will become useful when we consider the
 quantum harmonic oscillator.
 
-
 \section{Other Simple Harmonic Oscillators}
-\label{sec:other_smo}
+\label{sec:smo}
+
+\subsection{The Simple Pendulum}
+\label{subsec:simple_pendulum}
+A pendulum is a weight (that is, a mass $m$ in a gravitational
+field) suspended from a pivot so that it can swing freely
+\cite{wiki:pendulum}.  When a pendulum is displaced sideways from
+its resting, equilibrium position, it is subject to a restoring
+force due to gravity that will accelerate it back toward the
+equilibrium position. When released, the restoring force acting
+on the pendulum's mass causes it to oscillate about the
+equilibrium position, swinging back and forth. The time for one
+complete cycle, a left swing and a right swing, is called the
+period ($T$). The period depends on the length of the pendulum and also
+to a slight degree on the amplitude ($A$), the width of the pendulum's
+swing. The free body diagram \cite{wiki:free_body_diagram} for the 
+simple pendulum is shown in Figure \ref{fig:simple_pendulum}.
+
+
+\bigskip
+\noindent
+From the first scientific investigations of the pendulum around
+1602 by Galileo Galilei, the regular motion of pendulums was used
+for timekeeping, and was the world's most accurate timekeeping
+technology until the 1930 \cite{quartz_crystal_clock}. The
+pendulum clock invented by Christiaan Huygens in 1658 became the
+world's standard timekeeper \cite{wiki:huygens}, used in homes
+and offices for 270 years, and achieved accuracy of about one
+second per year before it was superseded as a time standard by
+the quartz clock in the 1930s. Pendulums are also used in
+scientific instruments such as accelerometers and
+seismometers. Historically they were used as gravimeters to
+measure the acceleration of gravity in geo-physical surveys, and
+even as a standard of length. The word "pendulum" is new Latin,
+from the Latin \emph{pendulus} meaning 'hanging'
+\cite{american_heritage_dictionary}.
+
+
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \resizebox{0.45 \textwidth}{!} {																% resize figure if you want
+    \begin{tikzpicture}
+      \pgfmathsetmacro{\Gvec}{1.5}																% save length of g-vector and theta to macros
+      \pgfmathsetmacro{\myAngle}{30}
+      \pgfmathsetmacro{\Gcos}{\Gvec*cos(\myAngle)}												% calculate lengths of vector components
+      \pgfmathsetmacro{\Gsin}{\Gvec*sin(\myAngle)}
+%
+%	make some coordinates
+%
+      \coordinate (centro) at (0,0);
+      \draw[dashed] (0,0.5) -- ++(0,-3.5) node (mary) [black,below]{};
+      \fill (centro) circle (0.04);
+      \draw[thick] (centro) -- ++(270+\myAngle:3) coordinate (bob);
+      \path (1.00,-1.25) node[scale=0.50] {$L$}; 
+      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) 
+        node[left,midway,xshift=-0.75mm,scale=0.50] {$T$};
+%
+%	draw the angle
+%
+     \pic [draw, ->, "${\Scale[0.60]{\theta}}$", angle eccentricity=1.5] {angle = mary--centro--bob};
+%
+%	draw the rest of the pendulum (except draw the bob last)
+%
+     \draw [->] (bob) -- ($(bob)!-\Gcos cm!(centro)$)   coordinate (gcos); 
+     \draw [->] (bob) -- ($(bob)!\Gsin cm!90:(centro)$) coordinate (gsin);
+     \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec) coordinate (g)
+       node[below,brown,yshift=-1.0mm, scale=0.60] {${\bf F_{g}} = m {\bf g}$};
+     \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.5] {angle = g--bob--gcos};
+     \draw [densely dotted, thin, blue] (g) -- (gsin) 
+       node[midway, xshift=-0.15cm, rotate=-60, scale=0.50] {$\color{black}{mg \cos \theta}$};
+     \draw [densely dotted, thin, blue] (g) -- (gcos) 
+       node[midway,below, rotate=30, scale=0.50] {$\color{black}{mg \sin \theta}$};  
+%
+%	draw bob at origin and on the other side
+%
+     \draw[red,densely dotted] (bob) arc(-60:-120:3);
+     \coordinate (bob1) at ($(mary) + (0,{0.150/2})$);
+     \filldraw [very thin, fill=black!5,draw=black] (bob1) circle[radius=0.150];
+     \path (bob1) node[scale=0.50] {$m$};
+     \coordinate (bob2) at ($(bob) + (-3,{0.150/2})$);
+     \draw [dashed] (centro) -- (bob2);
+%
+%	draw the free body diagram at bob2 (or not)
+%
+%     \draw [thick,brown,-stealth] (bob2) -- ++(0,-\Gvec) coordinate (g2)
+%       node[below,brown,yshift=-1.0mm, scale=0.60] {${\bf F_{g}} = m {\bf g}$};
+%     \draw [->] (bob2) -- ($(bob2)!\Gsin cm!255:(centro)$) coordinate (gsin2);
+%     \draw [->] (bob2) -- ($(bob2)!-\Gcos cm!(centro)$)    coordinate (gcos2); 
+%     \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.3] {angle = g2--bob2--gsin2};
+%     \draw [densely dotted, thin, blue] (g2) -- (gsin2) 
+%       node[midway, xshift=0.15cm, rotate=60, scale=0.50] {$\color{black}{mg \sin \theta}$};
+%     \draw [densely dotted, thin, blue] (g2) -- (gcos2) 
+%       node[midway,xshift=-0.35mm, yshift=-0.125cm,rotate=-30, scale=0.50] {$\color{black}{mg \cos \theta}$};  
+%
+%
+%
+%	make sure bob and bob2 are on top, so draw last
+%
+
+     \filldraw [fill=black!15,draw=black] (bob) circle[radius=0.150];
+     \path (bob) node[scale=0.50] {${\bf m}$};
+     
+     \filldraw [very thin, fill=black!5,draw=black] (bob2) circle[radius=0.150];
+     \path (bob2) node[scale=0.50] {$m$};
+   \end{tikzpicture}
+  }																							% end \resizebox
+\caption{Free Body Diagram for a Simple Pendulum}
+\label{fig:simple_pendulum}
+\end{figure}
+
+
+
+
+\subsection{The RLC Circuit}
+\label{subsec:rlc_circuit}
 
 \section{The Quantum Harmonic Oscillator}
 \label{sec:quantum_harmonic_oscillator}
@@ -564,64 +680,6 @@ quantum harmonic oscillator.
 %	Holding for figures
 %
 \section*{Figures}
-
-
-
-\begin{figure}[H]
-  \centering
-  \resizebox{0.45 \textwidth}{!} {																% resize figure if you want
-    \begin{tikzpicture}
-      \pgfmathsetmacro{\Gvec}{1.5}																% save length of g-vector and theta to macros
-      \pgfmathsetmacro{\myAngle}{30}
-      \pgfmathsetmacro{\Gcos}{\Gvec*cos(\myAngle)}												% calculate lengths of vector components
-      \pgfmathsetmacro{\Gsin}{\Gvec*sin(\myAngle)}
-%
-%	make some coordinates
-%
-      \coordinate (centro) at (0,0);
-      \draw[dashed] (0,0.5) -- ++(0,-3.5) node (mary) [black,below]{};
-      \fill (centro) circle (0.04);
-      \draw[thick] (centro) -- ++(270+\myAngle:3) coordinate (bob);
-      \path (1.00,-1.25) node[scale=0.50] {$L$}; 
-      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) node[left,midway,xshift=-0.75mm,scale=0.50] {$T$};
-%
-%	draw the angle
-%
-     \pic [draw, ->, "${\Scale[0.60]{\theta}}$", angle eccentricity=1.5] {angle = mary--centro--bob};
-%
-%	draw the rest of the pendulum (except draw the bob last)
-%
-     \draw [->] (bob) -- ($(bob)!-\Gcos cm!(centro)$)   coordinate (gcos); 
-     \draw [->] (bob) -- ($(bob)!\Gsin cm!90:(centro)$) coordinate (gsin);
-     \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec) coordinate (g)
-       node[below,brown,yshift=-1.0mm, scale=0.60] {${\bf F_{g}} = m {\bf g}$};
-     \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.5] {angle = g--bob--gcos};
-     \draw [densely dotted, thin, blue] (g) -- (gsin) 
-       node[midway, xshift=-0.15cm, rotate=-60, scale=0.50] {$\color{black}{mg \cos \theta}$};
-     \draw [densely dotted, thin, blue] (g) -- (gcos) 
-       node[midway,below, rotate=30, scale=0.50] {$\color{black}{mg \sin \theta}$};  
-%
-%	draw bob at origin and on the other side
-%
-     \draw[densely dotted] (bob) arc(-60:-120:3);
-     \coordinate (bob1) at ($(mary) + (0,{0.150/2})$);
-     \filldraw [very thin, fill=black!5,draw=black] (bob1) circle[radius=0.150];
-     \path (bob1) node[scale=0.50] {$m$};
-     \coordinate (bob2) at ($(bob) + (-3,{0.150/2})$);
-     \draw [dashed] (centro) -- (bob2);
-     \filldraw [very thin, fill=black!5,draw=black] (bob2) circle[radius=0.150];
-     \path (bob2) node[scale=0.50] {$m$};
-%
-%	make sure bob at right position is on top, so draw last
-%
-     \filldraw [fill=black!20,draw=black] (bob) circle[radius=0.150];
-     \path (bob) node[scale=0.60] {${\bf m}$};
-   \end{tikzpicture}
-  }																							% end \resizebox
-\caption{Free Body Diagram for a Simple Pendulum}
-\label{fig:simple_pendulum}
-\end{figure}
-
 
 
 %

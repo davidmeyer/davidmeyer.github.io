@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{hooke_of_spring}
 Robert Hooke.
@@ -20,6 +20,12 @@ Robert Hooke.
   Oct 2012.
 \newblock [Online; accessed 10-December-2021].
 
+\bibitem{quartz_crystal_clock}
+{Warren A. Marrison}.
+\newblock {The Evolution of the Quartz Crystal Clock}.
+\newblock \url{http://www.ieee-uffc.org/main/history.asp?file=marrison}, 1948.
+\newblock [Online; accessed 15-December-2021].
+
 \bibitem{wiki:angular_frequency}
 {Wikipedia contributors}.
 \newblock {Angular Frequency --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -36,6 +42,14 @@ Robert Hooke.
   2021.
 \newblock [Online; accessed 27-September-2021].
 
+\bibitem{wiki:free_body_diagram}
+{Wikipedia contributors}.
+\newblock {Free Body Diagram --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Free_body_diagram&oldid=1058537164},
+  2021.
+\newblock [Online; accessed 15-December-2021].
+
 \bibitem{wiki:hookes_law}
 {Wikipedia contributors}.
 \newblock {Hooke's Law --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -51,5 +65,21 @@ Robert Hooke.
   \url{https://en.wikipedia.org/w/index.php?title=Newton%27s_laws_of_motion&oldid=1037183516},
   2021.
 \newblock [Online; accessed 25-August-2021].
+
+\bibitem{wiki:pendulum}
+{Wikipedia contributors}.
+\newblock {Pendulum --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Pendulum&oldid=1058923597},
+  2021.
+\newblock [Online; accessed 15-December-2021].
+
+\bibitem{american_heritage_dictionary}
+{William Morris}.
+\newblock {The American heritage dictionary of the English language}.
+\newblock
+  \url{https://archive.org/details/americanheritag00morr/page/969/mode/2up},
+  1980.
+\newblock [Online; accessed 15-December-2021].
 
 \end{thebibliography}
