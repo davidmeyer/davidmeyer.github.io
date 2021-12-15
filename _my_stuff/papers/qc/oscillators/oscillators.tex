@@ -350,8 +350,6 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
   \draw[thick,red] (1.71,4.50) -- (1.71,5.00); 
   \draw[thick,red] ({2*1.71},4.50) -- ({2*1.71},5.00); 
   \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75) coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
-%  \path (6.00,6.25) node[font=\footnotesize,draw,rectangle] {$\; \omega = \dfrac{2 \pi}{T} = 2 \pi f \;$}; 
-%  \path (6.00,5.45) node[font=\footnotesize,draw,rectangle] {$\; x(t) = A \cos (2 \pi f t) \;$}; 
   \draw[draw=none] (0.00,0.05) -- ({4*1.71},0.05) 
   				coordinate [label={[draw,blue,thick,rectangle,font=\footnotesize,midway] {\color{black}{$\; x(t) = A \cos (\omega t) \; $}}}];
  \end{tikzpicture}
@@ -605,7 +603,7 @@ quantum harmonic oscillator.
 %
 %	draw bob at origin and on the other side
 %
-     \draw[dashed] (bob) arc(-60:-120:3);
+     \draw[densely dotted] (bob) arc(-60:-120:3);
      \coordinate (bob1) at ($(mary) + (0,{0.150/2})$);
      \filldraw [densely dotted, fill=black!10,draw=black] (bob1) circle[radius=0.150];
      \path (bob1) node[scale=0.50] {$m$};
