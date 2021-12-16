@@ -23,6 +23,7 @@
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}													% get \mathbold
+\usepackage{gensymb}													% get \degree
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{url}
@@ -587,7 +588,7 @@ from the Latin \emph{pendulus} meaning 'hanging'
 \begin{figure}[H]
   \centering
   \resizebox{0.45 \textwidth}{!} {																	% resize figure if you want
-    \begin{tikzpicture}
+    \begin{tikzpicture} [framed]
       \pgfmathsetmacro{\Gvec}{1.5}																	% save length of g-vector and theta to macros
       \pgfmathsetmacro{\myAngle}{30}
       \pgfmathsetmacro{\Gcos}{\Gvec*cos(\myAngle)}													% calculate lengths of vector components
@@ -744,10 +745,15 @@ that
 \begin{array}{llll}
 \tau 
 &=& I \alpha											&\qquad \qquad \mathrel{\#} \text{definition of torque $\tau$} \\
+[5pt]
 &=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:moi}} \\
+[5pt]
 &\Rightarrow& -FL = mL^2 \alpha							&\qquad \qquad \mathrel{\#} \tau = FL \\
+[5pt]
 &\Rightarrow& -L \, mg \sin \,\theta = mL^2 \alpha		&\qquad \qquad \mathrel{\#} F = mg \,\sin \, \theta \\
+[5pt]
 &\Rightarrow& - \, g \sin \,\theta = L \alpha			&\qquad \qquad \mathrel{\#} \text{cancel $L$} \\
+[5pt]
 &\Rightarrow& \alpha = - \dfrac{g}{L} \sin \,\theta		&\qquad \qquad \mathrel{\#} \text{solve for $\alpha$} \\
 \end{array}
 \end{equation*}
@@ -778,9 +784,9 @@ together we see that
 \begin{equation*}
 \begin{array}{llll}
 \alpha
-&=& - \dfrac{g}{L} \, \sin \,\theta										&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:alpha}} \\
+&=& - \dfrac{g}{L} \, \sin \,\theta					&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:alpha}} \\
 [12pt]
-&=& - \omega^2 \, \sin \,\theta											&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
+&=& - \omega^2 \, \sin \,\theta						&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
 [12pt]
 &\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta	&\qquad \qquad \mathrel{\#} \alpha = \dfrac{d^2 \theta}{dt^2} \\
 \end{array}
@@ -792,8 +798,144 @@ Now we know that
 
 \begin{equation}
 \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta
-\label{d2_theta}
+\label{eqn:d2_theta}
 \end{equation}
+
+\bigskip
+\noindent
+But here's an interesting problem. Unlike the second order differential equation of motion 
+for the Hooke's Law spring and mass problem (Equation \ref{eqn:d2xdt2}), 
+we can't solve the second order differential equation of motion for the simple pendulum
+case (Equation \ref{eqn:d2_theta}). However, maybe we can solve a different but related
+problem which I'll call the "Small Angle Pendulum Problem".
+
+\subsubsection{The Small Angle Pendulum Problem}
+Interestingly, it turns out that for small $\theta$ 
+(say, $\theta \leq 10\degree$) we see that
+$\sin \theta \approx \theta$. Said another way
+
+\bigskip
+\begin{equation*}
+\lim_{x \to 0} \dfrac{\sin x}{x} = 1
+\end{equation*}
+
+\bigskip
+\noindent
+Using this constraint and Equation \ref{eqn:d2_theta}
+we can write 
+
+\bigskip
+\begin{equation}
+\dfrac{d^2 \theta}{dt^2} \approx - \omega^2 \theta
+\label{eqn:d2_small_angle}
+\end{equation}
+
+\bigskip
+{\setstretch{1.5}
+\noindent
+This is a much simpler differential equation, 
+which we know how to solve. In order to solve this differential equation, 
+we first notice that that the second derivative $\dfrac{d^2 \theta}{dt^2}$
+is the function itself scaled by the constant $\omega^2$. 
+This form is known as a second order linear homogeneous
+differential equation \cite{tseng_second_order} and we can guess
+the function that exhibits this behavior. It's the exponential 
+function:
+\par}
+
+\bigskip
+\begin{equation*}
+\dfrac{d}{dx} e^x = e^x
+\end{equation*}
+
+\bigskip
+\noindent
+So if we set $\theta = e^{i\omega t}$
+and recalling that 
+$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$
+we can see that
+
+
+\bigskip
+\begin{equation*}
+\begin{array}{llll}
+\theta &=& e^{i\omega t}						&\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
+[10pt]
+\dfrac{d \theta}{dt} &=& iwe^{i\omega t}		&\qquad \qquad \mathrel{\#} \text{$\theta = e^{i\omega t}$ and $\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =iwt$} \\
+[10pt]
+\dfrac{d^2 \theta}{dt^2} 
+&=& \dfrac{d}{dt} \left ( iwe^{i\omega t} \right )	&\qquad \qquad \mathrel{\#} \text{second derivative is the derivative of the first derivative} \\
+[10pt]
+&=& i^2 \omega^2 e^{i\omega t}						&\qquad \qquad \mathrel{\#} \text{second derivative} \\
+[10pt]
+&=& - \omega^2 e^{i\omega t}						&\qquad \qquad \mathrel{\#} i^2 = -1 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So nowe we know that $\theta_1 = C_1 e^{iwt}$ is a solution to
+the second order differential equation Equation \ref{eqn:d2_small_angle},
+where $C_1 \in \mathbb{C}$. Notice also that $\theta_2 = C_2
+e^{-iwt}$ is also a solution, where $C_2 \in \mathbb{C}$. Here
+the constant coefficients $C_1$ and $C_2$ are preserved through
+differentiation and are essentially the integration constants.
+These constants represent the infinite number of solutions to the
+differential equation Equation \ref{eqn:d2_small_angle}, where are
+determined by the initial characteristics of the pendulum. The
+sum of these solutions is a more general solution, since either
+of the two constants be be set to $\theta$ to obtain the original
+solutions:
+
+
+\begin{equation}
+\theta = C_1 e^{iwt} + C_2 e^{-iwt}
+\label{eqn:theta_sum}
+\end{equation}
+
+\bigskip
+\noindent
+Taking the derivative of Equation \ref{eqn:theta_sum} we get
+
+\bigskip
+\begin{equation}
+\dfrac{d \theta}{dt} = C_1 iw e^{iwt} - C_2 iw e^{-iwt}
+\label{eqn:dtheta_dt}
+\end{equation}
+
+\bigskip
+\noindent
+Taking the derivative one more time we see that  
+
+\bigskip
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{d^2 \theta}{dt^2} 
+&=& \dfrac{d}{dt} \Big [ C_1 iw e^{iwt} - C_2 iw e^{-iwt} \Big ]		
+		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:dtheta_dt}} \\
+[10pt]
+&=& C_1 i \omega e^{iwt} (iw) - C_2 i \omega  e^{-iwt} (-iw)
+		&\qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =iwt$ and $i^2 = -1$} \\
+[10pt]
+&=& i^2 C_1 \omega^2 e^{iwt} + i^2 C_2 \omega^2 e^{-iwt}
+		&\qquad \qquad \mathrel{\#} \text{collect terms} \\
+[10pt]
+&=& - C_1 \omega^2 e^{iwt} - C_2 \omega^2 e^{-iwt}
+		&\qquad \qquad \mathrel{\#} i^2 = -1 \\
+[10pt]
+&=& - \omega^2 (C_1 e^{iwt} + C_2 e^{-iwt}) 
+		&\qquad \qquad \mathrel{\#} \text{factor out $- \omega^2$} \\
+[10pt]
+&=& - \omega^2 \theta
+		&\qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{iwt} + C_2 e^{-iwt}$ (Equation \ref{eqn:theta_sum})}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+This result tells us that Equation \ref{eqn:d2_small_angle} encompasses all 
+of the possible solutions to the small angle pendulum problem.
+
 
 \subsection{The RLC Circuit}
 \label{subsec:rlc_circuit}
