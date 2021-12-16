@@ -918,7 +918,7 @@ Taking the derivative one more time we see that
 		&\qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =iwt$ and $i^2 = -1$} \\
 [10pt]
 &=& i^2 C_1 \omega^2 e^{iwt} + i^2 C_2 \omega^2 e^{-iwt}
-		&\qquad \qquad \mathrel{\#} \text{collect terms} \\
+		&\qquad \qquad \mathrel{\#} \text{$(-1) * (-1)  = + 1$, collect terms} \\
 [10pt]
 &=& - C_1 \omega^2 e^{iwt} - C_2 \omega^2 e^{-iwt}
 		&\qquad \qquad \mathrel{\#} i^2 = -1 \\
@@ -927,7 +927,11 @@ Taking the derivative one more time we see that
 		&\qquad \qquad \mathrel{\#} \text{factor out $- \omega^2$} \\
 [10pt]
 &=& - \omega^2 \theta
-		&\qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{iwt} + C_2 e^{-iwt}$ (Equation \ref{eqn:theta_sum})}
+		&\qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{iwt} + C_2 e^{-iwt}$ (Equation \ref{eqn:theta_sum})} \\
+[10pt]
+&\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \theta 
+		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2_small_angle}}
+
 \end{array}
 \end{equation*}
 
