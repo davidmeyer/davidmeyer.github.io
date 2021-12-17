@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  16 DEC 2021 13:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  16 DEC 2021 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1400,8 +1400,8 @@ ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on oscillators.pdf (9 pages, 298483 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
+ 352 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
  56 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

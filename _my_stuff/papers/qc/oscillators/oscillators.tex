@@ -587,7 +587,7 @@ from the Latin \emph{pendulus} meaning 'hanging'
 \bigskip
 \begin{figure}[H]
   \centering
-  \resizebox{0.45 \textwidth}{!} {																	% resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {																	% resize figure if you want
     \begin{tikzpicture} [framed]
       \pgfmathsetmacro{\Gvec}{1.5}																	% save length of g-vector and theta to macros
       \pgfmathsetmacro{\myAngle}{30}
@@ -701,7 +701,7 @@ torque. Angular acceleration is simply the change in velocity of
 the angle $\theta$ of the pendulum and is typically
 denoted\footnote{Here again $\theta$ and $\theta(t)$ are used
 interchangeably.} by either $\ddot{\theta}(t)$ or
-$\dfrac{d^2 \, \theta(t)}{dt^2}$. \
+$\dfrac{d^2 \theta}{dt^2}$. \
 
 \bigskip
 \noindent
@@ -724,12 +724,11 @@ scale factor $\sin \theta$.
 \bigskip
 \noindent
 Looking at the right hand side of Equation \ref{eqn:tau} we see
-we need to defined $I$, the moment of inertia of the pendulum.
-The moment of inertia is found in any given object by $I =\sum
-mr^2$ where the sum is over each point in the object.  Since the
-mass in our pendulum is concentrated in a single point at the
-bob, and so the sum is over a single term: this point.
-Therefore,
+we need to define $I$, the moment of inertia of the pendulum.
+In general the moment of inertia is found for any given object 
+by $I =\sum mr^2$, where the sum is over each point in the object.
+Since the mass in our pendulum is concentrated in a single point 
+at the bob, the sum is over a single term, the bob. Therefore
 
 \begin{equation}
 I = mL^2
@@ -744,13 +743,13 @@ that
 \begin{equation*}
 \begin{array}{llll}
 \tau 
-&=& I \alpha											&\qquad \qquad \mathrel{\#} \text{definition of torque $\tau$} \\
+&=& I \alpha											&\qquad \qquad \mathrel{\#} \text{definition of torque $\tau$ (Equation \ref{eqn:tau})} \\
 [5pt]
-&=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:moi}} \\
+&=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{definition of moment of inertia $I$ (Equation \ref{eqn:moi})} \\
 [5pt]
-&\Rightarrow& -FL = mL^2 \alpha							&\qquad \qquad \mathrel{\#} \tau = FL \\
+&\Rightarrow& -\text{F}L = mL^2 \alpha					&\qquad \qquad \mathrel{\#} \tau = \text{F}L \\
 [5pt]
-&\Rightarrow& -L \, mg \sin \,\theta = mL^2 \alpha		&\qquad \qquad \mathrel{\#} F = mg \,\sin \, \theta \\
+&\Rightarrow& -L \, mg \sin \,\theta = mL^2 \alpha		&\qquad \qquad \mathrel{\#} \text{F} = mg \,\sin \, \theta \\
 [5pt]
 &\Rightarrow& - \, g \sin \,\theta = L \alpha			&\qquad \qquad \mathrel{\#} \text{cancel $L$} \\
 [5pt]
@@ -776,9 +775,9 @@ So now we know that
 
 \bigskip
 \noindent
-Now, let $\omega = \sqrt{\dfrac{g}{L}}$. We also know that 
-$\alpha = \dfrac{d^2 \theta}{dt^2}$. If we put this all
-together we see that 
+Now, if we let $\omega = \sqrt{\dfrac{g}{L}}$, and
+recall that  $\alpha = \dfrac{d^2 \theta}{dt^2}$, 
+we see that 
 
 \bigskip
 \begin{equation*}
