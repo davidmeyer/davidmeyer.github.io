@@ -24,6 +24,7 @@
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}													% get \mathbold
 \usepackage{gensymb}													% get \degree
+\usepackage{circuitikz}													% draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{url}
@@ -1009,6 +1010,26 @@ TBD
 
 \subsection{The RLC Circuit}
 \label{subsec:rlc_circuit}
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \resizebox{0.60 \textwidth}{!} {															% resize figure if you want
+  \begin{circuitikz}[framed,line width=0.75pt]
+       \draw[step=0.5,thin, black!30] (-1.50,-0.5) grid (7.50,3.0);
+       \path (0,0) coordinate (ref_gnd);
+       \draw (ref_gnd) -- (ref_gnd) to [american voltage source=\(V\)] ++(0,2)
+            to [R=\(R\)] ++(3,0) 
+            to [L=\(L\)] ++(3,0) 
+            to [C=\(C\)] ++(0,-2)
+            to []  (ref_gnd);
+    \end{circuitikz}
+  }																							% end \resizebox
+\caption{Simple RLC Circuit}
+\label{fig:simple_rlc_circuit}
+\end{figure}
+
+
 
 \section{The Quantum Harmonic Oscillator}
 \label{sec:quantum_harmonic_oscillator}

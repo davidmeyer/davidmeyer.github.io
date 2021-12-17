@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 DEC 2021 09:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 DEC 2021 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -935,6 +935,75 @@ LaTeX Font Info:    Redeclaring math symbol \varsigma on input line 66.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2021/03/14{} The CircuiTikz circuit drawing package version
+ 1.3.2
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowinset=\dimen304
+\pgfarrowlength=\dimen305
+\pgfarrowwidth=\dimen306
+\pgfarrowlinewidth=\dimen307
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.co
+de.tex
+File: pgfmodulebending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineart
+ransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgftransformnonlinearflatness=\dimen308
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvili
+near.code.tex
+File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@curvilinear@time@a=\dimen309
+\pgf@curvilinear@length@a=\dimen310
+\pgf@curvilinear@length@b=\dimen311
+\pgf@curvilinear@length@c=\dimen312
+\pgf@curvilinear@length@d=\dimen313
+)
+\pgf@arrows@the@rigidity=\dimen314
+))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count306
+\pgf@circ@count@b=\count307
+\pgf@circ@count@c=\count308
+\pgf@circ@res@up=\dimen315
+\pgf@circ@res@down=\dimen316
+\pgf@circ@res@zero=\dimen317
+\pgf@circ@res@left=\dimen318
+\pgf@circ@res@right=\dimen319
+\pgf@circ@res@other=\dimen320
+\pgf@circ@res@step=\dimen321
+\pgf@circ@res@temp=\dimen322
+\pgf@circ@Rlen=\dimen323
+\pgf@circ@scaled@Rlen=\dimen324
+\pgfstartlinewidth=\dimen325
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count309
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.te
+x) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen326
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
@@ -977,9 +1046,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen304
-\Hy@linkcounter=\count306
-\Hy@pagecounter=\count307
+\@linkdim=\dimen327
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
@@ -995,7 +1064,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count308
+\Hy@SavedSpaceFactor=\count312
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
@@ -1009,9 +1078,9 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count309
+\c@Hy@tempcnt=\count313
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen305
+\XeTeXLinkMargin=\dimen328
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1020,9 +1089,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count310
-\Field@Width=\dimen306
-\Fld@charsize=\dimen307
+\Fld@menulength=\count314
+\Field@Width=\dimen329
+\Fld@charsize=\dimen330
 Package hyperref Info: Hyper figures OFF on input line 6075.
 Package hyperref Info: Link nesting OFF on input line 6080.
 Package hyperref Info: Hyper index ON on input line 6083.
@@ -1038,9 +1107,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count311
-\c@Item=\count312
-\c@Hfootnote=\count313
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1052,8 +1121,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count314
-\c@bookmark@seq@number=\count315
+\Fld@listcount=\count318
+\c@bookmark@seq@number=\count319
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -1073,29 +1142,29 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen308
-\captionmargin@=\dimen309
-\captionwidth=\dimen310
-\caption@tempdima=\dimen311
-\caption@indent=\dimen312
-\caption@parindent=\dimen313
-\caption@hangindent=\dimen314
+\captionmargin=\dimen331
+\captionmargin@=\dimen332
+\captionwidth=\dimen333
+\caption@tempdima=\dimen334
+\caption@indent=\dimen335
+\caption@parindent=\dimen336
+\caption@hangindent=\dimen337
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count316
-\c@continuedfloat=\count317
+\c@caption@flags=\count320
+\c@continuedfloat=\count321
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count318
-\c@subtable=\count319
+\c@subfigure=\count322
+\c@subtable=\count323
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip60
 \@affilsep=\skip61
-\c@Maxaffil=\count320
-\c@authors=\count321
-\c@affil=\count322
+\c@Maxaffil=\count324
+\c@authors=\count325
+\c@affil=\count326
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
@@ -1110,14 +1179,14 @@ Package: babel 2021/03/24 3.56 The Babel package
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2021/03/24 3.56 Babel common definitions
-\babel@savecnt=\count323
-\U@D=\dimen315
+\babel@savecnt=\count327
+\U@D=\dimen338
 \l@babelnohyphens=\language87
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
 )
-\bbl@dirlevel=\count324
+\bbl@dirlevel=\count328
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
@@ -1130,7 +1199,7 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count325
+\c@float@type=\count329
 \float@exts=\toks49
 \float@box=\box86
 \@float@everytoks=\toks50
@@ -1143,7 +1212,7 @@ Package: expl3 2021-02-18 L3 programming layer (loader)
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count326
+\l__color_backend_stack_int=\count330
 \l__pdf_internal_box=\box88
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
@@ -1154,9 +1223,9 @@ tex)))
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
  (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen316
+\col@sep=\dimen339
 \ar@mcellbox=\box89
-\extrarowheight=\dimen317
+\extrarowheight=\dimen340
 \NC@list=\toks51
 \extratabsurround=\skip62
 \backup@length=\skip63
@@ -1166,39 +1235,39 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box91
-\l__siunitx_tmp_dim=\dimen318
-\l__siunitx_tmp_int=\count327
-\l__siunitx_number_mantissa_length_int=\count328
-\l__siunitx_number_uncert_length_int=\count329
-\l__siunitx_round_int=\count330
-\l__siunitx_process_decimal_int=\count331
-\l__siunitx_process_uncertainty_int=\count332
-\l__siunitx_process_fixed_int=\count333
-\l__siunitx_process_integer_min_int=\count334
-\l__siunitx_process_precision_int=\count335
-\l__siunitx_group_min_int=\count336
+\l__siunitx_tmp_dim=\dimen341
+\l__siunitx_tmp_int=\count331
+\l__siunitx_number_mantissa_length_int=\count332
+\l__siunitx_number_uncert_length_int=\count333
+\l__siunitx_round_int=\count334
+\l__siunitx_process_decimal_int=\count335
+\l__siunitx_process_uncertainty_int=\count336
+\l__siunitx_process_fixed_int=\count337
+\l__siunitx_process_integer_min_int=\count338
+\l__siunitx_process_precision_int=\count339
+\l__siunitx_group_min_int=\count340
 \l__siunitx_angle_marker_box=\box92
 \l__siunitx_angle_unit_box=\box93
-\l__siunitx_angle_marker_dim=\dimen319
-\l__siunitx_angle_unit_dim=\dimen320
-\l__siunitx_unit_int=\count337
-\l__siunitx_unit_denominator_int=\count338
-\l__siunitx_unit_numerator_int=\count339
-\l__siunitx_unit_prefix_int=\count340
-\l__siunitx_unit_prefix_base_int=\count341
-\l__siunitx_unit_prefix_gram_int=\count342
-\l__siunitx_number_product_int=\count343
+\l__siunitx_angle_marker_dim=\dimen342
+\l__siunitx_angle_unit_dim=\dimen343
+\l__siunitx_unit_int=\count341
+\l__siunitx_unit_denominator_int=\count342
+\l__siunitx_unit_numerator_int=\count343
+\l__siunitx_unit_prefix_int=\count344
+\l__siunitx_unit_prefix_base_int=\count345
+\l__siunitx_unit_prefix_gram_int=\count346
+\l__siunitx_number_product_int=\count347
 \c__siunitx_one_fill_skip=\skip64
 \l__siunitx_table_unit_align_skip=\skip65
-\l__siunitx_table_exponent_dim=\dimen321
-\l__siunitx_table_integer_dim=\dimen322
-\l__siunitx_table_mantissa_dim=\dimen323
-\l__siunitx_table_marker_dim=\dimen324
-\l__siunitx_table_result_dim=\dimen325
-\l__siunitx_table_uncert_dim=\dimen326
-\l__siunitx_table_fill_pre_dim=\dimen327
-\l__siunitx_table_fill_post_dim=\dimen328
-\l__siunitx_table_fill_mid_dim=\dimen329
+\l__siunitx_table_exponent_dim=\dimen344
+\l__siunitx_table_integer_dim=\dimen345
+\l__siunitx_table_mantissa_dim=\dimen346
+\l__siunitx_table_marker_dim=\dimen347
+\l__siunitx_table_result_dim=\dimen348
+\l__siunitx_table_uncert_dim=\dimen349
+\l__siunitx_table_fill_pre_dim=\dimen350
+\l__siunitx_table_fill_post_dim=\dimen351
+\l__siunitx_table_fill_mid_dim=\dimen352
 \l__siunitx_table_pre_box=\box94
 \l__siunitx_table_post_box=\box95
 \l__siunitx_table_mantissa_box=\box96
@@ -1211,33 +1280,33 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 (/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\c@thm=\count344
-\c@definition=\count345
-\c@proposition=\count346
-\c@lemma=\count347
-\c@example=\count348
+\c@thm=\count348
+\c@definition=\count349
+\c@proposition=\count350
+\c@lemma=\count351
+\c@example=\count352
 
 (./oscillators.aux)
 \openout1 = `oscillators.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1275,16 +1344,16 @@ LaTeX Font Info:    ... okay on input line 83.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count349
-\scratchdimen=\dimen330
+\scratchcounter=\count353
+\scratchdimen=\dimen353
 \scratchbox=\box98
-\nofMPsegments=\count350
-\nofMParguments=\count351
+\nofMPsegments=\count354
+\nofMParguments=\count355
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count352
-\MPscratchDim=\dimen331
-\MPnumerator=\count353
-\makeMPintoPDFobject=\count354
+\MPscratchCnt=\count356
+\MPscratchDim=\dimen354
+\MPnumerator=\count357
+\makeMPintoPDFobject=\count358
 \everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1298,18 +1367,18 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-LaTeX Info: Redefining \celsius on input line 83.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 83.
+LaTeX Info: Redefining \celsius on input line 84.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 84.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 83.
-Package gensymb Info: Using \upOmega for \ohm on input line 83.
+LaTeX Info: Redefining \ohm on input line 84.
+Package gensymb Info: Using \upOmega for \ohm on input line 84.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 83.
+Package hyperref Info: Link coloring OFF on input line 84.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1320,11 +1389,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count355
+\c@section@level=\count359
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
  (./oscillators.out) (./oscillators.out)
 \@outlinefile=\write4
 \openout4 = `oscillators.out'.
@@ -1340,19 +1409,19 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 83
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 84
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -1362,7 +1431,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
 [5] [6] [7]
-Overfull \hbox (16.58653pt too wide) detected at line 972
+Overfull \hbox (16.58653pt too wide) detected at line 973
 []
  []
 
@@ -1371,13 +1440,13 @@ Package rerunfilecheck Info: File `oscillators.out' has not changed.
 (rerunfilecheck)             Checksum: 36E4B8323A2F23FAD77AEE6BB8A1CDDC;2380.
  ) 
 Here is how much of TeX's memory you used:
- 40626 strings out of 478994
- 948792 string characters out of 5858184
- 1451799 words of memory out of 5000000
- 57310 multiletter control sequences out of 15000+600000
+ 53894 strings out of 478994
+ 1355616 string characters out of 5858184
+ 2061489 words of memory out of 5000000
+ 70517 multiletter control sequences out of 15000+600000
  421010 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,15n,131p,729b,2249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,15n,131p,729b,2252s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></
@@ -1403,10 +1472,10 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (10 pages, 302609 bytes).
+Output written on oscillators.pdf (10 pages, 304660 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 62 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
