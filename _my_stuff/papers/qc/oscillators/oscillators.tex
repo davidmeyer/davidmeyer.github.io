@@ -802,16 +802,18 @@ Now we know that
 
 \bigskip
 \noindent
-But here's an interesting problem. Unlike the second order differential equation of motion 
-for the Hooke's Law spring and mass problem (Equation \ref{eqn:d2xdt2}), 
-we can't solve the second order differential equation of motion for the simple pendulum
-case (Equation \ref{eqn:d2_theta}). However, maybe we can solve a different but related
-problem which I'll call the "Small Angle Pendulum Problem".
+But here's an interesting problem. Unlike the second order
+differential equation of motion for the Hooke's Law spring and
+mass problem (Equation \ref{eqn:d2xdt2}), we can't solve the
+second order differential equation of motion for the simple
+pendulum case (Equation \ref{eqn:d2_theta}). However, maybe we
+can solve a different but related problem which I'll call the
+"Small Angle Pendulum Problem".
 
 \subsubsection{The Small Angle Pendulum Problem}
-Interestingly, it turns out that for small $\theta$ 
-(say, $\theta \leq 10\degree$) we see that
-$\sin \theta \approx \theta$. Said another way
+Interestingly, it turns out that for small $\theta$ (say, $\theta
+\leq 10\degree$) we see that $\sin \theta \approx \theta$. Said
+another way
 
 \bigskip
 \begin{equation*}
@@ -832,15 +834,13 @@ we can write
 \bigskip
 {\setstretch{1.5}
 \noindent
-This is a much simpler differential equation, 
-which we know how to solve. In order to solve this differential equation, 
-we first notice that that the second derivative $\dfrac{d^2 \theta}{dt^2}$
-is the function itself scaled by the constant $\omega^2$. 
-This form is known as a second order linear homogeneous
-differential equation \cite{tseng_second_order} and we can guess
-the function that exhibits this behavior. It's the exponential 
-function:
-\par}
+This is a much simpler differential equation, which we know how
+to solve. In order to solve this differential equation, we first
+notice that that the second derivative $\dfrac{d^2 \theta}{dt^2}$
+is the function itself scaled by the constant $- \omega^2$.  This
+form is known as a second order linear homogeneous differential
+equation \cite{tseng_second_order} and we can guess the function
+that exhibits this behavior. It's the exponential function: \par}
 
 \bigskip
 \begin{equation*}
@@ -858,37 +858,42 @@ we can see that
 \bigskip
 \begin{equation*}
 \begin{array}{llll}
-\theta &=& e^{i\omega t}						&\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
-[10pt]
-\dfrac{d \theta}{dt} &=& iwe^{i\omega t}		&\qquad \qquad \mathrel{\#} \text{$\theta = e^{i\omega t}$ and $\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =iwt$} \\
-[10pt]
+\theta &=& e^{i\omega t}						
+					&\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
+[12pt]
+\dfrac{d \theta}{dt} &=& i \omega e^{i\omega t}		
+					&\qquad \qquad \mathrel{\#} \text{$\theta = e^{i\omega t}$ and $\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$} \\
+[12pt]
 \dfrac{d^2 \theta}{dt^2} 
-&=& \dfrac{d}{dt} \left ( iwe^{i\omega t} \right )	&\qquad \qquad \mathrel{\#} \text{second derivative is the derivative of the first derivative} \\
-[10pt]
-&=& i^2 \omega^2 e^{i\omega t}						&\qquad \qquad \mathrel{\#} \text{second derivative} \\
-[10pt]
-&=& - \omega^2 e^{i\omega t}						&\qquad \qquad \mathrel{\#} i^2 = -1 
+&=& \dfrac{d}{dt} \Big [ i \omega e^{i\omega t} \Big ]	
+					&\qquad \qquad \mathrel{\#} \text{second derivative is the derivative of the first derivative} \\
+[12pt]
+&=& i^2 \omega^2 e^{i\omega t}						
+					&\qquad \qquad \mathrel{\#} \text{second derivative} \\
+[12pt]
+&=& - \omega^2 e^{i\omega t}						
+					&\qquad \qquad \mathrel{\#} i^2 = -1 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So nowe we know that $\theta_1 = C_1 e^{iwt}$ is a solution to
-the second order differential equation Equation \ref{eqn:d2_small_angle},
-where $C_1 \in \mathbb{C}$. Notice also that $\theta_2 = C_2
-e^{-iwt}$ is also a solution, where $C_2 \in \mathbb{C}$. Here
-the constant coefficients $C_1$ and $C_2$ are preserved through
+So nowe we know that $\theta_1 = C_1 e^{i \omega t}$ is a
+solution to Equation \ref{eqn:d2_small_angle}, where $C_1 \in
+\mathbb{C}$. Notice also that $\theta_2 = C_2 e^{-i \omega t}$ is
+also a solution with $C_2 \in \mathbb{C}$. Here the (constant)
+coefficients $C_1$ and $C_2$ are preserved through
 differentiation and are essentially the integration constants.
 These constants represent the infinite number of solutions to the
-differential equation Equation \ref{eqn:d2_small_angle}, where are
-determined by the initial characteristics of the pendulum. The
-sum of these solutions is a more general solution, since either
-of the two constants be be set to $\theta$ to obtain the original
-solutions:
+differential equation Equation \ref{eqn:d2_small_angle}, where
+are determined by the initial characteristics of the
+pendulum. The sum of these solutions is a more general solution,
+since either of the two constants be be set to $\theta$ to obtain
+the original solutions:
 
 
 \begin{equation}
-\theta = C_1 e^{iwt} + C_2 e^{-iwt}
+\theta = C_1 e^{i \omega t} + C_2 e^{-i \omega t}
 \label{eqn:theta_sum}
 \end{equation}
 
@@ -898,7 +903,7 @@ Taking the derivative of Equation \ref{eqn:theta_sum} we get
 
 \bigskip
 \begin{equation}
-\dfrac{d \theta}{dt} = C_1 iw e^{iwt} - C_2 iw e^{-iwt}
+\dfrac{d \theta}{dt} = C_1 i \omega e^{i \omega t} - C_2 i \omega e^{-i \omega t}
 \label{eqn:dtheta_dt}
 \end{equation}
 
@@ -910,23 +915,23 @@ Taking the derivative one more time we see that
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{d^2 \theta}{dt^2} 
-&=& \dfrac{d}{dt} \Big [ C_1 iw e^{iwt} - C_2 iw e^{-iwt} \Big ]		
+&=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} - C_2 i \omega e^{-i \omega t} \Big ]		
 		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:dtheta_dt}} \\
 [10pt]
-&=& C_1 i \omega e^{iwt} (iw) - C_2 i \omega  e^{-iwt} (-iw)
-		&\qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =iwt$ and $i^2 = -1$} \\
+&=& C_1 i \omega e^{i \omega t} (i \omega) - C_2 i \omega  e^{-i \omega t} (-i \omega)
+		&\qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$ and $i^2 = -1$} \\
 [10pt]
-&=& i^2 C_1 \omega^2 e^{iwt} + i^2 C_2 \omega^2 e^{-iwt}
+&=& i^2 C_1 \omega^2 e^{i \omega t} + i^2 C_2 \omega^2 e^{-i \omega t}
 		&\qquad \qquad \mathrel{\#} \text{$(-1) * (-1)  = + 1$, collect terms} \\
 [10pt]
-&=& - C_1 \omega^2 e^{iwt} - C_2 \omega^2 e^{-iwt}
+&=& - C_1 \omega^2 e^{i \omega t} - C_2 \omega^2 e^{-i \omega t}
 		&\qquad \qquad \mathrel{\#} i^2 = -1 \\
 [10pt]
-&=& - \omega^2 (C_1 e^{iwt} + C_2 e^{-iwt}) 
+&=& - \omega^2 (C_1 e^{i \omega t} + C_2 e^{-i \omega t}) 
 		&\qquad \qquad \mathrel{\#} \text{factor out $- \omega^2$} \\
 [10pt]
 &=& - \omega^2 \theta
-		&\qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{iwt} + C_2 e^{-iwt}$ (Equation \ref{eqn:theta_sum})} \\
+		&\qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{i \omega t} + C_2 e^{-i \omega t}$ (Equation \ref{eqn:theta_sum})} \\
 [10pt]
 &\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \theta 
 		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2_small_angle}}
@@ -936,8 +941,73 @@ Taking the derivative one more time we see that
 
 \bigskip
 \noindent
-This result tells us that Equation \ref{eqn:d2_small_angle} encompasses all 
-of the possible solutions to the small angle pendulum problem.
+This result tells us that Equation \ref{eqn:d2_small_angle}
+encompasses all of the possible solutions to the small-angle
+pendulum problem. All good, but one question we might ask is what
+happens when we apply Euler's formula \cite{notes:eulers_formula}
+to Equation \ref{eqn:theta_sum}? Recall that Euler's Formula
+states that $e^{ix} = \cos x + i \sin x$ so we see that
+
+\begin{equation*}
+\begin{array}{llll}
+\theta 
+&=& C_1 e^{i\omega t} + C_2 e^{-i\omega t}
+		&\qquad \mathrel{\#} \text{Equation \ref{eqn:theta_sum}}	\\	
+[10pt]
+&=& C_1 \cos ( \omega t) + C_1 i \sin (\omega t) + C_2 e^{-i \omega t}	
+		&\qquad \mathrel{\#} C_1 e^{i \omega t} = C_1 \cos (\omega t) + C_1 i \sin (\omega t) \\
+[10pt]	
+&=& C_1 \cos ( \omega t) + C_1 i \sin ( \omega t) + C_2 \cos (- \omega t) + C_2 i \sin(- \omega t)	
+		&\qquad \mathrel{\#} C_2 e^{-i \omega t} = C_2 \cos (- \omega t) + C_2 i \sin(- \omega t) \\
+[10pt]
+&=& C_1 \cos ( \omega t) + C_1 i \sin ( \omega t) + C_2 \cos ( \omega t) - C_2 i \sin( \omega t)	
+		&\qquad \mathrel{\#} \text{$\sin (- \theta) = - \sin \theta$ and $\cos (- \theta) = \cos \theta$} \\
+[10pt]
+&=& (C_1 + C_2) \cos ( \omega t) + i (C_1 - C_2) \sin ( \omega t)	
+		&\qquad \mathrel{\#} \text{group terms, rearrange} \\
+[10pt]
+&=& A \cos ( \omega t) + B \sin ( \omega t)	
+		&\qquad \mathrel{\#} \text{$A = C_1 + C_2$ and $B = i (C_1 - C_2)$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we can write
+
+\begin{equation*}
+\theta = A \cos ( \omega t) + B \sin ( \omega t)
+\end{equation*}
+
+\bigskip
+{\setstretch{1.75}
+\noindent
+where $A, B \in \mathbb{R}$ are constants defining the initial
+conditions of the pendulum. Since $\theta$ is a linear
+combination of periodic functions it is also periodic
+\cite{periodic_functions}. We can also note here that adding two
+periodic functions with the same period results in another
+periodic function with that same period
+\cite{periodic_functions}. Since the periods of both $\cos (
+\omega t)$ and $\sin ( \omega t)$ are $\dfrac{2 \pi}{\omega}$ we
+know that the period of a pendulum, after recalling that we
+defined $\omega = \sqrt{\dfrac{g}{L}}$ and applying the
+small-angle approximation, is \par }
+
+\begin{equation*}
+T \approx \dfrac{2 \pi}{\omega} = 2 \pi \sqrt{\dfrac{L}{g}}
+\end{equation*}
+
+\bigskip
+\noindent
+An interesting outcome here is that this approximation of the
+period does note rely on the maximum angular displacement of the
+pendulum, which is in accordance with Galileo’s observations as
+described in \cite{helden1995}.
+
+\subsubsection{Large-Angle Pendulums}
+\label{subsubsec:large_angle_pendulums}
+TBD
 
 
 \subsection{The RLC Circuit}

@@ -1,5 +1,25 @@
 \begin{thebibliography}{10}
 
+\bibitem{helden1995}
+{Albert Van Helden et al.}
+\newblock {The Galileo Project}.
+\newblock \url{http://galileo.rice.edu/sci/instruments/pendulum.html}, 1995.
+\newblock [Online; accessed 17-December-2021].
+
+\bibitem{periodic_functions}
+{Bill Casselman}.
+\newblock {Periodic Functions}.
+\newblock
+  \url{https://personal.math.ubc.ca/~cass/courses/m256-8b/pdf/periodic.pdf},
+  2005.
+\newblock [Online; accessed 17-December-2021].
+
+\bibitem{notes:eulers_formula}
+{David Meyer}.
+\newblock {A Few Notes on Euler’s Formula and Euler’s Identity}.
+\newblock \url{https://davidmeyer.github.io/qc/euler.pdf}, 2021.
+\newblock [See \url{https://davidmeyer.github.io/qc/}].
+
 \bibitem{hooke_of_spring}
 Robert Hooke.
 \newblock {Lectures De potentia restitutiva: Or, Of spring explaining the power
