@@ -188,7 +188,7 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.55 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.60 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
         \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)        
@@ -283,8 +283,8 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 	      \draw [draw=none] (12.00,2.75) -- (12.00,2.75) coordinate [label={[midway] {${\mathbf {\displaystyle F = ma}}$}}];	      
 	      \draw [draw=none] (12.00,2.00) -- (12.00,2.00) coordinate [label={[midway] \underline{{\bf Newton's Force Equals Hooke's Force}}}];
 	      \draw [draw=none] (12.00,1.50) -- (12.00,1.50) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx}}$}}];
-	      \draw [draw=none] (12.00,0.50) -- (12.00,0.50) coordinate [label={[midway] \underline{{\bf Hooke's Law Equation of Motion}}}]; 
-	      \draw [draw=none] (12.00,0.00) -- (12.00,0.00) node[blue,draw,rectangle,midway] 
+	      \draw [draw=none] (12.00,0.50) -- (12.00,0.50) coordinate [label={[midway] \underline{{\bf Equation of Motion}}}]; 
+	      \draw [draw=none] (12.00,0.00) -- (12.00,0.00) node[draw,rectangle,blue,midway,yshift=-0.25cm] 
                                 {${\; \mathbf {\color{black}{a(t) = -\dfrac{k}{m} x(t) \;}}}$};			 
         \end{footnotesize}
 		 
@@ -316,7 +316,7 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.45 \textwidth}{!} {																	% resize figure if you want
+  \resizebox{0.40 \textwidth}{!} {																	% resize figure if you want
   \begin{tikzpicture}
     \def \A {1.0}																					% x(t) = A cos (wt)
     \def \w {1.0}																					% x(t) = A cos (wt)
@@ -583,12 +583,12 @@ from the Latin \emph{pendulus} meaning 'hanging'
 \cite{american_heritage_dictionary}.
 
 
-
+\medskip
 \bigskip
 \begin{figure}[H]
   \centering
   \resizebox{0.50 \textwidth}{!} {																	% resize figure if you want
-    \begin{tikzpicture} [framed]
+    \begin{tikzpicture} [framed]  
       \pgfmathsetmacro{\Gvec}{1.5}																	% save length of g-vector and theta to macros
       \pgfmathsetmacro{\myAngle}{30}
       \pgfmathsetmacro{\Gcos}{\Gvec*cos(\myAngle)}													% calculate lengths of vector components
@@ -973,24 +973,21 @@ states that $e^{ix} = \cos x + i \sin x$ so we see that
 
 \bigskip
 \noindent
-So now we can write
-
-\begin{equation*}
-\theta = A \cos ( \omega t) + B \sin ( \omega t)
-\end{equation*}
+So now we can write $\theta = A \cos ( \omega t) + B \sin ( \omega t)$
+where $A, B \in \mathbb{R}$ are constants defined by the initial
+conditions of the pendulum. 
 
 \bigskip
 {\setstretch{1.75}
 \noindent
-where $A, B \in \mathbb{R}$ are constants defining the initial
-conditions of the pendulum. Since $\theta$ is a linear
+Since $\theta$ is a linear
 combination of periodic functions it is also periodic
 \cite{periodic_functions}. We can also note here that adding two
 periodic functions with the same period results in another
 periodic function with that same period
 \cite{periodic_functions}. Since the periods of both $\cos (
 \omega t)$ and $\sin ( \omega t)$ are $\dfrac{2 \pi}{\omega}$ we
-know that the period of a pendulum, after recalling that we
+know that the period of the pendulum, recalling that we
 defined $\omega = \sqrt{\dfrac{g}{L}}$ and applying the
 small-angle approximation, is \par }
 
