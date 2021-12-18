@@ -282,10 +282,10 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 	      \draw [draw=none] (12.00,4.00) -- (12.00,4.00) coordinate [label={[midway] {${\mathbf {\displaystyle F = -kx}}$}}];
 	      \draw [draw=none] (12.00,3.25) -- (12.00,3.25) coordinate [label={[midway] \underline{{\bf Newton's ${\mathbf 2^{\text{nd}}}$ Law of Motion}}}]; 
 	      \draw [draw=none] (12.00,2.75) -- (12.00,2.75) coordinate [label={[midway] {${\mathbf {\displaystyle F = ma}}$}}];	      
-	      \draw [draw=none] (12.00,2.00) -- (12.00,2.00) coordinate [label={[midway] \underline{{\bf Newton's Force Equals Hooke's Force}}}];
+	      \draw [draw=none] (12.00,2.00) -- (12.00,2.00) coordinate [label={[midway] \underline{{\bf Balance of Forces}}}];
 	      \draw [draw=none] (12.00,1.50) -- (12.00,1.50) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx}}$}}];
 	      \draw [draw=none] (12.00,0.50) -- (12.00,0.50) coordinate [label={[midway] \underline{{\bf Equation of Motion}}}]; 
-	      \draw [draw=none] (12.00,0.00) -- (12.00,0.00) node[draw,rectangle,blue,midway,yshift=-0.25cm] 
+	      \draw [draw=none] (12.00,0.00) -- (12.00,0.00) node[draw,rectangle,blue,midway,yshift=-0.05cm] 
                                 {${\; \mathbf {\color{black}{a(t) = -\dfrac{k}{m} x(t) \;}}}$};			 
         \end{footnotesize}
 		 
@@ -746,13 +746,13 @@ that
 [5pt]
 &=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{definition of moment of inertia $I$ (Equation \ref{eqn:moi})} \\
 [5pt]
-&\Rightarrow& -\text{F}L = mL^2 \alpha					&\qquad \qquad \mathrel{\#} \tau = \text{F}L \\
+&\Rightarrow& -FL = mL^2 \alpha							&\qquad \qquad \mathrel{\#} \tau = FL \\
 [5pt]
-&\Rightarrow& -L \, mg \sin \,\theta = mL^2 \alpha		&\qquad \qquad \mathrel{\#} \text{F} = mg \,\sin \, \theta \\
+&\Rightarrow& -L mg \sin \theta = mL^2 \alpha			&\qquad \qquad \mathrel{\#} F = mg \,\sin \, \theta \\
 [5pt]
-&\Rightarrow& - \, g \sin \,\theta = L \alpha			&\qquad \qquad \mathrel{\#} \text{cancel $L$} \\
+&\Rightarrow& - g \sin \theta = L \alpha				&\qquad \qquad \mathrel{\#} \text{cancel $L$} \\
 [5pt]
-&\Rightarrow& \alpha = - \dfrac{g}{L} \sin \,\theta		&\qquad \qquad \mathrel{\#} \text{solve for $\alpha$} \\
+&\Rightarrow& \alpha = - \dfrac{g}{L} \sin \theta		&\qquad \qquad \mathrel{\#} \text{solve for $\alpha$} \\
 \end{array}
 \end{equation*}
 
@@ -768,7 +768,7 @@ rod is clockwise at the initial state of the pendulum.
 So now we know that
 
 \begin{equation}
-\alpha = - \dfrac{g}{L} \, \sin \,\theta	
+\alpha = - \dfrac{g}{L} \sin \theta	
 \label{eqn:alpha}
 \end{equation}
 
@@ -782,9 +782,9 @@ we see that
 \begin{equation*}
 \begin{array}{llll}
 \alpha
-&=& - \dfrac{g}{L} \, \sin \,\theta					&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:alpha}} \\
+&=& - \dfrac{g}{L} \sin \theta											&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:alpha}} \\
 [12pt]
-&=& - \omega^2 \, \sin \,\theta						&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
+&=& - \omega^2 \sin \theta												&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
 [12pt]
 &\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta	&\qquad \qquad \mathrel{\#} \alpha = \dfrac{d^2 \theta}{dt^2} \\
 \end{array}
@@ -795,18 +795,19 @@ we see that
 Now we know that
 
 \begin{equation}
-\dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta
+\dfrac{d^2 \theta}{dt^2} = - \omega^2 \sin \theta
 \label{eqn:d2_theta}
 \end{equation}
 
 \bigskip
 \noindent
-But here's an interesting problem: Unlike the equation of 
-motion for the spring and mass problem (Equation \ref{eqn:d2xdt2}), 
-we can't solve the second order differential equation of motion 
-for the simple pendulum case (Equation \ref{eqn:d2_theta}). However, 
-we can solve a different but related problem which is called 
-the "Small-Angle Pendulum Problem".
+All good, but there is an interesting problem with Equation 
+\ref{eqn:d2_theta}: Unlike the equation of motion for the 
+spring and mass problem (Equation \ref{eqn:d2xdt2}), we 
+can't solve the second order differential equation of motion 
+for the simple pendulum case (Equation \ref{eqn:d2_theta}). 
+However, we can solve a different but related problem which 
+is called the "Small-Angle Pendulum Problem".
 
 \subsubsection{The Small-Angle Pendulum Problem}
 Interestingly, it turns out that for small $\theta$ (say, $\theta
@@ -820,8 +821,8 @@ another way
 
 \bigskip
 \noindent
-Using this constraint and Equation \ref{eqn:d2_theta}
-we can write 
+Using this constraint we can substitute $\theta$ for $\sin \theta$
+in Equation \ref{eqn:d2_theta} and write 
 
 \bigskip
 \begin{equation}
@@ -832,16 +833,17 @@ we can write
 \bigskip
 {\setstretch{1.5}
 \noindent
-This is a much simpler differential equation, which we know how
+This is a much simpler differential equation which we know how
 to solve\footnote{Notice that this equation has the same form as
 the equation of motion for the spring and mass problem, namely
 $\dfrac{d^2 x}{dt^2} = -\omega^2 x$.}. In order to solve this 
-differential equation, we first notice that that the second 
-derivative $\dfrac{d^2 \theta}{dt^2}$ is the function
-itself, scaled by the constant $- \omega^2$.  This form is known
-as a second order linear homogeneous differential equation
-\cite{tseng_second_order} and we can guess the function that
-exhibits this behavior. It's the exponential function: \par}
+differential equation, first notice that the second 
+derivative of $\dfrac{d^2 \theta}{dt^2}$ is the function
+itself (that is, $\theta$) scaled by a constant ($- \omega^2$). 
+This form is known as a second order linear homogeneous differential 
+equation \cite{tseng_second_order} and we can guess the 
+function that exhibits this behavior. It's the exponential 
+function: \par}
 
 \bigskip
 \begin{equation*}
@@ -851,30 +853,30 @@ exhibits this behavior. It's the exponential function: \par}
 \smallskip
 \bigskip
 \noindent
-So if we set $\theta = e^{i\omega t}$
-and recalling that 
-$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$
-we can see that
+If we set $\theta = e^{i\omega t}$ we see that
 
 
-\bigskip
+
 \begin{equation*}
 \begin{array}{llll}
 \theta &=& e^{i\omega t}						
-					&\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
-[12pt]
+			&\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
+[6pt]
 \dfrac{d \theta}{dt} &=& i \omega e^{i\omega t}		
-					&\qquad \qquad \mathrel{\#} \text{$\theta = e^{i\omega t}$ and $\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$} \\
+		&\qquad \qquad \mathrel{\#} \text{chain rule: $\dfrac{d}{dt} e^u = e^u \cdot \dfrac{du}{dt}$ with $u =i \omega t$ and so $\dfrac{du}{dt} = i \omega$} \\
 [12pt]
 \dfrac{d^2 \theta}{dt^2} 
-&=& \dfrac{d}{dt} \Big [ i \omega e^{i\omega t} \Big ]	
-					&\qquad \qquad \mathrel{\#} \text{second derivative is the derivative of the first derivative} \\
+&=& \dfrac{d}{dt} \Big ( i \omega e^{i\omega t} \Big )	
+		&\qquad \qquad \mathrel{\#} \dfrac{d^2 x}{dt^2} = \dfrac{d}{dt} \bigg ( \dfrac{dx}{dt} \bigg )\\
 [12pt]
 &=& i^2 \omega^2 e^{i\omega t}						
-					&\qquad \qquad \mathrel{\#} \text{second derivative} \\
-[12pt]
+		&\qquad \qquad \mathrel{\#} \text{chain rule: 
+		$\dfrac{d}{dt} \Big ( i \omega e^{i\omega t} \Big ) = (i \omega) \cdot \dfrac{d}{dt} e^{i\omega t} 
+		= (i \omega)(i \omega) e^{i\omega t}
+		= i^2\omega^2 e^{i\omega t}$} \\
+[6pt]
 &=& - \omega^2 e^{i\omega t}						
-					&\qquad \qquad \mathrel{\#} i^2 = -1 
+		&\qquad \qquad \mathrel{\#} i^2 = -1 
 \end{array}
 \end{equation*}
 
@@ -918,25 +920,25 @@ Taking the derivative one more time we see that
 \begin{array}{llll}
 \dfrac{d^2 \theta}{dt^2} 
 &=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} - C_2 i \omega e^{-i \omega t} \Big ]		
-		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:dtheta_dt}} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:dtheta_dt}} \\
 [10pt]
 &=& C_1 i \omega e^{i \omega t} (i \omega) - C_2 i \omega  e^{-i \omega t} (-i \omega)
-		&\qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$ and $i^2 = -1$} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$ and $i^2 = -1$} \\
 [10pt]
 &=& i^2 C_1 \omega^2 e^{i \omega t} + i^2 C_2 \omega^2 e^{-i \omega t}
-		&\qquad \qquad \mathrel{\#} \text{$(-1) * (-1)  = + 1$, collect terms} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$(-1) * (-1)  = + 1$, collect terms} \\
 [10pt]
 &=& - C_1 \omega^2 e^{i \omega t} - C_2 \omega^2 e^{-i \omega t}
-		&\qquad \qquad \mathrel{\#} i^2 = -1 \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} i^2 = -1 \\
 [10pt]
 &=& - \omega^2 (C_1 e^{i \omega t} + C_2 e^{-i \omega t}) 
-		&\qquad \qquad \mathrel{\#} \text{factor out $- \omega^2$} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out $- \omega^2$} \\
 [10pt]
 &=& - \omega^2 \theta
-		&\qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{i \omega t} + C_2 e^{-i \omega t}$ (Equation \ref{eqn:theta_sum})} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{i \omega t} + C_2 e^{-i \omega t}$ (Equation \ref{eqn:theta_sum})} \\
 [10pt]
 &\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \theta 
-		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2_small_angle}}
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2_small_angle}}
 
 \end{array}
 \end{equation*}
