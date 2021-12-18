@@ -589,7 +589,7 @@ from the Latin \emph{pendulus} meaning 'hanging'
 \begin{figure}[H]
   \centering
   \resizebox{0.50 \textwidth}{!} {																	% resize figure if you want
-    \begin{tikzpicture} [framed]  
+    \begin{tikzpicture} [framed] 																	% put a frame on the tikzpicture 
       \pgfmathsetmacro{\Gvec}{1.5}																	% save length of g-vector and theta to macros
       \pgfmathsetmacro{\myAngle}{30}
       \pgfmathsetmacro{\Gcos}{\Gvec*cos(\myAngle)}													% calculate lengths of vector components
@@ -597,69 +597,67 @@ from the Latin \emph{pendulus} meaning 'hanging'
 %
 %	make some coordinates
 %
-      \coordinate (centro) at (0,0);
+      \coordinate (P) at (0,0);                                               						% pivot point P is at the origin
 %
 %	pendulum support, pivot
 %
-      \draw[thin, densely dashed, gray] (0,0) -- ++(0,-3.0) node (mary) [black, below] {};			% this connects to bob1,...
-	  \draw[pattern=north west lines, pattern color=black] (-1.5,-0.075) rectangle (1.5,0.075);     % draw support
-	  \path (0.0, 0.25) node[above, yshift=-0.75mm, scale=0.50] {$P$};                              % label pivot point P
-
+      \draw[thin, densely dashed, gray] (0,0) -- ++(0,-3.0) node (EP) [black, below] {};			% EP is the Equilibrium Point (this connects to bob1)
+	  \draw[pattern=north west lines, pattern color=black] (-1.5,-0.075) rectangle (1.5,0.075);		% draw support
+	  \path (0.0, 0.25) node[above,yshift=-0.75mm,scale=0.50] {$P$};								% label pivot point P
 %
 %	draw the pivot below (at end) so that nothing is on top of it
 %
-%	\filldraw [thin, fill=white,draw] (centro) circle[radius=0.050];  % pivot point P = centro
+%	\filldraw [thin, fill=white,draw] (o) circle[radius=0.050];  % pivot point P = o
 %
-
-      \draw[thick] (centro) -- ++(270+\myAngle:3) coordinate (bob);
+      \draw[thick] (P) -- ++(270+\myAngle:3) coordinate (bob);
       \path (1.00,-1.25) node[scale=0.50] {$L$}; 
-      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) 
+      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(P)$) 
         node[left,midway,xshift=-0.75mm,scale=0.50] {$T$};
 %
 %	draw the angle
 %
-     \pic [draw, ->, "${\Scale[0.60]{\theta}}$", angle eccentricity=1.5] {angle = mary--centro--bob};
+     \pic [draw, ->, "${\Scale[0.60]{\theta}}$", angle eccentricity=1.5] {angle = EP--P--bob};
 %
 %	draw the rest of the pendulum (except draw the bob last)
 %
-     \draw [->] (bob) -- ($(bob)!-\Gcos cm!(centro)$)    coordinate (gcos); 
-     \draw [->] (bob) -- ($(bob)! \Gsin cm!90:(centro)$) coordinate (gsin);
+     \draw [->] (bob) -- ($(bob)!-\Gcos cm!(P)$)        coordinate (gcos); 
+     \draw [->] (bob) -- ($(bob)! \Gsin cm!90:(P)$)     coordinate (gsin);
      \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec) coordinate (g)
-       node[below,brown,yshift=-1.0mm, scale=0.60] {${\bf F_{g}} = m {\bf g}$};
+       node[below,brown,yshift=-1.0mm,scale=0.60] {${\bf F_{g}} = m {\bf g}$};
      \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.5] {angle = g--bob--gcos};
      \draw [densely dotted, thin, blue] (g) -- (gsin) 
-       node[midway, xshift=-0.15cm, rotate=-60, scale=0.50] {$\color{black}{mg \cos \theta}$};
+       node[midway,xshift=-0.15cm,rotate=-60,scale=0.50] {$\color{black}{mg \cos \theta}$};
      \draw [densely dotted, thin, blue] (g) -- (gcos) 
-       node[midway,below, rotate=30, scale=0.50] {$\color{black}{mg \sin \theta}$};  
+       node[midway,below,rotate=30,scale=0.50] {$\color{black}{mg \sin \theta}$};  
 %
 %	draw bob at origin and on the other side
 %
-     \draw[red, densely dotted] (bob) arc(-60:-120:3);  										% draw arc   
-     \coordinate (bob1) at ($(mary) + (0,0.10)$);                                               % draw bob1 
-%    \draw [draw=none] (bob) -- (bob1) node [midway,above,scale=0.6] {$s$};						% draw the arc length s
+     \draw[red, densely dotted] (bob) arc(-60:-120:3);										% draw arc   
+     \coordinate (bob1) at ($(EP) + (0,0.10)$);												% draw bob1 
+%    \draw [draw=none] (bob) -- (bob1) node [midway,above,scale=0.6] {$s$};					% draw the arc length s
      \filldraw [very thin, fill=black!5, draw=black] (bob1) circle[radius=0.150];
      \path (bob1) node[scale=0.50] {$m$};
-     \path (bob1) node[scale=0.35, below, yshift=-0.65cm] {\bf Equilibrium Point};
+     \path (bob1) node[scale=0.35,below,yshift=-0.65cm] {\bf Equilibrium Point};
 %
 %	coordinates for bob2 plus line from the pivot to bob2
 %
      \coordinate (bob2) at ($(bob) + (-3,{0.150/2})$);
-     \draw [thin, densely dashed, gray!75] (centro) -- (bob2);
+     \draw [thin, densely dashed, gray!75] (P) -- (bob2);
 %
 %	make sure bob and bob2 are on top, so draw last
 %
-     \filldraw [thin, fill=white,draw] (centro) circle[radius=0.04];                            % pivot point P = centro
+     \filldraw [thin, fill=white,draw] (P) circle[radius=0.04];								% pivot point p
 
-     \filldraw [fill=black!15,draw=black] (bob) circle[radius=0.150];                           % draw bob
+     \filldraw [fill=black!15,draw=black] (bob) circle[radius=0.150];						% draw bob
      \path (bob) node[scale=0.50] {${\bf m}$};
      
-     \filldraw [very thin, fill=black!5,draw=black] (bob2) circle[radius=0.150];                % draw bob2
+     \filldraw [very thin, fill=black!5,draw=black] (bob2) circle[radius=0.150];            % draw bob2
      \path (bob2) node[scale=0.50] {$m$};
      
    \end{tikzpicture}
-  }                                                                                             % end \resizebox
-\caption{Free Body Diagram for a Simple Pendulum}
-\label{fig:simple_pendulum}
+  }                                                                                         % end \resizebox
+ \caption{Free Body Diagram for a Simple Pendulum}
+ \label{fig:simple_pendulum}
 \end{figure}
 
 \bigskip
