@@ -40,6 +40,19 @@ Robert Hooke.
   Oct 2012.
 \newblock [Online; accessed 10-December-2021].
 
+\bibitem{grabermitchell2018finding}
+{Nicolas Graber-Mitchell}.
+\newblock {Finding the Period of a Simple Pendulum}.
+\newblock \url{https://arxiv.org/pdf/1805.00002.pdf}, May 2018.
+
+\bibitem{rlc_circuits}
+{Paul Avery and Yasu Takano}.
+\newblock {RLC Circuits}.
+\newblock
+  \url{http://www.phys.ufl.edu/courses/phy2049/f06/lectures/2049_ch31_avery.pdf},
+  Dec 2006.
+\newblock \url{https://www.phys.ufl.edu/courses/phy2049/f06/overview.shtml}.
+
 \bibitem{nave_simple_harmonic_motion}
 {R. Nave}.
 \newblock {Simple Harmonic Motion}.
@@ -67,6 +80,14 @@ Robert Hooke.
   \url{https://en.wikipedia.org/w/index.php?title=Angular_frequency&oldid=1058712937},
   2021.
 \newblock [Online; accessed 10-December-2021].
+
+\bibitem{wiki:approximation_error}
+{Wikipedia contributors}.
+\newblock {Approximation Error --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Approximation_error&oldid=1056596112},
+  2021.
+\newblock [Online; accessed 18-December-2021].
 
 \bibitem{wiki:huygens}
 {Wikipedia contributors}.
@@ -107,6 +128,14 @@ Robert Hooke.
   \url{https://en.wikipedia.org/w/index.php?title=Pendulum&oldid=1058923597},
   2021.
 \newblock [Online; accessed 15-December-2021].
+
+\bibitem{wiki:pendulum_clock}
+{Wikipedia contributors}.
+\newblock {Pendulum Clock --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Pendulum_clock&oldid=1060793234},
+  2021.
+\newblock [Online; accessed 18-December-2021].
 
 \bibitem{american_heritage_dictionary}
 {William Morris}.

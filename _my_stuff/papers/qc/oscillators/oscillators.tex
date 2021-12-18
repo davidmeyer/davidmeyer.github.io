@@ -72,7 +72,7 @@
 %
 %	title, etc
 %
-\title{A Few Notes On Simple Harmonic Oscillators}
+\title{A Few Notes on Simple Harmonic Oscillators}
 \author{David Meyer \\ dmm@1-4-5.net}
 \date{Last update: \today}
 %
@@ -444,7 +444,7 @@ x(t) = A \cos (2 \pi f t)
 
 \bigskip
 \noindent
-We can also put Equations \ref{eqn:omega0} and \ref{eqn:omega1} 
+We can also put Equations \ref{eqn:omega0} and \ref{eqn:omega1}  
 together to find
 
 \begin{equation*}
@@ -803,15 +803,14 @@ Now we know that
 
 \bigskip
 \noindent
-But here's an interesting problem. Unlike the second order
-differential equation of motion for the Hooke's Law spring and
-mass problem (Equation \ref{eqn:d2xdt2}), we can't solve the
-second order differential equation of motion for the simple
-pendulum case (Equation \ref{eqn:d2_theta}). However, maybe we
-can solve a different but related problem which I'll call the
-"Small Angle Pendulum Problem".
+But here's an interesting problem: Unlike the equation of 
+motion for the spring and mass problem (Equation \ref{eqn:d2xdt2}), 
+we can't solve the second order differential equation of motion 
+for the simple pendulum case (Equation \ref{eqn:d2_theta}). However, 
+we can solve a different but related problem which is called 
+the "Small-Angle Pendulum Problem".
 
-\subsubsection{The Small Angle Pendulum Problem}
+\subsubsection{The Small-Angle Pendulum Problem}
 Interestingly, it turns out that for small $\theta$ (say, $\theta
 \leq 10\degree$) we see that $\sin \theta \approx \theta$. Said
 another way
@@ -836,18 +835,22 @@ we can write
 {\setstretch{1.5}
 \noindent
 This is a much simpler differential equation, which we know how
-to solve. In order to solve this differential equation, we first
-notice that that the second derivative $\dfrac{d^2 \theta}{dt^2}$
-is the function itself scaled by the constant $- \omega^2$.  This
-form is known as a second order linear homogeneous differential
-equation \cite{tseng_second_order} and we can guess the function
-that exhibits this behavior. It's the exponential function: \par}
+to solve\footnote{Notice that this equation has the same form as
+the equation of motion for the spring and mass problem, namely
+$\dfrac{d^2 x}{dt^2} = -\omega^2 x$.}. In order to solve this 
+differential equation, we first notice that that the second 
+derivative $\dfrac{d^2 \theta}{dt^2}$ is the function
+itself, scaled by the constant $- \omega^2$.  This form is known
+as a second order linear homogeneous differential equation
+\cite{tseng_second_order} and we can guess the function that
+exhibits this behavior. It's the exponential function: \par}
 
 \bigskip
 \begin{equation*}
 \dfrac{d}{dx} e^x = e^x
 \end{equation*}
 
+\smallskip
 \bigskip
 \noindent
 So if we set $\theta = e^{i\omega t}$
@@ -975,7 +978,7 @@ states that $e^{ix} = \cos x + i \sin x$ so we see that
 \bigskip
 \noindent
 So now we can write $\theta = A \cos ( \omega t) + B \sin ( \omega t)$
-where $A, B \in \mathbb{R}$ are constants defined by the initial
+where $A, B \in \mathbb{C}$ are constants defined by the initial
 conditions of the pendulum. 
 
 \bigskip
@@ -1004,13 +1007,41 @@ period does not rely on the maximum angular displacement of the
 pendulum, which is in accordance with Galileo’s observations as
 described in \cite{helden1995}.
 
-\subsubsection{Large Angle Pendulums}
+\bigskip
+{\setstretch{1.25}
+\noindent
+\underline{{\bf Summary:}} It turns out that the small-angle
+approximation for the pendulum period is fairly good and many
+papers study the error in this approximation. For example, when
+$\theta < \dfrac{\pi}{4}$ the relative (or approximation)
+error\footnote{The Relative Error $R$ computed as follows: $R =
+100 \cdot \dfrac{T_{\text{exact}} -
+T_{\text{approx}}}{T_{\text{exact}}}$
+\cite{wiki:approximation_error}.}  $R$ is less than
+3.84\%. However, even this small inaccuracy can add up: after
+about 13 full oscillations of a pendulum with $\omega = \pi$ and
+$\theta_{\text{max}} = \dfrac{\pi}{4}$, the approximation is out
+of phase by half a period with the exact pendulum. This means
+that after 13 oscillations, when the approximate pendulum is at
+equilibrium, the exact pendulum is maximally displaced, and
+vice-versa \cite{grabermitchell2018finding}.
+
+\smallskip
+\noindent 
+Finally, note that pendulums with small angles are not uncommon.
+For example, many clocks have long, thin pendulums: essentially
+large $L$ and small $\theta_{\text{max}}$. In practice these two
+constants are used produce clocks with long, accurate periods
+\cite{wiki:pendulum_clock}.\par}
+
+\subsubsection{Large-Angle Pendulums}
 \label{subsubsec:large_angle_pendulums}
 TBD
 
 
 \subsection{The RLC Circuit Oscillator}
 \label{subsec:rlc_circuit}
+TBD \cite{rlc_circuits}
 
 \bigskip
 \begin{figure}[H]
@@ -1043,8 +1074,8 @@ TBD
 
 
 \section*{Acknowledgements}
-Thanks to Chris Lonvick (lonvick@gmail.com) for his comments and
-help on/with Figure \ref{fig:simple_pendulum}. 
+Thanks to Chris Lonvick (lonvick@gmail.com) for his thoughtful 
+comments and suggestions on Figure \ref{fig:simple_pendulum}. 
 
 %
 %	LaTeX source on overleaf.com
