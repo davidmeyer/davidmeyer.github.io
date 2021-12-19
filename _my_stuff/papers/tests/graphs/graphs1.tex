@@ -47,14 +47,18 @@
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
 
 
-\usepackage{circuitikz}
+
+% \usepackage{circuitikz}
+\usepackage[oldvoltagedirection]{circuitikz}
+
+
 
 \begin{document}
 
 \begin{figure}[H]
-  \centering
-  \resizebox{0.60 \textwidth}{!} {															% resize figure if you want
-  \begin{circuitikz}[framed,line width=0.75pt]
+   \centering
+   \resizebox{0.65 \textwidth}{!} {																	% resize figure if you want
+   \begin{circuitikz}[framed,line width=0.75pt]
        \draw[step=0.5,thin, black!30] (-1.50,-0.5) grid (7.50,3.0);
        \path (0,0) coordinate (ref_gnd);
        \draw (ref_gnd) -- (ref_gnd) to [american voltage source=\(V\)] ++(0,2)
@@ -62,11 +66,18 @@
             to [L=\(L\)] ++(3,0) 
             to [C=\(C\)] ++(0,-2)
             to []  (ref_gnd);
-    \end{circuitikz}
-  }																							% end \resizebox
-\caption{Generic RLC Circuit}
-\label{fig:generic_rlc_circuit}
+       \draw [draw=none] (0,0) -- ({3+3},0) node [midway,above] {$I$};								% draw current (I) and direction arrow
+       \draw [black,thick, -latex] (2.50,-0.25) -- ({((3+3)/2) + 0.50},-0.25) node [midway,below] {};
+       \draw [draw=none] (ref_gnd) -- ({3+3},2.90) node [midway,above] {$I$};						% draw current (I) and direction arrow
+       \draw [black,thick, latex-] (2.50,2.250) -- (3.50,2.250) node [midway,above] {};
+   \end{circuitikz}
+  }																									% end \resizebox
+\caption{Series RLC Circuit}
+\label{fig:simple_series_rlc_circuit}
 \end{figure}
+
+
+
 
 \begin{figure}[H]
   \centering

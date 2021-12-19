@@ -24,6 +24,7 @@
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}													% get \mathbold
 \usepackage{gensymb}													% get \degree
+% \usepackage[oldvoltagedirection]{circuitikz}							%
 \usepackage{circuitikz}													% draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -1059,8 +1060,6 @@ TBD \cite{rlc_circuits,differential_equations_rlc_circuits}
        \draw [black,thick, -latex] (2.50,-0.25) -- ({((3+3)/2) + 0.50},-0.25) node [midway,below] {};
        \draw [draw=none] (ref_gnd) -- ({3+3},2.90) node [midway,above] {$I$};						% draw current (I) and direction arrow
        \draw [black,thick, latex-] (2.50,2.250) -- (3.50,2.250) node [midway,above] {};
-
-
    \end{circuitikz}
   }																									% end \resizebox
 \caption{Series RLC Circuit}
