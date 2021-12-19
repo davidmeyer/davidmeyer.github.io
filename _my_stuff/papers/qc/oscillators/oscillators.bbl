@@ -6,6 +6,14 @@
 \newblock \url{http://galileo.rice.edu/sci/instruments/pendulum.html}, 1995.
 \newblock [Online; accessed 17-December-2021].
 
+\bibitem{differential_equations_rlc_circuits}
+{Arthur Mattuck}.
+\newblock {RLC Circuits}.
+\newblock
+  \url{https://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/readings/supp_notes/MIT18_03S10_chapter_8.pdf},
+  2010.
+\newblock [Online; accessed 19-December-2021].
+
 \bibitem{periodic_functions}
 {Bill Casselman}.
 \newblock {Periodic Functions}.
