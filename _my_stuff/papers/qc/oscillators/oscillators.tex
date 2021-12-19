@@ -1055,6 +1055,8 @@ TBD \cite{rlc_circuits}
             to [L=\(L\)] ++(3,0) 
             to [C=\(C\)] ++(0,-2)
             to []  (ref_gnd);
+       \draw [draw=none] (0,0) -- ({3+3},0) node [midway,above] {$I$};						% draw current (I) and direction arrow
+       \draw [black,thick, -latex] (2.50,-0.25) -- ({((3+3)/2) + 0.50},-0.25) node [midway,below] {};
    \end{circuitikz}
   }																							% end \resizebox
 \caption{Series RLC Circuit}
