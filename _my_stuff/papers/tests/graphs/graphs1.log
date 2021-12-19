@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  19 DEC 2021 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  19 DEC 2021 13:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1187,26 +1187,26 @@ onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./grap
-hs1.aux) ) 
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
+graphs1.aux) ) 
 Here is how much of TeX's memory you used:
- 46085 strings out of 478994
- 1260230 string characters out of 5858184
- 1875815 words of memory out of 5000000
- 62820 multiletter control sequences out of 15000+600000
+ 46170 strings out of 478994
+ 1263281 string characters out of 5858184
+ 1886571 words of memory out of 5000000
+ 62905 multiletter control sequences out of 15000+600000
  409181 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,116p,791b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb>
-Output written on graphs1.pdf (1 page, 54502 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb>
+Output written on graphs1.pdf (2 pages, 55777 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

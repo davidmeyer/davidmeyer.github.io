@@ -1035,14 +1035,51 @@ large $L$ and small $\theta_{\text{max}}$. In practice these two
 constants are used produce clocks with long, accurate periods
 \cite{wiki:pendulum_clock}.\par}
 
-\subsubsection{Large-Angle Pendulums}
-\label{subsubsec:large_angle_pendulums}
-TBD
+
+\subsection{The LC Circuit Oscillator}
+\label{subsec:lc_circuit}
+Amazingly, it turns out that the equation of motion for the LC circuit,
+shown in Figure \ref{fig:series_lc_circuit}, has the same form as the 
+equations of motion for both spring and mass and the small-angle pendulum 
+systems, \cite{differential_equations_rlc_circuits,rlc_circuits}, namely
+
+\medskip
+\begin{equation*}
+\dfrac{d^2 x}{dt^2} = - \omega^2 x
+\end{equation*}
+
+\medskip
+\noindent
+Ok, but why?
 
 
-\subsection{The RLC Circuit Oscillator}
-\label{subsec:rlc_circuit}
-TBD \cite{rlc_circuits,differential_equations_rlc_circuits}
+\bigskip
+\begin{figure}[H]
+   \centering
+   \resizebox{0.50 \textwidth}{!} {																	% resize figure if you want
+   \begin{circuitikz}[framed,line width=0.75pt]
+       \draw[step=0.5,thin, black!30] (-1.50,-0.5) grid (4.50,3.0);
+       \path (0,0) coordinate (ref_gnd);
+       \draw (ref_gnd) -- (ref_gnd) to [american voltage source=\(V\)] ++(0,2)
+ %           to [R=\(R\)] ++(3,0) 
+            to [L=\(L\)] ++(3,0) 
+            to [C=\(C\)] ++(0,-2)
+            to []  (ref_gnd);
+       \draw [draw=none] (0,0) -- (3,0) node [midway,above] {$I$};								% draw current (I) and direction arrow
+       \draw [black,thick, -latex] (1.00,-0.25) -- (2.00,-0.25) node [midway,below] {};
+   \end{circuitikz}
+  }																									% end \resizebox
+\caption{Series LC Circuit}
+\label{fig:series_lc_circuit}
+\end{figure}
+
+
+\subsubsection{The RLC Circuit Oscillator}
+\label{subsubsec:rlc_circuit}
+If you add dampening to the spring and mass system it
+is equivalent to adding a resistor (denoted with a $R$) 
+to the LC circuit. The  series RLC circuit is 
+shown in Figure \ref{fig:series_rlc_circuit}.
 
 \bigskip
 \begin{figure}[H]
@@ -1063,9 +1100,15 @@ TBD \cite{rlc_circuits,differential_equations_rlc_circuits}
    \end{circuitikz}
   }																									% end \resizebox
 \caption{Series RLC Circuit}
-\label{fig:simple_series_rlc_circuit}
+\label{fig:series_rlc_circuit}
 \end{figure}
 
+\bigskip
+\noindent
+So the question is what exactly is the equivalence 
+between a RLC circuit and a dampened spring and mass 
+system? The answer is that they are both dampened 
+simple harmonic oscillators. Ok, but why?
 
 
 \section{The Quantum Harmonic Oscillator}
