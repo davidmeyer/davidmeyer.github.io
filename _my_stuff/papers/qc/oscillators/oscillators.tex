@@ -1038,20 +1038,16 @@ constants are used produce clocks with long, accurate periods
 
 \subsection{The LC Circuit Oscillator}
 \label{subsec:lc_circuit}
-Amazingly, it turns out that the equation of motion for the LC circuit,
-shown in Figure \ref{fig:series_lc_circuit}, has the same form as the 
-equations of motion for both spring and mass and the small-angle pendulum 
-systems, \cite{differential_equations_rlc_circuits,rlc_circuits}, namely
+Amazingly, it turns out that the equation of motion for the series LC 
+circuit, shown in Figure \ref{fig:series_lc_circuit}, has the same form 
+as the equations of motion for both spring and mass and the small-angle 
+pendulum systems, \cite{differential_equations_rlc_circuits,rlc_circuits}, 
+namely
 
 \medskip
 \begin{equation*}
 \dfrac{d^2 x}{dt^2} = - \omega^2 x
 \end{equation*}
-
-\medskip
-\noindent
-Ok, but why?
-
 
 \bigskip
 \begin{figure}[H]
@@ -1073,13 +1069,111 @@ Ok, but why?
 \label{fig:series_lc_circuit}
 \end{figure}
 
+\medskip
+\noindent
+Ok, but why? First, let
+
+\begin{equation*}
+ \begin{array}{llll}
+V_{L}(t) &-&& \text{denote the voltage drop across the coil} \\
+[5pt]
+V_{R}(t) &-&& \text{denote the voltage drop across the resistor} \\
+[5pt]
+V_{C}(t) &-&& \text{denote the voltage drop across the capacitor} \\
+[5pt]
+V(t)     &-&& \text{denote the voltage \emph{increase} across the power source}
+ \end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+Then the voltage drop across the various components
+of the circuit is \cite{differential_equations_rlc_circuits}:
+
+\begin{equation*}
+ \begin{array}{llll}
+  \text{Coil (Inductor):} &&& V_{L}       = L \dot{I} \\
+[10pt]
+  \text{Resistor:}        &&& V_{R}       = R I \\
+[8pt]
+  \text{Capacitor:}       &&& \dot{V}_{C} = \bigg (\dfrac{1}{C} \bigg ) I 
+ \end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+We also know from Kirchoff’s Voltage Law (sometimes called
+the loop rule) \cite{wiki:kirchhoffs_circuit_laws}
+that 
+
+\begin{equation}
+V = V_{L} + V_{R} + V_{C}
+\label{eqn:kirchhoffs_voltage_law}
+\end{equation}
+
+\bigskip
+\noindent
+For an LC circuit we can use $V = V_{L} + V_{C}$
+(Equation \ref{eqn:kirchhoffs_voltage_law},
+minus $V_{R}$ since there is no resistor in 
+the LC circuit). Next we substitute the voltage 
+values into Equation \ref{eqn:kirchhoffs_voltage_law}
+to get 
+
+\begin{equation*}
+V = L \dot{I} + \dot{V}_{C} = L \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
+\end{equation*}
+
+\bigskip
+\noindent
+Differentiating both sides we get
+
+
+\begin{equation}
+\dot{V} = L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I
+\label{eqn:V}
+\end{equation}
+
+\bigskip
+\noindent
+Since $\dot{V} = 0$ (it is a constant source, say a battery),
+we can see that
+
+\begin{equation*}
+\begin{array}{llll}
+0
+&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I							&\qquad \mathrel{\#} \text{Equation \ref{eqn:V}} \\
+[12pt]
+&=& \ddot{I} + \bigg (\dfrac{1}{LC} \bigg ) I							&\qquad \mathrel{\#} \text{divide both sides by $L$} \\	
+[12pt]
+&\Rightarrow& \ddot{I} = - \bigg (\dfrac{1}{LC} \bigg ) I				&\qquad \mathrel{\#} \text{rearrange}	\\	
+[12pt]
+&\Rightarrow& \dfrac{d^2 I}{dt^2} = - \bigg (\dfrac{1}{LC} \bigg ) I	&\qquad \mathrel{\#} \ddot{I} = \dfrac{d^2 I}{dt^2}	\\	
+[12pt]		
+&\Rightarrow& \dfrac{d^2 I}{dt^2} = - \omega^2 I						&\qquad \mathrel{\#} \text{set $\omega = \sqrt{\dfrac{1}{LC}}$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+What we can notice is that $\dfrac{d^2 I}{dt^2} = - \omega^2 I$ is 
+of the same general form as the equation of motion for both the 
+spring and mass and the simple pendulum systems. We can write the 
+general equation of motion for these systems as
+
+\bigskip
+\begin{equation}
+\ddot{\psi} = - \omega_{0}^{2} \psi
+\label{eqn:general_simple_eom}
+\end{equation}
 
 \subsubsection{The RLC Circuit Oscillator}
 \label{subsubsec:rlc_circuit}
 If you add dampening to the spring and mass system it
 is equivalent to adding a resistor (denoted with a $R$) 
 to the LC circuit. The  series RLC circuit is 
-shown in Figure \ref{fig:series_rlc_circuit}.
+shown in Figure \ref{fig:series_rlc_circuit}. 
 
 \bigskip
 \begin{figure}[H]
@@ -1103,14 +1197,136 @@ shown in Figure \ref{fig:series_rlc_circuit}.
 \label{fig:series_rlc_circuit}
 \end{figure}
 
-\bigskip
 \noindent
 So the question is what exactly is the equivalence 
-between a RLC circuit and a dampened spring and mass 
-system? The answer is that they are both dampened 
+between a RLC circuit and a damped spring and mass 
+system? The answer is that they are both damped 
 simple harmonic oscillators. Ok, but why?
 
+\bigskip
+\noindent
+If we add a resister to the series LC circuit
+shown in Figure \ref{fig:series_lc_circuit}
+we get the circuit shown in Figure \ref{fig:series_rlc_circuit}.
+We can use Kirchoff’s Voltage Law again to see that
 
+\begin{equation*}
+V = V_{L} + V_{R} + V_{C}
+\end{equation*}
+
+\noindent
+Substituting the voltage drop values into this
+equation we get 
+
+\begin{equation*}
+V = L \dot{I} + R I + \bigg (\dfrac{1}{C} \bigg ) I
+\label{eqn:rlc_voltagge}
+\end{equation*}
+
+
+{\setstretch{1.75}
+\noindent
+Taking the derivative of the left side and the
+first two terms on the right side to get
+all of the terms in the same form and recalling that
+$\dot{V}_{C} = \bigg (\dfrac{1}{C} \bigg ) I$
+we get \par}
+
+\begin{equation}
+\dot{V} = L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
+\label{eqn:v_rlc}
+\end{equation}
+
+\noindent
+and so
+
+\begin{equation*}
+\begin{array}{llll}
+\dot{V}
+&=& L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
+		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:v_rlc}}	\\	
+[15pt]
+&\Rightarrow& 0 = L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
+		&\qquad \qquad \mathrel{\#} \text{power source is a constant so $\dfrac{dV}{dt} = 0$}	\\	
+[15pt]
+&\Rightarrow& L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I = 0
+		&\qquad \qquad \mathrel{\#} \text{rearrange} \\
+[15pt]
+&\Rightarrow& \ddot{I} + \bigg (\dfrac{R}{L} \bigg ) \dot{I} + \bigg (\dfrac{1}{LC} \bigg ) I = 0
+		&\qquad \qquad \mathrel{\#} \text{divide through by $L$}
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+This equation has the same general form as the
+damped spring and mass and pendulum systems, namely
+
+\begin{equation}
+\ddot{\psi} + \beta \dot{\psi} + \omega_{0}^{2} \psi = 0
+\label{eqn:damp_general_form}
+\end{equation}
+
+\bigskip
+\noindent
+To see this, notice that the equation of motion 
+for the damped spring and mass system is
+
+
+\begin{equation}
+\ddot{x} + \bigg (\dfrac{b}{m} \bigg ) \dot{x} + \bigg ( \dfrac{k}{m} \bigg ) x = 0
+\label{eqn:damped_spring_and_mass}
+\end{equation}
+
+\noindent
+where $\bigg (\dfrac{b}{m} \bigg ) \dot{x}$ is the new term 
+that represents the damping due to friction. We can see that
+Equation \ref{eqn:damped_spring_and_mass} has the same form
+as Equation \ref{eqn:damp_general_form} and that in general 
+the damping force is proportional to $\dfrac{dx}{dt}$.
+
+\bigskip
+\noindent
+For the damped small-angle pendulum system the equation of motion is
+
+\medskip
+\begin{equation}
+\ddot{\theta} \approx  - b \dot{\theta} - \dfrac{g}{L} \theta
+\label{eqn:damped_pendulum}
+\end{equation}
+
+\noindent
+which again has the same form as Equation \ref{eqn:damp_general_form}
+with damping force proportional to $\dfrac{d \theta}{dt}$.
+
+\bigskip
+\noindent
+Finally, the analogy between the mechanical
+and the electrical systems looks like
+
+\bigskip
+\renewcommand{\arraystretch}{2}
+\begin{table} [H]
+\centering
+\begin{tabular} {| c | c  |}
+\hline
+{\Large \bf Mechanical}  & {\Large \bf Electrical}   \\
+\hline \hline
+Mass   & Coil (Inductor) \\
+\hline
+Damper & Resistor \\
+\hline
+Spring & Capacitor \\
+\hline
+Driving Force & Time Derivative of Impressed Voltage \\
+\hline
+Displacement & Current \\
+\hline
+\end{tabular}
+\end{table}
+
+\bigskip
 \section{The Quantum Harmonic Oscillator}
 \label{sec:quantum_harmonic_oscillator}
 
