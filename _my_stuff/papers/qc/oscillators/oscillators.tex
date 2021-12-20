@@ -1219,7 +1219,7 @@ Substituting the voltage drop values into this
 equation we get 
 
 \begin{equation*}
-V = L \dot{I} + R I + \bigg (\dfrac{1}{C} \bigg ) I
+V = L \dot{I} + R I + V_{C}
 \label{eqn:rlc_voltagge}
 \end{equation*}
 
@@ -1292,7 +1292,7 @@ For the damped small-angle pendulum system the equation of motion is
 
 \medskip
 \begin{equation}
-\ddot{\theta} \approx  - b \dot{\theta} - \dfrac{g}{L} \theta
+\ddot{\theta} + b \dot{\theta} + \bigg (\dfrac{g}{L} \bigg ) \theta \approx 0
 \label{eqn:damped_pendulum}
 \end{equation}
 
