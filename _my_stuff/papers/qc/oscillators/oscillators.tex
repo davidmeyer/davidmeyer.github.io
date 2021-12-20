@@ -173,13 +173,13 @@ Equation \ref{eqn:newtons_2nd_law} we see that
 \begin{array}{llll}
 ma
 &=& -kx
-        &\qquad\qquad\mathrel{\#} \text{Newton's force equals Hooke's force} \\
+        &\qquad\qquad\mathrel{\#} \text{Balance Newton's force and Hooke's force} \\
 [7pt]
 &\Rightarrow& a = - \dfrac{k}{m} x
         &\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
 [7pt]
 &\Rightarrow& \dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x	
-        &\qquad\qquad\mathrel{\#} a = \dfrac{d}{dt} (v) = \dfrac{d}{dt} \left( \dfrac{dx}{dt} \right ) = \dfrac{d^2 x}{dt^2} \\
+        &\qquad\qquad\mathrel{\#} a = \dfrac{d}{dt} \left [ v \right ] = \dfrac{d}{dt} \left [ \dfrac{dx}{dt} \right ] = \dfrac{d^2 x}{dt^2} \\
 \end{array}
 \end{equation*}
 
@@ -386,10 +386,10 @@ really a solution to Equation \ref{eqn:d2xdt2} as follows:
 \dfrac{d^2 x}{dt^2}
 &=& - \dfrac{k}{m} x													&\qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2xdt2}} \\
 [10pt]
-&\Rightarrow& \dfrac{d^2}{dt^2}  \left [A \cos (\omega t) \right ] = -\dfrac{k}{m} x
+&\Rightarrow& \dfrac{d^2}{dt^2}  \Big [A \cos (\omega t) \Big ] = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad \mathrel{\#} \text{guess that $x(t) = A \cos (\omega t)$} \\
 [10pt]
-&\Rightarrow& \dfrac{d}{dt}  \left [-\omega A \sin (\omega t) \right ] = -\dfrac{k}{m} x
+&\Rightarrow& \dfrac{d}{dt}  \Big [-\omega A \sin (\omega t) \Big ] = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
 [10pt]
 &\Rightarrow& -\omega^2 A \cos (\omega t) = -\dfrac{k}{m} x
@@ -500,7 +500,7 @@ E_{\text{total}}
 &=& \dfrac{1}{2} m \left (\dfrac{dx}{dt} \right )^2 + \dfrac{1}{2}kx^2 		
 						&\qquad \qquad \qquad \mathrel{\#} v = \dfrac{dx}{dt} \\
 [12pt]
-&=& \dfrac{1}{2} m \left (\dfrac{d}{dt} \left [A \cos (\omega t) \right ] \right )^2 + \dfrac{1}{2}kx^2 
+&=& \dfrac{1}{2} m \left (\dfrac{d}{dt} \Big [A \cos (\omega t) \Big ] \right )^2 + \dfrac{1}{2}kx^2 
 						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
 [12pt]
 &=& \dfrac{1}{2} m \left (- \omega A \sin (\omega t) \right )^2 + \dfrac{1}{2}kx^2 
@@ -867,12 +867,12 @@ If we set $\theta = e^{i\omega t}$ we see that
 		&\qquad \qquad \mathrel{\#} \text{chain rule: $\dfrac{d}{dt} e^u = e^u \cdot \dfrac{du}{dt}$ with $u =i \omega t$ and so $\dfrac{du}{dt} = i \omega$} \\
 [12pt]
 \dfrac{d^2 \theta}{dt^2} 
-&=& \dfrac{d}{dt} \Big ( i \omega e^{i\omega t} \Big )	
-		&\qquad \qquad \mathrel{\#} \dfrac{d^2 x}{dt^2} = \dfrac{d}{dt} \bigg ( \dfrac{dx}{dt} \bigg )\\
+&=& \dfrac{d}{dt} \Big [ i \omega e^{i\omega t} \Big ]	
+		&\qquad \qquad \mathrel{\#} \dfrac{d^2 x}{dt^2} = \dfrac{d}{dt} \bigg [ \dfrac{dx}{dt} \bigg ] \\
 [12pt]
 &=& i^2 \omega^2 e^{i\omega t}						
 		&\qquad \qquad \mathrel{\#} \text{chain rule: 
-		$\dfrac{d}{dt} \Big ( i \omega e^{i\omega t} \Big ) = (i \omega) \cdot \dfrac{d}{dt} e^{i\omega t} 
+		$\dfrac{d}{dt} \left [ i \omega e^{i\omega t} \right ] = (i \omega) \cdot \dfrac{d}{dt} \left [e^{i\omega t} \right ]
 		= (i \omega)(i \omega) e^{i\omega t}
 		= i^2\omega^2 e^{i\omega t}$} \\
 [6pt]
@@ -922,6 +922,9 @@ Taking the derivative one more time we see that
 \dfrac{d^2 \theta}{dt^2} 
 &=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} - C_2 i \omega e^{-i \omega t} \Big ]		
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:dtheta_dt}} \\
+[10pt]
+&=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} \Big ] - \dfrac{d}{dt} \Big [C_2 i \omega e^{-i \omega t} \Big ]		
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{derivative is a linear operator} \\
 [10pt]
 &=& C_1 i \omega e^{i \omega t} (i \omega) - C_2 i \omega  e^{-i \omega t} (-i \omega)
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$ and $i^2 = -1$} \\
@@ -1029,10 +1032,11 @@ vice-versa \cite{grabermitchell2018finding}.
 
 \smallskip
 \noindent 
-Finally, note that pendulums with small angles are not uncommon.
-For example, many clocks have long, thin pendulums: essentially
-large $L$ and small $\theta_{\text{max}}$. In practice these two
-constants are used produce clocks with long, accurate periods
+Finally, pendulums with small angles do not appear to 
+be uncommon. For example, many clocks have long, thin 
+pendulums, essentially large $L$ and small 
+$\theta_{\text{max}}$. In practice these two constants 
+are used produce clocks with long and accurate periods
 \cite{wiki:pendulum_clock}.\par}
 
 
@@ -1091,6 +1095,7 @@ V(t)     &-&& \text{denote the voltage \emph{increase} across the power source}
 Then the voltage drop across the various components
 of the circuit is \cite{differential_equations_rlc_circuits}:
 
+\medskip
 \begin{equation*}
  \begin{array}{llll}
   \text{Coil (Inductor):} &&& V_{L}       = L \dot{I} \\
@@ -1101,7 +1106,7 @@ of the circuit is \cite{differential_equations_rlc_circuits}:
  \end{array}
 \end{equation*}
 
-\bigskip
+\medskip
 \noindent
 We also know from Kirchoff’s Voltage Law (sometimes called
 the loop rule) \cite{wiki:kirchhoffs_circuit_laws}
@@ -1235,12 +1240,13 @@ recalling that
 $\dot{V}_{C} = \bigg (\dfrac{1}{C} \bigg ) I$
 we get \par}
 
-\medskip
+\bigskip
 \begin{equation}
 \dot{V} = L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
 \label{eqn:v_rlc}
 \end{equation}
 
+\medskip
 \noindent
 and so
 
