@@ -45,6 +45,8 @@
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
+\usepackage{multirow}
+
 
 %
 %	watermarks
@@ -1318,25 +1320,26 @@ and the electrical systems looks like
 
 \smallskip
 \bigskip
-\renewcommand{\arraystretch}{2}
+\renewcommand{\arraystretch}{2.0}
 \begin{table} [H]
 \centering
-\begin{tabular} {| c | c  |}
+\begin{tabular} {| c | c  | c | c |}
 \hline
-{\Large \bf Mechanical}  & {\Large \bf Electrical}   \\
+{\Large \bf Mechanical Quantity}  & {\Large \bf Symbol} & {\Large \bf Electrical Quantity} & {\Large \bf Symbol}\\
 \hline \hline
-Mass   & Coil (Inductor) \\
+Mass & m & Inductance & L\\
 \hline
-Damper & Resistor \\
+Spring Constant & k & Capacitance & C \\
 \hline
-Spring & Capacitor \\
+Force & F & Voltage & V \\
 \hline
-Driving Force & Time Derivative of Impressed Voltage \\
+Velocity & v & Current & I \\
 \hline
-Displacement & Current \\
+Damping Constant & b & Resistance & R \\
 \hline
 \end{tabular}
 \end{table}
+
 
 \bigskip
 \section{The Quantum Harmonic Oscillator}
