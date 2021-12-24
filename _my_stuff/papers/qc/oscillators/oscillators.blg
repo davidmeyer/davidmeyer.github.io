@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: oscillators.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 22 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            603 strings with 7823 characters,
-and the built_in function-call counts, 4775 in all, are:
-= -- 477
-> -- 154
+            613 strings with 8156 characters,
+and the built_in function-call counts, 5209 in all, are:
+= -- 521
+> -- 168
 < -- 0
-+ -- 66
-- -- 44
-* -- 142
-:= -- 818
-add.period$ -- 85
-call.type$ -- 22
-change.case$ -- 88
++ -- 72
+- -- 48
+* -- 154
+:= -- 892
+add.period$ -- 93
+call.type$ -- 24
+change.case$ -- 96
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 154
-empty$ -- 485
-format.name$ -- 44
-if$ -- 1050
+cite$ -- 24
+duplicate$ -- 168
+empty$ -- 529
+format.name$ -- 48
+if$ -- 1146
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 24
 missing$ -- 0
-newline$ -- 132
-num.names$ -- 44
-pop$ -- 177
+newline$ -- 144
+num.names$ -- 48
+pop$ -- 193
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 72
 quote$ -- 0
-skip$ -- 134
+skip$ -- 146
 stack$ -- 0
-substring$ -- 110
-swap$ -- 22
+substring$ -- 120
+swap$ -- 24
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 96
 warning$ -- 0
-while$ -- 44
-width$ -- 24
-write$ -- 260
+while$ -- 48
+width$ -- 26
+write$ -- 284

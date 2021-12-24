@@ -14,6 +14,12 @@
   2010.
 \newblock [Online; accessed 19-December-2021].
 
+\bibitem{damped_harmonic_oscillator}
+{beltoforion.de}.
+\newblock {Damped Harmonic Oscillator}.
+\newblock \url{https://beltoforion.de/en/harmonic_oscillator/}, 2015.
+\newblock [Online; accessed 24-December-2021].
+
 \bibitem{periodic_functions}
 {Bill Casselman}.
 \newblock {Periodic Functions}.
@@ -160,5 +166,13 @@ Robert Hooke.
   \url{https://archive.org/details/americanheritag00morr/page/969/mode/2up},
   1980.
 \newblock [Online; accessed 15-December-2021].
+
+\bibitem{critically_damped_harmonic_oscillator}
+{Wolfram MathWorld}.
+\newblock {Critically Damped Harmonic Oscillator}.
+\newblock
+  \url{https://mathworld.wolfram.com/CriticallyDampedSimpleHarmonicMotion.html},
+  2015.
+\newblock [Online; accessed 24-December-2021].
 
 \end{thebibliography}
