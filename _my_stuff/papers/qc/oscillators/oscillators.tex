@@ -168,14 +168,23 @@ F = ma
 
 \bigskip
 \noindent
-Now, if we set Equation \ref{eqn:hookes_law} equal to
-Equation \ref{eqn:newtons_2nd_law} we see that
+Now, balancing the Equation \ref{eqn:hookes_law} force
+with the Equation \ref{eqn:newtons_2nd_law} force
+gives us
+
+\begin{equation}
+ma = -kx
+\label{eqn:balancing_force}
+\end{equation}
+
+\noindent
+and so
 
 \begin{equation*}
 \begin{array}{llll}
 ma
 &=& -kx
-        &\qquad\qquad\mathrel{\#} \text{Balance Newton's force and Hooke's force} \\
+        &\qquad\qquad\mathrel{\#} \text{Equation \ref{eqn:balancing_force}} \\
 [7pt]
 &\Rightarrow& a = - \dfrac{k}{m} x
         &\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
@@ -193,7 +202,7 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.55 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
         \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)        
@@ -321,7 +330,7 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.40 \textwidth}{!} {																	% resize figure if you want
+  \resizebox{0.35 \textwidth}{!} {																	% resize figure if you want
   \begin{tikzpicture}
     \def \A {1.0}																					% x(t) = A cos (wt)
     \def \w {1.0}																					% x(t) = A cos (wt)
@@ -362,7 +371,7 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
   				coordinate [label={[draw,blue,thick,rectangle,font=\footnotesize,midway] {\color{black}{$\; x(t) = A \cos (\omega t) \; $}}}];
  \end{tikzpicture}
 }
-\caption{Simple Harmonic Motion Displacement Function}
+\caption{Simple Harmonic Oscillator Displacement Function}
 \label{fig:smh_displacement_function}
 \end{figure}
 
@@ -1067,7 +1076,7 @@ namely
             to [L=\(L\)] ++(3,0) 
             to [C=\(C\)] ++(0,-2)
             to []  (ref_gnd);
-       \draw [draw=none] (0,0) -- (3,0) node [midway,above] {$I$};								% draw current (I) and direction arrow
+       \draw [draw=none] (0,0) -- (3,0) node [midway,above] {$I$};									% draw current (I) and direction arrow
        \draw [black,thick, -latex] (1.00,-0.25) -- (2.00,-0.25) node [midway,below] {};
    \end{circuitikz}
   }																									% end \resizebox
@@ -1095,7 +1104,11 @@ V(t)     &-&& \text{denote the voltage \emph{increase} across the power source}
 \bigskip
 \noindent
 Then the voltage drop across the various components
-of the circuit is \cite{differential_equations_rlc_circuits}:
+of the circuit\footnote{In the following we use "dot"
+notation to represent the time derivative of $x$, i.e.
+$\dot{x} = \dfrac{dx}{dt}$, $\ddot{x} = \dfrac{d^2 x}{dt^2}$, 
+and so on.} 
+is \cite{differential_equations_rlc_circuits}:
 
 \medskip
 \begin{equation*}
@@ -1290,7 +1303,7 @@ and mass system
 \begin{array}{llll}
 ma 
 &=& - kx -b \dot{x} 
-		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:hookes_law} minus $b \dot{x}$ (the damping force)}	\\
+		&\qquad \qquad \mathrel{\#} \text{balance forces: Equation \ref{eqn:balancing_force} minus the damping force $b \dot{x}$}	\\
 [14pt]	
 &=& -b \dot{x} - kx 
 		&\qquad \qquad \mathrel{\#} \text{rearrange}	\\
@@ -1329,7 +1342,7 @@ is shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
 \par }
 
 
-\medskip
+\bigskip
 \bigskip
 \begin{figure}[H]
   \center{\includegraphics[scale=0.45,cfbox=black] {images/damped_harmonic_oscillator.png}}
@@ -1337,8 +1350,7 @@ is shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
   \label{fig:critically_damped_harmonic_oscillator}
 \end{figure}
 
-
-\bigskip
+\newpage
 \noindent
 For the damped small-angle pendulum system the equation of motion is
 
