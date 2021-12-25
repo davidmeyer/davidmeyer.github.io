@@ -1283,7 +1283,33 @@ damped spring and mass and pendulum systems, namely
 
 \bigskip
 \noindent
-As an example, notice that the equation of motion 
+As an example, consider that for the damped spring
+and mass system
+
+\begin{equation*}
+\begin{array}{llll}
+ma 
+&=& - kx -b \dot{x} 
+		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:hookes_law} minus $b \dot{x}$ (the damping force)}	\\
+[14pt]	
+&=& -b \dot{x} - kx 
+		&\qquad \qquad \mathrel{\#} \text{rearrange}	\\
+[14pt]	
+&\Rightarrow& ma + b \dot{x} + kx = 0
+		&\qquad \qquad \mathrel{\#} \text{subtract $-b \dot{x} - kx$ from both sides} \\
+[14pt]
+&\Rightarrow& a + \left (\dfrac{b}{m} \right )\dot{x} + \left (\dfrac{k}{m} \right)  x = 0
+		&\qquad \qquad \mathrel{\#} \text{divide through by $m$} \\
+[14pt]
+&\Rightarrow& \ddot{x} + \left ( \dfrac{b}{m}\right ) \dot{x} + \left (\dfrac{k}{m} \right ) x = 0
+		&\qquad \qquad \mathrel{\#} a = \ddot{x} \\
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we can see that equation of motion 
 for the damped spring and mass system is
 
 
@@ -1296,18 +1322,18 @@ for the damped spring and mass system is
 \noindent
 where $\bigg (\dfrac{b}{m} \bigg ) \dot{x}$ is a new term 
 that represents the damping force (e.g. resistance or friction).
-Notice that the resulting equation of motion, Equation \ref{eqn:damped_spring_and_mass},
-also has the same form as Equation \ref{eqn:damp_general_form}.
-The dynamics of the damped harmonic oscillator
-are shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
+Interestingly the resulting equation of motion, Equation \ref{eqn:damped_spring_and_mass},
+is of the same form as Equation \ref{eqn:damp_general_form}.
+The displacement function for the damped harmonic oscillator
+is shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
 \par }
 
 
 \medskip
 \bigskip
 \begin{figure}[H]
-  \center{\includegraphics[scale=0.40,cfbox=black] {images/damped_harmonic_oscillator.png}}
-  \caption{Damped Harmonic Oscillator Dynamics \cite{damped_harmonic_oscillator}}
+  \center{\includegraphics[scale=0.45,cfbox=black] {images/damped_harmonic_oscillator.png}}
+  \caption{Damped Harmonic Oscillator Displacement Function \cite{damped_harmonic_oscillator}}
   \label{fig:critically_damped_harmonic_oscillator}
 \end{figure}
 
@@ -1371,7 +1397,9 @@ and electrical systems are shown in Table \ref{tab:analogies}.
 
 \section*{Acknowledgements}
 Thanks to Chris Lonvick (lonvick@gmail.com) for his thoughtful 
-suggestions on Figure \ref{fig:simple_pendulum}. 
+suggestions on Figure \ref{fig:simple_pendulum}. Thanks also 
+to Dave Plonka for his comments on Table \ref{tab:analogies}.
+
 
 %
 %	LaTeX source on overleaf.com
