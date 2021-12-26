@@ -1285,20 +1285,38 @@ and so
 
 \bigskip
 \noindent
-This equation has the same general form as the 
-damped spring and mass and pendulum systems, 
-namely
+So the equation of motion for the RLC circuit is
+
+\medskip
+\begin{equation}
+\ddot{I} + \bigg (\dfrac{R}{L} \bigg ) \dot{I} + \bigg (\dfrac{1}{LC} \bigg ) I = 0
+\label{eqn:rlc_eom}
+\end{equation}
 
 \bigskip
+\noindent
+The general form of the equation of motion for
+damped harmonic oscillators is 
+
+\medskip
 \begin{equation}
 \ddot{\psi} + \beta \dot{\psi} + \omega_{0}^{2} \psi = 0
 \label{eqn:damp_general_form}
 \end{equation}
 
+\medskip
+\noindent
+and we can see that Equation \ref{eqn:rlc_eom} is an instance
+of Equation \ref{eqn:damp_general_form} with $\psi = I$, 
+$\beta = \dfrac{R}{L}$
+and $\omega_{0} = \sqrt{\dfrac{1}{LC}}$.
+
+
 \bigskip
 \noindent
-To see this, first consider the equation of motion for 
-the damped spring and mass system:
+Next, consider the equation of motion for 
+the damped spring and mass system. There
+we know that
 
 \begin{equation*}
 \begin{array}{llll}
@@ -1342,16 +1360,15 @@ The displacement function for the damped harmonic oscillator
 is shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
 \par }
 
-
-\bigskip
+\medskip
 \bigskip
 \begin{figure}[H]
-  \center{\includegraphics[scale=0.45,cfbox=black] {images/damped_harmonic_oscillator.png}}
+  \center{\includegraphics[scale=0.40,cfbox=black] {images/damped_harmonic_oscillator.png}}
   \caption{Damped Harmonic Oscillator Displacement Function \cite{damped_harmonic_oscillator}}
   \label{fig:critically_damped_harmonic_oscillator}
 \end{figure}
 
-\newpage
+
 \noindent
 For the damped small-angle pendulum case the equation of motion is
 
