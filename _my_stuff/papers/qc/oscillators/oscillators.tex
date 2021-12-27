@@ -937,11 +937,14 @@ Taking the derivative one more time we see that
 &=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} \Big ] - \dfrac{d}{dt} \Big [C_2 i \omega e^{-i \omega t} \Big ]		
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{derivative is a linear operator} \\
 [10pt]
+&=& C_1 i \omega \dfrac{d}{dt} \big [e^{i \omega t} \big ] - C_2 i \omega \dfrac{d}{dt} \big [e^{-i \omega t} \big ]		
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out $C_1, C_2, i$ and $\omega$ (not functions of $t$)} \\
+[10pt]
 &=& C_1 i \omega e^{i \omega t} (i \omega) - C_2 i \omega  e^{-i \omega t} (-i \omega)
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt} e^u = e^u \dfrac{du}{dt}$ with $u =i \omega t$ and $i^2 = -1$} \\
 [10pt]
 &=& i^2 C_1 \omega^2 e^{i \omega t} + i^2 C_2 \omega^2 e^{-i \omega t}
-		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$(-1) * (-1)  = + 1$, collect terms} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$(-1) * (-1)  = 1$, collect terms, rearrange} \\
 [10pt]
 &=& - C_1 \omega^2 e^{i \omega t} - C_2 \omega^2 e^{-i \omega t}
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} i^2 = -1 \\
