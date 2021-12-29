@@ -52,8 +52,30 @@
 \usepackage[oldvoltagedirection]{circuitikz}
 
 
+\usepackage{framed}
 
 \begin{document}
+
+\begin{figure}[H]
+\centering
+\begin{framed}
+\begin{equation*}
+\begin{array}{llll}
+f(x)
+&=& {\mathlarger{\mathlarger \sum\limits_{n=0}^{\infty}}} \dfrac{f^{(n)} (a)}{n!}(x-a)^n \\
+[20pt]
+&=& \dfrac{f^{(0)}(a)}{0!} (x-a)^0 + \dfrac{f^{(1)}(a)}{1!} (x-a)^1 + \dfrac{f^{(2)}(a)}{2!} (x-a)^2 + \dfrac{f^{(3)}(a)}{3!} (x-a)^3 + \cdots \\
+[15pt]
+&=& f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2} (x-a)^2 + \dfrac{f^{(3)}(a)}{6} (x-a)^3 + \dfrac{f^{(4)}(a)}{24} (x-a)^4 + \cdots 
+\end{array}
+\end{equation*}
+\end{framed}
+\caption{Taylor Series for $f(x)$ centered at $a$}
+\label{fig:taylor_series_centered_at_a}
+\end{figure}
+
+\bigskip
+\bigskip
 
 \begin{figure}[H]
    \centering
