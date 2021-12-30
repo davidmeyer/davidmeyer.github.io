@@ -1323,7 +1323,7 @@ we know that
 \begin{array}{llll}
 ma 
 &=& - kx -b \dot{x} 
-		&\qquad \qquad \mathrel{\#} \text{balance forces: Equation \ref{eqn:balancing_force} minus the damping force $b \dot{x}$}	\\
+		&\qquad \qquad \mathrel{\#} \text{balance forces: Equation \ref{eqn:balancing_force} minus the damping force $b \dot{x}$} \\
 [14pt]	
 &=& -b \dot{x} - kx 
 		&\qquad \qquad \mathrel{\#} \text{rearrange}	\\
@@ -1418,6 +1418,241 @@ and electrical systems are shown in Table \ref{tab:analogies}.
 
 \section{Quantum Harmonic Oscillators}
 \label{sec:quantum_harmonic_oscillators}
+Before diving into the structure and operation
+of the quantum harmonic oscillator, let's take
+a minute and look at the history of how we 
+got here. 
+
+
+\bigskip
+\noindent
+We pick up this story in 1851, when Gustav Kirchhoff met Robert Wilhelm Bunsen. 
+Both men had been interested in why heated objects glowed with characteristic 
+colors and intensities. Bunsen had just accepted a position at the University 
+of Heidelberg, and Kirchhoff eventually moved to Heidelberg in 1854, beginning
+a fruitful collaboration with Bunsen that resulted in the establishment of the 
+field of spectroscopy, which involves the analysis of the composition of chemical 
+compounds through the spectra they produce \cite{wiki:kirchoff, wiki:bunsen}.
+
+\bigskip
+\noindent
+Intrigued by the different colors produced when various
+substances were heated in a flame, Bunsen wanted to use the
+colors the colors to identify chemical elements and
+compounds. Broadening the concept, Kirchhoff suggested that
+Bunsen not only pay attention to the immediately visible colors
+but also that he study the spectra of color components produced
+by passing the light produced by each substance through a
+prism. Thus was the field of spectroscopy born.
+
+\bigskip
+\noindent
+In 1859, Kirchhoff noted that dark lines found in the Sun's
+spectrum were further darkened when the sunlight passes through a
+sodium compound heated by a bunsen burner. From this, he
+concluded that the original dark lines, called Fraunhofer lines
+after the scientist who discovered them, result from sodium in
+the Sun's atmosphere. This opened up a new technique for
+analyzing the chemical composition of stars \cite{bunsen_and_kirchoff}.
+
+\bigskip
+\noindent
+That same year Kirchhoff researched the manner in which
+radiation is emitted and absorbed by various substances, and
+formulated what is now known as Kirchoff's Law of Thermal
+Radiation \cite{kirchoffs_law_of_thermal_radiation}: In a 
+state of thermal equilibrium the radiation emitted by a 
+body is equal to the radiation absorbed by the body. By 1860, 
+Bunsen and Kirchhoff were able to assign distinct spectral 
+characteristics to a number of metals. Together they
+discovered cesium (1860) and rubidium (1861) while studying the
+chemical composition of the Sun via its spectral signature.
+
+\bigskip
+\noindent
+In 1862 Kirchoff introduced the concept of a "black body," a
+body that is both a perfect emitter and absorber of heat
+radiation. Later research into black body radiation was pivotal 
+in the the development of the quantum theories that emerged at the 
+beginning of the twentieth century. So how did the study
+of black bodies and  black body radiation lead to the development 
+of quantum mechanics? To understand this we'll first take a closer
+look at exactly what black bodies and black body
+radiation are.
+
+\subsection{So What Exactly are Black Bodies and Why are They Important?}
+\label{subsec:black_bodies}
+To start, recall that light itself is an electromagnetic wave.
+In other words, light is an electric field that is oscillating.
+So, if you place a charged particle in a ray of light
+that particle will feel and oscillating force. The charge
+carried by a particle is also the source of an electric field.
+So if the charged particle is oscillating, the electric
+field it generates will also oscillate, that is, the charged
+particle will emit light. Ok, but what is a black body?
+
+\bigskip
+\noindent
+First, when light is incident on a body, three things can happen:
+the body can \emph{reflect} some of all of the light, the body can
+\emph{transmit} some or all of the light, or the body can 
+\emph{absorb} some of all of the light. A body that only absorbs
+and does not reflect or transmit is called a black body. Any light
+of any wavelength that is incident on the black body will not
+be reflected and will not be transmitted; rather, it will
+disappear inside the body.
+
+\bigskip
+\noindent
+So what does it imply to say that light is absorbed by a 
+black body? Well, in both the wave and particle descriptions
+of light light is a carrier of energy. So when light is 
+absorbed by a body, it means that the energy carried by that
+light is absorbed by the body and the internal energy of
+the body increases. When light interacts with the surface
+of the body, the protons and electrons begin to oscillate
+because of the charger they carry (sound familiar? 
+see Section \ref{sec:smo}); that is, they gain
+kinetic energy. The bottom line is that the energy
+carried by the light is transferred to kinetic energy
+of the charged particles in the black body. Note that
+since the electron is much less massive than the proton
+it is the electrons that hold much of this (kinetic) 
+energy.
+
+\bigskip
+\noindent
+We know from statistical mechanics that the 
+temperature of a body $T$ is proportional
+to the average kinetic energy of the particles
+in the body, that is
+
+\begin{equation*}
+T_{\text{body}} \propto \overline{\text{KE}}_{\text{particles}}
+\end{equation*}
+
+\bigskip
+\noindent
+So when the black body absorbs light, the
+kinetic energy of its electrons ($\overline{\text{KE}}_{\text{particles}}$)
+increases and so the temperature of the body ($T_{\text{body}}$) increases. 
+Since the electrons of a black body which have temperature will oscillate 
+their electric field will also oscillate and as such they will emit light.
+This light is called \emph{black body radiation}.
+
+\bigskip
+\noindent
+So black bodies can be heated by the light that is incident on their
+surfaces, but they can also be heated by other processes, such as
+in stars where fusion provides the energy (somewhat paradoxically
+the brightest objects (stars) are also almost perfect black bodies).
+The effect on the electrons in the star, however, is the same: they
+gain kinetic energy, they move around, create oscillating electric
+fields, and light is emitted.
+
+\bigskip
+\noindent
+Next we can observe that the hotter the body is the 
+larger an electron's kinetic energy, and therefore
+the larger the changes in their electric fields.
+
+\begin{equation*}
+\begin{array}{llll}
+T_{\text{body}} \uparrow  
+&\Rightarrow& \overline{\text{KE}}_{\text{particles}} \uparrow
+		&\qquad \mathrel{\#} \text{increase in $T_{\text{body}}$ $\Rightarrow$ increase in average KE} \\
+[5pt]	
+&\Rightarrow& \overline{v}_{\text{electrons}} \uparrow
+		&\qquad \mathrel{\#} \text{increase in $\overline{\text{KE}} \Rightarrow$ increase in average velocity} \\
+[5pt]
+&\Rightarrow& \nabla \vec{E} \uparrow
+		&\qquad \mathrel{\#} \text{increase in $\overline{\text{KE}} \Rightarrow$ increase in their energy field ($\nabla \vec{E}$)} \\
+[5pt]			
+&\Rightarrow& P_{\text{light}} \uparrow 
+		&\qquad \mathrel{\#} \text{increase in $\vec{E}$ $\Rightarrow$ increase in the power of the light emitted ($P_{\text{light}}$)} \\
+[5pt]
+&\Rightarrow& P_{\text{light}} = f(T)
+		&\qquad \mathrel{\#} \text{the power of the light emitted from a black body is a function of its temperature}
+\end{array}
+\end{equation*}
+
+% \bigskip
+\noindent
+So what we have learned is there is a direct relationship between the temperature of 
+the surface of the black body and the intensity of the light it emits. This relationship
+is called Stefan-Boltzmann's Law and is typically written as 
+
+\begin{equation}
+P = \sigma A T^4
+\label{eqn:stefan_boltzmanns_law}
+\end{equation}
+
+\bigskip
+\noindent
+In words, Equation \ref{eqn:stefan_boltzmanns_law} says
+that the power ($P$) emitted by a black body is proportional
+to its area ($A$) and temperature to the forth power ($T^4$).
+The proportionality constant $\sigma$ is called
+Stefan-Boltzmann's constant and
+
+\begin{equation*}
+\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}
+\end{equation*}
+
+\bigskip
+\noindent
+Now would be a good time to remember that a black body
+is just a model; there is no such thing as a perfect
+black body; in reality objects do not absorb one 
+hundred percent of the incident light. Rather, in real
+bodies there is some reflection and transmission. Such
+a (real) body is called a \emph{grey body}. There is a
+quantity, emissivity,  which tells us how close a 
+grey body is to a theoretical black body.
+
+\begin{definition}
+{\bf Emissivity: } An object's emissivity, $e$, measures 
+how a grey body's behavior compares to a theoretical black body.
+\end{definition}
+
+\noindent
+Now we can calculate the power emitted by a grey body
+as follows 
+
+\begin{equation}
+P = e\sigma A T^4
+\label{eqn:grey_body_power}
+\end{equation}
+
+\medskip
+\noindent
+We can see that when the emissivity of an object is 
+equal to one ($e = 1$), the object is an ideal black
+body. When the emissivity is equal to zero ($e = 0$) 
+we call the object is ideal white body. Finally, if
+$0 < e < 1$ we call the object a grey body.
+
+\bigskip
+\noindent
+Interestingly, for humans
+
+\begin{equation*}
+\begin{array}{llll}
+e &=& 0.97								&\qquad \mathrel{\#} \text{humans are grey bodies that are almost black bodies} \\
+[5pt]
+T &=& 37^{\circ} \, C							&\qquad \mathrel{\#} \text{average human temperature is about $37^{\circ} \, C$} \\
+[5pt]
+P &=& e \sigma A T^4 \approx 810 W		& \qquad \mathrel{\#} \text{human emit about 810 W of electromagnetic radiation} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So humans do emit light, we just can't see it (it's in the infrared part of the spectrum).
+Surprisingly, animals and plants turn out to be have high emissivity (are good black 
+bodies), while minerals such as aluminium or silver have low emissivity (high
+reflectivity). This is why aluminium is used in household mirrors and 
+silver is used in high-grade mirrors.
 
 \section{Quantum Fields}
 \label{sec:quantum_fields}
