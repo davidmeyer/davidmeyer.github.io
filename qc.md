@@ -71,6 +71,8 @@ Quantum Teleportation
 
 
 <h2>Just for fun</h2>
+<li><a href="./2022.pdf" target="_blank" rel="noopener noreferrer">Happy New Year 2022!</a>
+<br>
 <li><a href="./age.pdf" target="_blank" rel="noopener noreferrer">What is the difference in our ages?</a>
 <br>
 <li><a href="./2021.pdf" target="_blank" rel="noopener noreferrer">Happy New Year 2021!</a>
@@ -82,7 +84,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 12.08.2021 by dmm@1-4-5.net
+<i>Last Update: 01.01.2022 by dmm@1-4-5.net
 
 
 
