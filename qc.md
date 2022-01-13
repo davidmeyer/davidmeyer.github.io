@@ -8,6 +8,12 @@
 
 <h2>Notes on various mathematical topics</h2>
 
+
+<li><a href="./pi_to_the_pi.pdf" target="_blank" 
+    rel="noopener noreferrer">
+Is There A Closed Form Expression for \pi^\pi?</a>
+<br>
+
 <li><a href="./oscillators.pdf" target="_blank" 
     rel="noopener noreferrer">
 A Few Notes on Harmonic Oscillators and Fields (WIP)</a>
