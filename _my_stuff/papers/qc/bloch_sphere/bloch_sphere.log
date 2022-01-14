@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  13 AUG 2021 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  14 JAN 2022 08:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1042,18 +1042,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 392.
 
 [8] [9] [10] [11]
-Overfull \hbox (12.14537pt too wide) detected at line 622
+Overfull \hbox (12.14537pt too wide) detected at line 623
 [] \OMS/cmsy/m/n/10.95 
  [] \OT1/cmr/m/n/10.95 = [] = [] = []
  []
 
 [12] [13] [14]
-Overfull \hbox (5.6038pt too wide) detected at line 742
+Overfull \hbox (5.6038pt too wide) detected at line 743
 []
  []
 
 [15]
-Overfull \hbox (26.18526pt too wide) detected at line 786
+Overfull \hbox (26.18526pt too wide) detected at line 787
 []
  []
 
@@ -1127,7 +1127,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bloch_sphere.pdf (18 pages, 302660 bytes).
+Output written on bloch_sphere.pdf (18 pages, 302399 bytes).
 PDF statistics:
  343 PDF objects out of 1000 (max. 8388607)
  275 compressed objects within 3 object streams
