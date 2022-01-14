@@ -39,6 +39,7 @@
 \usepackage{relsize}
 
 
+
 \title{{\Huge $\pi^\pi = \; ?$}}
 \author{David Meyer \\ \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net}}
 \date{Last update: \today}
@@ -49,62 +50,70 @@
 
 \large
 \noindent
-How can we find a nice expression (whatever that means) for $\pi^\pi$? 
-The first thing we might do is to consider what $x^x$ (and so $\pi^\pi$) 
-might mean. Well, in general $a^x$ is defined as $e^{x \ln a}$ for positive 
-$a$ since 
+How can we find an expression for $\pi^\pi$? The first thing we might 
+do is to consider what $x^x$ might mean. We know that in general 
+$a^x = e^{x \ln a}$ for positive $a$, since
 
 \bigskip
 \begin{equation*}
 \begin{array}{llll}
-\ln a^x 
-&=& x \ln a 									&\qquad \qquad \mathrel{\#} \text{power rule for logarithms} \\
+y
+&=& a^x											&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{define $y$} \\
 [10pt]
-&\Rightarrow& e^{\ln a^x} = e^{x \ln a}			&\qquad \qquad \mathrel{\#} \text{exponentiate both sides} \\
+&\Rightarrow& \ln y = \ln a^x					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{take the log of both sides} \\
 [10pt]
-&\Rightarrow& a^x = e^{x \ln a}					&\qquad \qquad \mathrel{\#} e^{\ln x} = x\\
+&\Rightarrow& \ln y = x \ln a 					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\ln a^x = x \ln a$ (power rule for logarithms)} \\
+[10pt]
+&\Rightarrow& e^{\ln y} = e^{x \ln a}			&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{exponentiate both sides} \\
+[10pt]
+&\Rightarrow& y = e^{x \ln a}					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} e^{\ln y} = y \\
+[10pt]
+&\Rightarrow& a^x = e^{x \ln a}					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} y = a^x
 \end{array}
 \end{equation*}
 
+\smallskip
 \bigskip
 \noindent
-Using the same reasoning for positive $x$ we have $x^x = e^{x \ln x}$. If we 
-set $x = \pi$ then we get 
+Using the same reasoning we have $x^x = e^{x \ln
+x}$ for $x > 0$. Setting $x = \pi$ we get
 
+{\Large
 \begin{equation}
 {\displaystyle \pi^{\pi} = e^{\pi \ln \pi}}
 \label{eqn:pi_to_the_pi}
-\end{equation}
+\end{equation}}
 
-\bigskip
 \noindent
-All good, but what is $e^{\pi \ln \pi}$? We can use a Maclaurin series 
-to evaluate this expression as follows:
+All good, but what is $e^{\pi \ln \pi}$? We can use a Maclaurin
+series to evaluate this expression as follows:
 
 \medskip
 \begin{equation*}
 \begin{array}{llll}
 e^x
 &=& {\displaystyle \sum\limits_{n=0}^{\infty} \dfrac{x^n}{n!}}
-	&\qquad \qquad \qquad \mathrel{\#} \text{Maclaurin (Taylor) series for $e^x$} \\
-[20pt]
+	&\qquad \qquad \mathrel{\#} \text{Maclaurin (Taylor) series for $e^x$} \\
+[18pt]
 &\Rightarrow& {\displaystyle e^{\pi \ln \pi} = \sum\limits_{n=0}^{\infty} \dfrac{(\pi \ln\pi)^n}{n!}}	
-		&\qquad \qquad \qquad \mathrel{\#} \text{set $x = \pi \ln \pi$} \\
+		&\qquad \qquad \mathrel{\#} \text{set $x = \pi \ln \pi$} \\
 [20pt]
 &\Rightarrow& {\displaystyle e^{\pi \ln \pi} =\sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}} 		
-	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
+	&\qquad \qquad \mathrel{\#} \text{simplify} \\
 [20pt]
 &\Rightarrow& {\displaystyle \pi^\pi = \sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}}													
-	&\qquad \qquad \qquad \mathrel{\#} \text{$e^{\pi \ln \pi} = \pi^\pi$ (Equation (\ref{eqn:pi_to_the_pi}))}
+	&\qquad \qquad \mathrel{\#} \text{$e^{\pi \ln \pi} = \pi^\pi$ (Equation (\ref{eqn:pi_to_the_pi}))}
  
 \end{array}
 \end{equation*}
 
+
+\medskip
 \bigskip
 \noindent
 So we get the cool result that
 
-{\Large
+{\large
 \begin{equation*}
 {\mathlarger \pi^\pi = \sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}}
 \end{equation*}}

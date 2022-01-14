@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  29 DEC 2021 07:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  14 JAN 2022 05:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1011,6 +1011,14 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 (/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip62
+\fb@frw=\dimen320
+\fb@frh=\dimen321
+\FrameRule=\dimen322
+\FrameSep=\dimen323
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2021/03/14{} The CircuiTikz circuit drawing package version
  1.3.2
@@ -1026,34 +1034,34 @@ File: pgfmodulebending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineart
 ransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgftransformnonlinearflatness=\dimen320
+\pgftransformnonlinearflatness=\dimen324
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvili
 near.code.tex
 File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@curvilinear@time@a=\dimen321
-\pgf@curvilinear@length@a=\dimen322
-\pgf@curvilinear@length@b=\dimen323
-\pgf@curvilinear@length@c=\dimen324
-\pgf@curvilinear@length@d=\dimen325
+\pgf@curvilinear@time@a=\dimen325
+\pgf@curvilinear@length@a=\dimen326
+\pgf@curvilinear@length@b=\dimen327
+\pgf@curvilinear@length@c=\dimen328
+\pgf@curvilinear@length@d=\dimen329
 )
-\pgf@arrows@the@rigidity=\dimen326
+\pgf@arrows@the@rigidity=\dimen330
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
 \pgf@circ@count@a=\count340
 \pgf@circ@count@b=\count341
 \pgf@circ@count@c=\count342
-\pgf@circ@res@up=\dimen327
-\pgf@circ@res@down=\dimen328
-\pgf@circ@res@zero=\dimen329
-\pgf@circ@res@left=\dimen330
-\pgf@circ@res@right=\dimen331
-\pgf@circ@res@other=\dimen332
-\pgf@circ@res@step=\dimen333
-\pgf@circ@res@temp=\dimen334
-\pgf@circ@Rlen=\dimen335
-\pgf@circ@scaled@Rlen=\dimen336
-\pgfstartlinewidth=\dimen337
+\pgf@circ@res@up=\dimen331
+\pgf@circ@res@down=\dimen332
+\pgf@circ@res@zero=\dimen333
+\pgf@circ@res@left=\dimen334
+\pgf@circ@res@right=\dimen335
+\pgf@circ@res@other=\dimen336
+\pgf@circ@res@step=\dimen337
+\pgf@circ@res@temp=\dimen338
+\pgf@circ@Rlen=\dimen339
+\pgf@circ@scaled@Rlen=\dimen340
+\pgfstartlinewidth=\dimen341
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
@@ -1068,35 +1076,29 @@ File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.te
 x) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
-\pgfcirc@labelshift=\dimen338
+\pgfcirc@labelshift=\dimen342
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip62
-\fb@frw=\dimen339
-\fb@frh=\dimen340
-\FrameRule=\dimen341
-\FrameSep=\dimen342
-) (./graphs1.aux)
+(./graphs1.aux)
 \openout1 = `graphs1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count344
 \scratchdimen=\dimen343
@@ -1111,8 +1113,37 @@ LaTeX Font Info:    ... okay on input line 57.
 \everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -1167,10 +1198,10 @@ Dictionary: translator-basic-dictionary, Language: English
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
 graphs1.aux) ) 
 Here is how much of TeX's memory you used:
- 45805 strings out of 478994
- 1256475 string characters out of 5858184
- 1886501 words of memory out of 5000000
- 62560 multiletter control sequences out of 15000+600000
+ 46246 strings out of 478994
+ 1264356 string characters out of 5858184
+ 1894546 words of memory out of 5000000
+ 62973 multiletter control sequences out of 15000+600000
  413575 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,22n,116p,791b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
