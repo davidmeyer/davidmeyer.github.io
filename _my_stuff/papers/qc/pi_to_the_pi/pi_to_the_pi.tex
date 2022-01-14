@@ -52,23 +52,23 @@
 \noindent
 Can we find an expression for $\pi^\pi$? The first thing 
 we might do is to consider what we know about $x^x$. We 
-know that $a^x = e^{x \ln a}$ for positive $a$ since
+do know that $a^x = e^{x \ln a}$ for positive $a$, since
 
 \medskip
 \begin{equation*}
 \begin{array}{llll}
 y
-&=& a^x											&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{define $y$} \\
+&=& a^x											&\qquad \qquad \qquad \qquad \mathrel{\#} \text{define $y$} \\
 [10pt]
-&\Rightarrow& \ln y = \ln a^x					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{take the log of both sides} \\
+&\Rightarrow& \ln y = \ln a^x					&\qquad \qquad \qquad \qquad \mathrel{\#} \text{take the log of both sides} \\
 [10pt]
-&\Rightarrow& \ln y = x \ln a 					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\ln a^x = x \ln a$ (power rule for logarithms)} \\
+&\Rightarrow& \ln y = x \ln a 					&\qquad \qquad \qquad \qquad \mathrel{\#} \text{power rule for logarithms} \\
 [10pt]
-&\Rightarrow& e^{\ln y} = e^{x \ln a}			&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$x = y \Rightarrow e^x = e^y$ (exponentiate both sides)} \\
+&\Rightarrow& e^{\ln y} = e^{x \ln a}			&\qquad \qquad \qquad \qquad \mathrel{\#} \text{exponentiate both sides} \\
 [10pt]
-&\Rightarrow& y = e^{x \ln a}					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} e^{\ln y} = y \\
+&\Rightarrow& y = e^{x \ln a}					&\qquad \qquad \qquad \qquad \mathrel{\#} e^{\ln y} = y \\
 [10pt]
-&\Rightarrow& a^x = e^{x \ln a}					&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} y = a^x
+&\Rightarrow& a^x = e^{x \ln a}					&\qquad \qquad \qquad \qquad \mathrel{\#} y = a^x
 \end{array}
 \end{equation*}
 
@@ -93,16 +93,16 @@ series to evaluate this expression as follows:
 \begin{array}{llll}
 e^x
 &=& {\displaystyle \sum\limits_{n=0}^{\infty} \dfrac{x^n}{n!}}
-	&\qquad \qquad \mathrel{\#} \text{Maclaurin (Taylor) series for $e^x$} \\
+	&\qquad \qquad \qquad \mathrel{\#} \text{Maclaurin series for $e^x$} \\
 [12pt]
 &\Rightarrow& {\displaystyle e^{\pi \ln \pi} = \sum\limits_{n=0}^{\infty} \dfrac{(\pi \ln\pi)^n}{n!}}	
-		&\qquad \qquad \mathrel{\#} \text{set $x = \pi \ln \pi$} \\
+		&\qquad \qquad \qquad \mathrel{\#} \text{set $x = \pi \ln \pi$} \\
 [15pt]
 &\Rightarrow& {\displaystyle e^{\pi \ln \pi} =\sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}} 		
-	&\qquad \qquad \mathrel{\#} \text{simplify} \\
+	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
 [15pt]
 &\Rightarrow& {\displaystyle \pi^\pi = \sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}}													
-	&\qquad \qquad \mathrel{\#} \text{$e^{\pi \ln \pi} = \pi^\pi$ (Equation (\ref{eqn:pi_to_the_pi}))}
+	&\qquad \qquad \qquad \mathrel{\#} \text{$e^{\pi \ln \pi} = \pi^\pi$ (Equation (\ref{eqn:pi_to_the_pi}))}
  
 \end{array}
 \end{equation*}
