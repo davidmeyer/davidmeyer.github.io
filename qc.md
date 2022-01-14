@@ -11,7 +11,7 @@
 
 <li><a href="./pi_to_the_pi.pdf" target="_blank" 
     rel="noopener noreferrer">
-Is There A Closed Form Expression for \pi^\pi?</a>
+\pi^\pi = ?</a>
 <br>
 
 <li><a href="./oscillators.pdf" target="_blank" 
