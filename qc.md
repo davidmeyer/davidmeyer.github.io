@@ -10,7 +10,7 @@
 
 <li><a href="./golden_ratio.pdf"" target="_blank" 
     rel="noopener noreferrer">
-An Interesting Integral Involving The Golden Ratio \phi</a>
+An Interesting Integral Involving The Golden Ratio</a>
 <br>
 
 
