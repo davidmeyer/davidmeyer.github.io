@@ -8,11 +8,10 @@
 
 <h2>Notes on various mathematical topics</h2>
 
-<li><a href="./golden_ratio.pdf"" target="_blank" 
+<li><a href="./golden_ratio.pdf" target="_blank" 
     rel="noopener noreferrer">
 An Interesting Integral Involving The Golden Ratio</a>
 <br>
-
 
 <li><a href="./pi_to_the_pi.pdf" target="_blank" 
     rel="noopener noreferrer">
