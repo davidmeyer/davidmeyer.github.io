@@ -8,6 +8,11 @@
 
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./golden_ratio.pdf"" target="_blank" 
+    rel="noopener noreferrer">
+An Interesting Integral Involving The Golden Ratio \phi</a>
+<br>
+
 
 <li><a href="./pi_to_the_pi.pdf" target="_blank" 
     rel="noopener noreferrer">
@@ -92,7 +97,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 01.13.2022 by dmm@1-4-5.net
+<i>Last Update: 01.23.2022 by dmm@1-4-5.net
 
 
 

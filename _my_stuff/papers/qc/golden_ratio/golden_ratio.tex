@@ -1,0 +1,123 @@
+\documentclass[11pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage{geometry}                                   % See geometry.pdf to learn the layout options
+\geometry{margin=0.50in}
+\geometry{letterpaper}                                  % ... or a4paper or a5paper or ... 
+\usepackage{setspace}
+\usepackage{mathtools}                                  % \coloneqq
+\usepackage{graphicx}
+%
+%	math stuff
+%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{relsize}
+
+
+
+
+\title{An Interesting Integral Involving The Golden Ratio $\phi$}
+\author{David Meyer \\ \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net}}
+\date{Last update: \today}
+
+
+\begin{document}
+\maketitle
+\noindent
+Consider the following equality:
+
+\begin{equation}
+\ln \phi = \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} dx
+\label{eqn:lnphi}
+\end{equation}
+
+\bigskip
+\noindent
+To see why Equation (\ref{eqn:lnphi}) holds, first parameterize Equation (\ref{eqn:lnphi}) with 
+$x = \tan y$. Then $dx = \sec^2 y \, dy$ and $\sqrt{x^{2}+1} = \sec y$. 
+Using this parameterization we can see that
+
+
+\begin{equation*}
+\begin{array}{rcll} 
+% \ln \phi 
+{\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} dx} 
+		% &\; \mathrel{\#} \text{Want to show this (Equation (\ref{eqn:lnphi}))} \\
+&=& {\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{\sec^2 y}{\sec y} dy}			
+		&\; \mathrel{\#} \text{use above parameterization} \\
+[10pt]
+&=&{\displaystyle \int_{0}^{\frac{1}{2}} \sec y} \,  dy								
+		&\; \mathrel{\#} \text{simplify} \\
+[10pt]
+&=&{\displaystyle \int_{\arctan 0}^{\arctan \frac{1}{2}} \sec y} \,  dy			
+		&\; \mathrel{\#} x = \tan y \Rightarrow y = \arctan x \\
+[10pt]
+&=&{\displaystyle \int_{0}^{\arctan \frac{1}{2}} \sec y} \, dy			
+		&\; \mathrel{\#} \arctan 0 = 0 \\
+[10pt]
+&=&{\displaystyle \ln | \sec y + \tan y | \Big |_{0}^{\arctan \frac{1}{2}}}			
+		&\; \mathrel{\#} \text{integral of $\sec y \, dy$ \cite{integral_of_secant} + FToC} \\
+[10pt]
+&=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |\sec (0) + \tan (0) |
+		&\; \mathrel{\#} \text{expand previous line} \\
+[10pt]
+&=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |1 + 0 |
+		&\; \mathrel{\#} \text{$\sec(0) = 1$ and $\tan(0) = 0$} \\
+[10pt]
+&=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - 0
+		&\; \mathrel{\#} \ln | 1 + 0| = \ln 1 = 0 \\
+[10pt]
+&=& \ln | \sec (\arctan \frac{1}{2}) + \frac{1}{2} |
+		&\; \mathrel{\#} \text{$\tan(\arctan x) = x$ and $x - 0 = x$} \\
+[10pt]
+&=& \ln \Big | \sqrt{(\frac{1}{2})^2 + 1} + \frac{1}{2} \Big |
+		&\; \mathrel{\#} \text{$\sec({\arctan x}) = \sqrt{x^2 +1}$} \\
+[10pt]
+&=& \ln \Big | \sqrt{\frac{5}{4}} + \frac{1}{2} \Big |
+		&\; \mathrel{\#} \text{$\sec({\arctan x}) = \sqrt{x^2 +1}$} \\
+[10pt]
+&=& \ln \Big | \frac{1 + \sqrt{5}}{2} \Big |
+		&\; \mathrel{\#} \text{$\sec({\arctan x}) = \sqrt{x^2 +1}$} \\
+[10pt]
+&=& \ln \phi
+		&\; \mathrel{\#} \phi =  \frac{1 + \sqrt{5}}{2}
+\end{array}
+\end{equation*}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+
+\end{document} 
