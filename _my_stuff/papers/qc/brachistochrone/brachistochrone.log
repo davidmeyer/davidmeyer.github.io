@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 JAN 2022 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  26 JAN 2022 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -827,6 +827,10 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip54
 \dth@everypar=\toks47
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/esvect.sty
+Package: esvect 
+\symesvector=\mathgroup4
+)
 \c@thm=\count301
 \c@definition=\count302
 \c@proposition=\count303
@@ -841,20 +845,20 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 (./brachistochrone.aux)
 \openout1 = `brachistochrone.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -915,66 +919,69 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-[1
+LaTeX Font Info:    Trying to load font information for U+esvect on input line 
+58.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
+File: uesvect.fd 
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<images/galileo.png, id=22, 603.25375pt x 589.20125pt>
+<images/galileo.png, id=23, 603.25375pt x 589.20125pt>
 File: images/galileo.png Graphic file (type png)
 <use images/galileo.png>
-Package pdftex.def Info: images/galileo.png  used on input line 172.
+Package pdftex.def Info: images/galileo.png  used on input line 173.
 (pdftex.def)             Requested size: 603.25227pt x 589.1998pt.
-<images/cycloid_coordinates.png, id=24, 361.35pt x 333.245pt>
+<images/cycloid_coordinates.png, id=25, 361.35pt x 333.245pt>
 File: images/cycloid_coordinates.png Graphic file (type png)
 <use images/cycloid_coordinates.png>
-Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 287
+Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 288
 .
 (pdftex.def)             Requested size: 216.81168pt x 199.94853pt.
+ [2 <./images/galileo.png>]
 
-[2 <./images/galileo.png>]
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 326.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 328.
+LaTeX Warning: Command \textendash invalid in math mode on input line 327.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 328.
+LaTeX Warning: Command \textendash invalid in math mode on input line 329.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 335.
+LaTeX Warning: Command \textendash invalid in math mode on input line 329.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 337.
+LaTeX Warning: Command \textendash invalid in math mode on input line 336.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 337.
+LaTeX Warning: Command \textendash invalid in math mode on input line 338.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 343.
+LaTeX Warning: Command \textendash invalid in math mode on input line 338.
 
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 344.
 
 
-Overfull \hbox (16.1454pt too wide) detected at line 383
+LaTeX Warning: Command \textendash invalid in math mode on input line 345.
+
+
+Overfull \hbox (16.1454pt too wide) detected at line 384
 []
  []
 
 [3 <./images/cycloid_coordinates.png>] [4] [5] [6]
-Overfull \hbox (28.82147pt too wide) detected at line 753
+Overfull \hbox (28.82147pt too wide) detected at line 754
 []
  []
 
 [7]
-Overfull \hbox (18.88692pt too wide) detected at line 822
+Overfull \hbox (18.88692pt too wide) detected at line 823
 []
  []
 
 [8]
-<images/cycloid1.png, id=54, 711.65875pt x 338.26375pt>
+<images/cycloid1.png, id=55, 711.65875pt x 338.26375pt>
 File: images/cycloid1.png Graphic file (type png)
 <use images/cycloid1.png>
-Package pdftex.def Info: images/cycloid1.png  used on input line 862.
+Package pdftex.def Info: images/cycloid1.png  used on input line 863.
 (pdftex.def)             Requested size: 284.65845pt x 135.30309pt.
  [9 <./images/cycloid1.png>] [10] (./brachistochrone.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 38--44
@@ -984,13 +991,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--44
 
 [11]) [12] (./brachistochrone.aux) ) 
 Here is how much of TeX's memory you used:
- 28505 strings out of 478994
- 723845 string characters out of 5858184
+ 28559 strings out of 478994
+ 724670 string characters out of 5858184
  1194533 words of memory out of 5000000
- 45504 multiletter control sequences out of 15000+600000
- 412390 words of font info for 58 fonts, out of 8000000 for 9000
+ 45546 multiletter control sequences out of 15000+600000
+ 413070 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,19n,116p,732b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,20n,116p,732b,847s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/e
 nc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
@@ -1011,11 +1018,12 @@ r8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on brachistochrone.pdf (12 pages, 645923 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
+Output written on brachistochrone.pdf (12 pages, 647562 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
