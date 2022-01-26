@@ -1,9 +1,9 @@
-\documentclass[11pt, oneside]{article}
+\documentclass{article}
 %
 %   get various packages
 %
 \usepackage{geometry}                                   % See geometry.pdf to learn the layout options
-\geometry{margin=0.50in}
+\geometry{margin=1.0in}
 \geometry{letterpaper}                                  % ... or a4paper or a5paper or ... 
 \usepackage{setspace}
 \usepackage{mathtools}                                  % \coloneqq
@@ -61,7 +61,9 @@ Consider the following equality:
 \bigskip
 \noindent
 To see why Equation (\ref{eqn:lnphi}) holds, first parameterize with 
-$x = \tan y$ (so $dx = \sec^2 y \: dy$) and $\sqrt{x^{2}+1} = \sec y$. Then 
+$x = \tan y$ and $\sqrt{x^{2}+1} = \sec y$. So $dx = \sec^2 y \: dy$, 
+$y = \arctan x$ and $\sec y = \sec (\arctan x) = \sqrt{x^{2}+1}$.
+Now we can see that
 
 \begin{equation*}
 \begin{array}{rcll} 
