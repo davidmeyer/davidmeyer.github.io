@@ -41,7 +41,7 @@
 
 
 
-\title{An Interesting Integral Involving The Golden Ratio}
+\title{An Interesting Integral Involving The Golden Ratio $\phi$}
 \author{David Meyer \\ \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net}}
 \date{Last update: \today}
 
@@ -60,9 +60,10 @@ Consider the following equality:
 
 \bigskip
 \noindent
-To see why Equation (\ref{eqn:lnphi}) holds, first parameterize with 
-$x = \tan y$ and $\sqrt{x^{2}+1} = \sec y$. Then $dx = \sec^2 y \: dy$, 
-$y = \arctan x$ and $\sec y = \sec (\arctan x) = \sqrt{x^{2}+1}$.
+Why does Equation (\ref{eqn:lnphi}) hold? To see why, first parameterize with 
+$x = \tan y$ and $\sqrt{x^{2}+1} = \sec y$. This parameterization means that
+$dx = \sec^2 y \: dy$, $y = \arctan x$ and 
+$\sec y = \sec (\arctan x) = \sqrt{x^{2}+1}$.
 Now we can see that
 
 \begin{equation*}
@@ -77,19 +78,19 @@ Now we can see that
 		&\: \mathrel{\#} \text{simplify} \\
 [12pt]
 &=&{\displaystyle \int_{\arctan 0}^{\arctan \frac{1}{2}} \sec y} \:  dy			
-		&\: \mathrel{\#} x = \tan y \Rightarrow y = \arctan x \\
+		&\: \mathrel{\#} \text{limits of integration: $y = \arctan x$} \\
 [12pt]
 &=&{\displaystyle \int_{0}^{\arctan \frac{1}{2}} \sec y} \: dy			
 		&\: \mathrel{\#} \arctan 0 = 0 \\
 [12pt]
 &=&{\displaystyle \ln | \sec y + \tan y | \Big |_{0}^{\arctan \frac{1}{2}}}			
-		&\: \mathrel{\#} \text{integral of $\sec y \, dy$ \cite{integral_of_secant} + FToC} \\
+		&\: \mathrel{\#} \text{integral of $\sec y \; dy$ \cite{integral_of_secant} and the FToC} \\
 [12pt]
-&=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |\sec (0) + \tan (0) |
+&=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |\sec 0 + \tan 0 |
 		&\: \mathrel{\#} \text{expand previous line} \\
 [12pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |1 + 0 |
-		&\: \mathrel{\#} \text{$\sec(0) = 1$ and $\tan(0) = 0$} \\
+		&\: \mathrel{\#} \text{$\sec 0 = 1$ and $\tan 0 = 0$} \\
 [12pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - 0
 		&\: \mathrel{\#} \ln | 1 + 0| = \ln 1 = 0 \\
