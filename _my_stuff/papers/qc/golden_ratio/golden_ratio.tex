@@ -68,45 +68,46 @@ Now we can see that
 
 \begin{equation*}
 \begin{array}{rcll} 
-% \ln \phi 
 {\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} \:  dx} 
-		% &\: \mathrel{\#} \text{Want to show this (Equation (\ref{eqn:lnphi}))} \\
 &=& {\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{\sec^2 y}{\sec y} \:  dy}			
 		&\: \mathrel{\#} \text{use above parameterization} \\
-[12pt]
+[10pt]
 &=&{\displaystyle \int_{0}^{\frac{1}{2}} \sec y} \:  dy								
-		&\: \mathrel{\#} \text{simplify} \\
-[12pt]
+		&\: \mathrel{\#} \dfrac{\sec^2 y}{\sec y} = \sec y \\
+[10pt]
 &=&{\displaystyle \int_{\arctan 0}^{\arctan \frac{1}{2}} \sec y} \:  dy			
 		&\: \mathrel{\#} \text{limits of integration: $y = \arctan x$} \\
-[12pt]
+[10pt]
 &=&{\displaystyle \int_{0}^{\arctan \frac{1}{2}} \sec y} \: dy			
 		&\: \mathrel{\#} \arctan 0 = 0 \\
-[12pt]
+[10pt]
 &=&{\displaystyle \ln | \sec y + \tan y | \Big |_{0}^{\arctan \frac{1}{2}}}			
 		&\: \mathrel{\#} \text{integral of $\sec y \; dy$ \cite{integral_of_secant} and the FToC} \\
-[12pt]
+[10pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |\sec 0 + \tan 0 |
 		&\: \mathrel{\#} \text{expand previous line} \\
-[12pt]
+[10pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |1 + 0 |
 		&\: \mathrel{\#} \text{$\sec 0 = 1$ and $\tan 0 = 0$} \\
-[12pt]
+[10pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - 0
 		&\: \mathrel{\#} \ln | 1 + 0| = \ln 1 = 0 \\
-[12pt]
+[10pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \frac{1}{2} |
 		&\: \mathrel{\#} \text{$\tan(\arctan x) = x$ and $x - 0 = x$} \\
-[12pt]
+[10pt]
 &=& \ln \Big | \sqrt{\left (\frac{1}{2} \right )^{\mathsmaller 2} + 1} + \frac{1}{2} \Big |
 		&\: \mathrel{\#} \text{$\sec({\arctan x}) = \sqrt{x^2 +1}$} \\
-[12pt]
+[10pt]
+&=& \ln \Big | \sqrt{\frac{1}{4} + 1} + \frac{1}{2} \Big |
+		&\: \mathrel{\#} {\left ( \dfrac{1}{2} \right ) }^2 = \dfrac{1}{4}\\
+[10pt]
 &=& \ln \Big | \sqrt{\frac{5}{4}} + \frac{1}{2} \Big |
-		&\: \mathrel{\#} \text{simplify} \\
-[12pt]
+		&\: \mathrel{\#}  \sqrt{\frac{1}{4} + 1} = \sqrt{\frac{1}{4} + \frac{4}{4}} = \sqrt{\frac{5}{4}} \\
+[10pt]
 &=& \ln \Big | \frac{1 + \sqrt{5}}{2} \Big |
-		&\: \mathrel{\#} \text{more simplification} \\
-[12pt]
+		&\: \mathrel{\#} \sqrt{\frac{5}{4}} = \frac{\sqrt{5}}{2} \\
+[10pt]
 &=& \ln \phi
 		&\: \mathrel{\#} \phi =  \frac{1 + \sqrt{5}}{2}
 \end{array}
