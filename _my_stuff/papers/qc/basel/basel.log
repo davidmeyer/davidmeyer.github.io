@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  7 MAR 2022 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  7 MAR 2022 09:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -690,7 +690,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 137.
 
 
-Overfull \hbox (76.24562pt too wide) detected at line 158
+Overfull \hbox (43.5813pt too wide) detected at line 158
 []
  []
 
@@ -724,12 +724,12 @@ Overfull \hbox (43.833pt too wide) detected at line 228
  []
 
 
-Overfull \hbox (83.44533pt too wide) detected at line 255
+Overfull \hbox (76.7536pt too wide) detected at line 255
 []
  []
 
 [3] [4] [5] [6]
-Overfull \hbox (15.16455pt too wide) detected at line 473
+Overfull \hbox (8.47282pt too wide) detected at line 473
 []
  []
 
@@ -775,16 +775,16 @@ ikipedia . org / w / index . php ? title = Weierstrass _
 
 ) [9] (./basel.aux)
 Package rerunfilecheck Info: File `basel.out' has not changed.
-(rerunfilecheck)             Checksum: 74840431204FA4557E08714CC23B6021;1409.
+(rerunfilecheck)             Checksum: E91808C52001CA6D576AB02DBD734CD6;1377.
  ) 
 Here is how much of TeX's memory you used:
  15921 strings out of 478994
  275303 string characters out of 5858184
- 598058 words of memory out of 5000000
+ 597056 words of memory out of 5000000
  33094 multiletter control sequences out of 15000+600000
  419164 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,77p,440b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,77p,425b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -812,7 +812,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on basel.pdf (9 pages, 219385 bytes).
+Output written on basel.pdf (9 pages, 219073 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams

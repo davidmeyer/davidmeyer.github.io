@@ -112,20 +112,20 @@ the Basel problem is $\zeta(2)$.
 \label{sec:eulers_solution}
 So how did Euler solve the Basel problem? The summary is that
 Euler's extraordinary mathematical intuition led him to consider
-the Maclauren series \cite{wiki:taylor} for $\sin (x)$ and to
+the Maclauren series \cite{wiki:taylor} for $\sin x$ and to
 compare its coefficients to the coefficients of a polynomial
-constructed from the zeros of $\sin (x)$.  In particular, he
+constructed from the zeros of $\sin x$.  In particular, he
 reasoned that the coefficients of the Maclaurin series and the
 polynomial must be equal for equal powers of $x$.
 
 \bigskip
 \noindent
 This approach seems practical given that we know the Maclaurin
-series for $\sin (x)$, we know the zeros of $\sin (x)$, and because
+series for $\sin x$, we know the zeros of $\sin x$, and because
 the Fundamental Theorem of Algebra \cite{wiki:ftoa} (and more
 specifically the Weierstrass Factorization Theorem
 \cite{wiki:weierstrass}) tells us that we can construct a
-polynomial for $\sin (x)$ from its zeros\footnote{The terms "zero"
+polynomial for $\sin x$ from its zeros\footnote{The terms "zero"
 and "root" appear to be used interchangeably in mathematics
 linterature.}.
 
@@ -134,22 +134,22 @@ linterature.}.
 \noindent
 So how exactly did Euler arrive at his fantastic solution?
 
-\subsection{Maclaurin (Taylor) Series for $\sin (x)$}
+\subsection{Maclaurin (Taylor) Series for $\sin x$}
 The story begins with the Maclaurin series \cite{wiki:taylor} for
-$\sin (x)$. This series was well-known in Euler's time.  Note that
-in the following discussion of the Maclaurin series for $\sin (x)$
+$\sin x$. This series was well-known in Euler's time.  Note that
+in the following discussion of the Maclaurin series for $\sin x$
 we are using the $f^{(n)}$ notation for the $n^{\text{th}}$
 derivative of $f$, noting that $f^{(0)} = f$.
 
 
 \begin{equation*}
 \begin{array}{lllll}
-\sin (x)
+\sin x
 &=& \sum\limits_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n                                                                                                                  &\mathrel{\#} \text{definition of the Maclaurin series}  \\
 [12pt]
 &=& \frac{f^{(0)}(0)}{0!} x^0 +  \frac{f^{(1)}(0)}{1!} x^1 +  \frac{f^{(2)}(0)}{2!} x^2 + \frac{f^{(3)}(0)}{3!} x^3 + \cdots                     &\mathrel{\#} \text{expand terms}                               \\
 [12pt] 
-&=& \frac{\sin(0)}{0!}x^0 + \frac{\cos(0)}{1!}x^1 +  \frac{-\sin(0)}{2!}x^2 +  \frac{-\cos(0)}{3!}x^3 +  \frac{\sin(0)}{4!} x^4 \cdots  &\mathrel{\#} f(x) = \sin (x)                                            \\
+&=& \frac{\sin 0}{0!}x^0 + \frac{\cos 0}{1!}x^1 +  \frac{-\sin 0}{2!}x^2 +  \frac{-\cos 0}{3!}x^3 +  \frac{\sin 0}{4!} x^4 \cdots  &\mathrel{\#} f(x) = \sin x                                            \\
 [12pt]
 &=& 0 +  (\frac{1}{1!}) x^1 + 0 + (\frac{-1}{3!}) x^3+ 0 + (\frac{1}{5!}) x^5 + \cdots                                                                       &\mathrel{\#} \text{the sequence is $\{0,1,0,-1,...\}$}   \\
 [12pt]
@@ -160,25 +160,25 @@ derivative of $f$, noting that $f^{(0)} = f$.
 \bigskip
 \noindent
 As mentioned above, one of Euler's key insights was to observe
-that if we can find a polynomial for $\sin (x)$ then the
+that if we can find a polynomial for $\sin x$ then the
 coefficients of terms of the same power in the Maclaurin series
 and the polynomial must equal one another.
 
 \bigskip
 \noindent
-So how did Euler find a polynomial for $\sin (x)$?
+So how did Euler find a polynomial for $\sin x$?
 
-\subsection{Euler's Polynomial for $\sin (x)$}
+\subsection{Euler's Polynomial for $\sin x$}
 We saw in Section \ref{sec:eulers_solution} that every
 non-constant single-variable polynomial with complex coefficients
 has at least one complex root and that a (possibly infinite)
 polynomial can be constructed from the linear product of a
-function's roots. Since we know that the roots of $\sin (x)$ are
+function's roots. Since we know that the roots of $\sin x$ are
 $0, \pm \pi, \pm 2\pi, \hdots$ we can directly write down a
-polynomial $P(x)$ for $\sin (x)$:
+polynomial $P(x)$ for $\sin x$:
 
 \begin{equation*}
-\sin (x) =  A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots
+\sin x =  A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots
 \end{equation*}
 
 \bigskip
@@ -188,12 +188,12 @@ The tricky part now is finding $A$. So how did Euler do it?
 \bigskip
 \noindent
 Euler noticed that for infinitesimally small values of $x$
-$\sin (x) = x$, that is\footnote{Note that this limit occurs at
-the zero root of $\sin (x)$, that is, $\sin(0) = 0$.}
+$\sin x = x$, that is\footnote{Note that this limit occurs at
+the zero root of $\sin x$, that is, $\sin 0 = 0$.}
 
 \bigskip
 \begin{equation*}
-\lim_{x \to 0} \frac{\sin (x)}{x} = 1
+\lim_{x \to 0} \frac{\sin x}{x} = 1
 \end{equation*}
 
 \bigskip
@@ -210,10 +210,10 @@ Together these imply that
 
 \begin{equation*}
 \begin{array}{lllll}
-% {\displaystyle \lim_{x \to 0} \frac{\sin (x)}{x} = 1}
+% {\displaystyle \lim_{x \to 0} \frac{\sin x}{x} = 1}
 1 
 &=&  A (x - \pi)(x + \pi) (x - 2\pi)(x+2\pi) \cdots
-                &\qquad \qquad \mathrel{\#} {\displaystyle 1 =  \lim_{x \to 0} \frac{\sin (x)}{x} = \lim_{x \to 0}  \frac{P(x)}{x}} \\
+                &\qquad \qquad \mathrel{\#} {\displaystyle 1 =  \lim_{x \to 0} \frac{\sin x}{x} = \lim_{x \to 0}  \frac{P(x)}{x}} \\
 [15pt]
 &\Rightarrow& A = \dfrac{1}{(x - \pi)(x + \pi) (x - 2\pi)(x+2\pi)
 \cdots }
@@ -233,8 +233,8 @@ So now we know that
 
 \begin{equation*}
 \begin{array}{lllll}
-\sin (x) 
-&=&  A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots                                                                                                                    &\mathrel{\#} \sin (x) = P(x) \\   
+\sin x 
+&=&  A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots                                                                                                                    &\mathrel{\#} \sin x = P(x) \\   
 [15pt]                                                     
 &=& \dfrac{x (x - \pi)(x+\pi)(x-2\pi)(x+2\pi)(x-3\pi)(x+3\pi) \cdots}{(-\pi^2)(-2^2\pi^2)(-3^2\pi^2) \cdots}                                                                &\mathrel{\#} A = ((-\pi^2) (- 2^2 \pi^2) (-3^2 \pi^2)  \cdots)^{-1}   \\
 [15pt]
@@ -250,17 +250,17 @@ So now we know that
 [15pt]
 &=& x \cdot  \Bigg [1 - \dfrac{x^2}{(1 \pi)^2} \Bigg ] \cdot \Bigg [1 - \dfrac{x^2}{(2\pi)^2} \Bigg ] \cdot  \Bigg [1 - \dfrac{x^2}{(3\pi)^2} \Bigg ] \cdots &\mathrel{\#} \text{put into a convenient form}   \\
 [15pt]
-&=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                                              &\mathrel{\#} \text{Euler's polynomial for $\sin (x)$}
+&=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                                              &\mathrel{\#} \text{Euler's polynomial for $\sin x$}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So we see that Euler's polynomial $P(x)$ for $\sin (x)$ is 
+So we see that Euler's polynomial $P(x)$ for $\sin x$ is 
 
 \bigskip
 \begin{equation}
-\sin (x) = x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg )
+\sin x = x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg )
 \label{eqn:sine}
 \end{equation}
 
@@ -269,25 +269,25 @@ So we see that Euler's polynomial $P(x)$ for $\sin (x)$ is
 and so
 
 \begin{equation*}
-\frac{\sin (x)}{x} = \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg )
+\frac{\sin x}{x} = \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg )
 \end{equation*}
 
 \bigskip
 \noindent
-Now, we know that $\frac{P(x)}{x} = \frac{\sin (x)}{x}$. But we also know that the Maclaurin series for $\frac{\sin (x)}{x}$ is  
+Now, we know that $\frac{P(x)}{x} = \frac{\sin x}{x}$. But we also know that the Maclaurin series for $\frac{\sin x}{x}$ is  
 
 \bigskip
 \begin{equation*}
-\frac{\sin (x) }{x}= 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots
+\frac{\sin x }{x}= 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots
 \end{equation*}
 
 
 % \bigskip
 % \noindent
-% Euler also noticed that since the Maclaurin series for $\sin (x)$ is 
+% Euler also noticed that since the Maclaurin series for $\sin x$ is 
 % 
 % \begin{equation*}
-% \sin (x) = \sum\limits_{n = 0}^\infty (-1)^2 \frac{x^{(2n+1)}} {(2n+1)!}
+% \sin x = \sum\limits_{n = 0}^\infty (-1)^2 \frac{x^{(2n+1)}} {(2n+1)!}
 % \end{equation*}
 % 
 % \bigskip
@@ -296,13 +296,13 @@ Now, we know that $\frac{P(x)}{x} = \frac{\sin (x)}{x}$. But we also know that t
 % 
 % \bigskip
 % \begin{equation*}
-% \frac{\sin (x)}{x} = \sum\limits_{n = 1}^\infty (-1)^n \Bigg [\frac{1}{x} \Bigg ]\frac{x^{(2n+1)}} {(2n+1)!} = \sum\limits_{n = 1}^\infty (-1)^n \frac{x^{2n}} {(2n+1)!} 
+% \frac{\sin x}{x} = \sum\limits_{n = 1}^\infty (-1)^n \Bigg [\frac{1}{x} \Bigg ]\frac{x^{(2n+1)}} {(2n+1)!} = \sum\limits_{n = 1}^\infty (-1)^n \frac{x^{2n}} {(2n+1)!} 
 % \end{equation*}
 
 \bigskip
 \noindent
 Looking at the coefficients of the $x^2$ terms of
-$\frac{\sin (x)}{x}$ we see that for the Maclauren series we have
+$\frac{\sin x}{x}$ we see that for the Maclauren series we have
 $- \frac{1}{3!} = - \frac{1}{6}$ and for $\frac{P(x)}{x}$ we have
 
 \bigskip
@@ -340,18 +340,18 @@ the Maclaurin series for the sine function was
 
 \bigskip
 \begin{equation*}
-\sin (x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots
+\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots
 \end{equation*}
 
 \bigskip
 \noindent
 Now, if we divide both sides by $x$ we get\footnote{Recall that
-we needed ${\displaystyle \lim_{x \to 0}} \frac{\sin (x)}{x} = 1$
-to solve for $A$ in $P(x)$, the polynomial for $\sin (x)$.}
+we needed ${\displaystyle \lim_{x \to 0}} \frac{\sin x}{x} = 1$
+to solve for $A$ in $P(x)$, the polynomial for $\sin x$.}
 
 \bigskip
 \begin{equation*}
-\frac{\sin (x) }{x}= 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots
+\frac{\sin x }{x}= 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots
 \end{equation*}
 
 
@@ -361,14 +361,14 @@ We also know from the Weierstrass Factorization Theorem
 \cite{wiki:weierstrass} that every entire function
 \cite{wiki:entire_function} can be represented as a (possibly
 infinite) product involving its zeroes. So Euler assumed that it
-must be possible to represent $\sin (x)$ as an infinite product of
+must be possible to represent $\sin x$ as an infinite product of
 linear factors given by its roots. Using this machinery and
-knowing that the zeros of $\sin (x)$ occur at $0, \pm \pi, \pm
+knowing that the zeros of $\sin x$ occur at $0, \pm \pi, \pm
 2\pi, \hdots$ we see that
 
 \begin{equation*}
 \begin{array}{lllll}
-\mathlarger{\frac{\sin (x) }{x}}
+\mathlarger{\frac{\sin x }{x}}
 &=& \mathlarger{ \bigg (1 - \frac{x}{\pi} \bigg ) \bigg (1 + \frac{x}{\pi} \bigg )
                              \bigg (1 - \frac{x}{2\pi} \bigg ) \bigg (1 + \frac{x}{2 \pi} \bigg )
                              \bigg (1 - \frac{x}{3\pi} \bigg ) \bigg (1 + \frac{x}{3 \pi} \bigg )
@@ -386,7 +386,7 @@ knowing that the zeros of $\sin (x)$ occur at $0, \pm \pi, \pm
 Multiplying this product out and collecting the $x^2$ terms
 (which we are allowed to do by Newton's Identities
 \cite{wiki:newton_identies}), we see by induction that the $x^2$
-coefficient of $\frac{\sin (x)}{x}$ is
+coefficient of $\frac{\sin x}{x}$ is
 
 \bigskip
 \bigskip
@@ -397,7 +397,7 @@ coefficient of $\frac{\sin (x)}{x}$ is
 \bigskip
 \noindent
 We also know that the coefficient of $x^2$ from Maclaurin series
-for $\frac{\sin (x)}{x}$ is  
+for $\frac{\sin x}{x}$ is  
 
 \begin{equation*}
 - \dfrac{1}{3!} = - \dfrac{1}{6}
@@ -406,7 +406,7 @@ for $\frac{\sin (x)}{x}$ is
 \bigskip
 \noindent
 One of Euler's many insights was that the coefficients in both
-the Maclaurin series and the polynomial for $\frac{\sin (x)}{x}$
+the Maclaurin series and the polynomial for $\frac{\sin x}{x}$
 must be equal.  So for the $x^2$ term that means that
 
 \bigskip
@@ -426,24 +426,24 @@ solution to the Basel problem:
 \section{A Few Interesting Consequences}
 One of the first interesting consequences of Euler's proof is
 that when we plug $\frac{\pi}{2}$ into the product formula for
-$\sin (x)$ (Equation \ref{eqn:sine}) we get the Wallis Product
-\cite{wiki:wallis}. Why? Well, since $\sin \big (\frac{\pi}{2}
-\big ) = 1$ and with a bit of rearranging we see that
+$\sin x$ (Equation \ref{eqn:sine}) we get the Wallis Product
+\cite{wiki:wallis}. Why? Well, since $\sin \frac{\pi}{2} = 1$ 
+and with a bit of rearranging we see that
 
 
 \newpage
 \begin{equation*}
 \begin{array}{lllll}
-\sin (x)
+\sin x
 &=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}
-		&\qquad \mathrel{\#}  \text{$\sin (x) = P(x)$ (Equation \ref{eqn:sine})} \\
+		&\qquad \mathrel{\#}  \text{$\sin x = P(x)$ (Equation \ref{eqn:sine})} \\
 [20pt]
 &=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                   
 		&\qquad \mathrel{\#}  \text{get a common denominator, multiply} \\
 [20pt]
-&\Rightarrow& \mathlarger{\sin \bigg (\dfrac{\pi}{2} \bigg ) = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg )}                                                                                                                                                                              		&\qquad \mathrel{\#}  \text{set $\mathlarger{x = \frac{\pi}{2}}$} \\
+&\Rightarrow& \mathlarger{\sin \frac{\pi}{2}= \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg )}                                                                                                                                                                              		&\qquad \mathrel{\#}  \text{set $\mathlarger{x = \frac{\pi}{2}}$} \\
 [20pt]
-&\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \pi^2 \big ( n^2 - \frac{1}{4} \big )} {\pi^2 n^2} \Bigg )}                                                                                                                                                                        		&\qquad \mathrel{\#} \text{$\sin \bigg (\dfrac{\pi}{2} \bigg ) =1 $, factor out $\pi^2$} \\
+&\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \pi^2 \big ( n^2 - \frac{1}{4} \big )} {\pi^2 n^2} \Bigg )}                                                                                                                                                                        		&\qquad \mathrel{\#} \text{$\sin \frac{\pi}{2} = 1 $, factor out $\pi^2$} \\
 [20pt]
 &\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \big ( n^2 - \frac{1}{4} \big )} {n^2} \Bigg )}                                                                                                                                                                                 		&\qquad \mathrel{\#}  \text{cancel $\pi^2$} \\
 [20pt]
