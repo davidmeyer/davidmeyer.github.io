@@ -91,6 +91,70 @@
 %
 \section{Introduction}
 
+\noindent
+Consider a segment of a parametric curve $\mathbf{r} = \mathbf{r}(t)$ 
+between two points $P \, (\mathbf{r}(t))$ and $Q \, (\mathbf{r}(t + \Delta t))$ 
+as shown in Figure \ref{fig:delta-r}.
+
+\begin{figure}[H]
+\center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
+\caption{$\Delta s \approx | \Delta \mathbf{r} | = | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |$}
+\label{fig:delta-r}
+\end{figure}
+
+\bigskip
+\noindent
+The arclength $\Delta s$ can be approximated by the chord length
+$| \Delta \mathbf{r} | = | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |$.
+So we can note that
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta s
+&\approx& | \Delta \mathbf{r} |							
+			&\qquad \qquad \mathrel{\#} \text{the arclength $\Delta s$ can be approximated by $| \Delta \mathbf{r} |$} \\
+[10 pt]
+&=& | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |		
+			&\qquad \qquad \mathrel{\#} \text{definition: $\Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$} \\
+[10 pt]
+&=& \bigg | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \bigg | \cdot \dfrac{\Delta t}{\Delta t} 
+			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
+[10 pt]
+&=& \bigg | \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg |\cdot  \Delta t 
+			&\qquad \qquad \mathrel{\#} \Delta t > 0 \\
+[10 pt]
+&=& \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
+			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0} 
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}} \\
+[10 pt]
+&\Rightarrow& ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt 
+			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta s \to 0} \Delta s = ds}
+
+
+\end{array}
+\end{equation*}
+
+\bigskip
+So we see that $\dfrac{ds}{dt} 
+= \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | 
+= \big | \dot{r} \big |$
+and so
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\vec{T}
+&=& \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} 
+			&\qquad \qquad \mathrel{\#} \text{definition of the unit tangent vector $\vec{T}$}\\
+[12 pt]
+&=& \dfrac{\dfrac{d\mathbf{r}}{dt}}{\dfrac{ds}{dt}} 
+			&\qquad \qquad \mathrel{\#} \text{$\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$ and $|\dot{r}| = \dfrac{ds}{dt}$ } \\
+[20pt]
+&=& \dfrac{d\mathbf{r}}{ds}
+			&\qquad \qquad \mathrel{\#} \text{simplify}
+\end{array}
+\end{equation*}
+
 \section{Conslusions}
 \label{sec:conclusions}
 
