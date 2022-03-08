@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 MAR 2022 10:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 MAR 2022 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1448,10 +1448,10 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: 7620FE2C516340D07A958AAA216A7E8C;505.
  ) 
 Here is how much of TeX's memory you used:
- 52548 strings out of 478994
- 1321183 string characters out of 5858184
- 1970567 words of memory out of 5000000
- 69238 multiletter control sequences out of 15000+600000
+ 52550 strings out of 478994
+ 1321205 string characters out of 5858184
+ 1971595 words of memory out of 5000000
+ 69239 multiletter control sequences out of 15000+600000
  411357 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,12n,131p,733b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1466,10 +1466,10 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on vector_calculus.pdf (3 pages, 180970 bytes).
+Output written on vector_calculus.pdf (3 pages, 180842 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 14 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

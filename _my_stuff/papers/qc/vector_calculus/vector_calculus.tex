@@ -142,7 +142,7 @@ as shown in Figure \ref{fig:delta-r}.
 \bigskip
 \begin{figure}[H]
 \center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
-\caption{$\| \Delta \mathbf{r} \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|$}
+\caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
 
@@ -151,17 +151,18 @@ as shown in Figure \ref{fig:delta-r}.
 What is the length of the segment of the curve between $P$ and $Q$?
 This length is called the arc length and is denoted by $\Delta s$. 
 $\Delta s$ can be approximated by the chord length
-$\| \Delta \mathbf{r} \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|$.
-So we can note that
+$\| \Delta \mathbf{r} \|$. Then we can compute the
+infinitesimal arc length $ds$ as follows:
 
+\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \Delta s
 &\approx& \| \Delta \mathbf{r} \|							
-			&\qquad \qquad \mathrel{\#} \text{arc length $\Delta s$ can be approximated by $| \Delta \mathbf{r} |$} \\
+			&\qquad \qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
 [10 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
-			&\qquad \qquad \mathrel{\#} \text{$\Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$ (Figure \ref{fig:delta-r})} \\
+			&\qquad \qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
 [10 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
@@ -177,24 +178,35 @@ So we can note that
 
 
 \bigskip
+\bigskip
 \noindent
-So the infinitesimal arc length $ds$ is
+Now we see that
 
 \bigskip
 \begin{equation}
-ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt 
-\label{eqn:arclength}
+\dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
+\label{eqn:dsdt}
 \end{equation}
+
+\noindent
+and so
+
+\begin{equation}
+\dfrac{ds}{dt} = \| \dot{\mathbf{r}} \| 
+\label{eqn:mag_r_dot}
+\end{equation}
+
 
 
 \bigskip
 \noindent
-Now we can see that $\dfrac{ds}{dt} 
+Since $\dfrac{ds}{dt} 
 = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| 
 = \big \| \dot{\mathbf{r}} \big \|$
-and so the unit tangent vector
-$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} = \dfrac{d\mathbf{r}}{ds}$.
-One way to see this is to notice that
+the unit tangent vector
+$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
+= \dfrac{d\mathbf{r}}{ds}$.
+One way to see this is 
 
 
 
@@ -209,7 +221,7 @@ One way to see this is to notice that
 			&\hskip 14em \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\hskip 14em \mathrel{\#} \text{Equation (\ref{eqn:arclength}): $\|\dot{\mathbf{r}}\| 
+			&\hskip 14em \mathrel{\#} \text{Equation (\ref{eqn:mag_r_dot}): $\|\dot{\mathbf{r}}\| 
 			= \dfrac{ds}{dt}$} \\
 [25pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} \cdot \dfrac{dt}{dt}
@@ -220,7 +232,7 @@ One way to see this is to notice that
 \end{array}
 \end{equation*}
 
-
+\bigskip
 \section{Conclusions}
 \label{sec:conclusions}
 
