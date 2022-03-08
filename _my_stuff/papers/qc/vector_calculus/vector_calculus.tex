@@ -93,11 +93,14 @@
 TBD
 
 \section{Notation}
-Some authors use bold to denote a vector. For example, the parametric form
-of a three dimensional vector would be
+Some authors use bold to denote a vector. Adding a "hat"
+denotes a unit vector; for example $\mathbf{\hat{i}}$ denotes
+the unit vector in the $x$ direction. Using these
+definitions the parametric form of a three dimensional 
+vector $\mathbf{r}(t)$ would be
 
 \begin{equation*}
-\mathbf{r}(t) = g(t) \hat{i} +h(t) \hat{j} + k(t) \hat{k}
+\mathbf{r}(t) = g(t) \mathbf{\hat{i}} +h(t) \mathbf{\hat{j}} + k(t) \mathbf{\hat{k}}
 \end{equation*}
 
 \bigskip
@@ -105,17 +108,35 @@ of a three dimensional vector would be
 On the other hand, some authors use "over arrow"
 
 \begin{equation*}
-\vec{r}(t) = g(t) \hat{i} +h(t) \hat{j} + k(t) \hat{k}
+\vec{r}(t) = g(t) \vec{i} +h(t) \vec{j} + k(t) \vec{k}
 \end{equation*}
 
 \bigskip
 \noindent
-In this document I'll use both forms interchangably.
+I've also seen
+
+\begin{equation*}
+\vec{r}(t) = g(t) \hat{i} + h(t) \hat{j} + k(t) \hat{k}
+\end{equation*}
 
 
+
+\bigskip
+\noindent
+In this document I'll use these forms interchangeably.
+
+\bigskip
+\noindent
+We will also use $\dot{\mathbf{r}}$ and $\dfrac{d\mathbf{r}}{dt}$
+interchangeably.
+
+\subsection{Vector Fields}
+\label{subsec:vector_fields}
+
+\newpage
 \section{Arc Length}
 Consider a segment of a parametric curve $\mathbf{r} = \mathbf{r}(t)$ 
-between two points $P \, (\mathbf{r}(t))$ and $Q \, (\mathbf{r}(t + \Delta t))$ 
+between two points $P =\mathbf{r}(t)$ and $Q =\mathbf{r}(t + \Delta t)$,
 as shown in Figure \ref{fig:delta-r}.
 
 \bigskip
@@ -140,7 +161,7 @@ So we can note that
 			&\qquad \qquad \mathrel{\#} \text{arc length $\Delta s$ can be approximated by $| \Delta \mathbf{r} |$} \\
 [10 pt]
 &=& | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |		
-			&\qquad \qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
+			&\qquad \qquad \mathrel{\#} \text{$\Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$ (Figure \ref{fig:delta-r})} \\
 [10 pt]
 &=& \bigg | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \bigg | \cdot \dfrac{\Delta t}{\Delta t} 
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
@@ -149,15 +170,17 @@ So we can note that
 			&\qquad \qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
 [10 pt]
 &\Rightarrow& ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
-			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0} 
+			&\qquad \qquad \mathrel{\#} \text{since} {\displaystyle \lim_{\Delta t \to 0} 
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}} \\
 \end{array}
 \end{equation*}
+
 
 \bigskip
 \noindent
 So the infinitesimal arc length $ds$ is
 
+\bigskip
 \begin{equation}
 ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt 
 \label{eqn:arclength}
@@ -170,8 +193,9 @@ Now we can see that $\dfrac{ds}{dt}
 = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | 
 = \big | \dot{\mathbf{r}} \big |$
 and so the unit tangent vector
-$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} = \dfrac{d\mathbf{r}}{ds}$,
-since
+$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} = \dfrac{d\mathbf{r}}{ds}$.
+One way to see this is to notice that
+
 
 
 \bigskip
@@ -181,10 +205,12 @@ since
 &=& \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} 
 			&\hskip 14em \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
 [15 pt]
+&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{|\dot{\mathbf{r}}|} 
+			&\hskip 14em \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
+[15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\hskip 14em \mathrel{\#} \text{$\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$ 
-			(definition of $\dot{\mathbf{r}}$) and $|\dot{\mathbf{r}}| = \dfrac{ds}{dt}$
-			(Equation (\ref{eqn:arclength}))} \\
+			&\hskip 14em \mathrel{\#} \text{Equation (\ref{eqn:arclength}): $|\dot{\mathbf{r}}| 
+			= \dfrac{ds}{dt}$} \\
 [25pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} \cdot \dfrac{dt}{dt}
 		&\hskip 14em \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$} \\
