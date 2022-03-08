@@ -206,7 +206,7 @@ we know that
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {																							% resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
@@ -281,17 +281,20 @@ ds
 &=& \sqrt{dx^2 + dy^2}				
 			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean Theorem (see Figure \ref{fig:pythagorean_theorem})} \\
 [15pt]
-&=& \sqrt{g(t)^2 + h(t)^2}	
+&=& \sqrt{dg^2 + dh^2}	
 			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: $x = g(t)$ and $y = h(t)$} \\
 [15pt]
-&=& \sqrt{g(t)^2 + h(t)^2} \cdot \dfrac{dt}{dt}
+&=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$}  \\
 [15pt]
+&=& \sqrt{\left (\dfrac{1}{dt} \right)^2 \cdot \left ( g(t)^2 + h(t)^2 \right )} \cdot dt
+			&\qquad \qquad \mathrel{\#} x = \sqrt{x^2} \\
+[15pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \sqrt{x^2} = x \\
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
 [15pt]
 &=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{switch notation and note that 
+			&\qquad \qquad \mathrel{\#} \text{switch notation and note that 		
 			$\dfrac{d\mathbf{r}}{dt} = g^{\prime}(t) \, \hat{\mathbf{i}} + h^{\prime}(t) \, \hat{\mathbf{j}}$} \\
 [15pt]
 &=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
