@@ -142,7 +142,7 @@ as shown in Figure \ref{fig:delta-r}.
 \bigskip
 \begin{figure}[H]
 \center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
-\caption{$| \Delta \mathbf{r} | = | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |$}
+\caption{$\| \Delta \mathbf{r} \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|$}
 \label{fig:delta-r}
 \end{figure}
 
@@ -151,25 +151,25 @@ as shown in Figure \ref{fig:delta-r}.
 What is the length of the segment of the curve between $P$ and $Q$?
 This length is called the arc length and is denoted by $\Delta s$. 
 $\Delta s$ can be approximated by the chord length
-$| \Delta \mathbf{r} | = | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |$.
+$\| \Delta \mathbf{r} \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|$.
 So we can note that
 
 \begin{equation*}
 \begin{array}{lllll}
 \Delta s
-&\approx& | \Delta \mathbf{r} |							
+&\approx& \| \Delta \mathbf{r} \|							
 			&\qquad \qquad \mathrel{\#} \text{arc length $\Delta s$ can be approximated by $| \Delta \mathbf{r} |$} \\
 [10 pt]
-&=& | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |		
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
 			&\qquad \qquad \mathrel{\#} \text{$\Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$ (Figure \ref{fig:delta-r})} \\
 [10 pt]
-&=& \bigg | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \bigg | \cdot \dfrac{\Delta t}{\Delta t} 
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
 [10 pt]
-&=& \bigg | \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg |\cdot  \Delta t 
+&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
 			&\qquad \qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
 [10 pt]
-&\Rightarrow& ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
+&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
 			&\qquad \qquad \mathrel{\#} \text{since} {\displaystyle \lim_{\Delta t \to 0} 
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}} \\
 \end{array}
@@ -182,7 +182,7 @@ So the infinitesimal arc length $ds$ is
 
 \bigskip
 \begin{equation}
-ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt 
+ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt 
 \label{eqn:arclength}
 \end{equation}
 
@@ -190,10 +190,10 @@ ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
 \bigskip
 \noindent
 Now we can see that $\dfrac{ds}{dt} 
-= \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | 
-= \big | \dot{\mathbf{r}} \big |$
+= \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| 
+= \big \| \dot{\mathbf{r}} \big \|$
 and so the unit tangent vector
-$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} = \dfrac{d\mathbf{r}}{ds}$.
+$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} = \dfrac{d\mathbf{r}}{ds}$.
 One way to see this is to notice that
 
 
@@ -202,14 +202,14 @@ One way to see this is to notice that
 \begin{equation*}
 \begin{array}{lllll}
 \mathbf{T}
-&=& \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} 
+&=& \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
 			&\hskip 14em \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
 [15 pt]
-&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{|\dot{\mathbf{r}}|} 
+&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\|\dot{\mathbf{r}} \|} 
 			&\hskip 14em \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\hskip 14em \mathrel{\#} \text{Equation (\ref{eqn:arclength}): $|\dot{\mathbf{r}}| 
+			&\hskip 14em \mathrel{\#} \text{Equation (\ref{eqn:arclength}): $\|\dot{\mathbf{r}}\| 
 			= \dfrac{ds}{dt}$} \\
 [25pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} \cdot \dfrac{dt}{dt}
