@@ -140,7 +140,7 @@ So we can note that
 			&\qquad \qquad \mathrel{\#} \text{the arclength $\Delta s$ can be approximated by $| \Delta \mathbf{r} |$} \\
 [10 pt]
 &=& | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |		
-			&\qquad \qquad \mathrel{\#} \text{definition: $\Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$} \\
+			&\qquad \qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
 [10 pt]
 &=& \bigg | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \bigg | \cdot \dfrac{\Delta t}{\Delta t} 
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
@@ -148,12 +148,9 @@ So we can note that
 &=& \bigg | \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg |\cdot  \Delta t 
 			&\qquad \qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
 [10 pt]
-&=& \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
+&\Rightarrow& ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
 			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0} 
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}} \\
-[10 pt]
-&\Rightarrow& ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt 
-			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta s \to 0} \Delta s = ds}
 \end{array}
 \end{equation*}
 
