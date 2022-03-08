@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 MAR 2022 08:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 MAR 2022 08:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1450,12 +1450,12 @@ Overfull \hbox (12.90495pt too wide) detected at line 195
 No file vector_calculus.bbl.
 [2] (./vector_calculus.aux)
 Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
-(rerunfilecheck)             Checksum: C402CE16F53FFCF3A526AF03E03A3267;372.
+(rerunfilecheck)             Checksum: 20A34CB2E2FB77A979607E3D7E1B22CE;380.
  ) 
 Here is how much of TeX's memory you used:
  52543 strings out of 478994
  1321110 string characters out of 5858184
- 1971520 words of memory out of 5000000
+ 1971521 words of memory out of 5000000
  69235 multiletter control sequences out of 15000+600000
  411050 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1471,7 +1471,7 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on vector_calculus.pdf (2 pages, 177100 bytes).
+Output written on vector_calculus.pdf (2 pages, 177125 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
