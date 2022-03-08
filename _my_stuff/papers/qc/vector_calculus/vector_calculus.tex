@@ -90,21 +90,46 @@
 %
 %
 \section{Introduction}
+TBD
 
+\section{Notation}
+Some texts use bold to denote a vector. For example, the parametric form
+of a three dimensional vector would be
+
+\begin{equation*}
+\mathbf{r}(t) = g(t) \hat{i} +h(t) \hat(j) + k(t) \hat{k}
+\end{equation*}
+
+\bigskip
 \noindent
+On the other hand, some texts use "over arrow"
+
+\begin{equation*}
+\vec{r} = g(t) \hat{i} +h(t) \hat(j) + k(t) \hat{k}
+\end{equation*}
+
+\bigskip
+\noindent
+In this document I'll use both forms interchangably.
+
+\newpage
+\section{Arclength}
 Consider a segment of a parametric curve $\mathbf{r} = \mathbf{r}(t)$ 
 between two points $P \, (\mathbf{r}(t))$ and $Q \, (\mathbf{r}(t + \Delta t))$ 
 as shown in Figure \ref{fig:delta-r}.
 
+\bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
+\center{\includegraphics[frame,scale=0.30] {images/delta-r.png}}
 \caption{$| \Delta \mathbf{r} | = | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |$}
 \label{fig:delta-r}
 \end{figure}
 
 \bigskip
 \noindent
-The arclength $\Delta s$ can be approximated by the chord length
+What is the length of the segment of the curve between $P$ and $Q$?
+This length is called the arclength and is denoted by $\Delta s$. 
+$\Delta s$ can be approximated by the chord length
 $| \Delta \mathbf{r} | = | \mathbf{r}(t + \Delta t) - \mathbf{r}(t) |$.
 So we can note that
 
@@ -121,7 +146,7 @@ So we can note that
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
 [10 pt]
 &=& \bigg | \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg |\cdot  \Delta t 
-			&\qquad \qquad \mathrel{\#} \Delta t > 0 \\
+			&\qquad \qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
 [10 pt]
 &=& \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt
 			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0} 
@@ -129,33 +154,46 @@ So we can note that
 [10 pt]
 &\Rightarrow& ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt 
 			&\qquad \qquad \mathrel{\#} {\displaystyle \lim_{\Delta s \to 0} \Delta s = ds}
-
-
 \end{array}
 \end{equation*}
 
 \bigskip
-So we see that $\dfrac{ds}{dt} 
+\noindent
+So the infinitesimal archlength $ds$ is
+
+\begin{equation}
+ds = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | \cdot dt 
+\label{eqn:arclength}
+\end{equation}
+
+
+\bigskip
+\noindent
+Now we can see that $\dfrac{ds}{dt} 
 = \bigg | \dfrac{d\mathbf{r}}{dt} \bigg | 
-= \big | \dot{r} \big |$
-and so
+= \big | \dot{\mathbf{r}} \big |$
+and so 
+$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} = \dfrac{d\mathbf{r}}{ds}$,
+since
+
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
-\vec{T}
+\mathbf{T}
 &=& \dfrac{\dot{\mathbf{r}}} {|\dot{\mathbf{r}}|} 
-			&\qquad \qquad \mathrel{\#} \text{definition of the unit tangent vector $\vec{T}$}\\
-[12 pt]
-&=& \dfrac{\dfrac{d\mathbf{r}}{dt}}{\dfrac{ds}{dt}} 
-			&\qquad \qquad \mathrel{\#} \text{$\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$ and $|\dot{r}| = \dfrac{ds}{dt}$ } \\
-[20pt]
+			&\qquad \qquad \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
+[15 pt]
+&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
+			&\qquad \qquad \mathrel{\#} \text{$\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$ and $|\dot{\mathbf{r}}| = \dfrac{ds}{dt}$ } \\
+[25pt]
 &=& \dfrac{d\mathbf{r}}{ds}
 			&\qquad \qquad \mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
-\section{Conslusions}
+
+\section{Conclusions}
 \label{sec:conclusions}
 
 \section*{Acknowledgements}

@@ -8,6 +8,12 @@
 
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./vector_calculus.pdf" target="_blank" 
+    rel="noopener noreferrer">
+A Few Notes On Vector Calculus</a>
+<br>
+
+
 <li><a href="./golden_ratio.pdf" target="_blank" 
     rel="noopener noreferrer">
 An Interesting Integral Involving The Golden Ratio</a>
@@ -96,7 +102,7 @@ Quantum Teleportation
 <br>
 <br>
 <hr>
-<i>Last Update: 01.23.2022 by dmm@1-4-5.net
+<i>Last Update: 03.08.2022 by dmm@1-4-5.net
 
 
 
