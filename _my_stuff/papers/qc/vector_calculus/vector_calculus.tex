@@ -226,6 +226,7 @@ we know that
 \bigskip
 \begin{equation}
 \dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
+\label{eqn:drdt}
 \end{equation}
 
 
@@ -323,14 +324,14 @@ ds
 			&\qquad \qquad \mathrel{\#} \sqrt{x} \cdot \sqrt{y} = \sqrt{x \cdot y} \\
 [15pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+			&\qquad \qquad \mathrel{\#} \text{simplify: 
+			$\dfrac{1}{x^2} \cdot y^2 = \dfrac{y^2}{x^2} = \left(\dfrac{y}{x} \right )^2$} \\
 [15pt]
 &=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{switch notation and note that 		
-			$\dfrac{d\mathbf{r}}{dt} = g^{\prime}(t) \, \hat{\mathbf{i}} + h^{\prime}(t) \, \hat{\mathbf{j}}$} \\
+			&\qquad \qquad \mathrel{\#} \text{switch notation: $\dfrac{df}{dt} = f^{\prime}(t)$} \\	
 [15pt]
 &=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \qquad \mathrel{\#} \text{definition of $\mathbf{r}(t)$ and $\|\cdot\|$}
+			&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:drdt}) and the definition of $\|\cdot\|$}
 \end{array}
 \end{equation*}
 
@@ -354,14 +355,17 @@ and so
 
 
 \bigskip
+\setstretch{2.0}
 \noindent
 Since $\dfrac{ds}{dt} 
 = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| 
 = \big \| \dot{\mathbf{r}} \big \|$ we also 
-know that the unit tangent vector
+know that the unit tangent vector 
 $\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
-= \dfrac{d\mathbf{r}}{ds}$.
+= \dfrac{d\mathbf{r}}{ds}$ \cite{unit_tangent_and_normal_vectors}.
 One way to see this is to notice that
+
+\setstretch{1.0}
 
 
 
