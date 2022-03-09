@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  9 MAR 2022 09:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  9 MAR 2022 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1442,12 +1442,12 @@ File: images/delta-r.png Graphic file (type png)
 Package pdftex.def Info: images/delta-r.png  used on input line 145.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (40.93314pt too wide) detected at line 206
+Overfull \hbox (28.8371pt too wide) detected at line 202
 []
  []
 
 [2 <./images/delta-r.png>]
-Overfull \hbox (4.18428pt too wide) detected at line 346
+Overfull \hbox (4.18428pt too wide) detected at line 341
 []
  []
 
@@ -1468,7 +1468,7 @@ Here is how much of TeX's memory you used:
  70201 multiletter control sequences out of 15000+600000
  416343 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,14n,131p,733b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,12n,131p,733b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1483,10 +1483,10 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on vector_calculus.pdf (4 pages, 229340 bytes).
+Output written on vector_calculus.pdf (4 pages, 230205 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 149 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  21 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

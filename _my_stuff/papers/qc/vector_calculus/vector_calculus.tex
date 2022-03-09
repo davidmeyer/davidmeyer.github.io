@@ -171,37 +171,33 @@ arc length $ds$ as follows:
 &=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
 			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
 [12 pt]
-&\Rightarrow& \Delta s - \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
-			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t = 0
-			&\qquad \mathrel{\#} \text{subtract 
-			$\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t$
-			from both sides} \\
+&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
+			&\qquad \mathrel{\#} \text{this is our approximation} \\
 [15 pt]
-&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Bigg [\Delta s - \bigg \| 			
+&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
+			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
+			&\qquad \mathrel{\#} \text{is $=$ valid here ($\approx \;\to \; =$ in the limit)?} \\
+[15 pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
-			= {\displaystyle \lim_{\Delta t \to 0} 0}
-			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
-[15 pt]
-&\Rightarrow& {\displaystyle ds -\lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
-			= 0
-			&\qquad \mathrel{\#} \text{sum rule for limits \cite{properties_of_limits},  
-			${\displaystyle \lim_{\Delta t \to 0} 0 = 0}$,
-			${\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
-[15 pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg [	
-			\bigg \|\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
-			&\qquad \mathrel{\#} \text{solve for $ds$} \\
+			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
+			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
 [15 pt]
 &\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| 
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
 			\cdot \lim_{\Delta t \to 0} \Delta t}
 			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
 [15 pt]
+&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
+[15 pt]
 &\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0} 
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}},
-			{\displaystyle \lim_{\Delta t \to 0} \Delta t = dt}
+			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
+			\; \lim_{\Delta t \to 0} \Delta t} = dt
 \end{array}
 \end{equation*}
 
@@ -308,8 +304,7 @@ this expression for $ds$ we can see that
 \begin{array}{lllll}
 ds
 &=& \sqrt{dx^2 + dy^2}				
-			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean Theorem 
-			(see Figure \ref{fig:pythagorean_theorem})} \\
+			&\qquad \qquad \mathrel{\#} \text{Figure \ref{fig:pythagorean_theorem}} \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2}	
 			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
@@ -336,7 +331,7 @@ ds
 			= \left(\dfrac{x}{z} \right )^2 + \left(\dfrac{y}{z} \right )^2$} \\
 [15pt]
 &=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{switch notation: 
+			&\qquad \qquad \mathrel{\#} \text{Leibniz's notation $\to$ Lagrange's notation: 
 			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
 [15pt]
 &=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
