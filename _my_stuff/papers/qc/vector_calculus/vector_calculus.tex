@@ -180,14 +180,14 @@ infinitesimal arc length $ds$ as follows:
 &\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Bigg [\Delta s - \bigg \| 			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
 			= {\displaystyle \lim_{\Delta t \to 0} 0}
-			&\qquad \mathrel{\#} \text{sum rule for limits \cite{properties_of_limits}} \\
+			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
 [15 pt]
 &\Rightarrow& {\displaystyle ds -\lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
 			= 0
-			&\qquad \mathrel{\#} \text{sum rule for limits, 
+			&\qquad \mathrel{\#} \text{sum rule for limits \cite{properties_of_limits},  
 			${\displaystyle \lim_{\Delta t \to 0} 0 = 0}$,
-			${\displaystyle \lim_{\Delta s \to 0} \Delta s = ds}$} \\
+			${\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
 [15 pt]
 &\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg [	
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
@@ -229,7 +229,7 @@ we know that
 \end{equation}
 
 
-
+\bigskip
 %
 %	draw Pythagorean theorem stuff
 %
@@ -314,10 +314,10 @@ ds
 			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: $x = g(t)$ and $y = h(t)$} \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
-			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$}  \\
+			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2} \cdot \Bigg [ dt \cdot \sqrt{\dfrac{1}{dt^2}} \Bigg ]
-			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} = x \cdot \dfrac{1}{\sqrt{x^2}}  \\
+			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} = x \cdot \dfrac{1}{\sqrt{x^2}}, \; x > 0  \\
 [15pt]
 &=& \sqrt{\left (\dfrac{1}{dt^2} \right) \cdot \Big ( dg^2 + dh^2 \Big )} \cdot dt
 			&\qquad \qquad \mathrel{\#} \sqrt{x} \cdot \sqrt{y} = \sqrt{x \cdot y} \\
@@ -361,7 +361,7 @@ Since $\dfrac{ds}{dt}
 know that the unit tangent vector
 $\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
 = \dfrac{d\mathbf{r}}{ds}$.
-One way to see this is 
+One way to see this is to notice that
 
 
 
@@ -370,20 +370,20 @@ One way to see this is
 \begin{array}{lllll}
 \mathbf{T}
 &=& \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
-			&\hskip 14em \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
+			&\hskip 10em \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\|\dot{\mathbf{r}} \|} 
-			&\hskip 14em \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
+			&\hskip 10em \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\hskip 14em \mathrel{\#} \text{Equation (\ref{eqn:mag_r_dot}): $\|\dot{\mathbf{r}}\| 
+			&\hskip 10em \mathrel{\#} \text{Equation (\ref{eqn:mag_r_dot}): $\|\dot{\mathbf{r}}\| 
 			= \dfrac{ds}{dt}$} \\
 [25pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} \cdot \dfrac{dt}{dt}
-		&\hskip 14em \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$} \\
+		&\hskip 10em \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$} \\
 [25pt]
 &=& \dfrac{d\mathbf{r}}{ds}
-			&\hskip 14em \mathrel{\#} \text{simplify}
+			&\hskip 10em \mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
