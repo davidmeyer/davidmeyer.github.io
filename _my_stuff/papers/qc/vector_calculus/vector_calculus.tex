@@ -22,10 +22,9 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
-\usepackage{fixmath}													% get \mathbold
-\usepackage{gensymb}													% get \degree
-% \usepackage[oldvoltagedirection]{circuitikz}							%
-\usepackage{circuitikz}													% draw circuits
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{url}
@@ -100,7 +99,8 @@ definitions the parametric form of a three dimensional
 vector $\mathbf{r}(t)$ would be
 
 \begin{equation*}
-\mathbf{r}(t) = g(t) \, \mathbf{\hat{i}} +h(t) \, \mathbf{\hat{j}} + k(t) \, \mathbf{\hat{k}}
+\mathbf{r}(t) = g(t) \, \mathbf{\hat{i}} +h(t) \,
+\mathbf{\hat{j}} + k(t) \, \mathbf{\hat{k}} 
 \end{equation*}
 
 \bigskip
@@ -108,7 +108,7 @@ vector $\mathbf{r}(t)$ would be
 On the other hand, some authors use "over arrow"
 
 \begin{equation*}
-\vec{r}(t) = g(t) \, \vec{i} +h(t) \, \vec{j} + k(t) \, \vec{k}
+\vec{r}(t) = g(t) \, \vec{i} +h(t) \, \vec{j} + k(t) \, \vec{k} 
 \end{equation*}
 
 \bigskip
@@ -128,7 +128,7 @@ In this document I'll use these forms interchangeably.
 \bigskip
 \noindent
 We will also use $\dot{\mathbf{r}}$, $\dfrac{d\mathbf{r}}{dt}$
-and $\mathbf{r}^{\prime}$ interchangeably.
+and $\mathbf{r}^{\prime}(t)$ interchangeably.
 
 \subsection{Vector Fields}
 \label{subsec:vector_fields}
@@ -149,11 +149,11 @@ as shown in Figure \ref{fig:delta-r}.
 
 \bigskip
 \noindent
-What is the length of the segment of the curve between $P$ and $Q$?
-This length is called the arc length and is denoted by $\Delta s$. 
-$\Delta s$ can be approximated by the chord length
-$\| \Delta \mathbf{r} \|$. Then we can compute the
-infinitesimal arc length $ds$ as follows:
+What is the length of the segment of the curve between $P$ and
+$Q$?  This length is called the arc length and is denoted by
+$\Delta s$.  $\Delta s$ can be approximated by the chord length
+$\| \Delta \mathbf{r} \|$. Then we can compute the infinitesimal
+arc length $ds$ as follows:
 
 \smallskip
 \begin{equation*}
@@ -208,20 +208,19 @@ infinitesimal arc length $ds$ as follows:
 \bigskip
 \noindent
 Interestingly we can also see this using the Pythagorean theorem.
-Specifically, if we move an infinitesimal distance in the $x$ 
-and $y$ directions we get a triangle in the x-y plane
-who's sides have length $dx$ and $dy$ and who's hypotenuse 
-is $ds$. This scenario is shown for some curve $f(x)$ in 
-Figure \ref{fig:pythagorean_theorem}.
+Specifically, if we move an infinitesimal distance in the $x$ and
+$y$ directions we get a triangle in the x-y plane who's sides
+have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
+scenario is shown for some curve $f(x)$ in Figure
+\ref{fig:pythagorean_theorem}.
 
 \bigskip
 \noindent
-In the two dimensional case where the parameterization is 
-$x = g(t)$ and $y =  h(t)$ we have 
-$\mathbf{r}(t) = g(t) \, \hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}}$.
-Further, since derivative is a linear operator 
-\cite{wiki:linearity_of_differentiation}
-we know that
+In the two dimensional case where the parameterization is $x =
+g(t)$ and $y = h(t)$ we have $\mathbf{r}(t) = g(t) \,
+\hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}}$.  Further, since
+derivative is a linear operator
+\cite{wiki:linearity_of_differentiation} we know that
 
 \bigskip
 \begin{equation}
@@ -309,29 +308,40 @@ this expression for $ds$ we can see that
 \begin{array}{lllll}
 ds
 &=& \sqrt{dx^2 + dy^2}				
-			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean Theorem (see Figure \ref{fig:pythagorean_theorem})} \\
+			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean Theorem 
+			(see Figure \ref{fig:pythagorean_theorem})} \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2}	
-			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: $x = g(t)$ and $y = h(t)$} \\
+			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
+			$x = g(t)$ and $y = h(t)$} \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
-			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
+			&\qquad \qquad \mathrel{\#} \text{multiply by 
+			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2} \cdot \Bigg [\sqrt{\dfrac{1}{dt^2}} \cdot dt \Bigg ]
-			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} = \sqrt{\left (\dfrac{1}{x} \right)^2} \cdot x = \sqrt{\dfrac{1}{x^2}} \cdot x, \; x > 0  \\
+			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} 
+			= \sqrt{\left (\dfrac{1}{x} \right)^2} \cdot x 
+			= \sqrt{\dfrac{1}{x^2}} \cdot x, \; x > 0  \\
 [15pt]
-&=& \sqrt{\left (\dfrac{1}{dt^2} \right) \cdot \Big ( dg^2 + dh^2 \Big )} \cdot dt
-			&\qquad \qquad \mathrel{\#} \sqrt{\dfrac{1}{x}} \cdot \sqrt{y} = \sqrt{\dfrac{1}{x} \cdot y} \\
+&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \cdot \left (\dfrac{1}{dt^2} \right)} \cdot dt
+			&\qquad \qquad \mathrel{\#} \text{simplify: 
+			$\sqrt{x} \cdot \sqrt{\dfrac{1}{y}} 
+			= \sqrt{x \cdot \dfrac{1}{y}}$} \\
 [15pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
 			&\qquad \qquad \mathrel{\#} \text{simplify: 
-			$\dfrac{1}{x^2} \cdot y^2 = \dfrac{y^2}{x^2} = \left(\dfrac{y}{x} \right )^2$} \\
+			$\left ( x^2 + y^2 \right ) \cdot \left ( \dfrac{1}{z^2} \right ) 
+			= \dfrac{x^2}{z^2} + \dfrac{y^2}{z^2} 
+			= \left(\dfrac{x}{z} \right )^2 + \left(\dfrac{y}{z} \right )^2$} \\
 [15pt]
 &=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{switch notation: $\dfrac{df}{dt} = f^{\prime}(t)$} \\	
+			&\qquad \qquad \mathrel{\#} \text{switch notation: 
+			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
 [15pt]
 &=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:drdt}) and the definition of $\|\cdot\|$}
+			&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:drdt}) 
+			and the definition of $\|\cdot\|$}
 \end{array}
 \end{equation*}
 
@@ -353,20 +363,17 @@ and so
 \end{equation}
 
 
-
 \bigskip
 \setstretch{2.0}
 \noindent
-Since $\dfrac{ds}{dt} 
-= \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| 
-= \big \| \dot{\mathbf{r}} \big \|$ we also 
-know that the unit tangent vector 
-$\mathbf{T} = \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
-= \dfrac{d\mathbf{r}}{ds}$ \cite{unit_tangent_and_normal_vectors}.
-One way to see this is to notice that
+Since $\dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
+= \big \| \dot{\mathbf{r}} \big \|$ we also know that the unit
+tangent vector $\mathbf{T} = \dfrac{\dot{\mathbf{r}}}
+{\|\dot{\mathbf{r}}\|} = \dfrac{d\mathbf{r}}{ds}$
+\cite{unit_tangent_and_normal_vectors}.  One way to see this is
+to notice that
 
 \setstretch{1.0}
-
 
 
 \bigskip
