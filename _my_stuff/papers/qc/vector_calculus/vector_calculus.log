@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  8 MAR 2022 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  9 MAR 2022 07:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1436,13 +1436,18 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<images/delta-r.png, id=39, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=40, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 144.
+Package pdftex.def Info: images/delta-r.png  used on input line 145.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
- [2 <./images/delta-r.png>] [3] (./vector_calculus.bbl
-Underfull \hbox (badness 1655) in paragraph at lines 4--11
+
+Overfull \hbox (39.6838pt too wide) detected at line 206
+[]
+ []
+
+[2 <./images/delta-r.png>] [3] (./vector_calculus.bbl
+Underfull \hbox (badness 1655) in paragraph at lines 10--17
 \OT1/cmtt/m/n/10 en . wikipedia . org / w / index . php ? title = Linearity _ o
 f _ differentiation & oldid = 1026177205$[]\OT1/cmr/m/n/10 , 2021.
  []
@@ -1452,13 +1457,13 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: 7620FE2C516340D07A958AAA216A7E8C;505.
  ) 
 Here is how much of TeX's memory you used:
- 53524 strings out of 478994
- 1341186 string characters out of 5858184
- 2001874 words of memory out of 5000000
- 70198 multiletter control sequences out of 15000+600000
+ 53527 strings out of 478994
+ 1341245 string characters out of 5858184
+ 1998873 words of memory out of 5000000
+ 70199 multiletter control sequences out of 15000+600000
  416343 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,12n,131p,733b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,14n,131p,733b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1473,10 +1478,10 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on vector_calculus.pdf (4 pages, 223272 bytes).
+Output written on vector_calculus.pdf (4 pages, 226103 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

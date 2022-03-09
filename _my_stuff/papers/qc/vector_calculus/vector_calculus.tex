@@ -100,7 +100,7 @@ definitions the parametric form of a three dimensional
 vector $\mathbf{r}(t)$ would be
 
 \begin{equation*}
-\mathbf{r}(t) = g(t) \mathbf{\hat{i}} +h(t) \mathbf{\hat{j}} + k(t) \mathbf{\hat{k}}
+\mathbf{r}(t) = g(t) \, \mathbf{\hat{i}} +h(t) \, \mathbf{\hat{j}} + k(t) \, \mathbf{\hat{k}}
 \end{equation*}
 
 \bigskip
@@ -108,7 +108,7 @@ vector $\mathbf{r}(t)$ would be
 On the other hand, some authors use "over arrow"
 
 \begin{equation*}
-\vec{r}(t) = g(t) \vec{i} +h(t) \vec{j} + k(t) \vec{k}
+\vec{r}(t) = g(t) \, \vec{i} +h(t) \, \vec{j} + k(t) \, \vec{k}
 \end{equation*}
 
 \bigskip
@@ -116,7 +116,7 @@ On the other hand, some authors use "over arrow"
 I've also seen
 
 \begin{equation*}
-\vec{r}(t) = g(t) \hat{i} + h(t) \hat{j} + k(t) \hat{k}
+\vec{r}(t) = g(t) \, \hat{i} + h(t) \, \hat{j} + k(t) \, \hat{k}
 \end{equation*}
 
 
@@ -127,21 +127,22 @@ In this document I'll use these forms interchangeably.
 
 \bigskip
 \noindent
-We will also use $\dot{\mathbf{r}}$ and $\dfrac{d\mathbf{r}}{dt}$
-interchangeably.
+We will also use $\dot{\mathbf{r}}$, $\dfrac{d\mathbf{r}}{dt}$
+and $\mathbf{r}^{\prime}$ interchangeably.
 
 \subsection{Vector Fields}
 \label{subsec:vector_fields}
 
 \newpage
 \section{Arc Length}
-Consider a segment of a parametric curve $\mathbf{r} = \mathbf{r}(t)$ 
+Consider a segment of a parametric curve $\mathbf{r}(t)
+= g(t) \, \hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}} + k(t) \, \hat{\mathbf{k}}$
 between two points $P =\mathbf{r}(t)$ and $Q =\mathbf{r}(t + \Delta t)$,
 as shown in Figure \ref{fig:delta-r}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
+\center{\includegraphics[frame,scale=0.35] {images/delta-r.png}}
 \caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
@@ -154,25 +155,53 @@ $\Delta s$ can be approximated by the chord length
 $\| \Delta \mathbf{r} \|$. Then we can compute the
 infinitesimal arc length $ds$ as follows:
 
-\bigskip
+\smallskip
 \begin{equation*}
 \begin{array}{lllll}
 \Delta s
 &\approx& \| \Delta \mathbf{r} \|							
-			&\qquad \qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
-[10 pt]
+			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
+[12 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
-			&\qquad \qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
-[10 pt]
+			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
+[12 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
-			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
-[10 pt]
+			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
+[12 pt]
 &=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
-			&\qquad \qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
-[10 pt]
+			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
+[12 pt]
+&\Rightarrow& \Delta s - \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t = 0
+			&\qquad \mathrel{\#} \text{subtract 
+			$\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t$
+			from both sides} \\
+[15 pt]
+&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Bigg [\Delta s - \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			= {\displaystyle \lim_{\Delta t \to 0} 0}
+			&\qquad \mathrel{\#} \text{sum rule for limits \cite{properties_of_limits}} \\
+[15 pt]
+&\Rightarrow& {\displaystyle ds -\lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			= 0
+			&\qquad \mathrel{\#} \text{sum rule for limits, 
+			${\displaystyle \lim_{\Delta t \to 0} 0 = 0}$,
+			${\displaystyle \lim_{\Delta s \to 0} \Delta s = ds}$} \\
+[15 pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg [	
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			&\qquad \mathrel{\#} \text{solve for $ds$} \\
+[15 pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| 
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
+[15 pt]
 &\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \qquad \mathrel{\#} \text{since} {\displaystyle \lim_{\Delta t \to 0} 
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}} \\
+			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0} 
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt}},
+			{\displaystyle \lim_{\Delta t \to 0} \Delta t = dt}
 \end{array}
 \end{equation*}
 
@@ -182,7 +211,7 @@ Interestingly we can also see this using the Pythagorean theorem.
 Specifically, if we move an infinitesimal distance in the $x$ 
 and $y$ directions we get a triangle in the x-y plane
 who's sides have length $dx$ and $dy$ and who's hypotenuse 
-is $ds$. This scenario is shown for some function $f(x)$ in 
+is $ds$. This scenario is shown for some curve $f(x)$ in 
 Figure \ref{fig:pythagorean_theorem}.
 
 \bigskip
@@ -195,9 +224,9 @@ Further, since derivative is a linear operator
 we know that
 
 \bigskip
-\begin{equation*}
+\begin{equation}
 \dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
-\end{equation*}
+\end{equation}
 
 
 
@@ -287,8 +316,11 @@ ds
 &=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
 			&\qquad \qquad \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$}  \\
 [15pt]
-&=& \sqrt{\left (\dfrac{1}{dt} \right)^2 \cdot \left ( g(t)^2 + h(t)^2 \right )} \cdot dt
-			&\qquad \qquad \mathrel{\#} x = \sqrt{x^2} \\
+&=& \sqrt{dg^2 + dh^2} \cdot \Bigg [ dt \cdot \sqrt{\dfrac{1}{dt^2}} \Bigg ]
+			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} = x \cdot \dfrac{1}{\sqrt{x^2}}  \\
+[15pt]
+&=& \sqrt{\left (\dfrac{1}{dt^2} \right) \cdot \Big ( dg^2 + dh^2 \Big )} \cdot dt
+			&\qquad \qquad \mathrel{\#} \sqrt{x} \cdot \sqrt{y} = \sqrt{x \cdot y} \\
 [15pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
 			&\qquad \qquad \mathrel{\#} \text{simplify} \\
@@ -302,10 +334,6 @@ ds
 \end{array}
 \end{equation*}
 
-
-
-\bigskip
-\bigskip
 \noindent
 In any event, now we see that
 
