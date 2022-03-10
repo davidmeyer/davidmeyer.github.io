@@ -57,8 +57,8 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 %
 %
-\newtheorem{thm}{Theorem}[section]
 \theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
@@ -156,7 +156,182 @@ I have also seen
 In this document I'll use these forms interchangeably. 
 
 \bigskip
+\begin{definition}
+{\bf Dot Product: } The dot product (or scalar product or inner product) of two
+row vectors $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ and $\mathbf{b} = (b_1,b_2,\hdots, b_n)$,
+where $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$, is defined to be the scalar value
+
+\medskip
+\begin{equation*}
+\mathbf{a} \cdot \mathbf{b} 
+= \langle \mathbf{a},\mathbf{b} \rangle 
+= \sum\limits_{j = 1}^{n} a_j b_j
+= \mathbf{a}\mathbf{b}^{\intercal}
+\end{equation*}
+\end{definition}
+
 \noindent
+According to the Pythagorean theorem, the length of a vector 
+$\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted $\|\mathbf{a} \|$,
+equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The next definition is a 
+generalization of the notion of length to vectors of $R^n$.
+
+
+\bigskip
+\begin{definition}
+{\bf Euclidean Norm: } The Euclidean norm of a vector
+
+\begin{equation*}
+\mathbf{a} = (a_1,a_2,\hdots, a_n) \in \mathbb{R}^{n}
+\end{equation*}
+
+\noindent
+is defined to be
+
+\begin{equation}
+\|\mathbf{a}\| = \sqrt{\langle \mathbf{a}, \mathbf{a}} \rangle = \sqrt{\sum\limits_{j = 1}^{n} a_{j}^{2}}
+\label{eqn:magnitude}
+\end{equation}
+\end{definition}
+
+\begin{theorem} {\bf Cauchy–Schwarz inequality: }
+
+\bigskip
+\begin{equation*}
+\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \| \mathbf{a} \| \| \mathbf{b} \|
+\end{equation*}
+
+\bigskip
+\noindent
+{\bf Proof: } The inequality is trivial if either $
+\mathbf{a}$ or $\mathbf{b}$ is zero, so assume that 
+neither is. Now, let $\mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}$ 
+and $\mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}$ and so
+$\| \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x}$ and
+$\mathbf{y}$ are unit vectors). Then we can see by the triangle inequality 
+\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} that 
+
+\begin{equation*}
+\begin{array}{lllll}
+\big |\|\mathbf{x}\| - \|\mathbf{y}\| \big |
+&\leq& \|\mathbf{x} - \mathbf{y} \| 
+					&\quad \mathrel{\#} \text{triangle inequality 
+					\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality}} \\ 
+[8pt]
+&\Rightarrow& 0 \leq \|\mathbf{x} - \mathbf{y}\|
+					&\quad \mathrel{\#} \|\mathbf{x} \| = \| \mathbf{y} \| 
+					= 1, \; 1 - 1 = 0, \;  |0| = 0 \\
+[8pt]
+&\Rightarrow& 0 \leq  \| \mathbf{x} - \mathbf{y} \|^2
+					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
+					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0\\ 
+[8pt]
+&\Rightarrow& 0 \leq \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
+					&\quad \mathrel{\#} \| \mathbf{a} \|^{2} = \langle \mathbf{a},\mathbf{a} \rangle
+					\text{ by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\Rightarrow& 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2
+					&\quad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\Rightarrow& 0 \leq \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )
+					&\quad \mathrel{\#} \text{expand previous line} \\
+[8pt]
+&\Rightarrow& 0 \leq \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j} 
+					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
+					&\quad \mathrel{\#} \text{sum is a linear operator} \\
+[12pt]
+&\Rightarrow& 0 \leq \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
+					+ \|\mathbf{y}\|^2
+					&\quad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\				
+[12pt]
+&\Rightarrow& 0 \leq 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
+					&\quad \mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
+					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
+[12pt]
+&\Rightarrow& 0 \leq 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
+					&\quad \mathrel{\#} 1 + 1 = 2 \\
+[12pt]
+&\Rightarrow& -2 \leq -2 \langle \mathbf{x},\mathbf{y} \rangle
+					&\quad \mathrel{\#} \text{subtract 2 from both sides}  \\
+[12pt]
+&\Rightarrow& 1 \geq \langle \mathbf{x},\mathbf{y} \rangle 
+					&\quad \mathrel{\#} \text{divide by -2, flipping inequality}  \\
+[12pt]
+&\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
+					&\quad \mathrel{\#} \text{rearrange}  \\
+[12pt]
+&\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, 
+					{\dfrac{\mathbf{b}}{\|\mathbf{b}\|}} \right\rangle \leq 1
+					&\quad \mathrel{\#} \mathbf{x} = \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, \; \mathbf{y} 
+					= \dfrac{\mathbf{b}}{\|\mathbf{b}\|} \\
+[12pt]
+&\Rightarrow& \dfrac{\langle \mathbf{a},\mathbf{b} \rangle}{\|\mathbf{a}\| \|\mathbf{b}\|} \leq 1
+					&\quad \mathrel{\#} {\small \text{scalar multiplication rule for dot products:
+					$\! \langle c_{1}\mathbf{a}, c_{2}\mathbf{b} \rangle 
+					= c_{1} c_{2} \langle \mathbf{a}, \mathbf{b} \rangle$}}\\
+[12pt]
+&\Rightarrow& \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
+					&\quad \mathrel{\#} \text{multiply both sides by $\|\mathbf{a}\| \|\mathbf{b}\|$}
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Next note that the absolute value of $x$, $|x|$,
+is defined to be
+
+\medskip
+\begin{equation*}
+|x| = {
+  \begin{cases} x, & {\text{if }} x \geq 0 \\
+               -x, & {\text{if }} x < 0.
+  \end{cases}
+}
+\end{equation*}
+
+
+\bigskip
+\noindent
+If we replace $\mathbf{a}\footnote{There is nothing special about using 
+$\mathbf{a}$ here. We could use $\mathbf{b}$ and get the same result.}$ by 
+$-\mathbf{a}$ and since by Equation (\ref{eqn:magnitude}) we have 
+$\|-\mathbf{a}\| = \| \mathbf{a}\|$ and by the scalar multiplication rule for dot products 
+with $c_1 = -1$ and $c_2 = 1$ we have
+$\langle -\mathbf{a},\mathbf{b} \rangle = - \langle \mathbf{a},\mathbf{b} \rangle$
+we can see that
+
+\medskip
+\begin{equation*}
+- \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
+\end{equation*}
+
+\medskip
+\noindent
+We also know from above that
+
+\begin{equation*}
+\langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \| 
+\end{equation*}
+
+\bigskip
+\noindent
+So by the definition of absolute value we have
+
+\begin{equation*}
+\big |\langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\| \|\mathbf{b} \| 
+\end{equation*}
+
+\bigskip
+\noindent
+$\square$
+
+
+\end{theorem}
+
+
+
+\subsection{Derivatives}
 We will also denote the derivative of a vector $\mathbf{r}$ 
 with respect to $t$ by $\dot{\mathbf{r}}$, 
 $\dfrac{d\mathbf{r}}{dt}$ or $\mathbf{r}^{\prime}(t)$. 
