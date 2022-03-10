@@ -92,8 +92,24 @@
 TBD
 
 \section{Notation}
-Some authors use bold to denote a vector. Adding a "hat"
-denotes a unit vector; for example $\mathbf{\hat{i}}$ denotes
+Some of the notation we'll use is described in this section.
+
+\subsection{Vectors}
+Some authors use bold font to denote a vector. Adding a "hat"
+denotes a unit vector. A unit vector is defined to be 
+
+\begin{equation*}
+\hat{\mathbf{u}} = \dfrac{\mathbf{u}}{\| \mathbf{u} \|}
+\end{equation*}
+
+\bigskip
+\noindent
+that is, $\hat{\mathbf{u}}$ is a vector of unit
+length in the $\mathbf{u}$ direction.
+
+\bigskip
+\noindent
+For example $\mathbf{\hat{i}}$ denotes
 the unit vector in the $x$ direction. Using these
 definitions the parametric form of a three dimensional 
 vector $\mathbf{r}(t)$ would be
@@ -105,33 +121,84 @@ vector $\mathbf{r}(t)$ would be
 
 \bigskip
 \noindent
+In this case $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$ and  
+$\mathbf{\hat{k}}$, the basis vectors in $\mathbb{R}^3$,
+have column vector format 
+
+\bigskip
+\begin{equation*}
+{\displaystyle \mathbf {\hat {i}} 
+= {\begin{bmatrix}1\\0\\0\end{bmatrix}},\,\,
+\mathbf {\hat {j}} ={\begin{bmatrix}0\\1\\0\end{bmatrix}},\,\,
+\mathbf {\hat {k}} ={\begin{bmatrix}0\\0\\1\end{bmatrix}}}
+\end{equation*}
+
+\smallskip
+\bigskip
+\noindent
 On the other hand, some authors use "over arrow"
 
 \begin{equation*}
 \vec{r}(t) = g(t) \, \vec{i} +h(t) \, \vec{j} + k(t) \, \vec{k} 
 \end{equation*}
 
-\bigskip
+
 \noindent
-I've also seen
+I have also seen
 
 \begin{equation*}
 \vec{r}(t) = g(t) \, \hat{i} + h(t) \, \hat{j} + k(t) \, \hat{k}
 \end{equation*}
 
-
+\smallskip
+\bigskip
+\noindent
+In this document I'll use these forms interchangeably. 
 
 \bigskip
 \noindent
-In this document I'll use these forms interchangeably.
+We will also denote the derivative of a vector $\mathbf{r}$ 
+with respect to $t$ by $\dot{\mathbf{r}}$, 
+$\dfrac{d\mathbf{r}}{dt}$ or $\mathbf{r}^{\prime}(t)$. 
+Note also that by definition
 
 \bigskip
-\noindent
-We will also use $\dot{\mathbf{r}}$, $\dfrac{d\mathbf{r}}{dt}$
-and $\mathbf{r}^{\prime}(t)$ interchangeably.
+\begin{equation*}
+{\displaystyle \dfrac{d\mathbf{r}}{dt} = \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}}
+\end{equation*}
 
 \subsection{Vector Fields}
 \label{subsec:vector_fields}
+In vector calculus and physics, a vector field is an assignment 
+of a vector to each point in a subset of space \cite{galbis2012vector}.
+For example, a vector field in the plane can be visualized as 
+a collection of arrows with a given magnitude and direction, 
+each attached to a point in the plane. Vector fields are often used 
+to model the speed and direction of a moving fluid throughout 
+space, or the strength and direction of some force, such as the 
+magnetic or gravitational force, as it changes from one point to 
+another point.
+
+\bigskip
+\noindent
+For example, the wind vector field for the 2011 
+Joplin, MO tornado \cite{joplin_missouri_tornado_2011}
+is shown in Figure \ref{fig:wind_velocity_vector_field}.
+Here the color represents the wind speed $\| \mathbf{v} \|$, 
+where $\mathbf{v}$ is the wind velocity vector.
+
+
+\bigskip
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.40] 
+{images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
+\caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
+\label{fig:wind_velocity_vector_field}
+\end{figure}
+
+\bigskip
 
 \newpage
 \section{Arc Length}
