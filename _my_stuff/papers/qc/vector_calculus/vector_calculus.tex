@@ -379,13 +379,14 @@ Next note that the absolute value of $x$, $|x|$,
 is defined to be
 
 \medskip
-\begin{equation*}
+\begin{equation}
 |x| = {
   \begin{cases} x, & {\text{if }} x \geq 0 \\
                -x, & {\text{if }} x < 0.
   \end{cases}
 }
-\end{equation*}
+\label{eqn:absolute_value}
+\end{equation}
 
 
 \bigskip
@@ -406,29 +407,21 @@ here. We could use $\mathbf{b}$ and get the same result.}
 \end{equation*}
 
 \bigskip
+\setstretch{1.5}
 \noindent
-We also know from above that
+One way to see the Cauchy–Schwarz inequality 
+is by setting $x$ equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in 
+Equation (\ref{eqn:absolute_value}). Then when 
+$\langle \mathbf{a},\mathbf{b} \rangle \geq 0$ we have 
+$\big | \langle \mathbf{a}, \mathbf{b} \rangle \big | = \langle \mathbf{a},\mathbf{b} \rangle$
+and we showed above that $\langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|$.
+Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle < 0$ we have
+$\big | \langle \mathbf{a}, \mathbf{b} \rangle \big | = - \langle \mathbf{a},\mathbf{b} \rangle$
+and we showed that $- \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|$.
+Together these give us
+$\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\| \|\mathbf{b} \|$,
+the Cauchy–Schwarz inequality. $\square$
 
-\smallskip
-\begin{equation*}
-\langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \| 
-\end{equation*}
-
-
-\bigskip
-\noindent
-So by the definition of absolute value see that
-
-\bigskip
-\begin{equation*}
-\big | \langle \mathbf{a},\mathbf{b} \rangle \big |   \leq \|\mathbf{a}\| \|\mathbf{b} \| 
-\end{equation*}
-
-
-
-\bigskip
-\noindent
-$\square$
 \end{theorem}
 
 \subsection{Derivatives}
@@ -513,9 +506,9 @@ arc length $ds$ as follows:
 &=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
 			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
 [12 pt]
-&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+&\Rightarrow& \Delta s = \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
 			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
-			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$ } \\
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$ ($\approx \, \to \, =$ ?)} \\
 [15 pt]
 &\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
 			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
