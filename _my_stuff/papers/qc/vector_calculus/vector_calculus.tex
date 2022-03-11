@@ -212,9 +212,7 @@ $\mathbf{y} = \mathbf{\hat{b}}$).
 
 \bigskip
 \noindent
-First, to prove the Cauchy–Schwarz inequality we need
-the (reverse) triangle inequality 
-\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality}:
+To prove the Cauchy–Schwarz inequality we need the reverse triangle inequality:
 
 \medskip
 \begin{equation}
@@ -222,39 +220,47 @@ the (reverse) triangle inequality
 \label{eqn:reverse_triangle_inequality}
 \end{equation}
 
-\medskip
+
+\bigskip
 \noindent
-We can get the reverse triangle inequality from the triangle inequality
-as follows:
+We can get the reverse triangle inequality from the triangle inequality 
+\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by observing 
+that:
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \| \mathbf{x} \|
 &=& \| \mathbf{x} + (-\mathbf{y} + \mathbf{y})\| 
-					&\quad \mathrel{\#} \mathbf{x} =  \mathbf{x} + 0 
+					&\quad \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
+					\mathbf{x} =  \mathbf{x} + 0 
 					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
 [8pt]
 &=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
-					&\quad \mathrel{\#} \text{addition is associative: $a + (b + c) = (a + b) + c$} \\
+					&\quad \mathrel{\#} \text{addition is associative: 
+					$\mathbf{a} + (\mathbf{b} + \mathbf{c}) 
+					= (\mathbf{a} + \mathbf{b}) + \mathbf{c}$} \\
 [8pt]
 &\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
-					&\quad \mathrel{\#} \text{by the triangle inequality 
-					\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality}} \\
+					&\quad \mathrel{\#} \text{by the triangle inequality:
+					$\| \mathbf{a} + \mathbf{b} \| \leq \| \mathbf{a} \| + \| \mathbf{b} \|$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
 					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
 					&\quad \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}\\
-[12pt]
+[14pt]
 \| \mathbf{y} \|
 &=& \| \mathbf{y} + (-\mathbf{x} + \mathbf{x})\|
-					&\quad \mathrel{\#} \mathbf{y} = \mathbf{y} + 0
+					&\quad \mathrel{\#} \text{add 0 to $\mathbf{y}$: }
+					\mathbf{y} = \mathbf{y} + 0
 					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
 [8pt]
 &=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
-					&\quad \mathrel{\#} \text{addition is associative: $a + (b + c) = (a + b) + c$} \\
+					&\quad \mathrel{\#} \text{addition is associative: 
+					$\mathbf{a} + (\mathbf{b} + \mathbf{c}) 
+					= (\mathbf{a} + \mathbf{b}) + \mathbf{c}$} \\
 [8pt] 
 &\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
 					&\quad \mathrel{\#} \text{by the triangle inequality} \\
@@ -266,13 +272,18 @@ as follows:
 					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
 [8pt]
 &\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
-					&\quad \mathrel{\#} \text{divide both sides by -1: $X \leq Y \Rightarrow -X \geq -Y$} \\
+					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{a} \leq \mathbf{b}) 
+					\Rightarrow -\mathbf{a} \geq -\mathbf{b}$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
 					&\quad \mathrel{\#} - \| \mathbf{y} - \mathbf{x}\|
 					= - \| - ( \mathbf{y} - \mathbf{x} )\| 
 					= - \| \mathbf{x} - \mathbf{y} \|
-					\text{ by Equation (\ref{eqn:magnitude})}
+					\text{ by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\Rightarrow& -\| \mathbf{x} - \mathbf{y}\| \leq \| \mathbf{x} \| - \| \mathbf{y} \| 
+					&\quad \mathrel{\#} \text{rearrange}
+
 
 \end{array}
 \end{equation*}
@@ -280,7 +291,7 @@ as follows:
 \bigskip
 \noindent
 Combining these two statements gives us the reverse triangle
-inequality:
+inequality (Equation (\ref{eqn:reverse_triangle_inequality})):
 
 \medskip
 \begin{equation*}
@@ -290,10 +301,12 @@ inequality:
 \leq \| \mathbf{x} - \mathbf{y}\|
 \end{equation*}
 
+
 \bigskip
 \noindent
+Now, using the reverse triangle inequality 
 and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$ 
-we can see that
+(by definition above) we can see that
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -338,7 +351,7 @@ we can see that
 					&\quad \mathrel{\#} \text{subtract 2 from both sides}  \\
 [12pt]
 &\Rightarrow& 1 \geq \langle \mathbf{x},\mathbf{y} \rangle 
-					&\quad \mathrel{\#} \text{divide by -2, flip inequality}  \\
+					&\quad \mathrel{\#} \text{divide by -2 $\Rightarrow$ reverse inequality}  \\
 [12pt]
 &\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
 					&\quad \mathrel{\#} \text{rearrange}  \\
