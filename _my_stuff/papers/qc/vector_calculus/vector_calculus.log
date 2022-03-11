@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  11 MAR 2022 10:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  11 MAR 2022 11:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1287,6 +1287,10 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@dima=\skip69
 \bigstrutjot=\dimen353
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/esvect.sty
+Package: esvect 
+\symesvector=\mathgroup7
+)
 \c@theorem=\count349
 \c@definition=\count350
 \c@proposition=\count351
@@ -1296,24 +1300,24 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 (./vector_calculus.aux)
 \openout1 = `vector_calculus.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1374,18 +1378,18 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-LaTeX Info: Redefining \celsius on input line 86.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 86.
+LaTeX Info: Redefining \celsius on input line 88.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 88.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 86.
-Package gensymb Info: Using \upOmega for \ohm on input line 86.
+LaTeX Info: Redefining \ohm on input line 88.
+Package gensymb Info: Using \upOmega for \ohm on input line 88.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring OFF on input line 88.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1398,9 +1402,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count360
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
  (./vector_calculus.out) (./vector_calculus.out)
 \@outlinefile=\write4
 \openout4 = `vector_calculus.out'.
@@ -1416,31 +1420,37 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 86
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 88
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+esvect on input line 
+88.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
+File: uesvect.fd 
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 365.
+LaTeX Font Warning: Command \small invalid in math mode on input line 366.
 
 
-Overfull \hbox (53.69275pt too wide) detected at line 373
+Overfull \hbox (70.65512pt too wide) detected at line 374
 []
  []
 
@@ -1452,22 +1462,21 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 464.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 465.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
- [4 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
-11-Joplin-MO-tornado.png>]
-<images/delta-r.png, id=119, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=110, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 480.
+Package pdftex.def Info: images/delta-r.png  used on input line 494.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
-
-Overfull \hbox (28.8371pt too wide) detected at line 537
+ [4 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
+11-Joplin-MO-tornado.png>]
+Overfull \hbox (28.8371pt too wide) detected at line 551
 []
  []
 
 [5 <./images/delta-r.png>]
-Overfull \hbox (4.18428pt too wide) detected at line 674
+Overfull \hbox (4.18428pt too wide) detected at line 688
 []
  []
 
@@ -1494,13 +1503,13 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: 533E1F604862CAE7A1F5E6FAA0E9CB3F;709.
  ) 
 Here is how much of TeX's memory you used:
- 53583 strings out of 478994
- 1342630 string characters out of 5858184
- 2001474 words of memory out of 5000000
- 70227 multiletter control sequences out of 15000+600000
- 419180 words of font info for 91 fonts, out of 8000000 for 9000
+ 53637 strings out of 478994
+ 1343441 string characters out of 5858184
+ 2002640 words of memory out of 5000000
+ 70268 multiletter control sequences out of 15000+600000
+ 419775 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,12n,131p,733b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,13n,131p,733b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
@@ -1526,11 +1535,12 @@ s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on vector_calculus.pdf (8 pages, 846428 bytes).
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/esvect/vect10.pfb>
+Output written on vector_calculus.pdf (8 pages, 848586 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
+ 282 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
  39 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -45,6 +45,8 @@
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
+\usepackage{esvect}
+
 
 
 %
@@ -196,7 +198,7 @@ is defined to be
 
 \begin{theorem} {\bf Cauchy–Schwarz inequality: }
 
-\bigskip
+\medskip
 \begin{equation*}
 \big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \| \mathbf{a} \| \| \mathbf{b} \|
 \end{equation*}
@@ -225,7 +227,7 @@ To prove the Cauchy–Schwarz inequality we need the reverse triangle inequality
 \noindent
 We can get the reverse triangle inequality from the triangle inequality 
 \cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by observing 
-that:
+that
 
 \bigskip
 \begin{equation*}
@@ -238,12 +240,12 @@ that:
 [8pt]
 &=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
 					&\quad \mathrel{\#} \text{addition is associative: 
-					$\mathbf{a} + (\mathbf{b} + \mathbf{c}) 
-					= (\mathbf{a} + \mathbf{b}) + \mathbf{c}$} \\
+					$\mathbf{v}_1 + (\mathbf{v}_2 + \mathbf{v}_3) 
+					= (\mathbf{v}_1 + \mathbf{v}_2) + \mathbf{v}_3$} \\
 [8pt]
 &\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
 					&\quad \mathrel{\#} \text{by the triangle inequality:
-					$\| \mathbf{a} + \mathbf{b} \| \leq \| \mathbf{a} \| + \| \mathbf{b} \|$} \\
+					$\| \mathbf{v}_1 + \mathbf{v}_2 \| \leq \| \mathbf{v}_1 \| + \| \mathbf{v}_2 \|$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
 					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
@@ -258,9 +260,7 @@ that:
 					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
 [8pt]
 &=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
-					&\quad \mathrel{\#} \text{addition is associative: 
-					$\mathbf{a} + (\mathbf{b} + \mathbf{c}) 
-					= (\mathbf{a} + \mathbf{b}) + \mathbf{c}$} \\
+					&\quad \mathrel{\#} \text{addition is associative} \\
 [8pt] 
 &\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
 					&\quad \mathrel{\#} \text{by the triangle inequality} \\
@@ -272,8 +272,8 @@ that:
 					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
 [8pt]
 &\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
-					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{a} \leq \mathbf{b}) 
-					\Rightarrow -\mathbf{a} \geq -\mathbf{b}$} \\
+					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{v}_1 \leq \mathbf{v}_2) 
+					\Rightarrow -\mathbf{v}_1 \geq -\mathbf{v}_2$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
 					&\quad \mathrel{\#} - \| \mathbf{y} - \mathbf{x}\|
@@ -323,7 +323,7 @@ and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$
 					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0\\ 
 [8pt]
 &\Rightarrow& 0 \leq \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
-					&\quad \mathrel{\#} \| \mathbf{a} \|^{2} = \langle \mathbf{a},\mathbf{a} \rangle
+					&\quad \mathrel{\#} \| \mathbf{v} \|^{2} = \langle \mathbf{v},\mathbf{v} \rangle
 					\text{ by Equation (\ref{eqn:magnitude})} \\
 [8pt]
 &\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
@@ -358,13 +358,14 @@ and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$
 [12pt]
 &\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, 
 					{\dfrac{\mathbf{b}}{\|\mathbf{b}\|}} \right\rangle \leq 1
-					&\quad \mathrel{\#} \mathbf{x} = \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, \; \mathbf{y} 
+					&\quad \mathrel{\#} \text{by definition above: }
+					\mathbf{x} = \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, \; \mathbf{y} 
 					= \dfrac{\mathbf{b}}{\|\mathbf{b}\|} \\
 [12pt]
 &\Rightarrow& \dfrac{\langle \mathbf{a},\mathbf{b} \rangle}{\|\mathbf{a}\| \|\mathbf{b}\|} \leq 1
 					&\quad \mathrel{\#} {\small \text{scalar multiplication rule for dot products:
-					$\! \langle c_{1}\mathbf{a}, c_{2}\mathbf{b} \rangle 
-					= c_{1} c_{2} \langle \mathbf{a}, \mathbf{b} \rangle$}}\\
+					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle 
+					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$}}\\
 [12pt]
 &\Rightarrow& \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
 					&\quad \mathrel{\#} \text{multiply both sides by $\|\mathbf{a}\| \|\mathbf{b}\|$}
@@ -407,7 +408,7 @@ here. We could use $\mathbf{b}$ and get the same result.}
 \end{equation*}
 
 \bigskip
-\setstretch{1.5}
+\setstretch{1.25}
 \noindent
 One way to see the Cauchy–Schwarz inequality 
 is by setting $x$ equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in 
@@ -466,9 +467,22 @@ where $\mathbf{v}$ is the wind velocity vector.
 \label{fig:wind_velocity_vector_field}
 \end{figure}
 
-\bigskip
 
-\newpage
+\bigskip
+\noindent
+The general form of a vector field (here in three dimensions) is
+
+\smallskip
+\begin{equation*}
+\vv{\mathbf{F}}(x,y,z) = P(x,y,z) \, \mathbf{\hat{i}} + Q(x,y,z) \, \mathbf{\hat{j}} + R(x,y,z) \, \mathbf{\hat{k}}
+\end{equation*}
+
+\bigskip
+\noindent
+where $P$, $Q$, and $R$ are scalar functions. That is, they are 
+functions $f$ such that $f:\mathbb{R}^3 \to \mathbb{R}$.
+
+
 \section{Arc Length}
 Consider a segment of a parametric curve $\mathbf{r}(t)
 = g(t) \, \hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}} + k(t) \, \hat{\mathbf{k}}$
