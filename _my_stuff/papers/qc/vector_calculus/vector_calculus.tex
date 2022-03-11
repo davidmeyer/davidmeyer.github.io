@@ -208,15 +208,98 @@ is defined to be
 neither is. Now, let $\mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}$ 
 and $\mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}$ and so
 $\| \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} = \mathbf{\hat{a}}$ and
-$\mathbf{y} = \mathbf{\hat{b}}$). Then we can see by the triangle inequality 
-\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} that 
+$\mathbf{y} = \mathbf{\hat{b}}$). 
+
+\bigskip
+\noindent
+First, to prove the Cauchy–Schwarz inequality we need
+the (reverse) triangle inequality 
+\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality}:
+
+\medskip
+\begin{equation}
+\big | \|\mathbf{x} \| - \| \mathbf{y} \| \big | \leq \| \mathbf{x} - \mathbf{y} \|
+\label{eqn:reverse_triangle_inequality}
+\end{equation}
+
+\medskip
+\noindent
+We can get the reverse triangle inequality from the triangle inequality
+as follows:
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{x} \|
+&=& \| \mathbf{x} + (-\mathbf{y} + \mathbf{y})\| 
+					&\quad \mathrel{\#} \mathbf{x} =  \mathbf{x} + 0 
+					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
+[8pt]
+&=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
+					&\quad \mathrel{\#} \text{addition is associative: $a + (b + c) = (a + b) + c$} \\
+[8pt]
+&\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
+					&\quad \mathrel{\#} \text{by the triangle inequality 
+					\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality}} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
+					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
+					&\quad \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}\\
+[12pt]
+\| \mathbf{y} \|
+&=& \| \mathbf{y} + (-\mathbf{x} + \mathbf{x})\|
+					&\quad \mathrel{\#} \mathbf{y} = \mathbf{y} + 0
+					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
+[8pt]
+&=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
+					&\quad \mathrel{\#} \text{addition is associative: $a + (b + c) = (a + b) + c$} \\
+[8pt] 
+&\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
+					&\quad \mathrel{\#} \text{by the triangle inequality} \\
+[8pt]
+&\Rightarrow& \| \mathbf{y} \| \leq \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \|
+					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{y} \|$}\\
+[8pt]
+&\Rightarrow& \| \mathbf{y} \| - \| \mathbf{x} \| \leq \| \mathbf{y} - \mathbf{x}\| 
+					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
+[8pt]
+&\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
+					&\quad \mathrel{\#} \text{divide both sides by -1: $X \leq Y \Rightarrow -X \geq -Y$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
+					&\quad \mathrel{\#} - \| \mathbf{y} - \mathbf{x}\|
+					= - \| - ( \mathbf{y} - \mathbf{x} )\| 
+					= - \| \mathbf{x} - \mathbf{y} \|
+					\text{ by Equation (\ref{eqn:magnitude})}
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Combining these two statements gives us the reverse triangle
+inequality:
+
+\medskip
+\begin{equation*}
+-\| \mathbf{x} - \mathbf{y} \| \leq \| \mathbf{x} \| - \| \mathbf{y} 
+\|\leq \| \mathbf{x} - \mathbf{y} \|
+\Rightarrow \big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
+\leq \| \mathbf{x} - \mathbf{y}\|
+\end{equation*}
+
+\bigskip
+\noindent
+and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$ 
+we can see that
 
 \begin{equation*}
 \begin{array}{lllll}
 \big |\|\mathbf{x}\| - \|\mathbf{y}\| \big |
 &\leq& \|\mathbf{x} - \mathbf{y} \| 
-					&\quad \mathrel{\#} \text{triangle inequality 
-					\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality}} \\ 
+					&\quad \mathrel{\#} \text{reverse triangle inequality (Equation (\ref{eqn:reverse_triangle_inequality}))} \\
 [8pt]
 &\Rightarrow& 0 \leq \|\mathbf{x} - \mathbf{y}\|
 					&\quad \mathrel{\#} \|\mathbf{x} \| = \| \mathbf{y} \| 
@@ -230,13 +313,13 @@ $\mathbf{y} = \mathbf{\hat{b}}$). Then we can see by the triangle inequality
 					&\quad \mathrel{\#} \| \mathbf{a} \|^{2} = \langle \mathbf{a},\mathbf{a} \rangle
 					\text{ by Equation (\ref{eqn:magnitude})} \\
 [8pt]
-&\Rightarrow& 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2
+&\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
 					&\quad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
 [8pt]
-&\Rightarrow& 0 \leq \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )
+&\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
 					&\quad \mathrel{\#} \text{expand previous line} \\
 [8pt]
-&\Rightarrow& 0 \leq \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j} 
+&\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j}} 
 					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
 					&\quad \mathrel{\#} \text{sum is a linear operator} \\
 [12pt]
@@ -255,7 +338,7 @@ $\mathbf{y} = \mathbf{\hat{b}}$). Then we can see by the triangle inequality
 					&\quad \mathrel{\#} \text{subtract 2 from both sides}  \\
 [12pt]
 &\Rightarrow& 1 \geq \langle \mathbf{x},\mathbf{y} \rangle 
-					&\quad \mathrel{\#} \text{divide by -2, flipping inequality}  \\
+					&\quad \mathrel{\#} \text{divide by -2, flip inequality}  \\
 [12pt]
 &\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
 					&\quad \mathrel{\#} \text{rearrange}  \\
@@ -276,7 +359,8 @@ $\mathbf{y} = \mathbf{\hat{b}}$). Then we can see by the triangle inequality
 \end{array}
 \end{equation*}
 
-\bigskip
+
+\medskip
 \noindent
 Next note that the absolute value of $x$, $|x|$,
 is defined to be
@@ -293,42 +377,46 @@ is defined to be
 
 \bigskip
 \noindent
-If we replace $\mathbf{a}$ by $-\mathbf{a}$ and since by 
+If we replace $\mathbf{a}$ by $-\mathbf{a}$ we see that by 
 Equation (\ref{eqn:magnitude}) we have $\|-\mathbf{a}\| 
-= \| \mathbf{a}\|$ and by the scalar multiplication rule for dot products 
-we have $\langle -\mathbf{a},\mathbf{b} \rangle = - \langle \mathbf{a},\mathbf{b} \rangle$ 
-we can see that\footnote{There is nothing special about using $\mathbf{a}$ 
+= \| \mathbf{a}\|$. Further, by the scalar multiplication rule for dot products 
+with $c_1 = -1$ and $c_2 = 1$ we have $\langle -\mathbf{a},\mathbf{b} \rangle 
+= - \langle \mathbf{a},\mathbf{b} \rangle$. So we can see 
+that\footnote{There is nothing special about using $\mathbf{a}$ 
 here. We could use $\mathbf{b}$ and get the same result.}
 
-\medskip
+\smallskip
 \begin{equation*}
-- \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
+- \langle \mathbf{a},\mathbf{b} \rangle 
+\leq \|\mathbf{a}\| \|\mathbf{b} \| \\
+\bigskip
 \end{equation*}
 
-\medskip
+\bigskip
 \noindent
 We also know from above that
 
+\smallskip
 \begin{equation*}
 \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \| 
 \end{equation*}
 
+
 \bigskip
 \noindent
-So by the definition of absolute value we have
+So by the definition of absolute value see that
 
+\bigskip
 \begin{equation*}
-\big |\langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\| \|\mathbf{b} \| 
+\big | \langle \mathbf{a},\mathbf{b} \rangle \big |   \leq \|\mathbf{a}\| \|\mathbf{b} \| 
 \end{equation*}
+
+
 
 \bigskip
 \noindent
 $\square$
-
-
 \end{theorem}
-
-
 
 \subsection{Derivatives}
 We will also denote the derivative of a vector $\mathbf{r}$ 
@@ -414,7 +502,7 @@ arc length $ds$ as follows:
 [12 pt]
 &\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
 			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
-			&\qquad \mathrel{\#} \text{this is our approximation} \\
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$ } \\
 [15 pt]
 &\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
 			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
@@ -459,20 +547,18 @@ g(t)$ and $y = h(t)$ we have $\mathbf{r}(t) = g(t) \,
 derivative is a linear operator
 \cite{wiki:linearity_of_differentiation} we know that
 
-\bigskip
+\medskip
 \begin{equation}
 \dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
 \label{eqn:drdt}
 \end{equation}
 
-
-\bigskip
 %
 %	draw Pythagorean theorem stuff
 %
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
-  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
@@ -533,7 +619,7 @@ derivative is a linear operator
  \label{fig:pythagorean_theorem}
  \end{figure}
 
-\bigskip
+\medskip
 \noindent
 So in the source domain the Pythagorean theorem 
 tells us that $ds = \sqrt{dx^2 + dy^2}$. Using
@@ -581,6 +667,7 @@ ds
 \end{array}
 \end{equation*}
 
+\smallskip
 \noindent
 In any event, now we see that
 
@@ -617,20 +704,20 @@ to notice that
 \begin{array}{lllll}
 \mathbf{T}
 &=& \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
-			&\hskip 10em \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
+			&\qquad \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\|\dot{\mathbf{r}} \|} 
-			&\hskip 10em \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
+			&\qquad \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\hskip 10em \mathrel{\#} \text{Equation (\ref{eqn:mag_r_dot}): $\|\dot{\mathbf{r}}\| 
+			&\qquad \mathrel{\#} \text{Equation (\ref{eqn:mag_r_dot}): $\|\dot{\mathbf{r}}\| 
 			= \dfrac{ds}{dt}$} \\
 [25pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} \cdot \dfrac{dt}{dt}
-		&\hskip 10em \mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$} \\
+		&\qquad\mathrel{\#} \text{multiply by $1 = \dfrac{dt}{dt}$} \\
 [25pt]
 &=& \dfrac{d\mathbf{r}}{ds}
-			&\hskip 10em \mathrel{\#} \text{simplify}
+			&\qquad \mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
