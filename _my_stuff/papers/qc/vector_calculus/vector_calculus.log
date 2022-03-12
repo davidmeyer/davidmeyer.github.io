@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  12 MAR 2022 09:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  12 MAR 2022 09:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1537,7 +1537,7 @@ type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (8 pages, 848750 bytes).
+Output written on vector_calculus.pdf (8 pages, 848740 bytes).
 PDF statistics:
  282 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams
