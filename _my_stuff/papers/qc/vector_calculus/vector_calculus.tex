@@ -154,7 +154,8 @@ Another common notation is
 \noindent
 In this document I'll use these notations interchangeably. 
 
-\bigskip
+\section{Definitions and a Few Theorems}
+
 \begin{definition}
 {\bf Dot Product: } The dot product (aka scalar product 
 or inner product) of two column vectors $\mathbf{a} 
@@ -183,10 +184,12 @@ generalization of the notion of length to vectors in $\mathbb{R}^n$.
 \begin{definition}
 {\bf Euclidean Norm: } The Euclidean norm of a vector
 
+\bigskip
 \begin{equation*}
 \mathbf{a} = (a_1,a_2,\hdots, a_n) \in \mathbb{R}^{n}
 \end{equation*}
 
+\bigskip
 \noindent
 is defined to be
 
@@ -196,7 +199,8 @@ is defined to be
 \end{equation}
 \end{definition}
 
-\begin{theorem} {\bf Cauchy–Schwarz inequality: }
+\bigskip
+\begin{theorem} {\bf Cauchy–Schwarz Inequality: }
 
 \medskip
 \begin{equation*}
@@ -217,7 +221,7 @@ $\mathbf{y} = \mathbf{\hat{b}}$).
 Then one way to prove the Cauchy–Schwarz inequality is to use the 
 reverse triangle inequality:
 
-\medskip
+\bigskip
 \begin{equation}
 \big | \|\mathbf{x} \| - \| \mathbf{y} \| \big | \leq \| \mathbf{x} - \mathbf{y} \|
 \label{eqn:reverse_triangle_inequality}
@@ -230,7 +234,6 @@ We can get the reverse triangle inequality from the triangle inequality
 \cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by observing 
 that
 
-\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \| \mathbf{x} \|
@@ -253,7 +256,15 @@ that
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
 					&\quad \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}\\
-[14pt]
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+\begin{array}{lllll}
 \| \mathbf{y} \|
 &=& \| \mathbf{y} + (-\mathbf{x} + \mathbf{x})\|
 					&\quad \mathrel{\#} \text{add 0 to $\mathbf{y}$: }
@@ -305,9 +316,7 @@ inequality (Equation (\ref{eqn:reverse_triangle_inequality})):
 
 \bigskip
 \noindent
-Now, using the reverse triangle inequality 
-and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$ 
-(by definition above) we can see that
+Using the reverse triangle inequality we can see that
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -317,7 +326,7 @@ and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$
 [8pt]
 &\Rightarrow& 0 \leq \|\mathbf{x} - \mathbf{y}\|
 					&\quad \mathrel{\#} \|\mathbf{x} \| = \| \mathbf{y} \| 
-					= 1, \; 1 - 1 = 0, \;  |0| = 0 \\
+					= 1 \text{ by definition above, $1 - 1 = 0$, $|0| = 0$} \\
 [8pt]
 &\Rightarrow& 0 \leq  \| \mathbf{x} - \mathbf{y} \|^2
 					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
@@ -374,30 +383,13 @@ and since $\| \mathbf{x} \| = \| \mathbf{y} \| = 1$
 \end{array}
 \end{equation*}
 
-
-\medskip
-\noindent
-Next note that the absolute value of $x$, $|x|$,
-is defined to be
-
-\medskip
-\begin{equation}
-|x| = {
-  \begin{cases} x, & {\text{if }} x \geq 0 \\
-               -x, & {\text{if }} x < 0.
-  \end{cases}
-}
-\label{eqn:absolute_value}
-\end{equation}
-
-
 \bigskip
 \noindent
-If we replace $\mathbf{a}$ by $-\mathbf{a}$ we see that by 
-Equation (\ref{eqn:magnitude}) we have $\|-\mathbf{a}\| 
-= \| \mathbf{a}\|$. Further, by the scalar multiplication rule for dot products 
+If we replace $\mathbf{a}$ by $-\mathbf{a}$ by 
+Equation (\ref{eqn:magnitude}) $\|-\mathbf{a}\| = \| \mathbf{a}\|$. 
+Further, by the scalar multiplication rule for dot products 
 with $c_1 = -1$ and $c_2 = 1$ we have $\langle -\mathbf{a},\mathbf{b} \rangle 
-= - \langle \mathbf{a},\mathbf{b} \rangle$. So we can see 
+= - \langle \mathbf{a},\mathbf{b} \rangle$. So we can also see 
 that\footnote{There is nothing special about using $\mathbf{a}$ 
 here. We could use $\mathbf{b}$ and get the same result.}
 
@@ -405,13 +397,30 @@ here. We could use $\mathbf{b}$ and get the same result.}
 \begin{equation*}
 - \langle \mathbf{a},\mathbf{b} \rangle 
 \leq \|\mathbf{a}\| \|\mathbf{b} \| \\
-\bigskip
 \end{equation*}
 
-\bigskip
-\setstretch{1.25}
+
+\medskip
 \noindent
-One way to see the Cauchy–Schwarz inequality 
+Next note that the absolute value of $x$, $|x|$,
+is defined to be
+
+\bigskip
+\begin{equation}
+|x| = {
+  \begin{cases}\hfill x, & {\text{if }} x \geq 0 \\
+                     -x, & {\text{if }} x < 0.
+  \end{cases}
+}
+\label{eqn:absolute_value}
+\end{equation}
+
+
+
+\bigskip
+\setstretch{1.10}
+\noindent
+So one way to see the Cauchy–Schwarz inequality 
 is by setting $x$ equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in 
 Equation (\ref{eqn:absolute_value}). Then when 
 $\langle \mathbf{a},\mathbf{b} \rangle \geq 0$ we have 
@@ -422,7 +431,7 @@ $\big | \langle \mathbf{a}, \mathbf{b} \rangle \big | = - \langle \mathbf{a},\ma
 and we showed that $- \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|$.
 Together these give us
 $\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\| \|\mathbf{b} \|$,
-the Cauchy–Schwarz inequality. $\square$
+namely, the Cauchy–Schwarz inequality. $\square$
 
 \end{theorem}
 
@@ -462,7 +471,7 @@ where $\mathbf{v}$ is the wind velocity vector.
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.40] 
+\center{\includegraphics[scale=0.35] 
 {images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
 \caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
 \label{fig:wind_velocity_vector_field}
