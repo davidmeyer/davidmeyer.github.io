@@ -474,7 +474,7 @@ where $\mathbf{v}$ is the wind velocity vector.
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.35] 
+\center{\includegraphics[scale=0.30] 
 {images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
 \caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
 \label{fig:wind_velocity_vector_field}
@@ -523,39 +523,39 @@ arc length $ds$ as follows:
 \Delta s
 &\approx& \| \Delta \mathbf{r} \|							
 			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
-[12 pt]
+[10 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
 			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
-[12 pt]
+[10 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
 			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
-[12 pt]
+[10 pt]
 &=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
 			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
-[12 pt]
+[10 pt]
 &\Rightarrow& \Delta s = \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
 			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
 			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$ ($\approx \, \to \, =$ ?)} \\
-[15 pt]
+[10 pt]
 &\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
 			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
 			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
-[15 pt]
+[10pt]
 &\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
 			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
 			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
-[15 pt]
+[10 pt]
 &\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
 			\cdot \lim_{\Delta t \to 0} \Delta t}
 			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
-[15 pt]
+[10 pt]
 &\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
 			\cdot \lim_{\Delta t \to 0} \Delta t}
 			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
-[15 pt]
+[10 pt]
 &\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
 			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
@@ -589,9 +589,9 @@ derivative is a linear operator
 %
 %	draw Pythagorean theorem stuff
 %
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want 
+  \resizebox{0.45 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
