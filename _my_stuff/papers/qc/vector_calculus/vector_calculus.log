@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  13 MAR 2022 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  13 MAR 2022 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1472,7 +1472,7 @@ Overfull \hbox (28.8371pt too wide) detected at line 564
 []
  []
 
-[5 <./images/delta-r.png>] [6] [7] (./vector_calculus.bbl
+[5 <./images/delta-r.png>] [6] (./vector_calculus.bbl [7]
 Underfull \hbox (badness 1521) in paragraph at lines 23--27
 []\OT1/cmr/m/n/10 Jean H. Gal-lier.  Vec-tor Norms and Ma-trix Norms.  []$\OT1/
 cmtt/m/n/10 https : / / www . cis . upenn . edu / []cis515 /
@@ -1525,7 +1525,7 @@ st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (8 pages, 816802 bytes).
+Output written on vector_calculus.pdf (8 pages, 816422 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  202 compressed objects within 3 object streams
