@@ -288,9 +288,9 @@ and
 					\Rightarrow -\mathbf{v}_1 \geq -\mathbf{v}_2$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
-					&\quad \mathrel{\#} - \| \mathbf{y} - \mathbf{x}\|
-					= - \| - ( \mathbf{y} - \mathbf{x} )\| 
-					= - \| \mathbf{x} - \mathbf{y} \|
+					&\quad \mathrel{\#} \| \mathbf{y} - \mathbf{x}\|
+					= \| - (\mathbf{y} - \mathbf{x}) \|
+					= \| \mathbf{x} - \mathbf{y} \|
 					\text{ by Equation (\ref{eqn:magnitude})} \\
 [8pt]
 &\Rightarrow& -\| \mathbf{x} - \mathbf{y}\| \leq \| \mathbf{x} \| - \| \mathbf{y} \| 
@@ -330,42 +330,46 @@ Using the reverse triangle inequality we can see that
 [8pt]
 &\Rightarrow& 0 \leq  \| \mathbf{x} - \mathbf{y} \|^2
 					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
-					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0\\ 
+					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0 \\ 
 [8pt]
 &\Rightarrow& 0 \leq \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
-					&\quad \mathrel{\#} \| \mathbf{v} \|^{2} = \langle \mathbf{v},\mathbf{v} \rangle
+					&\quad \mathrel{\#} {\| \mathbf{x} - \mathbf{y} \|}^{2} 
+					= \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y}  \rangle
 					\text{ by Equation (\ref{eqn:magnitude})} \\
-[8pt]
+[6pt]
 &\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
-					&\quad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
-[12pt]
+&\quad \mathrel{\#} \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
+					= {\displaystyle \sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}
+				\text{ by Equation (\ref{eqn:magnitude})} \\
+[8pt]
 &\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
 					&\quad \mathrel{\#} \text{expand previous line} \\
 [8pt]
 &\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j}} 
 					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
 					&\quad \mathrel{\#} \text{sum is a linear operator} \\
-[12pt]
+[8pt]
 &\Rightarrow& 0 \leq \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
 					+ \|\mathbf{y}\|^2
-					&\quad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\				
+					&\quad \mathrel{\#} {\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} x_{j}^2
+					\text{ by Equation (\ref{eqn:magnitude})} \\				
 [12pt]
 &\Rightarrow& 0 \leq 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
 					&\quad \mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
 					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
-[12pt]
+[8pt]
 &\Rightarrow& 0 \leq 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
 					&\quad \mathrel{\#} 1 + 1 = 2 \\
-[12pt]
+[8pt]
 &\Rightarrow& -2 \leq -2 \langle \mathbf{x},\mathbf{y} \rangle
 					&\quad \mathrel{\#} \text{subtract 2 from both sides}  \\
-[12pt]
+[8pt]
 &\Rightarrow& 1 \geq \langle \mathbf{x},\mathbf{y} \rangle 
-					&\quad \mathrel{\#} \text{divide by -2 and reverse inequality}  \\
-[12pt]
+					&\quad \mathrel{\#} \text{divide by -2, reversing inequality}  \\
+[8pt]
 &\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
 					&\quad \mathrel{\#} \text{rearrange}  \\
-[12pt]
+[5pt]
 &\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, 
 					{\dfrac{\mathbf{b}}{\|\mathbf{b}\|}} \right\rangle \leq 1
 					&\quad \mathrel{\#} \text{$\mathbf{x} 
