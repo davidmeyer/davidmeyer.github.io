@@ -331,15 +331,10 @@ Using the reverse triangle inequality we can see that
 &\Rightarrow& 0 \leq  \| \mathbf{x} - \mathbf{y} \|^2
 					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
 					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0 \\ 
-[8pt]
-&\Rightarrow& 0 \leq \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
-					&\quad \mathrel{\#} {\| \mathbf{x} - \mathbf{y} \|}^{2} 
-					= \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y}  \rangle
-					\text{ by Equation (\ref{eqn:magnitude})} \\
 [6pt]
 &\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
-&\quad \mathrel{\#} \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
-					= {\displaystyle \sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}
+				&\quad \mathrel{\#} \| \mathbf{x} - \mathbf{y} \|^2
+				= {\displaystyle \sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}
 				\text{ by Equation (\ref{eqn:magnitude})} \\
 [8pt]
 &\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
@@ -351,7 +346,9 @@ Using the reverse triangle inequality we can see that
 [12pt]
 &\Rightarrow& 0 \leq \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
 					+ \|\mathbf{y}\|^2
-					&\quad \mathrel{\#} {\| \mathbf{v} \|}^2 = \sum\limits_{j = 1}^{n} v_{j}^2 
+					&\quad \mathrel{\#} {\| \mathbf{v} \|}^2 = \sum\limits_{j = 1}^{n} v_{j}^2
+					\text{ and }
+					\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}
 					\text{ by Equation (\ref{eqn:magnitude})} \\				
 [8pt]
 &\Rightarrow& 0 \leq 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
