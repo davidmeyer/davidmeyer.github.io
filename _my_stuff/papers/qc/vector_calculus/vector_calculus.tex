@@ -234,11 +234,10 @@ In this document I'll use these notations interchangeably.
 \section{Definitions and a Few Theorems}
 
 \begin{definition}
-{\bf Dot Product: } The dot product (aka scalar product 
-or inner product) of two column vectors $\mathbf{a} 
-= (a_1,a_2,\hdots, a_n)$ and 
-$\mathbf{b} = (b_1,b_2,\hdots, b_n)$,
-where $\mathbf{a}, \mathbf{b} \in \mathbb{R}^n$, 
+{\bf Dot Product:} The dot product (aka scalar product 
+or inner product) of two $n$-dimensional vectors 
+$\mathbf{a} = (a_1,a_2,\hdots, a_n)$ and 
+$\mathbf{b} = (b_1,b_2,\hdots, b_n)$
 is defined to be the scalar value
 
 \medskip
@@ -246,10 +245,22 @@ is defined to be the scalar value
 \mathbf{a} \cdot \mathbf{b} 
 = \langle \mathbf{a},\mathbf{b} \rangle 
 = \sum\limits_{j = 1}^{n} a_j b_j
-= \mathbf{a}^{\intercal}\mathbf{b}
 \end{equation*}
 \end{definition}
 
+
+
+\bigskip
+\noindent
+If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then 
+the dot product can also be written as a matrix product:
+$\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}$.
+Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are row vectors then 
+the dot product can be written as
+$\mathbf{a} \cdot \mathbf{b} = \mathbf{a}\mathbf{b}^{\intercal}$.
+
+
+\bigskip
 \noindent
 According to the Pythagorean theorem, the length of a vector 
 $\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted $\|\mathbf{a} \|$,
@@ -259,7 +270,7 @@ generalization of the notion of length to vectors in $\mathbb{R}^n$.
 
 \bigskip
 \begin{definition}
-{\bf Euclidean Norm: } The Euclidean norm of a vector
+{\bf Euclidean Norm:} The Euclidean norm of a vector
 
 \bigskip
 \begin{equation*}
@@ -277,16 +288,16 @@ is defined to be
 \end{definition}
 
 \bigskip
-\begin{theorem} {\bf Cauchy–Schwarz Inequality: }
+\begin{theorem} {\bf Cauchy–Schwarz Inequality:}
 
-\medskip
+\bigskip
 \begin{equation*}
 \big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \| \mathbf{a} \| \| \mathbf{b} \|
 \end{equation*}
 
 \bigskip
 \noindent
-{\bf Proof: } The inequality is trivial if either $
+{\bf Proof:} The inequality is trivial if either $
 \mathbf{a}$ or $\mathbf{b}$ is zero, so assume that 
 neither is. So without loss of generality let 
 ${\displaystyle \mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and 
@@ -664,13 +675,13 @@ derivative is a linear operator
 \label{eqn:drdt}
 \end{equation}
 
-\bigskip
+
 %
 %	draw Pythagorean theorem stuff
 %
 \begin{figure}[t]
 \centering
-  \resizebox{0.55 \textwidth}{!} {																							% resize figure if you want 
+  \resizebox{0.60 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
