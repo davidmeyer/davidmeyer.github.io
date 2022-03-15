@@ -288,10 +288,11 @@ is defined to be
 \noindent
 {\bf Proof: } The inequality is trivial if either $
 \mathbf{a}$ or $\mathbf{b}$ is zero, so assume that 
-neither is. Now, let $\mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}$ 
-and $\mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}$ and so
-$\| \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} = \mathbf{\hat{a}}$ and
-$\mathbf{y} = \mathbf{\hat{b}}$). 
+neither is. So without loss of generality let 
+${\displaystyle \mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and 
+${\displaystyle \mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so
+$\| \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} 
+= \mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$). 
 
 \bigskip
 \noindent
@@ -379,8 +380,9 @@ and
 
 \bigskip
 \noindent
-Combining these two statements gives us the reverse triangle
-inequality (Equation (\ref{eqn:reverse_triangle_inequality})):
+Combining these expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
+gives us the reverse triangle inequality (Equation 
+(\ref{eqn:reverse_triangle_inequality})):
 
 \medskip
 \begin{equation*}
@@ -393,7 +395,10 @@ inequality (Equation (\ref{eqn:reverse_triangle_inequality})):
 
 \bigskip
 \noindent
-Using the reverse triangle inequality we can see that
+To see how the reverse triangle inequality and our
+definitions of $\mathbf{x}$ and $\mathbf{y}$ imply 
+the Cauchy–Schwarz inequality consider that
+
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -423,11 +428,11 @@ Using the reverse triangle inequality we can see that
 [12pt]
 &\Rightarrow& 0 \leq \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
 					+ \|\mathbf{y}\|^2
-					&\quad \mathrel{\#} {\| \mathbf{v} \|}^2 = \sum\limits_{j = 1}^{n} v_{j}^2
+					&\quad \mathrel{\#} {\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} x_{j}^2
 					\text{ and }
 					\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}
 					\text{ by Equation (\ref{eqn:magnitude})} \\				
-[8pt]
+[12pt]
 &\Rightarrow& 0 \leq 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
 					&\quad \mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
 					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
@@ -467,20 +472,18 @@ If we replace $\mathbf{a}$ by $-\mathbf{a}$
 we see by Equation (\ref{eqn:magnitude}) that 
 $\|-\mathbf{a}\| = \| \mathbf{a}\|$. Further, by 
 the scalar multiplication rule for dot products with $c_1 = -1$ 
-and $c_2 
-= 1$ we have $\langle -\mathbf{a},\mathbf{b} \rangle 
+and $c_2 = 1$ we have $\langle -\mathbf{a},\mathbf{b} \rangle 
 = - \langle \mathbf{a},\mathbf{b} \rangle$. Taken together
 these results imply that\footnote{There is nothing special about using $\mathbf{a}$ 
 here. We could use $\mathbf{b}$ and get the same result.}
 
-\smallskip
 \begin{equation*}
 - \langle \mathbf{a},\mathbf{b} \rangle 
 \leq \|\mathbf{a}\| \|\mathbf{b} \| \\
 \end{equation*}
 
 
-\medskip
+\bigskip
 \noindent
 Next note that the absolute value of $x$, $|x|$,
 is defined to be
@@ -579,7 +582,7 @@ as shown in Figure \ref{fig:delta-r}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.35] {images/delta-r.png}}
+\center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
 \caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
@@ -598,20 +601,20 @@ arc length $ds$ as follows:
 \Delta s
 &\approx& \| \Delta \mathbf{r} \|							
 			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
-[10 pt]
+[12 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
 			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
-[10 pt]
+[12 pt]
 &=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
 			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
-[10 pt]
+[12 pt]
 &=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
 			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
-[10 pt]
-&\Rightarrow& \Delta s = \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+[12 pt]
+&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
 			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
-			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$ ($\approx \, \to \, =$ ?)} \\
-[10 pt]
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
+[12 pt]
 &\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
 			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
 			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
@@ -620,17 +623,17 @@ arc length $ds$ as follows:
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
 			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
 			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
-[10 pt]
+[12 pt]
 &\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
 			\cdot \lim_{\Delta t \to 0} \Delta t}
 			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
-[10 pt]
+[12 pt]
 &\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
 			\cdot \lim_{\Delta t \to 0} \Delta t}
 			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
-[10 pt]
+[12 pt]
 &\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
 			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
@@ -655,18 +658,19 @@ g(t)$ and $y = h(t)$ we have $\mathbf{r}(t) = g(t) \,
 derivative is a linear operator
 \cite{wiki:linearity_of_differentiation} we know that
 
-\medskip
+\bigskip
 \begin{equation}
 \dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
 \label{eqn:drdt}
 \end{equation}
 
+\bigskip
 %
 %	draw Pythagorean theorem stuff
 %
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
-  \resizebox{0.45 \textwidth}{!} {																							% resize figure if you want 
+  \resizebox{0.55 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
@@ -727,7 +731,7 @@ derivative is a linear operator
  \label{fig:pythagorean_theorem}
  \end{figure}
 
-\medskip
+\bigskip
 \noindent
 So in the source domain the Pythagorean theorem 
 tells us that $ds = \sqrt{dx^2 + dy^2}$. Using
@@ -770,16 +774,17 @@ ds
 \end{array}
 \end{equation*}
 
-\smallskip
+
+\bigskip
 \noindent
 In any event, now we see that
 
-\bigskip
 \begin{equation}
 \dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
 \label{eqn:dsdt}
 \end{equation}
 
+\bigskip
 \noindent
 and so
 
