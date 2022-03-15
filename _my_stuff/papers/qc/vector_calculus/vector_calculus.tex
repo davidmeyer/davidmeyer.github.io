@@ -135,6 +135,63 @@ and zeros everywhere else. In $\mathbb{R}^3$:
 $\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 = \mathbf{\hat{j}}$,
 and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
 
+
+\bigskip
+\noindent
+In general,  the standard basis (which is sometimes called the computational 
+basis)  for the $n$-dimensional Euclidean space consists of the ordered set
+of $n$ distinct vectors
+
+\begin{equation*}
+\{\mathbf {e} _{i}: 1 \leq i \leq n\}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector which has a 1 in the $i^\text{th}$ 
+coordinate and 0's elsewhere.\footnote{This is also called a "one-hot" 
+encoding in machine learning parlance, where the $i$'s might be the 
+classes in a classification problem.} That is, the $\mathbf{e}_i$ are 
+the $n \times 1$ column vectors 
+
+\begin{flalign*}
+\mathbf{e}_{1} = 
+\begin{bmatrix} 
+1 \\
+0 \\
+\vdots \\
+0 \\
+0
+\end{bmatrix}, 
+\mathbf{e}_{2} = 
+\begin{bmatrix} 
+0 \\
+1 \\
+\vdots \\
+0 \\
+0
+\end{bmatrix}, 
+\hdots, 
+\mathbf{e}_{n-1} =
+\begin{bmatrix} 
+0 \\
+0 \\
+\vdots \\
+1 \\
+0
+\end{bmatrix}, 
+\mathbf{e}_{n} =
+\begin{bmatrix} 
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{bmatrix}
+\end{flalign*}
+
+
+
 \bigskip
 \noindent
 Using these definitions we can define
@@ -255,24 +312,24 @@ that
 \begin{array}{lllll}
 \| \mathbf{x} \|
 &=& \| \mathbf{x} + (-\mathbf{y} + \mathbf{y})\| 
-					&\quad \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
+					&\hspace{1.1cm} \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
 					\mathbf{x} =  \mathbf{x} + 0 
 					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
 [8pt]
 &=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
-					&\quad \mathrel{\#} \text{addition is associative: 
+					&\hspace{1.1cm} \mathrel{\#} \text{addition is associative: 
 					$\mathbf{v}_1 + (\mathbf{v}_2 + \mathbf{v}_3) 
 					= (\mathbf{v}_1 + \mathbf{v}_2) + \mathbf{v}_3$} \\
 [8pt]
 &\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
-					&\quad \mathrel{\#} \text{by the triangle inequality:
+					&\hspace{1.1cm} \mathrel{\#} \text{by the triangle inequality:
 					$\| \mathbf{v}_1 + \mathbf{v}_2 \| \leq \| \mathbf{v}_1 \| + \| \mathbf{v}_2 \|$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
-					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
+					&\hspace{1.1cm} \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
 [8pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
-					&\quad \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}\\
+					&\hspace{1.1cm} \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}
 \end{array}
 \end{equation*}
 
@@ -491,7 +548,7 @@ where $\mathbf{v}$ is the wind velocity vector.
 \bigskip
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.34] 
+\center{\includegraphics[scale=0.40] 
 {images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
 \caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
 \label{fig:wind_velocity_vector_field}
