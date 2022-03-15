@@ -97,8 +97,9 @@ TBD
 Some of the notation we'll use is described in this section.
 
 \subsection{Vectors}
-Some authors use bold font to denote a vector. Adding a "hat"
-denotes a unit vector. That is, for a vector $\mathbf{u}$, 
+Some authors use bold font to denote a vector, e.g. 
+$\mathbf{u}$. Adding a "hat" denotes a unit vector. 
+That is, for a vector $\mathbf{u}$, 
 $\hat{\mathbf{u}}$ is defined to be 
 
 \begin{equation*}
@@ -112,8 +113,8 @@ length in the $\mathbf{u}$ direction.
 
 \bigskip
 \noindent
-$\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{i}}$ 
-are the unit vectors in $\mathbb{R}^3$ in the $x$, $y$, and $z$ 
+Similarly, $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{i}}$ 
+are unit vectors in $\mathbb{R}^3$ in the $x$, $y$, and $z$ 
 directions respectively. Note that $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, 
 and $\mathbf{\hat{k}}$ are the canonical basis vectors for $\mathbb{R}^3$ 
 \cite{notes:basis} and have column vector format 
@@ -130,8 +131,9 @@ and $\mathbf{\hat{k}}$ are the canonical basis vectors for $\mathbb{R}^3$
 \bigskip
 \noindent
 I have also seen $\mathbf{e}_i$ used to represent the $i^{th}$ basis 
-vector. So $\mathbf{e}_i$ is a vector with a one in the $i^{th}$ position
-and zeros everywhere else. In $\mathbb{R}^3$:  
+vector in $\mathbb{R}^n$. So $\mathbf{e}_i$ is a vector with a one 
+in the $i^{th}$ position and a zero in each of the other $n - 1$ positions.
+In $\mathbb{R}^3$ this means that  
 $\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 = \mathbf{\hat{j}}$,
 and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
 
@@ -140,7 +142,7 @@ and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
 \noindent
 In general,  the standard basis (which is sometimes called the computational 
 basis)  for the $n$-dimensional Euclidean space consists of the ordered set
-of $n$ distinct vectors
+of $n$ distinct vectors in $\mathbb{R}^n$ 
 
 \begin{equation*}
 \{\mathbf {e} _{i}: 1 \leq i \leq n\}
@@ -148,11 +150,12 @@ of $n$ distinct vectors
 
 \bigskip
 \noindent
-where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector which has a 1 in the $i^\text{th}$ 
-coordinate and 0's elsewhere.\footnote{This is also called a "one-hot" 
-encoding in machine learning parlance, where the $i$'s might be the 
-classes in a classification problem.} That is, the $\mathbf{e}_i$ are 
-the $n \times 1$ column vectors 
+where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is, it
+has a one in the $i^\text{th}$ coordinate (position) and zeros 
+everywhere else.\footnote{This is also called a "one-hot" encoding 
+in machine learning parlance, where the $i$'s might be the 
+classes in a classification problem.} In matrix notation the 
+$\mathbf{e}_i$ are the $n \times 1$ column vectors 
 
 \begin{flalign*}
 \mathbf{e}_{1} = 
