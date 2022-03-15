@@ -248,25 +248,43 @@ is defined to be the scalar value
 \end{equation*}
 \end{definition}
 
-
-
 \bigskip
 \noindent
 If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then 
 the dot product can also be written as a matrix product:
 $\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}$
-where $\mathbf{v}^{\intercal}$ is the transpose of the vector 
-$\mathbf{v}$. Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are 
+where $\mathbf{a}^{\intercal}$ is the transpose of the vector 
+$\mathbf{a}$. Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are 
 row vectors then the dot product can be written as
 $\mathbf{a} \cdot \mathbf{b} = \mathbf{a}\mathbf{b}^{\intercal}$.
 
-
 \bigskip
+\noindent
+The matrix shape of the dot product of two $n \times 1$ 
+(column) vectors $\mathbf{a}$ and $\mathbf{b}$ is 
+
+
+\begin{flalign*}
+\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}   
+\rightarrow \underbrace{\begin{bmatrix} \hdots \hdots \hdots \end{bmatrix}}_{1 \times n}  
+\underbrace{\begin{bmatrix} \hdots \\ \vdots \\  \hdots  \end{bmatrix}}_{n \times 1} 
+\rightarrow c 
+\end{flalign*}
+
+
+\noindent
+where $c \in \mathbb{R}$.
+
+\medskip
+\setstretch{1.5}											% get a bit of extra space
 \noindent
 According to the Pythagorean theorem, the length of a vector 
 $\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted $\|\mathbf{a} \|$,
 equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The next definition is a 
 generalization of the notion of length to vectors in $\mathbb{R}^n$.
+
+\setstretch{1.0}											% set it back to default
+
 
 
 \bigskip
@@ -289,12 +307,7 @@ is defined to be
 \end{definition}
 
 \bigskip
-\begin{theorem} {\bf Cauchy–Schwarz Inequality:}
-
-\bigskip
-\begin{equation*}
-\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \| \mathbf{a} \| \| \mathbf{b} \|
-\end{equation*}
+\begin{theorem} {\bf Cauchy–Schwarz Inequality:} $\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \| \mathbf{a} \| \| \mathbf{b} \|$.
 
 \bigskip
 \noindent
@@ -304,152 +317,46 @@ neither is. So without loss of generality let
 ${\displaystyle \mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and 
 ${\displaystyle \mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so
 $\| \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} 
-= \mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$). 
+= \mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$).
+Then 
 
-\bigskip
-\noindent
-Then one way to prove the Cauchy–Schwarz inequality is to use the 
-reverse triangle inequality:
-
-\bigskip
-\begin{equation}
-\big | \|\mathbf{x} \| - \| \mathbf{y} \| \big | \leq \| \mathbf{x} - \mathbf{y} \|
-\label{eqn:reverse_triangle_inequality}
-\end{equation}
-
-
-\bigskip
-\noindent
-We can get the reverse triangle inequality from the triangle inequality 
-\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by observing 
-that
 
 \begin{equation*}
 \begin{array}{lllll}
-\| \mathbf{x} \|
-&=& \| \mathbf{x} + (-\mathbf{y} + \mathbf{y})\| 
-					&\hspace{1.1cm} \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
-					\mathbf{x} =  \mathbf{x} + 0 
-					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
-[8pt]
-&=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
-					&\hspace{1.1cm} \mathrel{\#} \text{addition is associative: 
-					$\mathbf{v}_1 + (\mathbf{v}_2 + \mathbf{v}_3) 
-					= (\mathbf{v}_1 + \mathbf{v}_2) + \mathbf{v}_3$} \\
-[8pt]
-&\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
-					&\hspace{1.1cm} \mathrel{\#} \text{by the triangle inequality:
-					$\| \mathbf{v}_1 + \mathbf{v}_2 \| \leq \| \mathbf{v}_1 \| + \| \mathbf{v}_2 \|$} \\
-[8pt]
-&\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
-					&\hspace{1.1cm} \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
-[8pt]
-&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
-					&\hspace{1.1cm} \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-and
-
-\begin{equation*}
-\begin{array}{lllll}
-\| \mathbf{y} \|
-&=& \| \mathbf{y} + (-\mathbf{x} + \mathbf{x})\|
-					&\quad \mathrel{\#} \text{add 0 to $\mathbf{y}$: }
-					\mathbf{y} = \mathbf{y} + 0
-					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
-[8pt]
-&=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
-					&\quad \mathrel{\#} \text{addition is associative} \\
-[8pt] 
-&\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
-					&\quad \mathrel{\#} \text{by the triangle inequality} \\
-[8pt]
-&\Rightarrow& \| \mathbf{y} \| \leq \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \|
-					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{y} \|$}\\
-[8pt]
-&\Rightarrow& \| \mathbf{y} \| - \| \mathbf{x} \| \leq \| \mathbf{y} - \mathbf{x}\| 
-					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
-[8pt]
-&\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
-					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{v}_1 \leq \mathbf{v}_2) 
-					\Rightarrow -\mathbf{v}_1 \geq -\mathbf{v}_2$} \\
-[8pt]
-&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
-					&\quad \mathrel{\#} \| \mathbf{y} - \mathbf{x}\|
-					= \| - (\mathbf{y} - \mathbf{x}) \|
-					= \| \mathbf{x} - \mathbf{y} \|
+0
+&\leq& \|\mathbf{x} - \mathbf{y}\|
+					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0
+					\text{ for all } \mathbf{x}, \mathbf{y} \in \mathbb{R}^{n} 
 					\text{ by Equation (\ref{eqn:magnitude})} \\
 [8pt]
-&\Rightarrow& -\| \mathbf{x} - \mathbf{y}\| \leq \| \mathbf{x} \| - \| \mathbf{y} \| 
-					&\quad \mathrel{\#} \text{rearrange}
-
-
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-Combining these expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
-gives us the reverse triangle inequality (Equation 
-(\ref{eqn:reverse_triangle_inequality})):
-
-\medskip
-\begin{equation*}
--\| \mathbf{x} - \mathbf{y} \| \leq \| \mathbf{x} \| - \| \mathbf{y} 
-\|\leq \| \mathbf{x} - \mathbf{y} \|
-\Rightarrow \big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
-\leq \| \mathbf{x} - \mathbf{y}\|
-\end{equation*}
-
-
-\bigskip
-\noindent
-To see how the reverse triangle inequality and our
-definitions of $\mathbf{x}$ and $\mathbf{y}$ imply 
-the Cauchy–Schwarz inequality consider that
-
-
-\begin{equation*}
-\begin{array}{lllll}
-\big |\|\mathbf{x}\| - \|\mathbf{y}\| \big |
-&\leq& \|\mathbf{x} - \mathbf{y} \| 
-					&\quad \mathrel{\#} \text{reverse triangle inequality (Equation (\ref{eqn:reverse_triangle_inequality}))} \\
-[8pt]
-&\Rightarrow& 0 \leq \|\mathbf{x} - \mathbf{y}\|
-					&\quad \mathrel{\#} \|\mathbf{x} \| = \| \mathbf{y} \| 
-					= 1 \text{ by definition above, $1 - 1 = 0$, $|0| = 0$} \\
-[8pt]
-&\Rightarrow& 0 \leq  \| \mathbf{x} - \mathbf{y} \|^2
+&\leq&  \| \mathbf{x} - \mathbf{y} \|^2
 					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
 					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0 \\ 
 [6pt]
-&\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
+&\leq& {\displaystyle \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
 				&\quad \mathrel{\#} \| \mathbf{x} - \mathbf{y} \|^2
 				= {\displaystyle \sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}
 				\text{ by Equation (\ref{eqn:magnitude})} \\
 [8pt]
-&\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
+&\leq& {\displaystyle \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
 					&\quad \mathrel{\#} \text{expand previous line} \\
 [8pt]
-&\Rightarrow& {\displaystyle 0 \leq \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j}} 
+&\leq& {\displaystyle \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j}} 
 					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
 					&\quad \mathrel{\#} \text{sum is a linear operator} \\
 [12pt]
-&\Rightarrow& 0 \leq \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
+&\leq& \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
 					+ \|\mathbf{y}\|^2
 					&\quad \mathrel{\#} {\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} x_{j}^2
 					\text{ and }
 					\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}
 					\text{ by Equation (\ref{eqn:magnitude})} \\				
 [12pt]
-&\Rightarrow& 0 \leq 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
+&\leq& 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
 					&\quad \mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
 					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
 [8pt]
-&\Rightarrow& 0 \leq 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
+&\leq& 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
 					&\quad \mathrel{\#} 1 + 1 = 2 \\
 [8pt]
 &\Rightarrow& -2 \leq -2 \langle \mathbf{x},\mathbf{y} \rangle
@@ -486,16 +393,12 @@ $\|-\mathbf{a}\| = \| \mathbf{a}\|$. Further, by
 the scalar multiplication rule for dot products with $c_1 = -1$ 
 and $c_2 = 1$ we have $\langle -\mathbf{a},\mathbf{b} \rangle 
 = - \langle \mathbf{a},\mathbf{b} \rangle$. Taken together
-these results imply that\footnote{There is nothing special about using $\mathbf{a}$ 
-here. We could use $\mathbf{b}$ and get the same result.}
-
-\begin{equation*}
-- \langle \mathbf{a},\mathbf{b} \rangle 
-\leq \|\mathbf{a}\| \|\mathbf{b} \| \\
-\end{equation*}
+these results imply that 
+$- \langle \mathbf{a},\mathbf{b} \rangle 
+\leq \|\mathbf{a}\| \|\mathbf{b} \|$.
 
 
-\bigskip
+\newpage
 \noindent
 Next note that the absolute value of $x$, $|x|$,
 is defined to be
@@ -843,6 +746,99 @@ to notice that
 \label{sec:conclusions}
 
 \section*{Acknowledgements}
+
+\section{Appendix A}
+I had thought that one way to prove the Cauchy–Schwarz inequality is to use the 
+reverse triangle inequality, but Dave Neary pointed out that I didn't need it. I'm 
+leaving the derivation of the reverse triangle inequality in this appendix
+ but it's not needed.
+
+
+\bigskip
+\noindent
+We can get the reverse triangle inequality from the triangle inequality 
+\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by observing 
+that
+
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{x} \|
+&=& \| \mathbf{x} + (-\mathbf{y} + \mathbf{y})\| 
+					&\hspace{1.1cm} \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
+					\mathbf{x} =  \mathbf{x} + 0 
+					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
+[8pt]
+&=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
+					&\hspace{1.1cm} \mathrel{\#} \text{addition is associative: 
+					$\mathbf{v}_1 + (\mathbf{v}_2 + \mathbf{v}_3) 
+					= (\mathbf{v}_1 + \mathbf{v}_2) + \mathbf{v}_3$} \\
+[8pt]
+&\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
+					&\hspace{1.1cm} \mathrel{\#} \text{by the triangle inequality:
+					$\| \mathbf{v}_1 + \mathbf{v}_2 \| \leq \| \mathbf{v}_1 \| + \| \mathbf{v}_2 \|$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
+					&\hspace{1.1cm} \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
+					&\hspace{1.1cm} \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{y} \|
+&=& \| \mathbf{y} + (-\mathbf{x} + \mathbf{x})\|
+					&\quad \mathrel{\#} \text{add 0 to $\mathbf{y}$: }
+					\mathbf{y} = \mathbf{y} + 0
+					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
+[8pt]
+&=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
+					&\quad \mathrel{\#} \text{addition is associative} \\
+[8pt] 
+&\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
+					&\quad \mathrel{\#} \text{by the triangle inequality} \\
+[8pt]
+&\Rightarrow& \| \mathbf{y} \| \leq \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \|
+					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{y} \|$}\\
+[8pt]
+&\Rightarrow& \| \mathbf{y} \| - \| \mathbf{x} \| \leq \| \mathbf{y} - \mathbf{x}\| 
+					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
+[8pt]
+&\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
+					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{v}_1 \leq \mathbf{v}_2) 
+					\Rightarrow -\mathbf{v}_1 \geq -\mathbf{v}_2$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
+					&\quad \mathrel{\#} \| \mathbf{y} - \mathbf{x}\|
+					= \| - (\mathbf{y} - \mathbf{x}) \|
+					= \| \mathbf{x} - \mathbf{y} \|
+					\text{ by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\Rightarrow& -\| \mathbf{x} - \mathbf{y}\| \leq \| \mathbf{x} \| - \| \mathbf{y} \| 
+					&\quad \mathrel{\#} \text{rearrange}
+
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Combining these expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
+gives us the reverse triangle inequality (Equation 
+(\ref{eqn:reverse_triangle_inequality})):
+
+\medskip
+\begin{equation*}
+-\| \mathbf{x} - \mathbf{y} \| \leq \| \mathbf{x} \| - \| \mathbf{y} 
+\|\leq \| \mathbf{x} - \mathbf{y} \|
+\Rightarrow \big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
+\leq \| \mathbf{x} - \mathbf{y}\|
+\end{equation*}
 
 
 %
