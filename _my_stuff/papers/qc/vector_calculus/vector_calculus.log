@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  16 MAR 2022 11:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  16 MAR 2022 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1489,13 +1489,13 @@ Underfull \hbox (badness 4168) in paragraph at lines 36--40
 /cmtt/m/n/10 https : / / www . mathopenref . com /
  []
 
-
+[10]
 Underfull \hbox (badness 2393) in paragraph at lines 42--48
 []\OT1/cmr/m/n/10 NIST.  Joplin Mis-souri Tor-nado 2011.  []$\OT1/cmtt/m/n/10 h
 ttps : / / www . nist . gov / disaster-[]failure-[]studies /
  []
 
-[10]
+
 Underfull \hbox (badness 1655) in paragraph at lines 50--57
 \OT1/cmtt/m/n/10 en . wikipedia . org / w / index . php ? title = Linearity _ o
 f _ differentiation & oldid = 1026177205$[]\OT1/cmr/m/n/10 , 2021.
@@ -1536,10 +1536,10 @@ st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (11 pages, 836238 bytes).
+Output written on vector_calculus.pdf (11 pages, 836386 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 249 compressed objects within 3 object streams
+ 329 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
  127 words of extra memory for PDF output out of 10000 (max. 10000000)
 
