@@ -113,11 +113,12 @@ length in the $\mathbf{u}$ direction.
 
 \bigskip
 \noindent
-Similarly, $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{i}}$ 
-are unit vectors in $\mathbb{R}^3$ in the $x$, $y$, and $z$ 
-directions respectively. Note that $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, 
-and $\mathbf{\hat{k}}$ are the canonical basis vectors for $\mathbb{R}^3$ 
-\cite{notes:basis} and have column vector format 
+Similarly, $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and
+$\mathbf{\hat{i}}$ are unit vectors in $\mathbb{R}^3$ in the $x$,
+$y$, and $z$ directions respectively. Note that
+$\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{k}}$
+are the canonical basis vectors for $\mathbb{R}^3$
+\cite{notes:basis} and have column vector format
 
 \bigskip
 \begin{equation*}
@@ -130,18 +131,18 @@ and $\mathbf{\hat{k}}$ are the canonical basis vectors for $\mathbb{R}^3$
 \medskip
 \bigskip
 \noindent
-I have also seen $\mathbf{e}_i$ used to represent the $i^{th}$ basis 
-vector in $\mathbb{R}^n$. So $\mathbf{e}_i$ is a vector with a one 
-in the $i^{th}$ position and a zero in each of the other $n - 1$ positions.
-In $\mathbb{R}^3$ this means that  
-$\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 = \mathbf{\hat{j}}$,
-and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
+I have also seen $\mathbf{e}_i$ used to represent the $i^{th}$
+basis vector in $\mathbb{R}^n$. So $\mathbf{e}_i$ is a vector
+with a one in the $i^{th}$ position and a zero in each of the
+other $n - 1$ positions.  In $\mathbb{R}^3$ this means that
+$\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 =
+\mathbf{\hat{j}}$, and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
 
 
 \bigskip
 \noindent
-In general,  the standard basis (which is sometimes called the 
-computational basis) for the $n$-dimensional Euclidean space 
+In general, the standard basis (which is sometimes called the
+computational basis) for the $n$-dimensional Euclidean space
 consists of the ordered set of $n$ distinct vectors
 
 \begin{equation*}
@@ -150,12 +151,12 @@ consists of the ordered set of $n$ distinct vectors
 
 \bigskip
 \noindent
-where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is, it
-has a one in the $i^\text{th}$ coordinate (position) and zeros 
-everywhere else.\footnote{This is also called a "one-hot" encoding 
-in machine learning parlance, where the $i$'s might be the 
-classes in a classification problem.} The $\mathbf{e}_i$ have
- column vector format
+where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is,
+it has a one in the $i^\text{th}$ coordinate (position) and zeros
+everywhere else.\footnote{This is also called a "one-hot"
+encoding in machine learning parlance, where the $i$'s might be
+the classes in a classification problem.} The $\mathbf{e}_i$ have
+column vector format
 
 \begin{flalign*}
 \mathbf{e}_{1} = 
@@ -194,12 +195,10 @@ classes in a classification problem.} The $\mathbf{e}_i$ have
 \end{flalign*}
 
 
-
 \bigskip
 \noindent
-Using these definitions we can define
-the parametric form of some curve $C$ in 
-$\mathbb{R}^3$, $\mathbf{r}(t)$, as follows:
+Using these definitions we can define the parametric form of some
+curve $C$ in $\mathbb{R}^3$, $\mathbf{r}(t)$, as follows:
 
 \medskip
 \begin{equation*}
@@ -209,14 +208,14 @@ $\mathbb{R}^3$, $\mathbf{r}(t)$, as follows:
 
 \bigskip
 \noindent
-where $t \in [a,b]$ and $g(t)$, $h(t)$, and $k(t)$ are 
-scalar functions\footnote{A scalar function is a function
-$f$ such that $f: \mathbb{R}^n \to \mathbb{R}$.}.
+where $t \in [a,b]$ and $g(t)$, $h(t)$, and $k(t)$ are scalar
+functions\footnote{A scalar function is a function $f$ such that
+$f: \mathbb{R}^n \to \mathbb{R}$.}.
 
 
 \bigskip
 \noindent
-Another common notation for vectors is $\vec{r}(t)$, where 
+Another common notation for vectors is $\vec{r}(t)$, where
 $\vec{r}(t)$ might be defined as follows:
 
 
@@ -229,7 +228,7 @@ $\vec{r}(t)$ might be defined as follows:
 
 \bigskip
 \noindent
-In this document I'll use these notations interchangeably. 
+In this document I'll use these notations interchangeably.
 
 \section{Definitions and a Few Theorems}
 
@@ -250,13 +249,13 @@ is defined to be the scalar value
 
 \bigskip
 \noindent
-If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then 
-the dot product can also be written as a matrix product:
-$\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}$
-where $\mathbf{a}^{\intercal}$ is the transpose of the vector 
-$\mathbf{a}$. Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are 
-row vectors then the dot product can be written as
-$\mathbf{a} \cdot \mathbf{b} = \mathbf{a}\mathbf{b}^{\intercal}$.
+If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then the dot
+product can also be written as a matrix product: $\mathbf{a}
+\cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}$ where
+$\mathbf{a}^{\intercal}$ is the transpose of the vector
+$\mathbf{a}$. Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are row
+vectors then the dot product can be written as $\mathbf{a} \cdot
+\mathbf{b} = \mathbf{a}\mathbf{b}^{\intercal}$.
 
 \bigskip
 \noindent
@@ -265,10 +264,11 @@ The matrix shape of the dot product of two $n \times 1$
 
 
 \begin{flalign*}
-\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}   
-\rightarrow \underbrace{\begin{bmatrix} \hdots \hdots \hdots \end{bmatrix}}_{1 \times n}  
-\underbrace{\begin{bmatrix} \hdots \\ \vdots \\  \hdots  \end{bmatrix}}_{n \times 1} 
-\rightarrow c 
+\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}
+\rightarrow \underbrace{\begin{bmatrix} \hdots \hdots
+\hdots \end{bmatrix}}_{1 \times n} \underbrace{\begin{bmatrix}
+\hdots \\ \vdots \\ \hdots \end{bmatrix}}_{n \times 1}
+\rightarrow c
 \end{flalign*}
 
 
@@ -276,15 +276,15 @@ The matrix shape of the dot product of two $n \times 1$
 where $c \in \mathbb{R}$.
 
 \medskip
-\setstretch{1.5}											% get a bit of extra space
+\setstretch{1.5}									% get a bit of extra space
 \noindent
-According to the Pythagorean theorem, the length of a vector 
-$\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted $\|\mathbf{a} \|$,
-equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The next definition is a 
-generalization of the notion of length to vectors in $\mathbb{R}^n$.
+According to the Pythagorean theorem, the length of a vector
+$\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted
+$\|\mathbf{a} \|$, equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The
+next definition is a generalization of the notion of length to
+vectors in $\mathbb{R}^n$.
 
-\setstretch{1.0}											% set it back to default
-
+\setstretch{1.0}									% set it back to default
 
 
 \bigskip
@@ -293,7 +293,7 @@ generalization of the notion of length to vectors in $\mathbb{R}^n$.
 
 \bigskip
 \begin{equation*}
-\mathbf{a} = (a_1,a_2,\hdots, a_n) \in \mathbb{R}^{n}
+\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \{\mathbb{R}^{n}, \mathbb{C}^{n}\}
 \end{equation*}
 
 \bigskip
@@ -301,24 +301,144 @@ generalization of the notion of length to vectors in $\mathbb{R}^n$.
 is defined to be
 
 \begin{equation}
-\|\mathbf{a}\| = \sqrt{\langle \mathbf{a}, \mathbf{a}} \rangle = \sqrt{\sum\limits_{j = 1}^{n} a_{j}^{2}}
+\|\mathbf{x}\| = \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
+\sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
 \label{eqn:magnitude}
 \end{equation}
 \end{definition}
 
+\begin{definition}
+{\bf $p$-Norm:} The p-norm of a vector
+
 \bigskip
-\begin{theorem} {\bf Cauchy–Schwarz Inequality:} $\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \| \mathbf{a} \| \| \mathbf{b} \|$.
+\begin{equation*}
+\mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})
+\end{equation*}
 
 \bigskip
 \noindent
-{\bf Proof:} The inequality is trivial if either $
-\mathbf{a}$ or $\mathbf{b}$ is zero, so assume that 
-neither is. So without loss of generality let 
-${\displaystyle \mathbf{x} = \frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and 
-${\displaystyle \mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so
-$\| \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} 
-= \mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$).
-Then 
+for $p \geq 1, p \in \mathbb{R}$. The $p$-norm (also called ${\displaystyle \ell _{p}}$-norm) 
+$\left\|\mathbf {x} \right\|_{p}$ is defined to be
+
+\medskip
+\begin{equation*}
+\left\|\mathbf {x} \right\|_{p} := \left(\sum _{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1/p}
+\end{equation*}
+
+\bigskip
+\setstretch{1.25}
+\noindent
+For $p = 1$, we get the taxicab norm, for $p = 2$ we get the Euclidean norm, and as $p$ approaches $\infty$ 
+the $p$-norm approaches the infinity norm or maximum norm:
+${\displaystyle \left\|\mathbf {x} \right\|_{\infty }:=\max _{i}\left|x_{i}\right|}$
+\end{definition}
+
+\smallskip
+\setstretch{1.25}
+\noindent
+Next, assume that $\mathbf{x}$ and $\mathbf{y}$ are two linearly independent vectors in $\mathbb{R}^3$
+and that $M$ is the plane spanned by them. Then these two vectors generate a triangle in $M$ with sides 
+of length $\| \mathbf{x}  \|$, $\| \mathbf{y} \|$, and $\| \mathbf{x} - \mathbf{y} \|$. If 
+$\theta \in \{0, \pi \}$ is the angle between the vectors $\mathbf{x}$ and $\mathbf{y}$ in $M$, 
+then the cosine rule gives $\| \mathbf{x} - \mathbf{y} \|^2 
+= \| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \cos (\theta) \| \mathbf{x}\| \|\mathbf{y} \|$. 
+We can also see that 
+
+\setstretch{1.0}
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{x} - \mathbf{y} \|^2
+&=&
+ \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
+ 		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
+		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[12pt]
+&=& \sum\limits_{j = 1}^{n} (x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} )
+		&\qquad \qquad \mathrel{\#} \text{expand previous line} \\
+[12pt]
+&=& \sum\limits_{j = 1}^{n}(x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
+		&\qquad \qquad \mathrel{\#} \text{sum is a linear operator} \\
+[12pt]
+&=&  \| \mathbf{x} \|^2 + - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \| \mathbf{y} \|^2 
+ 		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[12pt]
+&=&  \| \mathbf{x} \|^2 + \| \mathbf{y} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
+ 		&\qquad \qquad \mathrel{\#} \text{rearrange} 
+ \end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Combining these expressions gives us
+
+
+\medskip
+\begin{equation*}
+\| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \cos (\theta) \| \mathbf{x}\| \|\mathbf{y} \|
+= \| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \langle \mathbf{x}, \mathbf{y} \rangle
+\end{equation*}
+
+\medskip
+\noindent
+Subtracting $\| \mathbf{x} \|^2 + \| \mathbf{y}\|^2$ from both sides,
+dividing by $-2$, and rearranging gives us
+
+\bigskip
+\begin{equation}
+\langle \mathbf{x}, \mathbf{y} \rangle = 
+\| \mathbf{x} \| \| \mathbf{y} \| \cos \theta
+\label{eqn:cos_identity}
+\end{equation}
+
+\bigskip
+\begin{definition} {\bf Orthogonal Vectors:} $\langle \mathbf{x}, \mathbf{y} \rangle = 0$
+
+\bigskip
+\noindent
+We say that $\mathbf{x}, \mathbf{y} \in \mathbb{R}^{n}$ are 
+orthogonal if $\langle \mathbf{x}, \mathbf{y} \rangle = 0$, since
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\langle \mathbf{x}, \mathbf{y} \rangle 
+&=& \| \mathbf{x} \| \| \mathbf{y} \| \cos \theta
+		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:cos_identity})} \\
+[10pt]
+&\Rightarrow& \langle \mathbf{x}, \mathbf{y} \rangle 
+		= \| \mathbf{x} \| \| \mathbf{y} \| \cos \dfrac{\pi}{2}
+		&\qquad \qquad \mathrel{\#} \text{$\mathbf{x}$ and $\mathbf{y}$ orthogonal
+		$\Rightarrow \theta = \dfrac{\pi}{2}$} \\
+[10pt]
+&\Rightarrow& \langle \mathbf{x}, \mathbf{y} \rangle 
+		= \| \mathbf{x} \| \| \mathbf{y} \| \; 0
+		&\qquad \qquad \mathrel{\#} \cos \dfrac{\pi}{2} = 0 \\
+[10pt]
+&\Rightarrow & \langle \mathbf{x}, \mathbf{y} \rangle  = 0
+		&\qquad \qquad \mathrel{\#} \| \mathbf{x} \| \| \mathbf{y} \| \; 0 = 0
+\end{array}
+\end{equation*}
+\end{definition}
+
+\bigskip
+\begin{theorem} {\bf Cauchy–Schwarz Inequality:} 
+$\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|
+\mathbf{a} \| \| \mathbf{b} \|$
+
+
+\bigskip
+\noindent
+{\bf Proof:} The inequality is trivial if either $ \mathbf{a}$ or
+$\mathbf{b}$ is zero, so assume that neither is. So without loss
+of generality let ${\displaystyle \mathbf{x} =
+\frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and ${\displaystyle
+\mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so $\|
+\mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} =
+\mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$).  Then
 
 
 \begin{equation*}
@@ -387,18 +507,16 @@ Then
 
 \bigskip
 \noindent
-If we replace $\mathbf{a}$ by $-\mathbf{a}$ 
-we see by Equation (\ref{eqn:magnitude}) that 
-$\|-\mathbf{a}\| = \| \mathbf{a}\|$. Further, by 
-the scalar multiplication rule for dot products with $c_1 = -1$ 
-and $c_2 = 1$ we have $\langle -\mathbf{a},\mathbf{b} \rangle 
-= - \langle \mathbf{a},\mathbf{b} \rangle$. Taken together
-these results imply that 
-$- \langle \mathbf{a},\mathbf{b} \rangle 
-\leq \|\mathbf{a}\| \|\mathbf{b} \|$.
+If we replace $\mathbf{a}$ by $-\mathbf{a}$ we see by Equation
+(\ref{eqn:magnitude}) that $\|-\mathbf{a}\| = \|
+\mathbf{a}\|$. Further, by the scalar multiplication rule for dot
+products with $c_1 = -1$ and $c_2 = 1$ we have $\langle
+-\mathbf{a},\mathbf{b} \rangle = - \langle \mathbf{a},\mathbf{b}
+\rangle$. Taken together these results imply that $- \langle
+\mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
+\|$.
 
-
-\newpage
+\bigskip
 \noindent
 Next note that the absolute value of $x$, $|x|$,
 is defined to be
@@ -414,30 +532,30 @@ is defined to be
 \end{equation}
 
 
-
 \bigskip
 \setstretch{1.10}
 \noindent
-So one way to see the Cauchy–Schwarz inequality 
-is by setting $x$ equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in 
-Equation (\ref{eqn:absolute_value}). Then when 
-$\langle \mathbf{a},\mathbf{b} \rangle \geq 0$ we have 
-$\big | \langle \mathbf{a}, \mathbf{b} \rangle \big | = \langle \mathbf{a},\mathbf{b} \rangle$
-and we showed above that $\langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|$.
-Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle < 0$ we have
-$\big | \langle \mathbf{a}, \mathbf{b} \rangle \big | = - \langle \mathbf{a},\mathbf{b} \rangle$
-and we showed that $- \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|$.
-Together these give us
-$\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\| \|\mathbf{b} \|$,
-namely, the Cauchy–Schwarz inequality. $\square$
-
+So one way to see the Cauchy–Schwarz inequality is by setting $x$
+equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in Equation
+(\ref{eqn:absolute_value}). Then when $\langle
+\mathbf{a},\mathbf{b} \rangle \geq 0$ we have $\big | \langle
+\mathbf{a}, \mathbf{b} \rangle \big | = \langle
+\mathbf{a},\mathbf{b} \rangle$ and we showed above that $\langle
+\mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
+\|$.  Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle <
+0$ we have $\big | \langle \mathbf{a}, \mathbf{b} \rangle \big |
+= - \langle \mathbf{a},\mathbf{b} \rangle$ and we showed that $-
+\langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\|
+\|\mathbf{b} \|$.  Together these give us $\big | \langle
+\mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\|
+\|\mathbf{b} \|$, namely, the Cauchy–Schwarz
+inequality. $\square$
 \end{theorem}
 
 \subsection{Derivatives}
-We will also denote the derivative of a vector $\mathbf{r}$ 
-with respect to $t$ by $\dot{\mathbf{r}}$, 
-$\dfrac{d\mathbf{r}}{dt}$ or $\mathbf{r}^{\prime}(t)$. 
-Note also that by definition
+We will also denote the derivative of a vector $\mathbf{r}$ with
+respect to $t$ by $\dot{\mathbf{r}}$, $\dfrac{d\mathbf{r}}{dt}$
+or $\mathbf{r}^{\prime}(t)$.  Note also that by definition
 
 \bigskip
 \begin{equation*}
@@ -447,15 +565,15 @@ Note also that by definition
 
 \subsection{Vector Fields}
 \label{subsec:vector_fields}
-In vector calculus and physics, a vector field is an assignment 
-of a vector to each point in a subset of space \cite{galbis2012vector}.
-For example, a vector field in the plane can be visualized as 
-a collection of arrows with a given magnitude and direction, 
-each attached to a point in the plane. Vector fields are often used 
-to model the speed and direction of a moving fluid throughout 
-space, or the strength and direction of some force, such as the 
-magnetic or gravitational force, as it changes from one point to 
-another point.
+In vector calculus and physics, a vector field is an assignment
+of a vector to each point in a subset of space
+\cite{galbis2012vector}.  For example, a vector field in the
+plane can be visualized as a collection of arrows with a given
+magnitude and direction, each attached to a point in the
+plane. Vector fields are often used to model the speed and
+direction of a moving fluid throughout space, or the strength and
+direction of some force, such as the magnetic or gravitational
+force, as it changes from one point to another point.
 
 \bigskip
 \noindent
@@ -467,9 +585,8 @@ where $\mathbf{v}$ is the wind velocity vector.
 
 
 \bigskip
-\bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.40] 
+\center{\includegraphics[scale=0.30] 
 {images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
 \caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
 \label{fig:wind_velocity_vector_field}
@@ -490,102 +607,33 @@ The general form of a vector field (here in three dimensions) is
 where $P$, $Q$, and $R$ are scalar functions.
 
 \section{Arc Length}
-Consider a segment of a parametric curve $\mathbf{r}(t)
-= g(t) \, \hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}} + k(t) \, \hat{\mathbf{k}}$
-between two points $P =\mathbf{r}(t)$ and $Q =\mathbf{r}(t + \Delta t)$,
-as shown in Figure \ref{fig:delta-r}.
+Consider a segment of a parametric curve $\mathbf{r}(t) = g(t) \,
+\hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}} + k(t) \,
+\hat{\mathbf{k}}$ between two points $P =\mathbf{r}(t)$ and $Q
+=\mathbf{r}(t + \Delta t)$, as shown in Figure \ref{fig:delta-r}.
 
 \bigskip
-\begin{figure}[H]
-\center{\includegraphics[frame,scale=0.40] {images/delta-r.png}}
+\noindent
+The next question we might ask is what is the length of the segment 
+of the curve between $P$ and $Q$? This length is called the arc
+length and is denoted by $\Delta s$ and can be approximated
+by the chord length $\| \Delta \mathbf{r} \|$. 
+
+
+
+\bigskip
+\begin{figure}[t]
+\center{\includegraphics[frame,scale=0.35] {images/delta-r.png}}
 \caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
 
-\bigskip
-\noindent
-What is the length of the segment of the curve between $P$ and
-$Q$?  This length is called the arc length and is denoted by
-$\Delta s$.  $\Delta s$ can be approximated by the chord length
-$\| \Delta \mathbf{r} \|$. Then we can compute the infinitesimal
-arc length $ds$ as follows:
-
-\smallskip
-\begin{equation*}
-\begin{array}{lllll}
-\Delta s
-&\approx& \| \Delta \mathbf{r} \|							
-			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
-[12 pt]
-&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
-			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
-[12 pt]
-&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
-			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
-[12 pt]
-&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
-			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
-[12 pt]
-&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
-			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
-			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
-[12 pt]
-&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
-			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
-			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
-[10pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
-			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
-			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
-[12 pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
-			\cdot \lim_{\Delta t \to 0} \Delta t}
-			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
-[12 pt]
-&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
-			\cdot \lim_{\Delta t \to 0} \Delta t}
-			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
-[12 pt]
-&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
-			\; \lim_{\Delta t \to 0} \Delta t} = dt
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-Interestingly we can also see this using the Pythagorean theorem.
-Specifically, if we move an infinitesimal distance in the $x$ and
-$y$ directions we get a triangle in the x-y plane who's sides
-have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
-scenario is shown for some curve $f(x)$ in Figure
-\ref{fig:pythagorean_theorem}.
-
-\bigskip
-\noindent
-In the two dimensional case where the parameterization is $x =
-g(t)$ and $y = h(t)$ we have $\mathbf{r}(t) = g(t) \,
-\hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}}$.  Further, since
-derivative is a linear operator
-\cite{wiki:linearity_of_differentiation} we know that
-
-\bigskip
-\begin{equation}
-\dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
-\label{eqn:drdt}
-\end{equation}
-
-
 %
 %	draw Pythagorean theorem stuff
 %
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {																							% resize figure if you want 
+  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
@@ -604,13 +652,13 @@ derivative is a linear operator
 %
        \fill (x1y1) circle (0.05);																					% put a dot on the curve at x1y1
        \fill (x2y2) circle (0.05);																					% put a dot on the curve at x2y2
-	   \draw [very thick,blue,smooth,samples=100,domain=0.5:1.1] plot (\x,{f(\x)});									% draw blue segment on f(x)
+	   \draw [very thick,blue,smooth,samples=100,domain=0.5:1.1] plot (\x,{f(\x)});											% draw blue segment on f(x)
        \draw[draw=none] (x1y1) -- (x2y2) coordinate [label={[font=\footnotesize,yshift=-0.065cm,xshift=-0.105cm,midway,left] \color{black} $ds$}];
        \draw[dashed] (x1y1) -- (x1y0) coordinate [label={[font=\scriptsize,below] \color{black} $x_1$}];
        \draw[dashed] (x2y2) -- (x2y0) coordinate [label={[font=\scriptsize,below] \color{black} $x_2$}];
-       \fill (x1y0) circle (0.05);																					% put a dot on the x axis at x1
-       \fill (x2y0) circle (0.05);																					% put a dot on the x axis at x2
-       \draw[red, thick] (cir) circle (0.150);																		% put a circle on f(x) where ds is
+       \fill (x1y0) circle (0.05);              																			% put a dot on the x axis at x1
+       \fill (x2y0) circle (0.05);                      																		% put a dot on the x axis at x2
+       \draw[red, thick] (cir) circle (0.150);																				% put a circle on f(x) where ds is
        
 
      
@@ -627,11 +675,11 @@ derivative is a linear operator
 %
 %	draw the triangle
 %	   
-       \draw[] (a) -- (c) coordinate [label={[yshift=-0.1cm,midway,below] ${dx}$}];										% dx
-       \draw[] (c) -- (b) coordinate [label={[midway,right] ${dy}$}];													% dy
-       \draw[blue,very thick] (a) -- (b) coordinate [label={[xshift=-0.25cm,midway,left] \color{black} ${ds}$}];		% ds
-       \draw[red,thick] (5.15,4.29) circle (2.10);																		% big circle
-       \draw[draw=none] (0,0) -- (5.15,1.75)  node[draw,rectangle,below] {${\; ds^2 = dx^2 + dy^2 \;}$};				% draw the pythagorean theorem
+       \draw[] (a) -- (c) coordinate [label={[yshift=-0.1cm,midway,below] ${dx}$}];											% dx
+       \draw[] (c) -- (b) coordinate [label={[midway,right] ${dy}$}];														% dy
+       \draw[blue,very thick] (a) -- (b) coordinate [label={[xshift=-0.25cm,midway,left] \color{black} ${ds}$}];			% ds
+       \draw[red,thick] (5.15,4.29) circle (2.10);																			% big circle
+       \draw[draw=none] (0,0) -- (5.15,1.75)  node[draw,rectangle,below] {${\; ds^2 = dx^2 + dy^2 \;}$};					% draw the pythagorean theorem
 %
 %	draw the angle      
 %       
@@ -641,18 +689,113 @@ derivative is a linear operator
 %	done
 %
      \end{tikzpicture}
-    }																					 								% end resizebox                                                            
+    }																					 									% end resizebox                                                            
  \caption{$f(x)$, $ds$ and the Pythagorean Theorem}
  \label{fig:pythagorean_theorem}
  \end{figure}
 
+\medskip
+\noindent
+Specifically we can see from Figure \ref{fig:delta-r} that
+
+\medskip
+\begin{equation*}
+\| \Delta r \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
+\end{equation*}
+
+\medskip
+\noindent
+and so
+
+\begin{equation*}
+\Delta s \approx \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
+\end{equation*}
+
+
+
 \bigskip
 \noindent
-So in the source domain the Pythagorean theorem 
-tells us that $ds = \sqrt{dx^2 + dy^2}$. Using
+Now we can compute the infinitesimal
+arc length $ds$ as follows:
+
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta s
+&\approx& \| \Delta \mathbf{r} \|							
+			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
+			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
+			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
+[15pt]
+&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
+			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
+[15pt]
+&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
+[15pt]
+&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
+			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
+			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
+			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
+[15pt]
+&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
+			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
+			\; \lim_{\Delta t \to 0} \Delta t} = dt
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Interestingly we can also see this using the Pythagorean theorem.
+Specifically, if we move an infinitesimal distance in the $x$ and
+$y$ directions we get a triangle in the x-y plane who's sides
+have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
+scenario is shown for some curve $f(x)$ in Figure
+\ref{fig:pythagorean_theorem}.
+
+
+
+
+\bigskip
+\noindent
+In the two dimensional case where the parameterization our $x =
+g(t)$ and $y = h(t)$ we have $\mathbf{r}(t) = g(t) \,
+\hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}}$.  Further, since
+derivative is a linear operator
+\cite{wiki:linearity_of_differentiation} we know that
+
+\bigskip
+\begin{equation}
+\dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
+\label{eqn:drdt}
+\end{equation}
+
+
+\bigskip
+\noindent
+The Pythagorean theorem tells us that 
+$ds = \sqrt{dx^2 + dy^2}$. Using
 this expression for $ds$ we can see that
-
-
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -692,12 +835,11 @@ ds
 
 \bigskip
 \noindent
-In any event, now we see that
+Now we can see that
 
-\begin{equation}
+\begin{equation*}
 \dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
-\label{eqn:dsdt}
-\end{equation}
+\end{equation*}
 
 \bigskip
 \noindent
@@ -709,15 +851,13 @@ and so
 \end{equation}
 
 
-\bigskip
-\setstretch{2.0}
-\noindent
-Since $\dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
-= \big \| \dot{\mathbf{r}} \big \|$ we also know that the unit
-tangent vector $\mathbf{T} = \dfrac{\dot{\mathbf{r}}}
-{\|\dot{\mathbf{r}}\|} = \dfrac{d\mathbf{r}}{ds}$
-\cite{unit_tangent_and_normal_vectors}.  One way to see this is
-to notice that
+\subsection{The Unit Tangent Vector $\mathbf{T}$}
+\setstretch{2.0} Since $\dfrac{ds}{dt} = \bigg \|
+\dfrac{d\mathbf{r}}{dt} \bigg \| = \big \| \dot{\mathbf{r}} \big
+\|$ we also know that the unit tangent vector $\mathbf{T} =
+\dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} =
+\dfrac{d\mathbf{r}}{ds}$ \cite{unit_tangent_and_normal_vectors}.
+One way to see this is to notice that
 
 \setstretch{1.0}
 
@@ -730,11 +870,12 @@ to notice that
 			&\qquad \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\|\dot{\mathbf{r}} \|} 
-			&\qquad \mathrel{\#} \text{definition of $\dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}$} \\
+			&\qquad \mathrel{\#} \dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}
+			\text{ (definition of $\dot{\mathbf{r}}$)} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\qquad \mathrel{\#} \text{Equation (\ref{eqn:mag_r_dot}): $\|\dot{\mathbf{r}}\| 
-			= \dfrac{ds}{dt}$} \\
+			&\qquad \mathrel{\#} \|\dot{\mathbf{r}}\| = \dfrac{ds}{dt}
+			\text{ (Equation (\ref{eqn:mag_r_dot}))} \\
 [25 pt]
 &=& \dfrac{d\mathbf{r}}{ds}
 			&\qquad \mathrel{\#} \text{simplify}
@@ -742,23 +883,42 @@ to notice that
 \end{equation*}
 
 \bigskip
+\section{Line Intergals}
+
+\bigskip
+\section{Surface Integrals}
+
+\bigskip
 \section{Conclusions}
 \label{sec:conclusions}
 
-\section*{Acknowledgements}
+\section{Acknowledgements}
+Thanks to Dave Neary who pointed out that using the reverse
+triangle inequality in my proof of the Cauchy–Schwarz inequality
+was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
+0$ for all $\mathbf{x}$ and $\mathbf{y}$ by Equation
+(\ref{eqn:magnitude}), so the triangle inequality (or reverse
+triangle inequality) was not needed.
 
 \section{Appendix A}
-I had thought that one way to prove the Cauchy–Schwarz inequality is to use the 
-reverse triangle inequality, but Dave Neary pointed out that I didn't need it. I'm 
-leaving the derivation of the reverse triangle inequality in this appendix
- but it's not needed.
-
+I had thought that one way to prove the Cauchy–Schwarz inequality
+is to use the reverse triangle inequality, but Dave Neary pointed
+out that I didn't need it.  So I'm leaving the derivation of the
+reverse triangle inequality in this appendix.
 
 \bigskip
 \noindent
-We can get the reverse triangle inequality from the triangle inequality 
-\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by observing 
-that
+\begin{theorem} {\bf Reverse Triangle Inequality:} 
+$\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big |
+\leq \| \mathbf{x} - \mathbf{y}\|$ 
+
+
+\bigskip
+\noindent 
+We can derive the reverse triangle inequality from the
+triangle inequality
+\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by
+observing that
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -827,19 +987,17 @@ and
 \end{equation*}
 
 \bigskip
+\setstretch{1.5}
 \noindent
-Combining these expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
-gives us the reverse triangle inequality (Equation 
-(\ref{eqn:reverse_triangle_inequality})):
-
-\medskip
-\begin{equation*}
--\| \mathbf{x} - \mathbf{y} \| \leq \| \mathbf{x} \| - \| \mathbf{y} 
-\|\leq \| \mathbf{x} - \mathbf{y} \|
-\Rightarrow \big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
-\leq \| \mathbf{x} - \mathbf{y}\|
-\end{equation*}
-
+Combining the expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
+we get $-\| \mathbf{x} - \mathbf{y} \| 
+\leq \| \mathbf{x} \| - \| \mathbf{y} 
+\|\leq \| \mathbf{x} - \mathbf{y} \|$,
+that is, the reverse triangle inequality
+$\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
+\leq \| \mathbf{x} - \mathbf{y}\|. \;\; \square$ 
+\setstretch{1.0}
+\end{theorem}
 
 %
 %	LaTeX source on overleaf.com
