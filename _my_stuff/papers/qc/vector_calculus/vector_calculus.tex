@@ -103,7 +103,7 @@ That is, for a vector $\mathbf{u}$,
 $\hat{\mathbf{u}}$ is defined to be 
 
 \begin{equation*}
-\hat{\mathbf{u}} = \dfrac{\mathbf{u}}{\| \mathbf{u} \|}
+\hat{\mathbf{u}} := \dfrac{\mathbf{u}}{\| \mathbf{u} \|}
 \end{equation*}
 
 \bigskip
@@ -233,6 +233,68 @@ In this document I'll use these notations interchangeably.
 \section{Definitions and a Few Theorems}
 
 \begin{definition}
+{\bf Vector Notation:} 
+
+\bigskip
+\noindent
+Here we will use $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ to
+represent a row or column vector in some $n$ dimensional
+space (usually $\mathbb{R}$ or $\mathbb{C}$). 
+If $\mathbf{a}$ is a column vector then in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace {
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}}_{n \times 1}
+\end{flalign*}
+
+
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace{
+\begin{bmatrix} 
+a_1, a_2, \hdots, a_n
+\end{bmatrix}}_{1 \times n}
+\end{flalign*}
+
+\bigskip
+\noindent
+The \emph{transpose} of a vector $\mathbf{a}$, $\mathbf{a}^{\intercal}$,
+is defined as follows. If $\mathbf{a}$ is a column vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1, a_2, \hdots, a_n
+\end{bmatrix}
+\end{flalign*}
+
+\smallskip
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}
+\end{flalign*}
+\end{definition}
+
+\smallskip
+\begin{definition}
 {\bf Dot Product:} The dot product (aka scalar product 
 or inner product) of two $n$-dimensional vectors 
 $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ and 
@@ -242,8 +304,8 @@ is defined to be the scalar value
 \medskip
 \begin{equation*}
 \mathbf{a} \cdot \mathbf{b} 
-= \langle \mathbf{a},\mathbf{b} \rangle 
-= \sum\limits_{j = 1}^{n} a_j b_j
+:= \langle \mathbf{a},\mathbf{b} \rangle 
+:= \sum\limits_{j = 1}^{n} a_j b_j
 \end{equation*}
 \end{definition}
 
@@ -259,8 +321,8 @@ vectors then the dot product can be written as $\mathbf{a} \cdot
 
 \bigskip
 \noindent
-The matrix shape of the dot product of two $n \times 1$ 
-(column) vectors $\mathbf{a}$ and $\mathbf{b}$ is 
+The (matrix) shape of the dot product of two $n \times 1$ 
+column vectors $\mathbf{a}$ and $\mathbf{b}$ is 
 
 
 \begin{flalign*}
@@ -293,7 +355,7 @@ vectors in $\mathbb{R}^n$.
 
 \bigskip
 \begin{equation*}
-\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \{\mathbb{R}^{n}, \mathbb{C}^{n}\}
+\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \mathbb{R}^{n}
 \end{equation*}
 
 \bigskip
@@ -301,16 +363,17 @@ vectors in $\mathbb{R}^n$.
 is defined to be
 
 \begin{equation}
-\|\mathbf{x}\| = \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
+\|\mathbf{x}\| := \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
 \sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
 \label{eqn:magnitude}
 \end{equation}
 \end{definition}
 
+\smallskip
 \begin{definition}
 {\bf $p$-Norm:} The p-norm of a vector
 
-\bigskip
+\smallskip
 \begin{equation*}
 \mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})
 \end{equation*}
@@ -329,8 +392,8 @@ $\left\|\mathbf {x} \right\|_{p}$ is defined to be
 \setstretch{1.25}
 \noindent
 For $p = 1$, we get the taxicab norm, for $p = 2$ we get the Euclidean norm, and as $p$ approaches $\infty$ 
-the $p$-norm approaches the infinity norm or maximum norm:
-${\displaystyle \left\|\mathbf {x} \right\|_{\infty }:=\max _{i}\left|x_{i}\right|}$
+the $p$-norm approaches the infinity norm or maximum norm: ${\displaystyle \left\|\mathbf {x} \right\|_{\infty }
+:=\max _{i}\left|x_{i}\right|}$.
 \end{definition}
 
 \smallskip
@@ -559,8 +622,8 @@ or $\mathbf{r}^{\prime}(t)$.  Note also that by definition
 
 \bigskip
 \begin{equation*}
-{\displaystyle \dfrac{d\mathbf{r}}{dt} = \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}}
+\dfrac{d\mathbf{r}}{dt} := \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}
 \end{equation*}
 
 \subsection{Vector Fields}
@@ -586,7 +649,7 @@ where $\mathbf{v}$ is the wind velocity vector.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.30] 
+\center{\includegraphics[scale=0.25] 
 {images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
 \caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
 \label{fig:wind_velocity_vector_field}
@@ -622,18 +685,96 @@ by the chord length $\| \Delta \mathbf{r} \|$.
 
 
 \bigskip
-\begin{figure}[t]
-\center{\includegraphics[frame,scale=0.35] {images/delta-r.png}}
+\begin{figure}[H]
+\center{\includegraphics[frame,scale=0.30] {images/delta-r.png}}
 \caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
+
+
+\noindent
+Specifically we can see from Figure \ref{fig:delta-r} that
+
+\bigskip
+\begin{equation*}
+\| \Delta r \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
+\end{equation*}
+
+\bigskip
+\noindent
+and so
+
+\begin{equation*}
+\Delta s \approx \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
+\end{equation*}
+
+
+\bigskip
+\bigskip
+\noindent
+Now we can compute the infinitesimal arc length $ds$:
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta s
+&\approx& \| \Delta \mathbf{r} \|							
+			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
+			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
+			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
+[15pt]
+&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
+			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
+[15pt]
+&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
+[15pt]
+&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
+			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
+			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
+			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
+[15pt]
+&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
+			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
+			\; \lim_{\Delta t \to 0} \Delta t} = dt
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+Interestingly we can also see this using the Pythagorean theorem.
+Specifically, if we move an infinitesimal distance in the $x$ and
+$y$ directions we get a triangle in the x-y plane who's sides
+have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
+scenario is shown for some curve $f(x)$ in Figure
+\ref{fig:pythagorean_theorem}.
 
 %
 %	draw Pythagorean theorem stuff
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want 
+  \resizebox{0.55 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
        \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
        \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
@@ -693,88 +834,7 @@ by the chord length $\| \Delta \mathbf{r} \|$.
  \caption{$f(x)$, $ds$ and the Pythagorean Theorem}
  \label{fig:pythagorean_theorem}
  \end{figure}
-
-\medskip
-\noindent
-Specifically we can see from Figure \ref{fig:delta-r} that
-
-\medskip
-\begin{equation*}
-\| \Delta r \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
-\end{equation*}
-
-\medskip
-\noindent
-and so
-
-\begin{equation*}
-\Delta s \approx \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
-\end{equation*}
-
-
-
-\bigskip
-\noindent
-Now we can compute the infinitesimal
-arc length $ds$ as follows:
-
-
-\begin{equation*}
-\begin{array}{lllll}
-\Delta s
-&\approx& \| \Delta \mathbf{r} \|							
-			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
-[15pt]
-&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
-			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
-[15pt]
-&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
-			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
-[15pt]
-&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
-			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
-[15pt]
-&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
-			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
-			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
-[15pt]
-&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
-			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
-			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
-[15pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
-			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
-			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
-[15pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
-			\cdot \lim_{\Delta t \to 0} \Delta t}
-			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
-[15pt]
-&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
-			\cdot \lim_{\Delta t \to 0} \Delta t}
-			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
-[15pt]
-&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
-			\; \lim_{\Delta t \to 0} \Delta t} = dt
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-Interestingly we can also see this using the Pythagorean theorem.
-Specifically, if we move an infinitesimal distance in the $x$ and
-$y$ directions we get a triangle in the x-y plane who's sides
-have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
-scenario is shown for some curve $f(x)$ in Figure
-\ref{fig:pythagorean_theorem}.
-
-
-
+ 
 
 \bigskip
 \noindent
@@ -797,6 +857,7 @@ The Pythagorean theorem tells us that
 $ds = \sqrt{dx^2 + dy^2}$. Using
 this expression for $ds$ we can see that
 
+\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 ds
@@ -834,6 +895,7 @@ ds
 
 
 \bigskip
+\bigskip
 \noindent
 Now we can see that
 
@@ -851,6 +913,7 @@ and so
 \end{equation}
 
 
+\bigskip
 \subsection{The Unit Tangent Vector $\mathbf{T}$}
 \setstretch{2.0} Since $\dfrac{ds}{dt} = \bigg \|
 \dfrac{d\mathbf{r}}{dt} \bigg \| = \big \| \dot{\mathbf{r}} \big
