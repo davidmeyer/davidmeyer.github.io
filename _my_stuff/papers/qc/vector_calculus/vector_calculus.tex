@@ -304,32 +304,33 @@ is defined to be the scalar value
 \medskip
 \begin{equation*}
 \mathbf{a} \cdot \mathbf{b} 
-:= \langle \mathbf{a},\mathbf{b} \rangle 
 := \sum\limits_{j = 1}^{n} a_j b_j
 \end{equation*}
 \end{definition}
 
 \bigskip
 \noindent
-If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then the dot
-product can also be written as a matrix product: $\mathbf{a}
-\cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}$ where
-$\mathbf{a}^{\intercal}$ is the transpose of the vector
-$\mathbf{a}$. Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are row
-vectors then the dot product can be written as $\mathbf{a} \cdot
-\mathbf{b} = \mathbf{a}\mathbf{b}^{\intercal}$.
+Another common notation for the dot product
+$\mathbf{a} \cdot \mathbf{b}$ is $\langle \mathbf{a},
+\mathbf{b} \rangle$.
 
 \bigskip
 \noindent
-The (matrix) shape of the dot product of two $n \times 1$ 
-column vectors $\mathbf{a}$ and $\mathbf{b}$ is 
+If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then their dot
+product $\mathbf{a} \cdot \mathbf{b}$ can also be written as the 
+matrix product $\mathbf{a}^{\intercal}\mathbf{b}$. Similarly, if 
+$\mathbf{a}$ and $\mathbf{b}$ are row vectors then their dot 
+product can be written as the matrix product 
+$\mathbf{a}\mathbf{b}^{\intercal}$. For example,
+the dot product of two $n \times 1$ column vectors $\mathbf{a}$ 
+and $\mathbf{b}$ is equivalent to the following matrix multiplication:
 
 
 \begin{flalign*}
-\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}
-\rightarrow \underbrace{\begin{bmatrix} \hdots \hdots
-\hdots \end{bmatrix}}_{1 \times n} \underbrace{\begin{bmatrix}
-\hdots \\ \vdots \\ \hdots \end{bmatrix}}_{n \times 1}
+\mathbf{a} \cdot \mathbf{b} \equiv \mathbf{a}^{\intercal}\mathbf{b}
+\rightarrow \underbrace{\begin{bmatrix} a_1, a_2, \hdots, a_n \end{bmatrix}}_{1 \times n} 
+\underbrace{\begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}}_{n \times 1}
+\rightarrow \sum\limits_{j = 1}^{n} a_j b_j
 \rightarrow c
 \end{flalign*}
 
@@ -369,24 +370,27 @@ is defined to be
 \end{equation}
 \end{definition}
 
-\smallskip
+\medskip
 \begin{definition}
-{\bf $p$-Norm:} The p-norm of a vector
+{\bf $p$-Norm:} The $p$-norm of a vector 
 
 \smallskip
 \begin{equation*}
 \mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})
 \end{equation*}
 
-\bigskip
-\noindent
-for $p \geq 1, p \in \mathbb{R}$. The $p$-norm (also called ${\displaystyle \ell _{p}}$-norm) 
-$\left\|\mathbf {x} \right\|_{p}$ is defined to be
-
 \medskip
+\noindent
+is defined to be
+
+\smallskip
 \begin{equation*}
 \left\|\mathbf {x} \right\|_{p} := \left(\sum _{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1/p}
 \end{equation*}
+
+\bigskip
+\noindent
+for $p \geq 1$ and $p \in \mathbb{R}$. 
 
 \bigskip
 \setstretch{1.25}
