@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 09:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1450,38 +1450,38 @@ File: uesvect.fd
 File: images/orthogonal_projection.png Graphic file (type png)
 <use images/orthogonal_projection.png>
 Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
-22.
+29.
 (pdftex.def)             Requested size: 595.2223pt x 437.63393pt.
  [4]
 [5 <./images/orthogonal_projection.png>] [6]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=173, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=177, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 775.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 802.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
-<images/delta-r.png, id=175, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=179, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 811.
+Package pdftex.def Info: images/delta-r.png  used on input line 838.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
  [7 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (28.8371pt too wide) detected at line 880
+Overfull \hbox (28.8371pt too wide) detected at line 907
 []
  []
 
 [8 <./images/delta-r.png>] [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1037.
+(hyperref)                removing `math shift' on input line 1064.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1037.
+(hyperref)                removing `math shift' on input line 1064.
 
 [10] (./vector_calculus.bbl
 Underfull \hbox (badness 1521) in paragraph at lines 30--34
@@ -1514,7 +1514,7 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 Here is how much of TeX's memory you used:
  53663 strings out of 478994
  1343954 string characters out of 5858184
- 1999869 words of memory out of 5000000
+ 1999637 words of memory out of 5000000
  70281 multiletter control sequences out of 15000+600000
  419172 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1543,10 +1543,10 @@ t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist
 dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (12 pages, 1042095 bytes).
+Output written on vector_calculus.pdf (12 pages, 1042795 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
+ 359 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
  59 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 
