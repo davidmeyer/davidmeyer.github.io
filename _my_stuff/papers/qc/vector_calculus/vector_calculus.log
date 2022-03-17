@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 08:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 08:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1455,7 +1455,7 @@ Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
  [4]
 [5 <./images/orthogonal_projection.png>] [6]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=172, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=173, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
@@ -1463,7 +1463,7 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
 locity-field-of-2011-Joplin-MO-tornado.png  used on input line 772.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
-<images/delta-r.png, id=174, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=175, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
 Package pdftex.def Info: images/delta-r.png  used on input line 808.
@@ -1543,10 +1543,10 @@ t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist
 dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (12 pages, 1042047 bytes).
+Output written on vector_calculus.pdf (12 pages, 1042071 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
+ 355 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
  59 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 
