@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{properties_of_limits}
 {Alex Svirin}.
@@ -54,6 +54,14 @@
   \url{https://en.wikipedia.org/w/index.php?title=Linearity_of_differentiation&oldid=1026177205},
   2021.
 \newblock [Online; accessed 1-September-2021].
+
+\bibitem{wiki:dot_product}
+{Wikipedia contributors}.
+\newblock {Dot Product --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Dot_product&oldid=1074690360},
+  2022.
+\newblock [Online; accessed 17-March-2022].
 
 \bibitem{wiki:triangle_inequality}
 {Wikipedia Contributors}.
