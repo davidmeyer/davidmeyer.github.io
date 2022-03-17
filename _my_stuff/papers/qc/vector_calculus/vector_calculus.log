@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 06:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 06:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,11 +1508,11 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 Here is how much of TeX's memory you used:
  53648 strings out of 478994
  1343615 string characters out of 5858184
- 1998707 words of memory out of 5000000
+ 1999707 words of memory out of 5000000
  70273 multiletter control sequences out of 15000+600000
  419172 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,22n,131p,733b,873s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,22n,131p,733b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1536,7 +1536,7 @@ st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (11 pages, 836122 bytes).
+Output written on vector_calculus.pdf (11 pages, 836078 bytes).
 PDF statistics:
  329 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
