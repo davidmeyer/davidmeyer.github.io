@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 06:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 07:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1455,27 +1455,27 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 665.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 668.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 <images/delta-r.png, id=153, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 701.
+Package pdftex.def Info: images/delta-r.png  used on input line 704.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
  [6 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (28.8371pt too wide) detected at line 770
+Overfull \hbox (28.8371pt too wide) detected at line 773
 []
  []
 
 [7 <./images/delta-r.png>] [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 927.
+(hyperref)                removing `math shift' on input line 930.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 927.
+(hyperref)                removing `math shift' on input line 930.
 
 [9] (./vector_calculus.bbl
 Underfull \hbox (badness 1521) in paragraph at lines 30--34
@@ -1536,7 +1536,7 @@ st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (11 pages, 836078 bytes).
+Output written on vector_calculus.pdf (11 pages, 836127 bytes).
 PDF statistics:
  329 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
