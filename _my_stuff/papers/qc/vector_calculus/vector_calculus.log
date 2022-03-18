@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  17 MAR 2022 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  18 MAR 2022 11:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1446,102 +1446,119 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<images/orthogonal_projection.png, id=121, 595.22375pt x 437.635pt>
+ [4]
+<images/orthogonal_projection.png, id=128, 595.22375pt x 437.635pt>
 File: images/orthogonal_projection.png Graphic file (type png)
 <use images/orthogonal_projection.png>
 Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
-31.
+47.
 (pdftex.def)             Requested size: 595.2223pt x 437.63393pt.
- [4]
-[5 <./images/orthogonal_projection.png>] [6]
+
+[5 <./images/orthogonal_projection.png>]
+<images/cross_product_parallelogram.png, id=161, 1927.2pt x 1505.625pt>
+File: images/cross_product_parallelogram.png Graphic file (type png)
+<use images/cross_product_parallelogram.png>
+Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
+line 692.
+(pdftex.def)             Requested size: 1927.19533pt x 1505.62134pt.
+<images/right_hand_rule_cross_product.png, id=164, 1284.8pt x 1163.34625pt>
+File: images/right_hand_rule_cross_product.png Graphic file (type png)
+<use images/right_hand_rule_cross_product.png>
+Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
+t line 728.
+(pdftex.def)             Requested size: 1284.79688pt x 1163.34343pt.
+ [6 <./images/cross_product_parallelogram.png>] [7 <./images/right_hand_rule_cr
+oss_product.png>] [8]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=181, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=217, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 812.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1022.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
- [7 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
+ [9 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-<images/delta-r.png, id=194, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=229, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 848.
+Package pdftex.def Info: images/delta-r.png  used on input line 1058.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (28.8371pt too wide) detected at line 917
+Overfull \hbox (28.8371pt too wide) detected at line 1127
 []
  []
 
-[8 <./images/delta-r.png>] [9]
+[10 <./images/delta-r.png>] [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1074.
+(hyperref)                removing `math shift' on input line 1284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1074.
+(hyperref)                removing `math shift' on input line 1284.
 
-[10] [11] (./vector_calculus.bbl
-Underfull \hbox (badness 1107) in paragraph at lines 30--34
+[12] [13] (./vector_calculus.bbl
+Underfull \hbox (badness 1107) in paragraph at lines 44--48
 []\OT1/cmr/m/n/10 Jean H. Gal-lier.  Vec-tor Norms and Ma-trix Norms.  []$\OT1/
 cmtt/m/n/10 https : / / www . cis . upenn . edu / []cis515 /
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 36--40
+Underfull \hbox (badness 3396) in paragraph at lines 50--54
 []\OT1/cmr/m/n/10 Math Open Ref-er-ence.  Proof of the Law of Cosines.  []$\OT1
 /cmtt/m/n/10 https : / / www . mathopenref . com /
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 42--48
+Underfull \hbox (badness 1655) in paragraph at lines 56--62
 []\OT1/cmr/m/n/10 NIST.  Joplin Mis-souri Tor-nado 2011.  []$\OT1/cmtt/m/n/10 h
 ttps : / / www . nist . gov / disaster-[]failure-[]studies /
  []
 
-) [12] (./vector_calculus.aux)
+[14]) [15] (./vector_calculus.aux)
 Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: A65181E6C502E83DCE14156E33C652E9;1578.
  ) 
 Here is how much of TeX's memory you used:
- 53665 strings out of 478994
- 1343993 string characters out of 5858184
- 2002255 words of memory out of 5000000
- 70282 multiletter control sequences out of 15000+600000
- 419172 words of font info for 96 fonts, out of 8000000 for 9000
+ 53701 strings out of 478994
+ 1344978 string characters out of 5858184
+ 2002888 words of memory out of 5000000
+ 70303 multiletter control sequences out of 15000+600000
+ 419507 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,22n,131p,733b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (12 pages, 1044001 bytes).
+ 111i,22n,131p,733b,888s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/esvect/vect10.pfb>
+Output written on vector_calculus.pdf (15 pages, 1193386 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 317 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
