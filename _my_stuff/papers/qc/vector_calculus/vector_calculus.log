@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 MAR 2022 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 MAR 2022 06:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1454,54 +1454,54 @@ Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
 47.
 (pdftex.def)             Requested size: 595.2223pt x 437.63393pt.
 
-Overfull \hbox (21.6299pt too wide) detected at line 617
+Overfull \hbox (29.96326pt too wide) detected at line 615
 []
  []
 
 [5 <./images/orthogonal_projection.png>]
-<images/cross_product_parallelogram.png, id=157, 1927.2pt x 1505.625pt>
+<images/cross_product_parallelogram.png, id=161, 1927.2pt x 1505.625pt>
 File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
-line 687.
+line 685.
 (pdftex.def)             Requested size: 1927.19533pt x 1505.62134pt.
-<images/right_hand_rule_cross_product.png, id=160, 1284.8pt x 1163.34625pt>
+<images/right_hand_rule_cross_product.png, id=164, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
-t line 723.
+t line 721.
 (pdftex.def)             Requested size: 1284.79688pt x 1163.34343pt.
  [6 <./images/cross_product_parallelogram.png>] [7 <./images/right_hand_rule_cr
 oss_product.png>] [8]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=213, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=218, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1017.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1015.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
  [9 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-<images/delta-r.png, id=225, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=230, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1053.
+Package pdftex.def Info: images/delta-r.png  used on input line 1051.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (28.8371pt too wide) detected at line 1122
+Overfull \hbox (28.8371pt too wide) detected at line 1120
 []
  []
 
 [10 <./images/delta-r.png>] [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1279.
+(hyperref)                removing `math shift' on input line 1277.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1279.
+(hyperref)                removing `math shift' on input line 1277.
 
 [12] [13] (./vector_calculus.bbl
 Underfull \hbox (badness 1107) in paragraph at lines 44--48
@@ -1528,7 +1528,7 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 Here is how much of TeX's memory you used:
  53701 strings out of 478994
  1344978 string characters out of 5858184
- 2002890 words of memory out of 5000000
+ 2002889 words of memory out of 5000000
  70303 multiletter control sequences out of 15000+600000
  419507 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1559,10 +1559,10 @@ ist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (15 pages, 1193553 bytes).
+Output written on vector_calculus.pdf (15 pages, 1193325 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
+ 424 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
  72 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
