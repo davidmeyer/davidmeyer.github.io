@@ -1309,9 +1309,10 @@ ds}$ is shown in Figure \ref{fig:line_integral}.
 The first step in solving a line integral is to find a
 parameterization for the curve $C$. We would like to find a
 parameterization such that the integral reduces to an integral
-over a single variable.  So the parametric form of $x$ will be
-$x(t) = g(h)$, and the parametric form of $y$ will be $y(t) =
-h(t)$, where the parameter $t \in [a,b]$. That is
+over a single variable, call it $t$.  Then the parametric form of 
+$x$ is $g(h)$, the parametric form of $y$ is $h(t)$,
+and the parameter $t$ is in the interval $[a,b]$. 
+That is
 
 
 \begin{equation*}
@@ -1332,26 +1333,18 @@ $ds$ we can see that
 ds
 &=& \sqrt{dx^2 + dy^2}				
 			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean theorem} \\
-[15pt]
+[12pt]
 &=& \sqrt{dg^2 + dh^2}	
 			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
 			$x = g(t)$ and $y = h(t)$} \\
-[15pt]
+[12pt]
 &=& \sqrt{dg^2 + dh^2} \; \dfrac{dt}{dt}
 			&\qquad \qquad \mathrel{\#} \text{multiply by 
 			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
-[15pt]
-&=& \sqrt{dg^2 + dh^2} \;  \Bigg [\sqrt{\dfrac{1}{dt^2}} \;  dt \Bigg ]
-			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} 
-			= \sqrt{\left (\dfrac{1}{x} \right)^2} \;  x 
-			= \sqrt{\dfrac{1}{x^2}} \;  x, \; x > 0  \\
-[15pt]
-&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \;  \left (\dfrac{1}{dt^2} \right)} \; dt
-			&\qquad \qquad \mathrel{\#} \text{simplify} \\
-[15pt]
+[12pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \; dt		
 			&\qquad \qquad \mathrel{\#} \text{simplify} \\
-[15pt]
+[12pt]
 &=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \;  dt		
 			&\qquad \qquad \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
 			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
@@ -1360,7 +1353,7 @@ ds
 
 \bigskip
 \noindent
-Now we can write our line integral in terms of a single
+Now we can write the line integral in terms of a single
 variable $t \in [a,b]$ as follows: 
 
 \bigskip
@@ -1375,8 +1368,8 @@ variable $t \in [a,b]$ as follows:
 For example, suppose $C$ is a circle of radius $r$
 where we want to integrate over the part of the circle in the
 first quadrant. That is, $C$ is $x^2 + y^2 = r^2$. 
-In this case the parameterization is $g(t) = r \cos (t)$ and 
-$h(t) = r \sin (t)$.  Solving for $\sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2}$ 
+In this case the parameterization is $x(t) = g(t) = r \cos (t)$ and 
+$y(t) = h(t) = r \sin (t)$.  Solving for $\sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2}$ 
 we get
 
 \setstretch{1.0}
