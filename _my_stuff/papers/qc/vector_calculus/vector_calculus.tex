@@ -1306,34 +1306,27 @@ ds}$ is shown in Figure \ref{fig:line_integral}.
 
 \subsubsection{Parameterizing the Curve ${C}$}
 \label{subsubsec:parameterizing_the_curve_C}
-The first step in solving a line integral is to find a parameterization
-for the curve $C$. We would like to find a parameterization such that
-the integral reduces to an integral over a single variable $t$. For example,
-suppose our curve $C$ is a circle of radius $r$ where
-we want to integrate over the part of the
-circle in the first quadrant. That is, our curve $C$ is
-$x^2 + y^2 = r^2$ and so the parametric form 
-of $x$ and $y$ would be  $x(t) = g(t) = r \cos (t)$ and $y(t) = h(t) = r \sin (t)$.
+The first step in solving a line integral is to find a
+parameterization for the curve $C$. We would like to find a
+parameterization such that the integral reduces to an integral
+over a single variable.  So the parametric form of $x$ will be
+$x(t) = g(h)$, and the parametric form of $y$ will be $y(t) =
+h(t)$, where the parameter $t \in [a,b]$. That is
 
-\bigskip
-\noindent
-We also need to specify the limits of integration for our parameterization. Since
-the curve $C$ is a circle in the first quadrant our parameter $t \in [ 0,\frac{\pi}{2} ] $, 
-so our the limits of integration are $a = 0$ and $b = \frac{\pi}{2}$. Putting this all 
-together we get
 
-\medskip
 \begin{equation*}
- \int_{C} f(x,y) \, ds = \int_{a}^{b} f(h(t),g(t)) \, ds = \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, ds 
+ \int_{C} f(x,y) \, ds = \int_{a}^{b} f(h(t),g(t)) \, ds 
 \end{equation*}
 
 \bigskip
 \noindent
-All good, but what is $ds$? We saw in Section \ref{sec:arc_length} that $ds$ is the infinitesimal 
-arc length and that by the Pythagorean theorem $ds = \sqrt{dx^2 + dy^2}$ (Figure 
-\ref{fig:pythagorean_theorem}). Using this expression for $ds$ we can see that
+All good, but what is $ds$? We saw in Section
+\ref{sec:arc_length} that $ds$ is the infinitesimal arc length
+and that by the Pythagorean theorem $ds = \sqrt{dx^2 + dy^2}$
+(Figure \ref{fig:pythagorean_theorem}). Using this expression for
+$ds$ we can see that
 
-\bigskip
+\smallskip
 \begin{equation*}
 \begin{array}{lllll}
 ds
@@ -1367,17 +1360,74 @@ ds
 
 \bigskip
 \noindent
-Now we can rewrite our line integral in terms of a single variable $t$ as follows:
+Now we can write our line integral in terms of a single
+variable $t \in [a,b]$ as follows: 
 
 \bigskip
 \begin{equation*}
 \int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t))  \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \;  dt	
 \end{equation*}
 
+
+\bigskip
+\setstretch{1.25}
+\noindent
+For example, suppose $C$ is a circle of radius $r$
+where we want to integrate over the part of the circle in the
+first quadrant. That is, $C$ is $x^2 + y^2 = r^2$. 
+In this case the parameterization is $g(t) = r \cos (t)$ and 
+$h(t) = r \sin (t)$.  Solving for $\sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2}$ 
+we get
+
+\setstretch{1.0}
+
+\begin{equation*}
+\begin{array}{lllll}
+\sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2}
+&=& \sqrt{(-r \sin (t))^2 + (r \cos(t))^2}
+			&\qquad \mathrel{\#} g^{\prime}(t) = -r \sin (t) 
+			\text{ and }
+			h^{\prime}(t) = r \cos(t) \\
+[5pt]
+&=& \sqrt{r^2 \sin^2(t) + r^2 \cos^2(t)}
+			&\qquad \mathrel{\#} \text{squares} \\
+[5pt]
+&=& \sqrt{r^2 (\sin^2(t) + \cos^2(t))}
+			&\qquad \mathrel{\#} \text{factor out $r^2$} \\
+[5pt]
+&=&  r \sqrt{\sin^2(t) + \cos^2(t)} 
+			&\qquad \mathrel{\#} \sqrt{r^2} = r  \\
+[5pt]
+&=&  r \sqrt{1} 
+			&\qquad \mathrel{\#}  \sin^2(t) + \cos^2(t) = 1 \\
+[5pt]
+&=&  r 
+			&\qquad \mathrel{\#}  \sqrt{1} = 1
+\end{array}
+\end{equation*}
+
 \bigskip
 \noindent
-At this point our line integral has been reduced a definite integral over one 
-variable (which hopefully we can solve).
+So in our example $ds = r \, dt$.
+
+\bigskip
+\noindent
+Next we need to specify the limits of integration for our
+parameterization. Since the curve $C$ is a circle in the first
+quadrant our parameter $t \in [ 0,\frac{\pi}{2} ] $, so our the
+limits of integration are $a = 0$ and $b =
+\frac{\pi}{2}$. Putting this all together we get
+
+\bigskip
+\begin{equation*}
+ \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, r \, dt 
+ = r \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, dt 
+\end{equation*}
+
+\bigskip
+\noindent
+for some function $f$.
+
 
 \bigskip
 \subsection{Vector Fields}
