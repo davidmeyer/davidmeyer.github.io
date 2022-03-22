@@ -1318,7 +1318,7 @@ of $x$ and $y$ would be  $x(t) = g(t) = r \cos (t)$ and $y(t) = h(t) = r \sin (t
 \noindent
 We also need to specify the limits of integration for our parameterization. Since
 the curve $C$ is the circle of radius $r$ in the first quadrant, the limits of integration 
-are $a = 0$ and $b = \frac{\pi}{2}$. Putting this all together we get
+are $a = 0$ and $b = \frac{\pi}{2}$ (that is, $t \in [ 0,\frac{\pi}{2} ] $). Putting this all together we get
 
 \medskip
 \begin{equation*}
@@ -1327,9 +1327,9 @@ are $a = 0$ and $b = \frac{\pi}{2}$. Putting this all together we get
 
 \bigskip
 \noindent
-Ok, but what is $ds$? As we saw in Figure \ref{fig:pythagorean_theorem}
-the Pythagorean theorem tells us that $ds = \sqrt{dx^2 + dy^2}$. Using
-this expression for $ds$ we can see that
+Ok, but what is $ds$? As we saw above $ds$ is the infinitesimal  arc length
+and that the Pythagorean theorem tells us that $ds = \sqrt{dx^2 + dy^2}$ (Figure 
+\ref{fig:pythagorean_theorem}). Using this expression for $ds$ we can see that
 
 \bigskip
 \begin{equation*}
@@ -1365,12 +1365,17 @@ ds
 
 \bigskip
 \noindent
-So we can rewrite our line integral in terms of a single variable $t$ as follows:
+Now we can rewrite our line integral in terms of a single variable $t$ as follows:
 
 \bigskip
 \begin{equation*}
 \int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t))  \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt	
 \end{equation*}
+
+\bigskip
+\noindent
+At this point our line integral has been reduced a definite integral over one variable (which hopefully 
+we can solve).
 
 \bigskip
 \subsection{Vector Fields}
