@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 MAR 2022 09:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 MAR 2022 09:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1509,19 +1509,19 @@ Package pdftex.def Info: images/definite_integral.png  used on input line 1278.
 <images/line_integral.png, id=291, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 1298.
+Package pdftex.def Info: images/line_integral.png  used on input line 1299.
 (pdftex.def)             Requested size: 730.72821pt x 244.91438pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1303.
+(hyperref)                than one, level fixed on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1303.
+(hyperref)                removing `math shift' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1303.
+(hyperref)                removing `math shift' on input line 1304.
 
 [12 <./images/definite_integral.png> <./images/line_integral.png>]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
@@ -1531,7 +1531,7 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1353.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1354.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
  [13 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2
 011-Joplin-MO-tornado.png>] [14] (./vector_calculus.bbl
@@ -1559,7 +1559,7 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 Here is how much of TeX's memory you used:
  53736 strings out of 478994
  1345743 string characters out of 5858184
- 2003161 words of memory out of 5000000
+ 2003153 words of memory out of 5000000
  70326 multiletter control sequences out of 15000+600000
  419507 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1591,7 +1591,7 @@ t/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (16 pages, 1235062 bytes).
+Output written on vector_calculus.pdf (16 pages, 1235118 bytes).
 PDF statistics:
  472 PDF objects out of 1000 (max. 8388607)
  360 compressed objects within 4 object streams
