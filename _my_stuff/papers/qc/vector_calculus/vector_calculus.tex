@@ -1265,8 +1265,9 @@ One way to see this is to notice that
 \end{array}
 \end{equation*}
 
+
 \bigskip
-\section{Line Integrals}
+\section{The Line Integral}
 \label{sec:line_integrals}
 Consider the definite integral shown in Figure
 \ref{fig:definte_integral}.  Here we want to find the area $S$
@@ -1277,7 +1278,7 @@ $f(x)$.
 \begin{figure}[H]
 \center{\includegraphics[scale=0.17]
 {images/definite_integral.png}}
-\caption{Definite Integral: The area ${\mathbf S = {\displaystyle \int_{a}^{b} f(x) \, dx}}$}
+\caption{Definite Integral:  The area ${\mathbf S = {\displaystyle \int_{a}^{b} f(x) \, dx}}$}
 \label{fig:definte_integral}
 \end{figure}
 
@@ -1286,7 +1287,7 @@ $f(x)$.
 \noindent
 The line integral, denoted ${\displaystyle \int_{C} f(x,y) \,
 ds}$, is similar except that here we want to find the area above
-some curve $C$ and below the function $f(x,y)$ (so the line
+the curve $C$ and below the function $f(x,y)$ (so the line
 integral is by definition in three dimensions).  The comparison
 between the definite integral ${\displaystyle \int_{a}^{b} f(x)
 \, dx}$ and the line integral ${\displaystyle \int_{C} f(x,y) \,
@@ -1303,32 +1304,75 @@ ds}$ is shown in Figure \ref{fig:line_integral}.
 \end{figure}
 
 \subsubsection{Parameterizing the Curve ${C}$}
-The first step in solving the line integral is to find a parameterization
+\label{subsubsec:parameterizing_the_curve_C}
+The first step in solving a line integral is to find a parameterization
 for the curve $C$. We would like to find a parameterization such that
 the integral reduces to an integral over a single variable $t$. For example,
 suppose our curve $C$ is a circle of radius $r$ where
 we want to integrate over the part of the
-circle in the first quadrant. Then we want to parameterize
+circle in the first quadrant. That is, our curve $C$ is
 $x^2 + y^2 = r^2$ and so the parametric form 
-of $x$ and $y$ would be  $x(t) = g(t) = r \cos t$ and $y(t) = h(t) = r \sin t$
-and our limits of integration are $a = 0$ and $b = \frac{\pi}{2}$.
-That is, 
+of $x$ and $y$ would be  $x(t) = g(t) = r \cos (t)$ and $y(t) = h(t) = r \sin (t)$.
 
+\bigskip
+\noindent
+We also need to specify the limits of integration for our parameterization. Since
+the curve $C$ is the circle of radius $r$ in the first quadrant, the limits of integration 
+are $a = 0$ and $b = \frac{\pi}{2}$. Putting this all together we get
+
+\medskip
 \begin{equation*}
-\int_{0}^{\frac{\pi}{2}} f(h(t),g(t)) \, ds = \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, ds 
+ \int_{C} f(x,y) \, ds = \int_{0}^{\frac{\pi}{2}} f(h(t),g(t)) \, ds = \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, ds 
 \end{equation*}
 
 \bigskip
 \noindent
-So what is $ds$?
+Ok, but what is $ds$? As we saw in Figure \ref{fig:pythagorean_theorem}
+the Pythagorean theorem tells us that $ds = \sqrt{dx^2 + dy^2}$. Using
+this expression for $ds$ we can see that
 
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+ds
+&=& \sqrt{dx^2 + dy^2}				
+			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean theorem} \\
+[15pt]
+&=& \sqrt{dg^2 + dh^2}	
+			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
+			$x = g(t)$ and $y = h(t)$} \\
+[15pt]
+&=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
+			&\qquad \qquad \mathrel{\#} \text{multiply by 
+			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
+[15pt]
+&=& \sqrt{dg^2 + dh^2} \cdot \Bigg [\sqrt{\dfrac{1}{dt^2}} \cdot dt \Bigg ]
+			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} 
+			= \sqrt{\left (\dfrac{1}{x} \right)^2} \cdot x 
+			= \sqrt{\dfrac{1}{x^2}} \cdot x, \; x > 0  \\
+[15pt]
+&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \cdot \left (\dfrac{1}{dt^2} \right)} \cdot dt
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
+			&\qquad \qquad \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
+			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
+\end{array}
+\end{equation*}
 
+\bigskip
+\noindent
+So we can rewrite our line integral in terms of a single variable $t$ as follows:
 
-\label{subsubsec:parameterizing_the_curve_C}
-\subsubsection{Solving the Parameterized Integral}
-\label{subsubsec:solving_the_parameterized_integral}
+\bigskip
+\begin{equation*}
+\int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t))  \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt	
+\end{equation*}
 
-
+\bigskip
 \subsection{Vector Fields}
 \label{subsec:vector_fields}
 In vector calculus and physics, a vector field is an assignment
