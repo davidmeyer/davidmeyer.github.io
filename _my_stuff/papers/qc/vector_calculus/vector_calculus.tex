@@ -1317,18 +1317,19 @@ of $x$ and $y$ would be  $x(t) = g(t) = r \cos (t)$ and $y(t) = h(t) = r \sin (t
 \bigskip
 \noindent
 We also need to specify the limits of integration for our parameterization. Since
-the curve $C$ is the circle of radius $r$ in the first quadrant, the limits of integration 
-are $a = 0$ and $b = \frac{\pi}{2}$ (that is, $t \in [ 0,\frac{\pi}{2} ] $). Putting this all together we get
+the curve $C$ is a circle in the first quadrant our parameter $t \in [ 0,\frac{\pi}{2} ] $, 
+so our the limits of integration are $a = 0$ and $b = \frac{\pi}{2}$. Putting this all 
+together we get
 
 \medskip
 \begin{equation*}
- \int_{C} f(x,y) \, ds = \int_{0}^{\frac{\pi}{2}} f(h(t),g(t)) \, ds = \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, ds 
+ \int_{C} f(x,y) \, ds = \int_{a}^{b} f(h(t),g(t)) \, ds = \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, ds 
 \end{equation*}
 
 \bigskip
 \noindent
-Ok, but what is $ds$? As we saw above $ds$ is the infinitesimal  arc length
-and that the Pythagorean theorem tells us that $ds = \sqrt{dx^2 + dy^2}$ (Figure 
+All good, but what is $ds$? We saw above that $ds$ is the infinitesimal arc length
+and that by the Pythagorean theorem $ds = \sqrt{dx^2 + dy^2}$ (Figure 
 \ref{fig:pythagorean_theorem}). Using this expression for $ds$ we can see that
 
 \bigskip
@@ -1342,22 +1343,22 @@ ds
 			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
 			$x = g(t)$ and $y = h(t)$} \\
 [15pt]
-&=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
+&=& \sqrt{dg^2 + dh^2} \; \dfrac{dt}{dt}
 			&\qquad \qquad \mathrel{\#} \text{multiply by 
 			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
 [15pt]
-&=& \sqrt{dg^2 + dh^2} \cdot \Bigg [\sqrt{\dfrac{1}{dt^2}} \cdot dt \Bigg ]
+&=& \sqrt{dg^2 + dh^2} \;  \Bigg [\sqrt{\dfrac{1}{dt^2}} \;  dt \Bigg ]
 			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} 
-			= \sqrt{\left (\dfrac{1}{x} \right)^2} \cdot x 
-			= \sqrt{\dfrac{1}{x^2}} \cdot x, \; x > 0  \\
+			= \sqrt{\left (\dfrac{1}{x} \right)^2} \;  x 
+			= \sqrt{\dfrac{1}{x^2}} \;  x, \; x > 0  \\
 [15pt]
-&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \cdot \left (\dfrac{1}{dt^2} \right)} \cdot dt
+&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \;  \left (\dfrac{1}{dt^2} \right)} \; dt
 			&\qquad \qquad \mathrel{\#} \text{simplify} \\
 [15pt]
-&=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
+&=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \; dt		
 			&\qquad \qquad \mathrel{\#} \text{simplify} \\
 [15pt]
-&=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
+&=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \;  dt		
 			&\qquad \qquad \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
 			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
 \end{array}
@@ -1369,13 +1370,13 @@ Now we can rewrite our line integral in terms of a single variable $t$ as follow
 
 \bigskip
 \begin{equation*}
-\int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t))  \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt	
+\int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t))  \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \;  dt	
 \end{equation*}
 
 \bigskip
 \noindent
-At this point our line integral has been reduced a definite integral over one variable (which hopefully 
-we can solve).
+At this point our line integral has been reduced a definite integral over one 
+variable (which hopefully we can solve).
 
 \bigskip
 \subsection{Vector Fields}
