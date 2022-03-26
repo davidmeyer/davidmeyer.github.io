@@ -16,7 +16,8 @@ A Few Notes On Vector Calculus</a>
 
 <li><a href="./continued_root_2.pdf.pdf" target="_blank" 
     rel="noopener noreferrer">
-Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} >\a>
+Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
+<\a>
 <br>
 
 <li><a href="./golden_ratio.pdf" target="_blank" 
