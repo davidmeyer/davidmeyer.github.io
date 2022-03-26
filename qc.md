@@ -85,7 +85,7 @@ Quantum Teleportation
 
 
 <h2>Just for fun</h2>
-<li><a href="./continued_root_2.pdf.pdf" target="_blank"
+<li><a href="./continued_root_2.pdf" target="_blank"
     rel="noopener noreferrer">
 Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
 </a>
