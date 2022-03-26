@@ -12,14 +12,6 @@
     rel="noopener noreferrer">
 A Few Notes On Vector Calculus</a>
 <br>
-
-
-<li><a href="./continued_root_2.pdf.pdf" target="_blank" 
-    rel="noopener noreferrer">
-Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
-<\a>
-<br>
-
 <li><a href="./golden_ratio.pdf" target="_blank" 
     rel="noopener noreferrer">
 An Interesting Integral Involving The Golden Ratio</a>
@@ -93,6 +85,11 @@ Quantum Teleportation
 
 
 <h2>Just for fun</h2>
+<li><a href="./continued_root_2.pdf.pdf" target="_blank"
+    rel="noopener noreferrer">
+Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
+</a>
+<br>
 <li><a href="./can_you_spot_the_error.pdf" target="_blank" rel="noopener noreferrer">Can You Spot The Error?</a>
 <br>
 <li><a href="./2022.pdf" target="_blank" rel="noopener noreferrer">Happy New Year 2022!</a>
