@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 MAR 2022 09:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 MAR 2022 09:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1112,7 +1112,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 67
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (83.36177pt too wide) detected at line 107
+Overfull \hbox (63.36174pt too wide) detected at line 106
 []
  []
 
@@ -1146,7 +1146,7 @@ xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on cube_roots.pdf (1 page, 131719 bytes).
+Output written on cube_roots.pdf (1 page, 131706 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
