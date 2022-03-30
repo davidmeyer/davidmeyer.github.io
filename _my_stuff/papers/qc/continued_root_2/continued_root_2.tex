@@ -48,6 +48,8 @@
 \usepackage{amsmath}
 \usepackage{relsize}
  \usepackage[hyphenbreaks]{breakurl}
+ \usepackage{setspace}
+
  
  \newtheorem{thm}{Theorem}[section]
 % \newtheorem{defn}[thm]{Definition}
@@ -76,22 +78,22 @@ How about:
 S
 &=&  \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{define $S$} \\
-[12pt]
+[13pt]
 &\Rightarrow& S^2 = 2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{square both sides} \\
-[12pt]
+[13pt]
 &\Rightarrow& S^2 = 2 + S 
 				&\qquad \qquad \mathrel{\#} S = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  \\
-[15pt]
+[13pt]
 &\Rightarrow& S^2 -S - 2 = 0 
 				&\qquad \qquad \mathrel{\#} \text{collect terms} \\
-[15pt]
+[13pt]
 &\Rightarrow& (S - 2)(S + 1) = 0
 				&\qquad \qquad \mathrel{\#} \text{factor} \\
-[15pt]
+[13pt]
 &\Rightarrow& S \in \{2,-1\}
 				&\qquad \qquad \mathrel{\#} \text{solve for $S$} \\
-[15pt]
+[13pt]
 &\Rightarrow& S = 2
 				&\qquad \qquad \mathrel{\#} \text{positive root of $S$} 
 
@@ -103,4 +105,119 @@ S
 \noindent
 So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$
 
+\bigskip
+\noindent
+Notice that the $n^{\text{th}}$ term in this series, $a_n$, is
+
+\bigskip
+{\large
+\begin{equation}
+a_n = \overbrace{\sqrt{\sqrt{\sqrt{\cdots \sqrt{2}}}}}^\text{$n$ times} = 2^{{(\frac{1}{2}{)}^n}}
+\label{eqn:a_n}
+\end{equation}}
+
+\noindent
+Using Equation (\ref{eqn:a_n}) we can rewrite the sum as
+
+\begin{equation}
+\sum\limits_{n=1}^{\infty} a_n = \sum\limits_{n=1}^{\infty} 2^{{(\frac{1}{2}{)}^n}} = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
+\label{eqn:a_n_limit}
+\end{equation}
+
+\bigskip
+\setstretch{1.35}
+\noindent
+Next we're interested in whether this sum (Equation (\ref{eqn:a_n_limit})) converges, and if so, to what.
+One of the easiest convergence tests to apply is the ratio test \cite{wiki:ratio_test}.  
+The ratio says that if $\lim\limits_{n \to \infty} \frac{a_{n+1}}{a_n} < 1$ the series converges, if 
+$\lim\limits_{n \to \infty}  \frac{a_{n+1}}{a_n} > 1$ the series diverges, and if 
+$\lim\limits_{n \to \infty} \frac{a_{n+1}}{a_n} = 1$ the test inconclusive (you need to use a different 
+convergence test).
+
+\setstretch{1.0}
+
+\bigskip
+\noindent
+In this case
+
+
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{a_{n+1}}{a_n}
+&=&  \dfrac{2^{{ \left ( \frac{1}{2} \right ) }^{(n+1)}}} {2^{{ \left (\frac{1}{2} \right )}^n}} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} a_n = 2^{{\left (\frac{1}{2} \right )}^n} \\
+[12pt]
+&=& 2^{\left [{ \left (\frac{1}{2} \right )}^{n+1} - \, {\left (\frac{1}{2} \right )}^n \right ] }
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simplify: $\dfrac{x^a}{x^b} = x^{a-b}$} \\
+[8pt]
+&=& 2^{\left [ { \left (\frac{1}{2} \right )}^{n} \cdot \,  {\left (\frac{1}{2} \right )}^{1}  -\, {{ \left ( \frac{1}{2} \right )}^n}\right ] }
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} {\left (\frac{1}{2} \right )}^{n+1} = {\left (\frac{1}{2}\right )}^{n} \cdot {\left (\frac{1}{2}\right )}^{1}  \\
+[10pt]
+&=& 2^{\left [ {\left (\frac{1}{2} \right )}^{n} \cdot \,  \left ( \frac{1}{2} -1 \right ) \right ]} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out ${\left (\frac{1}{2} \right )}^n$} \\
+[10pt]
+&=& 2^{\left [ { \left (\frac{1}{2} \right )}^{n} \cdot \, \left ( - \frac{1}{2} \right ) \right ]} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \frac{1}{2} - 1 = - \frac{1}{2}  \\
+[10pt]
+&=& 2^{- \left [ { \left (\frac{1}{2} \right )}^{n} \cdot  \, \left (\frac{1}{2} \right ) \right ]} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simpify}  \\
+[10pt]
+&=& 2^{- {\left (\frac{1}{2} \right )}^{n+1}}
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} x^a \cdot x^b = x^{a+b}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+So in the limit
+
+
+\begin{equation*}
+\begin{array}{llll}
+\lim\limits_{n \to \infty}\Bigg [  \dfrac{a_{n+1}}{a_n} \Bigg ]
+&=&
+\lim\limits_{n \to \infty} \Bigg [  \dfrac{2^{{ \left ( \frac{1}{2} \right ) }^{(n+1)}}} {2^{{ \left (\frac{1}{2} \right )}^n}}  \Bigg ]
+				&\qquad \qquad \quad \mathrel{\#} a_n = 2^{{(\frac{1}{2}{)}^n}} \\
+[15pt]
+&=&  \lim\limits_{n \to \infty} 2^{- \Big [ {\left (\frac{1}{2} \right )}^{n+1} \Big ] } 
+				&\qquad \qquad \quad \mathrel{\#} \text{see above} \\
+[15pt]
+&=&  \lim\limits_{n \to \infty}  2^{- {\left [ \frac{1}{2^{n+1}} \right ]}} 
+				&\qquad \qquad \quad \mathrel{\#} \text{simplify} \\
+[15pt]
+&=&  \lim\limits_{n \to \infty}  \frac{1}{2^{\left ( \frac{1}{2^{n+1}} \right ) }} 
+				&\qquad \qquad \quad \mathrel{\#} x^{-a} = \frac{1}{x^a}  \\
+[15pt]
+&=&  \lim\limits_{n \to \infty}  \frac{1}{2^0}
+				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} \frac{1}{2^{n+1}} = 0 \\
+[15pt]
+&=&  \lim\limits_{n \to \infty}  \frac{1}{1}
+				&\qquad \qquad \quad \mathrel{\#} 2^0 = 1 \\
+[15pt]
+&=& 1
+				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} c = c
+
+\end{array}
+\end{equation*}
+
+\noindent
+Since $\lim\limits_{n \to \infty} 2^{- {\left (\frac{1}{2} \right )}^{n+1}} \!\! = 1$
+the ratio test is unfortunately inconclusive.
+
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
 \end{document}
