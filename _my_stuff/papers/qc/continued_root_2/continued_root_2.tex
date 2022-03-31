@@ -72,6 +72,7 @@
 \section{Introduction}
 One way to think about this question is the following:
 
+\bigskip
 \begin{equation*}
 \begin{array}{llll}
 S
@@ -99,11 +100,20 @@ S
 \end{array}
 \end{equation*}
 
+\bigskip
 \noindent
 So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$
 
+\bigskip
 \section{Does This Series Really Converge?}
-Notice that the $n^{\text{th}}$ term in this series, $a_n$, is
+It's worth asking whether a series actually converges (and to what)
+since using an algebraic variable (in this case $S$) to represent an 
+infinite series can go badly wrong \cite{can_you_spot_the_error}.
+
+
+\bigskip
+\noindent
+So the first thing to notice here is that the $n^{\text{th}}$ term in this series, $a_n$, is
 
 \bigskip
 {\large
@@ -112,15 +122,18 @@ a_n = \underbrace{\sqrt{\sqrt{\sqrt{\cdots \sqrt{2}}}}}_\text{$n$ times} = 2^{{ 
 \label{eqn:a_n}
 \end{equation}}
 
+\bigskip
 \noindent
 Using Equation (\ref{eqn:a_n}) we can rewrite the sum as
 
+\bigskip
 \begin{equation}
 \sum\limits_{n=1}^{\infty} a_n = \sum\limits_{n=1}^{\infty} 2^{{(\tfrac{1}{2}{)}^n}} = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
 \label{eqn:a_n_limit}
 \end{equation}
 
-\subsection{Convergence: Applying the Ratio Test}
+\bigskip
+\subsection{Applying the Ratio Test}
 \setstretch{1.35}
 \noindent
 Next we're interested in whether this sum (Equation (\ref{eqn:a_n_limit})) converges, and if so, to what.
@@ -142,22 +155,22 @@ In this case
 \dfrac{a_{n+1}}{a_n}
 &=&  \dfrac{2^{{ \left ( \tfrac{1}{2} \right ) }^{n+1}}} {2^{{ \left (\tfrac{1}{2} \right )}^n}} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} a_n = 2^{{\left (\tfrac{1}{2} \right )}^n} \\
-[15pt]
+[20pt]
 &=& 2^{\left [{ \left (\tfrac{1}{2} \right )}^{n+1} - \, {\left (\tfrac{1}{2} \right )}^n \right ] }
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simplify: $\dfrac{x^a}{x^b} = x^{a-b}$} \\
-[5pt]
+[10pt]
 &=& 2^{\left [ { \left (\tfrac{1}{2} \right )}^{n} \cdot \,  {\left (\tfrac{1}{2} \right )}^{1}  -\, {{ \left ( \tfrac{1}{2} \right )}^n}\right ] }
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} {\left (\tfrac{1}{2} \right )}^{n+1} = {\left (\tfrac{1}{2}\right )}^{n} \cdot {\left (\tfrac{1}{2}\right )}^{1}  \\
-[5pt]
+[10pt]
 &=& 2^{\left [ {\left (\tfrac{1}{2} \right )}^{n} \cdot \,  \left ( \tfrac{1}{2} -1 \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out ${\left (\tfrac{1}{2} \right )}^n$} \\
-[5pt]
+[10pt]
 &=& 2^{\left [ { \left (\tfrac{1}{2} \right )}^{n} \cdot \, \left ( - \tfrac{1}{2} \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \tfrac{1}{2} - 1 = - \tfrac{1}{2}  \\
-[5pt]
+[10pt]
 &=& 2^{- \left [ { \left (\tfrac{1}{2} \right )}^{n} \cdot  \, \left (\tfrac{1}{2} \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simpify}  \\
-[5pt]
+[10pt]
 &=& 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}}
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} x^a \cdot x^b = x^{a+b}
 \end{array}
@@ -200,7 +213,7 @@ So in the limit we have
 \bigskip
 \noindent
 Since $\lim\limits_{n \to \infty} 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}} \!\! = 1$
-the ratio test is inconclusive.
+the ratio test is unfortunately inconclusive.
 
 %
 %	LaTeX source on overleaf.com
