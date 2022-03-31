@@ -9,13 +9,13 @@
 
 
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\geometry{letterpaper}                 		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+						% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
 
-								% TeX will automatically convert eps --> pdf in pdflatex		
+						% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -70,16 +70,17 @@
 \maketitle
 
 \section{Introduction}
-One way to think about this question is the following:
+One way to think about this question is the following: 
 
 \begin{equation*}
 \begin{array}{llll}
 S
 &=&  \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{define $S$} \\
-[10pt]
+[5pt]
 &\Rightarrow& S^2 = 2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{square both sides} \\
+[2pt]
 &\Rightarrow& S^2 = 2 + S 
 				&\qquad \qquad \mathrel{\#} S = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  \\
 [5pt]
@@ -93,62 +94,67 @@ S
 				&\qquad \qquad \mathrel{\#} \text{solve for $S$} \\
 [5pt]
 &\Rightarrow& S = 2
-				&\qquad \qquad \mathrel{\#} \text{positive root of $S$} 
+				&\qquad \qquad \mathrel{\#} \text{positive root of $S$ (what about the negative root?)} 
 
 \end{array}
 \end{equation*}
 
 \smallskip
 \noindent
-So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$
+So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$.
 
 
 \section{Does This Series Really Converge?}
-It is  worth asking whether a series converges (and to what)
-since using an algebraic variable to represent an 
-infinite sum, in this case $S$, can go badly 
-wrong \cite{can_you_spot_the_error}. This is because an 
-infinite sum is really a limit of partial sums
+It is worth asking whether this series really converges (and to what)
+since using an algebraic variable to represent an infinite sum,
+in this case $S$, can go badly wrong \cite{can_you_spot_the_error}. 
+This is because an infinite sum is really the limit of partial
+sums: 
 
+\medskip
 \begin{equation*}
 \sum\limits_{i=1}^{\infty }a_{i} = \lim _{n\to \infty }\sum _{i=1}^{n}a_{i}
 \end{equation*}
 
 \bigskip
 \noindent
-and so may behave differently than a finite sum.
+and as such can behave differently than a finite sum. 
 
 
 \noindent
-So the first thing to notice here is that the $n^{\text{th}}$ term in this series, $a_n$, is
+Maybe the first thing to notice here is that the $n^{\text{th}}$
+term in this series, $a_n$, is
 
 \bigskip
-{\large
 \begin{equation}
 a_n = \underbrace{\sqrt{\sqrt{\sqrt{\cdots \sqrt{2}}}}}_\text{$n$ times} = 2^{{ \left (\tfrac{1}{2} \right )}^{n}}
 \label{eqn:a_n}
-\end{equation}}
-
-\bigskip
-\noindent
-Using Equation (\ref{eqn:a_n}) we can rewrite the sum as
-
-\bigskip
-\begin{equation}
-\sum\limits_{n=1}^{\infty} a_n = \sum\limits_{n=1}^{\infty} 2^{{(\tfrac{1}{2}{)}^n}} = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
-\label{eqn:a_n_limit}
 \end{equation}
 
 \bigskip
+\noindent
+Using Equation (\ref{eqn:a_n}) we can rewrite $\sqrt{2 + \sqrt{2
++ \sqrt{2 + \sqrt{2 + \cdots}}}}$ as the sum 
+
+\bigskip
+\begin{equation}
+\sum\limits_{n=1}^{\infty} a_n = \sum\limits_{n=1}^{\infty} 2^{  {\left ( \tfrac{1}{2} \right )}^{n}}
+\label{eqn:a_n_limit}
+\end{equation}
+
+\medskip
 \subsection{Applying the Ratio Test}
 \setstretch{1.35}
 \noindent
-Next we're interested in whether this sum (Equation (\ref{eqn:a_n_limit})) converges, and if so, to what.
-One of the easiest convergence tests to apply is the ratio test \cite{wiki:ratio_test}.  
-The ratio test says that if $\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} < 1$ the series converges, if 
-$\lim\limits_{n \to \infty}  \tfrac{a_{n+1}}{a_n} > 1$ the series diverges, and if 
-$\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} = 1$ the test inconclusive (you need to use a different 
-convergence test).
+Next we're interested in whether this sum (Equation
+(\ref{eqn:a_n_limit})) converges, and if so, to what.  One of the
+easiest convergence tests to apply is the ratio test
+\cite{wiki:ratio_test}.  The ratio test says that if
+$\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} < 1$ the series
+converges, if $\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} >
+1$ the series diverges, and if $\lim\limits_{n \to \infty}
+\tfrac{a_{n+1}}{a_n} = 1$ the test inconclusive (you need to use
+a different convergence test).
 
 \setstretch{1.0}
 
@@ -156,7 +162,7 @@ convergence test).
 \noindent
 In this case
 
-{\large
+
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{a_{n+1}}{a_n}
@@ -181,14 +187,14 @@ In this case
 &=& 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}}
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} x^a \cdot x^b = x^{a+b}
 \end{array}
-\end{equation*}}
+\end{equation*}
 
 
 \bigskip
 \noindent
 So in the limit we have
 
-{\large
+
 \begin{equation*}
 \begin{array}{llll}
 \lim\limits_{n \to \infty}\Bigg [  \dfrac{a_{n+1}}{a_n} \Bigg ]
@@ -215,12 +221,13 @@ So in the limit we have
 				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} c = c
 
 \end{array}
-\end{equation*}}
+\end{equation*}
 
 \bigskip
 \noindent
-Since $\lim\limits_{n \to \infty} 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}} \!\! = 1$
-the ratio test is unfortunately inconclusive.
+Since $\lim\limits_{n \to \infty} 2^{- {\left (\tfrac{1}{2}
+\right )}^{n+1}} \!\! = 1$ the ratio test is unfortunately
+inconclusive.
 
 %
 %	LaTeX source on overleaf.com
