@@ -69,51 +69,46 @@
 \begin{document}
 \maketitle
 
-\noindent
-How about:
+\section{Introduction}
+One way to think about this question is the following:
 
-\begin{center}
 \begin{equation*}
 \begin{array}{llll}
 S
 &=&  \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{define $S$} \\
-[13pt]
+[10pt]
 &\Rightarrow& S^2 = 2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{square both sides} \\
-[13pt]
+[10pt]
 &\Rightarrow& S^2 = 2 + S 
 				&\qquad \qquad \mathrel{\#} S = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  \\
-[13pt]
+[10pt]
 &\Rightarrow& S^2 -S - 2 = 0 
 				&\qquad \qquad \mathrel{\#} \text{collect terms} \\
-[13pt]
+[10pt]
 &\Rightarrow& (S - 2)(S + 1) = 0
 				&\qquad \qquad \mathrel{\#} \text{factor} \\
-[13pt]
+[10pt]
 &\Rightarrow& S \in \{2,-1\}
 				&\qquad \qquad \mathrel{\#} \text{solve for $S$} \\
-[13pt]
+[10pt]
 &\Rightarrow& S = 2
 				&\qquad \qquad \mathrel{\#} \text{positive root of $S$} 
 
 \end{array}
 \end{equation*}
-\end{center}
 
-
-\bigskip
 \noindent
 So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$
 
-\bigskip
-\noindent
+\section{Does This Series Really Converge?}
 Notice that the $n^{\text{th}}$ term in this series, $a_n$, is
 
 \bigskip
 {\large
 \begin{equation}
-a_n = \underbrace{\sqrt{\sqrt{\sqrt{\cdots \sqrt{2}}}}}_\text{$n$ times} = 2^{{(\frac{1}{2}{)}^n}}
+a_n = \underbrace{\sqrt{\sqrt{\sqrt{\cdots \sqrt{2}}}}}_\text{$n$ times} = 2^{{ \left (\tfrac{1}{2} \right )}^{n}}
 \label{eqn:a_n}
 \end{equation}}
 
@@ -121,18 +116,18 @@ a_n = \underbrace{\sqrt{\sqrt{\sqrt{\cdots \sqrt{2}}}}}_\text{$n$ times} = 2^{{(
 Using Equation (\ref{eqn:a_n}) we can rewrite the sum as
 
 \begin{equation}
-\sum\limits_{n=1}^{\infty} a_n = \sum\limits_{n=1}^{\infty} 2^{{(\frac{1}{2}{)}^n}} = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
+\sum\limits_{n=1}^{\infty} a_n = \sum\limits_{n=1}^{\infty} 2^{{(\tfrac{1}{2}{)}^n}} = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}
 \label{eqn:a_n_limit}
 \end{equation}
 
-\bigskip
+\subsection{Convergence: Applying the Ratio Test}
 \setstretch{1.35}
 \noindent
 Next we're interested in whether this sum (Equation (\ref{eqn:a_n_limit})) converges, and if so, to what.
 One of the easiest convergence tests to apply is the ratio test \cite{wiki:ratio_test}.  
-The ratio test says that if $\lim\limits_{n \to \infty} \frac{a_{n+1}}{a_n} < 1$ the series converges, if 
-$\lim\limits_{n \to \infty}  \frac{a_{n+1}}{a_n} > 1$ the series diverges, and if 
-$\lim\limits_{n \to \infty} \frac{a_{n+1}}{a_n} = 1$ the test inconclusive (you need to use a different 
+The ratio test says that if $\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} < 1$ the series converges, if 
+$\lim\limits_{n \to \infty}  \tfrac{a_{n+1}}{a_n} > 1$ the series diverges, and if 
+$\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} = 1$ the test inconclusive (you need to use a different 
 convergence test).
 
 \setstretch{1.0}
@@ -145,25 +140,25 @@ In this case
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{a_{n+1}}{a_n}
-&=&  \dfrac{2^{{ \left ( \frac{1}{2} \right ) }^{n+1}}} {2^{{ \left (\frac{1}{2} \right )}^n}} 
-				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} a_n = 2^{{\left (\frac{1}{2} \right )}^n} \\
+&=&  \dfrac{2^{{ \left ( \tfrac{1}{2} \right ) }^{n+1}}} {2^{{ \left (\tfrac{1}{2} \right )}^n}} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} a_n = 2^{{\left (\tfrac{1}{2} \right )}^n} \\
 [15pt]
-&=& 2^{\left [{ \left (\frac{1}{2} \right )}^{n+1} - \, {\left (\frac{1}{2} \right )}^n \right ] }
+&=& 2^{\left [{ \left (\tfrac{1}{2} \right )}^{n+1} - \, {\left (\tfrac{1}{2} \right )}^n \right ] }
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simplify: $\dfrac{x^a}{x^b} = x^{a-b}$} \\
-[10pt]
-&=& 2^{\left [ { \left (\frac{1}{2} \right )}^{n} \cdot \,  {\left (\frac{1}{2} \right )}^{1}  -\, {{ \left ( \frac{1}{2} \right )}^n}\right ] }
-				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} {\left (\frac{1}{2} \right )}^{n+1} = {\left (\frac{1}{2}\right )}^{n} \cdot {\left (\frac{1}{2}\right )}^{1}  \\
-[12pt]
-&=& 2^{\left [ {\left (\frac{1}{2} \right )}^{n} \cdot \,  \left ( \frac{1}{2} -1 \right ) \right ]} 
-				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out ${\left (\frac{1}{2} \right )}^n$} \\
-[12pt]
-&=& 2^{\left [ { \left (\frac{1}{2} \right )}^{n} \cdot \, \left ( - \frac{1}{2} \right ) \right ]} 
-				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \frac{1}{2} - 1 = - \frac{1}{2}  \\
-[12pt]
-&=& 2^{- \left [ { \left (\frac{1}{2} \right )}^{n} \cdot  \, \left (\frac{1}{2} \right ) \right ]} 
+[5pt]
+&=& 2^{\left [ { \left (\tfrac{1}{2} \right )}^{n} \cdot \,  {\left (\tfrac{1}{2} \right )}^{1}  -\, {{ \left ( \tfrac{1}{2} \right )}^n}\right ] }
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} {\left (\tfrac{1}{2} \right )}^{n+1} = {\left (\tfrac{1}{2}\right )}^{n} \cdot {\left (\tfrac{1}{2}\right )}^{1}  \\
+[5pt]
+&=& 2^{\left [ {\left (\tfrac{1}{2} \right )}^{n} \cdot \,  \left ( \tfrac{1}{2} -1 \right ) \right ]} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out ${\left (\tfrac{1}{2} \right )}^n$} \\
+[5pt]
+&=& 2^{\left [ { \left (\tfrac{1}{2} \right )}^{n} \cdot \, \left ( - \tfrac{1}{2} \right ) \right ]} 
+				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \tfrac{1}{2} - 1 = - \tfrac{1}{2}  \\
+[5pt]
+&=& 2^{- \left [ { \left (\tfrac{1}{2} \right )}^{n} \cdot  \, \left (\tfrac{1}{2} \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simpify}  \\
-[12pt]
-&=& 2^{- {\left (\frac{1}{2} \right )}^{n+1}}
+[5pt]
+&=& 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}}
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} x^a \cdot x^b = x^{a+b}
 \end{array}
 \end{equation*}}
@@ -171,29 +166,29 @@ In this case
 
 \bigskip
 \noindent
-So in the limit
+So in the limit we have
 
 {\large
 \begin{equation*}
 \begin{array}{llll}
 \lim\limits_{n \to \infty}\Bigg [  \dfrac{a_{n+1}}{a_n} \Bigg ]
 &=&
-\lim\limits_{n \to \infty} \Bigg [  \dfrac{2^{{ \left ( \frac{1}{2} \right ) }^{(n+1)}}} {2^{{ \left (\frac{1}{2} \right )}^n}}  \Bigg ]
-				&\qquad \qquad \quad \mathrel{\#} a_n = 2^{{(\frac{1}{2}{)}^n}} \\
-[15pt]
-&=&  \lim\limits_{n \to \infty} 2^{- {\left (\frac{1}{2} \right )}^{n+1}} 
+\lim\limits_{n \to \infty} \Bigg [  \dfrac{2^{{ \left ( \tfrac{1}{2} \right ) }^{(n+1)}}} {2^{{ \left (\tfrac{1}{2} \right )}^n}}  \Bigg ]
+				&\qquad \qquad \quad \mathrel{\#} a_n = 2^{{(\tfrac{1}{2}{)}^n}} \\
+[18pt]
+&=&  \lim\limits_{n \to \infty} 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}} 
 				&\qquad \qquad \quad \mathrel{\#} \text{see above} \\
 [15pt]
-&=&  \lim\limits_{n \to \infty}  2^{- {\left ( \frac{1}{2^{n+1}} \right )}} 
+&=&  \lim\limits_{n \to \infty}  2^{- {\left ( \tfrac{1}{2^{n+1}} \right )}} 
 				&\qquad \qquad \quad \mathrel{\#} \text{simplify} \\
-[15pt]
-&=&  \lim\limits_{n \to \infty}  \frac{1}{2^{\left ( \frac{1}{2^{n+1}} \right ) }} 
-				&\qquad \qquad \quad \mathrel{\#} x^{-a} = \frac{1}{x^a}  \\
-[15pt]
-&=&  \lim\limits_{n \to \infty}  \frac{1}{2^0}
-				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} \frac{1}{2^{n+1}} = 0 \\
-[15pt]
-&=&  \lim\limits_{n \to \infty}  \frac{1}{1}
+[18pt]
+&=&  \lim\limits_{n \to \infty}  \tfrac{1}{2^{\left ( \tfrac{1}{2^{n+1}} \right ) }} 
+				&\qquad \qquad \quad \mathrel{\#} x^{-a} = \tfrac{1}{x^a}  \\
+[18pt]
+&=&  \lim\limits_{n \to \infty}  \tfrac{1}{2^0}
+				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} \tfrac{1}{2^{n+1}} = 0 \\
+[18pt]
+&=&  \lim\limits_{n \to \infty}  \tfrac{1}{1}
 				&\qquad \qquad \quad \mathrel{\#} 2^0 = 1 \\
 [15pt]
 &=& 1
@@ -202,8 +197,9 @@ So in the limit
 \end{array}
 \end{equation*}}
 
+\bigskip
 \noindent
-Since $\lim\limits_{n \to \infty} 2^{- {\left (\frac{1}{2} \right )}^{n+1}} \!\! = 1$
+Since $\lim\limits_{n \to \infty} 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}} \!\! = 1$
 the ratio test is inconclusive.
 
 %

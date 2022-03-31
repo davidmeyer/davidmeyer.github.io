@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 MAR 2022 07:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 MAR 2022 07:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1119,41 +1119,42 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 (./continued_root_2.bbl) [3] (./continued_root_2.aux)
 Package rerunfilecheck Info: File `continued_root_2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 30BA53266A2AD676DE12B70DC547E22D;572.
  ) 
 Here is how much of TeX's memory you used:
- 36102 strings out of 478994
- 832168 string characters out of 5858184
- 1276110 words of memory out of 5000000
- 52952 multiletter control sequences out of 15000+600000
- 418571 words of font info for 91 fonts, out of 8000000 for 9000
+ 36112 strings out of 478994
+ 832267 string characters out of 5858184
+ 1277110 words of memory out of 5000000
+ 52959 multiletter control sequences out of 15000+600000
+ 418878 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,89p,732b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,13n,89p,732b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on continued_root_2.pdf (3 pages, 198153 bytes).
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on continued_root_2.pdf (3 pages, 210017 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 12 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
