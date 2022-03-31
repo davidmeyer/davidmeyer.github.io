@@ -101,6 +101,7 @@ S
 \end{equation*}
 \end{center}
 
+
 \bigskip
 \noindent
 So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$
@@ -140,39 +141,39 @@ convergence test).
 \noindent
 In this case
 
-
+{\large
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{a_{n+1}}{a_n}
 &=&  \dfrac{2^{{ \left ( \frac{1}{2} \right ) }^{n+1}}} {2^{{ \left (\frac{1}{2} \right )}^n}} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} a_n = 2^{{\left (\frac{1}{2} \right )}^n} \\
-[12pt]
+[15pt]
 &=& 2^{\left [{ \left (\frac{1}{2} \right )}^{n+1} - \, {\left (\frac{1}{2} \right )}^n \right ] }
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simplify: $\dfrac{x^a}{x^b} = x^{a-b}$} \\
-[8pt]
+[10pt]
 &=& 2^{\left [ { \left (\frac{1}{2} \right )}^{n} \cdot \,  {\left (\frac{1}{2} \right )}^{1}  -\, {{ \left ( \frac{1}{2} \right )}^n}\right ] }
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} {\left (\frac{1}{2} \right )}^{n+1} = {\left (\frac{1}{2}\right )}^{n} \cdot {\left (\frac{1}{2}\right )}^{1}  \\
-[10pt]
+[12pt]
 &=& 2^{\left [ {\left (\frac{1}{2} \right )}^{n} \cdot \,  \left ( \frac{1}{2} -1 \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out ${\left (\frac{1}{2} \right )}^n$} \\
-[10pt]
+[12pt]
 &=& 2^{\left [ { \left (\frac{1}{2} \right )}^{n} \cdot \, \left ( - \frac{1}{2} \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \frac{1}{2} - 1 = - \frac{1}{2}  \\
-[10pt]
+[12pt]
 &=& 2^{- \left [ { \left (\frac{1}{2} \right )}^{n} \cdot  \, \left (\frac{1}{2} \right ) \right ]} 
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} \text{simpify}  \\
-[10pt]
+[12pt]
 &=& 2^{- {\left (\frac{1}{2} \right )}^{n+1}}
 				&\quad \qquad \qquad \qquad \qquad \mathrel{\#} x^a \cdot x^b = x^{a+b}
 \end{array}
-\end{equation*}
+\end{equation*}}
 
 
 \bigskip
 \noindent
 So in the limit
 
-
+{\large
 \begin{equation*}
 \begin{array}{llll}
 \lim\limits_{n \to \infty}\Bigg [  \dfrac{a_{n+1}}{a_n} \Bigg ]
@@ -199,7 +200,7 @@ So in the limit
 				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} c = c
 
 \end{array}
-\end{equation*}
+\end{equation*}}
 
 \noindent
 Since $\lim\limits_{n \to \infty} 2^{- {\left (\frac{1}{2} \right )}^{n+1}} \!\! = 1$

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 MAR 2022 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 MAR 2022 06:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1124,15 +1124,15 @@ Package rerunfilecheck Info: File `continued_root_2.out' has not changed.
 Here is how much of TeX's memory you used:
  36102 strings out of 478994
  832168 string characters out of 5858184
- 1276111 words of memory out of 5000000
+ 1276110 words of memory out of 5000000
  52952 multiletter control sequences out of 15000+600000
  418571 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,89p,732b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,12n,89p,732b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pf
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
@@ -1148,11 +1148,12 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on continued_root_2.pdf (3 pages, 188894 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on continued_root_2.pdf (3 pages, 198371 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
