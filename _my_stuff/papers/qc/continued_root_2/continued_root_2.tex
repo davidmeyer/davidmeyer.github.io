@@ -72,7 +72,6 @@
 \section{Introduction}
 One way to think about this question is the following:
 
-\bigskip
 \begin{equation*}
 \begin{array}{llll}
 S
@@ -81,37 +80,45 @@ S
 [10pt]
 &\Rightarrow& S^2 = 2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
 				&\qquad \qquad \mathrel{\#} \text{square both sides} \\
-[10pt]
 &\Rightarrow& S^2 = 2 + S 
 				&\qquad \qquad \mathrel{\#} S = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  \\
-[10pt]
+[5pt]
 &\Rightarrow& S^2 -S - 2 = 0 
 				&\qquad \qquad \mathrel{\#} \text{collect terms} \\
-[10pt]
+[5pt]
 &\Rightarrow& (S - 2)(S + 1) = 0
 				&\qquad \qquad \mathrel{\#} \text{factor} \\
-[10pt]
+[5pt]
 &\Rightarrow& S \in \{2,-1\}
 				&\qquad \qquad \mathrel{\#} \text{solve for $S$} \\
-[10pt]
+[5pt]
 &\Rightarrow& S = 2
 				&\qquad \qquad \mathrel{\#} \text{positive root of $S$} 
 
 \end{array}
 \end{equation*}
 
-\bigskip
+\smallskip
 \noindent
 So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$
 
-\bigskip
+
 \section{Does This Series Really Converge?}
-It's worth asking whether a series actually converges (and to what)
-since using an algebraic variable (in this case $S$) to represent an 
-infinite series can go badly wrong \cite{can_you_spot_the_error}.
+It is  worth asking whether a series converges (and to what)
+since using an algebraic variable to represent an 
+infinite sum, in this case $S$, can go badly 
+wrong \cite{can_you_spot_the_error}. This is because an 
+infinite sum is really a limit of partial sums
 
+\begin{equation*}
+\sum\limits_{i=1}^{\infty }a_{i} = \lim _{n\to \infty }\sum _{i=1}^{n}a_{i}
+\end{equation*}
 
 \bigskip
+\noindent
+and so may behave differently than a finite sum.
+
+
 \noindent
 So the first thing to notice here is that the $n^{\text{th}}$ term in this series, $a_n$, is
 
