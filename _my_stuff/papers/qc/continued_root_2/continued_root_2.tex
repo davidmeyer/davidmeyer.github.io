@@ -146,15 +146,14 @@ Using Equation (\ref{eqn:a_n}) we can rewrite $\sqrt{2 + \sqrt{2
 \subsection{Applying the Ratio Test}
 \setstretch{1.35}
 \noindent
-Next we're interested in whether this sum (Equation
-(\ref{eqn:a_n_limit})) converges, and if so, to what.  One of the
-easiest convergence tests to apply is the ratio test
-\cite{wiki:ratio_test}.  The ratio test says that if
+We are interested in whether sum in Equation
+(\ref{eqn:a_n_limit})) converges and if so, to what.  One of the
+easiest ways to test for convergence tests is the ratio test
+\cite{wiki:ratio_test}, which says that if
 $\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} < 1$ the series
-converges, if $\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} >
-1$ the series diverges, and if $\lim\limits_{n \to \infty}
-\tfrac{a_{n+1}}{a_n} = 1$ the test inconclusive (you need to use
-a different convergence test).
+converges, if $\lim\limits_{n \to \infty} \tfrac{a_{n+1}}{a_n} > 1$ 
+the series diverges and if $\lim\limits_{n \to \infty}
+\tfrac{a_{n+1}}{a_n} = 1$ the test inconclusive.
 
 \setstretch{1.0}
 
@@ -192,30 +191,32 @@ In this case
 
 \bigskip
 \noindent
-So in the limit we have
+So in the limit we have 
 
 
 \begin{equation*}
 \begin{array}{llll}
-\lim\limits_{n \to \infty}\Bigg [  \dfrac{a_{n+1}}{a_n} \Bigg ]
+\lim\limits_{n \to \infty} \left [  \dfrac{a_{n+1}}{a_n} \right ]
 &=&
-\lim\limits_{n \to \infty} \Bigg [  \dfrac{2^{{ \left ( \tfrac{1}{2} \right ) }^{(n+1)}}} {2^{{ \left (\tfrac{1}{2} \right )}^n}}  \Bigg ]
-				&\qquad \qquad \quad \mathrel{\#} a_n = 2^{{(\tfrac{1}{2}{)}^n}} \\
-[18pt]
+\lim\limits_{n \to \infty} \left [  \dfrac{2^{{ \left ( \tfrac{1}{2} \right ) }^{(n+1)}}} {2^{{ \left (\tfrac{1}{2} \right )}^n}}  \right ]
+				&\qquad \qquad \quad \mathrel{\#} a_n = 2^{{ \left (\tfrac{1}{2} \right )}^{n}} \\
+[12pt]
 &=&  \lim\limits_{n \to \infty} 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}} 
-				&\qquad \qquad \quad \mathrel{\#} \text{see above} \\
+				&\qquad \qquad \quad \mathrel{\#} \text{see above: 
+				$\dfrac{2^{{ \left ( \tfrac{1}{2} \right ) }^{n+1}}} {2^{{ \left (\tfrac{1}{2} \right )}^n}} 
+				= 2^{- {\left (\tfrac{1}{2} \right )}^{n+1}}$} \\
 [15pt]
 &=&  \lim\limits_{n \to \infty}  2^{- {\left ( \tfrac{1}{2^{n+1}} \right )}} 
 				&\qquad \qquad \quad \mathrel{\#} \text{simplify} \\
 [18pt]
-&=&  \lim\limits_{n \to \infty}  \tfrac{1}{2^{\left ( \tfrac{1}{2^{n+1}} \right ) }} 
+&=&  \lim\limits_{n \to \infty}  \dfrac{1}{2^{\left ( \tfrac{1}{2^{n+1}} \right ) }} 
 				&\qquad \qquad \quad \mathrel{\#} x^{-a} = \tfrac{1}{x^a}  \\
 [18pt]
-&=&  \lim\limits_{n \to \infty}  \tfrac{1}{2^0}
-				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} \tfrac{1}{2^{n+1}} = 0 \\
+&=&  \lim\limits_{n \to \infty}  \dfrac{1}{2^0}
+				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} \dfrac{1}{2^{n+1}} = 0 \\
 [18pt]
-&=&  \lim\limits_{n \to \infty}  \tfrac{1}{1}
-				&\qquad \qquad \quad \mathrel{\#} 2^0 = 1 \\
+&=&  \lim\limits_{n \to \infty} 1 
+				&\qquad \qquad \quad \mathrel{\#} 2^0 = 1 \text{ and }  \dfrac{1}{1} = 1  \\
 [15pt]
 &=& 1
 				&\qquad \qquad \quad \mathrel{\#} \lim\limits_{n \to \infty} c = c

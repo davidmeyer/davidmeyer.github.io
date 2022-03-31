@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 MAR 2022 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 MAR 2022 12:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1133,7 +1133,7 @@ Here is how much of TeX's memory you used:
  52942 multiletter control sequences out of 15000+600000
  414513 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,13n,89p,732b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,16n,89p,732b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1149,7 +1149,7 @@ texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on continued_root_2.pdf (3 pages, 158424 bytes).
+Output written on continued_root_2.pdf (3 pages, 157360 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
