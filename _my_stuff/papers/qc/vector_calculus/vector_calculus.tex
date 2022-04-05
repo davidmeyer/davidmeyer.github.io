@@ -766,7 +766,12 @@ determinant
 \bigskip
 \begin{equation*}
 \mathbf {a\times b} 
-= \begin{vmatrix}
+= \det \begin{bmatrix}
+    \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+    a_{1} & a_{2} &a_{3} \\
+    b_{1} & b_{2} &b_{3}
+  \end{bmatrix} \\
+  = \begin{vmatrix}
     \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
     a_{1} & a_{2} &a_{3} \\
     b_{1} & b_{2} &b_{3}
@@ -1122,6 +1127,12 @@ J(u,v,w) = \det
   \dfrac{\partial v}{\partial x}  & \dfrac{\partial v}{\partial y} & \dfrac{\partial v}{\partial z} \\[2ex]
   \dfrac{\partial w}{\partial x} & \dfrac{\partial w}{\partial y} & \dfrac{\partial w}{\partial z}
 \end{bmatrix}
+= 
+\begin{vmatrix}
+  \dfrac{\partial u}{\partial x}  & \dfrac{\partial u}{\partial y} & \dfrac{\partial u}{\partial z} \\[2ex] 
+  \dfrac{\partial v}{\partial x}  & \dfrac{\partial v}{\partial y} & \dfrac{\partial v}{\partial z} \\[2ex]
+  \dfrac{\partial w}{\partial x} & \dfrac{\partial w}{\partial y} & \dfrac{\partial w}{\partial z}
+\end{vmatrix}
 \end{equation*}
 
 \bigskip
@@ -1141,8 +1152,10 @@ or more explicitly
 \mathbf {J}
 = \det \begin{bmatrix} \dfrac {\partial \mathbf{f} }{\partial x_{1}} &\cdots & \dfrac {\partial \mathbf {f} }{\partial x_{n}} \end{bmatrix}
 = \det \begin{bmatrix} \nabla^{\mathrm {T} } f_{1}\\ \vdots \\ \nabla^{\mathrm {T} } f_{m} \end{bmatrix}
-= \det \begin{bmatrix} \dfrac {\partial f_{1}}{\partial x_{1}}  & \cdots & \dfrac {\partial f_{1}}{\partial x_{n}} \\ \vdots & \ddots &\vdots \\
+= \det \begin{bmatrix} \dfrac {\partial f_{1}}{\partial x_{1}}  & \cdots & \dfrac {\partial f_{1}}{\partial x_{n}} \\ \vdots & \ddots &\vdots 
                             \dfrac {\partial f_{m}}{\partial x_{1}} & \cdots & \dfrac {\partial f_{m}}{\partial x_{n}} \end{bmatrix}
+= \begin{vmatrix} \dfrac {\partial f_{1}}{\partial x_{1}}  & \cdots & \dfrac {\partial f_{1}}{\partial x_{n}} \\ \vdots & \ddots &\vdots 
+                            \dfrac {\partial f_{m}}{\partial x_{1}} & \cdots & \dfrac {\partial f_{m}}{\partial x_{n}} \end{vmatrix}
 \end{equation*}
 
 \bigskip
