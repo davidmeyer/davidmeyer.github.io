@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 MAR 2022 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 APR 2022 12:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1300,24 +1300,24 @@ Package: esvect
 (./vector_calculus.aux)
 \openout1 = `vector_calculus.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1378,18 +1378,18 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-LaTeX Info: Redefining \celsius on input line 88.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 88.
+LaTeX Info: Redefining \celsius on input line 89.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 89.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 88.
-Package gensymb Info: Using \upOmega for \ohm on input line 88.
+LaTeX Info: Redefining \ohm on input line 89.
+Package gensymb Info: Using \upOmega for \ohm on input line 89.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 88.
+Package hyperref Info: Link coloring OFF on input line 89.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1402,9 +1402,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count360
 )
-LaTeX Info: Redefining \ref on input line 88.
-LaTeX Info: Redefining \pageref on input line 88.
-LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
+LaTeX Info: Redefining \nameref on input line 89.
  (./vector_calculus.out) (./vector_calculus.out)
 \@outlinefile=\write4
 \openout4 = `vector_calculus.out'.
@@ -1420,26 +1420,26 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 88
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 89
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-88.
+89.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1447,95 +1447,113 @@ File: uesvect.fd
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-<images/orthogonal_projection.png, id=152, 595.22375pt x 437.635pt>
+<images/orthogonal_projection.png, id=156, 595.22375pt x 437.635pt>
 File: images/orthogonal_projection.png Graphic file (type png)
 <use images/orthogonal_projection.png>
 Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
-47.
+48.
 (pdftex.def)             Requested size: 595.2223pt x 437.63393pt.
 
-Overfull \hbox (29.96326pt too wide) detected at line 615
+Overfull \hbox (29.96326pt too wide) detected at line 616
 []
  []
 
 [5 <./images/orthogonal_projection.png>]
-<images/cross_product_parallelogram.png, id=185, 1927.2pt x 1505.625pt>
+<images/cross_product_parallelogram.png, id=189, 1927.2pt x 1505.625pt>
 File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
-line 685.
+line 686.
 (pdftex.def)             Requested size: 1927.19533pt x 1505.62134pt.
-<images/right_hand_rule_cross_product.png, id=188, 1284.8pt x 1163.34625pt>
+<images/right_hand_rule_cross_product.png, id=192, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
-t line 722.
+t line 723.
 (pdftex.def)             Requested size: 1284.79688pt x 1163.34343pt.
  [6 <./images/cross_product_parallelogram.png>] [7 <./images/right_hand_rule_cr
-oss_product.png>] [8]
-<images/delta-r.png, id=241, 525.965pt x 470.75874pt>
+oss_product.png>] [8] [9]
+<images/r_theta_to_x_y.png, id=252, 774.895pt x 292.09125pt>
+File: images/r_theta_to_x_y.png Graphic file (type png)
+<use images/r_theta_to_x_y.png>
+Package pdftex.def Info: images/r_theta_to_x_y.png  used on input line 1162.
+(pdftex.def)             Requested size: 774.89311pt x 292.09052pt.
+ [10]
+<images/type_I_region.png, id=259, 1163.34625pt x 348.30125pt>
+File: images/type_I_region.png Graphic file (type png)
+<use images/type_I_region.png>
+Package pdftex.def Info: images/type_I_region.png  used on input line 1247.
+(pdftex.def)             Requested size: 1163.34343pt x 348.3004pt.
+ [11 <./images/r_theta_to_x_y.png>]
+<images/type_II_region.png, id=270, 904.37875pt x 406.51875pt>
+File: images/type_II_region.png Graphic file (type png)
+<use images/type_II_region.png>
+Package pdftex.def Info: images/type_II_region.png  used on input line 1268.
+(pdftex.def)             Requested size: 904.37656pt x 406.51775pt.
+ [12 <./images/type_I_region.png> <./images/type_II_region.png>]
+<images/delta-r.png, id=282, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1012.
+Package pdftex.def Info: images/delta-r.png  used on input line 1345.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (28.8371pt too wide) detected at line 1081
+Overfull \hbox (28.8371pt too wide) detected at line 1414
 []
  []
 
-[9 <./images/delta-r.png>] [10]
+[13 <./images/delta-r.png>] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1238.
+(hyperref)                removing `math shift' on input line 1571.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1238.
+(hyperref)                removing `math shift' on input line 1571.
 
-[11]
+[15]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1275.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1608.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1275.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1608.
 
 Missing character: There is no „ in font cmr10!
-<images/definite_integral.png, id=285, 752.8125pt x 661.47125pt>
+<images/definite_integral.png, id=326, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 1281.
+Package pdftex.def Info: images/definite_integral.png  used on input line 1614.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
-<images/line_integral.png, id=287, 730.73pt x 244.915pt>
+<images/line_integral.png, id=328, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 1302.
+Package pdftex.def Info: images/line_integral.png  used on input line 1635.
 (pdftex.def)             Requested size: 730.72821pt x 244.91438pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1307.
+(hyperref)                than one, level fixed on input line 1640.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1307.
+(hyperref)                removing `math shift' on input line 1640.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1307.
+(hyperref)                removing `math shift' on input line 1640.
 
-[12 <./images/definite_integral.png> <./images/line_integral.png>] [13]
+[16 <./images/definite_integral.png> <./images/line_integral.png>] [17]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=306, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=346, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1454.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 1787.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
-[14 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
-11-Joplin-MO-tornado.png>] [15] (./vector_calculus.bbl
+[18 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
+11-Joplin-MO-tornado.png>] [19] (./vector_calculus.bbl
 Underfull \hbox (badness 1107) in paragraph at lines 44--48
 []\OT1/cmr/m/n/10 Jean H. Gal-lier.  Vec-tor Norms and Ma-trix Norms.  []$\OT1/
 cmtt/m/n/10 https : / / www . cis . upenn . edu / []cis515 /
@@ -1553,18 +1571,18 @@ Underfull \hbox (badness 1655) in paragraph at lines 56--62
 ttps : / / www . nist . gov / disaster-[]failure-[]studies /
  []
 
-[16]) [17] (./vector_calculus.aux)
+[20]) [21] (./vector_calculus.aux)
 Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
-(rerunfilecheck)             Checksum: 31B1EC392E2827437365DE2CAF805F01;2752.
+(rerunfilecheck)             Checksum: 7FF1A0D6B973FEE982A1DB3FAD6C5FA3;2873.
  ) 
 Here is how much of TeX's memory you used:
- 53735 strings out of 478994
- 1345680 string characters out of 5858184
- 2003114 words of memory out of 5000000
- 70325 multiletter control sequences out of 15000+600000
+ 53831 strings out of 478994
+ 1347282 string characters out of 5858184
+ 2004435 words of memory out of 5000000
+ 70404 multiletter control sequences out of 15000+600000
  419507 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,22n,131p,733b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,22n,131p,733b,977s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1592,10 +1610,10 @@ t/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (17 pages, 1238193 bytes).
+Output written on vector_calculus.pdf (21 pages, 1832960 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 394 compressed objects within 4 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

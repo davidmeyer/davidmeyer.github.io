@@ -26,6 +26,7 @@
 \usepackage{gensymb}                                                    % get \degree
 \usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
+
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{subcaption}
@@ -990,6 +991,338 @@ or $\mathbf{r}^{\prime}(t)$.  Note also that by definition
 \dfrac{d\mathbf{r}}{dt} := \lim_{\Delta t \to 0}			
 			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}
 \end{equation*}
+
+\subsection{The Jacobian}
+It is common to change the variable(s) of integration, the main goal being to 
+rewrite a complicated integrand into a simpler equivalent form. However, in 
+doing so, the underlying geometry of the problem may be altered. This was seen 
+often in single-variable integrals:
+
+\begin{example} Evaluate 
+\begin{equation}
+\int_{2}^{4} (3x + 1)^3 dx
+\label{eqn:example1}
+\end{equation}
+
+\bigskip
+\noindent
+{\bf Solution}: We can rewrite the integral in Equation (\ref{eqn:example1}) 
+by letting $u = 3x + 1$ so that $du = 3 \, dx$. Notice that the expression 
+$du = 3 \, dx \Rightarrow dx = \frac{1}{3} \, du$ and so  the bounds of integration
+in the $x$-$y$ plane, namely $2 \leq x \leq 4$ are transformed using 
+$u = 3x + 1$. So if $x = 2$ then $u = 3(2) + 1 = 7$ and
+when $x - 4$ we have $u = 3(4) + 1 = 13$. So the bounds of integration
+with respect to $u$ are $7 \leq u \leq 13$. Using this substitution
+we see that
+
+\begin{equation*}
+\int_{2}^{4} \! \! (3x + 1)^3 dx = \int_{7}^{13} \!\!\!  u^3 \left (\frac{1}{3} \, du \right )= \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du
+\end{equation*}
+
+\bigskip
+\setstretch{1.75}
+\noindent
+Note that integrals ${\displaystyle \int_{2}^{4} (3x + 1)^3 dx}$ and 
+${\displaystyle \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du}$ represent the 
+same problem. Specifically
+
+\setstretch{1.0}
+
+\bigskip
+\begin{equation*}
+\int_{2}^{4} \! \! (3x + 1)^3 dx  
+=  \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left ( (3x+1)^4 \right ) \Bigg   |_{2}^{4} 
+= \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left  ( 13^4 - 7^4 \right ) 
+=  \left ( \frac{1}{12} \right ) 26160 
+=  2180
+\end{equation*}
+
+\bigskip
+\noindent
+and 
+\begin{equation*}
+\frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du  
+=  \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left ( u^4 \right )  \Bigg   |_{7}^{13} 
+= \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left (13^4 - 7^4 \right )  
+=  \left ( \frac{1}{12} \right ) 26160 
+= 2180
+\end{equation*}
+
+\bigskip
+\noindent
+The $\frac{1}{3}$  that we see in the expression 
+for $dx$, namely $dx = \frac{1}{3} \, du$ is called the 
+(one dimensional) \emph{Jacobian}. 
+
+
+\bigskip
+\noindent
+Note also that the integral in variable $x$ is over an interval of length 2 units, while the 
+integral in $u$ is over an interval of length 6 units. In a very rough sense then the variable 
+$u$ covers its interval of integration three times “as fast” as $x$. In particular, since 
+$u$ and $x$ are linearly related the leading $\frac{1}{3}$ adjusts for the change in 
+the underlying geometry of the intervals.
+\end{example}
+
+\bigskip
+\noindent
+For double integrals in $\mathbb{R}^2$ we assume that a region of integration defined in terms of 
+variables $x$ and $y$ are substituted for new variables $u$ and $v$ through two functions:
+
+\begin{equation*}
+\begin{array}{llll}
+u = f_1(x,y) \\
+[5pt]
+v = f_2(x,y)
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent 
+Note that the pair of equations are written so that $u$ and $v$ are written in terms of $x$ and $y$. 
+This is called a \emph{transformation}. Such a “variable change” should also be reversible. That is, 
+we should be able to, through algebraic means, isolate $x$ and $y$ in terms of $u$ and $v$:
+
+\begin{equation*}
+\begin{array}{llll}
+x = g_1(u,v)  \\
+[5pt]
+y = g_2(u,v)
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+In this case the Jacobian is defined as the determinant of the $2 \times 2$ matrix:
+
+\bigskip
+\begin{equation*}
+J(u,v)
+ = \det
+\begin{bmatrix}
+  \dfrac{\partial g_1}{\partial u} & \dfrac{\partial g_1}{\partial v} \\[2ex]
+  \dfrac{\partial g_2}{\partial u} & \dfrac{\partial g_2}{\partial v} 
+\end{bmatrix}
+= \det
+\begin{bmatrix}
+  \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[2ex]
+  \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} 
+\end{bmatrix}
+\end{equation*}
+
+\bigskip
+\noindent
+In 3 dimensions the Jacobian is
+
+\bigskip
+\begin{equation*}
+J(u,v,w) = \det
+\begin{bmatrix}
+  \dfrac{\partial u}{\partial x}  & \dfrac{\partial u}{\partial y} & \dfrac{\partial u}{\partial z} \\[2ex] 
+  \dfrac{\partial v}{\partial x}  & \dfrac{\partial v}{\partial y} & \dfrac{\partial v}{\partial z} \\[2ex]
+  \dfrac{\partial w}{\partial x} & \dfrac{\partial w}{\partial y} & \dfrac{\partial w}{\partial z}
+\end{bmatrix}
+\end{equation*}
+
+\bigskip
+\noindent
+In general suppose $f: \mathbb{R}^{n} \to \mathbb{R}^{m}$ is a function such that each of its first-order partial derivatives exist on $\mathbb{R}^{n}$ 
+This function takes a point $\mathbf{x} \in \mathbb{R}^{n}$ as input and produces the vector $f(x) \in \mathbb{R}^{m}$  as output. Then the Jacobian matrix 
+of $f$ is defined to be an $m \times n$ matrix $J$ whose $(i,j)^\text{th}$ entry is 
+
+\begin{equation*}
+\mathbf{J}_{ij} = \frac {\partial f_{i}}{\partial x_{j}}
+\end{equation*}
+
+\noindent
+or more explicitly
+
+\begin{equation*}
+\mathbf {J}
+= \det \begin{bmatrix} \dfrac {\partial \mathbf{f} }{\partial x_{1}} &\cdots & \dfrac {\partial \mathbf {f} }{\partial x_{n}} \end{bmatrix}
+= \det \begin{bmatrix} \nabla^{\mathrm {T} } f_{1}\\ \vdots \\ \nabla^{\mathrm {T} } f_{m} \end{bmatrix}
+= \det \begin{bmatrix} \dfrac {\partial f_{1}}{\partial x_{1}}  & \cdots & \dfrac {\partial f_{1}}{\partial x_{n}} \\ \vdots & \ddots &\vdots \\
+                            \dfrac {\partial f_{m}}{\partial x_{1}} & \cdots & \dfrac {\partial f_{m}}{\partial x_{n}} \end{bmatrix}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\nabla^{\mathrm {T} }f_{i}$ is the transpose (row vector) of the gradient of the $i^{\text{th}}$ component.
+
+
+\setstretch{2.0}
+\noindent
+I have also seen the Jacobian matrix, whose entries are functions of $\mathbf{x} = (x_1,x_2,\hdots, x_n)$, denoted 
+in various ways including
+ ${\displaystyle \nabla \mathbf {f}}$ and ${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial (x_{1},..,x_{n})}}}$.
+
+\setstretch{1.0}
+
+\begin{figure}[H]
+\center{\includegraphics[cfbox=black,scale=0.40] {images/r_theta_to_x_y.png}}
+\caption{Transforming the $r\theta$-plane to the $xy$ plane}
+\label{fig:r_theta_to_x_y}
+\end{figure}
+
+\bigskip
+\begin{example} Find the Jacobian for the transformation
+\begin{equation*}
+\begin{array}{llll}
+x = r \cos \theta \\
+[2pt]
+y = r \sin \theta
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+This scenario is shown in Figure \ref{fig:r_theta_to_x_y}.
+
+\bigskip
+\noindent
+{\bf Solution}: Here we have
+
+\begin{equation*}
+\begin{array}{llll}
+J(r,\theta)
+&=& \det
+\begin{bmatrix}
+  \dfrac{\partial x}{\partial r} & \dfrac{\partial x}{\partial \theta} \\[2ex]
+  \dfrac{\partial y}{\partial r} & \dfrac{\partial y}{\partial \theta} 
+\end{bmatrix} 
+			&\qquad \qquad \mathrel{\#} \text{definition of the Jacobian} \\
+[25pt]
+&=& \det
+\begin{bmatrix}
+  \cos \theta & - r \sin \theta \\
+  \sin \theta  & r \cos \theta
+\end{bmatrix}
+			&\qquad \qquad \mathrel{\#} x = r \cos \theta, y = r \sin \theta \\
+[10pt]
+&=& \cos (\theta) r \cos (\theta) - (-r \sin (\theta)) \sin (\theta) 
+			&\qquad \qquad \mathrel{\#} \det \begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad -bc \\
+[10pt]
+&=& r \cos^2 \theta + r \sin^2  \theta 
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[10pt]
+&=& r (\cos^2 \theta +  \sin^2 \theta)
+			&\qquad \qquad \mathrel{\#} \text{factor out $r$} \\
+[10pt]
+&=& r
+			&\qquad \qquad \mathrel{\#} \cos^2 \theta + \sin^2 \theta = 1
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+$J(r,\theta) = r$ is the common Jacobian when rectangular coordinates 
+$x$ and $y$ are rewritten in polar coordinates $r$ and $\theta$.
+\end{example}
+
+\bigskip
+\noindent
+For the next example we need the definition of
+Type I and Type II regions.
+
+\bigskip
+\begin{definition}
+{\bf Type I and Type II Regions}
+
+\bigskip
+\noindent
+A region $D$ in the xy-plane is of Type I if it lies between two vertical lines 
+and the graphs of two continuous functions  $g_1(x)$ and $g_2(x)$. That is 
+
+\bigskip
+\begin{equation*}
+D= \{(x, y) \, | \, a \leq x \leq b, \, g_1(x)  \leq y \leq  g_2(x)\}
+\end{equation*}
+
+\bigskip
+\noindent
+This situation shown in Figure \ref{fig:type_I_region}.
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[cfbox=black,scale=0.30] {images/type_I_region.png}}
+\caption{Type I Region}
+\label{fig:type_I_region}
+\end{figure}
+
+\bigskip
+\noindent
+Alternatively, a region $D$ in the xy-plane is of Type II if it lies between two horizontal 
+lines and the graphs of two continuous functions $h_1(y)$ and $h_2(y)$. That is
+
+\bigskip
+\begin{equation*}
+D = \{(x, y) \, | \, c \leq y \leq d, \, h_1(y)  \leq x \leq  h_2(y)\}
+\end{equation*}
+
+\bigskip
+\noindent
+This situation depicted in Figure \ref{fig:type_II_region}.
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[cfbox=black,scale=0.30] {images/type_II_region.png}}
+\caption{Type II Region}
+\label{fig:type_II_region}
+\end{figure}
+\end{definition}
+
+\bigskip
+\begin{example}
+\setstretch{1.5}
+Evaluate $\iint_{R} (x - 2y) dA$, where $R$ is a parallelogram 
+in the xy-plane with vertices (0,0), (4,1), (6,4) and (2,3).
+This parallelogram is shown in Figure \ref{fig:parallelogram_R}.
+
+\setstretch{1.0}
+
+
+%
+%	draw parallelogram for example
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.40 \textwidth}{!} {																		% resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)      at (0,0);																		% origin O
+       \coordinate(Xend) at (8,0);																		% x-axis out to 8
+       \coordinate(Yend) at (0,6);																		% y-axis up to 6
+       \coordinate(C1)    at (2,3);																		% parallelogram point
+       \coordinate(C2)    at (6,4);																		% parallelogram point
+       \coordinate(C3)    at (4,1); 																		% parallelogram point
+       \coordinate(C)      at (3,2);																		% center of parallelogram is at C
+%
+%	draw axes
+%
+     \draw[thick, -latex] (O) -- (Xend) coordinate [label={[right] $x$}];  											% x axis
+     \draw[thick, -latex] (O) -- (Yend) coordinate [label={[above] $y$}];  										% y axis
+%
+%	draw parallelogram
+%
+     \draw [fill=gray!30]  (O) -- (C1) -- (C2) -- (C3) -- cycle;
+     \node[color=black,font=\Large] at (C) {${\mathbf R}$};
+     \fill [black] (O)   circle (0.05)  node[below, left] {$O$};
+     \fill [black] (C1) circle (0.05)  node[yshift=1.0mm, xshift=-1.0mm, left] {$(2,3)$};
+     \fill [black] (C2) circle (0.05)  node[above] {$(6,4)$};
+     \fill [black] (C3) circle (0.05)  node[yshift=-1.00mm, xshift=1.0mm,right] {$(4,1)$};
+  \end{tikzpicture}
+  }	
+  \caption{Parallelogram in the xy-plane}
+  \label{fig:parallelogram_R}
+\end{figure}
+
+% \bigskip
+% \begin{figure}[H]
+% \center{\includegraphics[cfbox=black,scale=0.65] {images/parallelogram_R.png}}
+% \caption{Parallelogram in the xy-plane}
+% \label{fig:parallelogram_R}
+% \end{figure}
+
+\end{example}
 
 \section{Arc Length}
 \label{sec:arc_length}
