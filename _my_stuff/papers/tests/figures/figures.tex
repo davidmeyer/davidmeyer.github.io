@@ -93,8 +93,8 @@
 %     
 %	draw axes making sure axes are on top
 %
-       \draw[thick,latex-latex](Xstart) -- (Xend) coordinate [label={[right] {\Huge ${\mathbf{u}}$}}];	% u axis
-       \draw[thick,latex-latex](Ystart) -- (Yend) coordinate [label={[above] {\Huge ${\mathbf{v}}$}}];	% v axis
+       \draw[thick,latex-latex](Xstart) -- (Xend) node[right,scale=3] {${\mathbf{u}}$};				% u axis
+       \draw[thick,latex-latex](Ystart) -- (Yend) node[above,scale=3] {${\mathbf{v}}$};				% v axis
 %
 %	done
 %       
@@ -138,8 +138,8 @@
 %
 %	draw axes
 %
-     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] ${\mathbf{x}}$}];	% x axis
-     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] ${\mathbf{y}}$}];	% y axis
+     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] {\Large ${\mathbf{x}}$}}];	% x axis
+     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] {\Large ${\mathbf{y}}$}}];	% y axis
 %
 %	draw parallelogram
 %
@@ -184,8 +184,8 @@
 %
 %	draw axes
 %
-     \draw[thick, -latex] (O) -- (Xend) coordinate [label={[right] ${\mathbf{x}}$}];    % x axis
-     \draw[thick, -latex] (O) -- (Yend) coordinate [label={[above] ${\mathbf{y}}$}];    % y axis
+     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] {\Large ${\mathbf{x}}$}}];	% x axis
+     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] {\Large ${\mathbf{y}}$}}];	% y axis
 %
 %	draw parallelogram
 %

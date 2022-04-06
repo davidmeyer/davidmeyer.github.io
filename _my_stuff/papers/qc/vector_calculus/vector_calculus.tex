@@ -1336,8 +1336,8 @@ This parallelogram is shown in Figure \ref{fig:parallelogram_R}.
 {\bf Solution}: A sketch of this region (Figure \ref{fig:parallelogram_R})
 shows that it is a Type II region and would require three separate double 
 integrals in either the $dy$, $dx$ or $dx dy$ orderings of integration. 
-Instead, we observe that the region consists of two pairs of parallel sides, 
-so can we find equations for each of these sides as follows:
+Instead, note that the region consists of two pairs of parallel sides and 
+so we can find the equation for each side:
 
 
 \bigskip
@@ -1429,8 +1429,6 @@ This transformation transforms the region of integration $R$ in the $xy$-plane
 the $uv$-plane and so $u$ and $v$ have constant bounds. This rectangle is 
 shown Figure \ref{fig:transformation_uv_plane}.
 
-
-
 %
 %	draw the transformation: rectangle in the uv-plane
 %
@@ -1438,7 +1436,7 @@ shown Figure \ref{fig:transformation_uv_plane}.
 \centering
   \resizebox{0.35 \textwidth}{!} {                      % resize figure if you want
   \begin{tikzpicture}
-       \coordinate (O)          at (0,0);				% origin O
+       \coordinate (O)          at (0,0);				% origin O 
        \coordinate (Xstart)     at (-5,0);				% x-axis out to 8
        \coordinate (Xend)       at (14,0);              % x-axis out to 8
        \coordinate (Ystart)     at (0,-14);             % y-axis up to 6
@@ -1461,14 +1459,13 @@ shown Figure \ref{fig:transformation_uv_plane}.
 %     
 %	draw axes making sure axes are on top
 %
-       \draw[ultra thick,latex-latex](Xstart) -- (Xend) coordinate [label={[right] {\Huge ${\mathbf{u}}$}}];	% u axis
-       \draw[ultra thick,latex-latex](Ystart) -- (Yend) coordinate [label={[above] {\Huge ${\mathbf{v}}$}}];	% v axis
-     
+       \draw[very thick,-latex](Xstart) -- (Xend) node[right,scale=4.0] {${\mathbf{u}}$};				% u axis
+       \draw[very thick,-latex](Ystart) -- (Yend) node[above,scale=4.0] {${\mathbf{v}}$};				% v axis     
 %
 %	done
 %       
    \end{tikzpicture}
-  }																												% end \resizebox
+  }																										% end \resizebox
  \caption{The parallelogram in the $xy$-plane (Figure \ref{fig:parallelogram_R}) is a rectangle in the $uv$-plane}
  \label{fig:transformation_uv_plane}
 \end{figure}
