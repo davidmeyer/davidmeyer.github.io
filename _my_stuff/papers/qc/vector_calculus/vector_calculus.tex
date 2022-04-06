@@ -1295,26 +1295,26 @@ This parallelogram is shown in Figure \ref{fig:parallelogram_R}.
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.40 \textwidth}{!} {																		% resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {																% resize figure if you want
   \begin{tikzpicture}
-       \coordinate (O)      at (0,0);																		% origin O
-       \coordinate(Xend) at (8,0);																		% x-axis out to 8
-       \coordinate(Yend) at (0,6);																		% y-axis up to 6
-       \coordinate(C1)    at (2,3);																		% parallelogram point
-       \coordinate(C2)    at (6,4);																		% parallelogram point
-       \coordinate(C3)    at (4,1); 																		% parallelogram point
-       \coordinate(C)      at (3,2);																		% center of parallelogram is at C
+       \coordinate (O)		at (0,0);															% origin O
+       \coordinate(Xend)	at (8,0);															% x-axis out to 8
+       \coordinate(Yend)	at (0,6);															% y-axis up to 6
+       \coordinate(C1)		at (2,3);															% parallelogram point
+       \coordinate(C2)		at (6,4);															% parallelogram point
+       \coordinate(C3)		at (4,1); 															% parallelogram point
+       \coordinate(C)		at (3,2);															% center of parallelogram is at C
 %
 %	draw axes
 %
-     \draw[thick, -latex] (O) -- (Xend) coordinate [label={[right] $x$}];  											% x axis
-     \draw[thick, -latex] (O) -- (Yend) coordinate [label={[above] $y$}];  										% y axis
+     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] {\Large ${\mathbf{x}}$}}];	% x axis
+     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] {\Large ${\mathbf{y}}$}}];	% y axis
 %
 %	draw parallelogram
 %
      \draw [fill=gray!30]  (O) -- (C1) -- (C2) -- (C3) -- cycle;
      \node[color=black,font=\Large] at (C) {$R$};
-     \fill [black] (O)   circle (0.05)  node[below, left] {$O$};
+     \fill [black] (O)   circle (0.05)  node[below,left]{$(0,0)$};
      \fill [black] (C1) circle (0.05)  node[yshift=1.0mm, xshift=-1.0mm, left] {$(2,3)$};
      \fill [black] (C2) circle (0.05)  node[above] {$(6,4)$};
      \fill [black] (C3) circle (0.05)  node[yshift=-1.00mm, xshift=1.0mm,right] {$(4,1)$};
@@ -1330,6 +1330,150 @@ This parallelogram is shown in Figure \ref{fig:parallelogram_R}.
 % \caption{Parallelogram in the xy-plane}
 % \label{fig:parallelogram_R}
 % \end{figure}
+
+\bigskip
+\noindent
+{\bf Solution}: A sketch of this region (Figure \ref{fig:parallelogram_R})
+shows that it is a Type II region and would require three separate double 
+integrals in either the $dy$, $dx$ or $dx dy$ orderings of integration. 
+Instead, we observe that the region consists of two pairs of parallel sides, 
+so can we find equations for each of these sides as follows:
+
+
+\bigskip
+\begin{itemize}
+\item For the region from $(0,0)$ to $(4,1)$ we have $y = \frac{1}{4}x$ or $-x + 4y = 0$
+\item For the region from $(2,3)$ to $(6,4)$ we have $y = \frac{1}{4}x + \frac{5}{2}$ or $-x + 4y = 10$
+\item For the region from $(0,0)$ to $(2,3)$ we have $y = \frac{3}{2}x$ or $-\frac{3}{2}x$  or  $-3x + 2y = 0$
+\item For the region from $(4,1)$ to $(6,4)$ we have $y = \frac{3}{2}x - 5$ or $-3x + 2y = -10$
+\end{itemize}
+
+\bigskip
+\noindent
+This is shown in Figure \ref{fig:parallelogram_sides}.
+
+\bigskip
+%
+%	draw parallelogram for example
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.75 \textwidth}{!} {                      % resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)          at (0,0);               % origin O
+       \coordinate (Xend)       at (8,0);               % x-axis out to 8
+       \coordinate (Yend)       at (0,6);               % y-axis up to 6
+       \coordinate (C1)         at (2,3);               % parallelogram point
+       \coordinate (C2)         at (6,4);               % parallelogram point
+       \coordinate (C3)         at (4,1);               % parallelogram point
+       \coordinate (C)          at (3,2);               % center of parallelogram is at C
+%
+%	coordinates for equations
+%  
+       \coordinate (D1)         at (1.00, 1.50);
+       \coordinate (D2)         at (-2.00,3.00);
+       \coordinate (E1)         at (3.50, 3.35);
+       \coordinate (E2)         at (4.00, 5.00);
+       \coordinate (F1)         at (4.85, 2.25);
+       \coordinate (F2)         at (7.00, 2.25);
+       \coordinate (G1)         at (2.50, 0.60);
+       \coordinate (G2)         at (2.50,-1.00);
+%
+%	draw axes
+%
+     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] {\Large ${\mathbf{x}}$}}];	% x axis
+     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] {\Large ${\mathbf{y}}$}}];	% y axis
+%
+%	draw parallelogram
+%
+     \draw [very thick,fill=gray!30]  (O) -- (C1) -- (C2) -- (C3) -- cycle;
+     \node[color=black,font=\Large] at (C) {${\mathbf{R}}$};
+     \fill [black] (O)  circle (0.05) node[below,left] {$(0,0)$};
+     \fill [black] (C1) circle (0.05) node[left,yshift=1.0mm,xshift=-1.0mm] {$(2,3)$};
+     \fill [black] (C2) circle (0.05) node[above] {$(6,4)$};
+     \fill [black] (C3) circle (0.05) node[right,yshift=-1.00mm,xshift=1.0mm] {$(4,1)$};
+%
+%	draw equations of each size
+%       
+     \draw [thick,latex-] (D1) -- (D2) coordinate [label={[font=\large,right,xshift=-2.0cm,yshift=0.50cm] 
+                ${\mathbf {-3x + 2y = 0}}$}];
+     \draw [thick,latex-] (E1) -- (E2) coordinate [label={[font=\large,right,xshift=-1.75cm,yshift=0.5cm] 
+                ${\mathbf {-x + 4y = 10}}$}];
+     \draw [thick,latex-] (F1) -- (F2) coordinate [label={[font=\large,right]
+                ${\mathbf {-3x + 2y = -10}}$}];
+     \draw [thick,latex-] (G1) -- (G2) coordinate [label={[font=\large,below,yshift=-0.25cm] 
+                ${\mathbf {-x + 4y = 0}}$}];
+  \end{tikzpicture}
+  }	
+  \caption{Equations of the Sides of the Parallelogram}
+  \label{fig:parallelogram_sides}
+\end{figure}
+
+\bigskip
+\noindent
+Now we can define a transformation from $x$ and $y$ into the new variables $u$ and $v$
+by the following equations:
+
+\bigskip
+\begin{equation*}
+\begin{array}{llll}
+&u = -x + 4y && \text{so that $0 \leq u \leq 10$} \\
+&v = -3x + 2y && \text{so that $-10 \leq v \leq 0$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+This transformation transforms the region of integration $R$ in the $xy$-plane 
+(a parallelogram, Figure \ref{fig:parallelogram_R})) into a rectangle in 
+the $uv$-plane and so $u$ and $v$ have constant bounds. This rectangle is 
+shown Figure \ref{fig:transformation_uv_plane}.
+
+
+
+%
+%	draw the transformation: rectangle in the uv-plane
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.35 \textwidth}{!} {                      % resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)          at (0,0);				% origin O
+       \coordinate (Xstart)     at (-5,0);				% x-axis out to 8
+       \coordinate (Xend)       at (14,0);              % x-axis out to 8
+       \coordinate (Ystart)     at (0,-14);             % y-axis up to 6
+       \coordinate (Yend)       at (0, 14);             % y-axis up to 6
+       \coordinate (xy1)        at (0,-10);             % parallelogram point
+       \coordinate (xy2)        at (0,10);              % parallelogram point
+       \coordinate (xy3)        at (10,10);             % parallelogram point
+       \coordinate (xy4)        at (10,-10);            % parallelogram point
+       \coordinate (xy5)        at (10,0);				% parallelogram point
+%
+%	draw parallelogram
+%
+       \draw [ultra thick,fill=gray!30] (xy1) -- (xy2) -- (xy3) -- (xy4) -- cycle;
+       \fill [black] (O)   circle (0.10) node[font=\huge,above,left,xshift=-0.25cm,yshift=0.5cm]  {$(0,0)$};
+       \fill [black] (xy1) circle (0.10) node[font=\huge,left,xshift=-0.25cm]                     {$(0,-10)$};
+       \fill [black] (xy2) circle (0.10) node[font=\huge,left,xshift=-0.25cm]                     {$(0,10)$};
+       \fill [black] (xy3) circle (0.10) node[font=\huge,right,xshift=0.25cm]                     {$(10,10)$};
+       \fill [black] (xy4) circle (0.10) node[font=\huge,right,xshift=0.25cm]                     {$(10,-10)$};
+       \fill [black] (xy5) circle (0.10) node[font=\huge,above,right,xshift=0.25cm,yshift=0.50cm] {$(10,0)$};
+%     
+%	draw axes making sure axes are on top
+%
+       \draw[ultra thick,latex-latex](Xstart) -- (Xend) coordinate [label={[right] {\Huge ${\mathbf{u}}$}}];	% u axis
+       \draw[ultra thick,latex-latex](Ystart) -- (Yend) coordinate [label={[above] {\Huge ${\mathbf{v}}$}}];	% v axis
+     
+%
+%	done
+%       
+   \end{tikzpicture}
+  }																												% end \resizebox
+ \caption{The parallelogram in the $xy$-plane (Figure \ref{fig:parallelogram_R}) is a rectangle in the $uv$-plane}
+ \label{fig:transformation_uv_plane}
+\end{figure}
+
+
 
 \end{example}
 
