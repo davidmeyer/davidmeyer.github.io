@@ -90,11 +90,23 @@
        \fill [black] (xy3) circle (0.10) node[font=\huge,right,xshift=0.25cm]                     {$(10,10)$};
        \fill [black] (xy4) circle (0.10) node[font=\huge,right,xshift=0.25cm]                     {$(10,-10)$};
        \fill [black] (xy5) circle (0.10) node[font=\huge,above,right,xshift=0.25cm,yshift=0.50cm] {$(10,0)$};
-%     
+%    r
 %	draw axes making sure axes are on top
 %
        \draw[thick,latex-latex](Xstart) -- (Xend) node[right,scale=3] {${\mathbf{u}}$};				% u axis
        \draw[thick,latex-latex](Ystart) -- (Yend) node[above,scale=3] {${\mathbf{v}}$};				% v axis
+       
+       
+      \node[ultra thick,draw,rectangle,scale=3] at (15,15) {$\begin{array}{rrlrr}
+                                                                0 \!\!\!  &\leq&  u &\leq& \!\!\! 10 \\
+                                                               -10 \!\!\! &\leq&  v &\leq& 0
+                                                             \end{array}$};
+                                                                
+
+      % \node[ultra thick,draw,rectangle,scale=3] at (15,15) {${0 \leq u \leq 10}$};
+      % \node[ultra thick,draw,rectangle,scale=3] at (15,20) {${-10 \leq v \leq 0}$};
+
+
 %
 %	done
 %       
