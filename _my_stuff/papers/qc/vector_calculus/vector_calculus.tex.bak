@@ -1632,11 +1632,16 @@ we get
 \noindent
 That the solution to this integral is negative is troubling.
 Perhaps I made some mistake somewhere. But since this integral
-can be interpreted as the volume under a surface, I imagine that
+can be interpreted an volume, I imagine that
 it should be positive. There can be an issue involving the sign
-of the Jacobian (see Remark \ref{remark:minus_jacobian}) but in
-this case the Jacobian was positive (see Equation
-(\ref{eqn:jacobian})).
+of the Jacobian (see Remark \ref{remark:minus_jacobian}), but
+in this case I computed the Jacobian and it turned out to be
+positive (see Equation(\ref{eqn:jacobian})). One thing to notice
+is that the transformed space is negative in $v$ 
+($-10 \leq v \leq 0$, Figure \ref{fig:transformation_uv_plane}). 
+It is unclear if this effected the sign of the 
+outcome.
+
  
 
 \bigskip
