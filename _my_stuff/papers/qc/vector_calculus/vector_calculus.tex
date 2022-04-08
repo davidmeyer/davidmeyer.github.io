@@ -1148,11 +1148,18 @@ of $f$ is defined to be an $m \times n$ matrix $J$ whose $(i,j)^\text{th}$ entry
 or more explicitly
 
 \begin{equation*}
-\mathbf {J}
-= \det \begin{bmatrix} \dfrac {\partial \mathbf{f} }{\partial x_{1}} &\cdots & \dfrac {\partial \mathbf {f} }{\partial x_{n}} \end{bmatrix}
-= \det \begin{bmatrix} \nabla^{\mathrm {T} } f_{1}\\ \vdots \\ \nabla^{\mathrm {T} } f_{m} \end{bmatrix}
-= \det \begin{bmatrix} \dfrac {\partial f_{1}}{\partial x_{1}}  & \cdots & \dfrac {\partial f_{1}}{\partial x_{n}} \\ \vdots & \ddots &\vdots 
-                            \dfrac {\partial f_{m}}{\partial x_{1}} & \cdots & \dfrac {\partial f_{m}}{\partial x_{n}} \end{bmatrix}
+{\displaystyle \mathbf {J} 
+={\det \begin{bmatrix}
+ {\dfrac {\partial \mathbf {f} }{\partial x_{1}}} &\cdots & {\dfrac {\partial \mathbf {f} }{\partial x_{n}}}
+ \end{bmatrix}}
+={\det \begin{bmatrix}
+   \nabla ^{\mathrm {T} }f_{1}\\\vdots \\\nabla ^{\mathrm {T} }f_{m}
+   \end{bmatrix}}
+={\det \begin{bmatrix}
+ {\dfrac {\partial f_{1}}{\partial x_{1}}} & \cdots & {\dfrac {\partial f_{1}}{\partial x_{n}}}\\
+ \vdots &\ddots &\vdots \\
+ {\dfrac {\partial f_{m}}{\partial x_{1}}} & \cdots & {\dfrac {\partial f_{m}}{\partial x_{n}}}
+ \end{bmatrix}}}
 \end{equation*}
 
 \bigskip
@@ -1163,7 +1170,7 @@ where $\nabla^{\mathrm {T} }f_{i}$ is the transpose (row vector) of the gradient
 \setstretch{2.0}
 \noindent
 I have also seen the Jacobian matrix, whose entries are functions of $\mathbf{x} = (x_1,x_2,\hdots, x_n)$, denoted 
-in various ways including
+in various other ways including
  ${\displaystyle \nabla \mathbf {f}}$ and ${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial (x_{1},..,x_{n})}}}$.
 
 \setstretch{1.0}
@@ -2225,7 +2232,7 @@ observing that
 \end{array}
 \end{equation*}
 
-\bigskip
+
 \noindent
 and
 
