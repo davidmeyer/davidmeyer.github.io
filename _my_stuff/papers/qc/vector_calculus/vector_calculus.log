@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 APR 2022 14:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 APR 2022 08:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1492,60 +1492,67 @@ File: images/type_II_region.png Graphic file (type png)
 Package pdftex.def Info: images/type_II_region.png  used on input line 1279.
 (pdftex.def)             Requested size: 271.31572pt x 121.95656pt.
  [12 <./images/type_I_region.png> <./images/type_II_region.png>] [13] [14]
-Overfull \hbox (63.59053pt too wide) detected at line 1629
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1614.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1624.
+
+
+Overfull \hbox (65.56273pt too wide) detected at line 1633
 []
  []
 
 [15]
-<images/delta-r.png, id=324, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=323, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1702.
+Package pdftex.def Info: images/delta-r.png  used on input line 1691.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (28.8371pt too wide) detected at line 1771
+Overfull \hbox (28.8371pt too wide) detected at line 1760
 []
  []
 
 [16 <./images/delta-r.png>] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1928.
+(hyperref)                removing `math shift' on input line 1917.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1928.
+(hyperref)                removing `math shift' on input line 1917.
 
 [18]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1965.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1954.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1965.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1954.
 
 Missing character: There is no „ in font cmr10!
-<images/definite_integral.png, id=369, 752.8125pt x 661.47125pt>
+<images/definite_integral.png, id=368, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 1971.
+Package pdftex.def Info: images/definite_integral.png  used on input line 1960.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
-<images/line_integral.png, id=371, 730.73pt x 244.915pt>
+<images/line_integral.png, id=370, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 1992.
+Package pdftex.def Info: images/line_integral.png  used on input line 1981.
 (pdftex.def)             Requested size: 730.72821pt x 244.91438pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1997.
+(hyperref)                than one, level fixed on input line 1986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1997.
+(hyperref)                removing `math shift' on input line 1986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1997.
+(hyperref)                removing `math shift' on input line 1986.
 
 [19 <./images/definite_integral.png> <./images/line_integral.png>] [20]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
@@ -1555,7 +1562,7 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2144.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2133.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [21 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
@@ -1582,11 +1589,11 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: 7FF1A0D6B973FEE982A1DB3FAD6C5FA3;2873.
  ) 
 Here is how much of TeX's memory you used:
- 54037 strings out of 478994
- 1350417 string characters out of 5858184
- 2007515 words of memory out of 5000000
- 70597 multiletter control sequences out of 15000+600000
- 422085 words of font info for 108 fonts, out of 8000000 for 9000
+ 54056 strings out of 478994
+ 1350601 string characters out of 5858184
+ 2008471 words of memory out of 5000000
+ 70608 multiletter control sequences out of 15000+600000
+ 424661 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,22n,131p,733b,994s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1594,33 +1601,36 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
-e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (24 pages, 1840988 bytes).
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/esvect/vect10.pfb>
+Output written on vector_calculus.pdf (24 pages, 1868828 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
+ 574 PDF objects out of 1000 (max. 8388607)
+ 436 compressed objects within 5 object streams
  107 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
