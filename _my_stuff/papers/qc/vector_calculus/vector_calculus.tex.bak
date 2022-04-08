@@ -1000,10 +1000,11 @@ or $\mathbf{r}^{\prime}(t)$.  Note also that by definition
 \end{equation*}
 
 \subsection{The Jacobian}
-It is common to change the variable(s) of integration, the main goal being to 
-rewrite a complicated integrand into a simpler equivalent form. However, in 
-doing so, the underlying geometry of the problem may be altered. This was seen 
-often in single-variable integrals:
+It is common to change the variable(s) of integration, the main
+goal being to rewrite a complicated integrand into a simpler
+equivalent form. However, in doing so, the underlying geometry of
+the problem may be altered. This was seen often in
+single-variable integrals:
 
 \begin{example} Evaluate 
 \begin{equation}
@@ -1013,25 +1014,29 @@ often in single-variable integrals:
 
 \bigskip
 \noindent
-{\bf Solution}: We can rewrite the integral in Equation (\ref{eqn:example1}) 
-by letting $u = 3x + 1$ so that $du = 3 \, dx$. Notice that the expression 
-$du = 3 \, dx \Rightarrow dx = \frac{1}{3} \, du$ and so  the bounds of integration
-in the $x$-$y$ plane, namely $2 \leq x \leq 4$ are transformed using 
-$u = 3x + 1$. So if $x = 2$ then $u = 3(2) + 1 = 7$ and
-when $x - 4$ we have $u = 3(4) + 1 = 13$. So the bounds of integration
-with respect to $u$ are $7 \leq u \leq 13$. Using this substitution
-we see that
+{\bf Solution}: We can rewrite the integral in Equation
+(\ref{eqn:example1}) by letting $u = 3x + 1$ so that $du = 3 \,
+dx$. Notice that the expression $du = 3 \, dx \Rightarrow dx =
+\frac{1}{3} \, du$ and so the bounds of integration in the
+$xy$-plane, namely $2 \leq x \leq 4$ are transformed using $u =
+3x + 1$. So if $x = 2$ then $u = 3(2) + 1 = 7$ and when $x - 4$
+we have $u = 3(4) + 1 = 13$. So the bounds of integration with
+respect to $u$ are $7 \leq u \leq 13$. Using this substitution we
+see that
 
+\bigskip
 \begin{equation*}
-\int_{2}^{4} \! \! (3x + 1)^3 dx = \int_{7}^{13} \!\!\!  u^3 \left (\frac{1}{3} \, du \right )= \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du
+\int_{2}^{4} \! \! (3x + 1)^3 dx 
+= \int_{7}^{13} \!\!\!  u^3 \left (\frac{1}{3} \, du \right )
+= \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du
 \end{equation*}
 
 \bigskip
 \setstretch{1.75}
 \noindent
-Note that integrals ${\displaystyle \int_{2}^{4} (3x + 1)^3 dx}$ and 
-${\displaystyle \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du}$ represent the 
-same problem. Specifically
+Note that integrals ${\displaystyle \int_{2}^{4} (3x + 1)^3 dx}$
+and ${\displaystyle \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du}$
+represent the same problem. Specifically
 
 \setstretch{1.0}
 
@@ -1047,6 +1052,8 @@ same problem. Specifically
 \bigskip
 \noindent
 and 
+
+\smallskip
 \begin{equation*}
 \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du  
 =  \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left ( u^4 \right )  \Bigg   |_{7}^{13} 
@@ -1064,17 +1071,20 @@ for $dx$, namely $dx = \frac{1}{3} \, du$ is called the
 
 \bigskip
 \noindent
-Note also that the integral in variable $x$ is over an interval of length 2 units, while the 
-integral in $u$ is over an interval of length 6 units. In a very rough sense then the variable 
-$u$ covers its interval of integration three times “as fast” as $x$. In particular, since 
-$u$ and $x$ are linearly related the leading $\frac{1}{3}$ adjusts for the change in 
-the underlying geometry of the intervals.
+Note also that the integral in variable $x$ is over an interval
+of length 2 units, while the integral in $u$ is over an interval
+of length 6 units. In a very rough sense then the variable $u$
+covers its interval of integration three times “as fast” as
+$x$. In particular, since $u$ and $x$ are linearly related the
+leading $\frac{1}{3}$ adjusts for the change in the underlying
+geometry of the intervals.
 \end{example}
 
 \bigskip
 \noindent
-For double integrals in $\mathbb{R}^2$ we assume that a region of integration defined in terms of 
-variables $x$ and $y$ and are substituted for new variables $u$ and $v$ through two functions:
+For double integrals in $\mathbb{R}^2$ we assume that a region of
+integration defined in terms of variables $x$ and $y$ and are
+substituted for new variables $u$ and $v$ through two functions:
 
 \medskip
 \begin{equation*}
@@ -1087,9 +1097,11 @@ v = f_2(x,y)
 
 \bigskip
 \noindent 
-Note that the pair of equations are written so that $u$ and $v$ are written in terms of $x$ and $y$. 
-This is called a \emph{transformation}. Such a “variable change” should also be reversible. That is, 
-we should be able to solve for $x$ and $y$ in terms of $u$ and $v$:
+Note that the pair of equations are written so that $u$ and $v$
+are written in terms of $x$ and $y$.  This is called a
+\emph{transformation}. Such a “change of variables” should also
+be reversible.  That is, we should be able to solve for $x$ and
+$y$ in terms of $u$ and $v$:
 
 \medskip
 \begin{equation*}
@@ -1102,8 +1114,8 @@ y = g_2(u,v)
 
 \bigskip
 \noindent
-In this case the Jacobian, $J(u,v)$, is defined to be the determinant of a $2 \times 2$ matrix as 
-follows:
+In this case the Jacobian, $J(u,v)$, is defined to be the
+determinant of a $2 \times 2$ matrix as follows:
 
 \bigskip
 \begin{equation*}
@@ -1136,16 +1148,20 @@ J(u,v,w) = \det
 
 \bigskip
 \noindent
-In general suppose $f: \mathbb{R}^{n} \to \mathbb{R}^{m}$ is a function such that each of its first-order partial derivatives exist on $\mathbb{R}^{n}$ 
-This function takes a point $\mathbf{x} \in \mathbb{R}^{n}$ as input and produces the vector $f(x) \in \mathbb{R}^{m}$  as output. Then the Jacobian matrix 
-of $f$ is defined to be an $m \times n$ matrix $J$ whose $(i,j)^\text{th}$ entry is 
+In general suppose $f: \mathbb{R}^{n} \to \mathbb{R}^{m}$ is a
+function such that each of its first-order partial derivatives
+exist on $\mathbb{R}^{n}$ This function takes a point $\mathbf{x}
+\in \mathbb{R}^{n}$ as input and produces the vector $f(x) \in
+\mathbb{R}^{m}$ as output. Then the Jacobian matrix of $f$ is
+defined to be an $m \times n$ matrix $J$ whose $(i,j)^\text{th}$
+entry is
 
 \begin{equation*}
 \mathbf{J}_{ij} = \frac {\partial f_{i}}{\partial x_{j}}
 \end{equation*}
 
 \noindent
-or more explicitly
+More explicitly
 
 \begin{equation*}
 {\displaystyle \mathbf {J} 
@@ -1164,18 +1180,21 @@ or more explicitly
 
 \bigskip
 \noindent
-where $\nabla^{\mathrm {T} }f_{i}$ is the transpose (row vector) of the gradient of the $i^{\text{th}}$ component.
+where $\nabla^{\mathrm {T} }f_{i}$ is the transpose (row vector)
+of the gradient of the $i^{\text{th}}$ component. 
 
 
 \setstretch{2.0}
 \noindent
-I have also seen the Jacobian matrix, whose entries are functions of $\mathbf{x} = (x_1,x_2,\hdots, x_n)$, denoted 
-in various other ways including
- ${\displaystyle \nabla \mathbf {f}}$ and ${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial (x_{1},..,x_{n})}}}$.
+I have also seen the Jacobian matrix, whose entries are functions
+of $\mathbf{x} = (x_1,x_2,\hdots, x_n)$, denoted in various other
+ways including ${\displaystyle \nabla \mathbf {f}}$ and
+${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial
+(x_{1},..,x_{n})}}}$.
 
 \setstretch{1.0}
 
-\begin{figure}[H]
+\begin{figure}[t]
 \center{\includegraphics[scale=0.85] {images/r_theta_to_x_y.jpg}}
 \caption{Transforming the $r\theta$-plane to the $xy$ plane}
 \label{fig:r_theta_to_x_y}
@@ -1183,20 +1202,11 @@ in various other ways including
 
 \medskip
 \begin{example} Find the Jacobian for the transformation
-
-\medskip
-\begin{equation*}
-\begin{array}{llll}
-x = r \cos \theta \\
-[2pt]
-y = r \sin \theta
-\end{array}
-\end{equation*}
+shown in Figure \ref{fig:r_theta_to_x_y}.
 
 \bigskip
 \noindent
-{\bf Solution}: This scenario is shown in Figure \ref{fig:r_theta_to_x_y}.  
-Here we have
+{\bf Solution}: Here we have
 
 \bigskip
 \begin{equation*}
@@ -1247,8 +1257,9 @@ Type I and Type II regions.
 
 \bigskip
 \noindent
-A region $D$ in the xy-plane is of Type I if it lies between two vertical lines 
-and the graphs of two continuous functions  $g_1(x)$ and $g_2(x)$. That is 
+A region $D$ in the xy-plane is of Type I if it lies between two
+vertical lines and the graphs of two continuous functions
+$g_1(x)$ and $g_2(x)$. That is
 
 \bigskip
 \begin{equation*}
@@ -1269,8 +1280,9 @@ Type I regions are shown in Figure \ref{fig:type_I_region}.
 
 \bigskip
 \noindent
-Alternatively, a region $D$ in the xy-plane is of Type II if it lies between two horizontal 
-lines and the graphs of two continuous functions $h_1(y)$ and $h_2(y)$. That is
+Alternatively, a region $D$ in the xy-plane is of Type II if it
+lies between two horizontal lines and the graphs of two
+continuous functions $h_1(y)$ and $h_2(y)$. That is
 
 \bigskip
 \begin{equation*}
@@ -1293,7 +1305,7 @@ Type II regions are shown in  Figure \ref{fig:type_II_region}.
 \begin{example}
 \setstretch{1.75}
 Evaluate ${\displaystyle \iint_{R} (x - 2y) \; dA}$, where $R$ 
-is a parallelogram in the xy-plane with vertices (0,0), (4,1), 
+is a parallelogram in the $xy$-plane with vertices (0,0), (4,1), 
 (6,4) and (2,3). This parallelogram is shown in 
 Figure \ref{fig:parallelogram_R}.
 
@@ -1330,7 +1342,7 @@ Figure \ref{fig:parallelogram_R}.
      \fill [black] (C3) circle (0.05)  node[yshift=-1.00mm, xshift=1.0mm,right] {$(4,1)$};
   \end{tikzpicture}
   }	
-  \caption{Parallelogram in the xy-plane}
+  \caption{Parallelogram in the $xy$-plane}
   \label{fig:parallelogram_R}
 \end{figure}
 
@@ -1343,11 +1355,12 @@ Figure \ref{fig:parallelogram_R}.
 
 \bigskip
 \noindent
-{\bf Solution}: A sketch of this region (Figure \ref{fig:parallelogram_R})
-shows that it is a Type II region and would require three separate double 
-integrals in either the $dy$, $dx$ or $dx dy$ orderings of integration. 
-Instead, note that the region consists of two pairs of parallel sides and 
-so we can find the equation for each side:
+{\bf Solution}: A sketch of this region (Figure
+\ref{fig:parallelogram_R}) shows that it is a Type II region and
+would require three separate double integrals in either the $dy$,
+$dx$ or $dx dy$ orderings of integration.  Instead, note that the
+region consists of two pairs of parallel sides and so we can find
+the equation for each side:
 
 
 \bigskip
@@ -1655,10 +1668,10 @@ a constant like we saw here.
 \noindent
 We can also see how the geometry changed: The original region in
 the $xy$-plane has an area of $10 \text{ units}^2$ while the
-region in the $uv$-plane has an area of $100 \text{ units}^2$.  
-That is, the region in the $uv$-plane is 10 times as large as 
-the region in the $xy$-plane. The Jacobian 
-$\left (\frac{1}{10} \right )$ scales this change in the underlying area.
+region in the $uv$-plane has an area of $100 \text{ units}^2$.
+That is, the region in the $uv$-plane is 10 times as large as the
+region in the $xy$-plane. The Jacobian $\left (\frac{1}{10}
+\right )$ scales this change in the underlying area.
 
 \setstretch{1.0}
 
@@ -1769,7 +1782,7 @@ Now we can compute the infinitesimal arc length $ds$:
 \noindent
 Interestingly we can also see this using the Pythagorean theorem.
 Specifically, if we move an infinitesimal distance in the $x$ and
-$y$ directions we get a triangle in the x-y plane who's sides
+$y$ directions we get a triangle in the $xy$-plane who's sides
 have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
 scenario is shown for some curve $f(x)$ in Figure
 \ref{fig:pythagorean_theorem}.
@@ -1993,10 +2006,10 @@ ds}$ is shown in Figure \ref{fig:line_integral}.
 One of the first steps in solving a line integral is to find a
 parameterization for the curve $C$. We would like to find a
 parameterization such that the integral reduces to an integral
-over a single variable, call it $t$.  Then the parametric form of 
-$x$ is called $g(t)$ (or sometimes $x(t)$), the parametric form 
-of $y$ is called $h(t)$ (or $y(t)$), and the parameter $t \in [a,b]$. 
-That is
+over a single variable, call it $t$.  Then the parametric form of
+$x$ is called $g(t)$ (or sometimes $x(t)$), the parametric form
+of $y$ is called $h(t)$ (or $y(t)$), and the parameter $t \in
+[a,b]$.  That is
 
 
 \begin{equation*}
