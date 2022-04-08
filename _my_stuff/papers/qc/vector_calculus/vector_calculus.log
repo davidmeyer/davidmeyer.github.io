@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 APR 2022 12:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 APR 2022 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1493,16 +1493,16 @@ Package pdftex.def Info: images/type_II_region.png  used on input line 1298.
 (pdftex.def)             Requested size: 271.31572pt x 121.95656pt.
  [12 <./images/type_I_region.png> <./images/type_II_region.png>] [13] [14]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1628.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1626.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1635.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1633.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1645.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1643.
 
 
-Overfull \hbox (65.56273pt too wide) detected at line 1654
+Overfull \hbox (65.56273pt too wide) detected at line 1652
 []
  []
 
@@ -1510,52 +1510,52 @@ Overfull \hbox (65.56273pt too wide) detected at line 1654
 <images/delta-r.png, id=315, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1709.
+Package pdftex.def Info: images/delta-r.png  used on input line 1707.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (28.8371pt too wide) detected at line 1778
+Overfull \hbox (28.8371pt too wide) detected at line 1776
 []
  []
 
 [16 <./images/delta-r.png>] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1935.
+(hyperref)                removing `math shift' on input line 1933.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1935.
+(hyperref)                removing `math shift' on input line 1933.
 
 [18]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1972.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1970.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1972.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1970.
 
 Missing character: There is no „ in font cmr10!
 <images/definite_integral.png, id=359, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 1978.
+Package pdftex.def Info: images/definite_integral.png  used on input line 1976.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
 <images/line_integral.png, id=361, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 1999.
+Package pdftex.def Info: images/line_integral.png  used on input line 1997.
 (pdftex.def)             Requested size: 730.72821pt x 244.91438pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2004.
+(hyperref)                than one, level fixed on input line 2002.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2004.
+(hyperref)                removing `math shift' on input line 2002.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2004.
+(hyperref)                removing `math shift' on input line 2002.
 
 [19 <./images/definite_integral.png> <./images/line_integral.png>] [20]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
@@ -1565,7 +1565,7 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2151.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2149.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [21 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
@@ -1630,7 +1630,7 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (24 pages, 1865866 bytes).
+Output written on vector_calculus.pdf (24 pages, 1865811 bytes).
 PDF statistics:
  565 PDF objects out of 1000 (max. 8388607)
  433 compressed objects within 5 object streams
