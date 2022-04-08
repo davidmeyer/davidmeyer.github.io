@@ -1016,14 +1016,17 @@ often in single-variable integrals:
 {\bf Solution}: We can rewrite the integral in Equation (\ref{eqn:example1}) 
 by letting $u = 3x + 1$ so that $du = 3 \, dx$. Notice that the expression 
 $du = 3 \, dx \Rightarrow dx = \frac{1}{3} \, du$ and so  the bounds of integration
-in the $x$-$y$ plane, namely $2 \leq x \leq 4$ are transformed using 
+in the $xy$-plane, namely $2 \leq x \leq 4$ are transformed using 
 $u = 3x + 1$. So if $x = 2$ then $u = 3(2) + 1 = 7$ and
 when $x - 4$ we have $u = 3(4) + 1 = 13$. So the bounds of integration
 with respect to $u$ are $7 \leq u \leq 13$. Using this substitution
 we see that
 
+\bigskip
 \begin{equation*}
-\int_{2}^{4} \! \! (3x + 1)^3 dx = \int_{7}^{13} \!\!\!  u^3 \left (\frac{1}{3} \, du \right )= \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du
+\int_{2}^{4} \! \! (3x + 1)^3 dx 
+= \int_{7}^{13} \!\!\!  u^3 \left (\frac{1}{3} \, du \right )
+= \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du
 \end{equation*}
 
 \bigskip
@@ -1047,6 +1050,8 @@ same problem. Specifically
 \bigskip
 \noindent
 and 
+
+\smallskip
 \begin{equation*}
 \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du  
 =  \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left ( u^4 \right )  \Bigg   |_{7}^{13} 
@@ -1088,8 +1093,8 @@ v = f_2(x,y)
 \bigskip
 \noindent 
 Note that the pair of equations are written so that $u$ and $v$ are written in terms of $x$ and $y$. 
-This is called a \emph{transformation}. Such a “variable change” should also be reversible. That is, 
-we should be able to solve for $x$ and $y$ in terms of $u$ and $v$:
+This is called a \emph{transformation}. Such a “change of variables” should also be reversible. 
+That is, we should be able to solve for $x$ and $y$ in terms of $u$ and $v$:
 
 \medskip
 \begin{equation*}
@@ -1293,7 +1298,7 @@ Type II regions are shown in  Figure \ref{fig:type_II_region}.
 \begin{example}
 \setstretch{1.75}
 Evaluate ${\displaystyle \iint_{R} (x - 2y) \; dA}$, where $R$ 
-is a parallelogram in the xy-plane with vertices (0,0), (4,1), 
+is a parallelogram in the $xy$-plane with vertices (0,0), (4,1), 
 (6,4) and (2,3). This parallelogram is shown in 
 Figure \ref{fig:parallelogram_R}.
 
@@ -1330,7 +1335,7 @@ Figure \ref{fig:parallelogram_R}.
      \fill [black] (C3) circle (0.05)  node[yshift=-1.00mm, xshift=1.0mm,right] {$(4,1)$};
   \end{tikzpicture}
   }	
-  \caption{Parallelogram in the xy-plane}
+  \caption{Parallelogram in the $xy$-plane}
   \label{fig:parallelogram_R}
 \end{figure}
 
@@ -1769,7 +1774,7 @@ Now we can compute the infinitesimal arc length $ds$:
 \noindent
 Interestingly we can also see this using the Pythagorean theorem.
 Specifically, if we move an infinitesimal distance in the $x$ and
-$y$ directions we get a triangle in the x-y plane who's sides
+$y$ directions we get a triangle in the $xy$-plane who's sides
 have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
 scenario is shown for some curve $f(x)$ in Figure
 \ref{fig:pythagorean_theorem}.
