@@ -1089,7 +1089,7 @@ v = f_2(x,y)
 \noindent 
 Note that the pair of equations are written so that $u$ and $v$ are written in terms of $x$ and $y$. 
 This is called a \emph{transformation}. Such a “variable change” should also be reversible. That is, 
-we should be able to, through algebraic means, isolate $x$ and $y$ in terms of $u$ and $v$:
+we should be able to solve for $x$ and $y$ in terms of $u$ and $v$:
 
 \medskip
 \begin{equation*}
@@ -1122,7 +1122,7 @@ J(u,v)
 
 \bigskip
 \noindent
-In 3 dimensions the Jacobian is
+In three dimensions the Jacobian is
 
 \bigskip
 \begin{equation*}
@@ -1601,8 +1601,10 @@ J(u,v) = \dfrac{1}{10}
 
 \bigskip
 \noindent
-Substituting Equations \ref{eqn:transformation_x} and \ref{eqn:transformation_y}
-back into the original double integral we get
+Substituting Equations (\ref{eqn:transformation_x}) and 
+(\ref{eqn:transformation_y}) into the original  
+integral and noting that $dA = J(u,v) \, du \, dv$ we 
+get
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -1653,13 +1655,10 @@ a constant like we saw here.
 \noindent
 We can also see how the geometry changed: The original region in
 the $xy$-plane has an area of $10 \text{ units}^2$ while the
-region in the $uv$-plane\footnote{Recall that the region in the
-$uv$-plane was a rectangle where $- \leq u \leq 10$ and $-10 \leq
-v \leq 0$; see Figure \ref{fig:transformation_uv_plane}.} has an
-area of $100 \text{ units}^2$.  That is, the region in the
-$uv$-plane is 10 times as large as the region in the
-$xy$-plane. The Jacobian $J(u,v) = \frac{1}{10}$ scales this
-change in the underlying area.
+region in the $uv$-plane has an area of $100 \text{ units}^2$.  
+That is, the region in the $uv$-plane is 10 times as large as 
+the region in the $xy$-plane. The Jacobian 
+$\left (\frac{1}{10} \right )$ scales this change in the underlying area.
 
 \setstretch{1.0}
 
