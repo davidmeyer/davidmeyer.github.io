@@ -1450,7 +1450,7 @@ by the following equations:
 \noindent
 This transformation transforms the region of integration 
 $\mathbf{R}$ in the $xy$-plane (a parallelogram,
-Figure\ref{fig:parallelogram_R})) into a rectangle in the
+Figure\ref{fig:parallelogram_R}) into a rectangle in the
 $uv$-plane and so $u$ and $v$ have constant bounds. This
 rectangle is shown Figure \ref{fig:transformation_uv_plane}. 
 Note that this region is completely below the $u$ axis and 
