@@ -85,6 +85,17 @@ Quantum Teleportation
 
 
 <h2>Just for fun</h2>
+
+
+
+<li><a href="./three.pdf" target="_blank"
+    rel="noopener noreferrer">
+An interesting way to write the number 3
+</a>
+<br>
+
+
+
 <li><a href="./cube_roots.pdf" target="_blank"
     rel="noopener noreferrer">
 Square roots and cube roots...
@@ -111,7 +122,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 03.27.2022 by dmm@1-4-5.net
+<i>Last Update: 04.14.2022 by dmm@1-4-5.net
 
 
 
