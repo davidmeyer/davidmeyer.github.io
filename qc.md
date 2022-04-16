@@ -118,7 +118,9 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 04.16.2022 by dmm613@gmail.com</i>
+<i>Last Update: 04.16.2022 by
+<a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
+<\i>
 
 
 
