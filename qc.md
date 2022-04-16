@@ -120,7 +120,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <hr>
 <i>Last Update: 04.16.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
-<\i>
+</i>
 
 
 
