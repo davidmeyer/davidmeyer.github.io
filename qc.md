@@ -86,15 +86,11 @@ Quantum Teleportation
 
 <h2>Just for fun</h2>
 
-
-
 <li><a href="./three.pdf" target="_blank"
     rel="noopener noreferrer">
 An interesting way to write the number 3
 </a>
 <br>
-
-
 
 <li><a href="./cube_roots.pdf" target="_blank"
     rel="noopener noreferrer">
