@@ -88,7 +88,7 @@ Quantum Teleportation
 
 <li><a href="./three.pdf" target="_blank"
     rel="noopener noreferrer">
-An interesting way to write the number 3
+Another way to write the number 3
 </a>
 <br>
 
@@ -118,7 +118,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 04.14.2022 by dmm@1-4-5.net
+<i>Last Update: 04.16.2022 by dmm613@gmail.com<\i>
 
 
 
