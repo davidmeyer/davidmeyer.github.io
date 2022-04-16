@@ -1,7 +1,7 @@
 <!-- 
 #
 #	David Meyer
-#	dmm@m1-4-5.net
+#	dmm613@gmail.com
 #	Sun Sep 26 11:51:03 PDT 2021
 #
 -->
@@ -118,7 +118,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 04.16.2022 by dmm613@gmail.com<\i>
+<i>Last Update: 04.16.2022 by dmm613@gmail.com</i>
 
 
 
