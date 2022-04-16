@@ -41,6 +41,6 @@ permalink: /about/
 
 
 ### Contact me
-Email: [dmm@1-4-5.net](mailto:dmm@1-4-5.net)  \\
+Email: [dmm613@gmail.com](mailto:dmm613@gmail.com)  \\
 More Information: <https://davidmeyer.github.io/> 
 
