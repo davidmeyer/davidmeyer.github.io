@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  20 SEP 2021 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 MAY 2022 09:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -668,8 +668,8 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
 (./Euler_product_formula_for_the_Riemann_zeta_function.bbl
-Underfull \hbox (badness 1776) in paragraph at lines 47--53
-[]\OT1/cmr/m/n/10.95 Wikipedia con-trib-u-tors.  Dirich-let Se-ries --- Wikiped
+Underfull \hbox (badness 1466) in paragraph at lines 47--53
+[]\OT1/cmr/m/n/10.95 Wikipedia Con-trib-u-tors.  Dirich-let Se-ries --- Wikiped
 ia, The Free En-cy-clo-pe-
  []
 
@@ -681,7 +681,7 @@ unction.out' has not changed.
 Here is how much of TeX's memory you used:
  15885 strings out of 478994
  275828 string characters out of 5858184
- 586517 words of memory out of 5000000
+ 586526 words of memory out of 5000000
  33070 multiletter control sequences out of 15000+600000
  414989 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -710,7 +710,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 Output written on Euler_product_formula_for_the_Riemann_zeta_function.pdf (5 pa
-ges, 193900 bytes).
+ges, 194872 bytes).
 PDF statistics:
  171 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams
