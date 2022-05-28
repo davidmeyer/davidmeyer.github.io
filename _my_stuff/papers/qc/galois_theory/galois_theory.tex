@@ -36,6 +36,9 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
+\usepackage{setspace}							% \setstretch{a.b}
+
+
 
 \theoremstyle{definition}
 \newtheorem{thm}{Theorem}[section]
@@ -72,7 +75,8 @@
 Suppose we want to solve an equation of the form
 
 \begin{equation}
-f(x) = x^{n-1} + a_{n-2}x^{n-2} + a_{n-3}x^{n-3} + \cdots + a_{1}x + a_0 = 0
+f(x) = x^{n-1} + a_{n-2}x^{n-2} + a_{n-3}x^{n-3} + 
+       \cdots + a_{1}x + a_0 = 0
 \label{eqn:f(x)}
 \end{equation}
 
@@ -168,13 +172,13 @@ divisors. What are the zero divisors in $\mathbb{Z}_{12}$? Well
 
 \begin{equation}
 \begin{array}{lrcll} 
-\,\; 2   \cdot 6     \equiv     12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
-\,\; 3   \cdot 4     \equiv     12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
-\,\; 4   \cdot 3     \equiv     12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
-\,\; 6   \cdot 2     \equiv     12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
-\,\; 8   \cdot 3     \equiv     24 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
-\,\; 9   \cdot 8     \equiv     72 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
-10       \cdot 6     \equiv     60 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+\,\; 2 \cdot 6 \equiv 12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+\,\; 3 \cdot 4 \equiv 12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+\,\; 4 \cdot 3 \equiv 12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+\,\; 6 \cdot 2 \equiv 12 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+\,\; 8 \cdot 3 \equiv 24 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+\,\; 9 \cdot 8 \equiv 72 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
+    10 \cdot 6 \equiv 60 \text{ mod } 12 \equiv 0 \text{ mod } 12 \\
 \end{array}
 \end{equation}
 
@@ -201,22 +205,24 @@ $r \in F$ has an inverse $r^{-1}$.  So suppose $r,s \in F$ and $r
 0$.  Why? Consider
 
 
-\begin{equation}
+\begin{equation*}
 \begin{array}{rcll} 
 r \cdot s 
 &=& 0                                                           &\quad \mathrel{\#} \text{assumption with $r \neq 0$} \\
-&\Rightarrow&   r^{-1} \cdot (r \cdot s) = r^{-1} \cdot 0       &\quad \mathrel{\#} \text{multiply both sides by $r^{-1}$} \\
-&\Rightarrow&   r^{-1} \cdot (r \cdot s) =  0                   &\quad \mathrel{\#} x \cdot 0 = 0 \\
-&\Rightarrow&   (r^{-1} \cdot r) \cdot s =  0                   &\quad \mathrel{\#} \text{multiplication is associative} \\
-&\Rightarrow&   s = 0                                           &\quad \mathrel{\#} r^{-1} \cdot r = 1
+&\Rightarrow& r^{-1} \cdot (r \cdot s) = r^{-1} \cdot 0         &\quad \mathrel{\#} \text{multiply both sides by $r^{-1}$} \\
+&\Rightarrow& r^{-1} \cdot (r \cdot s) =  0                     &\quad \mathrel{\#} r^{-1} \cdot 0 = 0 \\
+&\Rightarrow& (r^{-1} \cdot r) \cdot s =  0                     &\quad \mathrel{\#} \text{multiplication is associative} \\
+&\Rightarrow& 1 \cdot s = 0                                     &\quad \mathrel{\#} (r^{-1} \cdot r) = 1 \\
+&\Rightarrow& s = 0                                             &\quad \mathrel{\#}1 \cdot s = s
 \end{array}
-\end{equation}
+\end{equation*}
 
 \bigskip
 \noindent
-So $r$ is not a zero divisor. But every non-zero element $r$ of
-the field $F$ has an inverse ($r$ is a "unit") so $F$ has no zero
-divisors and is by definition an integral domain. $\square$
+So since $s = 0$ $r$ is not a zero divisor. But every non-zero
+element $r$ of the field $F$ has an inverse ($r$ is a "unit") so
+$F$ has no zero divisors and is by definition an integral
+domain. $\square$
 
 \bigskip
 \noindent
@@ -478,24 +484,33 @@ To see why any finite integral domain $R$ is a field, consider $R
 \leq n$.  Since $R$ is finite we will have $r^k = r^l$ for some
 $k$ and $l$ such that $k > l$. Then
 
-\bigskip
+%\bigskip
 \begin{equation*}
 \begin{array}{rlll} 
 r^k 
-&=& r^l                                                 &  \qquad \mathrel{\#} \text{$R$ is a finite integral domain} \\
-&\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        &  \qquad \mathrel{\#} \text{factor out $r$} \\
-&\Rightarrow& r^{k-1} = r^{l -1}                        &  \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law}}) \\
-&\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        &  \qquad \mathrel{\#} \text{factor out $r$} \\
-&\Rightarrow& r^{k-2} = r^{l -2}                        &  \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\
-&\;\vdots						&& \qquad \mathrel{\#} \text{iterate $l - 1$ times} \\ 
-&\Rightarrow& r^{k - l + 1} = r^1                       &  \qquad \mathrel{\#} \text{...} \\       
-&\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           &  \qquad \mathrel{\#} \text{factor out $r$} \\ 
-&\Rightarrow& r^{k-l} = r^{0}                           &  \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\ 
-&\Rightarrow& r^{k-l} = 1                               &  \qquad\mathrel{\#} r^0 = 1
+&=& r^l                                                 &\qquad \qquad \mathrel{\#}  \text{$R$ is a finite integral domain} \\
+[5pt]
+&\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        &\qquad \qquad \mathrel{\#}  \text{factor out $r$} \\
+[5pt]
+&\Rightarrow& r^{k-1} = r^{l -1}                        &\qquad \qquad \mathrel{\#}  \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law}}) \\
+[5pt]
+&\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        &\qquad \qquad \mathrel{\#}  \text{factor out $r$} \\
+[5pt]
+&\Rightarrow& r^{k-2} = r^{l -2}                        &\qquad \qquad \mathrel{\#}  \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\
+&\;\vdots												&&\qquad \qquad \mathrel{\#} \text{iterate $l - 1$ times} \\ 
+[5pt]
+&\Rightarrow& r^{k - l + 1} = r^1                       &\qquad \qquad \mathrel{\#}  \text{...} \\
+[5pt]       
+&\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           &\qquad \qquad \mathrel{\#}  \text{factor out $r$} \\ 
+[5pt]
+&\Rightarrow& r^{k-l} = r^{0}                           &\qquad \qquad \mathrel{\#}  \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\ 
+[5pt]
+&\Rightarrow& r^{k-l} = 1                               &\qquad \qquad\mathrel{\#} r^0 = 1
 \end{array}
 \end{equation*}
 
 \bigskip
+\setstretch{1.25}
 \noindent
 So $ r^{k-l} = 1 $. If $k-l = 1$ then $r$ is a unit since
 $r^{k-l} = r^{1} = 1$ so $r^{-1}$ is $\frac{1}{r}$ (since $r
@@ -503,6 +518,8 @@ $r^{k-l} = r^{1} = 1$ so $r^{-1}$ is $\frac{1}{r}$ (since $r
 \Rightarrow r^{k-l-1} = \frac{1}{r}$.  So $r^{-1} = r^{k-l -1}$
 and every $r \neq 0 \in R$ has an inverse. Thus every non-zero $r
 \in R$ is a unit and so $R$ is a field. $\square$
+
+\setstretch{1.0}
 
 
 \section{Note: Gauss and the Gaussian Integers $\boldsymbol{\mathbb{Z}[i]}$}
