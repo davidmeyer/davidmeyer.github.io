@@ -139,7 +139,7 @@ $\mathbb{Z}$ and so $\mathbb{Z}$ is not a field. Every
 \bigskip
 \noindent
 Note that if we have zero divisors then the factorization shown
-in Equation \ref{eqn:factorization} might not find all of the
+in Equation (\ref{eqn:factorization}) might not find all of the
 roots of $f(x)$ (values of $x$ for which $f(x) = 0$). Why?
 Consider the following example:
 
@@ -164,7 +164,7 @@ addition, $f(6) \text{ mod } 12 \equiv (36 + 30 +6) \text{ mod }
 
 \bigskip
 \noindent
-So the roots of Equation \ref{eqn:roots} are $\{1,6,9,10\}$. Why
+So the roots of Equation (\ref{eqn:roots}) are $\{1,6,9,10\}$. Why
 were we only able to find two of the roots (9 and 10) by
 factoring? It is because the ring $\mathbb{Z}_{12}$ has zero
 divisors. What are the zero divisors in $\mathbb{Z}_{12}$? Well
@@ -234,8 +234,8 @@ integral domain is a field.
 \section{Splitting Fields}
 Recall that the ring of polynomials over a field $F$, denoted
 $F[x]$, is defined as follows\footnote{I reversed the order of
-Equation \ref{eqn:f(x)} since its an easier form to work with. In
-addition, we can assume $a_{n-1} = 1$ since $f(x)$ is monic.}
+Equation (\ref{eqn:f(x)}) since its an easier form to work with. 
+In addition, we can assume $a_{n-1} = 1$ since $f(x)$ is monic.}
 
 
 \begin{definition}
@@ -411,7 +411,7 @@ real.
 \noindent
 So what is a splitting field for $x^2 + \sqrt[3]{2} x +
 (\sqrt[3]{2})^2$ over $\mathbb{Q}$? Well, we know $x^3-2$ splits
-into the factors shown in Equation \ref{eqn:x^3-2} in
+into the factors shown in Equation (\ref{eqn:x^3-2}) in
 $\mathbb{Q}[\sqrt[3]{2}]$, so one approach would be to adjoin the
 (complex) roots of $x^2 + \sqrt[3]{2} x + (\sqrt[3]{2})^2$ to
 $\mathbb{Q}[\sqrt[3]{2}]$.
@@ -488,24 +488,24 @@ $k$ and $l$ such that $k > l$. Then
 \begin{equation*}
 \begin{array}{rlll} 
 r^k 
-&=& r^l                                                 &\qquad \qquad \mathrel{\#} \text{$R$ is a finite integral domain} \\
+&=& r^l                                                 &\quad \qquad \mathrel{\#} \text{$R$ is a finite integral domain} \\
 [5pt]
-&\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        &\qquad \qquad \mathrel{\#} \text{factor out $r$} \\
+&\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        &\quad \qquad \mathrel{\#} \text{factor out $r$} \\
 [5pt]
-&\Rightarrow& r^{k-1} = r^{l -1}                        &\qquad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law}}) \\
+&\Rightarrow& r^{k-1} = r^{l -1}                        &\quad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation (\ref{eqn:cancellation_law})}) \\
 [5pt]
-&\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        &\qquad \qquad \mathrel{\#} \text{factor out $r$} \\
+&\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        &\quad \qquad \mathrel{\#} \text{factor out $r$} \\
 [5pt]
-&\Rightarrow& r^{k-2} = r^{l -2}                        &\qquad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\
-&\;\vdots												&&\qquad \qquad \mathrel{\#} \text{iterate $l - 3$ times} \\ 
+&\Rightarrow& r^{k-2} = r^{l -2}                        &\quad \qquad \mathrel{\#} \text{cancel $r$ (Equation (\ref{eqn:cancellation_law}))} \\
+&\;\vdots												&&\quad \qquad \mathrel{\#} \text{iterate $l - 3$ times} \\ 
 [5pt]
-&\Rightarrow& r^{k - l + 1} = r^1                       &\qquad \qquad \mathrel{\#} (k - 2) - (l -3) = k - l + 1 \text{ and } (l - 2) - (l - 3) = 1 \\
+&\Rightarrow& r^{k - l + 1} = r^1                       &\quad \qquad \mathrel{\#} (k - 2) - (l -3) = k - l + 1 \text{ and } (l - 2) - (l - 3) = 1 \\
 [5pt]       
-&\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           &\qquad \qquad \mathrel{\#} \text{factor out $r$} \\ 
+&\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           &\quad \qquad \mathrel{\#} \text{factor out $r$} \\ 
 [5pt]
-&\Rightarrow& r^{k-l} = r^{0}                           &\qquad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\ 
+&\Rightarrow& r^{k-l} = r^{0}                           &\quad \qquad \mathrel{\#} \text{cancel $r$ (Equation (\ref{eqn:cancellation_law}))} \\ 
 [5pt]
-&\Rightarrow& r^{k-l} = 1                               &\qquad \qquad\mathrel{\#} r^0 = 1
+&\Rightarrow& r^{k-l} = 1                               &\quad \qquad\mathrel{\#} r^0 = 1
 \end{array}
 \end{equation*}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 MAY 2022 08:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 MAY 2022 09:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -955,7 +955,7 @@ Overfull \hbox (0.39359pt too wide) detected at line 338
  []
 
 [4] [5]
-Overfull \hbox (22.8288pt too wide) detected at line 510
+Overfull \hbox (11.87877pt too wide) detected at line 510
 []
  []
 
@@ -1222,7 +1222,7 @@ st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on galois_theory.pdf (9 pages, 274764 bytes).
+Output written on galois_theory.pdf (9 pages, 274776 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams
