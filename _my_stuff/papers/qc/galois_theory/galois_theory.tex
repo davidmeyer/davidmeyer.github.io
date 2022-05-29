@@ -488,22 +488,22 @@ $k$ and $l$ such that $k > l$. Then
 \begin{equation*}
 \begin{array}{rlll} 
 r^k 
-&=& r^l                                                 &\qquad \qquad \mathrel{\#}  \text{$R$ is a finite integral domain} \\
+&=& r^l                                                 &\qquad \qquad \mathrel{\#} \text{$R$ is a finite integral domain} \\
 [5pt]
-&\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        &\qquad \qquad \mathrel{\#}  \text{factor out $r$} \\
+&\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        &\qquad \qquad \mathrel{\#} \text{factor out $r$} \\
 [5pt]
-&\Rightarrow& r^{k-1} = r^{l -1}                        &\qquad \qquad \mathrel{\#}  \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law}}) \\
+&\Rightarrow& r^{k-1} = r^{l -1}                        &\qquad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law}}) \\
 [5pt]
-&\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        &\qquad \qquad \mathrel{\#}  \text{factor out $r$} \\
+&\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        &\qquad \qquad \mathrel{\#} \text{factor out $r$} \\
 [5pt]
-&\Rightarrow& r^{k-2} = r^{l -2}                        &\qquad \qquad \mathrel{\#}  \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\
-&\;\vdots												&&\qquad \qquad \mathrel{\#} \text{iterate $l - 1$ times} \\ 
+&\Rightarrow& r^{k-2} = r^{l -2}                        &\qquad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\
+&\;\vdots												&&\qquad \qquad \mathrel{\#} \text{iterate $l - 3$ times} \\ 
 [5pt]
-&\Rightarrow& r^{k - l + 1} = r^1                       &\qquad \qquad \mathrel{\#}  \text{...} \\
+&\Rightarrow& r^{k - l + 1} = r^1                       &\qquad \qquad \mathrel{\#} (k - 2) - (l -3) = k - l + 1 \text{ and } (l - 2) - (l - 3) = 1 \\
 [5pt]       
-&\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           &\qquad \qquad \mathrel{\#}  \text{factor out $r$} \\ 
+&\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           &\qquad \qquad \mathrel{\#} \text{factor out $r$} \\ 
 [5pt]
-&\Rightarrow& r^{k-l} = r^{0}                           &\qquad \qquad \mathrel{\#}  \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\ 
+&\Rightarrow& r^{k-l} = r^{0}                           &\qquad \qquad \mathrel{\#} \text{use cancellation law (cancel $r$, Equation \ref{eqn:cancellation_law})} \\ 
 [5pt]
 &\Rightarrow& r^{k-l} = 1                               &\qquad \qquad\mathrel{\#} r^0 = 1
 \end{array}
