@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 MAY 2022 06:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 MAY 2022 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -689,7 +689,7 @@ Package rerunfilecheck Info: File `sqrt2.out' has not changed.
 Here is how much of TeX's memory you used:
  15864 strings out of 478994
  274172 string characters out of 5858184
- 581190 words of memory out of 5000000
+ 582190 words of memory out of 5000000
  33064 multiletter control sequences out of 15000+600000
  415998 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -710,9 +710,9 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on sqrt2.pdf (2 pages, 159546 bytes).
+Output written on sqrt2.pdf (2 pages, 159380 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  82 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
