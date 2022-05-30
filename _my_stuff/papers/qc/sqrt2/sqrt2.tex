@@ -8,13 +8,11 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
 
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}                  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -59,9 +57,9 @@
 
 
 \title{Proof that the square root of 2 is irrational}
-\author{David Meyer \\ dmm@\{1-4-5.net,uoregon.edu\}}
+\author{David Meyer \\ dmm613@gmail.com}
 
-\date{Last update: January 31, 2016}							% Activate to display a given date or no date
+\date{Last update: \today}							% Activate to display a given date or no date
 
 
 
@@ -69,23 +67,30 @@
 \maketitle
 
 \section{Introduction}
-Here we prove by contradiction that $\sqrt{2} \notin \mathbb{Q}$. This approach to proving the irrationality of $\sqrt{2}$ is sometimes called
-"Proof by infinite descent, not involving factoring" \cite{wiki:sqrt2}.
+Here we prove by contradiction that $\sqrt{2} \notin
+\mathbb{Q}$. This approach to proving the irrationality of
+$\sqrt{2}$ is sometimes called "Proof by infinite descent, not
+involving factoring" \cite{wiki:sqrt2}.
 
 \begin{thm}
 $\sqrt{2} \notin \mathbb{Q}$
 \end{thm}
 
 \noindent
-\textbf{Proof:} As mentioned above, in this proof we assume that, for contradiction,  $\sqrt{2} \in \mathbb{Q}$. Then $\exists a,b  \in \mathbb{Z}$
-such that $\frac{a}{b} = \sqrt{2}$ and  we assume that $\frac{a}{b}$ is simplified to \emph{lowest terms}. The contradiction we will find is that 
-$\frac{a}{b}$ cannot be in lowest term and in fact, our assumptions imply that 2 divides $a$ (written $2|a$) \emph{and}  2 divides $b$ 
-(and hence $\frac{a}{b}$ is not in lowest terms). Ok, but why?
+\textbf{Proof:} As mentioned above, in this proof we assume that,
+for contradiction, $\sqrt{2} \in \mathbb{Q}$. Then $\exists a,b
+\in \mathbb{Z}$ such that $\frac{a}{b} = \sqrt{2}$ and we assume
+that $\frac{a}{b}$ is simplified to \emph{lowest terms}. The
+contradiction we will find is that $\frac{a}{b}$ cannot be in
+lowest term and in fact, our assumptions imply that 2 divides $a$
+(written $2|a$) \emph{and} 2 divides $b$ (and hence $\frac{a}{b}$
+is not in lowest terms). Ok, but why?
 
 
 \bigskip
 \noindent
-Well, consider our assumption $\sqrt{2} \in \mathbb{Q}$, which implies that for some $a,b \in \mathbb{Z}, b \neq 0$
+Well, consider our assumption $\sqrt{2} \in \mathbb{Q}$, which
+implies that for some $a,b \in \mathbb{Z}, b \neq 0$ 
 
 \bigskip
 \begin{equation*}
@@ -112,8 +117,9 @@ a^2 = 2b^2
 
 \bigskip
 \noindent
-So $2|a^2$. So $a^2$ is even which implies that $a$ is even\footnote{Note that if $a$ is not even, then $a^2$ is not even.}. Now, since $a$ is even we can
-write 
+So $2|a^2$. So $a^2$ is even which implies that $a$ is
+even\footnote{Note that if $a$ is not even, then $a^2$ is not
+even.}. Now, since $a$ is even we can write
 
 \begin{equation}
 a = 2n
@@ -122,7 +128,8 @@ a = 2n
 
 \bigskip
 \noindent
-for some $n \in \mathbb{Z}$. If we plug this into Equation \ref{eqn:squared} we get
+for some $n \in \mathbb{Z}$. If we plug this into Equation
+\ref{eqn:squared} we get 
 
 \begin{equation*}
 4 n^2 = 2 b^2
@@ -130,7 +137,8 @@ for some $n \in \mathbb{Z}$. If we plug this into Equation \ref{eqn:squared} we 
 
 \bigskip
 \noindent
-and therefore $2n^2 = b^2$. So $b^2$ and hence $b$ is even. So we can write
+and therefore $2n^2 = b^2$. So $b^2$ and hence $b$ is even. So we
+can write 
 
 \begin{equation}
  b = 2 m
@@ -139,28 +147,31 @@ and therefore $2n^2 = b^2$. So $b^2$ and hence $b$ is even. So we can write
 
  \bigskip
  \noindent
- for some $m \in \mathbb{Z}$. So for some $a,b \in \mathbb{Z}$ and  $b \neq 0$ our assumption implies
+ for some $m \in \mathbb{Z}$. So for some $a,b \in \mathbb{Z}$
+ and  $b \neq 0$ our assumption implies 
 
 
 \begin{equation*}
 \begin{array}{llll}
 \sqrt{2} \in \mathbb{Q} 
-&\Rightarrow& \frac{a}{b} = \sqrt{2}                               &\qquad \qquad \mathrel{\#} \text{assume $\frac{a}{b}$ is in lowest terms} \\
-&\Rightarrow& a = 2n                                                    &\qquad \qquad \mathrel{\#} \text{Equation } \ref{eqn:a} \\
-&\Rightarrow& b = 2m                                                   &\qquad \qquad \mathrel{\#} \text{Equation } \ref{eqn:b} \\
-&\Rightarrow& \text{$2|a$ \emph{and} $2|b$}               &\qquad \qquad \mathrel{\#} \text{the contradiction ($\frac{a}{b}$ not in lowest terms)}
+&\Rightarrow& \frac{a}{b} = \sqrt{2}            &\qquad \qquad \mathrel{\#} \text{assume $\frac{a}{b}$ is in lowest terms} \\
+&\Rightarrow& a = 2n                            &\qquad \qquad \mathrel{\#} \text{Equation } \ref{eqn:a} \\
+&\Rightarrow& b = 2m                            &\qquad \qquad \mathrel{\#} \text{Equation } \ref{eqn:b} \\
+&\Rightarrow& \text{$2|a$ \emph{and} $2|b$}     &\qquad \qquad \mathrel{\#} \text{the contradiction ($\frac{a}{b}$ not in lowest terms)}
 \end{array}
 \end{equation*}
 
 
 \bigskip
 \noindent
-So we assumed that $\frac{a}{b}$ was in lowest terms and we showed that this leads to a contradiction,  namely that 2 divides both $a$ and $b$
-and thus $\frac{a}{b}$ is not in lowest terms (the contradiction). Hence our original assumption that $\sqrt{2} \in \mathbb{Q}$ is false and
-$\sqrt{2} \notin \mathbb{Q}$. $\square$
+So we assumed that $\frac{a}{b}$ was in lowest terms and we
+showed that this leads to a contradiction, namely that 2 divides
+both $a$ and $b$ and thus $\frac{a}{b}$ is not in lowest terms
+(the contradiction). Hence our original assumption that $\sqrt{2}
+\in \mathbb{Q}$ is false and $\sqrt{2} \notin
+\mathbb{Q}$. $\square$
 
-\newpage
-\section{Acknowledgements}
+\section*{Acknowledgements}
 
 \bibliographystyle{plain}
 \bibliography{/Users/dmm/papers/bib/qc}
