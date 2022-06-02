@@ -25,10 +25,10 @@ Alex Graves, Greg Wayne, and Ivo Danihelka.
 
 \bibitem{Graves:2016aa}
 Alex Graves, Greg Wayne, Malcolm Reynolds, Tim Harley, Ivo Danihelka, Agnieszka
-  Grabska-Barwi{\AA}„ska, Sergio~G{\~A}³mez Colmenarejo, Edward
-  Grefenstette, Tiago Ramalho, John Agapiou, Adri{\~A}Puigdom{\~A}¨nech Badia,
-  Karl~Moritz Hermann, Yori Zwols, Georg Ostrovski, Adam Cain, Helen King,
-  Christopher Summerfield, Phil Blunsom, Koray Kavukcuoglu, and Demis Hassabis.
+  Grabska-Barwiska, Sergio~Gmez Colmenarejo, Edward Grefenstette, Tiago
+  Ramalho, John Agapiou, Adrinech Badia, Karl~Moritz Hermann, Yori Zwols, Georg
+  Ostrovski, Adam Cain, Helen King, Christopher Summerfield, Phil Blunsom,
+  Koray Kavukcuoglu, and Demis Hassabis.
 \newblock Hybrid computing using a neural network with dynamic external memory.
 \newblock {\em Nature}, 538(7626):471--476, 10 2016.
 

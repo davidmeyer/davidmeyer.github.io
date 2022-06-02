@@ -1,15 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: attention.aux
 The style file: plain.bst
-Database file #1: /Users/dmm/papers/bib/ml.bib
+Database file #1: ml.bib
 Warning--empty journal in Bahdanau:2014aa
 Warning--empty journal in Cho:2014aa
 Warning--empty journal in Daniluk:2017aa
 Warning--empty journal in Graves:2014aa
 You've used 6 entries,
             2118 wiz_defined-function locations,
-            537 strings with 5625 characters,
+            537 strings with 5569 characters,
 and the built_in function-call counts, 2772 in all, are:
 = -- 237
 > -- 235
