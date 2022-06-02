@@ -41,7 +41,7 @@ Ilya Sutskever, Oriol Vinyals, and Quoc~V Le.
 
 \bibitem{chain_rule_for_conditional_probabilities}
 Lisa Yan.
-\newblock Conditional probability.
+\newblock {Conditional Probability}.
 \newblock \url
   {https://web.stanford.edu/class/archive/cs/cs109/cs109.1208/lectureNotes/LN04_cond_bayes.pdf},
   April 2020.
