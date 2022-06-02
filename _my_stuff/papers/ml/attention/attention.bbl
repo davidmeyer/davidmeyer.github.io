@@ -39,4 +39,12 @@ Ilya Sutskever, Oriol Vinyals, and Quoc~V Le.
   Weinberger, editors, {\em Advances in Neural Information Processing Systems
   27}, pages 3104--3112. Curran Associates, Inc., 2014.
 
+\bibitem{chain_rule_for_conditional_probabilities}
+Lisa Yan.
+\newblock Conditional probability.
+\newblock \url
+  {https://web.stanford.edu/class/archive/cs/cs109/cs109.1208/lectureNotes/LN04_cond_bayes.pdf},
+  April 2020.
+\newblock Accessed:Thu Jun 2 10:31:13 PDT 2022.
+
 \end{thebibliography}

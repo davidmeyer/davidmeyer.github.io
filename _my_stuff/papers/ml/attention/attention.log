@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  2 JUN 2022 10:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  2 JUN 2022 11:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1454,10 +1454,10 @@ File: uesvect.fd
 File: images/attention_evolution.cropped.png Graphic file (type png)
 <use images/attention_evolution.cropped.png>
 Package pdftex.def Info: images/attention_evolution.cropped.png  used on input 
-line 358.
+line 359.
 (pdftex.def)             Requested size: 719.687pt x 448.67516pt.
 
-Overfull \hbox (2.45708pt too wide) in paragraph at lines 357--359
+Overfull \hbox (2.45708pt too wide) in paragraph at lines 358--360
  [] 
  []
 
@@ -1467,11 +1467,11 @@ Package rerunfilecheck Info: File `attention.out' has not changed.
 (rerunfilecheck)             Checksum: 314870F432600B3F15D905AAAD6B4D94;901.
  ) 
 Here is how much of TeX's memory you used:
- 52705 strings out of 478994
- 1323257 string characters out of 5858184
- 1966837 words of memory out of 5000000
- 69345 multiletter control sequences out of 15000+600000
- 422699 words of font info for 110 fonts, out of 8000000 for 9000
+ 52706 strings out of 478994
+ 1323334 string characters out of 5858184
+ 1966900 words of memory out of 5000000
+ 69346 multiletter control sequences out of 15000+600000
+ 422354 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,16n,131p,727b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1488,16 +1488,15 @@ xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on attention.pdf (5 pages, 291251 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on attention.pdf (5 pages, 287975 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 140 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

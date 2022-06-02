@@ -92,13 +92,15 @@
 Statistical language models are probability distributions which
 have many applications, including speech recognition, machine
 translation, part-of-speech tagging, parsing, handwriting
-recognition, and information retrieval. Given a \emph{sequence}
+recognition, and information retrieval. Given a sequence
 of length $n$, a language model assigns a probability
 $p(x_{1},\ldots ,x_{n})$ to the whole sequence.  Here $x_i$ is
 the $i^{th}$ word or symbol in the sequence.  A model that
 computes either $p(x_{1},\ldots ,x_{m})$ or $p(x_{n} | x_1, x_2,
 \cdots, x_{n-1})$ is called a language model. Using the chain
-rule for conditional probabilities, we can see that
+rule for conditional 
+probabilities \cite{chain_rule_for_conditional_probabilities}, 
+we can see that
 
 \begin{flalign}
 \label{eqn:chain_rule}
@@ -110,7 +112,6 @@ p(x_{3} | x_{1}, x_{2}) \cdots p(x_{n} | x_{1}, \ldots, x_{n -
 \end{flalign}
 
 
-\bigskip
 \noindent
 Observe that since our language model is
 sequential\footnote{$x_i$ occurs before $x_j$ $\forall {i,j} \; 1
@@ -126,33 +127,35 @@ defined using the chain rule as shown in Equation
 \begin{array}{lllll}
 p(x_{1},x_{2},\ldots,x_{n}) 
 	&\approx& \prod\limits_{i = 1}^{n} p(x_{i}) 
-	&\qquad \mathbin{\#} \text{ unigram model} \\
+	&\qquad \mathbin{\#} \text{ the unigram model} \\
 p(x_{i} | x_{1},x_{2},\ldots, x_{i -1}) 
 	&\approx& p(x_{i} |  x_{i-1})   
-	&\qquad \mathbin{\#} \text{ bigram model}
+	&\qquad \mathbin{\#} \text{ the bigram model}
 \end{array}
 \end{equation*}
 
 
 \bigskip
 \noindent
-The unigram model assumes we can predict the next word
-independent of all of the words that came before. The bigram
-model assumes that the future is independent of the past given
-the present, i.e., the Markov assumption.\footnote{Sometimes
-called a \emph{first-order} Markov assumption.}
+The unigram model assumes we can predict the $i^{th}$ word, 
+$x_i$, independently of $x_1,x_2,\hdots,x_{i-1}$ (the words 
+that came before it). The bigram model assumes that the 
+future is independent of the past given the present, 
+i.e., the Markov assumption.\footnote{Sometimes called a 
+first-order Markov assumption.}
 
 \bigskip
 \noindent
 Note that we can estimate the n-gram probabilities in a
 straightforward way. Consider the bigram case. Here the
-Maximum Likelihood Estimate, or MLE is simply
+Maximum Likelihood Estimate (MLE) is simply is
+
 
 \begin{equation*}
 \begin{array}{llll}
 p(x_{i} |x_{i-1}) 
-	&=& \frac{count(x_{i-i}, x_{i})}{count(x_{i-1})}
-    &\qquad \mathbin{\#} \text{ bigram MLE estimate}
+	&=& \dfrac{\text{count}(x_{i-i}, x_{i})}{\text{count}(x_{i-1})}
+    &\qquad \qquad \qquad \mathbin{\#} \text{ bigram MLE estimate}
 \end{array}
 \end{equation*}
 
@@ -210,11 +213,10 @@ dimension of the RNN cells and $L$ is a sliding window.
 
 \bigskip
 \noindent
-Recent state of the art performance for translation tasks has
-been achieved using the Encoder-Decoder framework described in
-Sutskever et. al.\cite{NIPS2014_5346} and Cho
-et.al.\cite{Cho:2014aa} and represents alternate approach to
-language modeling. The following description of the
+Recent state of the art performance on translation tasks has
+been achieved using the Encoder-Decoder framework as described 
+in Sutskever et al. \cite{NIPS2014_5346} and Cho
+et al. \cite{Cho:2014aa}. The following description of the
 Encoder-Decoder framework follows the notation found in
 \cite{Bahdanau:2014aa}.
 
@@ -302,18 +304,17 @@ that outputs the probability of $y_t$, and $s_t$ is the hidden
 state of the RNN.
 
 \bigskip
-\setstretch{1.45}
 \noindent
 Recurrent Neural Networks (RNNs) take a different approach to
 machine translation.  From a probabilistic perspective, the
 machine translation task is to find a target sentence \textbf{y}
 that maximizes the conditional probability of \textbf{y} given a
-source sentence \textbf{x}, that is, $\argmax\limits_{y}
-p(\mathbf{y} | \mathbf{x})$. In neural machine translation, a
+source sentence \textbf{x}, that is, $\argmax
+p(\mathbf{y} | \mathbf{x})$ (where the $\argmax$ is over \textbf{y}). 
+In neural machine translation, a
 parameterized model is fit which maximizes the conditional
 probability of sentence pairs using a parallel training corpus.
 
-\setstretch{1.0}
 
 
 \subsection{Preliminaries}
