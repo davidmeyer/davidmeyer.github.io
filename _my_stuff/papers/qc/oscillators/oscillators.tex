@@ -128,9 +128,9 @@ how quantum fields fit into all of this. Finally,
 Hooke's law \cite{wiki:hookes_law} is a law of physics that
 states that the force (I'll just call it $F$) needed to extend or
 compress a spring by some distance ($x$) scales linearly with
-respect to that distance, that is, $F_s = -kx$, where $k$ is a
-constant factor characteristic of the spring (i.e., its
-stiffness), and $x$ is small compared to the total possible
+respect to that distance. That is, $F = -kx$, where $k$ is a
+constant characteristic of the spring (i.e., its
+stiffness) and $x$ is small compared to the total possible
 deformation of the spring. The law is named after 17th-century
 British physicist Robert Hooke \cite{robert_hooke}. He first
 stated the law in 1676 as a Latin anagram, and he published the
@@ -168,8 +168,8 @@ F = ma
 
 \bigskip
 \noindent
-Now, balancing the Equation \ref{eqn:hookes_law} force
-with the Equation \ref{eqn:newtons_2nd_law} force
+Now, balancing the Equation (\ref{eqn:hookes_law}) force
+with the Equation (\ref{eqn:newtons_2nd_law}) force
 gives us
 
 \begin{equation}
@@ -184,7 +184,7 @@ and so
 \begin{array}{llll}
 ma
 &=& -kx
-        &\qquad\qquad\mathrel{\#} \text{Equation \ref{eqn:balancing_force}} \\
+        &\qquad\qquad\mathrel{\#} \text{Equation (\ref{eqn:balancing_force})} \\
 [7pt]
 &\Rightarrow& a = - \dfrac{k}{m} x
         &\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
@@ -321,7 +321,7 @@ So now we know that
 \bigskip
 \noindent
 The next question is how do we solve the second order ordinary
-differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$?
+differential equation (Equation (\ref{eqn:d2xdt2})) for $x(t)$?
 Well, if we imagine the displacement ($x(t)$) plotted on the y
 axis against $t$ (plotted on the x axis) we see the familiar
 pattern shown in Figure \ref{fig:smh_displacement_function}.
@@ -390,12 +390,12 @@ that is, $-kx$. This force is frequently referred to as the
 \bigskip
 \noindent
 We can check to see if our guess, $x(t) = A \cos (\omega t)$, is
-really a solution to Equation \ref{eqn:d2xdt2} as follows:
+really a solution to Equation (\ref{eqn:d2xdt2}) as follows:
 
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{d^2 x}{dt^2}
-&=& - \dfrac{k}{m} x													&\qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2xdt2}} \\
+&=& - \dfrac{k}{m} x													&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:d2xdt2})} \\
 [10pt]
 &\Rightarrow& \dfrac{d^2}{dt^2}  \Big [A \cos (\omega t) \Big ] = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad \mathrel{\#} \text{guess that $x(t) = A \cos (\omega t)$} \\
@@ -418,7 +418,7 @@ really a solution to Equation \ref{eqn:d2xdt2} as follows:
 
 \bigskip
 \noindent
-So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation \ref{eqn:d2xdt2} 
+So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation (\ref{eqn:d2xdt2}) 
 in the case that
 
 \bigskip
@@ -457,7 +457,7 @@ x(t) = A \cos (2 \pi f t)
 
 \bigskip
 \noindent
-We can also put Equations \ref{eqn:omega0} and \ref{eqn:omega1}  
+We can also put Equations (\ref{eqn:omega0}) and (\ref{eqn:omega1}) 
 together to find
 
 \begin{equation*}
@@ -527,7 +527,7 @@ E_{\text{total}}
 						&\qquad \qquad \qquad \mathrel{\#} \left ( A \cos (\omega t) \right )^2 = A^2 \cos^2 (\omega t) \\
 [12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2} m \omega^2 A^2 \cos^2 (\omega t) 
-						&\qquad \qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m \omega^2 \text{ (Equation \ref{eqn:omega0})} \\
+						&\qquad \qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m \omega^2 \text{ (Equation (\ref{eqn:omega0}))} \\
 [12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \left (\sin^2 (\omega t) + \cos^2 (\omega t) \right )
 						&\qquad \qquad \qquad \mathrel{\#} \text{factor out $\dfrac{1}{2} m \omega^2 A^2$} \\
@@ -735,7 +735,7 @@ and the scale factor $\sin \theta$.
 
 \bigskip
 \noindent
-Looking at the right hand side of Equation \ref{eqn:tau} we see
+Looking at the right hand side of Equation (\ref{eqn:tau}) we see
 we need to define $I$, the moment of inertia of the pendulum.
 In general the moment of inertia is found for any given object 
 by $I =\sum mr^2$, where the sum is over each point in the object.
@@ -749,15 +749,15 @@ I = mL^2
 
 \bigskip
 \noindent
-If we combine Equations \ref{eqn:tau} and \ref{eqn:moi} we see 
+If we combine Equations (\ref{eqn:tau}) and (\ref{eqn:moi}) we see 
 that
 
 \begin{equation*}
 \begin{array}{llll}
 \tau 
-&=& I \alpha											&\qquad \qquad \mathrel{\#} \text{definition of torque $\tau$ (Equation \ref{eqn:tau})} \\
+&=& I \alpha											&\qquad \qquad \mathrel{\#} \text{definition of torque $\tau$ (Equation (\ref{eqn:tau}))} \\
 [5pt]
-&=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{definition of moment of inertia $I$ (Equation \ref{eqn:moi})} \\
+&=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{definition of moment of inertia $I$ (Equation (\ref{eqn:moi}))} \\
 [5pt]
 &\Rightarrow& -FL = mL^2 \alpha							&\qquad \qquad \mathrel{\#} \tau = FL \\
 [5pt]
@@ -795,7 +795,7 @@ we see that
 \begin{equation*}
 \begin{array}{llll}
 \alpha
-&=& - \dfrac{g}{L} \sin \theta											&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:alpha}} \\
+&=& - \dfrac{g}{L} \sin \theta											&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:alpha})} \\
 [12pt]
 &=& - \omega^2 \sin \theta												&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
 [12pt]
@@ -815,10 +815,10 @@ Now we know that
 \bigskip
 \noindent
 All good, but there is an interesting problem with Equation 
-\ref{eqn:d2_theta}: Unlike the equation of motion for the 
-spring and mass problem (Equation \ref{eqn:d2xdt2}), we 
+(\ref{eqn:d2_theta}): Unlike the equation of motion for the 
+spring and mass problem (Equation (\ref{eqn:d2xdt2})), we 
 can't solve the second order differential equation of motion 
-for the simple pendulum case (Equation \ref{eqn:d2_theta}). 
+for the simple pendulum case (Equation (\ref{eqn:d2_theta})). 
 However, we can solve a different but related problem which 
 is called the "Small-Angle Pendulum Problem".
 
@@ -835,7 +835,7 @@ another way
 \bigskip
 \noindent
 Using this constraint we can substitute $\theta$ for $\sin \theta$
-in Equation \ref{eqn:d2_theta} and write 
+in Equation (\ref{eqn:d2_theta}) and write 
 
 \medskip
 \begin{equation}
@@ -895,13 +895,13 @@ If we set $\theta = e^{i\omega t}$ we see that
 \bigskip
 \noindent
 So now we know that $\theta_1 = C_1 e^{i \omega t}$ is a
-solution to Equation \ref{eqn:d2_small_angle}, where $C_1 \in
+solution to Equation (\ref{eqn:d2_small_angle}), where $C_1 \in
 \mathbb{C}$. Notice also that $\theta_2 = C_2 e^{-i \omega t}$ is
 also a solution with $C_2 \in \mathbb{C}$. Here the (constant)
 coefficients $C_1$ and $C_2$ are preserved through
 differentiation and are essentially the integration constants.
 These constants represent the infinite number of solutions to the
-differential equation Equation \ref{eqn:d2_small_angle}, where
+differential equation Equation (\ref{eqn:d2_small_angle}), where
 are determined by the initial characteristics of the
 pendulum. The sum of these solutions is a more general solution,
 since either of the two constants be be set to $\theta$ to obtain
@@ -915,7 +915,7 @@ the original solutions:
 
 \bigskip
 \noindent
-Taking the derivative of Equation \ref{eqn:theta_sum} we get
+Taking the derivative of Equation (\ref{eqn:theta_sum}) we get
 
 \medskip
 \begin{equation}
@@ -932,7 +932,7 @@ Taking the derivative one more time we see that
 \begin{array}{llll}
 \dfrac{d^2 \theta}{dt^2} 
 &=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} - C_2 i \omega e^{-i \omega t} \Big ]		
-		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:dtheta_dt}} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:dtheta_dt})} \\
 [10pt]
 &=& \dfrac{d}{dt} \Big [ C_1 i \omega e^{i \omega t} \Big ] - \dfrac{d}{dt} \Big [C_2 i \omega e^{-i \omega t} \Big ]		
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{derivative is a linear operator} \\
@@ -953,28 +953,28 @@ Taking the derivative one more time we see that
 		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out $- \omega^2$} \\
 [10pt]
 &=& - \omega^2 \theta
-		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{i \omega t} + C_2 e^{-i \omega t}$ (Equation \ref{eqn:theta_sum})} \\
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{$\theta = C_1 e^{i \omega t} + C_2 e^{-i \omega t}$ (Equation (\ref{eqn:theta_sum}))} \\
 [10pt]
 &\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \theta 
-		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2_small_angle}}
+		&\qquad \qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:d2_small_angle})}
 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-This result tells us that Equation \ref{eqn:d2_small_angle}
+This result tells us that Equation (\ref{eqn:d2_small_angle})
 encompasses all of the possible solutions to the small-angle
 pendulum problem. All good, but one question we might ask is what
 happens when we apply Euler's formula \cite{notes:eulers_formula}
-to Equation \ref{eqn:theta_sum}? Recall that Euler's Formula
+to Equation (\ref{eqn:theta_sum})? Recall that Euler's Formula
 states that $e^{ix} = \cos x + i \sin x$ so we see that
 
 \begin{equation*}
 \begin{array}{llll}
 \theta 
 &=& C_1 e^{i\omega t} + C_2 e^{-i\omega t}
-		&\qquad \mathrel{\#} \text{Equation \ref{eqn:theta_sum}}	\\	
+		&\qquad \mathrel{\#} \text{Equation (\ref{eqn:theta_sum})}	\\	
 [10pt]
 &=& C_1 \cos ( \omega t) + C_1 i \sin (\omega t) + C_2 e^{-i \omega t}	
 		&\qquad \mathrel{\#} C_1 e^{i \omega t} = C_1 \cos (\omega t) + C_1 i \sin (\omega t) \\
@@ -1137,7 +1137,7 @@ V = V_{L} + V_{R} + V_{C}
 \bigskip
 \noindent
 For an LC circuit Kirchoff’s Voltage Law tells us that
-$V = V_{L} + V_{C}$ (Equation \ref{eqn:kirchhoffs_voltage_law},
+$V = V_{L} + V_{C}$ (Equation (\ref{eqn:kirchhoffs_voltage_law}),
 minus $V_{R}$ since there is no resistor in the LC circuit). 
 Substituting the voltage values into this equation 
 we get 
@@ -1168,7 +1168,7 @@ we can see that
 \begin{equation*}
 \begin{array}{llll}
 0
-&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I					&\qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:V} with $\dot{V} = 0$} \\
+&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I					&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:V}) with $\dot{V} = 0$} \\
 [12pt]
 &=& \ddot{I} + \bigg (\dfrac{1}{LC} \bigg ) I					&\qquad \qquad \qquad \mathrel{\#} \text{divide both sides by $L$} \\	
 [12pt]
@@ -1307,8 +1307,8 @@ damped harmonic oscillator is
 
 \medskip
 \noindent
-and we can see that Equation \ref{eqn:rlc_eom} is an instance
-of Equation \ref{eqn:damp_general_form} with $\psi = I$, 
+and we can see that Equation (\ref{eqn:rlc_eom}) is an instance
+of Equation (\ref{eqn:damp_general_form}) with $\psi = I$, 
 $\beta = \dfrac{R}{L}$
 and $\omega_{0} = \sqrt{\dfrac{1}{LC}}$.
 
@@ -1323,7 +1323,7 @@ we know that
 \begin{array}{llll}
 ma 
 &=& - kx -b \dot{x} 
-		&\qquad \qquad \mathrel{\#} \text{balance forces: Equation \ref{eqn:balancing_force} minus the damping force $b \dot{x}$} \\
+		&\qquad \qquad \mathrel{\#} \text{balance forces: Equation (\ref{eqn:balancing_force}) minus the damping force $b \dot{x}$} \\
 [14pt]	
 &=& -b \dot{x} - kx 
 		&\qquad \qquad \mathrel{\#} \text{rearrange}	\\
@@ -1356,8 +1356,8 @@ spring and mass system is
 \noindent
 where $\bigg (\dfrac{b}{m} \bigg ) \dot{x}$ is a new term 
 that represents the damping force (e.g. resistance or friction).
-Here again the equation of motion, Equation \ref{eqn:damped_spring_and_mass},
-is of the same form as Equation \ref{eqn:damp_general_form}.
+Here again the equation of motion, Equation (\ref{eqn:damped_spring_and_mass}),
+is of the same form as Equation (\ref{eqn:damp_general_form}).
 Finally, the displacement function for the damped harmonic oscillator
 is shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
 \par }
@@ -1382,7 +1382,7 @@ For the damped small-angle pendulum case the equation of motion is
 
 \medskip
 \noindent
-which again has the same form as Equation \ref{eqn:damp_general_form}.
+which again has the same form as Equation (\ref{eqn:damp_general_form}).
 
 \bigskip
 \noindent
@@ -1589,7 +1589,7 @@ P = \sigma A T^4
 
 \bigskip
 \noindent
-In words, Equation \ref{eqn:stefan_boltzmanns_law} says
+In words, Equation (\ref{eqn:stefan_boltzmanns_law}) says
 that the power ($P$) emitted by a black body is proportional
 to its area ($A$) and temperature to the forth power ($T^4$).
 The proportionality constant $\sigma$ is called
