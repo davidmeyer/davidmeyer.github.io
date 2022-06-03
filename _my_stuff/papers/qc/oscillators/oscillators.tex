@@ -13,7 +13,9 @@
 %   tikz et al
 %
 \usepackage{tikz}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,through,intersections,lindenmayersystems,backgrounds}    
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,
+                math,decorations,through,intersections,
+                lindenmayersystems,backgrounds}    
 \usepackage{pgfplots}
 \usepackage{pgfplots}	
 %
@@ -23,8 +25,7 @@
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}													% get \mathbold
-\usepackage{gensymb}													% get \degree
-% \usepackage[oldvoltagedirection]{circuitikz}							%
+\usepackage{gensymb}                    								% get \degree
 \usepackage{circuitikz}													% draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -46,8 +47,6 @@
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
-
-
 %
 %	watermarks
 %
@@ -76,7 +75,7 @@
 %	title, etc
 %
 \title{A Few Notes on Simple Harmonic Oscillators}
-\author{David Meyer \\ dmm@1-4-5.net}
+\author{David Meyer \\ dmm613@gmail.com}
 \date{Last update: \today}
 %
 %	be compatible
@@ -112,11 +111,11 @@ expensive novelties to useful timekeepers.
 \bigskip
 \noindent
 These notes are organized (I hope) as follows: Section
-\ref{sec:hookes_law} looks at Hooke's Law in some detail. 
-Section \ref{sec:smo} considers some examples of simple 
-harmonic oscillators, including Section \ref{subsec:simple_pendulum}
-which looks at the simple pendulum, and Section 
-\ref{subsec:lc_circuit} which considers LC circuits. Section
+\ref{sec:hookes_law} looks at Hooke's Law in some detail.
+Section \ref{sec:smo} considers some examples of simple harmonic
+oscillators, including Section \ref{subsec:simple_pendulum} which
+looks at the simple pendulum, and Section \ref{subsec:lc_circuit}
+which considers LC circuits. Section
 \ref{sec:quantum_harmonic_oscillators} looks at the Quantum
 Harmonic Oscillator. Section \ref{sec:quantum_fields} outlines
 how quantum fields fit into all of this. Finally,
@@ -126,17 +125,16 @@ how quantum fields fit into all of this. Finally,
 \section{Hooke's Law}
 \label{sec:hookes_law}
 Hooke's law \cite{wiki:hookes_law} is a law of physics that
-states that the force (I'll just call it $F$) needed to extend or
-compress a spring by some distance ($x$) scales linearly with
-respect to that distance. That is, $F = -kx$, where $k$ is a
-constant characteristic of the spring (i.e., its
-stiffness) and $x$ is small compared to the total possible
-deformation of the spring. The law is named after 17th-century
-British physicist Robert Hooke \cite{robert_hooke}. He first
-stated the law in 1676 as a Latin anagram, and he published the
-solution of his anagram in 1678 as: ut tensio, sic vis ("as the
-extension, so the force" or "the extension is proportional to the
-force") \cite{hooke_of_spring}.
+states that the force needed to extend or compress a spring by
+some distance scales linearly with respect to that distance. More
+specifically: $F = -kx$, where $k$ is a constant characteristic
+of the spring (i.e., its stiffness) and $x$ is the displacement
+from the equilibrium point (see Figure \ref{fig:spring_and_mass_system}). 
+The law is named after 17th-century British physicist Robert Hooke
+\cite{robert_hooke}. Hooke first stated the law in 1676 as a Latin
+anagram, and he published the solution of his anagram in 1678 as:
+ut tensio, sic vis ("as the extension, so the force" or "the
+extension is proportional to the force") \cite{hooke_of_spring}.
 
 \subsection{The Mathematics of Hooke's Law}
 \label{subsec:mathematics_of_hookes_law}
@@ -168,9 +166,8 @@ F = ma
 
 \bigskip
 \noindent
-Now, balancing the Equation (\ref{eqn:hookes_law}) force
-with the Equation (\ref{eqn:newtons_2nd_law}) force
-gives us
+Now, balancing the Equation (\ref{eqn:hookes_law}) force with the
+Equation (\ref{eqn:newtons_2nd_law}) force gives us
 
 \begin{equation}
 ma = -kx
@@ -190,7 +187,10 @@ ma
         &\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
 [7pt]
 &\Rightarrow& \dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x	
-        &\qquad\qquad\mathrel{\#} a = \dfrac{d}{dt} \left [ v \right ] = \dfrac{d}{dt} \left [ \dfrac{dx}{dt} \right ] = \dfrac{d^2 x}{dt^2} \\
+        &\qquad\qquad\mathrel{\#} a
+        = \dfrac{d}{dt} \left [ v \right ]
+        = \dfrac{d}{dt} \left [ \dfrac{dx}{dt} \right ]
+        = \dfrac{d^2 x}{dt^2} \\
 \end{array}
 \end{equation*}
 
@@ -205,7 +205,7 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
   \resizebox{0.55 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
-        \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)        
+        \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)
 %
 % draw the first spring 
 %
@@ -395,31 +395,38 @@ really a solution to Equation (\ref{eqn:d2xdt2}) as follows:
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{d^2 x}{dt^2}
-&=& - \dfrac{k}{m} x													&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:d2xdt2})} \\
+&=& - \dfrac{k}{m} x            &\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:d2xdt2})} \\
 [10pt]
 &\Rightarrow& \dfrac{d^2}{dt^2}  \Big [A \cos (\omega t) \Big ] = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad \mathrel{\#} \text{guess that $x(t) = A \cos (\omega t)$} \\
 [10pt]
 &\Rightarrow& \dfrac{d}{dt}  \Big [-\omega A \sin (\omega t) \Big ] = -\dfrac{k}{m} x
-				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) 
+                                = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
 [10pt]
 &\Rightarrow& -\omega^2 A \cos (\omega t) = -\dfrac{k}{m} x
-				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\sin (u) = \cos (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+				&\qquad \qquad \qquad
+                                \mathrel{\#} \text{$\dfrac{d}{dt}\sin (u)
+                                = \cos (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
 [10pt]
-&\Rightarrow& \omega^2 A \cos (\omega t) = \dfrac{k}{m} x				&\qquad \qquad \qquad \mathrel{\#} \text{cancel minus} \\
+&\Rightarrow& \omega^2 A \cos (\omega t) = \dfrac{k}{m} x
+                                &\qquad \qquad \qquad \mathrel{\#} \text{cancel minus} \\
 [10pt]
-&\Rightarrow& \omega^2 x = \dfrac{k}{m} x								&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
+&\Rightarrow& \omega^2 x = \dfrac{k}{m} x
+                                &\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
 [10pt]
-&\Rightarrow& \omega^2  = \dfrac{k}{m}									&\qquad \qquad \qquad \mathrel{\#} \text{cancel $x$} \\
+&\Rightarrow& \omega^2  = \dfrac{k}{m}
+                                &\qquad \qquad \qquad \mathrel{\#} \text{cancel $x$} \\
 [10pt]
-&\Rightarrow& \omega  = \sqrt{\dfrac{k}{m}}								&\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
+&\Rightarrow& \omega  = \sqrt{\dfrac{k}{m}}
+                                &\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation (\ref{eqn:d2xdt2}) 
-in the case that
+So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation
+(\ref{eqn:d2xdt2}) in the case that
 
 \bigskip
 \begin{equation}
