@@ -24,9 +24,9 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
-\usepackage{fixmath}													% get \mathbold
-\usepackage{gensymb}                    								% get \degree
-\usepackage{circuitikz}													% draw circuits
+\usepackage{fixmath}							% get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{url}
@@ -129,12 +129,14 @@ states that the force needed to extend or compress a spring by
 some distance scales linearly with respect to that distance. More
 specifically: $F = -kx$, where $k$ is a constant characteristic
 of the spring (i.e., its stiffness) and $x$ is the displacement
-from the equilibrium point (see Figure \ref{fig:spring_and_mass_system}). 
-The law is named after 17th-century British physicist Robert Hooke
-\cite{robert_hooke}. Hooke first stated the law in 1676 as a Latin
-anagram, and he published the solution of his anagram in 1678 as:
-ut tensio, sic vis ("as the extension, so the force" or "the
-extension is proportional to the force") \cite{hooke_of_spring}.
+from the equilibrium point (see Figure
+\ref{fig:spring_and_mass_system}).  The law is named after
+17th-century British physicist Robert Hooke
+\cite{robert_hooke}. Hooke first stated the law in 1676 as a
+Latin anagram, and he published the solution of his anagram in
+1678 as: ut tensio, sic vis ("as the extension, so the force" or
+"the extension is proportional to the force")
+\cite{hooke_of_spring}.
 
 \subsection{The Mathematics of Hooke's Law}
 \label{subsec:mathematics_of_hookes_law}
@@ -218,11 +220,9 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
                  pre length=3mm,
                  post length=3mm},
              decorate] (0,0.40) -- (5.75,0.40);
-        \fill (0.00,0.40) circle(0.05);                                                         % draw a dot connecting the spring to the vertical support
+        \fill (0.00,0.40) circle(0.05);                                 % draw a dot connecting the spring to the vertical support
  %      
- %
- %
- % draw the first mass
+ %      draw the first mass
  %
        \node[draw,
 	     fill=yellow!60,
@@ -239,9 +239,9 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
       \coordinate (c1) at (6.00,7.25);
       \coordinate (c2) at (3.50,0.00);
       \coordinate (c3) at (3.50,4.00);            
- %
- %	draw some text
- %  
+%
+%       draw some text
+%  
       \path (c1) node[left] {\Large {\bf \underline{Physical System}}};
       \path (c2) node[yshift=-0.5mm, below] {$0$};
       \draw[thin,red] (c2) -- (c3) coordinate [label={[above, yshift=0.5mm] \text{{\footnotesize \color{black}{{Equilibrium Point}}}}}];   
@@ -261,8 +261,8 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
                  post length=3mm},
              decorate]    (0.00,2.75) -- (3.50,2.75);
         \draw [draw=none] (0.00,2.75) -- (3.50,2.75) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];
-        \fill (0.00,2.75) circle(0.05);                                                                 % draw a dot connecting the spring to the y axis
-        \fill (3.50,2.75) circle(0.05);                                                                 % draw a dot connecting the spring to the mass
+        \fill (0.00,2.75) circle(0.05);                                         % draw a dot connecting the spring to the y axis
+        \fill (3.50,2.75) circle(0.05);                                         % draw a dot connecting the spring to the mass
         \draw [draw=none] (0,2.75) -- (3.5,2.75) coordinate [label={[midway,below,yshift=-0.25cm] {\tiny $k$}}];	% draw k
 
  %
@@ -274,7 +274,6 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 	     minimum height=0.75cm,
 	     anchor=north,
 	     label=center:$m$] at (4.00,3.15) {};
-	     
 %	
 %	draw information about the graphic to the right ((12.50,Y))
 %
@@ -366,9 +365,12 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
 % \fill [red]  ({2*1.71},4.75) circle (0.05);
   \draw[thick,red] (1.71,4.50) -- (1.71,5.00); 
   \draw[thick,red] ({2*1.71},4.50) -- ({2*1.71},5.00); 
-  \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75) coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
+  \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75)
+                coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
   \draw[draw=none] (0.00,0.05) -- ({4*1.71},0.05) 
-  				coordinate [label={[draw,blue,thick,rectangle,font=\footnotesize,midway] {\color{black}{$\; x(t) = A \cos (\omega t) \; $}}}];
+                coordinate [label={[draw,blue,thick,rectangle,font=\footnotesize,midway]
+                {\color{black}{$\; x(t)
+                = A \cos (\omega t) \; $}}}];
  \end{tikzpicture}
 }
 \caption{Simple Harmonic Oscillator Displacement Function}
@@ -480,7 +482,6 @@ T = 2 \pi \sqrt{\dfrac{m}{k}}
 \end{equation*}
 
 
-
 \subsection{Total Energy of a Simple Harmonic Oscillator}
 We know that the total energy of an oscillator  
 such as the spring and mass system we looked 
@@ -513,7 +514,8 @@ so that
 \begin{array}{llll}
 E_{\text{total}}
 &=& \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 									
-						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}} = \text{KE} + \text{PE} \\
+						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}}
+                                                = \text{KE} + \text{PE} \\
 [12pt]
 &=& \dfrac{1}{2} m \left (\dfrac{dx}{dt} \right )^2 + \dfrac{1}{2}kx^2 		
 						&\qquad \qquad \qquad \mathrel{\#} v = \dfrac{dx}{dt} \\
@@ -522,7 +524,8 @@ E_{\text{total}}
 						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
 [12pt]
 &=& \dfrac{1}{2} m \left (- \omega A \sin (\omega t) \right )^2 + \dfrac{1}{2}kx^2 
-						&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+						&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u)
+                                                = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
 [12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}kx^2 
 						&\qquad \qquad \qquad \mathrel{\#} \left (- \omega A \sin (\omega t) \right )^2 = \omega^2 A^2 \sin^2 (\omega t) \\
@@ -652,9 +655,8 @@ from the Latin \emph{pendulus} meaning 'hanging'
 %
 %	draw bob at origin and on the other side
 %
-     \draw[red, densely dotted] (bob) arc(-60:-120:3);										% draw arc   
-     \coordinate (bob1) at ($(EP) + (0,0.10)$);												% draw bob1 
-%    \draw [draw=none] (bob) -- (bob1) node [midway,above,scale=0.6] {$s$};					% draw the arc length s
+     \draw[red, densely dotted] (bob) arc(-60:-120:3);								% draw arc   
+     \coordinate (bob1) at ($(EP) + (0,0.10)$);									% draw bob1 
      \filldraw [very thin, fill=black!5, draw=black] (bob1) circle[radius=0.150];
      \path (bob1) node[scale=0.50] {$m$};
      \path (bob1) node[scale=0.35,below,yshift=-0.65cm] {\bf Equilibrium Point};
@@ -666,16 +668,15 @@ from the Latin \emph{pendulus} meaning 'hanging'
 %
 %	make sure bob and bob2 are on top, so draw last
 %
-     \filldraw [thin, fill=white,draw] (P) circle[radius=0.04];								% pivot point p
-
+     \filldraw [thin, fill=white,draw] (P) circle[radius=0.04];							% pivot point p
      \filldraw [fill=black!15,draw=black] (bob) circle[radius=0.150];						% draw bob
      \path (bob) node[scale=0.50] {${\bf m}$};
      
-     \filldraw [very thin, fill=black!5,draw=black] (bob2) circle[radius=0.150];            % draw bob2
+     \filldraw [very thin, fill=black!5,draw=black] (bob2) circle[radius=0.150];                                % draw bob2
      \path (bob2) node[scale=0.50] {$m$};
      
    \end{tikzpicture}
-  }                                                                                         % end \resizebox
+  }                                                                                                             % end \resizebox
  \caption{Free Body Diagram for a Simple Pendulum}
  \label{fig:simple_pendulum}
 \end{figure}
@@ -762,17 +763,19 @@ that
 \begin{equation*}
 \begin{array}{llll}
 \tau 
-&=& I \alpha											&\qquad \qquad \mathrel{\#} \text{definition of torque $\tau$ (Equation (\ref{eqn:tau}))} \\
+&=& I \alpha                                            &\qquad \qquad \mathrel{\#} \text{definition of
+                                                          torque $\tau$ (Equation (\ref{eqn:tau}))} \\
 [5pt]
-&=& mL^2 \alpha											&\qquad \qquad \mathrel{\#} \text{definition of moment of inertia $I$ (Equation (\ref{eqn:moi}))} \\
+&=& mL^2 \alpha                                         &\qquad \qquad \mathrel{\#} \text{definition of
+                                                          moment of inertia $I$ (Equation (\ref{eqn:moi}))} \\
 [5pt]
-&\Rightarrow& -FL = mL^2 \alpha							&\qquad \qquad \mathrel{\#} \tau = FL \\
+&\Rightarrow& -FL = mL^2 \alpha                         &\qquad \qquad \mathrel{\#} \tau = FL \\
 [5pt]
-&\Rightarrow& -L mg \sin \theta = mL^2 \alpha			&\qquad \qquad \mathrel{\#} F = mg \,\sin \, \theta \\
+&\Rightarrow& -L mg \sin \theta = mL^2 \alpha           &\qquad \qquad \mathrel{\#} F = mg \,\sin \, \theta \\
 [5pt]
-&\Rightarrow& - g \sin \theta = L \alpha				&\qquad \qquad \mathrel{\#} \text{cancel $L$} \\
+&\Rightarrow& - g \sin \theta = L \alpha                &\qquad \qquad \mathrel{\#} \text{cancel $L$} \\
 [5pt]
-&\Rightarrow& \alpha = - \dfrac{g}{L} \sin \theta		&\qquad \qquad \mathrel{\#} \text{solve for $\alpha$} \\
+&\Rightarrow& \alpha = - \dfrac{g}{L} \sin \theta       &\qquad \qquad \mathrel{\#} \text{solve for $\alpha$} \\
 \end{array}
 \end{equation*}
 
@@ -802,11 +805,11 @@ we see that
 \begin{equation*}
 \begin{array}{llll}
 \alpha
-&=& - \dfrac{g}{L} \sin \theta											&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:alpha})} \\
+&=& - \dfrac{g}{L} \sin \theta                                          &\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:alpha})} \\
 [12pt]
-&=& - \omega^2 \sin \theta												&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
+&=& - \omega^2 \sin \theta                                              &\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
 [12pt]
-&\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta	&\qquad \qquad \mathrel{\#} \alpha = \dfrac{d^2 \theta}{dt^2} \\
+&\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta    &\qquad \qquad \mathrel{\#} \alpha = \dfrac{d^2 \theta}{dt^2} \\
 \end{array}
 \end{equation*}
 
@@ -879,10 +882,13 @@ If we set $\theta = e^{i\omega t}$ we see that
 \begin{equation*}
 \begin{array}{llll}
 \theta &=& e^{i\omega t}						
-			&\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
+                &\qquad \qquad \mathrel{\#} \text{definition of $\theta$} \\
 [6pt]
 \dfrac{d \theta}{dt} &=& i \omega e^{i\omega t}		
-		&\qquad \qquad \mathrel{\#} \text{chain rule: $\dfrac{d}{dt} e^u = e^u \cdot \dfrac{du}{dt}$ with $u =i \omega t$ and so $\dfrac{du}{dt} = i \omega$} \\
+                &\qquad \qquad \mathrel{\#} \text{chain rule:
+                $\dfrac{d}{dt}
+                e^u = e^u \cdot \dfrac{du}{dt}$ with $u
+                = i \omega t$ and so $\dfrac{du}{dt} = i \omega$} \\
 [12pt]
 \dfrac{d^2 \theta}{dt^2} 
 &=& \dfrac{d}{dt} \Big [ i \omega e^{i\omega t} \Big ]	
@@ -901,8 +907,8 @@ If we set $\theta = e^{i\omega t}$ we see that
 
 \bigskip
 \noindent
-So now we know that $\theta_1 = C_1 e^{i \omega t}$ is a
-solution to Equation (\ref{eqn:d2_small_angle}), where $C_1 \in
+So now we know that $\theta_1 = C_1 e^{i \omega t}$ is a solution
+to Equation (\ref{eqn:d2_small_angle}), where $C_1 \in
 \mathbb{C}$. Notice also that $\theta_2 = C_2 e^{-i \omega t}$ is
 also a solution with $C_2 \in \mathbb{C}$. Here the (constant)
 coefficients $C_1$ and $C_2$ are preserved through
@@ -1039,8 +1045,8 @@ described in \cite{helden1995}.
 approximation for the pendulum period is fairly good and many
 papers study the error in this approximation. For example, when
 $\theta < \dfrac{\pi}{4}$ the relative (or approximation)
-error\footnote{The Relative Error $R$ is computed as follows: $R =
-100 * \Bigg ( \dfrac{T_{\text{exact}} -
+error\footnote{The Relative Error $R$ is computed as follows: $R
+= 100 * \Bigg ( \dfrac{T_{\text{exact}} -
 T_{\text{approx}}}{T_{\text{exact}}} \Bigg )$
 \cite{wiki:approximation_error}.}  $R$ is less than
 3.84\%. However, even this small inaccuracy can add up: after
@@ -1063,11 +1069,11 @@ are used produce clocks with long and accurate periods
 
 \subsection{The LC Circuit Oscillator}
 \label{subsec:lc_circuit}
-Amazingly, it turns out that the equation of motion for the series LC 
-circuit, shown in Figure \ref{fig:series_lc_circuit}, has the same form 
-as the equations of motion for both spring and mass and the small-angle 
-pendulum systems, \cite{differential_equations_rlc_circuits,rlc_circuits}, 
-namely
+Amazingly, it turns out that the equation of motion for the
+series LC circuit, shown in Figure \ref{fig:series_lc_circuit},
+has the same form as the equations of motion for both spring and
+mass and the small-angle pendulum systems,
+\cite{differential_equations_rlc_circuits,rlc_circuits}, namely
 
 \medskip
 \begin{equation*}
@@ -1082,14 +1088,13 @@ namely
        \draw[step=0.5,thin, black!30] (-1.50,-0.5) grid (4.50,3.0);
        \path (0,0) coordinate (ref_gnd);
        \draw (ref_gnd) -- (ref_gnd) to [american voltage source=\(V\)] ++(0,2)
- %           to [R=\(R\)] ++(3,0) 
             to [L=\(L\)] ++(3,0) 
             to [C=\(C\)] ++(0,-2)
             to []  (ref_gnd);
-       \draw [draw=none] (0,0) -- (3,0) node [midway,above] {$I$};									% draw current (I) and direction arrow
+       \draw [draw=none] (0,0) -- (3,0) node [midway,above] {$I$};                      % draw current (I) and direction arrow
        \draw [black,thick, -latex] (1.00,-0.25) -- (2.00,-0.25) node [midway,below] {};
    \end{circuitikz}
-  }																									% end \resizebox
+  }                                                                                     % end \resizebox
 \caption{Series LC Circuit}
 \label{fig:series_lc_circuit}
 \end{figure}
@@ -1175,13 +1180,13 @@ we can see that
 \begin{equation*}
 \begin{array}{llll}
 0
-&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I					&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:V}) with $\dot{V} = 0$} \\
+&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I			&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:V}) with $\dot{V} = 0$} \\
 [12pt]
-&=& \ddot{I} + \bigg (\dfrac{1}{LC} \bigg ) I					&\qquad \qquad \qquad \mathrel{\#} \text{divide both sides by $L$} \\	
+&=& \ddot{I} + \bigg (\dfrac{1}{LC} \bigg ) I			&\qquad \qquad \qquad \mathrel{\#} \text{divide both sides by $L$} \\	
 [12pt]
-&\Rightarrow& \ddot{I} = - \bigg (\dfrac{1}{LC} \bigg ) I		&\qquad \qquad \qquad \mathrel{\#} \text{rearrange}	\\	
+&\Rightarrow& \ddot{I} = - \bigg (\dfrac{1}{LC} \bigg ) I       &\qquad \qquad \qquad \mathrel{\#} \text{rearrange}	\\	
 [12pt]
-&\Rightarrow& \ddot{I} = - \omega_{0}^{2} I						&\qquad \qquad \qquad \mathrel{\#} \text{set $\omega_{0} = \sqrt{\dfrac{1}{LC}}$}
+&\Rightarrow& \ddot{I} = - \omega_{0}^{2} I			&\qquad \qquad \qquad \mathrel{\#} \text{set $\omega_{0} = \sqrt{\dfrac{1}{LC}}$}
 \end{array}
 \end{equation*}
 
@@ -1217,28 +1222,27 @@ shown in Figure \ref{fig:series_rlc_circuit}.
             to [L=\(L\)] ++(3,0) 
             to [C=\(C\)] ++(0,-2)
             to []  (ref_gnd);
-       \draw [draw=none] (0,0) -- ({3+3},0) node [midway,above] {$I$};								% draw current (I) and direction arrow
+       \draw [draw=none] (0,0) -- ({3+3},0) node [midway,above] {$I$};					% draw current (I) and direction arrow
        \draw [black,thick, -latex] (2.50,-0.25) -- ({((3+3)/2) + 0.50},-0.25) node [midway,below] {};
-       \draw [draw=none] (ref_gnd) -- ({3+3},2.90) node [midway,above] {$I$};						% draw current (I) and direction arrow
+       \draw [draw=none] (ref_gnd) -- ({3+3},2.90) node [midway,above] {$I$};				% draw current (I) and direction arrow
        \draw [black,thick, latex-] (2.50,2.250) -- (3.50,2.250) node [midway,above] {};
    \end{circuitikz}
-  }																									% end \resizebox
+  }                                                                                                     % end \resizebox
 \caption{Series RLC Circuit}
 \label{fig:series_rlc_circuit}
 \end{figure}
 
 \noindent
-So the question is what exactly is the equivalence 
-between a RLC circuit and a damped spring and mass 
-system? The answer is that they are both damped 
-simple harmonic oscillators. Ok, but why?
+So the question is what exactly is the equivalence between a RLC
+circuit and a damped spring and mass system? The answer is that
+they are both damped simple harmonic oscillators. Ok, but why?
 
 \bigskip
 \noindent
-If we add a resistor to the series LC circuit
-shown in Figure \ref{fig:series_lc_circuit}
-we get the RLC circuit shown in Figure \ref{fig:series_rlc_circuit}.
-We can use Kirchoff’s Voltage Law again to see that
+If we add a resistor to the series LC circuit shown in Figure
+\ref{fig:series_lc_circuit} we get the RLC circuit shown in
+Figure \ref{fig:series_rlc_circuit}.  We can use Kirchoff’s
+Voltage Law again to see that
 
 \begin{equation*}
 V = V_{L} + V_{R} + V_{C}
@@ -1258,10 +1262,8 @@ V = L \dot{I} + R I + V_{C}
 \medskip
 {\setstretch{1.75}
 \noindent
-Taking the derivative of both sides and
-recalling that
-$\dot{V}_{C} = \bigg (\dfrac{1}{C} \bigg ) I$
-we get \par}
+Taking the derivative of both sides and recalling that
+$\dot{V}_{C} = \bigg (\dfrac{1}{C} \bigg ) I$ we get \par}
 
 \bigskip
 \begin{equation}
@@ -1277,10 +1279,10 @@ and so
 \begin{array}{llll}
 \dot{V}
 &=& L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
-		&\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:v_rlc}}	\\	
+		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:v_rlc})} \\
 [15pt]
 &\Rightarrow& 0 = L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I
-		&\qquad \qquad \mathrel{\#} \text{$V$ is a constant power source so $\dot{V} = 0$}	\\	
+		&\qquad \qquad \mathrel{\#} \text{$V$ is a constant power source so $\dot{V} = 0$} \\
 [15pt]
 &\Rightarrow& L \ddot{I} + R \dot{I} + \bigg (\dfrac{1}{C} \bigg ) I = 0
 		&\qquad \qquad \mathrel{\#} \text{rearrange} \\
@@ -1293,7 +1295,8 @@ and so
 
 \bigskip
 \noindent
-So the equation of motion for the series RLC circuit oscillator is
+So the equation of motion for the series RLC circuit oscillator
+is 
 
 \medskip
 \begin{equation}
@@ -1303,8 +1306,8 @@ So the equation of motion for the series RLC circuit oscillator is
 
 \bigskip
 \noindent
-The general form of the equation of motion for a
-damped harmonic oscillator is 
+The general form of the equation of motion for a damped harmonic
+oscillator is
 
 \medskip
 \begin{equation}
@@ -1315,16 +1318,14 @@ damped harmonic oscillator is
 \medskip
 \noindent
 and we can see that Equation (\ref{eqn:rlc_eom}) is an instance
-of Equation (\ref{eqn:damp_general_form}) with $\psi = I$, 
-$\beta = \dfrac{R}{L}$
-and $\omega_{0} = \sqrt{\dfrac{1}{LC}}$.
+of Equation (\ref{eqn:damp_general_form}) with $\psi = I$, $\beta
+= \dfrac{R}{L}$ and $\omega_{0} = \sqrt{\dfrac{1}{LC}}$.
 
 
 \bigskip
 \noindent
-Next, consider the equation of motion for 
-the damped spring and mass system. There
-we know that
+Next, consider the equation of motion for the damped spring and
+mass system. There we know that
 
 \begin{equation*}
 \begin{array}{llll}
@@ -1361,13 +1362,14 @@ spring and mass system is
 \smallskip
 {\setstretch{1.85}
 \noindent
-where $\bigg (\dfrac{b}{m} \bigg ) \dot{x}$ is a new term 
-that represents the damping force (e.g. resistance or friction).
-Here again the equation of motion, Equation (\ref{eqn:damped_spring_and_mass}),
-is of the same form as Equation (\ref{eqn:damp_general_form}).
-Finally, the displacement function for the damped harmonic oscillator
-is shown in Figure \ref{fig:critically_damped_harmonic_oscillator}.
-\par }
+where $\bigg (\dfrac{b}{m} \bigg ) \dot{x}$ is a new term that
+represents the damping force (e.g. resistance or friction).  Here
+again the equation of motion, Equation
+(\ref{eqn:damped_spring_and_mass}), is of the same form as
+Equation (\ref{eqn:damp_general_form}).  Finally, the
+displacement function for the damped harmonic oscillator is shown
+in Figure \ref{fig:critically_damped_harmonic_oscillator}.  \par
+}
 
 \medskip
 \bigskip
@@ -1433,13 +1435,15 @@ got here.
 
 \bigskip
 \noindent
-We pick up this story in 1851, when Gustav Kirchhoff met Robert Wilhelm Bunsen. 
-Both men had been interested in why heated objects glowed with characteristic 
-colors and intensities. Bunsen had just accepted a position at the University 
-of Heidelberg, and Kirchhoff eventually moved to Heidelberg in 1854, beginning
-a fruitful collaboration with Bunsen that resulted in the establishment of the 
-field of spectroscopy, which involves the analysis of the composition of chemical 
-compounds through the spectra they produce \cite{wiki:kirchoff, wiki:bunsen}.
+We pick up this story in 1851, when Gustav Kirchhoff met Robert
+Wilhelm Bunsen.  Both men had been interested in why heated
+objects glowed with characteristic colors and intensities. Bunsen
+had just accepted a position at the University of Heidelberg, and
+Kirchhoff eventually moved to Heidelberg in 1854, beginning a
+fruitful collaboration with Bunsen that resulted in the
+establishment of the field of spectroscopy, which involves the
+analysis of the composition of chemical compounds through the
+spectra they produce \cite{wiki:kirchoff, wiki:bunsen}.
 
 \bigskip
 \noindent
@@ -1460,79 +1464,76 @@ sodium compound heated by a bunsen burner. From this, he
 concluded that the original dark lines, called Fraunhofer lines
 after the scientist who discovered them, result from sodium in
 the Sun's atmosphere. This opened up a new technique for
-analyzing the chemical composition of stars \cite{bunsen_and_kirchoff}.
+analyzing the chemical composition of stars
+\cite{bunsen_and_kirchoff}.
 
 \bigskip
 \noindent
-That same year Kirchhoff researched the manner in which
-radiation is emitted and absorbed by various substances, and
-formulated what is now known as Kirchoff's Law of Thermal
-Radiation \cite{kirchoffs_law_of_thermal_radiation}: In a 
-state of thermal equilibrium the radiation emitted by a 
-body is equal to the radiation absorbed by the body. By 1860, 
-Bunsen and Kirchhoff were able to assign distinct spectral 
-characteristics to a number of metals. Together they
-discovered cesium (1860) and rubidium (1861) while studying the
-chemical composition of the Sun via its spectral signature.
+That same year Kirchhoff researched the manner in which radiation
+is emitted and absorbed by various substances, and formulated
+what is now known as Kirchoff's Law of Thermal Radiation
+\cite{kirchoffs_law_of_thermal_radiation}: In a state of thermal
+equilibrium the radiation emitted by a body is equal to the
+radiation absorbed by the body. By 1860, Bunsen and Kirchhoff
+were able to assign distinct spectral characteristics to a number
+of metals. Together they discovered cesium (1860) and rubidium
+(1861) while studying the chemical composition of the Sun via its
+spectral signature.
 
 \bigskip
 \noindent
-In 1862 Kirchoff introduced the concept of a "black body," a
-body that is both a perfect emitter and absorber of heat
-radiation. Later research into black body radiation was pivotal 
-in the the development of the quantum theories that emerged at the 
-beginning of the twentieth century. So how did the study
-of black bodies and  black body radiation lead to the development 
-of quantum mechanics? To understand this we'll first take a closer
-look at exactly what black bodies and black body
-radiation are.
+In 1862 Kirchoff introduced the concept of a "blackbody," a body
+that is both a perfect emitter and absorber of heat
+radiation. Later research into black body radiation was pivotal
+in the the development of the quantum theories that emerged at
+the beginning of the twentieth century. So how did the study of
+blackbodies and blackbody radiation lead to the development of
+quantum mechanics? To understand this we'll first take a closer
+look at exactly what blackbodies and blackbody radiation are.
 
-\subsection{So What Exactly are Black Bodies and Why are They Important?}
+\subsection{So What Exactly are Blackbodies and Why are They Important?}
 \label{subsec:black_bodies}
 To start, recall that light itself is an electromagnetic wave.
 In other words, light is an electric field that is oscillating.
-So, if you place a charged particle in a ray of light
-that particle will feel and oscillating force. The charge
-carried by a particle is also the source of an electric field.
-So if the charged particle is oscillating, the electric
-field it generates will also oscillate, that is, the charged
-particle will emit light. Ok, but what is a black body?
+So, if you place a charged particle in a ray of light that
+particle will feel and oscillating force. The charge carried by a
+particle is also the source of an electric field.  So if the
+charged particle is oscillating, the electric field it generates
+will also oscillate, that is, the charged particle will emit
+light. Ok, but what is a blackbody?
 
 \bigskip
 \noindent
 First, when light is incident on a body, three things can happen:
-the body can \emph{reflect} some of all of the light, the body can
-\emph{transmit} some or all of the light, or the body can 
+the body can \emph{reflect} some of all of the light, the body
+can \emph{transmit} some or all of the light, or the body can
 \emph{absorb} some of all of the light. A body that only absorbs
-and does not reflect or transmit is called a black body. Any light
-of any wavelength that is incident on the black body will not
-be reflected and will not be transmitted; rather, it will
+and does not reflect or transmit is called a blackbody. Any
+light of any wavelength that is incident on the blackbody will
+not be reflected and will not be transmitted; rather, it will
 disappear inside the body.
 
 \bigskip
 \noindent
-So what does it imply to say that light is absorbed by a 
-black body? Well, in both the wave and particle descriptions
-of light light is a carrier of energy. So when light is 
-absorbed by a body, it means that the energy carried by that
-light is absorbed by the body and the internal energy of
-the body increases. When light interacts with the surface
-of the body, the protons and electrons begin to oscillate
-because of the charger they carry (sound familiar? 
-see Section \ref{sec:smo}); that is, they gain
-kinetic energy. The bottom line is that the energy
-carried by the light is transferred to kinetic energy
-of the charged particles in the black body. Note that
-since the electron is much less massive than the proton
-it is the electrons that hold much of this (kinetic) 
-energy.
+So what does it imply to say that light is absorbed by a
+blackbody? Well, in both the wave and particle descriptions of
+light light is a carrier of energy. So when light is absorbed by
+a body, it means that the energy carried by that light is
+absorbed by the body and the internal energy of the body
+increases. When light interacts with the surface of the body, the
+protons and electrons begin to oscillate because of the charger
+they carry (sound familiar?  see Section \ref{sec:smo}); that is,
+they gain kinetic energy. The bottom line is that the energy
+carried by the light is transferred to kinetic energy of the
+charged particles in the blackbody. Note that since the electron
+is much less massive than the proton it is the electrons that
+hold much of this (kinetic) energy.
 
 \bigskip
 \noindent
-We know from statistical mechanics that the 
-temperature of a body $T$ is proportional
-to the average kinetic energy of the particles
-in the body, that is
+We know from statistical mechanics that the temperature of a body
+$T$ is proportional to the average kinetic energy of the
+particles in the body, that is
 
 \begin{equation*}
 T_{\text{body}} \propto \overline{\text{KE}}_{\text{particles}}
@@ -1540,28 +1541,29 @@ T_{\text{body}} \propto \overline{\text{KE}}_{\text{particles}}
 
 \bigskip
 \noindent
-So when the black body absorbs light, the
-kinetic energy of its electrons ($\overline{\text{KE}}_{\text{particles}}$)
-increases and so the temperature of the body ($T_{\text{body}}$) increases. 
-Since the electrons of a black body which have temperature will oscillate 
-their electric field will also oscillate and as such they will emit light.
-This light is called \emph{black body radiation}.
+So when the blackbody absorbs light, the kinetic energy of its
+electrons ($\overline{\text{KE}}_{\text{particles}}$) increases
+and so the temperature of the body ($T_{\text{body}}$) increases.
+Since the electrons of a blackbody which have temperature will
+oscillate their electric field will also oscillate and as such
+they will emit light.  This light is called \emph{black body
+radiation}.
 
 \bigskip
 \noindent
-So black bodies can be heated by the light that is incident on their
-surfaces, but they can also be heated by other processes, such as
-in stars where fusion provides the energy (somewhat paradoxically
-the brightest objects (stars) are also almost perfect black bodies).
-The effect on the electrons in the star, however, is the same: they
-gain kinetic energy, they move around, create oscillating electric
-fields, and light is emitted.
+So blackbodies can be heated by the light that is incident on
+their surfaces, but they can also be heated by other processes,
+such as in stars where fusion provides the energy (somewhat
+paradoxically the brightest objects (stars) are also almost
+perfect blackbodies).  The effect on the electrons in the star,
+however, is the same: they gain kinetic energy, they move around,
+create oscillating electric fields, and light is emitted.
 
 \bigskip
 \noindent
-Next we can observe that the hotter the body is the 
-larger an electron's kinetic energy, and therefore
-the larger the changes in their electric fields.
+Next we can observe that the hotter the body is the larger an
+electron's kinetic energy, and therefore the larger the changes
+in their electric fields.
 
 \begin{equation*}
 \begin{array}{llll}
@@ -1579,15 +1581,16 @@ T_{\text{body}} \uparrow
 		&\qquad \mathrel{\#} \text{increase in $\vec{E}$ $\Rightarrow$ increase in the power of the light emitted ($P_{\text{light}}$)} \\
 [5pt]
 &\Rightarrow& P_{\text{light}} = f(T)
-		&\qquad \mathrel{\#} \text{the power of the light emitted from a black body is a function of its temperature}
+		&\qquad \mathrel{\#} \text{the power of the light emitted from a blackbody is a function of its temperature}
 \end{array}
 \end{equation*}
 
 % \bigskip
 \noindent
-So what we have learned is there is a direct relationship between the temperature of 
-the surface of the black body and the intensity of the light it emits. This relationship
-is called Stefan-Boltzmann's Law and is typically written as 
+So what we have learned is there is a direct relationship between
+the temperature of the surface of the blackbody and the
+intensity of the light it emits. This relationship is called
+Stefan-Boltzmann's Law and is typically written as
 
 \begin{equation}
 P = \sigma A T^4
@@ -1596,11 +1599,11 @@ P = \sigma A T^4
 
 \bigskip
 \noindent
-In words, Equation (\ref{eqn:stefan_boltzmanns_law}) says
-that the power ($P$) emitted by a black body is proportional
-to its area ($A$) and temperature to the forth power ($T^4$).
-The proportionality constant $\sigma$ is called
-Stefan-Boltzmann's constant and
+In words, Equation (\ref{eqn:stefan_boltzmanns_law}) says that
+the power ($P$) emitted by a blackbody is proportional to its
+area ($A$) and temperature to the forth power ($T^4$).  The
+proportionality constant $\sigma$ is called Stefan-Boltzmann's
+constant and
 
 \begin{equation*}
 \sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}
@@ -1608,22 +1611,21 @@ Stefan-Boltzmann's constant and
 
 \bigskip
 \noindent
-Now would be a good time to remember that a black body
-is just a model; there is no such thing as a perfect
-black body; in reality objects do not absorb one 
-hundred percent of the incident light. Rather, in real
-bodies there is some reflection and transmission. Such
-a (real) body is called a \emph{grey body}. There is a
-quantity, emissivity,  which tells us how close a 
-grey body is to a theoretical black body.
+Now would be a good time to remember that a blackbody is just a
+model; there is no such thing as a perfect blackbody; in reality
+objects do not absorb one hundred percent of the incident
+light. Rather, in real bodies there is some reflection and
+transmission. Such a (real) body is called a \emph{greybody}. 
+There is a quantity, emissivity, which tells us how close
+a greybody is to a theoretical blackbody.
 
 \begin{definition}
-{\bf Emissivity: } An object's emissivity, $e$, measures 
-how a grey body's behavior compares to a theoretical black body.
+{\bf Emissivity: } An object's emissivity, $e$, measures how a
+greybody's behavior compares to a theoretical blackbody.
 \end{definition}
 
 \noindent
-Now we can calculate the power emitted by a grey body
+Now we can calculate the power emitted by a greybody
 as follows 
 
 \begin{equation}
@@ -1633,11 +1635,10 @@ P = e\sigma A T^4
 
 \medskip
 \noindent
-We can see that when the emissivity of an object is 
-equal to one ($e = 1$), the object is an ideal black
-body. When the emissivity is equal to zero ($e = 0$) 
-we call the object is ideal white body. Finally, if
-$0 < e < 1$ we call the object a grey body.
+We can see that when the emissivity of an object is equal to one
+($e = 1$), the object is an ideal blackbody. When the emissivity
+is equal to zero ($e = 0$) we call the object is ideal white
+body. Finally, if $0 < e < 1$ we call the object a greybody.
 
 \bigskip
 \noindent
@@ -1645,22 +1646,23 @@ Interestingly, for humans
 
 \begin{equation*}
 \begin{array}{llll}
-e &=& 0.97								&\qquad \mathrel{\#} \text{humans are grey bodies that are almost black bodies} \\
+e &=& 0.97							&\qquad \mathrel{\#} \text{humans are greybodies that are almost blackbodies} \\
 [5pt]
-T &=& 37^{\circ} \, C							&\qquad \mathrel{\#} \text{average human temperature is about $37^{\circ} \, C$} \\
+T &=& 37^{\circ} \, C				&\qquad \mathrel{\#} \text{average human temperature is about $37^{\circ} \, C$} \\
 [5pt]
-P &=& e \sigma A T^4 \approx 810 W		& \qquad \mathrel{\#} \text{human emit about 810 W of electromagnetic radiation} 
+P &=& e \sigma A T^4 \approx 810 W	&\qquad \mathrel{\#} \text{human emit about 810 W of electromagnetic radiation} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So humans do emit light, we just can't see it (it's in the infrared part of the spectrum).
-Surprisingly, animals and plants turn out to be have high emissivity (are good black 
-bodies), while minerals such as aluminium or silver have low emissivity (high
-reflectivity). This is why aluminium ($e = 0.05$) is used in household mirrors and 
-silver ($e = 0.02$) is used in high-grade mirrors; they are both nearly perfect
-reflectors.
+So humans do emit light, we just can't see it (it's in the
+infrared part of the spectrum).  Surprisingly, animals and plants
+turn out to be have high emissivity (are good blackbodies),
+while minerals such as aluminium or silver have low emissivity
+(high reflectivity). This is why aluminium ($e = 0.05$) is used
+in household mirrors and silver ($e = 0.02$) is used in
+high-grade mirrors; they are both nearly perfect reflectors.
 
 \section{Quantum Fields}
 \label{sec:quantum_fields}
@@ -1670,11 +1672,10 @@ reflectors.
 
 
 \section*{Acknowledgements}
-Thanks to Chris Lonvick (lonvick@gmail.com) for his thoughtful 
-suggestions on Figure \ref{fig:simple_pendulum}. Thanks also 
-to Dave Plonka for his helpful comments on Table \ref{tab:analogies}.
-
-
+Thanks to Chris Lonvick (lonvick@gmail.com) for his thoughtful
+suggestions on Figure \ref{fig:simple_pendulum}. Thanks also to
+Dave Plonka for his helpful comments on Table
+\ref{tab:analogies}.
 %
 %	LaTeX source on overleaf.com
 %
