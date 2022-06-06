@@ -8,13 +8,11 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
 
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-                                                % TeX will automatically convert eps --> pdf in pdflat
-                                                % TeX will automatically convert eps --> pdf in pdflatex
+%\geometry{landscape}                           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}                  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -48,7 +46,7 @@
 
 
 \title{A Few Notes on the Basel Problem}
-\author{David Meyer \\ dmm@1-4-5.net}
+\author{David Meyer \\ dmm613@gmail.com}
 
 \date{Last update: \today}							% Activate to display a given date or no date
 
@@ -145,15 +143,24 @@ derivative of $f$, noting that $f^{(0)} = f$.
 \begin{equation*}
 \begin{array}{lllll}
 \sin x
-&=& \sum\limits_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n                                                                                                                  &\mathrel{\#} \text{definition of the Maclaurin series}  \\
+&=& \sum\limits_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n
+        &\mathrel{\#} \text{definition of the Maclaurin series}  \\
 [12pt]
-&=& \frac{f^{(0)}(0)}{0!} x^0 +  \frac{f^{(1)}(0)}{1!} x^1 +  \frac{f^{(2)}(0)}{2!} x^2 + \frac{f^{(3)}(0)}{3!} x^3 + \cdots                     &\mathrel{\#} \text{expand terms}                               \\
+&=& \frac{f^{(0)}(0)}{0!} x^0 +  \frac{f^{(1)}(0)}{1!} x^1 +
+        \frac{f^{(2)}(0)}{2!} x^2 + \frac{f^{(3)}(0)}{3!} x^3 + \cdots
+        &\mathrel{\#} \text{expand terms}                               \\
 [12pt] 
-&=& \frac{\sin 0}{0!}x^0 + \frac{\cos 0}{1!}x^1 +  \frac{-\sin 0}{2!}x^2 +  \frac{-\cos 0}{3!}x^3 +  \frac{\sin 0}{4!} x^4 \cdots  &\mathrel{\#} f(x) = \sin x                                            \\
+&=& \frac{\sin 0}{0!}x^0 + \frac{\cos 0}{1!}x^1 +  \frac{-\sin
+        0}{2!}x^2 +  \frac{-\cos 0}{3!}x^3 +  \frac{\sin 0}{4!} x^4 \cdots
+        &\mathrel{\#} f(x) = \sin x \\ 
 [12pt]
-&=& 0 +  (\frac{1}{1!}) x^1 + 0 + (\frac{-1}{3!}) x^3+ 0 + (\frac{1}{5!}) x^5 + \cdots                                                                       &\mathrel{\#} \text{the sequence is $\{0,1,0,-1,...\}$}   \\
+&=& 0 +  (\frac{1}{1!}) x^1 + 0 + (\frac{-1}{3!}) x^3+ 0 +
+        (\frac{1}{5!}) x^5 + \cdots
+        &\mathrel{\#} \text{the sequence is $\{0,1,0,-1,...\}$}   \\
 [12pt]
-&=&  x - \frac{x^3}{3!} + \frac{x^5}{5!}  - \frac{x^7}{7!} + \cdots                                                                                                    &\mathrel{\#} \text{simplify}                                          \\
+&=&  x - \frac{x^3}{3!} + \frac{x^5}{5!}  - \frac{x^7}{7!} +
+        \cdots
+        &\mathrel{\#} \text{simplify} \\ 
 \end{array}
 \end{equation*}
 
@@ -520,10 +527,22 @@ be more rigorous than original Euler's simple and elegant
 \section*{Acknowledgements}
 Thanks to Tim Griffin for pointing out that one of the steps
 in my derivation of the Wallis Product was shakey. 
-
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/xsnvysdcfcvd}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
-
-
+\bibliography{qc}
+%
+%	done
+%
 \end{document} 
+
 
