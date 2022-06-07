@@ -42,10 +42,9 @@
 \usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{relsize}
- \usepackage[hyphenbreaks]{breakurl}
+\usepackage[hyphenbreaks]{breakurl}
  
- \newtheorem{thm}{Theorem}[section]
-% \newtheorem{defn}[thm]{Definition}
+\newtheorem{thm}{Theorem}[section]
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
@@ -60,18 +59,17 @@
 
 
 \title{Why Is There No Difference In Our Ages?}
-\author{David Meyer \\ dmm@1-4-5.net}
-
-% \date{Last update: June 25, 2021}							% Activate to display a given date or no date
+\author{David Meyer \\ dmm613@gmail.com}
+\date{Last update: \today}
 
 \begin{document}
 \maketitle
 
 \section{Introduction}
-Suppose your age is $x_t$ and my age is $y_t$ at some time $t$. 
-Then in $n$ years your age is $x_t + n$ and my age is $y_t + n$. This implies
-that as time goes by (as measured by $n \in \mathbb{N}$) the difference 
-in our ages vanishes!
+Suppose your age is $x_t$ and my age is $y_t$ at some time $t$.
+Then in $n$ years your age is $x_t + n$ and my age is $y_t +
+n$. This implies that as time goes by (as measured by $n \in
+\mathbb{N}$) the difference in our ages vanishes!
 
 \bigskip
 \noindent
@@ -84,15 +82,17 @@ Why? Consider that
 
 \bigskip
 \noindent
-which is another way of saying the same thing. This result is reassuring since 
-it pretty much models our experience. But why is this true? As we will see
-in Section \ref{subsec:putting_it_all_together}, this "ratio of our
-ages" sequence is a \emph{convergent sequence} in $\mathbb{R}$ with 
+which is another way of saying the same thing. This result is
+reassuring since it pretty much models our experience. But why is
+this true? As we will see in Section
+\ref{subsec:putting_it_all_together}, this "ratio of our ages"
+sequence is a \emph{convergent sequence} in $\mathbb{R}$ with
 limit one.
 
 
 \subsection{A Perhaps More General Formulation}
-More generally consider the function $f_a(n) = a + n$ where $a,n \in \mathbb{N}$. Then
+More generally consider the function $f_a(n) = a + n$ where $a,n
+\in \mathbb{N}$. Then 
 
 \bigskip
 \begin{equation}
@@ -103,7 +103,8 @@ More generally consider the function $f_a(n) = a + n$ where $a,n \in \mathbb{N}$
 
 \bigskip
 \noindent
-for $a,b,n \in \mathbb{N}$. We also write Equation \ref{eqn:lim} in the following alternate notation:
+for $a,b,n \in \mathbb{N}$. We also write Equation \ref{eqn:lim}
+in the following alternate notation: 
 
 \bigskip
 \begin{equation*}
@@ -112,12 +113,14 @@ f_a(n) \thicksim f_b(n)
 
 \bigskip
 \noindent
-That is, the $\thicksim$ symbol means that the ratio of its two arguments tends 
-towards $1$ as its arguments tend toward $\infty$.
+That is, the $\thicksim$ symbol means that the ratio of its two
+arguments tends towards $1$ as its arguments tend toward
+$\infty$.
 
 \section{Proof Using Sequences}
-Recall our previous definitions: your age is $x_t$ and my age is $y_t$ at some time $t$. 
-Then in $n$ years your age is $x_t + n$ and my age is $y_t + n$ for $n \in \mathbb{N}$.
+Recall our previous definitions: your age is $x_t$ and my age is
+$y_t$ at some time $t$.  Then in $n$ years your age is $x_t + n$
+and my age is $y_t + n$ for $n \in \mathbb{N}$.
 
 \bigskip
 \noindent
@@ -144,27 +147,30 @@ That is, $(a_n)_{n \in \mathbb{N}}$ is a sequence of real numbers.
 \bigskip
 \noindent 
 \begin{definition}{\bf Convergent Sequence: }  We say that a sequence 
-$(a_n)_{n \in \mathbb{N}}$ is \emph{convergent} to $a \in \mathbb{R}$ if
-for all $\epsilon$ greater that zero there exists an $N$ in $\mathbb{N}$ 
-such that if $n \in \mathbb{N}$ is greater than or equal to $N$ then
-$\mid a_n - a \mid < \epsilon$. Put more concisely
+$(a_n)_{n \in \mathbb{N}}$ is \emph{convergent} to $a \in
+\mathbb{R}$ if for all $\epsilon$ greater that zero there exists
+an $N$ in $\mathbb{N}$ such that if $n \in \mathbb{N}$ is greater
+than or equal to $N$ then $\mid a_n - a \mid < \epsilon$. Put
+more concisely
 
 \begin{equation*}
-\forall \epsilon > 0 \;\; \exists N \in \mathbb{N} \;\; \forall n \geq N : \;\; \mid a_n - a \mid \; < \epsilon
+\forall \epsilon > 0 \;\; \exists N \in \mathbb{N} \;\; 
+ \forall n \geq N : \;\; \mid a_n - a \mid \; < \epsilon
 \end{equation*}
 
 \bigskip
 \noindent
-Here $a$ is called the \emph{limit} of the sequence $(a_n)_{n \in \mathbb{N}}$
-and we write ${\displaystyle \lim_{n \to \infty} a_n = a}$ (or 
-sometimes $a_n \xrightarrow{n \to \infty}{} a$).
+Here $a$ is called the \emph{limit} of the sequence $(a_n)_{n \in
+\mathbb{N}}$ and we write ${\displaystyle \lim_{n \to \infty} a_n
+= a}$ (or sometimes $a_n \xrightarrow{n \to \infty}{} a$).
 \end{definition}
 
 
 \noindent
-So now we want to ask the obvious question: what happens to the ratio of our ages sequence
-as $n$ goes to $\infty$? In other words, does this sequence converge, and if it does, 
-to what value? 
+So now we want to ask the obvious question: what happens to the
+ratio of our ages sequence as $n$ goes to $\infty$? In other
+words, does this sequence converge, and if it does, to what
+value?
 
 \bigskip
 \noindent
@@ -172,7 +178,7 @@ All of this means that we want to know if this limit
 
 \bigskip
 \begin{equation*}
-\lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}} = \;\; ?
+\lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
 \end{equation*}
 
 \bigskip
@@ -182,17 +188,17 @@ exists and if it does, what is its value.
 
 \bigskip
 \noindent
-As we will see in Section \ref{subsec:putting_it_all_together}, we do have some machinery we can use to 
-evaluate this limit such as the algebraic rules for limits \cite{properties_of_limits} and the 
-fact that the limit is a linear operator \cite{fa_mit}. 
+As we will see in Section \ref{subsec:putting_it_all_together},
+we do have some machinery we can use to evaluate this limit such
+as the algebraic rules for limits \cite{properties_of_limits} and
+the fact that the limit is a linear operator \cite{fa_mit}.
 
 \subsection{Putting It All Together}
 \label{subsec:putting_it_all_together}
-\setstretch{1.75}
-Now we can see that the "ratio of our ages" sequence 
-$\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ is indeed
-a convergent sequence with limit equal to one, since
-\setstretch{1.0}
+\setstretch{1.75} Now we can see that the "ratio of our ages"
+sequence $\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in
+\mathbb{N}}$ is indeed a convergent sequence with limit equal to
+one, since \setstretch{1.0}
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -237,14 +243,24 @@ a convergent sequence with limit equal to one, since
 So I guess that while in our short lives our ages appear to vary widely
 across our life spans, when we look at a bigger picture that difference
 disappears.
-
+%
+%
+%
 \section*{Acknowledgements}
-
-%
-%   get a bibliography
-%
+%                                                                                                                                          
+%       LaTeX source on overleaf.com                                                                                                       
+%                                                                                                                                          
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%                                                                                                                                          
+%       get a bibliography                                                                                                                 
+%                                                                                                                                          
+%       Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).                                                            
+%       You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}                                                    
+%                                                                                                                                          
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
-
-\end{document} 
-
+\bibliography{qc}
+%                                                                                                                                          
+%       done                                                                                                                               
+%                                                                                                                                          
+\end{document}
