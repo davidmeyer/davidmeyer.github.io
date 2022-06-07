@@ -105,7 +105,7 @@ where $a,n \in \mathbb{N}$. Then
 \noindent
 for $a,b,n \in \mathbb{N}$. 
 
-\newpage
+
 \noindent
 Equation (\ref{eqn:lim}) is also frequently
 written using the following alternate 
@@ -207,41 +207,43 @@ the fact that the limit is a linear operator \cite{fa_mit}.
 
 \subsection{Putting It All Together}
 \label{subsec:putting_it_all_together}
-\setstretch{1.75} Now we can see that the "ratio of our ages"
-sequence $\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ 
+We can see that the "ratio of our ages" sequence 
+$\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ 
 is indeed a convergent sequence with limit equal to
-one, since \setstretch{1.0}
+one, since
 
 \begin{equation*}
 \begin{array}{lllll}
 {\displaystyle \lim_{n \to \infty} \left (\dfrac{x_t + n}{y_t + n}\right )}
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}} {{\displaystyle  \lim_{n \to \infty} \left (y_t + n \right)}}
-			&\qquad \qquad \qquad \mathrel{\#} \text{quotient rule for limits \cite{properties_of_limits}} \\
+					&\qquad \qquad \qquad \mathrel{\#} \text{quotient rule for limits \cite{properties_of_limits}} \\
 [25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}\left (\frac{1}{n}\right )} 
           {{\displaystyle \lim_{n \to \infty} \left (y_t + n \right)} \left ( \frac{1}{n} \right )}
-			&\qquad \qquad \qquad \mathrel{\#} \text{multiply the fraction by $1 = \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
+					&\qquad \qquad \qquad \mathrel{\#} \text{multiply the fraction by $1 
+					= \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
 [25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (\frac{x_t}{n} + \frac{n}{n} \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + \frac{n}{n} \right)}}
-			&\qquad \qquad \qquad \mathrel{\#} \text{multiply through by $\frac{1}{n}$}\\
+					&\qquad \qquad \qquad \mathrel{\#} \text{multiply through by $\frac{1}{n}$}\\
 [25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \left (\frac{x_t}{n} + 1 \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + 1 \right)}}
-			&\qquad \qquad \qquad \mathrel{\#} \frac{n}{n} = 1\\
+					&\qquad \qquad \qquad \mathrel{\#} \frac{n}{n} = 1\\
 [25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}   \frac{x_t}{n} + \lim_{n \to \infty} 1}} 
            {{\displaystyle \lim_{n \to \infty}  \frac{y_t}{n} + \lim_{n \to \infty} 1}}
-			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator \cite{fa_mit}} \\
+					&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator \cite{fa_mit}} \\
 [25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \frac{x_t}{n} + 1}} 
            {{\displaystyle \lim_{n \to \infty} \frac{y_t}{n} + 1}}
-			&\qquad \qquad \qquad \mathrel{\#} \text{${\displaystyle \lim_{n \to \infty} c = c}$ for constant $c$ \cite{properties_of_limits}} \\
+					&\qquad \qquad \qquad \mathrel{\#} \text{${\displaystyle \lim_{n \to \infty} c 
+					= c}$ for constant $c$ \cite{properties_of_limits}} \\
 [25pt]
 &=& \dfrac{0 + 1} {0 + 1}
-			&\qquad \qquad \qquad \mathrel{\#} 
-			{\displaystyle \lim_{n \to \infty} \frac{c}{n} = c \lim_{n \to \infty} \frac{1}{n} = 0} 
-			\text{ for constant $c$ \cite{limits_of_sequences}} \\
+					&\qquad \qquad \qquad \mathrel{\#} 
+					{\displaystyle \lim_{n \to \infty} \frac{c}{n} = c \lim_{n \to \infty} \frac{1}{n} = 0} 
+					\text{ for constant $c$ \cite{limits_of_sequences}} \\
 [15pt]
 &=& \dfrac{1}{1}	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
 [15pt]
@@ -251,7 +253,6 @@ one, since \setstretch{1.0}
 
 
 \section{Conclusions}
-\setstretch{1.25}
 So I guess that while in our short lives our ages appear to vary widely
 across our life spans, when we look at a bigger picture that difference
 disappears.
