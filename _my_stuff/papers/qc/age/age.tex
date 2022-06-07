@@ -90,9 +90,9 @@ sequence is a \emph{convergent sequence} in $\mathbb{R}$ with
 limit one.
 
 
-\subsection{A Perhaps More General Formulation}
-More generally consider the function $f_a(n) = a + n$ where $a,n
-\in \mathbb{N}$. Then 
+\subsection{A More General Formulation}
+More generally consider the function $f_a(n) = a + n$ 
+where $a,n \in \mathbb{N}$. Then 
 
 \bigskip
 \begin{equation}
@@ -103,8 +103,13 @@ More generally consider the function $f_a(n) = a + n$ where $a,n
 
 \bigskip
 \noindent
-for $a,b,n \in \mathbb{N}$. We also write Equation \ref{eqn:lim}
-in the following alternate notation: 
+for $a,b,n \in \mathbb{N}$. 
+
+\newpage
+\noindent
+Equation (\ref{eqn:lim}) is also frequently
+written using the following alternate 
+notation: 
 
 \bigskip
 \begin{equation*}
@@ -115,25 +120,27 @@ f_a(n) \thicksim f_b(n)
 \noindent
 where the $\thicksim$ symbol means that the ratio of its two
 arguments tends towards $1$ as its arguments tend toward
-$\infty$. Said another way:
+$\infty$. That is
 
 \medskip
 \begin{equation*}
 f(x) \thicksim g(x) \Rightarrow \lim\limits_{x \to \infty} \dfrac{f(x)}{g(x)} = 1
 \end{equation*}
 
+\smallskip
 \section{Proof Using Sequences}
-Recall our previous definitions: your age is $x_t$ and my age is
-$y_t$ at some time $t$.  Then in $n$ years your age is $x_t + n$
-and my age is $y_t + n$ for $n \in \mathbb{N}$.
+Recall our problem setup: Suppose your age at some time 
+$t$ is $x_t$ and my age at that same time is $y_t$. Then 
+in $n$ years your age will be $x_t + n$ and my age will 
+be $y_t + n$, for $n \in \mathbb{N}$. 
 
 \bigskip
 \noindent
-Now, consider the "ratio of our ages" sequence:
+Now consider the "ratio of our ages" sequence:
 
 \medskip
 \begin{equation*}
-(a_n)_{n \in \mathbb{N}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+(a_n)_{n \in \mathbb{N}_{0}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
 \end{equation*}
 
 \bigskip
@@ -147,7 +154,7 @@ a: \mathbb{N} \to \mathbb{R}
 
 \bigskip
 \noindent
-That is, $(a_n)_{n \in \mathbb{N}}$ is a sequence of real numbers.
+That is, $(a_n)_{n \in \mathbb{N}_{)}}$ is a sequence of real numbers.
 
 \bigskip
 \noindent 
@@ -166,7 +173,7 @@ more concisely
 \bigskip
 \noindent
 Here $a$ is called the \emph{limit} of the sequence $(a_n)_{n \in
-\mathbb{N}}$ and we write ${\displaystyle \lim_{n \to \infty} a_n
+\mathbb{N}_{0}}$ and we write ${\displaystyle \lim_{n \to \infty} a_n
 = a}$ (or sometimes $a_n \xrightarrow{n \to \infty}{} a$).
 \end{definition}
 
@@ -201,8 +208,8 @@ the fact that the limit is a linear operator \cite{fa_mit}.
 \subsection{Putting It All Together}
 \label{subsec:putting_it_all_together}
 \setstretch{1.75} Now we can see that the "ratio of our ages"
-sequence $\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in
-\mathbb{N}}$ is indeed a convergent sequence with limit equal to
+sequence $\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ 
+is indeed a convergent sequence with limit equal to
 one, since \setstretch{1.0}
 
 \begin{equation*}
@@ -210,34 +217,34 @@ one, since \setstretch{1.0}
 {\displaystyle \lim_{n \to \infty} \left (\dfrac{x_t + n}{y_t + n}\right )}
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}} {{\displaystyle  \lim_{n \to \infty} \left (y_t + n \right)}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{quotient rule for limits \cite{properties_of_limits}} \\
-[20pt]
+[25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}\left (\frac{1}{n}\right )} 
           {{\displaystyle \lim_{n \to \infty} \left (y_t + n \right)} \left ( \frac{1}{n} \right )}
 			&\qquad \qquad \qquad \mathrel{\#} \text{multiply the fraction by $1 = \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
-[20pt]
+[25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (\frac{x_t}{n} + \frac{n}{n} \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + \frac{n}{n} \right)}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{multiply through by $\frac{1}{n}$}\\
-[20pt]
+[25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \left (\frac{x_t}{n} + 1 \right )}} 
            {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + 1 \right)}}
 			&\qquad \qquad \qquad \mathrel{\#} \frac{n}{n} = 1\\
-[20pt]
+[25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}   \frac{x_t}{n} + \lim_{n \to \infty} 1}} 
            {{\displaystyle \lim_{n \to \infty}  \frac{y_t}{n} + \lim_{n \to \infty} 1}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator \cite{fa_mit}} \\
-[20pt]
+[25pt]
 &=& \dfrac{{\displaystyle \lim_{n \to \infty}  \frac{x_t}{n} + 1}} 
            {{\displaystyle \lim_{n \to \infty} \frac{y_t}{n} + 1}}
 			&\qquad \qquad \qquad \mathrel{\#} \text{${\displaystyle \lim_{n \to \infty} c = c}$ for constant $c$ \cite{properties_of_limits}} \\
-[20pt]
+[25pt]
 &=& \dfrac{0 + 1} {0 + 1}
 			&\qquad \qquad \qquad \mathrel{\#} 
 			{\displaystyle \lim_{n \to \infty} \frac{c}{n} = c \lim_{n \to \infty} \frac{1}{n} = 0} 
 			\text{ for constant $c$ \cite{limits_of_sequences}} \\
-[10pt]
+[15pt]
 &=& \dfrac{1}{1}	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
-[10pt]
+[15pt]
 &=& 1				&\qquad \qquad \qquad \mathrel{\#} \text{apparently we're all roughly the same age}
 \end{array}
 \end{equation*}
