@@ -58,7 +58,7 @@
 
 
 
-\title{Why Is There No Difference In Our Ages?}
+\title{What Is The Difference In Our Ages?}
 \author{David Meyer \\ dmm613@gmail.com}
 \date{Last update: \today}
 
@@ -113,9 +113,14 @@ f_a(n) \thicksim f_b(n)
 
 \bigskip
 \noindent
-That is, the $\thicksim$ symbol means that the ratio of its two
+where the $\thicksim$ symbol means that the ratio of its two
 arguments tends towards $1$ as its arguments tend toward
-$\infty$.
+$\infty$. Said another way:
+
+\medskip
+\begin{equation*}
+f(x) \thicksim g(x) \Rightarrow \lim\limits_{x \to \infty} \dfrac{f(x)}{g(x)} = 1
+\end{equation*}
 
 \section{Proof Using Sequences}
 Recall our previous definitions: your age is $x_t$ and my age is
@@ -128,7 +133,7 @@ Now, consider the "ratio of our ages" sequence:
 
 \medskip
 \begin{equation*}
-(a_n)_{n \in \mathbb{N}} \coloneqq \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+(a_n)_{n \in \mathbb{N}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
 \end{equation*}
 
 \bigskip
