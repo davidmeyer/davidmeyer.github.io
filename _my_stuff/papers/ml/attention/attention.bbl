@@ -9,7 +9,7 @@ Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
 \bibitem{shannon_thesis}
 {C.E. Shannon}.
 \newblock {A Mathematical Theory of Communication}.
-\newblock {\em {The Bell System Technical Journal}}, pages 379--423, July 1948.
+\newblock {\em {The Bell System Technical Journal}}, 27:379--423, July 1948.
 
 \bibitem{Cho:2014aa}
 Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi

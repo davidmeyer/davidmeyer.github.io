@@ -9,43 +9,43 @@ Warning--empty journal in Daniluk:2017aa
 Warning--empty journal in Graves:2014aa
 You've used 9 entries,
             2118 wiz_defined-function locations,
-            554 strings with 6060 characters,
-and the built_in function-call counts, 3594 in all, are:
-= -- 324
+            555 strings with 6062 characters,
+and the built_in function-call counts, 3498 in all, are:
+= -- 312
 > -- 256
-< -- 2
+< -- 1
 + -- 100
 - -- 91
 * -- 277
-:= -- 623
+:= -- 617
 add.period$ -- 30
 call.type$ -- 9
 change.case$ -- 70
 chr.to.int$ -- 0
 cite$ -- 13
-duplicate$ -- 111
-empty$ -- 217
+duplicate$ -- 102
+empty$ -- 211
 format.name$ -- 91
-if$ -- 716
+if$ -- 686
 int.to.chr$ -- 0
 int.to.str$ -- 9
 missing$ -- 7
 newline$ -- 50
 num.names$ -- 20
-pop$ -- 89
+pop$ -- 87
 preamble$ -- 1
 purify$ -- 61
 quote$ -- 0
-skip$ -- 86
+skip$ -- 74
 stack$ -- 0
-substring$ -- 142
-swap$ -- 25
-text.length$ -- 2
+substring$ -- 135
+swap$ -- 16
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 36
 warning$ -- 4
-while$ -- 27
+while$ -- 26
 width$ -- 10
 write$ -- 95
 (There were 4 warnings)
