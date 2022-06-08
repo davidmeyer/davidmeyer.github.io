@@ -6,6 +6,11 @@ Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
   translate.
 \newblock 09 2014.
 
+\bibitem{shannon_thesis}
+{C.E. Shannon}.
+\newblock {A Mathematical Theory of Communication}.
+\newblock {\em {The Bell System Technical Journal}}, pages 379--423, July 1948.
+
 \bibitem{Cho:2014aa}
 Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi
   Bougares, Holger Schwenk, and Yoshua Bengio.
@@ -51,6 +56,6 @@ Lisa Yan.
 \newblock \url
   {https://web.stanford.edu/class/archive/cs/cs109/cs109.1208/lectureNotes/LN04_cond_bayes.pdf},
   April 2020.
-\newblock Accessed:Thu Jun 2 10:31:13 PDT 2022.
+\newblock Accessed: Thu Jun 2 10:31:13 PDT 2022.
 
 \end{thebibliography}

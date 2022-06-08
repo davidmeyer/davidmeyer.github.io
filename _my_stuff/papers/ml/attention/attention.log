@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 JUN 2022 07:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 JUN 2022 08:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1467,10 +1467,10 @@ Package rerunfilecheck Info: File `attention.out' has not changed.
 (rerunfilecheck)             Checksum: 314870F432600B3F15D905AAAD6B4D94;901.
  ) 
 Here is how much of TeX's memory you used:
- 52708 strings out of 478994
- 1323374 string characters out of 5858184
- 1966937 words of memory out of 5000000
- 69347 multiletter control sequences out of 15000+600000
+ 52710 strings out of 478994
+ 1323409 string characters out of 5858184
+ 1966975 words of memory out of 5000000
+ 69348 multiletter control sequences out of 15000+600000
  422354 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,16n,131p,727b,745s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1493,10 +1493,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on attention.pdf (5 pages, 289495 bytes).
+Output written on attention.pdf (5 pages, 290351 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
