@@ -68,7 +68,18 @@
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{remark}{Remark}[section]
-
+%
+%
+%	so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%
 %
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
