@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 JUN 2022 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 JUN 2022 11:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -657,36 +657,38 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 50
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./ith_root_of_i.bbl [1
+(./ith_root_of_i.bbl) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (.
-/ith_root_of_i.aux)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./ith_
+root_of_i.aux)
 Package rerunfilecheck Info: File `ith_root_of_i.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15775 strings out of 478994
- 273486 string characters out of 5858184
- 581200 words of memory out of 5000000
- 32991 multiletter control sequences out of 15000+600000
- 420449 words of font info for 99 fonts, out of 8000000 for 9000
+ 15759 strings out of 478994
+ 273271 string characters out of 5858184
+ 582200 words of memory out of 5000000
+ 32977 multiletter control sequences out of 15000+600000
+ 417281 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,14n,77p,307b,865s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,14n,77p,307b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ith_root_of_i.pdf (2 pages, 110754 bytes).
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on ith_root_of_i.pdf (1 page, 124510 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 73 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
