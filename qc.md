@@ -56,8 +56,6 @@ the Laplace Transform</a>
 <br>
 <li><a href="./rings.pdf" target="_blank" rel="noopener noreferrer">A bit on a structural correspondence between rings and groups</a>
 <br>
-<li><a href="./i_to_the_i_is_real.pdf" target="_blank" rel="noopener noreferrer">Is i^i a real number?</a>
-<br>
 <li><a href="./infinite_sum_a_over_b.pdf" target="_blank" rel="noopener noreferrer">A bit on infinite series</a>
 <br>
 <li><a href="./sqrt2.pdf" target="_blank" rel="noopener noreferrer">Proof that the sqaure root of 2 is irrational</a>
@@ -91,6 +89,9 @@ Is the ith root of i a real number?
 </a>
 <br>
 
+<li><a href="./i_to_the_i_is_real.pdf" target="_blank" 
+     rel="noopener noreferrer">Is i^i a real number?</a>
+<br>
 
 <li><a href="./three.pdf" target="_blank"
     rel="noopener noreferrer">
@@ -124,7 +125,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 06.09.2022 by
+<i>Last Update: 06.10.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
