@@ -16,12 +16,6 @@ A Few Notes On Vector Calculus</a>
     rel="noopener noreferrer">
 An Interesting Integral Involving The Golden Ratio</a>
 <br>
-
-<li><a href="./pi_to_the_pi.pdf" target="_blank" 
-    rel="noopener noreferrer">
-\pi^\pi = ?</a>
-<br>
-
 <li><a href="./oscillators.pdf" target="_blank" 
     rel="noopener noreferrer">
 A Few Notes on Harmonic Oscillators and Fields (WIP)</a>
@@ -103,6 +97,11 @@ What is hiding inside the number 3?
     rel="noopener noreferrer">
 Square roots and cube roots...
 </a>
+<br>
+
+<li><a href="./pi_to_the_pi.pdf" target="_blank"
+    rel="noopener noreferrer">
+\pi^\pi = ?</a>
 <br>
 
 <li><a href="./continued_root_2.pdf" target="_blank"
