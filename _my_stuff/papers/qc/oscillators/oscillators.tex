@@ -24,7 +24,7 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
-\usepackage{fixmath}													% get \mathbold
+\usepackage{fixmath}                                                    % get \mathbold
 \usepackage{gensymb}                                                    % get \degree
 \usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
@@ -140,14 +140,18 @@ Latin anagram, and he published the solution of his anagram in
 
 \subsection{The Mathematics of Hooke's Law}
 \label{subsec:mathematics_of_hookes_law}
-Hooke's Law is most frequently stated as 
-$F \propto -x$, that is, the force $F$
-is proportional to the displacement $x$.
-However, more frequently this relationship
-is changed into an equality by the use
-of a spring constant $k$ so that
-we have\footnote{It seems to be convention
-to use $x$ and $x(t)$ and $a$ and $a(t)$ 
+\bigskip
+\noindent
+Hooke's Law describes a form of simple harmonic motion, which as
+mentioned above occurs when the restoring force in a system (the
+force directed toward a stable equilibrium point) is proportional
+to the displacement from that equilibrium. Hooke's Law is most
+frequently stated as $F \propto -x$, that is, the force $F$ is
+proportional to the displacement $x$ (hence Hooke's Law describes
+simple harmonic motion aka simple harmonic oscillation). More
+frequently this relationship is converted into an equality by the
+use of a spring constant $k$ so that we have\footnote{It seems 
+to be convention to use $x$ and $x(t)$ and $a$ and $a(t)$
 interchangeably.}
 
 
@@ -204,7 +208,7 @@ This situation is shown in Figure \ref{fig:spring_and_mass_system}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.55 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.75 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
         \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support
@@ -329,7 +333,7 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.35 \textwidth}{!} {																	% resize figure if you want
+  \resizebox{0.45 \textwidth}{!} {																	% resize figure if you want
   \begin{tikzpicture}
     \def \A {1.0}																					% x(t) = A cos (wt)
     \def \w {1.0}																					% x(t) = A cos (wt)
@@ -439,8 +443,8 @@ So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation
 \bigskip
 \noindent
 Here $A$ is the maximum displacement (or amplitude) and $\omega$
-is the angular frequency (in radians per second). We also know
-that the definition of angular frequency is
+is the angular frequency (in radians per second). Angular frequency 
+is defined to be
 
 
 \begin{equation}
