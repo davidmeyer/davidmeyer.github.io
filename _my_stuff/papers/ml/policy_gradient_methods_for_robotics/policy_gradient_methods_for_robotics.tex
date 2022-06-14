@@ -1,22 +1,21 @@
-\documentclass[11pt, oneside]{article}                          % use "amsart" instead of "article" for AMSLaTeX format
+\documentclass[11pt, oneside]{article}					% use "amsart" instead of "article" for AMSLaTeX format
 
 %
 %   get various packages
 %
-\usepackage[margin=1.0in]{geometry}				% adjust margins
-\geometry{letterpaper}                                          % ... or a4paper or a5paper or ... 
-\usepackage{url}                                                % need this to use URLs in bibtex
-\usepackage{setspace}                                           % need this for \setstrech{...}
-\usepackage{scrextend}                                          % need this for addmargin
-\usepackage[export]{adjustbox}					% need this to get frame for includegraphics
-\usepackage{bigints}                                            % bigger integral symbol
+\usepackage[margin=1.0in]{geometry}						% adjust margins
+\geometry{letterpaper}									% ... or a4paper or a5paper or ... 
+\usepackage{url}										% need this to use URLs in bibtex
+\usepackage{setspace}									% need this for \setstrech{...}
+\usepackage{scrextend}									% need this for addmargin
+\usepackage[export]{adjustbox}							% need this to get frame for includegraphics
+\usepackage{bigints}									% bigger integral symbol
 %\usepackage{draftwatermark}
 % \SetWatermarkText{Confidential}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.85} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-\usepackage{geometry}                                           % See geometry.pdf to learn the layout options. There are lots.
-\usepackage{graphicx}                                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+\usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -132,11 +131,11 @@ methods seek to maximize performance, so their updates
 approximate gradient ascent in $U$. As is typical for gradient
 descent/ascent,
 
-\begin{flalign}
+\begin{equation}
 \boldsymbol{\theta}_{t+1} \coloneqq \boldsymbol{\theta}_t +
 \alpha \widehat{\nabla U(\boldsymbol{\theta}_t)} 
 \label{eqn:gd}
-\end{flalign}
+\end{equation}
 
 \bigskip
 \noindent
@@ -159,11 +158,10 @@ the parameterized policy (parameterized by parameter vector
 $\theta$), and a utility/performance function $U(\theta)$,
 defined as follows:
 
-\begin{flalign}
+\begin{equation*}
 U(\theta) = \max_\theta \mathbb{E} \Bigg [\sum\limits_{t = 0}^{H
 - 1} R(s_t) | \pi_\theta \Bigg ] 
-\label{eqn:utility}
-\end{flalign}
+\end{equation*}
 
 \bigskip
 \noindent 
@@ -249,12 +247,11 @@ estimator.
 Rewriting $U(\theta)$ we have
 
 \bigskip
-\begin{equation}
-\label{eqn:u}
+\begin{equation*}
 U(\theta) = \E_{\tau \sim P(\tau;\theta)} \Bigg [\sum\limits_{t =
-0}^{H - 1} R(s_t,u_t) ; \pi_\theta \Bigg ] =
+             0}^{H - 1} R(s_t,u_t) ; \pi_\theta \Bigg ] =
 \sum\limits_{\tau}P(\tau; \theta)R(\tau) 
-\end{equation}
+\end{equation*}
 
 \bigskip
 \noindent
@@ -588,20 +585,26 @@ the Policy Gradient setting is
 where $\phi(s)$ is the control variate. You can see this pretty
 easily: 
 
-\begin{flalign*}
+\begin{equation*}
+\begin{array}{llll}
 \E_{s, u} \Big [ \nabla_{\theta} \log \pi_{\theta}(u | s) \phi (s) \Big ] 
-&= \E_{s} \Bigg [ \E_{u} \Big [ \nabla_{\theta} \log \pi_{\theta}(u | s) \phi (s) \Big ] \Bigg ]
-\: \; \qquad  \qquad
-\mathrel{\#} \text{def expectation} \\
-&= \E_{s} \Bigg [ \phi (s) \cdot \E_{u} \Big [ \nabla_{\theta} \log \pi_{\theta}(u | s)  \Big ] \Bigg ]
-\qquad \qquad
-\mathrel{\#} \phi(s) \text{ doesn't depend on } u\\
-&= \E_{s} \big [ \phi (s) \cdot 0 \big ]
-\qquad \qquad \qquad \qquad \qquad \qquad 
-\mathrel{\#} \E \big [\nabla_{\theta} \log \pi(u | s) \big ] = 0  \\
-&= \E_{s} \big [ 0 \big ] \\
-&= 0
-\end{flalign*}
+&=& \E_{s} \bigg [ \E_{u} \Big [ \nabla_{\theta} \log \pi_{\theta}(u | s) \phi (s) \Big ] \bigg ]
+			&\qquad \mathrel{\#} \text{definition of expectation} \\
+[10pt]
+&=& \E_{s} \bigg [ \phi (s) \cdot \E_{u} \Big [ \nabla_{\theta} \log \pi_{\theta}(u | s)  \Big ] \bigg ]
+			&\qquad \mathrel{\#} \phi(s) \text{ doesn't depend on } u\\
+[12pt]
+&=& \E_{s} \Big [ \phi (s) \cdot 0 \Big ]
+			&\qquad \mathrel{\#} \E_{u} \Big [\nabla_{\theta} \log \pi(u | s) \Big ] = 0  \\
+[12pt]
+&=& \E_{s} \left [ 0 \right ] 
+			&\qquad \mathrel{\#} \phi (s) \cdot 0  = 0 \\
+[12pt]
+&=& 0
+			&\qquad \mathrel{\#} \E_{s} \left [ 0 \right ] = 0 
+
+\end{array}
+\end{equation*}
 
 \bigskip
 \noindent
@@ -610,7 +613,7 @@ We can also see pretty easily that $\E \big [\nabla_{\theta} \log
 
 \begin{flalign}
 \label{eqn:score-fn}
-\E_{x \sim p_{\theta} (x)}\big [\nabla_{\theta} \log p_{\theta}(x) \big] & = \int p_{\theta}(x) \nabla_{\theta} \log p_{\theta}(x) dx   \quad \mathrel{\#} \text{def expectation} \\
+\E_{x \sim p_{\theta} (x)}\big [\nabla_{\theta} \log p_{\theta}(x) \big] & = \int p_{\theta}(x) \nabla_{\theta} \log p_{\theta}(x) dx   \quad \mathrel{\#} \text{definition of expectation} \\
 &= \int \frac{\nabla_\theta p_\theta(x)}{p_\theta(x)} p_\theta(x) dx  \; \; \qquad \mathrel{\#} \nabla_{\theta} \log p_{\theta}(x)  
 = \frac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\
 &= \int \frac{p_\theta(x)}{p_\theta(x)} \nabla_\theta p_\theta(x) dx  
@@ -653,18 +656,23 @@ There are several options for $\phi(s_t)$
 where $r_t  \sim P(r_t \mid s_t,u_t)$ is the probability of
 reward $r_t$ when taking action $u_t$ in state $s_t$, and  
 
-\begin{flalign*}
-V^{\pi}(s_t) &= \E_{s_{t+1} \sim p(s_{t+1} | s_t, u_t), u_t \sim
+\begin{equation*}
+\begin{array}{llll}
+V^{\pi}(s_t) 
+&=& \E_{s_{t+1} \sim p(s_{t+1} | s_t, u_t), u_t \sim
 \pi(u_t|s_t)}\Bigg [ \sum\limits_{l = 0}^{H - 1} r_{t+l} \Bigg ]
-\, \quad \qquad \qquad \mathrel{\#} \text{finite horizon state
-value function} \\ Q^{\pi}(s_t,u_t) &= \E_{s_{t+1} \sim p(s_{t+1}
-| s_t, u_t), u_{t+1} \sim \pi(u_{t+1} | s_{t+1})} \Bigg [
-\sum\limits_{l = 0}^{H - 1} r_{t+l} \Bigg ] \; \; \qquad
-\mathrel{\#} \text{finite horizon state-action value function}
-\\ A^{\pi}(s_t,u_t) &= Q^{\pi}(s_t,u_t) - V^{\pi}(s_t) \; \; \;
-\; \qquad \qquad \qquad \qquad \qquad \qquad \mathrel{\#}
-\text{finite horizon advantage function}
-\end{flalign*}
+		&\mathrel{\#} \text{finite horizon state value function} \\ 
+[15pt]
+Q^{\pi}(s_t,u_t) 
+&=& \E_{s_{t+1} \sim p(s_{t+1} | s_t, u_t), u_{t+1} \sim \pi(u_{t+1} | s_{t+1})} \Bigg [
+\sum\limits_{l = 0}^{H - 1} r_{t+l} \Bigg ]
+		&\mathrel{\#} \text{finite horizon state-action value function} \\
+[20pt]
+A^{\pi}(s_t,u_t) 
+&=& Q^{\pi}(s_t,u_t) - V^{\pi}(s_t) 
+		&\mathrel{\#} \text{finite horizon advantage function}
+\end{array}
+\end{equation*}
 
 
 \bigskip
