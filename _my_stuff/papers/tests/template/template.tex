@@ -1,0 +1,137 @@
+\documentclass[11pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+\usepackage{bigints}                                                    % bigger integral symbol
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{circuitikz}                                                 % draw circuits
+\usepackage{mathrsfs}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+
+
+
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%
+%	so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%
+%
+\title{random tests}
+\author{David Meyer \\ dmm613@gmail.com}
+\date{Last update: \today}
+
+
+\begin{document}
+\maketitle
+
+\bigskip
+\noindent
+Bhaskara’s formula
+
+
+{\huge
+\begin{equation*}
+\sin \theta^{\degree} \approx \dfrac{4\theta (180 - \theta)}{40500 - \theta(180-\theta)},
+\text{ for $0 \leq \theta \leq 180$}
+\end{equation*}
+}
+
+
+\bigskip
+\bigskip
+%
+%
+%
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{ml}
+%
+%	done
+%
+\end{document} 
+

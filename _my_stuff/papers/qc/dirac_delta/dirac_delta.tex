@@ -7,14 +7,9 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
 
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
-
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -63,21 +58,28 @@
 
 
 \title{A Few Notes On The Dirac Delta Function And \\ The Laplace Transform}
-\author{David Meyer \\ dmm@1-4-5.net}
+\author{David Meyer \\ dmm613@gmail.com}
 
-\date{Last update: \today}							% Activate to display a given date or no date
+\date{Last update: \today}
 
 \begin{document}
 \maketitle
 
 \section{Introduction}
-These notes began life as some thoughts on the Dirac Delta Function and evolved into notes on several related topics including  Laplace Transforms. The 
-Dirac Delta function has all kinds of crazy and interesting properties. More TBD.
+These notes began life as some thoughts on the Dirac Delta
+Function and evolved into notes on several related topics
+including Laplace Transforms. The Dirac Delta function has all
+kinds of crazy and interesting properties. More TBD.
 
 \section{The Dirac Delta Function}
-The Dirac Delta Function is defined as shown in Figure \ref{fig:delta}. In the limit ($\mathlarger{\epsilon} \to 0$) the
- Dirac Delta function is written $\delta_a(t)$ or sometimes $\delta(t - a)$. As we will see in a moment, the $\delta_{a,\epsilon}(t)$ form of the delta function
- is useful when we want to use the Mean Value Theorem for Integrals \cite{wiki:meam_value_theorem_for_integrals} to evaluate integrals involving the delta function.
+The Dirac Delta Function is defined as shown in Figure
+\ref{fig:delta}. In the limit ($\mathlarger{\epsilon} \to 0$) the
+Dirac Delta function is written $\delta_a(t)$ or sometimes
+$\delta(t - a)$. As we will see in a moment, the
+$\delta_{a,\epsilon}(t)$ form of the delta function is useful
+when we want to use the Mean Value Theorem for Integrals
+\cite{wiki:meam_value_theorem_for_integrals} to evaluate
+integrals involving the delta function.
  
 \bigskip
 
@@ -171,14 +173,15 @@ $\delta_a(t)$ also has the constraint that
 
 \bigskip
 \noindent
-and so is also a probability density. $\delta_a(t)$  is shown in Figure \ref{fig:delta_limit}.
+and so is also a probability density. $\delta_a(t)$  is shown in
+Figure \ref{fig:delta_limit}. 
 
 \bigskip
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}[scale=2.0]
-     \draw [<->] (0,2) -- (0,0) -- (4,0);                                                                      % draw axes
-     \draw (3,1) node[rectangle] {                                                                           % draw function to the right
+     \draw [<->] (0,2) -- (0,0) -- (4,0);                               % draw axes
+     \draw (3,1) node[rectangle] {                                      % draw function to the right
          $\delta_{a}(t) =  
            \begin{cases} 
               \infty & t = a  \\
@@ -198,8 +201,10 @@ and so is also a probability density. $\delta_a(t)$  is shown in Figure \ref{fig
 
 
 \subsection{Integrals involving $\delta_{a,\epsilon}(t)$}
-$\delta_{a,\epsilon}(t)$ has all kinds of interesting properties. One of them involves the integral of the product $\delta_{a,\epsilon}(t)$ with some function $g(t)$.  
-Here we would like to evaluate integrals of the form
+$\delta_{a,\epsilon}(t)$ has all kinds of interesting
+properties. One of them involves the integral of the product
+$\delta_{a,\epsilon}(t)$ with some function $g(t)$.  Here we
+would like to evaluate integrals of the form
 
 \bigskip
 \begin{equation}
@@ -209,11 +214,12 @@ Here we would like to evaluate integrals of the form
 
 \bigskip
 \noindent
-where $g(t)$ is continuous on the interval $[a, a+\epsilon]$. 
+where $g(t)$ is continuous on the interval $[a, a+\epsilon]$.  
  
 \bigskip
 \noindent
-The Mean Value Theorem for Integrals  \cite{wiki:meam_value_theorem_for_integrals}  tells us that
+The Mean Value Theorem for Integrals
+\cite{wiki:meam_value_theorem_for_integrals}  tells us that 
 
 \begin{equation}
   \int_{a}^{b} g(t) dt = (b -a) g(c)
@@ -222,8 +228,11 @@ The Mean Value Theorem for Integrals  \cite{wiki:meam_value_theorem_for_integral
 
 \bigskip
 \noindent
-where the point $c$ lies in the interval $[a, a+\epsilon]$. Now, since we know that $\delta_{a,\epsilon}(t)$ is zero everywhere except on the interval
-$[a, a+\epsilon]$ we can rewrite the improper integral in Equation \ref{eqn:delta_integral} as the proper integral
+where the point $c$ lies in the interval $[a, a+\epsilon]$. Now,
+since we know that $\delta_{a,\epsilon}(t)$ is zero everywhere
+except on the interval $[a, a+\epsilon]$ we can rewrite the
+improper integral in Equation \ref{eqn:delta_integral} as the
+proper integral
 
 \begin{equation*}
   \int_{a}^{a + \epsilon} \delta_{a,\epsilon}(t) g(t) dt
@@ -231,21 +240,29 @@ $[a, a+\epsilon]$ we can rewrite the improper integral in Equation \ref{eqn:delt
 
 \bigskip
 \noindent
-Here we can notice that $ \delta_{a,\epsilon}(t) = \frac{1}{\mathlarger{\epsilon}}$ on the interval $[a, a+\epsilon]$ so we can rewrite our integral as 
+Here we can notice that $ \delta_{a,\epsilon}(t) =
+\frac{1}{\mathlarger{\epsilon}}$ on the interval $[a,
+a+\epsilon]$ so we can rewrite our integral as
 
 \bigskip
 \begin{equation*}
-  \int_{a}^{a + \epsilon} \frac{1}{\mathlarger{\epsilon}} g(t) dt =  \frac{1}{\mathlarger{\epsilon}} \int_{a}^{a + \epsilon} g(t) dt
+  \int_{a}^{a + \epsilon} \frac{1}{\mathlarger{\epsilon}} g(t) dt
+  =  \frac{1}{\mathlarger{\epsilon}} \int_{a}^{a + \epsilon} g(t) dt 
 \end{equation*}
 
 \bigskip
 \noindent
-Now we can use Equation \ref{eqn:mvti}, the Mean Value Theorem for Integrals\footnote{This is where the $\delta_{a,\epsilon}(t)$ form of the delta function comes in handy.},
-by setting $b = a + \epsilon$ and $a = a$ so that $b - a = \epsilon$. Then 
+Now we can use Equation \ref{eqn:mvti}, the Mean Value Theorem
+for Integrals\footnote{This is where the $\delta_{a,\epsilon}(t)$
+form of the delta function comes in handy.}, by setting $b = a +
+\epsilon$ and $a = a$ so that $b - a = \epsilon$. Then
 
 \bigskip
 \begin{equation*}
- \frac{1}{\mathlarger{\epsilon}} \int_{a}^{a + \epsilon} g(t) dt =  \frac{1}{\mathlarger{\epsilon}} \underbrace{ \Big [(a + \epsilon) - a \Big]}_{b -a} g(c) = \frac{1}{\mathlarger{\epsilon}} \epsilon g(c) = g(c)
+ \frac{1}{\mathlarger{\epsilon}} \int_{a}^{a + \epsilon} g(t) dt
+ =  \frac{1}{\mathlarger{\epsilon}} \underbrace{ \Big [(a +
+ \epsilon) - a \Big]}_{b -a} g(c)
+ =  \frac{1}{\mathlarger{\epsilon}} \epsilon g(c) = g(c) 
 \end{equation*}
 
 \bigskip
@@ -255,8 +272,9 @@ where $c \in [a, a + \epsilon]$.
 % \newpage
 \bigskip
 \noindent
-Finally, if we look at what happens to $c$ as $\epsilon \to 0$ we see that $\lim\limits_{\epsilon \to 0} c = a$ (sorry about the notation abuse)
-so that 
+Finally, if we look at what happens to $c$ as $\epsilon \to 0$ we
+see that $\lim\limits_{\epsilon \to 0} c = a$ (sorry about the
+notation abuse) so that
 
 \begin{equation}
   \int_{0}^{\infty} \delta_{a}(t) g(t) dt = g(a)
@@ -265,11 +283,13 @@ so that
 
 \bigskip
 \noindent
-Essentially $\delta_{a}(t)$ pulls out the value of $g$ at $a$, that is, $g(a)$.
+Essentially $\delta_{a}(t)$ pulls out the value of $g$ at $a$,
+that is, $g(a)$.
 
 \bigskip
 \noindent
-Another way to look at this \cite{youtube:suskind2008.4} is to notice that the integrand of 
+Another way to look at this \cite{youtube:suskind2008.4} is to
+notice that the integrand of
 
 \bigskip
 \begin{equation*}
@@ -278,9 +298,11 @@ Another way to look at this \cite{youtube:suskind2008.4} is to notice that the i
 
 \bigskip
 \noindent
-is zero everywhere except where $t = a$, so we can rewrite our integral as
- $\int_{0}^{\infty} \delta (t-a) g(a) dt = g(a) \int_{0}^{\infty} \delta (t-a) dt$ (since $g(a)$ doesn't depend on $t$). 
- Then since by definition $ \int_{0}^{\infty} \delta (t-a) dt = 1$ we get
+is zero everywhere except where $t = a$, so we can rewrite our
+integral as $\int_{0}^{\infty} \delta (t-a) g(a) dt = g(a)
+\int_{0}^{\infty} \delta (t-a) dt$ (since $g(a)$ doesn't depend
+on $t$).  Then since by definition $ \int_{0}^{\infty} \delta
+(t-a) dt = 1$ we get
 
 \bigskip
 \begin{equation*}
@@ -290,11 +312,14 @@ is zero everywhere except where $t = a$, so we can rewrite our integral as
 \bigskip
 \section{The Laplace Transform}
 \label{sec:laplace_transform}
-We start by defining the integral transform of some function $f(t)$.
+We start by defining the integral transform of some function
+$f(t)$. 
 
 \bigskip
 \begin{definition} 
-{\bf Integral Transform:} If a function $f(t)$ is defined on $[0,\infty)$ then we can define an integral transform to be the improper integral
+{\bf Integral Transform:} If a function $f(t)$ is defined on
+$[0,\infty)$ then we can define an integral transform to be the
+improper integral 
 \end{definition}
 
 \begin{equation*}
@@ -303,12 +328,15 @@ F(s) = \int_0^\infty K(s,t) f(t) dt
 
 \bigskip
 \noindent
-If the improper integral converges then we say that $F(s)$ is the \emph{integral transform} of $f(t)$. The function $K(s,t)$ is called the \emph{kernel}
-of the transform. When $K(s,t) = e^{-st}$ the transform is called the {\bf Laplace Transform}.
+If the improper integral converges then we say that $F(s)$ is the
+\emph{integral transform} of $f(t)$. The function $K(s,t)$ is
+called the \emph{kernel} of the transform. When $K(s,t) =
+e^{-st}$ the transform is called the {\bf Laplace Transform}.
 
 \bigskip
 \begin{definition} 
-{\bf Laplace Transform:} The Laplace Transform of a function $f(t)$ is defined to be
+{\bf Laplace Transform:} The Laplace Transform of a function
+$f(t)$ is defined to be
 \label{def:laplace_transform}
 \end{definition}
 
@@ -320,20 +348,23 @@ of the transform. When $K(s,t) = e^{-st}$ the transform is called the {\bf Lapla
 
 \bigskip
 \noindent
-The Laplace Transform will turn out to be useful when solving ordinary differential equations (ODEs). Interestingly, the Laplace Transform of the 
-Dirac Delta Function turns out to be
+The Laplace Transform will turn out to be useful when solving
+ordinary differential equations (ODEs). Interestingly, the
+Laplace Transform of the Dirac Delta Function turns out to be
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{L}\{\delta_a(t)\} 
-&=& \int_0^\infty  e^{-st} \delta_a(t) dt    &\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:laplace_transform} with $f(t) = \delta_a(t)$}                    \\  
-[4pt]                                                        % get a bit of space
-&=& \int_0^\infty g(t) \delta_a(t) dt         &\qquad \qquad \mathrel{\#} \text{set $g(t) = e^{-st}$}                                                                                      \\
-[4pt]                                                        % get a bit of space
-&=& g(a)                                                &\qquad \qquad \mathrel{\#} \text{by Equation \ref{eqn:g(a)}}                                                                           \\
-[4pt]                                                        % get a bit of space
-&=& e^{-sa}                                            &\qquad \qquad \mathrel{\#} g(a) = e^{-sa}
+&=& \int_0^\infty  e^{-st} \delta_a(t) dt
+                &\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:laplace_transform} with $f(t) = \delta_a(t)$} \\ 
+[4pt]
+&=& \int_0^\infty g(t) \delta_a(t) dt
+                &\qquad \qquad \mathrel{\#} \text{set $g(t) = e^{-st}$} \\
+[4pt]
+&=& g(a)        &\qquad \qquad \mathrel{\#} \text{by Equation \ref{eqn:g(a)}} \\
+[4pt]
+&=& e^{-sa}     &\qquad \qquad \mathrel{\#} g(a) = e^{-sa}
 \end{array}
 \end{equation*}
 
@@ -343,29 +374,37 @@ Dirac Delta Function turns out to be
 
 \bigskip
 \begin{definition} 
-{\bf Linearity Property:} $\mathcal{L}\{af (t) + bg(t)\} = a\mathcal{L}\{f(t)\} + b\mathcal{L}\{g(t)\}$
+{\bf Linearity Property:} $\mathcal{L}\{af (t) + bg(t)\} =
+a\mathcal{L}\{f(t)\} + b\mathcal{L}\{g(t)\}$ 
 \label{def:linearity_properity}
 \end{definition}
 
 \bigskip
 \noindent
-Interestingly, $\mathcal{L}$ is what is called a linear operator in vector space parlance \cite{wiki:linear_map}. 
+Interestingly, $\mathcal{L}$ is what is called a linear operator
+in vector space parlance \cite{wiki:linear_map}.
 
 \bigskip
 \noindent
-All good, but why does $\mathcal{L}$ have this property? Here's one way to think about it:
+All good, but why does $\mathcal{L}$ have this property? Here's
+one way to think about it:
 
 \smallskip
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{L}\{af(t) + bg(t)\} 
-&=& \int_0^\infty e^{-st} \big [af (t) + bg(t) \big] dt                                & \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}                               \\  
-[10pt]                                                                                                   % get a bit of space
-&=& \int_0^\infty e^{-st} af (t)  dt + \int_0^\infty e^{-st}  bg(t)  dt          & \mathrel{\#} \text{by the linearity of improper integrals \cite{lewis2014}}                                                                 \\
-[10pt]                                                                                                   % get a bit of space
-&=& a \int_0^\infty e^{-st}  f(t) dt + b \int_0^\infty e^{-st}  g(t) dt          & \mathrel{\#} \text{neither $a$ nor $b$ depends on $t$}                                                                                           \\
-[10pt]                                                                                                   % get a bit of space
-&=& a \mathcal{L}\{f(t)\}  + b \mathcal{L}\{g(t)\}                                   & \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}
+&=& \int_0^\infty e^{-st} \big [af (t) + bg(t) \big] dt
+                & \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[10pt]
+&=& \int_0^\infty e^{-st} af (t)  dt + \int_0^\infty e^{-st} bg(t) dt 
+                & \mathrel{\#} \text{by the linearity of improper integrals \cite{lewis2014}} \\
+[10pt]
+&=& a \int_0^\infty e^{-st}  f(t) dt + b \int_0^\infty e^{-st}
+g(t) dt
+                & \mathrel{\#} \text{neither $a$ nor $b$ depends on $t$} \\
+[10pt]
+&=& a \mathcal{L}\{f(t)\}  + b \mathcal{L}\{g(t)\}
+                & \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}
 \end{array}
 \end{equation*}
 
@@ -373,19 +412,24 @@ All good, but why does $\mathcal{L}$ have this property? Here's one way to think
 
 \smallskip
 \subsection{So does every function have a Laplace Transform?}
-The answer is no (consider a function like $f(t) = t^{-1}$). Ok, then what are the properties that $f(t)$ must have in order to have a Laplace Transform? First, $f$ must
-be of "exponential order". 
+The answer is no (consider a function like $f(t) = t^{-1}$). Ok,
+then what are the properties that $f(t)$ must have in order to
+have a Laplace Transform? First, $f$ must be of "exponential
+order".
 
 
 \bigskip
 \begin{definition} 
-{\bf Exponential Order:} A function $f$ is said to be of exponential order $c$ if there exist constants $c, M, \text{ and } T > 0$ such that $|f(t)| \leq Me^{ct}$ for all $t > T$.
+{\bf Exponential Order:} A function $f$ is said to be of
+exponential order $c$ if there exist constants $c, M, \text{ and
+} T > 0$ such that $|f(t)| \leq Me^{ct}$ for all $t > T$.
 \label{def:exponential_order}
 \end{definition}
 
 \bigskip
 \noindent
-Said another way, in order for $f(t)$ to be of exponential order $c$ we require that  
+Said another way, in order for $f(t)$ to be of exponential order
+$c$ we require that
 
 \bigskip
 \begin{equation*}
@@ -395,8 +439,10 @@ Said another way, in order for $f(t)$ to be of exponential order $c$ we require 
 \medskip
 \bigskip
 \noindent
-Basically this is saying that in order for $f(t)$ to have a Laplace Transform then in a race between $|f(t)|$ and $e^{ct}$ as $t \to \infty$ $e^{ct}$ must
-approach its limit first. This situation is depicted in Figure \ref{fig:exponential_order}.
+Basically this is saying that in order for $f(t)$ to have a
+Laplace Transform then in a race between $|f(t)|$ and $e^{ct}$ as
+$t \to \infty$ $e^{ct}$ must approach its limit first. This
+situation is depicted in Figure \ref{fig:exponential_order}.
 
 \bigskip
 \bigskip
@@ -409,12 +455,15 @@ approach its limit first. This situation is depicted in Figure \ref{fig:exponent
 \bigskip
 \bigskip
 \noindent
-Now we can answer the question of when $f$ has a Laplace Transfrom:
+Now we can answer the question of when $f$ has a Laplace
+Transfrom: 
 
 \bigskip
 \begin{thm} 
-{\bf Existence Theorem for Laplace Transforms:} \normalfont If $f$ is s piecewise continuous on the interval $[0,\infty)$ and is of exponential order $c$ then 
-$F (s) = \mathcal{L}\{f (t)\} \text{ is defined for all $s > c$}.$
+{\bf Existence Theorem for Laplace Transforms:} \normalfont If
+$f$ is s piecewise continuous on the interval $[0,\infty)$ and is
+of exponential order $c$ then $F (s) = \mathcal{L}\{f (t)\}
+\text{ is defined for all $s > c$}.$
 \end{thm}
 
 \bigskip
@@ -424,42 +473,65 @@ Ok, but why? Consider
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{L}\{f(t)\}
-&=& F(s)                                                                            &\quad  \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}                                                \\  
-[12pt]                                                                                 % get a bit of space
-&=&   \mathlarger{\int}_0^\infty \! e^{-st} f(t) dt                  &\quad  \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}                                                \\  
-[12pt]                                                                                 % get a bit of space
-&\leq& \mathlarger{\int}_0^\infty \! e^{-st}  Me^{ct}dt         &\quad  \mathrel{\#} \text{$f$ is of exponential order $c$ (Definition \ref{def:exponential_order})}                                                      \\  
-[12pt]                                                                                 % get a bit of space               
-&=& M \mathlarger{\int}_0^\infty \! e^{-st} e^{ct} dt           &\quad  \mathrel{\#} \text{$M$ doesn't depend on $t$}                                                                                                                          \\   
-[12pt]                                                                                % get a bit of space
-&=& M \mathlarger{\int}_0^\infty \! e^{-st + ct}  dt             &\quad  \mathrel{\#} \text{$x^n \cdot x^m = x^{n+m}$}                                                                                                                           \\      
-[12pt]                                                                                 % get a bit of space
-&=& M \mathlarger{\int}_0^\infty\! e^{(c-s)t}  dt                 &\quad  \mathrel{\#}  e^{-st + ct} = e^{ct -st} = e^{(c-s)t}                                                                                                                        \\      
-[12pt]                                                                                 % get a bit of space
-&=&  M \mathlarger{\int}_0^\infty \! e^u dt                         &\quad  \mathrel{\#} \text{use a $u$ substitution with $u = (c-s)t$}                                                                                                       \\     
-[12pt]                                                                                 % get a bit of space
-&=&  M \mathlarger{\int}_0^\infty \! e^u \frac{du}{c-s}       &\quad  \mathrel{\#} u = (c-s)t  \: \Rightarrow \: du = (c-s) dt \: \Rightarrow \: dt = \dfrac{du}{c-s}                                                         \\     
-[12pt]                                                                                % get a bit of space
-&=& \Big [ \frac{M}{c-s} \Big ] \mathlarger{\int}_0^\infty \! e^u du                                    &\quad  \mathrel{\#} \text{neither $c$ nor $s$ depends on $t$}                                                              \\     
-[12pt]                                                                                % get a bit of space
-&=& \Big [ \frac{M}{c-s} \Big ] e^u \Big |_0^\infty              &\quad  \mathrel{\#} \int_0^\infty e^u du = e^u +C \text{ and the Fundamental Theorem of Calculus}                                                  \\     
-[12pt]                                                                                % get a bit of space
-&=& \Big [ \frac{M}{c-s} \Big ]  e^{(c-s)t} \Big |_0^\infty     &\quad  \mathrel{\#} u = (c-s)t                                                                                                                                                                \\
-[12pt]                                                                                % get a bit of space     
-&=& \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] - \frac{M}{c - s}e^{(c-s)0}  &\quad \mathrel{\#} \text{evaluate at the limits}                                                                                     \\
-[12pt]                                                                                % get a bit of space
-&=& \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] - \frac{M}{c - s}                 &\quad  \mathrel{\#} e^{(c-s)0} = e^0 = 1 \text{ and } \frac{M}{c-s} \cdot 1 = \frac{M}{c-s}                     \\
-[12pt]                                                                                % get a bit of space
-&=& 0 - \frac{M} {\mathlarger{c-s}}                                   &\quad  \mathrel{\#} s > c \: \Rightarrow \: c -s < 0 \: \Rightarrow  \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] = 0          \\    
-[12pt]                                                                                % get a bit of space
-&=& \frac{M}{\mathlarger{s-c}}                                         &\quad  \mathrel{\#} \text{simplify} 
+&=& F(s)
+                &\quad  \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})} \\  
+[12pt] 
+&=& \mathlarger{\int}_0^\infty \! e^{-st} f(t) dt
+                &\quad  \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[12pt] 
+&\leq& \mathlarger{\int}_0^\infty \! e^{-st} Me^{ct}dt
+                &\quad  \mathrel{\#} \text{$f$ is of exponential order $c$ (Definition \ref{def:exponential_order})} \\ 
+[12pt] 
+&=& M \mathlarger{\int}_0^\infty \! e^{-st} e^{ct} dt
+                &\quad  \mathrel{\#} \text{$M$ doesn't depend on $t$} \\   
+[12pt] 
+&=& M \mathlarger{\int}_0^\infty \! e^{-st + ct} dt
+                &\quad  \mathrel{\#} \text{$x^n \cdot x^m = x^{n+m}$} \\      
+[12pt]
+&=& M \mathlarger{\int}_0^\infty\! e^{(c-s)t} dt
+                &\quad  \mathrel{\#}  e^{-st + ct} = e^{ct -st} = e^{(c-s)t} \\      
+[12pt] 
+&=& M \mathlarger{\int}_0^\infty \! e^u dt
+                &\quad  \mathrel{\#} \text{use a $u$ substitution with $u = (c-s)t$} \\     
+[12pt] 
+&=&  M \mathlarger{\int}_0^\infty \! e^u \frac{du}{c-s}
+                &\quad  \mathrel{\#} u = (c-s)t  \: \Rightarrow \: du
+                                       = (c-s) dt \: \Rightarrow \: dt = \dfrac{du}{c-s} \\     
+[12pt] 
+&=& \Big [ \frac{M}{c-s} \Big ] \mathlarger{\int}_0^\infty \! e^u du
+                &\quad  \mathrel{\#} \text{neither $c$ nor $s$ depends on $t$} \\     
+[12pt] 
+&=& \Big [ \frac{M}{c-s} \Big ] e^u \Big |_0^\infty
+                &\quad  \mathrel{\#} \int_0^\infty e^u du = e^u +C \text{ and the Fundamental Theorem of Calculus} \\     
+[12pt] 
+&=& \Big [ \frac{M}{c-s} \Big ]  e^{(c-s)t} \Big |_0^\infty
+                &\quad  \mathrel{\#} u = (c-s)t \\
+[12pt] 
+&=& \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] - \frac{M}{c - s}e^{(c-s)0}
+                &\quad \mathrel{\#} \text{evaluate at the limits} \\
+[12pt] 
+&=& \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big
+] - \frac{M}{c - s}
+                &\quad  \mathrel{\#} e^{(c-s)0} = e^0 = 1 \text{ and } \frac{M}{c-s} \cdot 1 = \frac{M}{c-s} \\
+[12pt]
+&=& 0 - \frac{M} {\mathlarger{c-s}}
+                &\quad  \mathrel{\#} s > c \: \Rightarrow \: c -s < 0 \:
+                \Rightarrow  \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] = 0 \\    
+[12pt]
+&=& \frac{M}{\mathlarger{s-c}}
+                &\quad  \mathrel{\#} \text{simplify} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So if $s = c$ then $\frac{M}{\mathlarger{s-c}}$ is not defined and $\mathcal{L}\{f(t)\}$ does not exist. Similarly, if $s < c$ then $\lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ]$ 
-does not converge and $\mathcal{L}\{f(t)\}$ does not exist. All of this implies that functions that do not satisfy the conditions of the Existence Theorem do not have Laplace Transforms.
+So if $s = c$ then $\frac{M}{\mathlarger{s-c}}$ is not defined
+and $\mathcal{L}\{f(t)\}$ does not exist. Similarly, if $s < c$
+then $\lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d}
+\Big ]$ does not converge and $\mathcal{L}\{f(t)\}$ does not
+exist. All of this implies that functions that do not satisfy the
+conditions of the Existence Theorem do not have Laplace
+Transforms.
 
 
 
@@ -468,8 +540,10 @@ does not converge and $\mathcal{L}\{f(t)\}$ does not exist. All of this implies 
 \label{sec:inverse_laplace_transform}
 
 \begin{definition} {\bf Inverse Laplace Transform:}
-If $F(s)$ represents the Laplace Transform of a function $f(t)$ such that $\mathcal{L}\{f(t)\} = F(s)$
-then the Inverse Laplace Transform of $F(s)$ is $f(t)$, i.e. $\mathcal{L}^{-1}\{F(s)\} = f(t)$.
+If $F(s)$ represents the Laplace Transform of a function $f(t)$
+such that $\mathcal{L}\{f(t)\} = F(s)$ then the Inverse Laplace
+Transform of $F(s)$ is $f(t)$, i.e. $\mathcal{L}^{-1}\{F(s)\} =
+f(t)$.
 \end{definition}
 
 \bigskip
@@ -484,32 +558,32 @@ Here are a few examples:
 \renewcommand{\arraystretch}{3}
 \begin{tabular} {| c | c  |}
 \hline
-\multicolumn{2} {| c |}{\bf Laplace Transform}     \\
+\multicolumn{2} {| c |}{\bf Laplace Transform} \\
 \hline
-$f(t)$                 & $F(s) = \mathcal{L}\{f(t)\}$      \\
+$f(t)$                  & $F(s) = \mathcal{L}\{f(t)\}$ \\
 \hline \hline
-1                       & $\frac{1}{s}$                            \\
+1                       & $\frac{1}{s}$ \\
 [4pt]
 \hline
-$t^n$                & $\frac{n!}{s^{n+1}}$                 \\
+$t^n$                   & $\frac{n!}{s^{n+1}}$ \\
 [4pt]
 \hline
-$e^{at}$            & $\frac{1}{s - a}$                       \\
+$e^{at}$                & $\frac{1}{s - a}$ \\
 [4pt]
 \hline
-$\sin(kt)$           & $\frac{k}{s^2 + k^2}$               \\
+$\sin(kt)$              & $\frac{k}{s^2 + k^2}$ \\
 [4pt]
 \hline
-$\cos(kt)$          & $\frac{s}{s^2 + k^2}$               \\
+$\cos(kt)$              & $\frac{s}{s^2 + k^2}$ \\
 [4pt]
 \hline
-$\sinh(kt)$         & $\frac{k}{s^2 - k^2}$                \\
+$\sinh(kt)$             & $\frac{k}{s^2 - k^2}$ \\
 [4pt]
 \hline
-$\cosh(kt)$        & $\frac{s}{s^2 - k^2}$                \\
+$\cosh(kt)$             & $\frac{s}{s^2 - k^2}$ \\
 [4pt]
 \hline
-$\dfrac{dg}{dt}$ & $sG(s) - g(0)$                          \\
+$\dfrac{dg}{dt}$ & $sG(s) - g(0)$ \\
 [4pt]
 \hline
 \end{tabular}
@@ -520,32 +594,32 @@ $\dfrac{dg}{dt}$ & $sG(s) - g(0)$                          \\
 \centering
 \begin{tabular} {| c | c  |}
 \hline
-\multicolumn{2} {| c |}{\bf Inverse Laplace Transform}      \\
+\multicolumn{2} {| c |}{\bf Inverse Laplace Transform} \\
 \hline
-$F(s)$  & $f(t) = \mathcal{L}^{-1}\{F(s)\}$                         \\
+$F(s)$                          & $f(t) = \mathcal{L}^{-1}\{F(s)\}$ \\
 \hline \hline
-$\frac{1}{s}$           & 1                                                     \\
+$\frac{1}{s}$                   & 1 \\
 [4pt]
 \hline
-$\frac{n!}{s^{n+1}}$ & $t^n$                                             \\
+$\frac{n!}{s^{n+1}}$            & $t^n$ \\
 [4pt]
 \hline
-$\frac{1}{s - a}$       & $e^{at}$                                         \\
+$\frac{1}{s - a}$               & $e^{at}$ \\
 [4pt]
 \hline
-$\frac{k}{s^2 + k^2}$ & $\sin(kt)$                                      \\
+$\frac{k}{s^2 + k^2}$           & $\sin(kt)$ \\
 [4pt]
 \hline
-$\frac{s}{s^2 + k^2}$ & $\cos(kt)$                                     \\
+$\frac{s}{s^2 + k^2}$           & $\cos(kt)$ \\
 [4pt]
 \hline
- $\frac{k}{s^2 - k^2}$ & $\sinh(kt)$                                     \\
+ $\frac{k}{s^2 - k^2}$          & $\sinh(kt)$ \\
 [4pt]
 \hline
-$\frac{s}{s^2 - k^2}$  & $\cosh(kt)$                                    \\
+$\frac{s}{s^2 - k^2}$           & $\cosh(kt)$ \\
 [4pt]
 \hline
-$sG(s) - g(0)$           & $\dfrac{dg}{dt}$                              \\
+$sG(s) - g(0)$                  & $\dfrac{dg}{dt}$ \\
 [4pt]
 \hline
 \end{tabular}
@@ -555,43 +629,60 @@ $sG(s) - g(0)$           & $\dfrac{dg}{dt}$                              \\
 
 \subsection{Ok, then what is the Laplace Transform of $f^\prime (t)$?}
 \label{sec:f_prime}
-Suppose $f(t)$ is continuous, piecewise smooth and of exponential order, and suppose $f^\prime(t)$ is the derivative of $f(t)$. Then the
-Laplace Transform of $f^\prime(t), \: \mathcal{L}\{f^\prime(t)\}$, turns out to be
+Suppose $f(t)$ is continuous, piecewise smooth and of exponential
+order, and suppose $f^\prime(t)$ is the derivative of
+$f(t)$. Then the Laplace Transform of $f^\prime(t), \:
+\mathcal{L}\{f^\prime(t)\}$, turns out to be
 
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{L}\{f^\prime(t)\}
-&=& \mathlarger{\int} ^\infty_0 \! e^{-st}  f^\prime(t) dt                                                                                                                    &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\  
-[20pt]                                                                                                                                                                                               % get some space
-&=& \mathlarger{\int}^\infty_0 \! \underbracket [0.15 ex] {\strut e^{-st}}_{v}  \underbracket [0.15 ex] {\strut f^\prime(t) dt}_{du}    &\mathrel{\#} \text{use integration by parts}                                                                      \\  
-[20pt]                                                                                                                                                                                               % get some space
+&=& \mathlarger{\int} ^\infty_0 \! e^{-st}  f^\prime(t) dt
+                                &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[20pt] 
+&=& \mathlarger{\int}^\infty_0 \! \underbracket [0.15 ex] {\strut
+e^{-st}}_{v}  \underbracket [0.15 ex] {\strut f^\prime(t)
+dt}_{du}
+                                &\mathrel{\#} \text{use integration by parts} \\  
+[20pt] 
 &=& \underbracket [0.15 ex] {\strut e^{-st}}_{v}  \underbracket [0.15 ex] {\strut f(t)}_{u} \bigg |^\infty_0   -   
         \mathlarger{\int}^\infty_0 \! \underbracket [0.15 ex] {\strut (-s) e^{-st}}_{dv}  \underbracket [0.15 ex] {\strut f(t)}_{u} dt 
-        &\mathrel{\#} \mathlarger{\int}_0^\infty \! v \: du = uv - \mathlarger{\int}_0^\infty \! u \: dv                                                                                                                                                                                                \\  
+                                &\mathrel{\#} \mathlarger{\int}_0^\infty \! v \: du = uv - \mathlarger{\int}_0^\infty \! u \: dv \\ 
 [20pt]                                                                                                                                                                                               % get some space
-&=& \lim\limits_{d \to \infty}\Big [e^{-sd} f(d) \Big ] - e^{-s \cdot 0} \cdot f(0) - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt         &\mathrel{\#} \text{evaluate first term at the limits}                                                           \\
-[20pt]                                                                                                                                                                                              % get some space
-&=& 0  - e^{-s \cdot 0} \cdot f(0)  - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt                                                                          &\mathrel{\#} \lim\limits_{d \to \infty}\Big [e^{-sd} f(d) \Big ] = 0                                         \\
-[20pt]                                                                                                                                                                                              % get some space
-&=& 0 - f(0) - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt                                                                                                           &\mathrel{\#} e^{-s \cdot 0} = e^0 = 1 \text{ and } 1 \cdot f(0) = f(0)                                  \\
-[20pt]                                                                                                                                                                                              % get some space
-&=& -f(0) + s \mathlarger{\int}^\infty_0 \!  e^{-st}  f(t) dt                                                                                                                  &\mathrel{\#} \text{$s$ doesn't depend on $t$ and simplify}                                             \\
-[20pt]                                                                                                                                                                                              % get some space
-% &=& -f(0) + s F(s)                                                                                                                                                                       \mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\   
-% [20pt]                                                                                                                                                                                          % get some space
-&=& -f(0) + s \mathcal{L}\{f(t)\}                                                                                                                                                       &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
-[20pt]                                                                                                                                                                                              % get some space
-&=& s \mathcal{L}\{f(t)\} - f(0)                                                                                                                                                         &\mathrel{\#} \text{rearrange}        \\
-[20pt]                                                                                                                                                                                              % get some space
-&=& s F(s) - f(0)                                   &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\                                                                                                                                                                                                                                                                        
+&=& \lim\limits_{d \to \infty}\Big [e^{-sd} f(d) \Big ] - e^{-s
+\cdot 0} \cdot f(0) - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st} f(t) dt
+                                &\mathrel{\#} \text{evaluate first term at the limits} \\
+[20pt]
+&=& 0  - e^{-s \cdot 0} \cdot f(0)  - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt
+                                &\mathrel{\#} \lim\limits_{d \to \infty}\Big [e^{-sd} f(d) \Big ] = 0 \\
+[20pt] 
+&=& 0 - f(0) - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt
+                                &\mathrel{\#} e^{-s \cdot 0} =
+                                e^0 = 1 \text{ and } 1 \cdot f(0)
+                                = f(0) \\
+[20pt] 
+&=& -f(0) + s \mathlarger{\int}^\infty_0 \!  e^{-st}  f(t) dt
+                                &\mathrel{\#} \text{$s$ doesn't depend on $t$ and simplify} \\
+[20pt] 
+&=& -f(0) + s \mathcal{L}\{f(t)\}
+                                &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[20pt] 
+&=& s \mathcal{L}\{f(t)\} - f(0)
+                                &\mathrel{\#} \text{rearrange} \\
+[20pt] 
+&=& s F(s) - f(0)               &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-One of the interesting things to note here is that by using the Laplace Transform we've taken a statement about the derivative of $f$, namely $\mathcal{L}\{f^\prime(t)\}$,
-and converted it into a statement about $f$ itself: $s \mathcal{L}\{f(t)\} - f(0)$. That is, we've converted a differential equation into an algebraic one. This will come in handy later 
-when we want to solve differential equations.
+One of the interesting things to note here is that by using the
+Laplace Transform we've taken a statement about the derivative of
+$f$, namely $\mathcal{L}\{f^\prime(t)\}$, and converted it into a
+statement about $f$ itself: $s \mathcal{L}\{f(t)\} - f(0)$. That
+is, we've converted a differential equation into an algebraic
+one. This will come in handy later when we want to solve
+differential equations.
 
 \newpage
 \subsection{What about $\mathcal{L}\{f^{\prime\prime}(t)\}$?}
@@ -599,20 +690,34 @@ when we want to solve differential equations.
 
 \bigskip
 \noindent
-Once we know how to compute $\mathcal{L}\{f^{\prime}(t)\}$ it is pretty easy to see how to compute $\mathcal{L}\{f^{\prime\prime}(t)\}$:
+Once we know how to compute $\mathcal{L}\{f^{\prime}(t)\}$ it is
+pretty easy to see how to compute
+$\mathcal{L}\{f^{\prime\prime}(t)\}$: 
 
 \begin{equation*}
 \begin{array}{lllll}
 \mathcal{L}\{f^{\prime \prime}(t)\}           
-&=&  \mathcal{L}\{g^\prime (t)\}                                 &\qquad \qquad \mathrel{\#} \text{set $g(t) = f^\prime(t) \Rightarrow g^\prime(t) = f^{\prime \prime}(t)$}                         \\   
+&=&  \mathcal{L}\{g^\prime (t)\}
+                        &\qquad \qquad \mathrel{\#} \text{set
+                        $g(t) = f^\prime(t) \Rightarrow
+                        g^\prime(t) = f^{\prime \prime}(t)$} \\  
 [8pt]
-&=& s \mathcal{L}\{g(t)\}  - g(0)                                 &\qquad  \qquad \mathrel{\#} \mathcal{L}\{g(t)^\prime\} = s \mathcal{L}\{g(t)\}  - g(0) \text{ (Section \ref{sec:f_prime})}   \\   
+&=& s \mathcal{L}\{g(t)\}  - g(0)
+                        &\qquad  \qquad \mathrel{\#}
+                        \mathcal{L}\{g(t)^\prime\} = s
+                        \mathcal{L}\{g(t)\}  - g(0) \text{
+                        (Section \ref{sec:f_prime})} \\ 
 [8pt]
-&=& s \mathcal{L}\{f^\prime(t)\} - f^\prime(0)             &\qquad \qquad \mathrel{\#} g(t) = f^\prime(t)                                                                                                                   \\
+&=& s \mathcal{L}\{f^\prime(t)\} - f^\prime(0)
+                        &\qquad \qquad \mathrel{\#} g(t) = f^\prime(t) \\
 [8pt] 
-&=& s \big [ sF(s) - f(0) \big ] - f^\prime(0)                 &\qquad \qquad \mathrel{\#} \mathcal{L}\{f(t)^\prime\} = s F(s) -f(0) \text{ (Section \ref{sec:f_prime})}                             \\  
+&=& s \big [ sF(s) - f(0) \big ] - f^\prime(0)
+                        &\qquad \qquad \mathrel{\#}
+                        \mathcal{L}\{f(t)^\prime\} = s F(s) -f(0)
+                        \text{ (Section \ref{sec:f_prime})} \\ 
 [8pt]
-&=& s^2F(s) - sf(0) - f^\prime(0)                                &\qquad \qquad \mathrel{\#} \text{simplify}
+&=& s^2F(s) - sf(0) - f^\prime(0)
+                        &\qquad \qquad \mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
@@ -620,7 +725,8 @@ Once we know how to compute $\mathcal{L}\{f^{\prime}(t)\}$ it is pretty easy to 
 \subsection{So what is the general form of $\mathcal{L}\{f^{(n)}(t)\}$?}
 \bigskip
 \noindent
-The general form of the Laplace Transform of the $n^{th}$ derivative of some function $f(t)$ is 
+The general form of the Laplace Transform of the $n^{th}$
+derivative of some function $f(t)$ is  
 
 \bigskip
 \begin{equation}
@@ -630,12 +736,17 @@ The general form of the Laplace Transform of the $n^{th}$ derivative of some fun
 
 \bigskip  
 \noindent
-Here $f$ is assumed to be n-times differentiable and that it's $n^{th}$ derivative, denoted $f^{(n)}$, is piecewise continuous and of exponential order. The 
-result then follows by mathematical induction. Note that $f^{(0)}$, the $0^{\text{th}}$ derivative of $f$, is just $f$.
+Here $f$ is assumed to be n-times differentiable and that it's
+$n^{th}$ derivative, denoted $f^{(n)}$, is piecewise continuous
+and of exponential order. The result then follows by mathematical
+induction. Note that $f^{(0)}$, the $0^{\text{th}}$ derivative of
+$f$, is just $f$.
 
 \bigskip
 \noindent
-So for example, for the Laplace Transform of the second derivative ($n = 2$) of some function $f$ Equation \ref{eqn:nth-derivative} tells us
+So for example, for the Laplace Transform of the second
+derivative ($n = 2$) of some function $f$ Equation
+\ref{eqn:nth-derivative} tells us
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -698,8 +809,11 @@ y^{\prime \prime} - y^\prime -2y = 0 \text{ with $y(0) = 1$ and $y^\prime (0) = 
 
 \bigskip
 \noindent
-We can use the Laplace Transform to solve this ODE. The basic idea is to take the Laplace Transform of both sides of Equation \ref{eqn:ode}, set $Y(s) = \mathcal{L}\{y\}$,
-and then solve for $Y(s)$. Then we can find $y(t)$ by taking the Inverse Laplace Transform of $Y(s)$.
+We can use the Laplace Transform to solve this ODE. The basic
+idea is to take the Laplace Transform of both sides of Equation
+\ref{eqn:ode}, set $Y(s) = \mathcal{L}\{y\}$, and then solve for
+$Y(s)$. Then we can find $y(t)$ by taking the Inverse Laplace
+Transform of $Y(s)$.
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -734,7 +848,9 @@ y^{\prime \prime} - y^\prime -2y
 
 \bigskip
 \noindent
-So $Y(s) = \mathlarger{\frac{s - 1}{s^2 -s -2}}$. Now we can split $Y(s)$ using partial fractions and solve for $y(t)$ using the Inverse Laplace Transform:
+So $Y(s) = \mathlarger{\frac{s - 1}{s^2 -s -2}}$. Now we can
+split $Y(s)$ using partial fractions and solve for $y(t)$ using
+the Inverse Laplace Transform:
 
 \bigskip
 \begin{equation*}
@@ -817,7 +933,8 @@ Y(s)
 
 \bigskip
 \noindent
-So we've been able to use the Laplace Transform to solve the ODE in Section \ref{sec:example_ode} (Equation \ref{eqn:ode}):
+So we've been able to use the Laplace Transform to solve the ODE
+in Section \ref{sec:example_ode} (Equation \ref{eqn:ode}):
 
 \bigskip
 \begin{equation*}
@@ -825,7 +942,8 @@ y(t) = \frac{1}{3} e^{2t} + \frac{2}{3} e^{-t}
 \end{equation*}
 
 \section{\large The Heaviside Function, Convolution, and the Laplace Transform}
-We saw in Section \ref{subsec:linearity} that the Laplace Transform has a linearity property, namely, 
+We saw in Section \ref{subsec:linearity} that the Laplace
+Transform has a linearity property, namely,
 
 \bigskip
 \begin{equation*}
@@ -834,7 +952,8 @@ We saw in Section \ref{subsec:linearity} that the Laplace Transform has a linear
 
 \bigskip
 \noindent
-One natural question is whether there is a "linearity-like" property for multiplication. Unfortunately
+One natural question is whether there is a "linearity-like"
+property for multiplication. Unfortunately
 
 \bigskip
 \begin{equation*}
@@ -843,7 +962,8 @@ One natural question is whether there is a "linearity-like" property for multipl
 
 \bigskip
 \noindent
-However, convolution behaves better with respect to the Laplace Transform of a product. Specifically
+However, convolution behaves better with respect to the Laplace
+Transform of a product. Specifically 
 
 \bigskip
 \begin{equation}
@@ -857,12 +977,13 @@ where $\ast$ is the convolution operator.
 
 \bigskip
 \noindent
-To see why Equation  \ref{eqn:lt_of_convolution} holds we need another piece of machinery, the Heaviside function.
+To see why Equation \ref{eqn:lt_of_convolution} holds we need
+another piece of machinery, the Heaviside function. 
 
 \subsection{The Heaviside Function}
 The most basic definition of the Heaviside function is
 
-
+\medskip
 \begin{definition} {\bf Heaviside Function:}
 \bigskip
 \begin{equation*}
@@ -879,27 +1000,26 @@ u(t) =
 \noindent
 The Heaviside function is shown in Figure \ref{fig:u(t)}.
 
-
 \bigskip
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}[scale=2.0]
-     \draw [thick,->,dashed] (0,0) -- (0,2);                                                                      % draw axes
-     \draw [thick,->,dashed] (0,0) -- (3,0);                                                                      % draw axes
-     \draw (2,2) node[draw,rectangle] {                                                                          % draw function to the right
+     \draw [thick,->,dashed] (0,0) -- (0,2);						% draw axes
+     \draw [thick,->,dashed] (0,0) -- (3,0);						% draw axes
+     \draw (2,2) node[draw,rectangle] {								% draw function to the right
          $u(t) =  
            \begin{cases} 
                0 & t < 0  \\
-               1  & t \geq 1
+               1 & t \geq 1
            \end{cases}$
        }; 
      \draw (3,0) node [label=right:{$t$}] {};
      \draw (0,2) node [label=above:{$u(t)$}] {};
      \draw [<-,thick,red] (-2,0) -- (0,0);
      \draw [->,thick,red] (0,1) -- (3,1);
-     \coordinate (y) at (0,1); \fill [red] (y) circle (1pt);                                                     % draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \coordinate (y) at (0,1); \fill [red] (y) circle (1pt);		% draw a dot on the y axis (I'd like to make it smaller but I don't see how)
      \draw (0,1) node[left] {1};
-     \draw [thick,red] (0,0) circle [radius =0.03cm];                                                       % draw an open red circle on the x axis at (0,0)             
+     \draw [thick,red] (0,0) circle [radius =0.03cm];				% draw an open red circle on the x axis at (0,0)             
      \draw (0,0) node[below] {$0$};
   \end{tikzpicture}
   \caption{The Heaviside Function $u(t)$}
@@ -909,7 +1029,8 @@ The Heaviside function is shown in Figure \ref{fig:u(t)}.
 
 \bigskip
 \noindent
-More frequently we are interested in $u(t-a)$, which is sometimes written as $u_a(t)$,  is shown in Figure \ref{fig:u(t-a)}.
+More frequently we are interested in $u(t-a)$, which is sometimes 
+written as $u_a(t)$,  is shown in Figure \ref{fig:u(t-a)}.
 
 
 \bigskip
@@ -979,7 +1100,9 @@ Another useful version of the Heaviside function, $u(a-t)$, is shown in Figure \
 
 \bigskip
 \noindent
-Now the obvious question is how do we compute $\mathcal{L}\{u(t-a)\}$? Recall that by the definition of the Laplace Transform we have
+Now the obvious question is how do we compute
+$\mathcal{L}\{u(t-a)\}$? Recall that by the definition of the
+Laplace Transform we have
 
 \begin{equation*}
 F(s) = \int^\infty_0 e^{-st} u(t-a) dt
@@ -987,7 +1110,9 @@ F(s) = \int^\infty_0 e^{-st} u(t-a) dt
 
 \bigskip
 \noindent
-The first thing to observe is that $u(t-a)$ is zero for $t < a$ and one otherwise (Figure \ref{fig:u(t-a)}), so we can rewrite our integral with a lower limit of $a$.
+The first thing to observe is that $u(t-a)$ is zero for $t < a$
+and one otherwise (Figure \ref{fig:u(t-a)}), so we can rewrite
+our integral with a lower limit of $a$.
 
 \bigskip
 \begin{equation*}
@@ -1017,7 +1142,9 @@ F(s)
 
 \bigskip
 \noindent
-What can we say about the Laplace Transform of $u(t-a)f(t-a)$, that is, the Heaviside function multiplied by another function? It turns out that
+What can we say about the Laplace Transform of $u(t-a)f(t-a)$,
+that is, the Heaviside function multiplied by another function?
+It turns out that
 
 \bigskip
 \begin{equation*}
@@ -1041,7 +1168,8 @@ u(t-a)f(t-a) =
 
 \bigskip
 \noindent
-One way to think about this is that $u(t-a)$ "turns on" $f(t-a)$ at $a$. So consider
+One way to think about this is that $u(t-a)$ "turns on" $f(t-a)$
+at $a$. So consider 
 
 
 \begin{equation*}
@@ -1069,7 +1197,8 @@ F(s)
 \bigskip
 \subsection{Convolution}
 \label{sec:convolution}
-Next we need the definition of the convolution of two functions $f$ and $g$.
+Next we need the definition of the convolution of two functions
+$f$ and $g$. 
 
 \bigskip
 \begin{definition} {\bf Convolution:}
@@ -1082,8 +1211,9 @@ f(t) \ast g(t) = \int^t_0 f(\tau) g(t - \tau) d\tau
 \end{definition}
 
 \noindent
-where $\ast$ is the convolution operator. Note that the righthand side of Equation \ref{eqn:convolution} is some function of $t$ ($\tau$ is the dummy variable 
-for integration). That is
+where $\ast$ is the convolution operator. Note that the righthand
+side of Equation \ref{eqn:convolution} is some function of $t$
+($\tau$ is the dummy variable for integration). That is
 
 \bigskip
 \begin{equation*}
@@ -1127,7 +1257,8 @@ f(t) \ast g(t)
 
 \bigskip
 \noindent
-Now we can use the machinery we've built up to show why Equation \ref{eqn:lt_of_convolution} holds:
+Now we can use the machinery we've built up to show why Equation
+\ref{eqn:lt_of_convolution} holds:
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -1159,7 +1290,8 @@ Now we can use the machinery we've built up to show why Equation \ref{eqn:lt_of_
 \bigskip
 \bigskip
 \noindent
-This result also implies that $\mathcal{L}^{-1}\{F(s) G(s)\}  = f(t) \ast g(t)$. It is pretty easy to see why:
+This result also implies that $\mathcal{L}^{-1}\{F(s) G(s)\} =
+f(t) \ast g(t)$. It is pretty easy to see why:
 
 \bigskip
 \begin{equation*}
@@ -1176,13 +1308,28 @@ This result also implies that $\mathcal{L}^{-1}\{F(s) G(s)\}  = f(t) \ast g(t)$.
 &\Rightarrow& \mathcal{L}^{-1}\{F(s) G(s)\} = f(t) \ast g(t)                                                                                                  &\quad \mathrel{\#} \text{$=$ is symmetric}
 \end{array}
 \end{equation*}
-
-
-\bigskip
+%
+%
+%
 \section*{Acknowledgements}
-Thanks to Dave Neary for catching a typo: was $-f(0) + \mathcal{L}\{f(t)\}$, should be $-f(0) + s \mathcal{L}\{f(t)\} $.
+Thanks to Dave Neary for catching a typo: was $-f(0) +
+\mathcal{L}\{f(t)\}$, should be $-f(0) + s \mathcal{L}\{f(t)\}$. 
 
-\newpage
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
-\end{document}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

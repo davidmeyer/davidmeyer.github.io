@@ -1,11 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: dirac_delta.aux
 The style file: plain.bst
-Database file #1: /Users/dmm/papers/bib/qc.bib
+Database file #1: qc.bib
 You've used 5 entries,
             2118 wiz_defined-function locations,
-            524 strings with 4919 characters,
+            524 strings with 4897 characters,
 and the built_in function-call counts, 1105 in all, are:
 = -- 110
 > -- 35
