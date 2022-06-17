@@ -130,7 +130,7 @@ we have
 \begin{equation*}
 \begin{array}{llll}
 x + 1
-&=& \sqrt{(x + 1)^2}							&\qquad \qquad \qquad \mathrel{\#} x = \sqrt{x^2} \\
+&=& \sqrt{(x + 1)^2}							&\qquad \qquad \qquad \mathrel{\#} \text{$z = \sqrt{z^2}$ where $z = x+1$} \\
 [5pt]
 &\Rightarrow& x + 1 = \sqrt{1 + 2x + x^2}		&\qquad \qquad \qquad \mathrel{\#} (x+1)^2 = x^2 + 2x + 1 \\
 [5pt]
@@ -140,54 +140,54 @@ x + 1
 
 \bigskip
 \noindent
-Next, notice that $(x + 2)$ can again be written as $((x + 1) + 1)$,
-giving
+Next, notice that rewriting $(x + 2)$ as $((x + 1) + 1)$
+gives us
 
 \begin{equation*}
 \begin{array}{llll}
 x + 1
 &=& \sqrt{1 + x((x+1)+1)}								
-		&\mathrel{\#} x+2 = ((x+1)+1) \\
-[5pt]
+		&\mathrel{\#} (x+2) = (x+1)+1 \\
+[10pt]
 &\Rightarrow& x + 1 = \sqrt{1 + x\sqrt{((x+1)+1)^2}}	
-		&\mathrel{\#} \sqrt{((x + 1) + 1)^2} = ((x+1) + 1) \\
-[5pt]
-&\Rightarrow& x + 1 = \sqrt{1 + x\sqrt{1 + x\sqrt{1+2(x+1) + (x+1)^2}}}	
-		&\mathrel{\#} ((x+1)+1)^2 = 1 + 2(x+1) + (x+1)^2 \\
-[5pt]
+		&\mathrel{\#} (x+1)+1 = \sqrt{((x+1)+1)^2} \\
+[10pt]
+&\Rightarrow& x + 1 = \sqrt{1 + x\sqrt{1 + x\sqrt{1+2(x+1)+(x+1)^2}}}	
+		&\mathrel{\#} ((x+1)+1)^2 = 1 + \underbrace{2(x+1)+(x+1)^2}_{x^2+4x+3} \\
+[10pt]
 &\Rightarrow& x + 1 = \sqrt{1 + x\sqrt{1 + x\sqrt{1+(x+1)(x+3)}}}
-		&\mathrel{\#} 2(x+1) + (x+1)^2 = x^2+4x+3 = (x+1)(x+3)
+		&\mathrel{\#} x^2+4x+3 = (x+1)(x+3)
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Now we can write $(x+3)$ as $((x+2)+1)$ and so
+Continuing, we can rewrite $(x+3)$ as $(x+2)+1$ and so
 
 \begin{equation*}
 \begin{array}{llll}
 x + 1
 &=& \sqrt{1 + x \sqrt{1 + (x+1)((x+2)+ 1)}}								
-		&\mathrel{\#} \text{ write $(x+3)$ as $((x+2)+1)$} \\
-[10pt]
+		&\mathrel{\#} (x+3) = (x+2)+1 \\
+[12pt]
 &\Rightarrow& x + 1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{((x+2)+1)^2}}}
-		&\mathrel{\#} ((x+2)+1) = \sqrt{((x+2)+1)^2} \\
-[10pt]
+		&\mathrel{\#} (x+2)+1 = \sqrt{((x+2)+1)^2} \\
+[15pt]
 &\Rightarrow& x + 1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+2(x+2)+(x+2)^2}}}
-		&\mathrel{\#} ((x+2)+1)^2 = 1+2(x+2)+(x+2)^2 \\
-[10pt]
+		&\mathrel{\#} ((x+2)+1)^2 = 1 + \underbrace{2(x+2)+(x+2)^2}_{x^2 + 6x + 8} \\
+[15pt]
 &\Rightarrow& x + 1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1 + (x+2)(x+4)}}}
-		&\mathrel{\#}  1+2(x+2)+(x+2)^2 = x^2 = (x + 2)(x + 4) \\
-[10pt]
+		&\mathrel{\#} x^2+6x+8 = (x + 2)(x + 4) \\
+[15pt]
 &\Rightarrow& x + 1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{((x+3)+1)^2}}}}
-		&\mathrel{\#} (x+4) = ((x+3)+1), \, x = \sqrt{x^2}
+		&\mathrel{\#} (x+4) = (x+3)+1 = \sqrt{((x+3)+1)^2}
 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So we can see that in general
+Now we can see the general form of the nested radical for $x+1$:
 
 \bigskip
 \begin{equation}
@@ -197,7 +197,7 @@ x + 1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{1 + (x+3)\sqrt{1 + (x+4)\sqrt{1
 
 \bigskip
 \noindent
-Now, setting $x = 2$ in Equation (\ref{eqn:continued_fraction}) we get
+Setting $x = 2$ in Equation (\ref{eqn:continued_fraction}) we get
 
 \bigskip
 \begin{equation*}
