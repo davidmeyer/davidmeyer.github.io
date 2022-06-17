@@ -131,13 +131,16 @@ we have
 \begin{array}{llll}
 x + 1
 &=& \sqrt{(x + 1)^2}							
-				&\qquad \qquad \qquad \mathrel{\#} \text{$z = \sqrt{z^2}$ where $z = x+1$} \\
+				&\qquad \qquad \qquad \qquad \qquad \qquad \qquad
+				 \mathrel{\#} \text{$z = \sqrt{z^2}$ where $z = x+1$} \\
 [5pt]
-&\Rightarrow& x + 1 = \sqrt{1 + 2x + x^2}		
-				&\qquad \qquad \qquad \mathrel{\#} (x+1)^2 = x^2 + 2x + 1 \\
+&=& \sqrt{1 + 2x + x^2}		
+				&\qquad \qquad \qquad \qquad \qquad \qquad \qquad
+				 \mathrel{\#} (x+1)^2 = x^2 + 2x + 1 \\
 [5pt]
-&\Rightarrow& x + 1 = \sqrt{1 + x(x + 2)}		
-				&\qquad \qquad \qquad \mathrel{\#} x^2 + 2x + 1 = x(x+2) + 1
+&=& \sqrt{1 + x(x + 2)}		
+				&\qquad \qquad \qquad \qquad \qquad \qquad \qquad
+				 \mathrel{\#} x^2 + 2x + 1 = x(x+2) + 1
 \end{array}
 \end{equation*}
 
@@ -150,16 +153,17 @@ gives us
 \begin{array}{llll}
 x + 1
 &=& \sqrt{1 + x((x+1)+1)}								
-		&\mathrel{\#} (x+2) = (x+1)+1 \\
+		&\qquad \qquad \qquad \mathrel{\#} (x+2) = (x+1)+1 \\
 [10pt]
-&\Rightarrow& x+1 = \sqrt{1 + x\sqrt{((x+1)+1)^2}}	
-		&\mathrel{\#} (x+1)+1 = \sqrt{((x+1)+1)^2} \\
+&=& \sqrt{1 + x\sqrt{((x+1)+1)^2}}	
+		&\qquad \qquad \qquad \mathrel{\#} (x+1)+1 = \sqrt{((x+1)+1)^2} \\
 [10pt]
-&\Rightarrow& x+1 = \sqrt{1 + x\sqrt{1 + x\sqrt{1+2(x+1)+(x+1)^2}}}	
-		&\mathrel{\#} ((x+1)+1)^2 = 1 + \underbrace{2(x+1)+(x+1)^2}_{x^2+4x+3} \\
+&=& \sqrt{1 + x\sqrt{1 + x\sqrt{1+2(x+1)+(x+1)^2}}}	
+		&\qquad \qquad \qquad \mathrel{\#} ((x+1)+1)^2 = 1 + 
+		\underbrace{2(x+1)+(x+1)^2}_{x^2+4x+3} \\
 [10pt]
-&\Rightarrow& x+1 = \sqrt{1 + x\sqrt{1 + x\sqrt{1+(x+1)(x+3)}}}
-		&\mathrel{\#} x^2+4x+3 = (x+1)(x+3)
+&=& \sqrt{1 + x\sqrt{1 + x\sqrt{1+(x+1)(x+3)}}}
+		&\qquad \qquad \qquad \mathrel{\#} x^2+4x+3 = (x+1)(x+3)
 \end{array}
 \end{equation*}
 
@@ -171,19 +175,22 @@ Continuing, we can rewrite $(x+3)$ as $(x+2)+1$ and so
 \begin{array}{llll}
 x + 1
 &=& \sqrt{1+x \sqrt{1+(x+1)((x+2)+1)}}								
-		&\; \mathrel{\#} (x+3) = (x+2)+1 \\
+		&\quad \quad \mathrel{\#} (x+3) = (x+2)+1 \\
 [12pt]
-&\Rightarrow& x+1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{((x+2)+1)^2}}}
-		&\; \mathrel{\#} (x+2)+1 = \sqrt{((x+2)+1)^2} \\
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{((x+2)+1)^2}}}
+		&\quad \quad \mathrel{\#} (x+2)+1 = \sqrt{((x+2)+1)^2} \\
 [15pt]
-&\Rightarrow& x+1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+2(x+2)+(x+2)^2}}}
-		&\; \mathrel{\#} ((x+2)+1)^2 = 1 + \underbrace{2(x+2)+(x+2)^2}_{x^2+6x+8} \\
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+2(x+2)+(x+2)^2}}}
+		&\quad \quad \mathrel{\#} ((x+2)+1)^2 = 1 + 2(x+2)+(x+2)^2 \\
 [15pt]
-&\Rightarrow& x+1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1 + (x+2)(x+4)}}}
-		&\; \mathrel{\#} x^2+6x+8 = (x+2)(x+4) \\
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+x^2+6x+8}}}
+		&\quad \quad \mathrel{\#} 2(x+2)+(x+2)^2 = x^2+6x+8 \\
 [15pt]
-&\Rightarrow& x+1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{((x+3)+1)^2}}}}
-		&\; \mathrel{\#} (x+4) = (x+3)+1 = \sqrt{((x+3)+1)^2}
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1 + (x+2)(x+4)}}}
+		&\quad \quad \mathrel{\#} x^2+6x+8 = (x+2)(x+4) \\
+[12pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{((x+3)+1)^2}}}}
+		&\quad \quad \mathrel{\#} (x+4) = (x+3)+1 = \sqrt{((x+3)+1)^2}
 \end{array}
 \end{equation*}
 
