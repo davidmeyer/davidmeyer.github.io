@@ -77,6 +77,14 @@ Quantum Teleportation
 
 
 <h2>Just for fun</h2>
+
+<li><a href="./two.pdf" target="_blank"
+    rel="noopener noreferrer">
+What is hiding inside the number 2?
+</a>
+<br>
+
+
 <li><a href="./nested_radicals.pdf" target="_blank"
     rel="noopener noreferrer">
 A bit about Ramanujan and nested radicals
@@ -130,7 +138,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 06.14.2022 by
+<i>Last Update: 07.11.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 

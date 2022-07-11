@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 JUL 2022 06:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 JUL 2022 07:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**template.tex
-(./template.tex
+**two.tex
+(./two.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -1297,9 +1297,8 @@ Package: esvect
 \c@lemma=\count352
 \c@example=\count353
 \c@remark=\count354
-
-(./template.aux)
-\openout1 = `template.aux'.
+ (./two.aux)
+\openout1 = `two.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
@@ -1409,9 +1408,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 98.
 LaTeX Info: Redefining \pageref on input line 98.
 LaTeX Info: Redefining \nameref on input line 98.
- (./template.out) (./template.out)
+ (./two.out) (./two.out)
 \@outlinefile=\write4
-\openout4 = `template.out'.
+\openout4 = `two.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1448,33 +1447,34 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-No file template.bbl.
+No file two.bbl.
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] (./template.aux)
-Package rerunfilecheck Info: File `template.out' has not changed.
+(./two.aux)
+Package rerunfilecheck Info: File `two.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52621 strings out of 478994
- 1322152 string characters out of 5858184
- 1958326 words of memory out of 5000000
- 69303 multiletter control sequences out of 15000+600000
- 420459 words of font info for 103 fonts, out of 8000000 for 9000
+ 52600 strings out of 478994
+ 1321762 string characters out of 5858184
+ 1964324 words of memory out of 5000000
+ 69284 multiletter control sequences out of 15000+600000
+ 416215 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,6n,131p,726b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,10n,131p,721b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on template.pdf (2 pages, 77337 bytes).
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on two.pdf (1 page, 78386 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 4 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

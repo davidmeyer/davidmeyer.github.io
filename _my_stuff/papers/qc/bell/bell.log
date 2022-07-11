@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.19)  28 NOV 2021 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 JUL 2022 06:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -533,24 +533,24 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 (./bell.aux)
 \openout1 = `bell.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -608,7 +608,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 62.
+Package hyperref Info: Link coloring OFF on input line 60.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -622,9 +622,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count319
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
  (./bell.out) (./bell.out)
 \@outlinefile=\write3
 \openout3 = `bell.out'.
@@ -640,45 +640,69 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 62
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 60
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-3.
+1.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
 <images/bell_forward_circuit.png, id=47, 354.32375pt x 108.405pt>
 File: images/bell_forward_circuit.png Graphic file (type png)
 <use images/bell_forward_circuit.png>
 Package pdftex.def Info: images/bell_forward_circuit.png  used on input line 10
-5.
+3.
 (pdftex.def)             Requested size: 159.4442pt x 48.78178pt.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 115.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 113.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 113.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 114.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 114.
 
 
 
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 115.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 115.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 116.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 116.
 
 
 
@@ -698,7 +722,19 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 117.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 118.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 117.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 117.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 117.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 117.
 
 
 
@@ -710,10 +746,6 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 118.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 118.
-
-
-
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 119.
 
 
@@ -727,38 +759,6 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 119.
 
 
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 119.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 119.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 119.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 120.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 120.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 121.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 121.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 121.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 121.
 
 
 [1
@@ -769,210 +769,213 @@ s/bell_forward_circuit.png>]
 File: images/bell_reverse_circuit.png Graphic file (type png)
 <use images/bell_reverse_circuit.png>
 Package pdftex.def Info: images/bell_reverse_circuit.png  used on input line 15
-6.
+4.
 (pdftex.def)             Requested size: 153.12064pt x 51.94357pt.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 169.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 167.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 169.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 167.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 170.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 168.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 170.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 168.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 182.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 180.
 
 
 [2 <./images/bell_reverse_circuit.png>] [3]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 326.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 324.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 326.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 324.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 326.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 324.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 326.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 324.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 340.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 338.
 
 
 [4]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 363.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 361.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 363.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 361.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 364.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 362.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 364.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 362.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 376.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 374.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 409.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 407.
 
 
 [5]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 462.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 460.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 462.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 460.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 466.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 464.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 466.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 464.
 
 
 
-Overfull \hbox (9.23505pt too wide) detected at line 484
+Overfull \hbox (9.23505pt too wide) detected at line 482
 []
  []
 
 [6] [7] [8] [9] (./bell.bbl) [10] (./bell.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `bell.out' has not changed.
 (rerunfilecheck)             Checksum: BD58B6F3FE702C42325BB85D49850DC2;2154.
  ) 
@@ -1009,7 +1012,7 @@ ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on bell.pdf (10 pages, 294704 bytes).
+Output written on bell.pdf (10 pages, 294405 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  217 compressed objects within 3 object streams
