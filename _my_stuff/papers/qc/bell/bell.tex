@@ -51,7 +51,7 @@
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
 \title{A Few Notes on Bell States, Superdense Coding, and Quantum Teleportation}
-\author{David Meyer \\ dmm@\{1-4-5.net,uoregon.edu\}}
+\author{David Meyer \\ dmm613@gmail.com}
 
 \date{Last update: \today}							% Activate to display a given date or no date
 
@@ -420,11 +420,12 @@ teleportation is concerned with conveying quantum information
 with classical bits \cite{Bennett:1992tv}.
 
 \subsection{A high-level view of the quantum teleportation algorithm}
+\label{subsec:quantum_teleportation_algorithm}
 
 \begin{enumerate}
 \item Alice and Bob share an entangled (EPR) pair $\ket{\phi^+}$
 \item Alice chooses a qubit $\ket{\psi}$ as the message she wants to convey to Bob
-\item Alice performs operations on $\ket{\psi}$ and $\ket{\phi^{+}_A}$ (Alice's her half of $\ket{\phi^+}$)
+\item Alice performs operations on $\ket{\psi}$ and $\ket{\phi^{+}_A}$ (Alice's half of $\ket{\phi^+}$)
 \item Alice measures $\ket{\psi}$  and her half of  $\ket{\phi^+_A}$, destroying both of her qubits
 \item Alice sends the two classical bits that were the results of her measurements to Bob
 \item Bob uses the two classical bits to "correct" $\ket{\phi^{+}_B}$ (his half of $\ket{\phi^+}$) to be $\ket{\psi}$
@@ -670,15 +671,27 @@ all they know is that it was transferred (whatever it was).
 
 \section{Bell and  CHSH}
 
-\bigskip
-\noindent
-
-\section{Acknowledgements}
-
-\newpage
+%
+%
+%
+\section*{Acknowledgements}
+Thanks to Joel Bion for finding a typo in
+Section \ref{subsec:quantum_teleportation_algorithm}.
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
-
-
-
+\bibliography{qc}
+%
+%	done
+%
 \end{document} 
+
