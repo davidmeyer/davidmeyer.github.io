@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  12 JUL 2022 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  12 JUL 2022 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -750,14 +750,14 @@ Package pdftex.def Info: images/smoking_basic_causal_model.png  used on input l
 ine 153.
 (pdftex.def)             Requested size: 180.74904pt x 141.7536pt.
  [3 <./images/forms_of_bias.jpg> <./images/direct.png>]
-<images/collider.png, id=76, 281.05pt x 143.53625pt>
+<images/collider.png, id=74, 281.05pt x 143.53625pt>
 File: images/collider.png Graphic file (type png)
 <use images/collider.png>
 Package pdftex.def Info: images/collider.png  used on input line 170.
 (pdftex.def)             Requested size: 140.52464pt x 71.76794pt.
- [4 <./images/confounding.png> <./images/smoking_basic_causal_model.png>] [5 <.
-/images/collider.png>] (./dags_causality_and_bias.bbl) [6] (./dags_causality_an
-d_bias.aux)
+ [4 <./images/confounding.png> <./images/smoking_basic_causal_model.png>]
+(./dags_causality_and_bias.bbl [5 <./images/collider.png>]) [6]
+(./dags_causality_and_bias.aux)
 Package rerunfilecheck Info: File `dags_causality_and_bias.out' has not changed
 .
 (rerunfilecheck)             Checksum: 20794A977A480600AD1C7E02D9B9C0DF;694.
@@ -769,7 +769,7 @@ Here is how much of TeX's memory you used:
  32257 multiletter control sequences out of 15000+600000
  466401 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,9n,74p,298b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,9n,74p,298b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></
@@ -779,7 +779,7 @@ b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathfrak.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on dags_causality_and_bias.pdf (6 pages, 245372 bytes).
+Output written on dags_causality_and_bias.pdf (6 pages, 245419 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams

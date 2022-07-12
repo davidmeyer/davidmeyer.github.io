@@ -1,11 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: dags_causality_and_bias.aux
 The style file: ieeetr.bst
 Database file #1: /Users/dmm/papers/bib/ml.bib
 You've used 8 entries,
             1876 wiz_defined-function locations,
-            543 strings with 5010 characters,
+            541 strings with 5006 characters,
 and the built_in function-call counts, 2299 in all, are:
 = -- 240
 > -- 70
