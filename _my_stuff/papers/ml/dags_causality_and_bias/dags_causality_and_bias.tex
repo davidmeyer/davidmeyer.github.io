@@ -10,10 +10,6 @@
 
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometryA. G. Barto, R. S. Sutton, and C. W. Anderson
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -28,6 +24,8 @@
 \usepackage{color}
 \usepackage{stix}
 \usepackage{caption}
+\usepackage[export]{adjustbox}
+\usepackage{float}
 
 
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
@@ -41,7 +39,7 @@
 
 
 \title{Causal Graphs and Sources of  Bias}
-\author{David Meyer \\ dmm@\{1-4-5.net,uoregon.edu,...\}}
+\author{David Meyer \\ dmm613@gmail.com}
 
 \date{Last update: \today}							% Activate to display a given date or no date
 
@@ -81,6 +79,8 @@ The underlying idea here is that "nature chooses" the conditional distributions 
 another, since the generation of additional independencies (that is, independencies are not imposed by the 
 structure of the DAG) would require tuning between these conditional distributions \cite{Peters:2014:CDC:2627435.2670315}.
 
+
+
 \bigskip
 \noindent
 If we do have a such a graph $G$,  can we say anything about the associations (statistical relationships) implied by $G$?
@@ -96,8 +96,17 @@ is a cartoon of this situation.
 \label{fig:associations}
 \end{figure}
 
-\section{Causality}
- Causality in a Markov graph is represented by a chain structure in which all the arrows are pointing in the same direction (the direction of "time"); 
+
+\section{Forms of Bias}
+
+\begin{figure}
+\center{\includegraphics[frame, scale=0.5] {images/forms_of_bias.jpg}}
+\caption{Forms of Bias}
+\label{fig:forms_of_bias}
+\end{figure}
+
+\subsection{Causality}
+Causality in a Markov graph is represented by a chain structure in which all the arrows are pointing in the same direction (the direction of "time"); 
  this is shown in Figure \ref{fig:direct}. A bit of notation: Two real-valued random variables $A$ and $B$ are said to be \emph{conditionally independent}
  given $C$, written $A \independent B \mid C$, if $\forall A,B$ $P(A, B \mid C) = P(A \mid C) \, P(B \mid C)$ and for $\forall C \, P(C) > 0$. Note that conditional 
  independence neither implies nor is implied by independence. That is,  there are $A,B$ and $C$ such that we have only independence or only conditional independence.
@@ -117,7 +126,7 @@ is not to condition on a node in the chain (here $C$).
 \end{figure}
 
 
-\section{Confounding}
+\subsection{Confounding}
 
 A  \emph{confounder} is a (possibly hidden) common cause in a Markov graph. This is shown in Figure \ref{fig:confounding}. The basic idea
 here is that there is non-causal path in the graph that is transmitting an association. Here $A$ seems to be causally related to  $B$ ($A \not \Vbar B$) due
@@ -146,7 +155,7 @@ Figure \ref{fig:fisher}.
 \label{fig:fisher}
 \end{figure}
 
-\section{Endogenous Selection}
+\subsection{Endogenous Selection}
 
 The structure of the graph representing Endogenous Selection is shown in Figure \ref{fig:collider}.  You can see how \emph{Endogenous Selection Bias}
 comes about in the following classic example \cite{doi:10.1146/annurev-soc-071913-043455}:  Consider the following causal model for the 
