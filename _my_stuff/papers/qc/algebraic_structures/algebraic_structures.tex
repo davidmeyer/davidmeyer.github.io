@@ -7,13 +7,9 @@
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
 
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -49,9 +45,9 @@
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
 \title{A Few Notes on Algebraic Structures (WIP)}
-\author{David Meyer \\ dmm@\{1-4-5.net,uoregon.edu\}}
+\author{David Meyer \\ dmm613@gmail.com}
 
-\date{Last update: November 19, 2015}							% Activate to display a given date or no date
+\date{Last update: \today}							% Activate to display a given date or no date
 
 
 
@@ -64,10 +60,12 @@
 \begin{table}[H]
 \scalebox{0.83}{
 \begin{tabular}{l | c | c | c | c |  c | c}
-{\bf Structure}           & $\textbf{ABO}^1$ & {\bf Identity}  & {\bf Inverse} & {\bf $\text{Distributive}^2$} & {\bf $\text{Commutative}^3$} & {\bf Comments} \\
+{{\large \bf Structure}}        & $\textbf{\large ABO}^1$ & {\large \bf Identity}
+                                & {\large \bf Inverse} & {\large \bf $\text{Distributive}^2$}
+                                & {\large\bf $\text{Commutative}^3$} & {\bf Comments} \\
 \hline
-Semigroup                & \checkmark & no                            & no                            & N/A                & no                           & $(S,\circ)$                                    \\
-Monoid                      & \checkmark & \checkmark             & no                            & N/A                & no                           & Semigroup plus idenity  $\in S$   \\
+Semigroup                       & \checkmark & no & no & N/A & no & $(S,\circ)$ \\
+Monoid                  & \checkmark & \checkmark             & no                            & N/A                & no                           & Semigroup plus idenity  $\in S$   \\
 Group                        & \checkmark & \checkmark             & \checkmark              & N/A               & no                           & Monoid plus inverse $\in S$         \\
 Abelian Group           & \checkmark & \checkmark             & \checkmark              & N/A               & \checkmark             & Commutative group                      \\
 $\text{Ring}_{+}$       & \checkmark & \checkmark             & \checkmark              & \checkmark  & \checkmark             & Abelian group under $+$               \\
@@ -107,9 +105,11 @@ Vector Space             & \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$   
 \noindent
 \textbf{Notes:}
 \begin{itemize}
-\item Table \ref{tab:algebraic_structures} implies that $\text{F} \subset \text{R} \subset \text{G} \subset \text{M} \subset \text{SG}$
+\item Table \ref{tab:algebraic_structures} implies that $\text{F}
+\subset \text{R} \subset \text{G} \subset \text{M} \subset \text{SG}$
 \item $\text{VS} \subset \text{G}_{+}$ (vector spaces are Abelian groups under $+$)
-\item $\text{F} \subset \text{VS}$ since the field axioms require a multiplicative inverse ($a^{-1}$) while vector spaces do not
+\item $\text{F} \subset \text{VS}$ since the field axioms require
+       a multiplicative inverse ($a^{-1}$) while vector spaces do not 
 \end{itemize}
 
 
