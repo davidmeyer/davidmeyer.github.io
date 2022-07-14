@@ -64,7 +64,7 @@ the Laplace Transform</a>
 <br>
 <li><a href="./change_of_basis.pdf" target="_blank" rel="noopener noreferrer">A Few Notes on Change of Basis</a>
 <br>
- <li><a href="./algebraic_structures.pdf" target="_blank" rel="noopener noreferrer">A Few Notes on Algebriac Structures (WIP)</a>
+ <li><a href="./algebraic_structures.pdf" target="_blank" rel="noopener noreferrer">A Note on Algebriac Structures</a>
 <br>
 <li><a href="./density.pdf" target="_blank" rel="noopener noreferrer">Some notes on Density Operators, Expectation Values, and Matrix Shapes </a>
 <br>
@@ -138,7 +138,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 07.11.2022 by
+<i>Last Update: 07.14.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
