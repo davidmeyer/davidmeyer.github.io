@@ -1,26 +1,37 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-
-
-% \usepackage{draftwatermark}
-% \SetWatermarkText{Draft}
-% \SetWatermarkScale{5}
-% \SetWatermarkLightness {0.9} 
-% \SetWatermarkColor[rgb]{0.7,0,0}
-
-\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-\usepackage{amssymb}
+\documentclass[11pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+\usepackage{bigints}                                                    % bigger integral symbol
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
-\usepackage{url}
 \usepackage{subcaption}
 \usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{color}
@@ -30,19 +41,48 @@
 \usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
-
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
 %
-% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%	watermarks
 %
-
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%
+%	so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+%
 \makeatletter
 \renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
   \let\@ifnextchar\new@ifnextchar
   \array{*\c@MaxMatrixCols #1}}
 \makeatother
-
+%
+%
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%
+%
 
 \title{A Few Notes on Algebraic Structures (WIP)}
 \author{David Meyer \\ dmm613@gmail.com}
@@ -65,13 +105,15 @@
                                 & {\large\bf $\text{Commutative}^3$} & {\bf Comments} \\
 \hline
 Semigroup                       & \checkmark & no & no & N/A & no & $(S,\circ)$ \\
-Monoid                  & \checkmark & \checkmark             & no                            & N/A                & no                           & Semigroup plus idenity  $\in S$   \\
-Group                        & \checkmark & \checkmark             & \checkmark              & N/A               & no                           & Monoid plus inverse $\in S$         \\
-Abelian Group           & \checkmark & \checkmark             & \checkmark              & N/A               & \checkmark             & Commutative group                      \\
-$\text{Ring}_{+}$       & \checkmark & \checkmark             & \checkmark              & \checkmark  & \checkmark             & Abelian group under $+$               \\
-$\text{Ring}_{*}$        & \checkmark & \checkmark             & no                            & \checkmark  &  no                           & Monoid under $*$                          \\
-$\text{Field}_{(+,*)}$  & \checkmark & \checkmark $(+,*)$ & \checkmark $(+,*)$  & \checkmark  & \checkmark             & Abelian group under $+$ and $*$  \\
-Vector Space             & \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$    & \checkmark  & \checkmark              & Abelian group under $+$
+Monoid							& \checkmark & \checkmark & no & N/A & no & Semigroup plus idenity  $\in S$ \\
+Group							& \checkmark & \checkmark & \checkmark & N/A & no & Monoid plus inverse $\in S$ \\
+Abelian Group					& \checkmark & \checkmark & \checkmark & N/A & \checkmark & Commutative group \\
+$\text{Ring}_{+}$				& \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & Abelian group under $+$ \\
+$\text{Ring}_{*}$				& \checkmark & \checkmark & no & \checkmark & no & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$			& \checkmark & \checkmark $(+,*)$ & \checkmark $(+,*)$  & \checkmark  & \checkmark 
+ 									& Abelian group under $+$ and $*$  \\
+Vector Space					& \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$    & \checkmark  & \checkmark 
+									& Abelian group under $+$
 \end{tabular}}
 \caption{A Few Algebraic Structures and Their Features}
 \label{tab:algebraic_structures}
@@ -111,14 +153,21 @@ Vector Space             & \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$   
 \item $\text{F} \subset \text{VS}$ since the field axioms require
        a multiplicative inverse ($a^{-1}$) while vector spaces do not 
 \end{itemize}
-
-
-\section{Acknowledgements}
-
-\newpage
+%
+%	LaTeX source on overleaf.com
+%
+% \section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
-
-
-
+\bibliography{qc,ml}
+%
+%	done
+%
 \end{document} 
+
