@@ -8,37 +8,32 @@
 \usepackage{setspace}                                                   % need this for \setstrech{...}
 \usepackage{scrextend}                                                  % need this for addmargin
 \usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
-\usepackage{bigints}                                                    % bigger integral symbol
 %
 %   tikz et al
 %
 \usepackage{tikz}
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds}    
+\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{pgfplots}
 \usepackage{pgfplots}	
 %
-%	math stuff
+%	more math stuff
 %
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}                                                    % get \mathbold
 \usepackage{gensymb}                                                    % get \degree
-\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{authblk}
 \usepackage{graphicx}
-\usepackage[export]{adjustbox}
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \usepackage{float}
-\usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
@@ -83,7 +78,6 @@
 %
 %
 %
-
 \title{A Note on Algebraic Structures}
 \author{David Meyer \\ dmm613@gmail.com}
 
@@ -105,15 +99,15 @@
                                 & {\large\bf $\text{Commutative}^3$} & {\bf Comments} \\
 \hline
 Semigroup                       & \checkmark & no & no & N/A & no & $(S,\circ)$ \\
-Monoid							& \checkmark & \checkmark & no & N/A & no & Semigroup plus idenity  $\in S$ \\
-Group							& \checkmark & \checkmark & \checkmark & N/A & no & Monoid plus inverse $\in S$ \\
-Abelian Group					& \checkmark & \checkmark & \checkmark & N/A & \checkmark & Commutative group \\
-$\text{Ring}_{+}$				& \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & Abelian group under $+$ \\
-$\text{Ring}_{*}$				& \checkmark & \checkmark & no & \checkmark & no & Monoid under $*$ \\
-$\text{Field}_{(+,*)}$			& \checkmark & \checkmark $(+,*)$ & \checkmark $(+,*)$  & \checkmark  & \checkmark 
- 									& Abelian group under $+$ and $*$  \\
-Vector Space					& \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$    & \checkmark  & \checkmark 
-									& Abelian group under $+$
+Monoid                          & \checkmark & \checkmark & no & N/A & no & Semigroup plus idenity  $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A & no & Monoid plus inverse $\in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A & \checkmark & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & \checkmark & no & \checkmark & no & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$ & \checkmark $(+,*)$  & \checkmark  & \checkmark 
+                                                & Abelian group under $+$ and $*$  \\
+Vector Space                    & \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$    & \checkmark  & \checkmark 
+                                                & Abelian group under $+$
 \end{tabular}}
 \caption{A Few Algebraic Structures and Their Features}
 \label{tab:algebraic_structures}
@@ -132,8 +126,10 @@ Vector Space					& \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$    & \chec
 
 \item \textbf{Distributive:} Distributive Property 
 \begin{itemize}
-\item Left Distributive Property: $x * (y+z )= (x*y) + (x*z)$ for all $x, y, z \in S$
-\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$ for all $x, y, z \in S$
+\item Left Distributive Property: $x * (y+z )= (x*y) + (x*z)$ for
+                                  all $x, y, z \in S$
+\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
+                                   for all $x, y, z \in S$
 \item $*$ is \emph{distributive} over $+$ if $*$ is left and right distributive
 \end{itemize}
 
