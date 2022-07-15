@@ -1,9 +1,17 @@
 \documentclass[11pt, oneside]{article}
 %
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
 %   get various packages
 %
 \usepackage[margin=1.0in]{geometry}                                     % adjust margins
-\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{setspace}                                                   % need this for \setstrech{...}
 \usepackage{scrextend}                                                  % need this for addmargin
@@ -49,6 +57,8 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 %
 %
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
@@ -57,9 +67,9 @@
 \newtheorem{example}{Example}[section]
 \newtheorem{remark}{Remark}[section]
 %
+%	The following code allows you to do
 %
-%	so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
-%
+%	\begin{bmatrix}[r] (or [c] or [l])
 %
 \makeatletter
 \renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
@@ -67,12 +77,12 @@
   \array{*\c@MaxMatrixCols #1}}
 \makeatother
 %
-%
+%	make \arg{min,max}_{n \to \infty} work nicely
 %
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 %
-%	handy command
+%	also a handy command
 %
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
 %
@@ -81,20 +91,23 @@
 \title{template.tex}
 \author{David Meyer \\ dmm613@gmail.com}
 \date{Last update: \today}
-
-
+%
+%
+%
 \begin{document}
 \maketitle
-
+%
+%
+%
 \section{Introduction}
-
+%
 %
 %	show a derivation/proof
 %
 % \begin{equation*}
 % \begin{array}{llll}
 % x
-% &=& y								&\qquad \mathrel{\#} \text{comment} \\
+% &=& y				&\qquad \mathrel{\#} \text{comment} \\
 % [10pt]
 % \end{array}
 % \end{equation*}
@@ -104,12 +117,10 @@
 %	include an image
 %
 % \begin{figure}
-% \center{\includegraphics[frame, scale=0.55] {images/X.jpg}}
-% \caption{Forms of Bias}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
 % \label{fig:X}
 % \end{figure}
-%
-%
 %
 \section{Conclusions}
 %
