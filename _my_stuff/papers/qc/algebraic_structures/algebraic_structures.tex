@@ -97,17 +97,17 @@
                                 & {\large \bf Inverse} & {\large \bf $\text{Distributive}^2$}
                                 & {\large\bf $\text{Commutative}^3$} & {\bf Comments} \\
 \hline
-Semigroup                       & \checkmark & no & no & N/A & no & $(S,\circ)$ \\
-Monoid                          & \checkmark & \checkmark & no & N/A & no & Semigroup plus idenity $\in S$ \\
-Group                           & \checkmark & \checkmark & \checkmark & N/A & no & Monoid plus inverse $\in S$ \\
-Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A & \checkmark $(\circ)$       & Commutative group \\
-$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$    & Abelian group under $+$ \\
-$\text{Ring}_{*}$               & \checkmark & \checkmark & no         & \checkmark & no & Monoid under $*$ \\
-$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$  & \checkmark & \checkmark $(+,*)$
+Semigroup                       & \checkmark & no & no                 & N/A & no   & $(S,\circ)$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A & no   & Semigroup plus idenity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A & no   & Monoid plus inverse $\in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A & \checkmark $(\circ)$      & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$   & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & \checkmark & no         & \checkmark & no                 & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark & \checkmark $(+,*)$
 											 & Abelian group under $+$ and $*$  \\
-Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$    & \checkmark & \checkmark $(+)$
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark & \checkmark $(+)$
 											 & Abelian group under $+$, scalars $\in$ Field \\
-Module		                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$    & \checkmark & \checkmark $(+)$
+Module		                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark & \checkmark $(+)$
 											 & Abelian group under $+$, scalars $\in$ Ring
 
 \end{tabular}}
@@ -122,7 +122,8 @@ Module		                    & \checkmark & \checkmark $(+,*)$      & \checkmark 
 \begin{enumerate}
 \item \textbf{ABO:} Associative Binary Operation 
 \begin{itemize}
-\item $(x \circ y) \circ z = x \circ  (y \circ z)$  for all $x, y, z \in S$
+\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
+      for all $x, y, z \in S$
 \item $x \circ y \in S$ (closure under $\circ$)
 \end{itemize}
 
