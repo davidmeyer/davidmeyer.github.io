@@ -87,7 +87,7 @@
 %
 %
 %
-\section{Introduction}
+\section{A Few Algebraic Structures and Their Features}
 
 \begin{center}
 \begin{table}[H]
@@ -98,15 +98,18 @@
                                 & {\large\bf $\text{Commutative}^3$} & {\bf Comments} \\
 \hline
 Semigroup                       & \checkmark & no & no & N/A & no & $(S,\circ)$ \\
-Monoid                          & \checkmark & \checkmark & no & N/A & no & Semigroup plus idenity  $\in S$ \\
+Monoid                          & \checkmark & \checkmark & no & N/A & no & Semigroup plus idenity $\in S$ \\
 Group                           & \checkmark & \checkmark & \checkmark & N/A & no & Monoid plus inverse $\in S$ \\
-Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A & \checkmark & Commutative group \\
-$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & Abelian group under $+$ \\
-$\text{Ring}_{*}$               & \checkmark & \checkmark & no & \checkmark & no & Monoid under $*$ \\
-$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$ & \checkmark $(+,*)$  & \checkmark  & \checkmark 
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A & \checkmark $(\circ)$       & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$    & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & \checkmark & no         & \checkmark & no & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$  & \checkmark & \checkmark $(+,*)$
 											 & Abelian group under $+$ and $*$  \\
-Vector Space                    & \checkmark & \checkmark $(+,*)$ & \checkmark $(+)$    & \checkmark  & \checkmark 
-											 & Abelian group under $+$
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$    & \checkmark & \checkmark $(+)$
+											 & Abelian group under $+$, scalars $\in$ Field \\
+Module		                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$    & \checkmark & \checkmark $(+)$
+											 & Abelian group under $+$, scalars $\in$ Ring
+
 \end{tabular}}
 \caption{A Few Algebraic Structures and Their Features}
 \label{tab:algebraic_structures}
@@ -114,7 +117,7 @@ Vector Space                    & \checkmark & \checkmark $(+,*)$ & \checkmark $
 \end{center}
 
 \noindent
-\textbf{Abbreviations:}
+\subsection{Abbreviations}
 
 \begin{enumerate}
 \item \textbf{ABO:} Associative Binary Operation 
@@ -140,18 +143,21 @@ Vector Space                    & \checkmark & \checkmark $(+,*)$ & \checkmark $
 
 
 \noindent
-\textbf{Notes:}
+\section{Notes}
 \begin{itemize}
 \item Table \ref{tab:algebraic_structures} implies that $\text{F}
 \subset \text{R} \subset \text{G} \subset \text{M} \subset \text{SG}$
 \item $\text{VS} \subset \text{G}_{+}$ (vector spaces are Abelian groups under $+$)
 \item $\text{F} \subset \text{VS}$ since the field axioms require
-       a multiplicative inverse ($a^{-1}$) while vector spaces do not 
+       a multiplicative inverse ($a^{-1}$) while vector spaces do not. Fields
+       are also commutative under $*$ and vector spaces are not.
+\item $\text{Module} \subset \text{VS}$ since the scalars in a module
+      come from a ring as opposed to a field like we find in vector spaces
 \end{itemize}
 %
 %
 %
-\section*{Acknowledgements}
+% \section*{Acknowledgements}
 %
 %	LaTeX source on overleaf.com
 %
