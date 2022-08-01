@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  1 AUG 2022 08:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  1 AUG 2022 09:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1416,34 +1416,16 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Overfull \hbox (46.73607pt too wide) detected at line 168
+Overfull \hbox (46.73607pt too wide) detected at line 169
 []
  []
 
 (./golden_ratio.bbl [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
-[]\OT1/cmr/m/n/10 MIT.  In-te-gral of Se-cant.  []$\OT1/cmtt/m/n/10 https : / /
- ocw . mit . edu / courses / mathematics /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
-\OT1/cmtt/m/n/10 18-[]01sc-[]single-[]variable-[]calculus-[]fall-[]2010 / unit-
-[]4-[]techniques-[]of-[]integration /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
-\OT1/cmtt/m/n/10 part-[]a-[]trigonometric-[]powers-[]trigonometric-[]substituti
-on-[]and-[]completing-[]the-[]square /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
-\OT1/cmtt/m/n/10 session-[]71-[]integrals-[]involving-[]secant-[]cosecant-[]and
--[]cotangent / MIT18 _ 01SCF10 _ Ses71c . pdf$[]\OT1/cmr/m/n/10 ,
+Underfull \hbox (badness 1087) in paragraph at lines 4--11
+[]\OT1/cmr/m/n/10 Wikipedia Con-trib-u-tors.  In-te-gral of the Se-cant Func-ti
+on --- Wikipedia, The Free En-cy-clo-pe-
  []
 
 ) [2] (./golden_ratio.aux)
@@ -1452,8 +1434,8 @@ Package rerunfilecheck Info: File `golden_ratio.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  51765 strings out of 478994
- 1309692 string characters out of 5858184
- 1947362 words of memory out of 5000000
+ 1309702 string characters out of 5858184
+ 1947367 words of memory out of 5000000
  68473 multiletter control sequences out of 15000+600000
  414716 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1471,10 +1453,10 @@ texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on golden_ratio.pdf (2 pages, 136776 bytes).
+Output written on golden_ratio.pdf (2 pages, 136504 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
