@@ -104,7 +104,7 @@ Consider the following integral:
 
 {\Large
 \begin{equation}
-\ln \phi = \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} \: dx
+\ln \phi = \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} \; dx
 \label{eqn:lnphi}
 \end{equation}
 }
@@ -114,57 +114,57 @@ Consider the following integral:
 \noindent
 To see how Equation (\ref{eqn:lnphi}) works, first 
 parameterize it with 
-$x = \tan y$ and $\sqrt{x^{2}+1} = \sec y$. Then 
-$dx = \sec^2 y \; dy$, $y = \arctan x$ and 
+$x = \tan y$ and $\sqrt{x^{2}+1} = \sec y$. \\
+Then $dx = \sec^2 y \; dy$, $y = \arctan x$ and 
 $\sec y = \sec (\arctan x) = \sqrt{x^{2}+1}$. 
 So \par}
 
 
 \begin{equation*}
 \begin{array}{rcll} 
-{\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} \:  dx} 
-&=& {\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{\sec^2 y}{\sec y} \:  dy}			
-		&\: \mathrel{\#} \text{use above parameterization} \\
+{\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} \;  dx} 
+&=& {\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{\sec^2 y}{\sec y} \;  dy}			
+		&\; \mathrel{\#} \text{use above parameterization} \\
 [10pt]
-&=&{\displaystyle \int_{0}^{\frac{1}{2}} \sec y} \:  dy								
-		&\: \mathrel{\#} \dfrac{\sec^2 y}{\sec y} = \sec y \\
+&=&{\displaystyle \int_{0}^{\frac{1}{2}} \sec y} \;  dy								
+		&\; \mathrel{\#} \dfrac{\sec^2 y}{\sec y} = \sec y \\
 [10pt]
-&=&{\displaystyle \int_{\arctan 0}^{\arctan \frac{1}{2}} \sec y} \:  dy			
-		&\: \mathrel{\#} \text{parameterization $\Rightarrow y = \arctan x$} \\
+&=&{\displaystyle \int_{\arctan 0}^{\arctan \frac{1}{2}} \sec y} \;  dy			
+		&\; \mathrel{\#} \text{parameterization $\Rightarrow y = \arctan x$} \\
 [10pt]
-&=&{\displaystyle \int_{0}^{\arctan \frac{1}{2}} \sec y} \: dy			
-		&\: \mathrel{\#} \arctan 0 = 0 \\
+&=&{\displaystyle \int_{0}^{\arctan \frac{1}{2}} \sec y} \; dy			
+		&\; \mathrel{\#} \arctan 0 = 0 \\
 [8pt]
 &=&{\displaystyle \ln | \sec y + \tan y | \Big |_{0}^{\arctan \frac{1}{2}}}			
-		&\: \mathrel{\#} \text{integral of $\sec y \; dy$ \cite{wiki:integral_of_secant} 
+		&\; \mathrel{\#} \text{integral of $\sec y \; dy$ \cite{wiki:integral_of_secant} 
 		                       and the FToC} \\
 [14pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |\sec 0 + \tan 0 |
-		&\: \mathrel{\#} \text{expand previous line} \\
+		&\; \mathrel{\#} \text{expand previous line} \\
 [14pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |1 + 0 |
-		&\: \mathrel{\#} \text{$\sec 0 = 1$ and $\tan 0 = 0$} \\
+		&\; \mathrel{\#} \text{$\sec 0 = 1$ and $\tan 0 = 0$} \\
 [14pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - 0
-		&\: \mathrel{\#} \ln | 1 + 0| = \ln 1 = 0 \\
+		&\; \mathrel{\#} \ln | 1 + 0| = \ln 1 = 0 \\
 [14pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \frac{1}{2} |
-		&\: \mathrel{\#} \tan(\arctan x) = x \\
+		&\; \mathrel{\#} \tan(\arctan x) = x \\
 [10pt]
 &=& \ln \Big | \sqrt{\left (\frac{1}{2} \right )^{\mathsmaller 2} + 1} + \frac{1}{2} \Big |
-		&\: \mathrel{\#} \text{$\sec({\arctan x}) = \sqrt{x^2 +1}$} \\
+		&\; \mathrel{\#} \text{$\sec({\arctan x}) = \sqrt{x^2 +1}$} \\
 [10pt]
 &=& \ln \Big | \sqrt{\frac{1}{4} + 1} + \frac{1}{2} \Big |
-		&\: \mathrel{\#} {\left ( \frac{1}{2} \right ) }^{\mathsmaller 2} = \frac{1}{4} \\
+		&\; \mathrel{\#} {\left ( \frac{1}{2} \right ) }^{\mathsmaller 2} = \frac{1}{4} \\
 [10pt]
 &=& \ln \Big | \sqrt{\frac{5}{4}} + \frac{1}{2} \Big |
-		&\: \mathrel{\#} \sqrt{\frac{1}{4} + 1} = \sqrt{\frac{1}{4} + \frac{4}{4}} = \sqrt{\frac{5}{4}} \\
+		&\; \mathrel{\#} \sqrt{\frac{1}{4} + 1} = \sqrt{\frac{1}{4} + \frac{4}{4}} = \sqrt{\frac{5}{4}} \\
 [10pt]
 &=& \ln \Big | \frac{1 + \sqrt{5}}{2} \Big |
-		&\: \mathrel{\#} \sqrt{\frac{5}{4}} + \frac{1}{2} = \frac{\sqrt{5}}{2} + \frac{1}{2} = \frac{1 + \sqrt{5}}{2} \\
+		&\; \mathrel{\#} \sqrt{\frac{5}{4}} + \frac{1}{2} = \frac{\sqrt{5}}{2} + \frac{1}{2} = \frac{1 + \sqrt{5}}{2} \\
 [10pt]
 &=& \ln \phi
-		&\: \mathrel{\#} \phi =  \frac{1 + \sqrt{5}}{2}
+		&\; \mathrel{\#} \phi =  \frac{1 + \sqrt{5}}{2}
 \end{array}
 \end{equation*}
 %
