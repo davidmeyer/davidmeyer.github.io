@@ -256,7 +256,7 @@ which we can see as follows:
 [15pt]
 &=& \mathbb{E}_\theta \Big [- \nabla_{\theta}^{2} \log p_\theta(x) +
 \frac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} \Big ] 
-		&\qquad \qquad \mathrel{\#} \text{ Equation (\ref{eqn:llt})} \\
+		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:llt})} \\
 [15pt] 
 &=& - {\displaystyle \int_{x} p_\theta(x) \nabla^2 \log p_\theta(x) \; dx + 
 					 \int_{x} \frac{p_\theta(x) \nabla^2 p_\theta(x) \; dx}{p_\theta(x)}}
@@ -343,8 +343,8 @@ f(x;p) &=
 
 \bigskip
 \noindent
-So if we take the pmf of the Bernoulli distribution to be $P(X =
-x) = p^{x}(1-p)^{1-x}$, then $\nabla P(X = x) = \frac{x}{p} -
+So if we take the pmf of the Bernoulli distribution to be $P(X =                                                           
+x) = p^{x}(1-p)^{1-x}$, then $\nabla P(X = x) = \frac{x}{p} -                                                              
 \frac{1-x}{1-p}$, so that
 
 \begin{equation*}
@@ -376,19 +376,20 @@ for the Bernoulli distribution is
 The variance of a Bernoulli distribution with sample mean $\mu$
 looks like:
 
+\bigskip
 \begin{equation*}
 \begin{array}{llll}
 \mathbb{E}\big [(X- \mu)^2 \big] 
 &=& \mathrm{Var}(X)
-		&\qquad \qquad \mathrel{\#} \text{definition of variance} \\ 
-[10pt]
+		&\qquad \qquad \qquad \mathrel{\#} \text{definition of variance} \\ 
+[5pt]
 &=& p(1-p)
-		&\qquad \qquad \mathrel{\#} \text{variance of the Bernoulli distribution
+		&\qquad \qquad \qquad \mathrel{\#} \text{variance of the Bernoulli distribution
 		                                  \cite{wiki:bernoulli_distribution}} \\ 
-[10pt]		
-&=& \frac{1}{\mathbb{I}_p}  
-		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:fisher}): }
-		                            p(1-p) = \frac{1}{\mathbb{I}_p} \\
+[2pt]		
+&=& \dfrac{1}{\mathbb{I}_p}  
+		&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:fisher}): }
+		                            {\displaystyle p(1-p) = \frac{1}{\mathbb{I}_p}} \\
 \end{array}
 \end{equation*}
 
