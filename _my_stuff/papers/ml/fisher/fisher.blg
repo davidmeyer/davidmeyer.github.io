@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: fisher.aux
 The style file: plain.bst
 Database file #1: ml.bib
-You've used 3 entries,
+You've used 4 entries,
             2118 wiz_defined-function locations,
-            516 strings with 4527 characters,
-and the built_in function-call counts, 795 in all, are:
-= -- 71
-> -- 42
+            522 strings with 4767 characters,
+and the built_in function-call counts, 1012 in all, are:
+= -- 93
+> -- 49
 < -- 0
-+ -- 18
-- -- 14
-* -- 46
-:= -- 148
-add.period$ -- 10
-call.type$ -- 3
-change.case$ -- 15
++ -- 21
+- -- 16
+* -- 52
+:= -- 185
+add.period$ -- 14
+call.type$ -- 4
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 29
-empty$ -- 62
-format.name$ -- 14
-if$ -- 159
+cite$ -- 4
+duplicate$ -- 36
+empty$ -- 84
+format.name$ -- 16
+if$ -- 207
 int.to.chr$ -- 0
-int.to.str$ -- 3
+int.to.str$ -- 4
 missing$ -- 3
-newline$ -- 19
-num.names$ -- 6
-pop$ -- 23
+newline$ -- 25
+num.names$ -- 8
+pop$ -- 31
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 16
 quote$ -- 0
-skip$ -- 19
+skip$ -- 25
 stack$ -- 0
-substring$ -- 16
-swap$ -- 3
+substring$ -- 21
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 10
+type$ -- 14
 warning$ -- 0
-while$ -- 6
-width$ -- 4
-write$ -- 35
+while$ -- 8
+width$ -- 5
+write$ -- 47

@@ -224,16 +224,16 @@ p_\theta(x)^{\small{T}}
 From the above we can see that
 
 \begin{flalign}
-l_\theta l_{\theta}^{\small{T}} = 
-		              -\nabla_{\theta}^{2} \log p_\theta(x) + 
-		              \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
+l_\theta l_{\theta}^{\small{T}} = -\nabla_{\theta}^{2} \log p_\theta(x) + 
+                                  \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
 \label{eqn:llt} 
 \end{flalign}
 
 
 \bigskip
 \noindent
-So far we have the following forms of the Fisher Information $\mathbb{I}_\theta$:
+So far we have the following forms of the Fisher Information
+$\mathbb{I}_\theta$: 
 
 \begin{flalign*}
 \mathbb{I}_\theta = \text{Var}(l_\theta) = \mathbb{E}_{\theta}
@@ -252,32 +252,32 @@ which we can see as follows:
 \begin{array}{llll}
 \mathbb{I}_\theta
 &=& \mathbb{E}_{x \sim p_\theta(x)} \big [l_\theta l_\theta^{\small{T}} \big ]
-		&\qquad \mathrel{\#} \text{definition of } \mathbb{I}_\theta \\ 
+		&\qquad \qquad \mathrel{\#} \text{definition of } \mathbb{I}_\theta \\ 
 [15pt]
 &=& \mathbb{E}_\theta \Big [- \nabla_{\theta}^{2} \log p_\theta(x) +
 \frac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} \Big ] 
-		&\qquad \mathrel{\#} \text{ Equation (\ref{eqn:llt})} \\
+		&\qquad \qquad \mathrel{\#} \text{ Equation (\ref{eqn:llt})} \\
 [15pt] 
 &=& - {\displaystyle \int p_\theta(x) \nabla^2 \log p_\theta(x) \; dx + 
 					 \int \frac{p_\theta(x) \nabla^2 p_\theta(x) \; dx}{p_\theta(x)}}
-		&\qquad \mathrel{\#} \text{definition of expectation}\\ 
+		&\qquad \qquad \mathrel{\#} \text{definition of expectation}\\ 
 [15pt]
 &=& - {\displaystyle \int p_\theta(x) \nabla^2 \log p_\theta(x) \; dx + 
 					 \int \nabla^2 p_\theta(x) \; dx} 
-		&\qquad \mathrel{\#} \dfrac{p_\theta(x)}{p_\theta(x)} = 1 \\ 
+		&\qquad \qquad \mathrel{\#} \dfrac{p_\theta(x)}{p_\theta(x)} = 1 \\ 
 [15pt]
 &=& -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] + 
         			\nabla^2 \underbrace{\int p_\theta(x) \; dx}_{1}
-		&\qquad \mathrel{\#} \text{$p_\theta(x)$ is a density} \\ 
+		&\qquad \qquad \mathrel{\#} \text{$p_\theta(x)$ is a density} \\ 
 [15pt]
 &=& -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] + \nabla^2 1 
-		&\qquad \mathrel{\#} {\displaystyle \int p_\theta(x) \; dx = 1} \\ 
+		&\qquad \qquad \mathrel{\#} {\displaystyle \int p_\theta(x) \; dx = 1} \\ 
 [18pt]
 &=& -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] + 0 
-		&\qquad \mathrel{\#} \text{$\nabla c = 0$ for constant $c$} \\
+		&\qquad \qquad \mathrel{\#} \text{$\nabla c = 0$ for constant $c$} \\
 [18pt]
 &=&  -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] 
-		&\qquad \mathrel{\#} \mathbb{I}_\theta = -\mathbb{E}_{\theta} 
+		&\qquad \qquad \mathrel{\#} \mathbb{I}_\theta = -\mathbb{E}_{\theta} 
 		                \big [\nabla^2 \log p_\theta(x) \big] 
 
 \end{array}
@@ -323,13 +323,13 @@ see more about this in Section \ref{sec:estimation}.
 
 \section{Estimation and Fisher information}
 \label{sec:estimation}
-The Fisher information has intimate connections to estimation,
+The Fisher Information has intimate connections to estimation,
 both in terms of classical estimation and various "information
 games".  The canonical motivating example appears to be
 estimation of the mean of a sample of $n$ i.i.d.  $X_1^n \sim
-\mathrm{Bernoulli}(p), p \in [0,1]$.  The standard formulation of
-the Bernoulli probability mass function (pmf) $f$ for $x \in
-[0,1]$ looks like
+\mathrm{Bernoulli}(p)$, for $p \in [0,1]$ \cite{wiki:bernoulli_distribution}.  
+The standard formulation of the Bernoulli probability mass function (pmf) 
+$f$ for $x \in [0,1]$ looks like
 
 \begin{flalign*}
 f(x;p) &=
@@ -343,44 +343,69 @@ f(x;p) &=
 \bigskip
 \noindent
 So if we take the pmf of the Bernoulli distribution to be $P(X =
-x) = p^{x}(1-p)^{1-x}$, then $\nabla P(X = x) = \frac{x}{p} - \frac{1-x}{1-p}$, 
-so that
+x) = p^{x}(1-p)^{1-x}$, then $\nabla P(X = x) = \frac{x}{p} -
+\frac{1-x}{1-p}$, so that
 
-\begin{flalign}
-\mathbb{I}_p &= \mathbb{E}_p \Bigg [\Bigg (\frac{X}{p} -
-\Bigg(\frac{1-X}{1-p} \Bigg) \Bigg)^2\Bigg] \\ &=\frac{1}{p} +
-\frac{1}{1 - p} \\ & = \frac{1}{p (1-p)}
-\label{eqn:fisher}
-\end{flalign}
+\begin{equation*}
+\begin{array}{llll}
+\mathbb{I}_p 
+&=& \mathbb{E}_p \Bigg [\bigg (\frac{X}{p} - \Big(\frac{1-X}{1-p} \Big) \bigg)^2\Bigg] \\
+[15pt]
+&=&\frac{1}{p} + \frac{1}{1 - p} \\
+[15pt]
+&=& \frac{1}{p (1-p)}
+\end{array}
+\end{equation*}
 
 \bigskip
 \noindent
-where $\mathbb{I}_p$ is the Fisher Information for  a single
-sample. 
+where $\mathbb{I}_p$ is the Fisher Information for
+a single sample. So the Fisher Information
+for the Bernoulli distribution is 
+
+\begin{equation}
+\mathbb{I}_p = \frac{1}{p (1-p)}
+\label{eqn:fisher}
+\end{equation}
+
 
 \bigskip
 \noindent
 The variance of a Bernoulli distribution with sample mean $\mu$
-looks like this:
+looks like:
 
-\begin{flalign}
-\mathbb{E}\big [(X- \mu)^2 \big] &= \frac{1}{n} \mathrm{Var}(X)
-\qquad \qquad \mathrel{\#} \mu = p \text{ (Bernoulli
-disribution})\\ &= \frac{p(1-p)}{n} \; \qquad \qquad \mathrel{\#}
-\text{Variance of the Bernoulli distribution} \\ &=
-\frac{1}{\mathbb{I}_p} \cdot \frac{1}{n} \: \; \quad \qquad
-\qquad \mathrel{\#} p(1-p) = \frac{1}{\mathbb{I}_p}, \text{
-Equation (\ref{eqn:fisher})} \\ \text{Var}(X)
-&=\frac{1}{\mathbb{I}_{\theta}}
-\label{eqn:inverse}
-\end{flalign}
+\begin{equation*}
+\begin{array}{llll}
+\mathbb{E}\big [(X- \mu)^2 \big] 
+&=& \mathrm{Var}(X)
+		&\qquad \qquad \mathrel{\#} \text{definition of variance} \\ 
+[10pt]
+&=& p(1-p)
+		&\qquad \qquad \mathrel{\#} \text{variance of the Bernoulli distribution
+		                                  \cite{wiki:bernoulli_distribution}} \\ 
+[10pt]		
+&=& \frac{1}{\mathbb{I}_p}  
+		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:fisher}): }
+		                            p(1-p) = \frac{1}{\mathbb{I}_p} \\
+\end{array}
+\end{equation*}
 
 \bigskip
 \noindent
-It turns out that this inverse dependence of the variance on
-Fisher Information (Equation (\ref{eqn:inverse})) is unavoidable,
-and is quantified by the Cram\'er Rao Bound, which provides lower
-bounds on the mean squared error of all unbiased estimators.
+So the variance of the Bernoulli distribution is the inverse of 
+the Fisher Information:
+
+\medskip
+\begin{equation*}
+\mathrm{Var}(X) = \frac{1}{\mathbb{I}_p} 
+\end{equation*}
+
+\bigskip
+\noindent
+Interestingly, it turns out that this inverse dependence of the 
+variance on Fisher Information is unavoidable and is quantified 
+by the Cram\'er Rao Bound (which provides lower bounds on the 
+mean squared error of all unbiased estimators).
 
 \section{The Cram\'er Rao Lower Bound}
 \label{sec:crlb}
@@ -488,10 +513,12 @@ estimator?  The CRLB gives and answer to this question, as well
 as a somewhat impractical method for finding the best estimator.
 To get some intuition about the CRLB, consider the the problem of
 estimating the DC level A in the model
-\begin{flalign}
-x[n] = \text{A} + w[n]
-\end{flalign}
 
+\begin{flalign*}
+x[n] = \text{A} + w[n]
+\end{flalign*}
+
+\bigskip
 \noindent 
 where the signal we are looking for is embedded in the White
 Gaussian Noise (WGN) $w[n] \sim \mathcal{N}(0,\sigma^2)$.  For
@@ -511,10 +538,10 @@ One we observe some value of $x[0]$, say $x[0] = 3$, some values
 of A become more likely. In fact, the pdf of A has the same form
 as the pdf of $x[0]$.
 
-\begin{flalign}
+\begin{flalign*}
 p(A) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp{\Bigg [ - \frac{1}{2
 \sigma^2} (x[0] - 3)^2\Bigg ]}
-\end{flalign}
+\end{flalign*}
 
 \bigskip
 \noindent
@@ -561,28 +588,30 @@ variance $\sigma^2_{\text{min}} = - \frac{1}{curvature}$.
 First, notice that in this case the minimum variance of all
 estimators is $\sigma^2$ since we are using only one sample. We
 also know that the likelihood function; this is given in Equation
-\ref{eqn:likelihood}. Given this likelihood, the log-likelihood
+(\ref{eqn:likelihood}). Given this likelihood, the log-likelihood
 is
-\begin{flalign}
-\ln p(x[0];\text{A}) = - \ln \sqrt{2\pi\sigma^2} - \frac{1}{2\sigma^2} (x[0] - A)^2
-\end{flalign}
+
+\begin{flalign*}
+\log p(x[0];\text{A}) = - \log \sqrt{2\pi\sigma^2} - \frac{1}{2\sigma^2} (x[0] - A)^2
+\end{flalign*}
 
 \bigskip
 \noindent
 The derivative with respect A to a is given by
 
 \begin{flalign}
-\frac{\partial \ln p(x[0];\text{A})}{\partial \text{A}} =
-\nabla_{\tiny{\text{A}}} \ln p(x[0];\text{A}) =
+\frac{\partial \log p(x[0];\text{A})}{\partial \text{A}} =
+\nabla_{\tiny{\text{A}}} \log p(x[0];\text{A}) =
 \frac{1}{\sigma^2}(x[0] - \text{A}) 
 \end{flalign}
 
 \bigskip
 \noindent
 and the second derivative is
+
 \begin{flalign}
-\frac{\partial^2 \ln p(x[0];\text{A})}{\partial^2 \text{A}} =
-\nabla^2_{\text{A}} \ln p(x[0];\text{A}) = -  \frac{1}{\sigma^2} 
+\frac{\partial^2 \log p(x[0];\text{A})}{\partial^2 \text{A}} =
+\nabla^2_{\text{A}} \log p(x[0];\text{A}) = -  \frac{1}{\sigma^2} 
 \end{flalign}
 
 \bigskip
@@ -590,14 +619,16 @@ and the second derivative is
 Since $\sigma^2$ is the smallest possible variance, in this case
 we have an alternative way of finding the minimum variance of all
 estimators, in paricular
+
 \begin{flalign}
-\sigma^2_{\text{min}} = - \frac{1}{\frac{\partial^2 \ln
+\sigma^2_{\text{min}} = - \frac{1}{\frac{\partial^2 \log
 p(x[0];\text{A})}{\partial^2 \text{A}}} = -
 \frac{1}{\text{curvature of the likelihood}} 
 \end{flalign}
 
 In order to generalize the result, the following regularity
 conditions must hold: 
+
 \begin{itemize}
 \item If the function depends on the data $X$, you must take the
 expectation with respect to $X$ 
@@ -611,7 +642,7 @@ All of this put together gives us the Minimum Variance Unbiased
 Estimator (MVUE): 
  
 \begin{equation*}
-\text{MVUE} = \frac{1}{- \mathbb{E} \Big [\frac{\partial^2 \ln
+\text{MVUE} = \frac{1}{- \mathbb{E} \Big [\frac{\partial^2 \log
 p(x[0]; \theta)}{\partial^2 \theta} \Big ] } 
 \end{equation*}
 
@@ -624,13 +655,13 @@ p(x[0]; \theta)}{\partial^2 \theta} \Big ] }
 \noindent
 Assuming that the pdf $p(x;\theta)$ satisfies the regularity
 condition that $\forall \theta$, \\ $\mathbb{E}_{x \sim
-p(x;\theta)} \Big [ \frac{\partial \ln p(x; \theta)}{\partial
+p(x;\theta)} \Big [ \frac{\partial \log p(x; \theta)}{\partial
 \theta} \Big ] = 0$, then the \emph{variance} of any unbiased
 estimator $\widehat{\theta}$ must satisfy
 
 \begin{equation}
 \text{Var}(\widehat{\theta}) \geqslant \frac{1}{- \mathbb{E} \Big
-[\frac{\partial^2 \ln p(x; \theta)}{\partial^2 \theta} \Big ]} 
+[\frac{\partial^2 \log p(x; \theta)}{\partial^2 \theta} \Big ]} 
 \end{equation}
 
 \bigskip
@@ -638,10 +669,12 @@ estimator $\widehat{\theta}$ must satisfy
 An important consequence of the Theorem is that any unbiased
 estimator can attain this lower bound $\forall \theta$ if and
 only if
+
 \begin{equation}
 \label{eqn:crlb1}
-\frac{\partial \ln p(x;\theta)}{\partial \theta} = \mathbb{I}_{\theta}(g(x) - \theta)
+\frac{\partial \log p(x;\theta)}{\partial \theta} = \mathbb{I}_{\theta}(g(x) - \theta)
 \end{equation}
+
 \noindent
 for some functions $g$ and $\mathbb{I}$. That estimator, which is
 the MVUE has $\widehat{\theta} = g(x)$ with minimum variance is
@@ -654,7 +687,7 @@ elsewhere around the web.
 \textbf{Notes on the CRLB Scalar Parameter Case}
 \begin{itemize}
 \item Note that the Fisher Information $\mathbb{I}_\theta =
-\mathbb{E} \Big [\frac{\partial^2 \ln p(x; \theta)}{\partial^2
+\mathbb{E} \Big [\frac{\partial^2 \log p(x; \theta)}{\partial^2
 \theta} \Big ]$ so that by the Theorem:
 \\ $\text{Var}(\widehat{\theta}) \geqslant
 \mathbb{I}_\theta^{-1}$.
@@ -691,7 +724,7 @@ p(x;A)
 \noindent
 The log-likelihood is now
 \begin{flalign*}
-\ln p(x;A) &= -\ln \big [(2 \pi \sigma^2)^{\frac{N}{2}} \big] - 
+\log p(x;A) &= -\log \big [(2 \pi \sigma^2)^{\frac{N}{2}} \big] - 
 \frac{1}{2 \sigma^2} \sum\limits_{n=0}^{N-1} (x[n] - A)^2
 \end{flalign*}
 
@@ -700,7 +733,7 @@ The log-likelihood is now
 and the first derivative is 
 
 \begin{flalign*}
-\frac{\partial \ln p(x;A)}{\partial A} 
+\frac{\partial \log p(x;A)}{\partial A} 
 &= \frac{1}{\sigma^2} \sum\limits_{n=0}^{N-1} (x[n] - A) \\
 &= \frac{N}{\sigma^2} (\tilde{\textbf{x}} - A)
 \end{flalign*}
@@ -711,7 +744,7 @@ where $\tilde{\textbf{x}}$ is the sample mean. The second
 derivative has the simple form 
 
 \begin{flalign*}
-\frac{\partial^2 \ln p(x;A)} {\partial A^2} &= - \frac{N}{\sigma^2} 
+\frac{\partial^2 \log p(x;A)} {\partial A^2} &= - \frac{N}{\sigma^2} 
 \end{flalign*}
 
 \bigskip
@@ -744,7 +777,7 @@ semidefinite}. Here the Fisher Information matrix is given by
 
 \begin{flalign*}
 \big [ \mathbb{I}_\theta \big ]_{ij} = - \mathbb{E}_{x \sim p(x;
-\theta)} \Bigg [ \frac{\partial \ln p(x;\theta)}{\partial
+\theta)} \Bigg [ \frac{\partial \log p(x;\theta)}{\partial
 \theta_i \partial \theta_j} \Bigg ]
 \end{flalign*}
 
@@ -755,7 +788,7 @@ bound in that $\textbf{C}_{\widehat{\theta}} =
 \mathbb{I}^{-1}_{\theta}$ \emph{iff}
 
 \begin{flalign*}
-\frac{\partial \ln p(x;\theta)}{\partial \theta} =
+\frac{\partial \log p(x;\theta)}{\partial \theta} =
 \mathbb{I}_{\theta}(g(x) - \theta) 
 \end{flalign*}
 
@@ -765,6 +798,9 @@ for some function $g$ and some $m \times m$ matrix
 $\mathbb{I}_{\theta}$. That estimator, which s the MVUE, is given
 by $\widehat{\theta} = g(x)$ and the covariance matrix is
 $\mathbb{I}^{-1}_{\theta}$.
+%
+%
+%
 \section*{Acknowledgements}
 %
 %	LaTeX source on overleaf.com
