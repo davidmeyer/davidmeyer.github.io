@@ -150,27 +150,26 @@ the score function $l_\theta$. Recall that the mean $\mu =
 p_{\theta}(X)\big] = \mathbb{E}\big[l_\theta\big]$.
 
 
-
 \begin{equation*}
 \begin{array}{llll}
 \mathbb{E}_{\theta}\big [l_\theta\big] 
 &=& {\displaystyle \int p_{\theta}(x) \nabla_{\theta} \log p_{\theta}(x) dx}
-		& \mathrel{\#} \text{definition of expectation} \\ 
+		&\qquad \qquad \mathrel{\#} \text{definition of expectation} \\ 
 [10pt]
 &=& {\displaystyle \int \frac{\nabla_\theta p_\theta(x)}{p_\theta(x)} p_\theta(x) dx} 
-		& \mathrel{\#} \nabla_{\theta} \log p_{\theta}(x) = \frac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\ 
+		&\qquad \qquad \mathrel{\#} \nabla_{\theta} \log p_{\theta}(x) = \frac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\ 
 [10pt]
 &=& {\displaystyle \int \nabla_\theta p_\theta(x) dx} 
-		&\mathrel{\#} \frac{p_\theta(x)}{p_\theta(x)} = 1 \\ 
+		&\qquad \qquad \mathrel{\#} \frac{p_\theta(x)}{p_\theta(x)} = 1 \\ 
 [10pt]
 &=& \nabla_\theta \int p_\theta(x) dx 
-		& \mathrel{\#} \text{exchange $\int$ and $\nabla$ can be exchanged} \\ 
+		&\qquad \qquad \mathrel{\#} \text{exchange $\int$ and $\nabla$ can be exchanged} \\ 
 [10pt]
 &=& \nabla_{\theta} 1 
-		&\mathrel{\#} \text{$p_\theta(x)$ is a density so} \int_x p_\theta(x) dx = 1 \\ 
+		&\qquad \qquad \mathrel{\#} \text{$p_\theta(x)$ is a density so} \int_x p_\theta(x) dx = 1 \\ 
 [10pt]
 &=& 0 
-		&\mathrel{\#} \text{for c any constant}
+		&\qquad \qquad \mathrel{\#} \text{for c any constant}
 \nabla c = 0
 \end{array}
 \end{equation*}
