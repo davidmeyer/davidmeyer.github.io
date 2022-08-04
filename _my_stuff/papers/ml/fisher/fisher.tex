@@ -370,7 +370,7 @@ disribution})\\ &= \frac{p(1-p)}{n} \; \qquad \qquad \mathrel{\#}
 \text{Variance of the Bernoulli distribution} \\ &=
 \frac{1}{\mathbb{I}_p} \cdot \frac{1}{n} \: \; \quad \qquad
 \qquad \mathrel{\#} p(1-p) = \frac{1}{\mathbb{I}_p}, \text{
-Equation } \ref{eqn:fisher} \\ \text{Var}(X)
+Equation (\ref{eqn:fisher})} \\ \text{Var}(X)
 &=\frac{1}{\mathbb{I}_{\theta}}
 \label{eqn:inverse}
 \end{flalign}
@@ -378,7 +378,7 @@ Equation } \ref{eqn:fisher} \\ \text{Var}(X)
 \bigskip
 \noindent
 It turns out that this inverse dependence of the variance on
-Fisher Information (Equation \ref{eqn:inverse}) is unavoidable,
+Fisher Information (Equation (\ref{eqn:inverse})) is unavoidable,
 and is quantified by the Cram\'er Rao Bound, which provides lower
 bounds on the mean squared error of all unbiased estimators.
 
@@ -396,18 +396,20 @@ algorithm) to the values of the items of the sample, which are
 known together as a set of data. So suppose we have a sample $D=
 X_1^n$ then $f:D \rightarrow \mathbb{R}$ is a \emph{statistic on
 $D$}. Statistics have all kinds of interesting properties that we
-won't review here, including observability\footnote{A statistic
-is an observable random variable, which differentiates it both
-from a parameter that is a generally unobservable quantity
+won't review here, including
+observability\footnote{{\setstretch{1.295}A \emph{statistic} is an
+observable random variable, which differentiates it both from a
+\emph{parameter}, which is generally an unobservable quantity
 describing a property of a statistical population, and from an
-unobservable random variable, such as the difference between an
-observed measurement and a population average, that is.,
-$\frac{1}{n} \sum\limits_{i = 1}^n X_i - \mu$, where the $X_i$
-are the observations and $\mu$ is the true population mean.}
-completeness, consistency, sufficiency, unbiasedness.  Other
-examples of properties of a statistic include minimum mean square
-error, low variance, robustness, and computational convenience,
-and measures of information such as the Fisher Information.
+\emph{unobservable random variable}. For example, the difference
+between an observed measurement and the population average,
+$\frac{1}{n} \sum\limits_{i = 1}^n X_i - \mu$, is an unobservable
+random variable; here the $X_i$ are observations and $\mu$ is the
+true population mean. \par}} completeness, consistency,
+sufficiency, unbiasedness.  Other examples of properties of a
+statistic include minimum mean square error, low variance,
+robustness, and computational convenience, and measures of
+information such as the Fisher Information.
 
 \bigskip
 \noindent
@@ -475,7 +477,8 @@ estimator $\widehat{\theta}$, $ \text{Var}(\widehat {\theta}) =
 
 \bigskip
 \noindent
-Of course, if $\text{Bias}(\widehat{\theta}) = 0$ ($\widehat{\theta}$ is unbiased), then $\text{MSE}(\widehat{\theta})  = \text{Var}(\widehat{\theta})$.
+Of course, if $\text{Bias}(\widehat{\theta}) = 0$ (that is, $\widehat{\theta}$ 
+is unbiased), then $\text{MSE}(\widehat{\theta})  = \text{Var}(\widehat{\theta})$.
 
 \bigskip
 \noindent
