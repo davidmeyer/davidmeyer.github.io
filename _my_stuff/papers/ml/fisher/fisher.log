@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 AUG 2022 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 AUG 2022 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,23 +1451,28 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 242.
 LaTeX Font Warning: Command \small invalid in math mode on input line 254.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 296.
+Overfull \hbox (4.82523pt too wide) detected at line 285
+[]
+ []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 296.
+LaTeX Font Warning: Command \small invalid in math mode on input line 297.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 297.
 
 [2] [3] [4]
 <images/pdf.png, id=103, 249.93375pt x 168.63pt>
 File: images/pdf.png Graphic file (type png)
 <use images/pdf.png>
-Package pdftex.def Info: images/pdf.png  used on input line 581.
+Package pdftex.def Info: images/pdf.png  used on input line 583.
 (pdftex.def)             Requested size: 374.8997pt x 252.94437pt.
  [5]
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 606.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 608.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 606.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 608.
 
 [6 <./images/pdf.png>] [7] (./fisher.bbl [8]
 Underfull \hbox (badness 10000) in paragraph at lines 15--21
@@ -1486,9 +1491,9 @@ Package rerunfilecheck Info: File `fisher.out' has not changed.
 (rerunfilecheck)             Checksum: B7987F64B2B9EE4A7D30E300ADCEF3B5;1130.
  ) 
 Here is how much of TeX's memory you used:
- 51866 strings out of 478994
- 1310712 string characters out of 5858184
- 1945923 words of memory out of 5000000
+ 51865 strings out of 478994
+ 1310700 string characters out of 5858184
+ 1944923 words of memory out of 5000000
  68526 multiletter control sequences out of 15000+600000
  419533 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1522,10 +1527,10 @@ t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on fisher.pdf (9 pages, 333435 bytes).
+Output written on fisher.pdf (9 pages, 333313 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
