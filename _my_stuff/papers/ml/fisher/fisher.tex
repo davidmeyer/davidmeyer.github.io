@@ -153,24 +153,26 @@ p_{\theta}(X)\big] = \mathbb{E}\big[l_\theta\big]$.
 \begin{equation*}
 \begin{array}{llll}
 \mathbb{E}_{\theta}\big [l_\theta\big] 
-&=& {\displaystyle \int p_{\theta}(x) \nabla_{\theta} \log p_{\theta}(x) dx}
-		&\qquad \qquad \mathrel{\#} \text{definition of expectation} \\ 
-[10pt]
-&=& {\displaystyle \int \frac{\nabla_\theta p_\theta(x)}{p_\theta(x)} p_\theta(x) dx} 
-		&\qquad \qquad \mathrel{\#} \nabla_{\theta} \log p_{\theta}(x) = \frac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\ 
-[10pt]
-&=& {\displaystyle \int \nabla_\theta p_\theta(x) dx} 
-		&\qquad \qquad \mathrel{\#} \frac{p_\theta(x)}{p_\theta(x)} = 1 \\ 
-[10pt]
-&=& \nabla_\theta \int p_\theta(x) dx 
-		&\qquad \qquad \mathrel{\#} \text{exchange $\int$ and $\nabla$ can be exchanged} \\ 
-[10pt]
+&=& {\displaystyle \int_{x} p_{\theta}(x) \, \nabla_{\theta} \log p_{\theta}(x) \; dx}
+		&\qquad \qquad \mathrel{\#} \text{definition of expectation with $x \sim p(x;\theta)$} \\ 
+[12pt]
+&=& {\displaystyle \int_{x} \frac{\nabla_\theta p_\theta(x)}{p_\theta(x)} \, p_\theta(x) \; dx} 
+		&\qquad \qquad \mathrel{\#} \text{log derivative trick \cite{log_derivative_trick}: } 
+									\nabla_{\theta} \log p_{\theta}(x) = 
+		                            \dfrac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\ 
+[12pt]
+&=& {\displaystyle \int_{x} \nabla_\theta p_\theta(x) \; dx} 
+		&\qquad \qquad \mathrel{\#} \text{cancel $p_\theta(x)$}\\ 
+[12pt]
+&=& {\displaystyle \nabla_\theta \int_{x} p_\theta(x) \; dx} 
+		&\qquad \qquad \mathrel{\#} \text{exchange ${\displaystyle \int}$ and $\nabla$} \\ 
+[12pt]
 &=& \nabla_{\theta} 1 
-		&\qquad \qquad \mathrel{\#} \text{$p_\theta(x)$ is a density so} \int_x p_\theta(x) dx = 1 \\ 
-[10pt]
+		&\qquad \qquad \mathrel{\#} \text{$p_\theta(x)$ is a density so} 
+		                                 {\displaystyle \int_{x} p_\theta(x) \; dx = 1} \\ 
+[12pt]
 &=& 0 
-		&\qquad \qquad \mathrel{\#} \text{for c any constant}
-\nabla c = 0
+		&\qquad \qquad \mathrel{\#} \nabla c = 0 \text{ for constant $c$}
 \end{array}
 \end{equation*}
 
@@ -199,19 +201,19 @@ using the chain rule we see that
 \nabla_{\theta}^{2} \log p_\theta(x) 
 &=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} - \dfrac{\nabla_\theta p_\theta(x)
 \nabla_\theta p_\theta(x)^{\small{T}}}{{p_\theta(x)^2}} 
-		&\mathrel{\#} \text{ finite differences}\\ 
+		&\qquad \mathrel{\#} \text{ finite differences}\\ 
 [15pt]
 &=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} -
 \nabla_\theta \log p_\theta(x) \nabla_\theta \log
 p_\theta(x)^{\small{T}} 
-		&\mathrel{\#} \nabla_{\theta} \log p_{\theta}(x) = 
+		&\qquad \mathrel{\#} \nabla_{\theta} \log p_{\theta}(x) = 
 		              \dfrac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\
 [15pt]
 &=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} -l_\theta l_{\theta}^{\small{T}} 
-		&\mathrel{\#} \text{ definition of } l_\theta \\ 
+		&\qquad \mathrel{\#} \text{ definition of } l_\theta \\ 
 [15pt]
 &=& -\nabla_{\theta}^{2} \log p_\theta(x) + \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
-		&\mathrel{\#} l_\theta l_{\theta}^{\small{T}} = 
+		&\qquad \mathrel{\#} l_\theta l_{\theta}^{\small{T}} = 
 		              -\nabla_{\theta}^{2} \log p_\theta(x) + 
 		              \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
 \end{array}

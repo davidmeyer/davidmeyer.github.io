@@ -11,4 +11,12 @@ A.~{Ly}, M.~{Marsman}, J.~{Verhagen}, R.~{Grasman}, and E.-J. {Wagenmakers}.
 \newblock {A Tutorial on Fisher Information}.
 \newblock {\em ArXiv e-prints}, May 2017.
 
+\bibitem{log_derivative_trick}
+Shakir Mohamed.
+\newblock The log derivative trick.
+\newblock \url
+  {http://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/},
+  November 2015.
+\newblock Accessed: Sun Jun 3 11:33:18 PDT 2018.
+
 \end{thebibliography}

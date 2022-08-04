@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 AUG 2022 07:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 AUG 2022 08:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1424,60 +1424,72 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 120.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 201.
+LaTeX Font Warning: Command \small invalid in math mode on input line 203.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 206.
+LaTeX Font Warning: Command \small invalid in math mode on input line 208.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 210.
+LaTeX Font Warning: Command \small invalid in math mode on input line 212.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 214.
+LaTeX Font Warning: Command \small invalid in math mode on input line 216.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 229.
+LaTeX Font Warning: Command \small invalid in math mode on input line 231.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 229.
+LaTeX Font Warning: Command \small invalid in math mode on input line 231.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 240.
+LaTeX Font Warning: Command \small invalid in math mode on input line 242.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 240.
+LaTeX Font Warning: Command \small invalid in math mode on input line 242.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 252.
+LaTeX Font Warning: Command \small invalid in math mode on input line 254.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 294.
+LaTeX Font Warning: Command \small invalid in math mode on input line 296.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 294.
+LaTeX Font Warning: Command \small invalid in math mode on input line 296.
 
 [2] [3] [4]
-<images/pdf.png, id=97, 249.93375pt x 168.63pt>
+<images/pdf.png, id=102, 249.93375pt x 168.63pt>
 File: images/pdf.png Graphic file (type png)
 <use images/pdf.png>
-Package pdftex.def Info: images/pdf.png  used on input line 549.
+Package pdftex.def Info: images/pdf.png  used on input line 551.
 (pdftex.def)             Requested size: 374.8997pt x 252.94437pt.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 573.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 575.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 573.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 575.
 
-[5] [6 <./images/pdf.png>] [7] (./fisher.bbl) [8] (./fisher.aux)
+[5] [6 <./images/pdf.png>] [7] (./fisher.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+[]\OT1/cmr/m/n/10 Shakir Mo-hamed.  The log deriva-tive trick.  []$\OT1/cmtt/m/
+n/10 http : / / blog . shakirm . com / 2015 / 11 /
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 15--21
+\OT1/cmtt/m/n/10 machine-[]learning-[]trick-[]of-[]the-[]day-[]5-[]log-[]deriva
+tive-[]trick/$[]\OT1/cmr/m/n/10 , Novem-ber 2015.  Ac-cessed:
+ []
+
+) [8] (./fisher.aux)
 Package rerunfilecheck Info: File `fisher.out' has not changed.
 (rerunfilecheck)             Checksum: B7987F64B2B9EE4A7D30E300ADCEF3B5;1130.
  ) 
 Here is how much of TeX's memory you used:
- 51868 strings out of 478994
- 1310699 string characters out of 5858184
- 1944894 words of memory out of 5000000
- 68523 multiletter control sequences out of 15000+600000
+ 51871 strings out of 478994
+ 1310755 string characters out of 5858184
+ 1945936 words of memory out of 5000000
+ 68525 multiletter control sequences out of 15000+600000
  419181 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,19n,131p,724b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1504,14 +1516,15 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on fisher.pdf (8 pages, 305263 bytes).
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on fisher.pdf (8 pages, 318285 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
