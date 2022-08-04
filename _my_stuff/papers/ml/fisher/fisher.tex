@@ -602,20 +602,20 @@ is
 \noindent
 The derivative with respect A to a is given by
 
-\begin{flalign}
+\begin{flalign*}
 \frac{\partial \log p(x[0];\text{A})}{\partial \text{A}} =
 \nabla_{\tiny{\text{A}}} \log p(x[0];\text{A}) =
 \frac{1}{\sigma^2}(x[0] - \text{A}) 
-\end{flalign}
+\end{flalign*}
 
 \bigskip
 \noindent
 and the second derivative is
 
-\begin{flalign}
+\begin{flalign*}
 \frac{\partial^2 \log p(x[0];\text{A})}{\partial^2 \text{A}} =
 \nabla^2_{\text{A}} \log p(x[0];\text{A}) = -  \frac{1}{\sigma^2} 
-\end{flalign}
+\end{flalign*}
 
 \bigskip
 \noindent
@@ -623,11 +623,11 @@ Since $\sigma^2$ is the smallest possible variance, in this case
 we have an alternative way of finding the minimum variance of all
 estimators, in paricular
 
-\begin{flalign}
+\begin{flalign*}
 \sigma^2_{\text{min}} = - \frac{1}{\frac{\partial^2 \log
 p(x[0];\text{A})}{\partial^2 \text{A}}} = -
 \frac{1}{\text{curvature of the likelihood}} 
-\end{flalign}
+\end{flalign*}
 
 In order to generalize the result, the following regularity
 conditions must hold: 
