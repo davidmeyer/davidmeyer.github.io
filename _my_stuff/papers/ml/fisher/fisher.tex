@@ -99,8 +99,8 @@
 %
 %
 %
-\section{Definitions} 
-\label{sec:defs}
+\section{Introduction} 
+\label{sec:introduction}
 There are so many interesting things about Fisher Information
 \cite{2017arXiv170501064L} and its theoretical properties (and
 for that matter, its applications), but I'll start here with
@@ -109,20 +109,22 @@ parametric family of distributions on a space $\mathcal{X}$,
 where each $\theta \in \Theta \subset \mathbb{R}^d$ indexes
 $\{P_{\theta}\}$.  Assume (with no real loss of generality,
 AFAICT) that each $P_\theta$ has a density $p_\theta$.  Then the
-Fisher information associated with the \emph{model} is the matrix
+Fisher information associated with a \emph{model} is the matrix
 given by
 
-\begin{flalign*}
+\begin{flalign}
 \mathbb{I}_{\theta} = \mathbb{E}_{\theta} \Big
 [\nabla_{\theta} \log p_{\theta}(X) \nabla_{\theta} \log
 p_{\theta}(X)^{\small{\text{T}}} \Big] = 
 \mathbb{E}_{\theta} [l_{\theta}l_{\theta}^T]
-\end{flalign*}
+\label{eqn:fisher_theta}
+\end{flalign}
 
 \bigskip
 \noindent
 where $l_\theta$ is the \emph{score function} $\nabla_{\theta}
-\log p_{\theta}(X)$. The score function turns up in perhaps
+\log p_{\theta}(X)$ (we will see where Equation (\ref{eqn:fisher_theta})
+comes from in just a minute). The score function turns up in perhaps
 unexpected places (e.g., score function gradient in policy
 gradient reinforcement learning) and has various applications.
 
@@ -143,17 +145,14 @@ information.
 \bigskip
 {\setstretch{1.25}
 \noindent
-Fisher Information can be described in various ways. One way to
-think about the Fisher Information is that it is frequently (if not 
-always) defined to be the variance of the score function 
-$\nabla_{\theta} \log p_{\theta}(X)$. 
+The Fisher Information is defined to be the variance of the score 
+function $\nabla_{\theta} \log p_{\theta}(X)$. 
 Recall that the mean $\mu = \mathbb{E}[X]$ and the variance 
 $\sigma^2 = \mathbb{E} \left [{ \big (X - \mu \big )}^2 \right ]$. 
 
-
 \bigskip
 \noindent
-Now, consider the mean of the score function 
+Now consider the mean of the score function 
 $\mathbb{E} \left [\nabla_{\theta} \log p_{\theta}(X) \right ]$:  \par}
 
 
