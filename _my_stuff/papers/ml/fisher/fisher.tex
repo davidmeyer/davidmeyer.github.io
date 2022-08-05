@@ -141,38 +141,45 @@ counter-intuitively) events with lower probability contain more
 information.
 
 \bigskip
+{\setstretch{1.25}
 \noindent
 Fisher Information can be described in various ways. One way to
-think about the Fisher Information is that it is the variance of
-the score function $l_\theta$. Recall that the mean $\mu =
-\mathbb{E}[X]$ and the variance $\sigma^2 = \mathbb{E}[(X -
-\mu)^2]$. First, consider $\mathbb{E}\big[\nabla_{\theta} \log
-p_{\theta}(X)\big] = \mathbb{E}\big[l_\theta\big]$.
+think about the Fisher Information is that it is frequently (if not 
+always) defined to be the variance of the score function 
+$\nabla_{\theta} \log p_{\theta}(X)$. 
+Recall that the mean $\mu = \mathbb{E}[X]$ and the variance 
+$\sigma^2 = \mathbb{E} \left [{ \big (X - \mu \big )}^2 \right ]$. 
+
+
+\bigskip
+\noindent
+Now, consider the mean of the score function 
+$\mathbb{E} \left [\nabla_{\theta} \log p_{\theta}(X) \right ]$:  \par}
 
 
 \begin{equation*}
 \begin{array}{llll}
-\mathbb{E}_{\theta}\big [l_\theta\big] 
+\mathbb{E}_{\theta}\big [ \nabla_{\theta} \log p_{\theta}(X) \big] 
 &=& {\displaystyle \int_{x} p_{\theta}(x) \, \nabla_{\theta} \log p_{\theta}(x) \; dx}
-		&\qquad \qquad \mathrel{\#} \text{definition of expectation with $x \sim p(x;\theta)$} \\ 
+		&\qquad \mathrel{\#} \text{definition of expectation with $x \sim p_{\theta}(x)$} \\ 
 [12pt]
 &=& {\displaystyle \int_{x} \frac{\nabla_\theta p_\theta(x)}{p_\theta(x)} \, p_\theta(x) \; dx} 
-		&\qquad \qquad \mathrel{\#} \text{log derivative trick \cite{log_derivative_trick}: } 
+		&\qquad \mathrel{\#} \text{log derivative trick \cite{log_derivative_trick}: } 
 									\nabla_{\theta} \log p_{\theta}(x) = 
 		                            \dfrac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\ 
 [12pt]
 &=& {\displaystyle \int_{x} \nabla_\theta p_\theta(x) \; dx} 
-		&\qquad \qquad \mathrel{\#} \text{cancel $p_\theta(x)$}\\ 
+		&\qquad \mathrel{\#} \text{cancel $p_\theta(x)$}\\ 
 [12pt]
 &=& {\displaystyle \nabla_\theta \int_{x} p_\theta(x) \; dx} 
-		&\qquad \qquad \mathrel{\#} \text{exchange ${\displaystyle \int}$ and $\nabla$} \\ 
+		&\qquad \mathrel{\#} \text{exchange ${\displaystyle \int}$ and $\nabla$} \\ 
 [12pt]
 &=& \nabla_{\theta} 1 
-		&\qquad \qquad \mathrel{\#} \text{$p_\theta(x)$ is a density so} 
+		&\qquad \mathrel{\#} \text{$p_\theta(x)$ is a density so} 
 		                                 {\displaystyle \int_{x} p_\theta(x) \; dx = 1} \\ 
-[12pt]
+[17pt]
 &=& 0 
-		&\qquad \qquad \mathrel{\#} \nabla c = 0 \text{ for constant $c$}
+		&\qquad \mathrel{\#} \nabla c = 0 \text{ for constant $c$}
 \end{array}
 \end{equation*}
 
@@ -180,7 +187,7 @@ p_{\theta}(X)\big] = \mathbb{E}\big[l_\theta\big]$.
 \noindent
 So the mean $\mu$ of the score function,
 $\mathbb{E}_{\theta}\big[\nabla_{\theta} \log p_{\theta}(X)\big]
-= 0$. This condition (expected value is zero) is the
+= \mathbb{E}_{\theta} \big[l_{\theta} \big ] = 0$. This condition (expected value is zero) is the
 \emph{regularity condition} required by the Cram\'er Rao
 Bound. See Section \ref{sec:crlb} for more on the Cram\'er Rao
 Bound (sometimes Cram\'er Rao Lower Bound or CRLB).

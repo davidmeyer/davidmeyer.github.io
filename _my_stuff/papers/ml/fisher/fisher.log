@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 AUG 2022 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 AUG 2022 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1424,55 +1424,55 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 120.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 203.
+LaTeX Font Warning: Command \small invalid in math mode on input line 210.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 208.
+LaTeX Font Warning: Command \small invalid in math mode on input line 215.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 212.
+LaTeX Font Warning: Command \small invalid in math mode on input line 219.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 216.
+LaTeX Font Warning: Command \small invalid in math mode on input line 223.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 230.
+LaTeX Font Warning: Command \small invalid in math mode on input line 237.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 230.
+LaTeX Font Warning: Command \small invalid in math mode on input line 237.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 242.
+LaTeX Font Warning: Command \small invalid in math mode on input line 249.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 242.
+LaTeX Font Warning: Command \small invalid in math mode on input line 249.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 254.
+LaTeX Font Warning: Command \small invalid in math mode on input line 261.
 
 
-Overfull \hbox (4.82523pt too wide) detected at line 285
+Overfull \hbox (4.82523pt too wide) detected at line 292
 []
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 297.
+LaTeX Font Warning: Command \small invalid in math mode on input line 304.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 297.
+LaTeX Font Warning: Command \small invalid in math mode on input line 304.
 
 [2] [3] [4]
 <images/pdf.png, id=102, 249.93375pt x 168.63pt>
 File: images/pdf.png Graphic file (type png)
 <use images/pdf.png>
-Package pdftex.def Info: images/pdf.png  used on input line 584.
+Package pdftex.def Info: images/pdf.png  used on input line 591.
 (pdftex.def)             Requested size: 374.8997pt x 252.94437pt.
  [5]
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 609.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 616.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 609.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 616.
 
 [6 <./images/pdf.png>] [7] (./fisher.bbl [8]
 Underfull \hbox (badness 10000) in paragraph at lines 15--21
@@ -1493,7 +1493,7 @@ Package rerunfilecheck Info: File `fisher.out' has not changed.
 Here is how much of TeX's memory you used:
  51862 strings out of 478994
  1310664 string characters out of 5858184
- 1944923 words of memory out of 5000000
+ 1945923 words of memory out of 5000000
  68526 multiletter control sequences out of 15000+600000
  419533 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1527,7 +1527,7 @@ t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on fisher.pdf (9 pages, 332837 bytes).
+Output written on fisher.pdf (9 pages, 332945 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams
