@@ -113,7 +113,7 @@ Fisher information associated with the \emph{model} is the matrix
 given by
 
 \begin{flalign*}
-\mathbb{I}_{\theta} \coloneqq \mathbb{E}_{\theta} \Big
+\mathbb{I}_{\theta} = \mathbb{E}_{\theta} \Big
 [\nabla_{\theta} \log p_{\theta}(X) \nabla_{\theta} \log
 p_{\theta}(X)^{\small{\text{T}}} \Big] = 
 \mathbb{E}_{\theta} [l_{\theta}l_{\theta}^T]
@@ -187,8 +187,9 @@ $\mathbb{E} \left [\nabla_{\theta} \log p_{\theta}(X) \right ]$:  \par}
 \noindent
 So the mean $\mu$ of the score function,
 $\mathbb{E}_{\theta}\big[\nabla_{\theta} \log p_{\theta}(X)\big]
-= \mathbb{E}_{\theta} \big[l_{\theta} \big ] = 0$. This condition (expected value is zero) is the
-\emph{regularity condition} required by the Cram\'er Rao
+= \mathbb{E}_{\theta} \big[l_{\theta} \big ] = 0$. This condition 
+(expected value of the score function is zero) is called a
+\emph{regularity condition} and is required by the Cram\'er Rao
 Bound. See Section \ref{sec:crlb} for more on the Cram\'er Rao
 Bound (sometimes Cram\'er Rao Lower Bound or CRLB).
 
@@ -203,11 +204,13 @@ Now, recall that the variance $\sigma^2 = \mathbb{E}[(X -
 using the chain rule we see that
 
 
+\bigskip
 \begin{equation*}
 \begin{array}{llll}
 \nabla_{\theta}^{2} \log p_\theta(x) 
-&=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} - \dfrac{\nabla_\theta p_\theta(x)
-\nabla_\theta p_\theta(x)^{\small{T}}}{{p_\theta(x)^2}} 
+&=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} - 
+    \dfrac{\nabla_\theta p_\theta(x) 
+    \nabla_\theta p_\theta(x)^{\small{T}}}{{p_\theta(x)^2}} 
 		&\qquad \mathrel{\#} \text{ finite differences}\\ 
 [15pt]
 &=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} -
@@ -216,19 +219,19 @@ p_\theta(x)^{\small{T}}
 		&\qquad \mathrel{\#} \nabla_{\theta} \log p_{\theta}(x) = 
 		              \dfrac{\nabla_{\theta} p_\theta(x)}{p_\theta(x)} \\
 [15pt]
-&=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} -l_\theta l_{\theta}^{\small{T}} 
+&=& \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} - 
+    l_\theta l_{\theta}^{\small{T}} 
 		&\qquad \mathrel{\#} \text{ definition of } l_\theta \\ 
-[15pt]
-&=& -\nabla_{\theta}^{2} \log p_\theta(x) + \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
-		&\qquad \mathrel{\#} l_\theta l_{\theta}^{\small{T}} = 
-		              -\nabla_{\theta}^{2} \log p_\theta(x) + 
-		              \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
+[13pt]
+&\Rightarrow& l_\theta l_{\theta}^{\small{T}} = -\nabla_{\theta}^{2} \log p_\theta(x) + 
+              \dfrac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)}
+		&\qquad \mathrel{\#} \text{solve for $l_\theta l_{\theta}^{\small{T}}$}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-From the above we can see that
+So we know that
 
 \begin{flalign}
 l_\theta l_{\theta}^{\small{T}} = -\nabla_{\theta}^{2} \log p_\theta(x) + 
@@ -239,7 +242,7 @@ l_\theta l_{\theta}^{\small{T}} = -\nabla_{\theta}^{2} \log p_\theta(x) +
 
 \bigskip
 \noindent
-So far we have the following forms of the Fisher Information
+Ok, so far we have the following forms of the Fisher Information
 $\mathbb{I}_\theta$: 
 
 \begin{flalign*}
@@ -251,8 +254,8 @@ $\mathbb{I}_\theta$:
 \bigskip
 \noindent
 It turns out that using Equation (\ref{eqn:llt}) we can see that
-$\mathbb{I}_\theta$ also turns out to equal $
--\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] $,
+$\mathbb{I}_\theta$ also turns out to equal 
+$-\mathbb{E}_{\theta} \big [\nabla_{\theta}^{2} \log p_\theta(x) \big]$,
 which we can see as follows:
 
 \begin{equation*}
@@ -265,28 +268,28 @@ which we can see as follows:
 \frac{\nabla_{\theta}^{2} p_\theta(x)}{p_\theta(x)} \Big ] 
 		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:llt})} \\
 [15pt] 
-&=& - {\displaystyle \int_{x} p_\theta(x) \nabla^2 \log p_\theta(x) \; dx + 
-					 \int_{x} \frac{p_\theta(x) \nabla^2 p_\theta(x) \; dx}{p_\theta(x)}}
-		&\qquad \qquad \mathrel{\#} \text{definition of expectation}\\ 
+&=& - {\displaystyle \int_{x} p_\theta(x) \nabla_{\theta}^{2} \log p_\theta(x) \; dx + 
+					 \int_{x} \frac{p_\theta(x) \nabla_{\theta}^{2} p_\theta(x) \; dx}{p_\theta(x)}}
+		&\qquad \qquad \mathrel{\#} \text{integration is a linear operator}\\ 
 [15pt]
 &=& - {\displaystyle \int_{x} p_\theta(x) \nabla^2 \log p_\theta(x) \; dx + 
-					 \int_{x} \nabla^2 p_\theta(x) \; dx} 
+					 \int_{x} \nabla_{\theta}^{2} p_\theta(x) \; dx} 
 		&\qquad \qquad \mathrel{\#} \text{cancel $p_\theta(x)$ in the second term} \\
 [15pt]
 &=& {\displaystyle -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] + 
-        			\nabla^2 \int_{x} p_\theta(x) \; dx}
+        			\nabla_{\theta}^{2} \int_{x} p_\theta(x) \; dx}
 		&\qquad \qquad \mathrel{\#} \text{swap ${\displaystyle \int}$ and $\nabla$} \\ 
 [15pt]
-&=& -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] + \nabla^2 1 
+&=& -\mathbb{E}_{\theta} \big [\nabla_{\theta}^{2} \log p_\theta(x) \big] + \nabla^2 1 
 		&\qquad \qquad \mathrel{\#} \text{$p_\theta(x)$ is a density so 
 		                            ${\displaystyle \int_{x} p_\theta(x) \; dx = 1}$} \\ 
 [18pt]
-&=& -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] + 0 
+&=& -\mathbb{E}_{\theta} \big [\nabla_{\theta}^{2} \log p_\theta(x) \big] + 0 
 		&\qquad \qquad \mathrel{\#} \text{$\nabla c = 0$ for constant $c$} \\
 [18pt]
-&=&  -\mathbb{E}_{\theta} \big [\nabla^2 \log p_\theta(x) \big] 
+&=&  -\mathbb{E}_{\theta} \big [\nabla_{\theta}^{2} \log p_\theta(x) \big] 
 		&\qquad \qquad \mathrel{\#} \mathbb{I}_\theta = -\mathbb{E}_{\theta} 
-		                \big [\nabla^2 \log p_\theta(x) \big] 
+		                \big [\nabla_{\theta}^{2} \log p_\theta(x) \big] 
 
 \end{array}
 \end{equation*}
