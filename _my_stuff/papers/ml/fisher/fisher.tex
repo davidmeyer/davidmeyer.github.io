@@ -148,13 +148,13 @@ information.
 \noindent
 The Fisher Information is defined to be the variance of the score 
 function $\nabla_{\theta} \log p_{\theta}(X)$. 
-Recall that the mean $\mu = \mathbb{E}[X]$ and the variance 
+First, recall that the mean $\mu = \mathbb{E}[X]$ and the variance 
 $\sigma^2 = \mathbb{E} \left [{ \big (X - \mu \big )}^2 \right ]$. 
+\par}
 
 \bigskip
 \noindent
-Now consider the mean of the score function 
-$\mathbb{E} \left [\nabla_{\theta} \log p_{\theta}(X) \right ]$:  \par}
+Next, consider the mean $\mu$ of the score function:
 
 
 \begin{equation*}
@@ -185,13 +185,12 @@ $\mathbb{E} \left [\nabla_{\theta} \log p_{\theta}(X) \right ]$:  \par}
 
 \bigskip
 \noindent
-So the mean of the score function
-$\mathbb{E}_{\theta}\big[\nabla_{\theta} \log p_{\theta}(X)\big]
-= \mathbb{E}_{\theta} \big[l_{\theta} \big ] = 0$. This condition 
-(the mean of the score function is zero) is called a
-\emph{regularity condition} and is required by the Cram\'er Rao
-Bound. See Section \ref{sec:crlb} for more on the Cram\'er Rao
-Bound (sometimes Cram\'er Rao Lower Bound or CRLB).
+So now we know that the mean of the score function,
+$\mathbb{E}_{\theta}\big[\nabla_{\theta} \log p_{\theta}(X)\big]$,
+equals zero. This condition (the mean of the score function is zero) 
+is called a\emph{regularity condition} and is required by the 
+Cram\'er Rao Bound. See Section \ref{sec:crlb} for more on the 
+Cram\'er Rao Bound (sometimes Cram\'er Rao Lower Bound or CRLB).
 
 \bigskip
 \noindent
