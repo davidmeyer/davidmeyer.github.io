@@ -3,10 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: euler.aux
 The style file: plain.bst
 Database file #1: qc.bib
-Database file #2: ml.bib
 You've used 4 entries,
             2118 wiz_defined-function locations,
-            517 strings with 4820 characters,
+            516 strings with 4818 characters,
 and the built_in function-call counts, 888 in all, are:
 = -- 88
 > -- 28

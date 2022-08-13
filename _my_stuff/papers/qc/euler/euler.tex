@@ -138,7 +138,8 @@ This makes it easy to see why $z =\mathrm{e}^{i
 \begin{array}{lllll}
 z
 &=& a + ib
-                &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of a complex number} \\
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+                \text{definition of a complex number} \\ 
 [5pt]
 &=&  r \cos \theta + i r \sin \theta
                 &\qquad \qquad \qquad \qquad \mathrel{\#}
@@ -146,14 +147,17 @@ z
                    \theta$ and $b = r \sin \theta$} \\ 
 [5pt]
 &=&  r \left [ \cos \theta +i \sin \theta \right ]
-                &\qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out  $r$} \\
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+                \text{factor out  $r$} \\ 
 [5pt]
 &=& r \mathrm{e}^{i\theta}
                 &\qquad \qquad \qquad \qquad \mathrel{\#}
-                   \text{use Euler's formula \cite{wiki:eulers_formula}: }  e^{i\theta} = \cos
-                   \theta + i \sin \theta 
+                   \text{use Euler's formula
+                   \cite{wiki:eulers_formula}: }  e^{i\theta} =
+                   \cos \theta + i \sin \theta 
 \end{array}
 \end{equation*}
+
 
 \section{Euler's Formula}
 This is all good, but where does Euler's formula, depicted in
@@ -169,31 +173,39 @@ Figure \ref{fig:eulers_formula}, come from?
 \centering
   \resizebox{0.43 \textwidth}{!} {                                                                                                                               % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
-      \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0) coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);  % make and label the axes
+      \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0)
+                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);                 % make and label the axes 
+      \fill[black] (0,0) circle(0.02);													% draw a black dot at the origin
       \draw[->] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
-      \draw (0,0) coordinate(o) circle [radius=1cm];                                                                                                  % draw unit circle
-      \coordinate (p) at (60:1);                                                                                                                                   % 60 degrees with r = 1
-      \fill (p) coordinate[label={above right: ${e^{i\theta} = \cos \theta + i \sin \theta}$}] (p) circle(0.02);                  % Euler's formula
+      \draw (0,0) coordinate(o) circle [radius=1cm];                                    % draw unit circle
+      \coordinate (p) at (60:1);                                                        % 60 degrees with r = 1
+      \fill (p) coordinate[label={above right: ${e^{i\theta} =
+                \cos \theta + i \sin \theta}$}] (p) circle(0.02);                       % Euler's formula 
       \coordinate (q) at (p|-o);
 %
 % draw the various 1s around the unit circle
 %
      \coordinate (a) at (0,1);
-     \fill (a) coordinate [label={above left: ${\scalebox {0.80} {(0,1)}} $}] (a) circle(0.02);                                          % draw coordinates (making them a bit smaller)
+     \fill (a) coordinate [label={above left: ${\scalebox {0.80}
+                          {(0,1)}} $}] (a) circle(0.02);                                % draw coordinates (making them a bit smaller) 
      \coordinate (b) at (-1,0);
-     \fill (b) coordinate [label={below left:${\scalebox {0.80} {(-1,0)}}$}] (b) circle(0.02);                                          % draw coordinates (making them a bit smaller)
+     \fill (b) coordinate [label={below left:${\scalebox {0.80}
+                          {(-1,0)}}$}] (b) circle(0.02);                                % draw coordinates (making them a bit smaller) 
      \coordinate (c) at (0,-1);
-     \fill (c) coordinate [label={below left:${\scalebox {0.80} {(0,-1)}}$}] (c) circle(0.02);                                            % draw coordinates (making them a bit smaller)
+     \fill (c) coordinate [label={below left:${\scalebox {0.80}
+                          {(0,-1)}}$}] (c) circle(0.02);                                % draw coordinates (making them a bit smaller) 
      \coordinate (d) at (1,0);
-     \fill (d) coordinate [label={below right:${\scalebox {0.80} {(1,0)}}$}] (d) circle(0.02);                                         % draw coordinates (making them a bit smaller)
+     \fill (d) coordinate [label={below right:${\scalebox {0.80}
+                          {(1,0)}}$}] (d) circle(0.02);                                 % draw coordinates (making them a bit smaller) 
 %
 % do the rest of the labeling and draw the angle
 %
-     \draw[thick,line join=round] (o) -- node[above,left]{$r$}(p);
-     \draw [dashed] (p) -- (q) node [midway, right]{${\sin \theta}$};
-     \draw [] (q) -- (o) node [midway, below] {${\cos \theta}$};
-     \fill (q) coordinate [] (q) circle(0.02);                                                                                                      % put a dot at (q)
-     \pic[draw=red,"$\theta$",angle radius=15pt,angle eccentricity=1.5,->]{angle=x--o--p};                        % draw the angle
+     \draw[thick,line join=round] (o) -- node[rotate=60,above]{$r = 1$}(p);				% label r
+     \draw [dashed] (p) -- (q) node [midway, right]{${\sin \theta}$}; 
+     \draw [] (q) -- (o) node [midway, below] {${\cos \theta}$}; 
+     \fill (q) coordinate [] (q) circle(0.02);                                          % put a dot at (q)
+     \pic[draw=red,"$\theta$",angle radius=15pt,angle
+                   eccentricity=1.5,->]{angle=x--o--p};                                 % draw the angle 
     \end{tikzpicture}
   }                                                                                                                                                               % end resizebox
 \caption{Euler's Formula, the Unit Circle and the Complex Plane}
@@ -732,7 +744,7 @@ the non-Maclaurin series derivations of Euler's formula.
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
 \bibliographystyle{plain}
-\bibliography{qc,ml}
+\bibliography{qc}
 %
 %	done
 %
