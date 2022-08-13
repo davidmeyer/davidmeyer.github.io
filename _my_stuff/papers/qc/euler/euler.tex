@@ -1,85 +1,109 @@
-
 \documentclass{article}
-
-
-% \documentclass[tikz, margin=3mm]{standalone}
-
-
+%
+%
+%	A Few Notes on Euler's Formula and Euler's Identity
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-
-
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{margin=0.75in}
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
-\usepackage{setspace}
 %
-%	TikZ et al
 %
-\usepackage{tikz}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,calc,intersections,decorations}    
-\usepackage{tkz-euclide}
-\usepackage{pgfplots}	
-\usepackage{relsize}	
-\usepackage{pgfplots}
-%						
- %
- %
-\newtheorem{thm}{Theorem}[section]
-% \newtheorem{defn}[thm]{Definition}
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
-
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
-
-
+%
+%	also a handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%	Title, author and date
+%
 \title{A Few Notes on Euler's Formula and Euler's Identity}
-\author{David Meyer \\ dmm@1-4-5.net}
-
-\date{Last update: \today}							% Activate to display a given date or no date
-
-
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
 \begin{document}
 \maketitle
-
+%
+%
+%
 \bigskip
 \section{Why does a complex number $z = \mathrm{e}^{i \theta}$?}
-Our first question regards the nature of a complex number $z$. In particular, why does a complex number $z = \mathrm{e}^{i \theta}$? 
-Well, consider Figure \ref{fig:complex_plane}:
+Our first question regards the nature of a complex number $z$. In
+particular, why does a complex number $z = \mathrm{e}^{i
+\theta}$?  Well, consider Figure \ref{fig:complex_plane}:
 
 \bigskip
 \begin{figure}[H]
@@ -107,21 +131,33 @@ Well, consider Figure \ref{fig:complex_plane}:
 
 \bigskip
 \noindent
-This makes it easy to see why $z =\mathrm{e}^{i \theta}$. Specifically
+This makes it easy to see why $z =\mathrm{e}^{i
+\theta}$. Specifically 
 
 \begin{equation*}
 \begin{array}{lllll}
 z
-&=& a + ib                                                       &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of a complex number} \\
-&=&  r \cos \theta + i r \sin \theta                    &\qquad \qquad \qquad \qquad \mathrel{\#} \text{switch to polar coordinates: $a = r \cos \theta$ and $b = r \sin \theta$} \\
-&=&  r \left [ \cos \theta +i \sin \theta \right ]   &\qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out  $r$} \\
-&=& r \mathrm{e}^{i\theta}                              &\qquad \qquad \qquad \qquad \mathrel{\#} \text{use Euler's formula \cite{wiki:eulers_formula}: }  e^{i\theta} = \cos \theta + i \sin \theta
+&=& a + ib
+                &\qquad \qquad \qquad \qquad \mathrel{\#} \text{definition of a complex number} \\
+[5pt]
+&=&  r \cos \theta + i r \sin \theta
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+                   \text{switch to polar coordinates: $a = r \cos
+                   \theta$ and $b = r \sin \theta$} \\ 
+[5pt]
+&=&  r \left [ \cos \theta +i \sin \theta \right ]
+                &\qquad \qquad \qquad \qquad \mathrel{\#} \text{factor out  $r$} \\
+[5pt]
+&=& r \mathrm{e}^{i\theta}
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+                   \text{use Euler's formula \cite{wiki:eulers_formula}: }  e^{i\theta} = \cos
+                   \theta + i \sin \theta 
 \end{array}
 \end{equation*}
 
-
 \section{Euler's Formula}
-This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eulers_formula}, come from? 
+This is all good, but where does Euler's formula, depicted in
+Figure \ref{fig:eulers_formula}, come from?  
 
 \bigskip
 \bigskip
@@ -167,8 +203,10 @@ This is all good, but where does Euler's formula, depicted in Figure \ref{fig:eu
 
 \bigskip
 \noindent
-There are several ways to derive Euler's formula. One method uses the Maclaurin series for $\cos \theta$, $\sin \theta$ and $\mathrm{e}^x$ \cite{wiki:taylor}. To see how this works, notice that the 
-Maclaurin series for $\cos \theta$ is 
+There are several ways to derive Euler's formula. One method uses
+the Maclaurin series for $\cos \theta$, $\sin \theta$ and
+$\mathrm{e}^x$ \cite{wiki:taylor}. To see how this works, notice
+that the Maclaurin series for $\cos \theta$ is
 
 \bigskip
 \begin{equation}
@@ -199,13 +237,13 @@ Finally, the Maclaurin series for $\mathrm{e}^x$ is
 \medskip
 \bigskip
 \noindent
-Now, if we set $x = i\theta$ in Equation \ref{eqn:e_to_the_x} we see that
+Now, if we set $x = i\theta$ in Equation (\ref{eqn:e_to_the_x}) we see that
 
 \begin{equation*}
 \begin{array}{lllll}
 e^{i\theta}
 &=& {\displaystyle 1 + i\theta +  \frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!} + \frac{(i\theta)^4}{4!} +  \frac{(i\theta)^5}{5!} + \frac{(i\theta)^6}{6!} +  \frac{(i\theta)^7}{7!} + \cdots }   
-                                                                                                                                                                                          &\qquad \mathrel{\#} \text{set $x = i\theta$ in Equation \ref{eqn:e_to_the_x}}  \\
+                                                                                                                                                                                          &\qquad \mathrel{\#} \text{set $x = i\theta$ in Equation (\ref{eqn:e_to_the_x})}  \\
 [12pt]
 &=& {\displaystyle 1 +  i\theta -  \frac{\theta^2}{2!} -  \frac{i \theta^3}{3!} + \frac{\theta^4}{4!}  + \frac{i \theta^5}{5!} -  \frac{\theta^6}{6!} - \frac{i \theta^7}{7!}  + \cdots}   
                                                                                                                                                                                           &\qquad \mathrel{\#} i^2 = -1, \;  i^3 = -i, \; i^4 = 1, \;  i^5 = i, \; \hdots \\
@@ -216,7 +254,7 @@ e^{i\theta}
 &=& {\displaystyle  \left [ 1 -  \frac{\theta^2}{2!}  + \frac{\theta^4}{4!} - \frac{\theta^6}{6!} + \cdots  \right ]+ i \left [ \theta  - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \frac{\theta^7}{7!} + \cdots \right ]}                 
                                                                                                                                                                                           &\qquad \mathrel{\#} \text{factor out $i$ in second term} \\
 [12pt]
-&=& {\displaystyle \cos \theta + i \sin \theta}                                                                                                                     &\qquad \mathrel{\#} \text{Equations \ref{eqn:cos} and \ref{eqn:sin}}
+&=& {\displaystyle \cos \theta + i \sin \theta}                                                                                                                     &\qquad \mathrel{\#} \text{Equations (\ref{eqn:cos}) and (\ref{eqn:sin})}
 \end{array}
 \end{equation*}
 
@@ -237,9 +275,14 @@ that is, Euler's formula.
 
 \subsection{Deriving Euler's Formula Using Polar Coordinates}
 \label{subsec:without_maclaurin0}
-There is also a clever way to derive Euler's formula using polar coordinates. This approach seems to require the fewest assumptions of the non-Maclaurin 
-series derivations described in the this and the following sections. To see how this works,  first notice that all non-zero complex numbers can be expressed 
-in polar coordinates in a unique way. In particular, any number of the form $e^{ix}$ (with $x \in \mathbb{R}$) which is non-zero can be expressed as
+There is also a clever way to derive Euler's formula using polar
+coordinates. This approach seems to require the fewest
+assumptions of the non-Maclaurin series derivations described in
+the this and the following sections. To see how this works, first
+notice that all non-zero complex numbers can be expressed in
+polar coordinates in a unique way. In particular, any number of
+the form $e^{ix}$ (with $x \in \mathbb{R}$) which is non-zero can
+be expressed as
 
 \bigskip
 \begin{equation}
@@ -249,26 +292,34 @@ e^{ix} = r \left ( \cos \theta + i \sin \theta \right )
 
 \bigskip
 \noindent
-This is shown in Figure \ref{fig:complex_plane}. In this case $\theta$ is the principal angle from the positive real axis (with say, $0 \leq \theta \leq 2 \pi$ )
-and $r$  is its radius ($r > 0$). One of the features of this proof is that it makes no assumption about the values of $r$ and $\theta$, except for the fact 
-that they are functions of $x$  (we can think of $r$ as shorthand for $r(x)$; likewise $\theta$ is shorthand for $\theta(x)$). An interesting problem
-that has to be solved in this proof is what the relationships between $r, x \text{ and } \theta$ are. These relationships (and the values of $r$ and
-$\theta$) will be determined in the course of the proof. 
+This is shown in Figure \ref{fig:complex_plane}. In this case
+$\theta$ is the principal angle from the positive real axis (with
+say, $0 \leq \theta \leq 2 \pi$) and $r$ is its radius ($r >
+0$). One of the features of this proof is that it makes no
+assumption about the values of $r$ and $\theta$, except for the
+fact that they are functions of $x$ (we can think of $r$ as
+shorthand for $r(x)$; likewise $\theta$ is shorthand for
+$\theta(x)$). An interesting problem that has to be solved in
+this proof is what the relationships between $r, x \text{ and }
+\theta$ are. These relationships (and the values of $r$ and
+$\theta$) will be determined in the course of the proof.
 
 \bigskip
 \noindent
-So to start, what do we know? Well, we know that when $x = 0$ the left-hand side of Equation \ref{eqn:polar} equals $1$, which implies that $r$ and $\theta$, being functions
-of $x$,  must satisfy the initial conditions that $r(0) = 1$ and  $\theta(0) = 0$ (since $1 
-= 1 \cdot \left  [ \cos \theta(0) + i \sin \theta(0) \right ] 
-= 1 \cdot \left [ \cos 0 + i \sin 0 \right ]
-= 1 \cdot \left [ 1 + i\cdot 0 \right] 
-= 1 \cdot \left [1 + 0 \right ] 
-= 1$).
+So to start, what do we know? Well, we know that when $x = 0$ the
+left-hand side of Equation (\ref{eqn:polar}) equals $1$, which
+implies that $r$ and $\theta$, being functions of $x$, must
+satisfy the initial conditions that $r(0) = 1$ and $\theta(0) =
+0$ (since $1 = 1 \cdot \left [ \cos \theta(0) + i \sin \theta(0)
+\right ] = 1 \cdot \left [ \cos 0 + i \sin 0 \right ] = 1 \cdot
+\left [ 1 + i\cdot 0 \right] = 1 \cdot \left [1 + 0 \right ] =
+1$).
 
 
 \bigskip
 \noindent
-Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to $x$ we see that
+Now, if we differentiate both sides of Equation (\ref{eqn:polar})
+with respect to $x$ we see that 
 
 
 \begin{equation*}
@@ -294,11 +345,16 @@ Now, if we differentiate both sides of Equation \ref{eqn:polar} with respect to 
 
 \bigskip
 \noindent
-Note that we are looking for an expression that is unique in terms of $r$ and $\theta$ so we would like to get rid the $e^{ix}$ term. One way to do this is to substitute 
-$r (\cos \theta + i \sin \theta)$ for $e^{ix}$ (Equation \ref{eqn:polar}) on the left hand side of the last equation above, which gives us
+Note that we are looking for an expression that is unique in
+terms of $r$ and $\theta$ so we would like to get rid the
+$e^{ix}$ term. One way to do this is to substitute $r (\cos
+\theta + i \sin \theta)$ for $e^{ix}$ (Equation (\ref{eqn:polar}))
+on the left hand side of the last equation above, which gives us
 
 \begin{equation*}
-i r (\cos \theta + i \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d \theta}{dx}
+i r (\cos \theta + i \sin \theta) = (\cos \theta + i \sin \theta)
+\dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d
+\theta}{dx} 
 \end{equation*}
 
 \bigskip
@@ -306,7 +362,9 @@ i r (\cos \theta + i \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx}
 Multiplying through by $i$ on the left hand side gives
 
 \begin{equation*}
-r (i \cos \theta - \sin \theta) = (\cos \theta + i \sin \theta) \dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d \theta}{dx}
+r (i \cos \theta - \sin \theta) = (\cos \theta + i \sin \theta)
+\dfrac{dr}{dx} + r (-\sin \theta + i \cos \theta) \dfrac{d
+\theta}{dx} 
 \end{equation*}
 
 \bigskip
@@ -315,13 +373,16 @@ and multiplying through on both sides side gives
 
 
 \begin{equation}
-ir \cos \theta -  r \sin \theta = (\cos \theta) \dfrac{dr}{dx} + (i \sin \theta) \dfrac{dr}{dx} + (-r \sin \theta) \dfrac{d \theta}{dx}  + (i r \cos \theta) \dfrac{d \theta}{dx}
+ir \cos \theta -  r \sin \theta = (\cos \theta) \dfrac{dr}{dx} + 
+(i \sin \theta) \dfrac{dr}{dx} + (-r \sin \theta) \dfrac{d \theta}{dx}  + 
+(i r \cos \theta) \dfrac{d \theta}{dx}
 \label{eqn:eqn0}
 \end{equation}
 
 \bigskip
 \noindent
-Next, equating the imaginary and real parts on both sides of Equation \ref{eqn:eqn0} we see that
+Next, equating the imaginary and real parts on both sides of
+Equation (\ref{eqn:eqn0}) we see that 
 
 \bigskip
 \begin{equation*}
@@ -338,8 +399,10 @@ and
 
 \bigskip
 \noindent
-Now we have is a system of two equations in two unknowns: $\dfrac{dr}{dx}$ and $\dfrac{d \theta}{dx}$. 
-To solve this system, first assign $\alpha = \dfrac{dr}{dx}$ and $\beta = \dfrac{d \theta}{dx}$ so that
+Now we have is a system of two equations in two unknowns:
+$\dfrac{dr}{dx}$ and $\dfrac{d \theta}{dx}$.  To solve this
+system, first assign $\alpha = \dfrac{dr}{dx}$ and $\beta =
+\dfrac{d \theta}{dx}$ so that
 
 \bigskip
 \begin{equation}
@@ -358,7 +421,8 @@ and
 
 \bigskip
 \noindent
-Next,  by multiplying Equation \ref{eqn:eqn1} by $\cos \theta$ and Equation \ref{eqn:eqn2} by $\sin \theta$ we get
+Next, by multiplying Equation (\ref{eqn:eqn1}) by $\cos \theta$ and
+Equation (\ref{eqn:eqn2}) by $\sin \theta$ we get
 
 \bigskip
 \begin{equation}
@@ -378,8 +442,9 @@ and
 
 \bigskip
 \noindent
-We can eliminate $\alpha$ by subtracting Equation \ref{eqn:eqn4} from Equation \ref{eqn:eqn3} to get
-
+We can eliminate $\alpha$ by subtracting Equation (\ref{eqn:eqn4})
+from Equation (\ref{eqn:eqn3}) to get 
+ 
 \medskip
 \begin{equation}
 r (\cos^2 \theta + \sin^2 \theta)  = r (\cos^2 \theta + \sin^2 \theta)\beta
@@ -388,7 +453,8 @@ r (\cos^2 \theta + \sin^2 \theta)  = r (\cos^2 \theta + \sin^2 \theta)\beta
 
 \bigskip
 \noindent
-and since $\cos^2 \theta + \sin^2 \theta = 1$ Equation \ref{eqn:eqn5} simplifies to 
+and since $\cos^2 \theta + \sin^2 \theta = 1$ Equation
+(\ref{eqn:eqn5}) simplifies to  
 
 \medskip
 \begin{equation}
@@ -398,10 +464,13 @@ r  = r \beta
 
 \bigskip
 \noindent
-Since $r > 0$ for all $x$ Equation \ref{eqn:eqn6} tells us that $\beta$, which we set equal to $\dfrac{d \theta}{dx}$,  must equal 1. 
-If we substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} and \ref{eqn:eqn2} we see that
+Since $r > 0$ for all $x$ Equation (\ref{eqn:eqn6}) tells us that
+$\beta$, which we set equal to $\dfrac{d \theta}{dx}$, must equal
+1.  If we substitute $\dfrac{d \theta}{dx} = 1$ back into
+Equations (\ref{eqn:eqn1}) and (\ref{eqn:eqn2}) we see that
 
 
+\medskip
 \begin{equation*}
 \begin{array}{lllll}
 & 0 = (\sin \theta) \alpha \\
@@ -412,16 +481,23 @@ If we substitute $\dfrac{d \theta}{dx} = 1$  back into Equations \ref{eqn:eqn1} 
 \bigskip
 {\setstretch{1.5}
 \noindent
-which implies that $\alpha \sin \theta  =  \alpha \cos \theta$ which in turn implies that $\alpha = 0$. But why does $\alpha = 0$? One way
-to think about this is to consider that  $\alpha \sin \theta  =  \alpha \cos \theta \Rightarrow  \dfrac{\sin \theta}{\cos \theta} = \tan \theta = 1$. 
-This occurs when $\theta = \dfrac{\pi}{4} + n \pi$ for $n \in \mathbb{Z}$. Since neither $\sin \theta$ nor $\cos \theta$ 
-equals zero for these values of $\theta$ we can conclude that $\alpha$ must equal zero. \par}
+which implies that $\alpha \sin \theta = \alpha \cos \theta$
+which in turn implies that $\alpha = 0$. But why does $\alpha =
+0$? One way to think about this is to consider that $\alpha \sin
+\theta = \alpha \cos \theta \Rightarrow \dfrac{\sin \theta}{\cos
+\theta} = \tan \theta = 1$.  This occurs when $\theta =
+\dfrac{\pi}{4} + n \pi$ for $n \in \mathbb{Z}$. Since neither
+$\sin \theta$ nor $\cos \theta$ equals zero for these values of
+$\theta$ we can conclude that $\alpha$ must equal zero. \par}
 
 
 \bigskip
 \noindent
-Now, recall that $\alpha = \dfrac{dr}{dx}$ so now we know that $\dfrac{dr}{dx} = 0$ and $\dfrac{dr}{dx} = 0 \Rightarrow r(x) = a$ for some constant $a$. 
-Similarly, since $\dfrac{d\theta}{dx} = 1$ we know that $d \theta = dx$ and integrating both sides we see that 
+Now, recall that $\alpha = \dfrac{dr}{dx}$ so now we know that
+$\dfrac{dr}{dx} = 0$ and $\dfrac{dr}{dx} = 0 \Rightarrow r(x) =
+a$ for some constant $a$.  Similarly, since $\dfrac{d\theta}{dx}
+= 1$ we know that $d \theta = dx$ and integrating both sides we
+see that
 
 \bigskip
 \begin{equation}
@@ -435,31 +511,36 @@ for some constant $C$.
 
 \bigskip
 \noindent
-Going back to the very beginning where we saw that $r(0) = 1$ and since we know that $r(x) = a$ for all $x$, $r$ must
-equal 1 for all $x$. Similarly because $\theta(0) = 0$ we see that $\theta(0) = 0 + C$ (Equation \ref{eqn:int}), so it must 
-be that $C$ equals zero. Said another way,  now we know that $\theta(x) = x$ or more concisely, $\theta = x$.
+Going back to the very beginning where we saw that $r(0) = 1$ and
+since we know that $r(x) = a$ for all $x$, $r$ must equal 1 for
+all $x$. Similarly because $\theta(0) = 0$ we see that $\theta(0)
+= 0 + C$ (Equation (\ref{eqn:int})), so it must be that $C$ equals
+zero. Said another way, now we know that $\theta(x) = x$ or more
+concisely, $\theta = x$.
 
 \bigskip
 \noindent
-So $r = 1$ and $\theta = x$. Substituting these values back into Equation \ref{eqn:polar} we see that 
+So $r = 1$ and $\theta = x$. Substituting these values back into
+Equation (\ref{eqn:polar}) we see that  
 
 \bigskip
 \begin{equation*}
 \begin{array}{lllll}
 e^{ix} 
-&=& r \cdot \left [ \cos \theta + i \sin \theta \right ]    &\qquad  \mathrel{\#} \text{Equation \ref{eqn:polar}} \\
+&=& r \cdot \left [ \cos \theta + i \sin \theta \right ]        &\qquad  \mathrel{\#} \text{Equation (\ref{eqn:polar})} \\
 [8pt]
-&=& 1 \cdot \left [ \cos x + i \sin x \right ]                 &\qquad  \mathrel{\#} \text{$r = 1$ and $\theta = x$} \\
+&=& 1 \cdot \left [ \cos x + i \sin x \right ]                  &\qquad  \mathrel{\#} \text{$r = 1$ and $\theta = x$} \\
 [8pt]
-&=& \cos x + i \sin x                                                &\qquad  \mathrel{\#} \text{Euler's formula}
+&=& \cos x + i \sin x                                           &\qquad  \mathrel{\#} \text{Euler's formula}
 \end{array}
 \end{equation*}
 
 
-\bigskip
+\medskip
 \subsection{Another Approach To Euler's Formula Without Maclaurin Series}
 \label{subsec:without_maclaurin1}
-A different way to derive Euler's formula without using Maclaurin series starts by defining 
+A different way to derive Euler's formula without using Maclaurin
+series starts by defining  
 
 \bigskip
 \begin{equation*}
@@ -498,7 +579,9 @@ for all real $\theta$. Then
 
 \bigskip
 \noindent
-Since $f^{\prime}(\theta) = 0$ we know that $f(\theta)$ is a constant (that is, $f(x) = a$ for some constant $a$). We also know that 
+Since $f^{\prime}(\theta) = 0$ we know that $f(\theta)$ is a
+constant (that is, $f(x) = a$ for some constant $a$). We also
+know that  
 
 \medskip
 \begin{equation*}
@@ -508,85 +591,120 @@ f(0) = e^{-i0} \cdot \big [\cos 0 + i \sin 0 \big ]  = 1 \cdot \big [1 + 0 \big 
 \medskip
 \bigskip
 \noindent
-Now, since $f(\theta)$ is a constant and $f(0) = 1$ we know that $f(\theta) = 1$ for all real $\theta$.  Dividing both sides by
+Now, since $f(\theta)$ is a constant and $f(0) = 1$ we know that
+$f(\theta) = 1$ for all real $\theta$.  Dividing both sides by
 $e^{-i\theta}$ yields
 
 \bigskip
 \begin{equation*}
-\dfrac{f(\theta)}{e^{-i\theta}} = \dfrac{1}{e^{-i\theta}} = \dfrac{e^{-i\theta} \cdot (\cos \theta + i \sin \theta)}{e^{-i\theta}}
+\dfrac{f(\theta)}{e^{-i\theta}} = \dfrac{1}{e^{-i\theta}} =
+\dfrac{e^{-i\theta} \cdot (\cos \theta + i \sin
+\theta)}{e^{-i\theta}} 
 \end{equation*}
 
 \medskip
 \bigskip
 \noindent
-and we wind up with Euler's formula: $e^{i\theta }=\cos \theta +i\sin \theta$
+and we wind up with Euler's formula: $e^{i\theta }=\cos \theta
++i\sin \theta$ 
 
 
 \bigskip
 \subsection{One More Approach To Euler's Formula}
 \label{subsec:without_maclaurin2}
-Finally, while the approach in this section is similar to the approach proposed in Section \ref{subsec:without_maclaurin1}, some people prefer this approach 
-as it seems to require fewer assumptions (as I mentioned above, the approach taken in Section \ref{subsec:without_maclaurin0} seems to require the 
-fewest assumptions). In any event, the proof goes as follows:
+Finally, while the approach in this section is similar to the
+approach proposed in Section \ref{subsec:without_maclaurin1},
+some people prefer this approach as it seems to require fewer
+assumptions (as I mentioned above, the approach taken in Section
+\ref{subsec:without_maclaurin0} seems to require the fewest
+assumptions). In any event, the proof goes as follows:
 
 
 \begin{equation*}
 \begin{array}{lllll}
- z
- &=& \cos{\theta}+i\sin{\theta}                                                                                  &\qquad \mathrel{\#} \text{definition of a complex number (Figure \ref{fig:complex_plane})} \\
- [12pt]
- &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \left [  \cos{\theta}+i\sin{\theta}  \right ]                         &\qquad \mathrel{\#} \text{take the derivative of both sides} \\
- [14pt]
- &\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \cos{\theta} + \dfrac{d}{d \theta} i\sin{\theta}               &\qquad \mathrel{\#} \text{derivative is a linear operator} \\
- [14pt]
- &\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}                              &\qquad \mathrel{\#} \text{$ \dfrac{d}{d \theta} \cos{\theta} = - \sin \theta$ and $\dfrac{d}{d \theta} i\sin{\theta} =  i\cos{\theta}$} \\
- [14pt]
-&\Rightarrow& \dfrac{dz}{d\theta} = iz                                                                     &\qquad \mathrel{\#}  i z  = i \left [ \cos{\theta}+i\sin{\theta}  \right ] =  -\sin{\theta} + i\cos{\theta} \\
+z
+&=& \cos{\theta}+i\sin{\theta}
+                &\qquad \mathrel{\#} \text{definition of a
+                complex number (Figure \ref{fig:complex_plane})}
+                \\ 
+[12pt]
+&\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \left [ \cos{\theta}+i\sin{\theta}  \right ]
+                &\qquad \mathrel{\#} \text{take the derivative of
+                both sides} \\ 
+[14pt]
+&\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta}
+\cos{\theta} + \dfrac{d}{d \theta} i\sin{\theta}
+                &\qquad \mathrel{\#} \text{derivative is a linear
+                operator} \\ 
+[14pt]
+&\Rightarrow& \dfrac{dz}{d\theta} =- \sin{\theta} + i\cos{\theta}
+                &\qquad \mathrel{\#} \text{$ \dfrac{d}{d \theta}
+                \cos{\theta} = - \sin \theta$ and $\dfrac{d}{d
+                \theta} i\sin{\theta} =  i\cos{\theta}$} \\ 
+[14pt]
+&\Rightarrow& \dfrac{dz}{d\theta} = iz
+                &\qquad \mathrel{\#}  i z  = i \left [
+                \cos{\theta}+i\sin{\theta}  \right ] =
+                -\sin{\theta} + i\cos{\theta} \\
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So now we know that $\dfrac{dz}{d\theta} = iz$, which implies that  $\dfrac{dz}{z} = i \, d\theta$.  This means that
+So now we know that $\dfrac{dz}{d\theta} = iz$, which implies
+that  $\dfrac{dz}{z} = i \, d\theta$. This means that 
 
-
+\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \dfrac{dz}{z} 
-&=& {\displaystyle  i \, d\theta}                                                                   &\qquad \mathrel{\#} \text{result from above} \\
+&=& {\displaystyle  i \, d\theta}
+                &\qquad \mathrel{\#} \text{result from above} \\
 [12pt]
-&\Rightarrow& {\displaystyle \int \frac{dz}{z} =  \int i \, d\theta}                  &\qquad \mathrel{\#} \text{integrate both sides} \\
+&\Rightarrow& {\displaystyle \int \frac{dz}{z} =  \int i \,
+d\theta}
+                &\qquad \mathrel{\#} \text{integrate both sides} \\
 [12pt]
-&\Rightarrow&  {\displaystyle \ln{|z|} = i \theta + C}                                    &\qquad \mathrel{\#} \text{${\displaystyle \int \frac{dz}{z} =  \ln{|z|}}$ and ${\displaystyle \int i \: d\theta = {i \, \theta +C}}$} \\
+&\Rightarrow&  {\displaystyle \ln{|z|} = i \theta + C}
+                &\qquad \mathrel{\#} \text{${\displaystyle \int
+                \frac{dz}{z} =  \ln{|z|}}$ and ${\displaystyle
+                \int i \: d\theta = {i \, \theta +C}}$} \\ 
 [12pt]
- &\Rightarrow&  {\displaystyle z = e^{i\theta +C}}                                       &\qquad \mathrel{\#} \text{exponentiate both sides: $e^{\ln |z|} = z$ and $e^{i \theta +C} = e^{i \theta +C}$} \\
+&\Rightarrow&  {\displaystyle z = e^{i\theta +C}}
+                &\qquad \mathrel{\#} \text{exponentiate both
+                sides: $e^{\ln |z|} = z$ and $e^{i \theta +C} =
+                e^{i \theta +C}$} \\ 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Now, we know $z(0) = \cos 0 + i \sin 0 = 1 + i \cdot 0 =1$. We also know that $z(0) = e^{0i +C} = e^{C} = 1$. Since $e^{C} = 1$ we know that $C$
-must equal $0$. Putting all of this together we see that  $z = e^{i\theta}=\cos{\theta}+i\sin{\theta}$, that is, Euler's formula.
+Now, we know $z(0) = \cos 0 + i \sin 0 = 1 + i \cdot 0 =1$. We
+also know that $z(0) = e^{0i +C} = e^{C} = 1$. Since $e^{C} = 1$
+we know that $C$ must equal $0$. Putting all of this together we
+see that $z = e^{i\theta}=\cos{\theta}+i\sin{\theta}$, that is,
+Euler's formula.
 
 
 \bigskip
 \section{Euler's Identity}
-Something interesting happens when we set $\theta = \pi$ into Euler's formula (Equation \ref{eqn:eulers_formula}). We get 
+Something interesting happens when we set $\theta = \pi$ into
+Euler's formula (Equation (\ref{eqn:eulers_formula})). We get
 Euler's identity \cite{wiki:eulers_identity}:
 
 
 \begin{equation*}
 \begin{array}{lllll}
 e^{i\theta}
-&=& \cos \theta + i \sin \theta                           &\qquad \qquad \qquad \quad  \mathrel{\#} \text{Euler's formula}                               \\
+&=& \cos \theta + i \sin \theta                         &\qquad \qquad \qquad \quad  \mathrel{\#} \text{Euler's formula} \\
 [5pt]
-&\Rightarrow&  e^{i\pi} = \cos \pi + i \sin \pi     &\qquad \qquad \qquad \quad  \mathrel{\#} \text{set $\theta = \pi$}                            \\
+&\Rightarrow&  e^{i\pi} = \cos \pi + i \sin \pi         &\qquad \qquad \qquad \quad  \mathrel{\#} \text{set $\theta = \pi$} \\
 [5pt]
-&\Rightarrow&  e^{i\pi} = -1 + i \cdot 0             &\qquad \qquad \qquad \quad  \mathrel{\#} \text{$\cos \pi = -1$ and $\sin \pi = 0$}   \\
+&\Rightarrow&  e^{i\pi} = -1 + i \cdot 0                &\qquad \qquad \qquad \quad  \mathrel{\#} \text{$\cos \pi = -1$ and $\sin \pi = 0$} \\
 [5pt]
-&\Rightarrow&  e^{i\pi} = -1 + 0                        &\qquad \qquad \qquad \quad  \mathrel{\#} i \cdot 0 = 0                                            \\
+&\Rightarrow&  e^{i\pi} = -1 + 0                        &\qquad \qquad \qquad \quad  \mathrel{\#} i \cdot 0 = 0 \\
 [5pt]
-&\Rightarrow&  e^{i\pi} = -1                              &\qquad \qquad \qquad \quad  \mathrel{\#} \text{simplify}                                          \\
+&\Rightarrow&  e^{i\pi} = -1                            &\qquad \qquad \qquad \quad  \mathrel{\#} \text{simplify} \\
 [5pt]
 &\Rightarrow&  e^{i\pi} +1 = 0                          &\qquad \qquad \qquad \quad  \mathrel{\#} \text{Euler's identity} 
 \end{array}
@@ -594,15 +712,30 @@ e^{i\theta}
 
 \bigskip
 \section{Conclusions}
-
-
+%
+%
+%
 \bigskip
 \section{Acknowledgements}
-Thanks to Dave Neary for suggesting a non-Maclaurin series derivation of Euler's formula and encouraging my study of the non-Maclaurin
-series derivations of Euler's formula.
-
-
+Thanks to Dave Neary for suggesting a non-Maclaurin series 
+derivation of Euler's formula and encouraging my study of 
+the non-Maclaurin series derivations of Euler's formula.
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
+\bibliography{qc,ml}
+%
+%	done
+%
 \end{document} 
+
 
