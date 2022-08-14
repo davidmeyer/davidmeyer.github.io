@@ -108,23 +108,27 @@ particular, why does a complex number $z = \mathrm{e}^{i
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.40 \textwidth}{!} {                                                                                                                                             % resize figure if you want
+  \resizebox{0.40 \textwidth}{!} {                              		% resize figure if you want
     \begin{tikzpicture}  [every edge quotes/.append style = {anchor=south, sloped}]
-       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);                                      % draw axes, save real part (x) to calculate angle below
+%
+%	draw axes, save real part % (x) to calculate angle below 
+%
+       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);                                  
        \draw[thick, ->] (0,-0.35) -- (0,5.5) 
-            node[xshift=-0.2cm,left] {$\mathbb{I}$}
-            node[draw, very thin,below right=5mm] {$z = r [\cos \theta + i \sin \theta] = r \mathrm{e}^{i\theta} $};
-       \coordinate[label=below left:$ O $] (O);                                                                                                                            % save origin (O) to calculate \theta below                                                
-       \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);                                                                          % draw phasor and a dot (circle(0.05))
-       \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};                                                                                    % draw dashed lines to a and b
-       \draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};                                                                     % use [draw=none] to get a label at midway
-       \draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};                                                                  % use [draw=none] to get a label at midway
-       \fill (0,3) circle(0.05);                                                                                                                                                         % draw a dot on the y axis at b (could do this by declaring coordinates)
-       \fill (3.5,0) circle(0.05);                                                                                                                                                      % draw a dot on the y axis at a
+                node[xshift=-0.2cm,left] {$\mathbb{I}$}
+                node[draw, very thin,below right=5mm] {$z = r [\cos \theta + i \sin \theta] = r \mathrm{e}^{i\theta} $};
+       \coordinate[label=below left:$ O $] (O);                 		% save origin (O) to calculate \theta below
+       \fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);    % draw phasor and a dot (circle(0.05))
+       \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};               % draw dashed lines to a and b
+       \draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};      % use [draw=none] to put label midway
+       \draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};  % use [draw=none] to put label midway
+       \fill (0,3) circle(0.05);                                		% draw a dot on the y axis at b 
+       \fill (3.5,0) circle(0.05);                              		% draw a dot on the y axis at a
        \draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);
-       \pic [draw=red, line width=0.60pt, -> , angle radius=11mm, angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};         % finally draw the angle, making the arc a bit thicker
-     \end{tikzpicture}
-  }                                                                                                                                                                                             % end resizebox                                                                                           
+       \pic [draw=red, line width=0.60pt, -> , angle radius=11mm,
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};	% finally draw the angle, making the arc a bit thicker 
+     \end{tikzpicture}                                                       		
+  }																		% end resizebox
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
@@ -168,43 +172,43 @@ Figure \ref{fig:eulers_formula}, come from?
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.55 \textwidth}{!} {                                                                                                                               % resize figure if you want
+  \resizebox{0.535 \textwidth}{!} {													% resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[->] (-1.5,0) -- node[below left]{$O$} (1.5,0)
-                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);                 % make and label the axes 
-      \fill[black] (0,0) circle(0.02);													% draw a black dot at the origin
+                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);				% make and label the axes 
+      \fill[black] (0,0) circle(0.02);												% draw a black dot at the origin
       \draw[->] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
-      \draw (0,0) coordinate(o) circle [radius=1cm];                                    % draw unit circle
-      \coordinate (p) at (60:1);                                                        % 60 degrees with r = 1
+      \draw (0,0) coordinate(o) circle [radius=1cm];								% draw unit circle
+      \coordinate (p) at (60:1);													% 60 degrees with r = 1
       \fill (p) coordinate[label={above right: ${e^{i\theta} =
-                \cos \theta + i \sin \theta}$}] (p) circle(0.02);                       % Euler's formula 
+                \cos \theta + i \sin \theta}$}] (p) circle(0.02);					% Euler's formula 
       \coordinate (q) at (p|-o);
 %
 % draw the various 1s around the unit circle
 %
      \coordinate (a) at (0,1);
      \fill (a) coordinate [label={above left: ${\scalebox {0.80}
-                          {(0,1)}} $}] (a) circle(0.02);                                % draw coordinates (making them a bit smaller) 
+                          {(0,1)}} $}] (a) circle(0.02);							% draw coordinates (making them a bit smaller) 
      \coordinate (b) at (-1,0);
      \fill (b) coordinate [label={below left:${\scalebox {0.80}
-                          {(-1,0)}}$}] (b) circle(0.02);                                % draw coordinates (making them a bit smaller) 
+                          {(-1,0)}}$}] (b) circle(0.02);							% draw coordinates
      \coordinate (c) at (0,-1);
      \fill (c) coordinate [label={below left:${\scalebox {0.80}
-                          {(0,-1)}}$}] (c) circle(0.02);                                % draw coordinates (making them a bit smaller) 
+                          {(0,-1)}}$}] (c) circle(0.02);							% draw coordinates
      \coordinate (d) at (1,0);
      \fill (d) coordinate [label={below right:${\scalebox {0.80}
-                          {(1,0)}}$}] (d) circle(0.02);                                 % draw coordinates (making them a bit smaller) 
+                          {(1,0)}}$}] (d) circle(0.02);								% draw coordinates
 %
 % do the rest of the labeling and draw the angle
 %
-     \draw[thick,line join=round] (o) -- node[rotate=60,above]{$r = 1$}(p);				% label r
+     \draw[thick,line join=round] (o) -- node[rotate=60,above]{$r = 1$}(p);			% label r
      \draw [dashed] (p) -- (q) node [midway, right]{${\sin \theta}$}; 
      \draw [] (q) -- (o) node [midway, below] {${\cos \theta}$}; 
-     \fill (q) coordinate [] (q) circle(0.02);                                          % put a dot at (q)
+     \fill (q) coordinate [] (q) circle(0.02);										% put a dot at (q)
      \pic[draw=red,"$\theta$",angle radius=15pt,angle
-                   eccentricity=1.5,->]{angle=x--o--p};                                 % draw the angle 
+                   eccentricity=1.5,->]{angle=x--o--p};								% draw the angle 
     \end{tikzpicture}
-  }                                                                                                                                                               % end resizebox
+  }																					% end resizebox
 \caption{Euler's Formula, the Unit Circle and the Complex Plane}
 \label{fig:eulers_formula}
 \end{figure}
@@ -251,19 +255,32 @@ Now, if we set $x = i\theta$ in Equation (\ref{eqn:e_to_the_x}) we see that
 \begin{equation*}
 \begin{array}{lllll}
 e^{i\theta}
-&=& {\displaystyle 1 + i\theta +  \frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!} + \frac{(i\theta)^4}{4!} +  \frac{(i\theta)^5}{5!} + \frac{(i\theta)^6}{6!} +  \frac{(i\theta)^7}{7!} + \cdots }   
-                                                                                                                                                                                          &\qquad \mathrel{\#} \text{set $x = i\theta$ in Equation (\ref{eqn:e_to_the_x})}  \\
+&=& {\displaystyle 1 + i\theta +  \frac{(i\theta)^2}{2!} +
+                   \frac{(i\theta)^3}{3!} + \frac{(i\theta)^4}{4!} +
+                   \frac{(i\theta)^5}{5!} + \frac{(i\theta)^6}{6!} +
+                   \frac{(i\theta)^7}{7!} + \cdots}    
+        &\qquad \mathrel{\#} \text{set $x = i\theta$ in Equation (\ref{eqn:e_to_the_x})}  \\
+[13pt]
+&=& {\displaystyle 1 +  i\theta -  \frac{\theta^2}{2!} -  \frac{i
+                   \theta^3}{3!} + \frac{\theta^4}{4!}  + \frac{i \theta^5}{5!} -
+                   \frac{\theta^6}{6!} - \frac{i \theta^7}{7!}  + \cdots}
+        &\qquad \mathrel{\#} i^2 = -1, \;  i^3 = -i, \; i^4 = 1, \;  i^5 = i, \; \hdots \\
 [12pt]
-&=& {\displaystyle 1 +  i\theta -  \frac{\theta^2}{2!} -  \frac{i \theta^3}{3!} + \frac{\theta^4}{4!}  + \frac{i \theta^5}{5!} -  \frac{\theta^6}{6!} - \frac{i \theta^7}{7!}  + \cdots}   
-                                                                                                                                                                                          &\qquad \mathrel{\#} i^2 = -1, \;  i^3 = -i, \; i^4 = 1, \;  i^5 = i, \; \hdots \\
+&=& {\displaystyle \left [ 1 -  \frac{\theta^2}{2!}  +
+                   \frac{\theta^4}{4!} - \frac{\theta^6}{6!} + \cdots  \right ]+
+                   \left [ i\theta  - \frac{i \theta^3}{3!} + \frac{i \theta^5}{5!}
+                   - \frac{i \theta^7}{7!} + \cdots \right ]}                  
+        &\qquad \mathrel{\#} \text{group terms} \\
 [12pt]
-&=& {\displaystyle \left [ 1 -  \frac{\theta^2}{2!}  + \frac{\theta^4}{4!} - \frac{\theta^6}{6!} + \cdots  \right ]+ \left [ i\theta  - \frac{i \theta^3}{3!} + \frac{i \theta^5}{5!} - \frac{i \theta^7}{7!} + \cdots \right ]}                 
-                                                                                                                                                                                          &\qquad \mathrel{\#} \text{group terms} \\
- [12pt]
-&=& {\displaystyle  \left [ 1 -  \frac{\theta^2}{2!}  + \frac{\theta^4}{4!} - \frac{\theta^6}{6!} + \cdots  \right ]+ i \left [ \theta  - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \frac{\theta^7}{7!} + \cdots \right ]}                 
-                                                                                                                                                                                          &\qquad \mathrel{\#} \text{factor out $i$ in second term} \\
-[12pt]
-&=& {\displaystyle \cos \theta + i \sin \theta}                                                                                                                     &\qquad \mathrel{\#} \text{Equations (\ref{eqn:cos}) and (\ref{eqn:sin})}
+&=& {\displaystyle  \left [ 1 -  \frac{\theta^2}{2!}  +
+                    \frac{\theta^4}{4!} - \frac{\theta^6}{6!} +
+                    \cdots  \right ]+ i \left [ \theta  -
+                    \frac{\theta^3}{3!} + \frac{\theta^5}{5!} -
+                    \frac{\theta^7}{7!} + \cdots \right ]}                   
+        &\qquad \mathrel{\#} \text{factor out $i$ in the second term} \\
+[20pt]
+&=& {\displaystyle \cos \theta + i \sin \theta}
+        &\qquad \mathrel{\#} \text{Equations (\ref{eqn:cos}) and (\ref{eqn:sin})}
 \end{array}
 \end{equation*}
 
@@ -334,21 +351,41 @@ with respect to $x$ we see that
 \begin{equation*}
 \begin{array}{lllll}
 \dfrac{d}{dx} e^{ix} 
-&=& \dfrac{d}{dx} \bigg [  r \left ( \cos \theta + i \sin \theta \right ) \bigg ]                                                                                                       &\mathrel{\#} \text{differentiate both sides with respect to $x$}  \\
+&=& \dfrac{d}{dx} \bigg [  r \left ( \cos \theta + i \sin \theta \right ) \bigg ]
+                &\mathrel{\#} \text{differentiate both sides with
+                respect to $x$}  \\ 
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{d}{dx} \bigg [  r \left ( \cos \theta + i \sin \theta \right ) \bigg ]                                                                      &\mathrel{\#} \text{apply the chain rule to the LHS}  \\
+&\Rightarrow& i  e^{ix}  = \dfrac{d}{dx} \bigg [  r \left ( \cos
+                \theta + i \sin \theta \right ) \bigg ]
+                &\mathrel{\#} \text{apply the chain rule to the LHS}  \\
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \dfrac{d}{dx} \bigg [ \cos \theta + i \sin \theta \bigg ]                      &\mathrel{\#} \text{apply the product rule to the RHS}  \\
+&\Rightarrow& i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i
+                \sin \theta ) + r \dfrac{d}{dx} \bigg [ \cos
+                \theta + i \sin \theta \bigg ] 
+                &\mathrel{\#} \text{apply the product rule to the RHS}  \\
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +i \dfrac{d}{dx} \sin \theta \bigg ]  
-                                                                                               &\mathrel{\#} \text{derivative is a linear operator \cite{wiki:linearity_of_differentiation}} \\
+&\Rightarrow& i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i
+                \sin \theta ) + r \bigg [\dfrac{d}{dx} \cos \theta +i
+                \dfrac{d}{dx} \sin \theta \bigg ]
+                &\mathrel{\#} \text{derivative is a linear
+                operator \cite{wiki:linearity_of_differentiation}} \\ 
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r \bigg [(- \sin \theta) \dfrac{d \theta}{dx} + (i \cos \theta) \dfrac{d \theta}{dx} \bigg ] 
-                                                                                               &\mathrel{\#} \dfrac{d}{dx} \cos u = - \sin u \dfrac{du}{dx}, \,  \dfrac{d}{dx} \sin u = \cos u \dfrac{du}{dx}\\
+&\Rightarrow& i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i
+                \sin \theta ) + r \bigg [(- \sin \theta) \dfrac{d
+                \theta}{dx} + (i \cos \theta) \dfrac{d \theta}{dx} \bigg ]   
+                &\mathrel{\#} \dfrac{d}{dx} \cos u = - \sin u
+                        \dfrac{du}{dx}, \,  \dfrac{d}{dx} \sin u
+                        = \cos u \dfrac{du}{dx}\\  
 [14pt]
-&\Rightarrow & i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i \sin \theta ) + r (- \sin \theta + i \cos \theta ) \dfrac{d\theta}{dx}                               &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\
+&\Rightarrow& i  e^{ix}  = \dfrac{dr}{dx}  ( \cos \theta + i
+                \sin \theta ) + r (- \sin \theta + i \cos \theta)
+                \dfrac{d\theta}{dx} 
+                &\mathrel{\#} \text{factor out $\dfrac{d\theta}{dx}$}  \\ 
 [14pt]
-&\Rightarrow & i  e^{ix}  = ( \cos \theta + i \sin \theta )  \dfrac{dr}{dx} + r (- \sin \theta + i \cos \theta ) \dfrac{d\theta}{dx}                               &\mathrel{\#} \text{put the RHS into a more convenient form}  \\
+&\Rightarrow& i  e^{ix}  = ( \cos \theta + i \sin \theta )
+                \dfrac{dr}{dx} + r (- \sin \theta + i \cos \theta )
+                \dfrac{d\theta}{dx}
+                &\mathrel{\#} \text{put the RHS into a more convenient form}
 \end{array}
 \end{equation*}
 
