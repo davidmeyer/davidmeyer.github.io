@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 AUG 2022 08:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 AUG 2022 08:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1442,17 +1442,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (40.55147pt too wide) detected at line 297
+Overfull \hbox (40.55147pt too wide) detected at line 294
 []
  []
 
 [2]
-Overfull \hbox (42.05186pt too wide) detected at line 404
+Overfull \hbox (42.05186pt too wide) detected at line 401
 []
  []
 
 [3] [4] [5]
-Overfull \hbox (22.28186pt too wide) detected at line 638
+Overfull \hbox (22.28186pt too wide) detected at line 635
 []
  []
 
@@ -1469,11 +1469,11 @@ Package rerunfilecheck Info: File `euler.out' has not changed.
 Here is how much of TeX's memory you used:
  52115 strings out of 478994
  1316215 string characters out of 5858184
- 1947654 words of memory out of 5000000
+ 1947655 words of memory out of 5000000
  68784 multiletter control sequences out of 15000+600000
  415613 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,12n,131p,723b,1216s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,13n,131p,723b,1216s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1491,7 +1491,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on euler.pdf (8 pages, 201625 bytes).
+Output written on euler.pdf (8 pages, 201603 bytes).
 PDF statistics:
  245 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams

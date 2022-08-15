@@ -113,20 +113,19 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.45 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
-		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
+		\coordinate (O) at (0,0);														% name a coordinate for the origin
 %
 %	draw axes, saving the real part to calculate the angle (below)
 %
 		\draw[thick, -latex] (-0.35,0.00) -- (5.50,0.00) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
 		\draw[thick, -latex] (0.00,-0.35) -- (0.00,5.25) node[xshift=-0.2cm,left] {$\mathbb{I}$}
-				node[draw,rectangle,thin,blue,below right=5.0mm]
-            		{$\color{black}{
-						z = a + bi = 
-						r \cos \theta + i r \sin \theta = 
-						r \mathrm{e}^{i\theta}}
-						\vspace{5cm} $};										% z = a bunch of stuff
+				node[draw,rectangle,thin,blue,below right=5.0mm]						%
+            		{$\color{black}{													%
+						z = a + bi = 													% z = <a bunch of stuff>
+						r \cos \theta + i r \sin \theta = 								%
+						r \mathrm{e}^{i\theta}}$};										%
 		\coordinate[label=below left:$O$] (O);                                          % label origin
 		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
 		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
@@ -176,8 +175,6 @@ z
 \section{Euler's Formula}
 This is all good, but where does Euler's formula, depicted in
 Figure \ref{fig:eulers_formula}, come from?
-
-
 %
 % Euler's formula on the unit circle in the complex plane
 %
