@@ -113,14 +113,20 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.39 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.45 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
 		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
 %	draw axes, saving the real part to calculate the angle (below)
 %
-		\draw[thick, -latex] (-0.35,0) -- (5.5,0) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
-		\draw[thick, -latex] (0,-0.35) -- (0,4.75) node[xshift=-0.2cm,left] {$\mathbb{I}$};
+		\draw[thick, -latex] (-0.35,0.00) -- (5.50,0.00) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
+		\draw[thick, -latex] (0.00,-0.35) -- (0.00,5.25) node[xshift=-0.2cm,left] {$\mathbb{I}$}
+				node[draw,rectangle,thin,blue,below right=5.0mm]
+            		{$\color{black}{
+						z = a + bi = 
+						r \cos \theta + i r \sin \theta = 
+						r \mathrm{e}^{i\theta}}
+						\vspace{5cm} $};										% z = a bunch of stuff
 		\coordinate[label=below left:$O$] (O);                                          % label origin
 		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
 		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
@@ -131,9 +137,9 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
 		\draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);                          % label r
 		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
-				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};          % calculate the angle theta
-     \end{tikzpicture}                                                                          % end tikzpicture
-  }                                                                                             % end resizebox
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};					% calculate the angle theta
+     \end{tikzpicture}																	% end tikzpicture
+  }																						% end resizebox
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
@@ -141,7 +147,7 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \noindent
 This picture makes it easy to see why $z = r \mathrm{e}^{i
-\theta}$.  
+\theta}$. Specifically
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -180,7 +186,7 @@ Figure \ref{fig:eulers_formula}, come from?
   \resizebox{0.520 \textwidth}{!} {                                                     % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[-latex] (-1.5,0) -- node[below left]{$O$} (1.5,0)
-                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);			% make and label the axes
+                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);					% make and label the axes
       \fill[black] (0,0) circle(0.02);                                                  % draw a black dot at the origin
       \draw[-latex] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
       \draw (0,0) coordinate(o) circle [radius=1cm];                                    % draw unit circle
