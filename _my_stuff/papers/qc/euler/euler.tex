@@ -113,7 +113,7 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.385 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
 		\coordinate (O) at (0,0);														% name a coordinate for the origin
 %
@@ -180,7 +180,7 @@ Figure \ref{fig:eulers_formula}, come from?
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.520 \textwidth}{!} {                                                     % resize figure if you want
+  \resizebox{0.450 \textwidth}{!} {                                                     % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[-latex] (-1.5,0) -- node[below left]{$O$} (1.5,0)
                 coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);					% make and label the axes
@@ -584,11 +584,14 @@ Equation (\ref{eqn:polar}) we see that
 \begin{equation*}
 \begin{array}{lllll}
 e^{ix} 
-&=& r \cdot \left [ \cos \theta + i \sin \theta \right ]        &\qquad  \mathrel{\#} \text{Equation (\ref{eqn:polar})} \\
+&=& r \cdot \left [ \cos \theta + i \sin \theta \right ]
+		&\qquad \qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:polar})} \\
 [8pt]
-&=& 1 \cdot \left [ \cos x + i \sin x \right ]                  &\qquad  \mathrel{\#} \text{$r = 1$ and $\theta = x$} \\
+&=& 1 \cdot \left [ \cos x + i \sin x \right ]
+		&\qquad \qquad \qquad \qquad \mathrel{\#} \text{$r = 1$ and $\theta = x$} \\
 [8pt]
-&=& \cos x + i \sin x                                           &\qquad  \mathrel{\#} \text{Euler's formula}
+&=& \cos x + i \sin x
+		&\qquad \qquad \qquad \qquad \mathrel{\#} \text{Euler's formula}
 \end{array}
 \end{equation*}
 
@@ -611,26 +614,36 @@ for all real $\theta$. Then
 
 \begin{equation*}
 \begin{array}{lllll}
- f(\theta)
- &=&  e^{-i\theta} \left ( \cos \theta + i\sin \theta \right)                                                                                                  &\mathrel{\#} \text{definition of $f(\theta)$} \\
- [10pt]
-&\Rightarrow& f^{\prime}(\theta)  = \dfrac{d}{d \theta} \Big [ e^{-i\theta} \left ( \cos \theta + i\sin \theta \right) \Big ]     &\mathrel{\#}  \text{take derivative of both sides} \\
+f(\theta)
+&=&  e^{-i\theta} \left ( \cos \theta + i\sin \theta \right)                                                                                                  		&\mathrel{\#} \text{definition of $f(\theta)$} \\
+[10pt]
+&\Rightarrow& f^{\prime}(\theta)  = \dfrac{d}{d \theta} 
+	\Big [ e^{-i\theta} \left ( \cos \theta + i\sin \theta \right) \Big ]     
+		&\mathrel{\#}  \text{take derivative of both sides} \\
 [14pt]
-&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta} \cdot  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta)
-                                                     + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )                                        &\mathrel{\#}  \text{product rule} \\
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta} \cdot  \dfrac{d}{d\theta}  
+	(\cos \theta +i \sin \theta)+ \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )                                        
+		&\mathrel{\#}  \text{product rule} \\
 [14pt]
-&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + \dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )    
-                                                                                                                                                                                       &\mathrel{\#}  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta) = i\cos \theta -\sin \theta \\
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + 
+	\dfrac{d}{d\theta} e^{-i\theta} (\cos \theta + i\sin \theta )                                                                                                                                                                                 		&\mathrel{\#}  \dfrac{d}{d\theta}  (\cos \theta +i \sin \theta) = i\cos \theta -\sin \theta \\
 [14pt]
-&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + ie^{-i\theta} (\cos \theta + i\sin \theta )       &\mathrel{\#} \text{chain rule} \\
+&\Rightarrow& f^{\prime}(\theta)  = e^{-i\theta }(i\cos \theta -\sin \theta ) + 
+	ie^{-i\theta} (\cos \theta + i\sin \theta )
+		&\mathrel{\#} \text{chain rule} \\
 [14pt]
-&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) - i (\cos \theta +i\sin \theta)  \Big ]  &\mathrel{\#} \text{factor out $e^{-i\theta}$} \\
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) - 
+	i (\cos \theta +i\sin \theta)  \Big ]  
+		&\mathrel{\#} \text{factor out $e^{-i\theta}$} \\
 [14pt]
-&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]    &\mathrel{\#} \text{multiply through by $i$} \\
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot \Big [ (i\cos \theta -\sin \theta) -  
+	(i\cos \theta -\sin \theta)  \Big ]
+		&\mathrel{\#} \text{multiply through by $i$} \\
 [14pt]
-&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot 0                                                                                                     &\mathrel{\#} \Big [ (i\cos \theta -\sin \theta) -  (i\cos \theta -\sin \theta)  \Big ]  = 0 \\
+&\Rightarrow&f^{\prime}(\theta) = e^{-i\theta} \cdot 0                                                                                                     		&\mathrel{\#} \Big [ (i\cos \theta -\sin \theta) -  
+			(i\cos \theta -\sin \theta)  \Big ]  = 0 \\
 [14pt]
-&\Rightarrow&f^{\prime}(\theta) =  0                                                                                                                               &\mathrel{\#} \text{simplify} \\
+&\Rightarrow&f^{\prime}(\theta) =  0                                                                                                                               		&\mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
@@ -642,7 +655,8 @@ know that
 
 \medskip
 \begin{equation*}
-f(0) = e^{-i0} \cdot \big [\cos 0 + i \sin 0 \big ]  = 1 \cdot \big [1 + 0 \big ] = 1
+f(0) = e^{-i0} \cdot \big [\cos 0 + i \sin 0 \big ]  
+     = 1 \cdot \big [1 + 0 \big ] = 1
 \end{equation*}
 
 \medskip
@@ -677,20 +691,21 @@ assumptions (as I mentioned above, the approach taken in Section
 assumptions). In any event, the proof goes as follows:
 
 
+\medskip
 \begin{equation*}
 \begin{array}{lllll}
 z
 &=& \cos{\theta}+i\sin{\theta}
                 &\qquad \mathrel{\#} \text{definition of a
-                complex number (Figure \ref{fig:complex_plane})}
-                \\ 
+                complex number (Figure \ref{fig:complex_plane})} \\ 
 [12pt]
-&\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \left [ \cos{\theta}+i\sin{\theta}  \right ]
+&\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} 
+	\left [ \cos{\theta}+i\sin{\theta}  \right ]
                 &\qquad \mathrel{\#} \text{take the derivative of
                 both sides} \\ 
 [14pt]
-&\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta}
-\cos{\theta} + \dfrac{d}{d \theta} i\sin{\theta}
+&\Rightarrow& \dfrac{dz}{d\theta} = \dfrac{d}{d \theta} \cos{\theta} + 
+	\dfrac{d}{d \theta} i\sin{\theta}
                 &\qquad \mathrel{\#} \text{derivative is a linear
                 operator} \\ 
 [14pt]
@@ -709,7 +724,7 @@ z
 \bigskip
 \noindent
 So now we know that $\dfrac{dz}{d\theta} = iz$, which implies
-that  $\dfrac{dz}{z} = i \, d\theta$. This means that 
+that $\dfrac{dz}{z} = i \, d\theta$. This means that 
 
 \bigskip
 \begin{equation*}
@@ -730,7 +745,7 @@ d\theta}
 &\Rightarrow&  {\displaystyle z = e^{i\theta +C}}
                 &\qquad \mathrel{\#} \text{exponentiate both
                 sides: $e^{\ln |z|} = z$ and $e^{i \theta +C} =
-                e^{i \theta +C}$} \\ 
+                e^{i \theta +C}$}
 \end{array}
 \end{equation*}
 
@@ -771,7 +786,9 @@ e^{i\theta}
 	&\qquad \qquad \qquad \qquad  \mathrel{\#} \text{Euler's identity} 
 \end{array}
 \end{equation*}
-
+%
+%
+%
 \bigskip
 \section{Conclusions}
 %
