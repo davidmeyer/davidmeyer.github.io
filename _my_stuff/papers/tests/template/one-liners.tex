@@ -180,6 +180,47 @@ H(t) \mid \psi(t)\rangle = i \hslash \, \dfrac{\partial}{\partial t} \mid \psi(t
 
 
 
+\newcommand*{\sqrtspiral}[2][scale=3]{
+    \begin{tikzpicture}[#1]
+        \def\sqrtlast{#2}
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (1cm,0);
+        \draw (A) edge node[auto, swap] {1} (B);
+        \foreach \n in {1,...,\sqrtlast}{
+            \ifthenelse{\equal{\n}{\sqrtlast}}
+            {
+                \def\currentcolor{red}
+                \def\currentsqrt{x}
+            }
+            {
+                \def\currentcolor{black}
+                \pgfmathtruncatemacro{\currentsqrt}{\n+1}
+            }
+            \coordinate (C) at ($(B)!1cm!-90:(A)$);
+            \draw[\currentcolor] (A) edge node[fill=white] {$\sqrt{\currentsqrt}$} (C);
+            \draw[\currentcolor] (C) edge node[auto] {1} (B);
+            \coordinate (w) at ($(B)!4pt!-90:(A)$);
+            \coordinate (z) at ($(B)!4pt!0:(A)$);
+            \coordinate (t) at ($(w)!4pt!-90:(B)$);
+            \draw (w) -- (t) -- (z);
+            \coordinate (B) at (C);
+        }
+    \end{tikzpicture}
+}
+
+
+% \sqrtspiral{1}
+% \sqrtspiral{2}
+% \sqrtspiral{3}
+
+\begin{figure}[H]
+\centering
+\sqrtspiral[scale=2]{15}
+\caption{The Spiral of Theodorus up to $\sqrt{15}$}
+\end{figure}
+
+
+
 \bigskip
 \bigskip
 %
