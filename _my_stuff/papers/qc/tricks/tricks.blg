@@ -2,18 +2,18 @@ This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: tricks.aux
 The style file: plain.bst
-Database file #1: /Users/dmm/papers/bib/qc.bib
+Database file #1: qc.bib
 You've used 8 entries,
             2118 wiz_defined-function locations,
-            532 strings with 5396 characters,
-and the built_in function-call counts, 1746 in all, are:
-= -- 173
+            531 strings with 5371 characters,
+and the built_in function-call counts, 1750 in all, are:
+= -- 174
 > -- 56
 < -- 0
 + -- 24
 - -- 16
-* -- 49
-:= -- 302
+* -- 50
+:= -- 303
 add.period$ -- 32
 call.type$ -- 8
 change.case$ -- 32
@@ -22,17 +22,17 @@ cite$ -- 8
 duplicate$ -- 56
 empty$ -- 177
 format.name$ -- 16
-if$ -- 382
+if$ -- 383
 int.to.chr$ -- 0
 int.to.str$ -- 8
 missing$ -- 0
 newline$ -- 51
 num.names$ -- 16
-pop$ -- 70
+pop$ -- 68
 preamble$ -- 1
 purify$ -- 24
 quote$ -- 0
-skip$ -- 45
+skip$ -- 46
 stack$ -- 0
 substring$ -- 40
 swap$ -- 8
@@ -43,4 +43,4 @@ type$ -- 32
 warning$ -- 0
 while$ -- 16
 width$ -- 9
-write$ -- 95
+write$ -- 96
