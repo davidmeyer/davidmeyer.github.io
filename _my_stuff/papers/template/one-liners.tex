@@ -182,44 +182,46 @@ H(t) \mid \psi(t)\rangle = i \hslash \, \dfrac{\partial}{\partial t} \mid \psi(t
 \noindent
 The Spiral of Theodorus
 
+%
+%	build a command that draws a picture
+%	of the Spiral of Theodorus with parameter
+%	n = the number of triangles
+%
 \newcommand*{\sqrtspiral}[2][scale=3]{
     \begin{tikzpicture}[#1]
         \def\sqrtlast{#2}
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (1cm,0);
-        \draw (A) edge node[auto, swap] {1} (B);
-        \foreach \n in {1,...,\sqrtlast}{
-            \ifthenelse{\equal{\n}{\sqrtlast}}
-            {
-                \def\currentcolor{red}
-                \def\currentsqrt{n}
-            }
-            {
-                \def\currentcolor{black}
-                \pgfmathtruncatemacro{\currentsqrt}{\n+1}
-            }
-            \coordinate (C) at ($(B)!1cm!-90:(A)$);
-            \draw[\currentcolor] (A) edge node[fill=white] {$\sqrt{\currentsqrt}$} (C);
-            \draw[\currentcolor] (C) edge node[auto] {1} (B);
-            \coordinate (w) at ($(B)!4pt!-90:(A)$);
-            \coordinate (z) at ($(B)!4pt!0:(A)$);
-            \coordinate (t) at ($(w)!4pt!-90:(B)$);
-            \draw (w) -- (t) -- (z);
-            \coordinate (B) at (C);
-        }
-    \end{tikzpicture}
+        \coordinate (A) at (0,0);								% side adjacent
+        \coordinate (B) at (1cm,0);								% side opposite
+        \draw (A) edge node[auto, swap] {1} (B);				% draw side adjacent for first triangle
+        \foreach \n in {1,...,\sqrtlast}{						% draw \n triangles
+            \ifthenelse{\equal{\n}{\sqrtlast}}					%
+            {													%
+                \def\currentcolor{red}							% draw the last triangle in red (\sqrtlast)
+                \def\currentsqrt{n}								% draw the last triangle (root n)
+            }													%
+            {													%
+                \def\currentcolor{black}						% current triangle
+                \pgfmathtruncatemacro{\currentsqrt}{\n+1}		% hypotenuse is of length root (n+1)
+            }													%
+            \coordinate (C) at ($(B)!1cm!-90:(A)$);				% calculate hypotenuse
+            \draw[\currentcolor] (A) edge node[fill=white]		% draw hypotenuse
+            	{$\sqrt{\currentsqrt}$} (C);					% ...
+            \draw[\currentcolor] (C) edge node[auto] {1} (B);	% draw the side opposite (of length 1)
+            \coordinate (w) at ($(B)!4pt!-90:(A)$);				% build the coordinates for the right angle box
+            \coordinate (z) at ($(B)!4pt!0:(A)$);				% ...
+            \coordinate (t) at ($(w)!4pt!-90:(B)$);				% ...
+            \draw (w) -- (t) -- (z);							% draw the right angle box
+            \coordinate (B) at (C);								% update starting point
+        }														% end \foreach
+    \end{tikzpicture}											% end tikzpicture
 }
-
-
-% \sqrtspiral{1}
-% \sqrtspiral{2}
-% \sqrtspiral{3}
 
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {														% resize figure if you want
-	\sqrtspiral[scale=2]{14}}
+  \resizebox{0.60 \textwidth}{!} {								% resize figure if you want
+	\sqrtspiral[scale=2]{14}									% draw the Spiral of Theodorus with n = 14
+	}															% end resizebox
 \caption{The Spiral of Theodorus}
 \end{figure}
 

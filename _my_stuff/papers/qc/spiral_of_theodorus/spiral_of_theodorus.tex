@@ -1,0 +1,184 @@
+\documentclass{article}
+%
+%
+%	
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	also a handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%	Title, author and date
+%
+\title{The Spiral of Theodorus}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+The Spiral of Theodorus \cite{wiki:spiral_of_theodorus} is the
+fantastic object shown in Figure \ref{fig:the_spiral_of_theodorus}.
+It is composed of right triangles placed edge-to-edge, where the
+side opposite the (inside) acute angle has length 1 and where the
+length of the hypotenuse of the $n^{\text{th}}$ triangle is 
+$\sqrt{n+1}$. Pretty cool.  
+
+
+\bigskip
+\noindent
+The spiral is named after Theodorus of Cyrene, the ancient
+Greek mathematician who lived during the $5^{\text{th}}$ 
+century BC and who apparently discovered the 
+spiral \cite{wiki:theodorus_of_cyrene}.
+
+\section{The Spiral of Theodorus}
+%
+%	build a command that draws a picture
+%	of the Spiral of Theodorus with parameter
+%	n = the number of triangles
+%
+\newcommand*{\sqrtspiral}[2][scale=3]{
+    \begin{tikzpicture}[#1]
+        \def\sqrtlast{#2}
+        \coordinate (A) at (0,0);                                               % side adjacent
+        \coordinate (B) at (1cm,0);                                             % side opposite
+        \draw (A) edge node[auto, swap] {1} (B);                                % draw side adjacent for first triangle
+        \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
+            \ifthenelse{\equal{\n}{\sqrtlast}}                                  %
+            {                                                                   %
+                \def\currentcolor{red}                                          % draw the last triangle in red (\sqrtlast)
+                \def\currentsqrt{n}                                             % draw the last triangle (root n)
+            }                                                                   %
+            {                                                                   %
+                \def\currentcolor{black}                                        % current triangle
+                \pgfmathtruncatemacro{\currentsqrt}{\n+1}                       % hypotenuse is of length root (n+1)
+            }									%
+            \coordinate (C) at ($(B)!1cm!-90:(A)$);                             % calculate hypotenuse
+            \draw[\currentcolor] (A) edge node[fill=white]                      % draw hypotenuse
+            	{$\sqrt{\currentsqrt}$} (C);                                    % ...
+            \draw[\currentcolor] (C) edge node[auto] {1} (B);                   % draw the side opposite (of length 1)
+            \coordinate (w) at ($(B)!4pt!-90:(A)$);                             % build the coordinates for the right angle box
+            \coordinate (z) at ($(B)!4pt!0:(A)$);                               % ...
+            \coordinate (t) at ($(w)!4pt!-90:(B)$);                             % ...
+            \draw (w) -- (t) -- (z);                                            % draw the right angle box
+            \coordinate (B) at (C);                                             % update starting point
+        }                                                                       % end \foreach
+    \end{tikzpicture}                                                           % end tikzpicture
+}
+
+\bigskip
+\begin{figure}[H]
+        \centering
+        \resizebox{0.70 \textwidth}{!} {                                        % resize figure if you want
+                \sqrtspiral[scale=2]{14}                                        % draw the Spiral of Theodorus with n = 14
+        }                                                                       % end resizebox
+\caption{The Spiral of Theodorus}
+\label{fig:the_spiral_of_theodorus}
+\end{figure}
+%
+%
+%
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/scsptwzqxzdt}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+
