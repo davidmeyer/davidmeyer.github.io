@@ -104,9 +104,8 @@
 The Spiral of Theodorus \cite{wiki:spiral_of_theodorus} is the
 fantastic object shown in Figure \ref{fig:the_spiral_of_theodorus}.
 It is composed of right triangles placed edge-to-edge, where the
-side opposite the (inside) acute angle has length 1 and where the
-length of the hypotenuse of the $n^{\text{th}}$ triangle is 
-$\sqrt{n+1}$. Pretty cool.  
+sides of $n^{\text{th}}$ triangle are of length 1 and $\sqrt{n}$  
+and the hypotenuse is of length $\sqrt{n+1}$. Pretty cool.  
 
 
 \bigskip
@@ -127,7 +126,7 @@ spiral \cite{wiki:theodorus_of_cyrene}.
         \def\sqrtlast{#2}
         \coordinate (A) at (0,0);                                               % side adjacent
         \coordinate (B) at (1cm,0);                                             % side opposite
-        \draw (A) edge node[auto, swap] {1} (B);                                % draw side adjacent for first triangle
+        \draw (A) edge node[auto, swap] {$\sqrt{1}$} (B);						% draw side adjacent for first triangle
         \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
             \ifthenelse{\equal{\n}{\sqrtlast}}                                  %
             {                                                                   %
