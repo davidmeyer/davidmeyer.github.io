@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{properties_of_limits}
 {Alex Svirin}.
@@ -63,5 +63,13 @@
   \url{https://en.wikipedia.org/w/index.php?title=Triangular_number&oldid=1034664425},
   2021.
 \newblock [Online; accessed 17-August-2021].
+
+\bibitem{wiki:series}
+{Wikipedia Contributors}.
+\newblock {Series (mathematics) --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Series_(mathematics)&oldid=1101685143},
+  2022.
+\newblock [Online; accessed 18-August-2022].
 
 \end{thebibliography}
