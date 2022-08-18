@@ -126,7 +126,7 @@ it \cite{wiki:theodorus_of_cyrene}.
         \def\sqrtlast{#2}
         \coordinate (A) at (0,0);                                               % side adjacent
         \coordinate (B) at (1cm,0);                                             % side opposite
-        \draw (A) edge node[auto, swap] {$\sqrt{1}$} (B);						% draw sides for first triangle
+        \draw (A) edge node[auto, swap] {$\sqrt{1}$} (B);                       % draw sides for first triangle
         \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
             \ifthenelse{\equal{\n}{\sqrtlast}}                                  %
             {                                                                   %
@@ -136,7 +136,7 @@ it \cite{wiki:theodorus_of_cyrene}.
             {                                                                   %
                 \def\currentcolor{black}                                        % current triangle
                 \pgfmathtruncatemacro{\currentsqrt}{\n+1}                       % hypotenuse is of length root (n+1)
-            }																	%
+            }                                                                   %
             \coordinate (C) at ($(B)!1cm!-90:(A)$);                             % calculate hypotenuse
             \draw[\currentcolor] (A) edge node[fill=white]                      % draw hypotenuse
             	{$\sqrt{\currentsqrt}$} (C);                                    % ...
@@ -148,7 +148,7 @@ it \cite{wiki:theodorus_of_cyrene}.
             \coordinate (B) at (C);                                             % update starting point
         }                                                                       % end \foreach
     \end{tikzpicture}                                                           % end tikzpicture
-}																				% end newcommand
+}                                                                               % end newcommand
 %
 %	draw the spiral wrapped in a figure
 %
