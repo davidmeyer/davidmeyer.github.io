@@ -10,7 +10,7 @@
 %
 %   get various packages
 %
-\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\usepackage[margin=0.75in]{geometry}									% adjust margins
 \geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{setspace}                                                   % need this for \setstrech{...}
@@ -136,17 +136,13 @@ we have
 \begin{array}{llll}
 x + 1
 &=& \sqrt{(x + 1)^2}							
-				&\qquad \qquad \qquad \qquad \qquad \qquad 
-				 \mathrel{\#} \text{$z = \sqrt{z^2}$ where
-				                    $z = x+1$} \\
+				&\hspace{16em} \mathrel{\#} x + 1 = \sqrt{(x + 1)(x + 1)} =  \sqrt{(x + 1)^2} \\
 [5pt]
 &=& \sqrt{1 + 2x + x^2}		
-				&\qquad \qquad \qquad \qquad \qquad \qquad 
-				 \mathrel{\#} (x+1)^2 = x^2 + 2x + 1 \\
+				&\hspace{16em} \mathrel{\#} (x+1)^2 = x^2 + 2x + 1 \\
 [5pt]
 &=& \sqrt{1 + x(x + 2)}		
-				&\qquad \qquad \qquad \qquad \qquad \qquad 
-				 \mathrel{\#} x^2+2x+1 = x(x+2)+1
+				&\hspace{16em} \mathrel{\#} x^2+2x+1 = x(x+2)+1
 \end{array}
 \end{equation*}
 

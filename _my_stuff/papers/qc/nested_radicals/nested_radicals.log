@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 AUG 2022 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 AUG 2022 12:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1296,15 +1296,15 @@ LaTeX Font Info:    ... okay on input line 98.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=505.89pt
+* \textheight=686.56499pt
+* \oddsidemargin=-18.06749pt
+* \evensidemargin=-18.06749pt
+* \topmargin=-55.06749pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1416,12 +1416,7 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Overfull \hbox (22.20262pt too wide) detected at line 174
-[]
- []
-
-
-Overfull \hbox (67.87593pt too wide) detected at line 211
+Overfull \hbox (31.74095pt too wide) detected at line 207
 []
  []
 
@@ -1435,7 +1430,7 @@ Package rerunfilecheck Info: File `nested_radicals.out' has not changed.
 Here is how much of TeX's memory you used:
  51760 strings out of 478994
  1309652 string characters out of 5858184
- 1941494 words of memory out of 5000000
+ 1941528 words of memory out of 5000000
  68463 multiletter control sequences out of 15000+600000
  410771 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1452,7 +1447,7 @@ l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on nested_radicals.pdf (3 pages, 133336 bytes).
+Output written on nested_radicals.pdf (3 pages, 133117 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
