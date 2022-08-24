@@ -257,6 +257,8 @@ Lagrange's Theorem (Theorem \ref{thm:lagrange}).
 \noindent
 More generally, 
 
+
+\smallskip
 \begin{equation*}
 \begin{array}{rcll}
 E_x
@@ -390,6 +392,7 @@ relations $E_x$ apply to actions, except that in the context of
 group actions what we called equivalence classes above are called
 orbits. Orbits are denoted $O_x$ and $O_x = E_x$.  In particular
 
+
 \begin{flalign*}
 O_x 
 &= \{y \in X \mid x \sim y\} \\
@@ -397,12 +400,14 @@ O_x
 &= \{\phi(g)x  \mid g \in G\}
 \end{flalign*}
 
+\smallskip
 \section{Group Homomorphism}
 Let $(G,\diamond)$ and $(H, \circ)$ be groups. Common usage is to
 use $G$ to refer to $(G,\diamond)$. Similarly, $H$ will refer to
 $(H, \circ)$. Then a mapping $\phi: G \rightarrow H$ is called a
 \emph{homomorphism} iff
 
+\medskip
 \begin{equation*}
 \phi(x \diamond y) = \phi(x) \circ \phi(y) \; \forall x,y \in G
 \end{equation*}
@@ -530,8 +535,7 @@ q(xy)
 &=& x (Ny) N            &\hspace{5em} \mathrel{\#} \text{$N$ normal so  $xN = Nx$} \\
 &=& (xN)(yN)            &\hspace{5em} \mathrel{\#} \text{group multiplication is associative} \\
 &=& q(x) q(y)           &\hspace{5em} \mathrel{\#} \text{definition of $q$} \\
-&=& q(x) q(y)			&\hspace{5em} \mathrel{\#} q(xy) = q(x) q(y) \Rightarrow 
-                                                   \text{$q$ is a homomorphism} 
+&=& q(x) q(y)			&\hspace{5em} \mathrel{\#} q(xy) = q(x) q(y) \Rightarrow \text{$q$ is a homomorphism} 
 \end{array}
 \end{equation*}
 
@@ -544,10 +548,10 @@ $f$ is the identity in $H$ and define a homomorphism $\phi: G
 \begin{enumerate}
 \item $\phi(e) = f$. That is,  $\phi$ maps the identity in G to
       the identity in H. In particular 
-   \begin{itemize}
-     \item $\phi(0) = 0$
-     \item $\phi(1) = 1$
-    \end{itemize}
+		\begin{itemize}
+			\item $\phi(0) = 0$
+			\item $\phi(1) = 1$
+		\end{itemize}
 \item $\phi(a^{-1}) = (\phi(a))^{-1}$. That is, $\phi$ maps inverses to inverses.
 \item If $K$ is subgroup of $G$, then $\phi(K)$ is a subgroup of $H$.
 \end{enumerate}
