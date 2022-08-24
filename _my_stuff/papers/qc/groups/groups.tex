@@ -1,11 +1,11 @@
 \documentclass{article}
 %
 %
-%	LaTeX template
+%	groups.tex
 %
 %	David Meyer
 %	dmm613@gmail.com
-%	15 July 2022
+%	Last update: 24 Aug 2022
 %
 %
 %   get various packages
@@ -751,6 +751,7 @@ So $f(g_1) = f(g_2)$ (Equation \ref{eqn:g}) implies that $g_1 =
 g_2$ and so $f$ is one-to-one.
 \end{itemize}
 
+\noindent
 This shows that $f$ is one-to-one  $\iff \ker f =\{e\}$.
 
 \section{The First Isomorphism Theorem}
@@ -794,26 +795,26 @@ Nx$ which implies that $xnx^{-1} \in N$.}  that $gkg^{-1} \in
 \begin{array}{rcll}
 \phi(gkg^{-1})
 &=& \phi(g)\phi(k)\phi(g^{-1})
-                &\hspace{5em} \mathrel{\#} \text{$\phi$ is a homomorphism} \\
+                &\hspace{8em} \mathrel{\#} \text{$\phi$ is a homomorphism} \\
 [5pt]
 &=& \phi(g)\phi(k)(\phi(g))^{-1}
-                &\hspace{5em} \mathrel{\#} \phi(g^{-1}) = (\phi(g))^{-1} 
+                &\hspace{8em} \mathrel{\#} \phi(g^{-1}) = (\phi(g))^{-1} 
                 				\text{ (see Equation (\ref{eqn:inverse}) above)} \\
 [5pt]
 &=& \phi(g) e (\phi(g))^{-1}
-                &\hspace{5em} \mathrel{\#} k \in \ker \phi \Rightarrow \phi(k) = e  
+                &\hspace{8em} \mathrel{\#} k \in \ker \phi \Rightarrow \phi(k) = e  
                 				\text{ ($e$ is the identity in $G$)} \\
 [5pt]
 &=& \phi(g) (\phi(g))^{-1}
-                &\hspace{5em} \mathrel{\#} \phi(g) e = \phi(g) \text{ and } 
+                &\hspace{8em} \mathrel{\#} \phi(g) e = \phi(g) \text{ and } 
                 				e \phi(g)^{-1} = \phi(g)^{-1} \\
 [5pt]
 &=& e
-                &\hspace{5em} \mathrel{\#} xx^{-1} = x^{-1} x = e 
+                &\hspace{8em} \mathrel{\#} xx^{-1} = x^{-1} x = e 
                 				\text{ (where $x \neq 0$)} \\
 [5pt]
 &=& e
-                &\hspace{5em} \mathrel{\#} \text{so }\phi(gkg^{-1}) = e \Rightarrow 
+                &\hspace{8em} \mathrel{\#} \phi(gkg^{-1}) = e \Rightarrow 
                 				gkg^{-1} \in \ker \phi
 \end{array}
 \end{equation*}
