@@ -838,20 +838,22 @@ $g \ker \phi g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
 So $gkg^{-1} \in \ker \phi \Rightarrow g \ker \phi g^{-1} = \ker
 \phi \Rightarrow \ker \phi \lhd G \; \square$
 
-\bigskip
+
 \noindent
-\textbf{Example:} Consider the group $(\mathbb{Z}_{12},+)$ and
+\begin{example}
+Consider the group $(\mathbb{Z}_{12},+)$ and
 let $\phi: \mathbb{Z}_{12} \rightarrow \mathbb{Z}_{12}$ by
 $\phi(x) = 3x$.
+\end{example}
 
-\bigskip
+\smallskip
 \noindent
-To show that $\ker \phi \lhd G$, we first need to show that $\phi$ 
+To show that $\ker \phi \lhd (\mathbb{Z}_{12},+)$, we first need to show that $\phi$ 
 is a homomorphism. But this is an easy one: $\phi(x+y) = 3 (x + y) 
 = 3x + 3y = \phi(x) + \phi(y)$.  So $\phi$ is a homomorphism. Next 
 consider the mapping $\phi$ on $\mathbb{Z}_{12}$:
 
-\bigskip
+
 \begin{equation*}
 \begin{array}{l c c c c c c c c c c c c}
 \mathbb{Z}_{12}:  & 0    & 1    & 2    & 3    & 4    & 5    & 6    & 7    & 8    & 9    & 10   & 11 \\
@@ -860,7 +862,6 @@ consider the mapping $\phi$ on $\mathbb{Z}_{12}$:
 \end{array}
 \end{equation*}
 
-\medskip
 \bigskip
 \noindent
 We can see that the image of $\mathbb{Z}_{12}$,
@@ -873,7 +874,7 @@ Grouping the  elements of $\mathbb{Z}_{12}$ with their images we
 see that 
 
 
-\bigskip
+\medskip
 \begin{equation*}
 \begin{array}{l c c c c}
 \mathbb{Z}_{12}: & \{0,4,8\}     & \{1,5,9\}   & \{2,6,10\}  & \{3,7,11\} \\
@@ -898,11 +899,16 @@ example, $a = 5$. Then $\phi(5) = 3\cdot 5 = 15$ and $15 \mod 12
 
 \bigskip
 \noindent
-Now we can state the \textbf{First Isomorphism Theorem:} Let
+Now we can state the First Isomorphism Theorem:
+
+\medskip
+\begin{theorem} {\bf First Isomorphism Theorem:}
+Let
 $\phi: G \rightarrow H$ be an onto homomorphism.  Then $H \simeq
 G/N$, where $N = \ker \phi$.
+\end{theorem}
 
-\bigskip
+\medskip
 \noindent
 Though technical this is really an amazing theorem. So here's one
 way to prove this.  We need to construct an isomorphism
