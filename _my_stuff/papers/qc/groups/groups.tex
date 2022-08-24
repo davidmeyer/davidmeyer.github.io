@@ -703,7 +703,7 @@ element of $G$.
 Suppose the homomorphism $f : G \rightarrow H$ is
 one-to-one. Then since $f$ is a group homomorphism, the identity
 element $e$ of $G$ is mapped to the identity element $e^\prime$
-of $H$. That is, $f(e ) = e^\prime$ (see Equation \ref{eqn:1}
+of $H$. That is, $f(e ) = e^\prime$ (see Equation (\ref{eqn:1})
 above).
 
 Now let $g \in \ker f$, so $f(g) = e^\prime$, recalling that
@@ -733,8 +733,8 @@ Now consider an element $g_1g_2^{-1} \in G$. Then
 f(g_1g_2^{-1})
 &=& f(g_1) f(g_2^{-1})          &\hspace{7em} \mathrel{\#} \text{$f$ is a homomorphism} \\
 &=& f(g_1) (f(g_2))^{-1}        &\hspace{7em} \mathrel{\#} f(g_2^{-1})   = (f(g_2))^{-1}
-														\text{ (Equation \ref{eqn:inverse})} \\
-&=& f(g_1) (f(g_1))^{-1}        &\hspace{7em} \mathrel{\#} f(g_2) = f(g_1)  \text{ (Equation \ref{eqn:g})} \\
+														\text{ (Equation (\ref{eqn:inverse}))} \\
+&=& f(g_1) (f(g_1))^{-1}        &\hspace{7em} \mathrel{\#} f(g_2) = f(g_1)  \text{ (Equation (\ref{eqn:g}))} \\
 &=& e^\prime                    &\hspace{7em} \mathrel{\#} f(g_1) (f(g_1))^{-1}  = e^\prime
 \end{array}
 \label{eqn:eprime}
@@ -771,6 +771,7 @@ The First Isomorphism Theorem (FIT) is a handy piece of machinery
 for many problems in group theory. Before getting to all of that,
 recall the following:
 
+\smallskip
 \begin{itemize}
 \item $\phi: G \rightarrow G^\prime$ is called a
       \textbf{group homomorphism} if it preserves the group 
@@ -784,10 +785,11 @@ recall the following:
       \ker \phi$. 
 \end{itemize}
 
-\bigskip
+\medskip
 \noindent
 So here's a theorem:  
 
+\medskip
 \begin{theorem}
 	Let $\phi: G \rightarrow G$ be a  group
 	homomorphism. Then $\ker \phi  \lhd  G$.
@@ -795,18 +797,13 @@ So here's a theorem:
 \end{theorem} 
 
 
-\noindent 
-In other words: The kernel of $\phi$ is a normal subgroup of
-$G$.  
-
-\bigskip
+\medskip
 \noindent
-{\bf Proof: }To show Theorem \ref{theorem:kernel_is_a_normal_subgroup}, 
-first let $k \in \ker \phi$ and let $g \in G$. Then
-we want to show\footnote{Recall that for normal subgroups $xN =
-Nx$ which implies that $xnx^{-1} \in N$.}  that $gkg^{-1} \in
-\ker \phi$ or equivalently that $g \ker \phi g^{-1} = \ker
-\phi$. Now consider $\phi(gkg^{-1})$:
+{\bf Proof: }To prove the theorem, first let $k \in \ker \phi$ 
+and let $g \in G$. Then we want to show\footnote{Recall that for 
+normal subgroups $xN = Nx$ which implies that $xnx^{-1} \in N$.}  
+that $gkg^{-1} \in \ker \phi$ (or equivalently that 
+$g \ker \phi g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
 
 \begin{equation*}
 \begin{array}{rcll}
@@ -849,10 +846,10 @@ $\phi(x) = 3x$.
 
 \bigskip
 \noindent
-First, we need to show that $\phi$ is a homomorphism. But this is
-an easy one: $\phi(x+y) = 3 (x + y) = 3x + 3y = \phi(x) +
-\phi(y)$.  So $\phi$ is a homomorphism. Next consider the mapping
-$\phi$ on $\mathbb{Z}_{12}$:
+To show that $\ker \phi \lhd G$, we first need to show that $\phi$ 
+is a homomorphism. But this is an easy one: $\phi(x+y) = 3 (x + y) 
+= 3x + 3y = \phi(x) + \phi(y)$.  So $\phi$ is a homomorphism. Next 
+consider the mapping $\phi$ on $\mathbb{Z}_{12}$:
 
 \bigskip
 \begin{equation*}
@@ -863,7 +860,7 @@ $\phi$ on $\mathbb{Z}_{12}$:
 \end{array}
 \end{equation*}
 
-
+\medskip
 \bigskip
 \noindent
 We can see that the image of $\mathbb{Z}_{12}$,
@@ -874,6 +871,7 @@ $\phi(\mathbb{Z}_{12}) = \{0,3,6,9\}$ and that $\ker \phi =
 \noindent
 Grouping the  elements of $\mathbb{Z}_{12}$ with their images we
 see that 
+
 
 \bigskip
 \begin{equation*}
