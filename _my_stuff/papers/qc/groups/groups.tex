@@ -565,45 +565,47 @@ $f$ is the identity in $H$ and define a homomorphism $\phi: G
 \item $\phi(a^{-1}) = (\phi(a))^{-1}$. That is, $\phi$ maps inverses to inverses.
 \item If $K$ is subgroup of $G$, then $\phi(K)$ is a subgroup of $H$.
 \end{enumerate}
+\label{lemma:homomorphism}
 \end{lemma}
 
 \bigskip
 \noindent
-\textbf{Proof:} To show 1. above let $a = \phi(e)$. Then
+\textbf{Proof:} To show 1. in Lemma \ref{lemma:homomorphism},
+first let $a = \phi(e)$. Then
 
 \begin{equation*}
 \begin{array}{rcll}
 a 
 &=& \phi(e)
-                &\hspace{8em} \mathrel{\#}  \text{by assumption} \\
+                &\hspace{13em} \mathrel{\#}  \text{by assumption} \\
 &=& \phi(e \cdot e)
-                &\hspace{8em} \mathrel{\#} x \cdot e = e \cdot x = x \text{ so } e = e \cdot e   \\
+                &\hspace{13em} \mathrel{\#} x \cdot e = e \cdot x = x \text{ so } e = e \cdot e   \\
 &=& \phi(e) \cdot \phi(e)
-                &\hspace{8em} \mathrel{\#} \text{$\phi$ is a homomorphism}\\
+                &\hspace{13em} \mathrel{\#} \text{$\phi$ is a homomorphism}\\
 &=& a \cdot \phi(e)
-                &\hspace{8em} \mathrel{\#} a = \phi(e)  \text{ (by assumption)} \\
+                &\hspace{13em} \mathrel{\#} a = \phi(e)  \text{ (by assumption)} \\
 &=& a \cdot a
-                &\hspace{8em} \mathrel{\#} \hdots \\
+                &\hspace{13em} \mathrel{\#} \hdots \\
 &\Rightarrow& a \cdot a^{-1} =  (a \cdot a)  \cdot a^{-1}
-                &\hspace{8em} \mathrel{\#} \text{multiply on the right by  $a^{-1}$} \\
+                &\hspace{13em} \mathrel{\#} \text{multiply on the right by  $a^{-1}$} \\
 &\Rightarrow& a \cdot a^{-1} =  a \cdot (a \cdot a^{-1})
-                &\hspace{8em} \mathrel{\#} \text{multiplication is associative} \\
+                &\hspace{13em} \mathrel{\#} \text{multiplication is associative} \\
 &\Rightarrow& a \cdot a^{-1} =  a \cdot  f
-                &\hspace{8em} \mathrel{\#} a \cdot a^{-1} = f, 
+                &\hspace{13em} \mathrel{\#} a \cdot a^{-1} = f, 
                  \text{ where $f$ is the identity in $H$} \\
 &\Rightarrow& a \cdot a^{-1} =  a
-                &\hspace{8em} \mathrel{\#} a \cdot  f  = a \\
+                &\hspace{13em} \mathrel{\#} a \cdot  f  = a \\
 &\Rightarrow& f = a
-                &\hspace{8em} \mathrel{\#} a \cdot a^{-1} = f  \text{ by definition of inverse} \\
+                &\hspace{13em} \mathrel{\#} a \cdot a^{-1} = f  \text{ by definition of inverse} \\
 &\Rightarrow& \phi(e) =  f
-                &\hspace{8em} \mathrel{\#} \text{$\phi$ maps the identity in $G$ to the identity in $H$}
+                &\hspace{13em} \mathrel{\#} \text{$\phi$ maps the identity in $G$ to the identity in $H$}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
 So $\phi$ maps the identity in $G$ to the identity in $H$ which
-shows 1. above.
+shows 1.
 
 \bigskip
 \noindent
@@ -666,12 +668,12 @@ $x \cdot x^{-1} = 1$ for $x, x^{-1}  \in G$. Then
 \begin{equation}
 \begin{array}{rcll}
  x \cdot x^{-1}
-&=& 1                                           &\quad \mathrel{\#} \text{definition of inverse} \\
-&\Rightarrow& \phi(x \cdot x^{-1}) = \phi(1)    &\quad \mathrel{\#} \text{apply $\phi$} \\
-&\Rightarrow& \phi(x \cdot x^{-1}) = 1          &\quad \mathrel{\#} \phi(1) =1 \text{ (see Equation \ref{eqn:1} above)} \\
-&\Rightarrow& \phi(x) \cdot \phi(x^{-1}) = 1    &\quad \mathrel{\#} \phi \text{ is a homomorphism} \\
-&\Rightarrow&  \phi(x^{-1}) = 1/\phi(x)         &\quad \mathrel{\#} \text{divide both sides by } \phi(x) \\
-&\Rightarrow&  \phi(x^{-1}) = (\phi(x))^{-1}    &\quad \mathrel{\#} \text{hence $\phi$ maps inverses to inverses}
+&=& 1                                           &\hspace{8em} \mathrel{\#} \text{definition of inverse} \\
+&\Rightarrow& \phi(x \cdot x^{-1}) = \phi(1)    &\hspace{8em} \mathrel{\#} \text{apply $\phi$} \\
+&\Rightarrow& \phi(x \cdot x^{-1}) = 1          &\hspace{8em} \mathrel{\#} \phi(1) =1 \text{(Equation (\ref{eqn:1}))} \\
+&\Rightarrow& \phi(x) \cdot \phi(x^{-1}) = 1	&\hspace{8em} \mathrel{\#} \phi \text{ is a homomorphism} \\
+&\Rightarrow& \phi(x^{-1}) = 1/\phi(x)			&\hspace{8em} \mathrel{\#} \text{divide both sides by } \phi(x) \\
+&\Rightarrow& \phi(x^{-1}) = (\phi(x))^{-1}		&\hspace{8em} \mathrel{\#} \text{hence $\phi$ maps inverses to inverses}
 \end{array}
 \label{eqn:inverse}
 \end{equation}
@@ -729,11 +731,11 @@ Now consider an element $g_1g_2^{-1} \in G$. Then
 \begin{equation}
 \begin{array}{rcll}
 f(g_1g_2^{-1})
-&=& f(g_1) f(g_2^{-1})          &\quad \mathrel{\#} \text{$f$ is a homomorphism} \\
-&=& f(g_1) (f(g_2))^{-1}        &\quad \mathrel{\#} f(g_2^{-1})   = (f(g_2))^{-1}
-										\text{ (Equation \ref{eqn:inverse})} \\
-&=& f(g_1) (f(g_1))^{-1}        &\quad \mathrel{\#} f(g_2) = f(g_1)  \text{ (Equation \ref{eqn:g})} \\
-&=& e^\prime                    &\quad \mathrel{\#} f(g_1) (f(g_1))^{-1}  = e^\prime
+&=& f(g_1) f(g_2^{-1})          &\hspace{7em} \mathrel{\#} \text{$f$ is a homomorphism} \\
+&=& f(g_1) (f(g_2))^{-1}        &\hspace{7em} \mathrel{\#} f(g_2^{-1})   = (f(g_2))^{-1}
+														\text{ (Equation \ref{eqn:inverse})} \\
+&=& f(g_1) (f(g_1))^{-1}        &\hspace{7em} \mathrel{\#} f(g_2) = f(g_1)  \text{ (Equation \ref{eqn:g})} \\
+&=& e^\prime                    &\hspace{7em} \mathrel{\#} f(g_1) (f(g_1))^{-1}  = e^\prime
 \end{array}
 \label{eqn:eprime}
 \end{equation}
@@ -748,17 +750,17 @@ notice that
 \begin{equation*}
 \begin{array}{rcll}
 g_1g_2^{-1}
-&=& e                                                           &\quad \mathrel{\#} \text{Equation \ref{eqn:eprime}} \\
-&\Rightarrow&  (g_1 \cdot g_2^{-1}) \cdot g_2 = e \cdot g_2     &\quad \mathrel{\#} \text{multiply on the right by $g_2$} \\
-&\Rightarrow&  g_1 \cdot  (g_2^{-1} \cdot g_2) = e \cdot g_2    &\quad \mathrel{\#} \text{multiplication is associative} \\
-&\Rightarrow&  g_1 \cdot e = e \cdot g_2                        &\quad \mathrel{\#} g_2^{-1} \cdot g_2 = e \\
-&\Rightarrow&  g_1 =  g_2                                       &\quad \mathrel{\#} e \cdot g = g \cdot e = g
+&=& e                                                           &\hspace{3em} \mathrel{\#} \text{Equation (\ref{eqn:eprime})} \\
+&\Rightarrow&  (g_1 \cdot g_2^{-1}) \cdot g_2 = e \cdot g_2     &\hspace{3em} \mathrel{\#} \text{multiply on the right by $g_2$} \\
+&\Rightarrow&  g_1 \cdot  (g_2^{-1} \cdot g_2) = e \cdot g_2    &\hspace{3em} \mathrel{\#} \text{multiplication is associative} \\
+&\Rightarrow&  g_1 \cdot e = e \cdot g_2                        &\hspace{3em} \mathrel{\#} g_2^{-1} \cdot g_2 = e \\
+&\Rightarrow&  g_1 =  g_2                                       &\hspace{3em} \mathrel{\#} e \cdot g = g \cdot e = g
 \end{array}
 \end{equation*}
 
 
-So $f(g_1) = f(g_2)$ (Equation \ref{eqn:g}) implies that $g_1 =
-g_2$ and so $f$ is one-to-one.
+So $f(g_1) = f(g_2)$ (Equation (\ref{eqn:g})) implies that 
+$g_1 = g_2$ and so $f$ is one-to-one.
 \end{itemize}
 
 \noindent
@@ -770,9 +772,9 @@ for many problems in group theory. Before getting to all of that,
 recall the following:
 
 \begin{itemize}
-\item A mapping $\phi: G \rightarrow G^\prime$ is called a
-      \textbf{group homomorphism} if it preserves the group operation:
-      $\phi(ab) = \phi(a)\phi(b)$. 
+\item $\phi: G \rightarrow G^\prime$ is called a
+      \textbf{group homomorphism} if it preserves the group 
+      operation: $\phi(ab) = \phi(a)\phi(b)$.
 \item The \textbf{image of $\mathbf{G}$:}  $\phi(G) = \{\phi(g) \mid g \in G\}$.
 \item The \textbf{kernel of $\boldsymbol{\phi}$}: $\ker \phi =
       \{g \in G \mid \phi(g) = e^\prime\}$  ($e^\prime$ is the identity
@@ -784,22 +786,27 @@ recall the following:
 
 \bigskip
 \noindent
-So here's a theorem:  Let $\phi: G \rightarrow G$ be a  group
-homomorphism. Then $\ker \phi  \lhd  G$. 
+So here's a theorem:  
+
+\begin{theorem}
+	Let $\phi: G \rightarrow G$ be a  group
+	homomorphism. Then $\ker \phi  \lhd  G$.
+\label{theorem:kernel_is_a_normal_subgroup}
+\end{theorem} 
 
 
-\bigskip
 \noindent 
-In other words:  The kernel of $\phi$ is a normal subgroup of
+In other words: The kernel of $\phi$ is a normal subgroup of
 $G$.  
 
 \bigskip
 \noindent
-To show this, first let $k \in \ker \phi$ and let $g \in G$. Then
+{\bf Proof: }To show Theorem \ref{theorem:kernel_is_a_normal_subgroup}, 
+first let $k \in \ker \phi$ and let $g \in G$. Then
 we want to show\footnote{Recall that for normal subgroups $xN =
 Nx$ which implies that $xnx^{-1} \in N$.}  that $gkg^{-1} \in
 \ker \phi$ or equivalently that $g \ker \phi g^{-1} = \ker
-\phi$. So now consider $\phi(gkg^{-1})$:
+\phi$. Now consider $\phi(gkg^{-1})$:
 
 \begin{equation*}
 \begin{array}{rcll}
@@ -809,7 +816,7 @@ Nx$ which implies that $xnx^{-1} \in N$.}  that $gkg^{-1} \in
 [5pt]
 &=& \phi(g)\phi(k)(\phi(g))^{-1}
                 &\hspace{8em} \mathrel{\#} \phi(g^{-1}) = (\phi(g))^{-1} 
-                				\text{ (see Equation (\ref{eqn:inverse}) above)} \\
+                				\text{ (Equation (\ref{eqn:inverse}))} \\
 [5pt]
 &=& \phi(g) e (\phi(g))^{-1}
                 &\hspace{8em} \mathrel{\#} k \in \ker \phi \Rightarrow \phi(k) = e  
@@ -832,7 +839,7 @@ Nx$ which implies that $xnx^{-1} \in N$.}  that $gkg^{-1} \in
 
 \noindent
 So $gkg^{-1} \in \ker \phi \Rightarrow g \ker \phi g^{-1} = \ker
-\phi \Rightarrow \ker \phi \lhd G$.
+\phi \Rightarrow \ker \phi \lhd G \; \square$
 
 \bigskip
 \noindent
@@ -872,10 +879,10 @@ see that
 \begin{equation*}
 \begin{array}{l c c c c}
 \mathbb{Z}_{12}: & \{0,4,8\}     & \{1,5,9\}   & \{2,6,10\}  & \{3,7,11\} \\
-                 & \bda          & \bda        & \bda        & \bda  \\
-\phi(x):         & 0             & 3           & 6           & 9     \\
-                 & \bda          & \bda        & \bda        & \bda  \\
-\phi(x)^{-1}:    & \{0,4,8\}     & \{1,5,9\}   & \{2,6,10\}  & \{3,7,11\}  \\
+                 & \bda          & \bda        & \bda        & \bda \\
+\phi(x):         & 0             & 3           & 6           & 9 \\
+                 & \bda          & \bda        & \bda        & \bda \\
+\phi(x)^{-1}:    & \{0,4,8\}     & \{1,5,9\}   & \{2,6,10\}  & \{3,7,11\} \\
                  & \veq          & \veq        & \veq        & \veq \\
                  & 0 + \ker \phi & 1+\ker \phi & 2+\ker \phi & 3+\ker \phi
 
