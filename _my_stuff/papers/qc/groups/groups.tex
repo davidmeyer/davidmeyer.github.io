@@ -812,8 +812,7 @@ $g \ker \phi g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
                 &\hspace{8em} \mathrel{\#} \text{$\phi$ is a homomorphism} \\
 [5pt]
 &=& \phi(g)\phi(k)(\phi(g))^{-1}
-                &\hspace{8em} \mathrel{\#} \phi(g^{-1}) = (\phi(g))^{-1} 
-                				\text{ (Equation (\ref{eqn:inverse}))} \\
+                &\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:inverse}): }\phi(g^{-1}) = (\phi(g))^{-1} \\
 [5pt]
 &=& \phi(g) e (\phi(g))^{-1}
                 &\hspace{8em} \mathrel{\#} k \in \ker \phi \Rightarrow \phi(k) = e  
@@ -921,8 +920,8 @@ homomorphism, and that $\widetilde{\phi}$ is one-to-one and onto.
 \begin{itemize}
 \item To show that $\widetilde{\phi}$ is
 well-defined\footnote{Well-defined is kind of the opposite of
-one-to-one where we show that if $f(x) = f(y)$ then $x = y$.}.
-That is, if $gN = hN$ then $\widetilde{\phi}(gN) =
+one-to-one where we show that if $f(x) = f(y)$ then $x = y$.}
+we need to show that if $gN = hN$ then $\widetilde{\phi}(gN) =
 \widetilde{\phi}(hN)$. Now, if $gN = hN$ then since $N$ is the
 the identity in $G/N$, $g = hn$ for some $n \in N$. This means
 
@@ -930,11 +929,16 @@ the identity in $G/N$, $g = hn$ for some $n \in N$. This means
 \begin{array}{rcll}
 \widetilde{\phi}(gN)
 &=& \phi(g)                                     &\hspace{8em} \mathrel{\#} \text{definition of $\widetilde{\phi}(gN)$} \\
+[3pt]
 &=& \phi(hn)                                    &\hspace{8em} \mathrel{\#} g = hn \text{ since } gN = hN \text{ by assumption} \\
+[3pt]
 &=& \phi(h)\phi(n)                              &\hspace{8em} \mathrel{\#} \text{$\phi$ is a homomorphism} \\
+[3pt]
 &=& \phi(h)e                                    &\hspace{8em} \mathrel{\#} n \in N = \ker \phi = \{x \in G  \mid \phi(x) = e\} \\
+[3pt]
 &=&  \phi(h)                                    &\hspace{8em} \mathrel{\#} x \cdot e = x \\
 &=& \widetilde{\phi}(hN)                        &\hspace{8em} \mathrel{\#} \text{definition of $\widetilde{\phi}$} \\
+[3pt]
 \widetilde{\phi}(gN) &=& \widetilde{\phi}(hN)   &\hspace{8em} \mathrel{\#} \text{so $\widetilde{\phi}$ is well-defined}
 \end{array}
 \end{equation*}
@@ -947,14 +951,19 @@ the identity in $G/N$, $g = hn$ for some $n \in N$. This means
 \widetilde{\phi}(gN hN)
 &=& \widetilde{\phi}(ghNN)
                 &\hspace{3em} \mathrel{\#} \text{definition of group multiplication} \\
+[3pt]
 &=& \widetilde{\phi}(ghN)
                 &\hspace{3em} \mathrel{\#} NN = N \text{($N$ a subgroup)} \\
+[3pt]
 &=& \phi(gh)
                 &\hspace{3em} \mathrel{\#} \text{definition of $\widetilde{\phi}$} \\
+[3pt]
 &=& \phi(g)\phi(h)
                 &\hspace{3em} \mathrel{\#} \phi \text{ is a homomorphism} \\
+[3pt]
 &=& \widetilde{\phi}(gN) \widetilde{\phi}(hN)
                 &\hspace{3em} \mathrel{\#} \text{definition of $\widetilde{\phi}$} \\
+[3pt]
 \widetilde{\phi}(gN hN) &=& \widetilde{\phi}(gN)
 \widetilde{\phi}(hN)
                 &\hspace{3em} \mathrel{\#} \text{therefore $\widetilde{\phi}$ is a homomorphism}
@@ -981,7 +990,7 @@ h$, so $\widetilde{\phi}$ is onto.
 \end{itemize}
 
 
-\bigskip
+\smallskip
 \noindent
 This shows that $H \simeq G/\ker \phi$.
 
