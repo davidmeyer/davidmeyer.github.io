@@ -2,10 +2,10 @@ This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: i_to_the_i_is_real.aux
 The style file: plain.bst
-Database file #1: /Users/dmm/papers/bib/qc.bib
+Database file #1: qc.bib
 You've used 2 entries,
             2118 wiz_defined-function locations,
-            509 strings with 4440 characters,
+            509 strings with 4418 characters,
 and the built_in function-call counts, 454 in all, are:
 = -- 44
 > -- 14

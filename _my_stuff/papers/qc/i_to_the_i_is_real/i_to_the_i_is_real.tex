@@ -1,114 +1,167 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-
-
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-
-\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                           % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}                  % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
 %
 %
-% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%	theorems, definitions, etc
 %
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
 %
 \makeatletter
 \renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
   \let\@ifnextchar\new@ifnextchar
   \array{*\c@MaxMatrixCols #1}}
 \makeatother
-
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
 
+%
+%	Title, author and date
+%
+\title{Is $i^i$ a real number and if so, what does it equal?}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
 \begin{document}
-
-\title {Is $i^i$ a real number and if so, what does it equal?}
-\author{David Meyer \\ dmm613@gmail.com}
-
-\date{Last update: \today}                              % Activate to display a given date or no date
 \maketitle
-
+%
+%
+%
 \noindent
 To answer this question, consider Euler's formula
 \cite{notes:eulers_formula,wiki:eulers_formula} 
 evaluated at $x =\frac{\pi}{2}$: 
 
-
-{\Large
+\medskip
+{\large
 \begin{equation*}
 \begin{array}{lllll}
 e^{ix}
-&=& \cos x + i \sin x                           &\qquad \qquad \qquad \mathrel{\#} \text{Euler's formula
-                                                  \cite{notes:eulers_formula}}   \\
+&=& \cos x + i \sin x                           	&\hspace{7em} \mathrel{\#} \text{Euler's formula
+                                                	  \cite{notes:eulers_formula}}   \\
 [5pt]
 &\Rightarrow& e^{i \frac{\pi}{2}} = \cos \frac{\pi}{2} + i \sin \frac{\pi}{2}
-                                                &\qquad \qquad \qquad \mathrel{\#} \text{set $x = \frac{\pi}{2}$} \\
+                                                	&\hspace{7em} \mathrel{\#} \text{set $x = \frac{\pi}{2}$} \\
 [5pt]
 &\Rightarrow& e^{i \frac{\pi}{2}} = 0 +  i \cdot 1
-                                                &\qquad \qquad \qquad \mathrel{\#} \cos \frac{\pi}{2} = 0
-                                                  \text{ and} \sin \frac{\pi}{2} = 1 \\
+                                                	&\hspace{7em} \mathrel{\#} \cos \frac{\pi}{2} = 0
+                                                	  \text{ and} \sin \frac{\pi}{2} = 1 \\
 [5pt]
-&\Rightarrow& e^{i \frac{\pi}{2}}  =  i         &\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
+&\Rightarrow& e^{i \frac{\pi}{2}}  =  i         	&\hspace{7em}\mathrel{\#} \text{simplify} \\
 [5pt]
-&\Rightarrow& {(e^{i \frac{\pi}{2}})}^i =  i^i  &\qquad \qquad \qquad \mathrel{\#} \text{raise both sides to $i$} \\
+&\Rightarrow& {(e^{i \frac{\pi}{2}})}^i =  i^i  	&\hspace{7em} \mathrel{\#} \text{raise both sides to $i$} \\
 [5pt]
-&\Rightarrow& e^{\frac{i^2 \pi}{2}} =  i^i      &\qquad \qquad \qquad \mathrel{\#}  {(x^m)}^n = x^{mn} \\
+&\Rightarrow& e^{\frac{i^2 \pi}{2}} =  i^i      	&\hspace{7em} \mathrel{\#}  {(x^m)}^n = x^{mn} \\
 [5pt]
-&\Rightarrow& e^{- \frac {\pi}{2}} =  i^i       &\qquad \qquad \qquad \mathrel{\#} i^2 = -1 \\
+&\Rightarrow& e^{- \frac {\pi}{2}} =  i^i       	&\hspace{7em} \mathrel{\#} i^2 = -1 \\
 [5pt]
 &\Rightarrow& e^{- \frac {\pi}{2}} \in \mathbb{R} \Rightarrow i^i \in \mathbb{R}
-                                                &\qquad \qquad \qquad \mathrel{\#} \text{$i^i$ is a real number} 
+                                               		&\hspace{7em} \mathrel{\#} \text{$i^i$ is a real number} 
 \end{array}
-\end{equation*}
-}
+\end{equation*}}
 
 
 \bigskip
 \noindent
-Ok, $i^i \in \mathbb{R}$, but what does $i^i$ equal? Well, we saw
+Ok, $i^i \in \mathbb{R}$, but what does $i^i$ equal? Well, we saw 
 that $e^{- \frac {\pi}{2}} = i^i$. So
 
-\bigskip
-{\Large
-\begin{equation*}
-i^i = e^{- \frac {\pi}{2}} \approx 0.20788
-\end{equation*}
+
+{\large
+	\begin{equation*}
+		i^i = e^{- \frac {\pi}{2}} \approx 0.20788
+	\end{equation*}
 }
+
+\vspace{-0.25cm}
+\begin{figure}[H]
+\center{\includegraphics[frame,scale=0.45] {images/e_to_the_minus_pi_over_two.png}}
+\end{figure}
 %
 %
 %
-% \section*{Acknowledgements}
+\section*{Acknowledgements}
 %
 %	LaTeX source on overleaf.com
 %
-% \section*{\LaTeX \hspace{0.10 mm} Source}
+\section*{\LaTeX \hspace{0.10 mm} Source}
 % \url{}
 %
 %	get a bibliography
@@ -122,4 +175,5 @@ i^i = e^{- \frac {\pi}{2}} \approx 0.20788
 %	done
 %
 \end{document} 
+
 
