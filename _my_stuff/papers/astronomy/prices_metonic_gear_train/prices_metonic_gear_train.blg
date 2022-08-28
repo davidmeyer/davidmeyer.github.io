@@ -1,11 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: prices_metonic_gear_train.aux
 The style file: plain.bst
-Database file #1: /Users/dmm/papers/bib/astronomy.bib
+Database file #1: astronomy.bib
 You've used 17 entries,
             2118 wiz_defined-function locations,
-            608 strings with 7296 characters,
+            608 strings with 7274 characters,
 and the built_in function-call counts, 5053 in all, are:
 = -- 483
 > -- 243
