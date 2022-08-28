@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 AUG 2022 09:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 AUG 2022 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1440,24 +1440,29 @@ Package pdftex.def Info: images/sectional_diagram.png  used on input line 242.
 File: images/price_metonic_gear_train.png Graphic file (type png)
 <use images/price_metonic_gear_train.png>
 Package pdftex.def Info: images/price_metonic_gear_train.png  used on input lin
-e 261.
-(pdftex.def)             Requested size: 234.8775pt x 146.78827pt.
+e 262.
+(pdftex.def)             Requested size: 258.36668pt x 161.47935pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 262.
+(caption)                particular \caption on input line 263.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 261--262
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 262--263
 [][] 
+ []
+
+
+Overfull \hbox (17.2222pt too wide) in paragraph at lines 250--265
+[]$[]$  $[]$ 
  []
 
 [3 <./images/sectional_diagram.png> <./images/price_metonic_gear_train.png>]
 <images/price_gear_train.png, id=106, 1284.8pt x 803.0pt>
 File: images/price_gear_train.png Graphic file (type png)
 <use images/price_gear_train.png>
-Package pdftex.def Info: images/price_gear_train.png  used on input line 315.
+Package pdftex.def Info: images/price_gear_train.png  used on input line 316.
 (pdftex.def)             Requested size: 256.95544pt x 160.59715pt.
 <images/fragmentA.jpg, id=112, 1039.885pt x 927.465pt>
 File: images/fragmentA.jpg Graphic file (type jpg)
@@ -1471,7 +1476,7 @@ File: images/gearing_for_lunar_anomaly.png Graphic file (type png)
 <use images/gearing_for_lunar_anomaly.png>
 Package pdftex.def Info: images/gearing_for_lunar_anomaly.png  used on input li
 ne 375.
-(pdftex.def)             Requested size: 256.95544pt x 160.59715pt.
+(pdftex.def)             Requested size: 321.19922pt x 200.74951pt.
  [5 <./images/fragmentA.jpg> <./images/gearing_for_lunar_anomaly.png>]
 <images/turning_the_metonic_pointer_wright.png, id=140, 1284.8pt x 803.0pt>
 File: images/turning_the_metonic_pointer_wright.png Graphic file (type png)
@@ -1530,7 +1535,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on prices_metonic_gear_train.pdf (8 pages, 11119008 bytes).
+Output written on prices_metonic_gear_train.pdf (8 pages, 11119009 bytes).
 PDF statistics:
  247 PDF objects out of 1000 (max. 8388607)
  198 compressed objects within 2 object streams
