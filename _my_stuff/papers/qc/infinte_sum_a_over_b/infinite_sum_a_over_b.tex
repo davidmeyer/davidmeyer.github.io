@@ -92,7 +92,7 @@
 %
 %	Title, author and date
 %
-\title{What Does The Series $\sum\limits_{n = 1}^\infty (\frac{a}{b})^n $ Converge To?}
+\title{What Does The Series $\sum\limits_{n = 1}^\infty {(\frac{a}{b})}^{n}$ Converge To?}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -104,84 +104,132 @@
 %
 %
 %
-\section{One Way To Think About The Problem}
+\bigskip
+\section{First Up: Does This Series Converge?}
+Here we'll use the ratio test for convergence \cite{wiki:ratio_test}
+and so we want to think of our series $S$ as
 
+\bigskip
+\begin{equation*}
+S = \sum\limits_{n = 1}^{\infty} a_n
+\end{equation*}
 
+\medskip
 \noindent
-We know that $\sum\limits_{n = 1}^\infty (\frac{a}{b})^n  = \frac{a}{b \:-\: a}$ 
-where $a,b \in \mathbb{N}$ with $b \neq 0$ and $a < b$ (so $b - a \neq 0$). 
+where $a_n = {\left ( \frac{a}{b} \right )}^n.$
 
 \bigskip
 \noindent
-OK, but why?
+Next, notice that the usual form of the ratio test uses 
+the limit $L = \lim\limits_{n\to \infty}\left|{\frac {a_{{n+1}}}{a_{n}}}\right|$,
+where 
+
+\medskip
+\begin{enumerate}
+\item if $L < 1$ then the series converges absolutely;
+\label{enumerate:less_than_one}
+\item if $L > 1$ then the series diverges;
+\item if $L = 1$ or the limit fails to exist, then the test is 
+      inconclusive (because there exist both convergent and divergent 
+      series that satisfy this case).
+\end{enumerate}
 
 \bigskip
 \noindent
- Here's one way to think about it:  
+Then to apply the ratio test we want to look at the following
+limit
+
+\bigskip
+\begin{equation*}
+L = \lim _{n\to \infty}\left| \dfrac{\left ( \frac{a}{b}\right )^{n+1}} 
+                                {\left ( \frac{a}{b} \right )^{n}} \right|
+\end{equation*}
+
+\bigskip
+\noindent
+Since $\lim\limits_{n\to \infty} c = c$ for constant $c$ and since 
+$\dfrac{a}{b}$ is a constant with respect to $n$ we see that the limit 
+$L$ is
+
+\bigskip
+\begin{equation*}
+L = \lim _{n\to \infty}\left| \dfrac{\left ( \frac{a}{b}\right )^{n+1}} 
+                                {\left ( \frac{a}{b} \right )^{n}} \right|
+                                = \lim _{n\to \infty}\left| \dfrac{a}{b} \right |
+                                = \dfrac{a}{b}
+\end{equation*}
+
+\bigskip
+\noindent
+So if $a < b$ then $\dfrac{a}{b} < 1$ and by clause \ref{enumerate:less_than_one}
+of the ratio test we know that the series converges absolutely.
+
+
+\section{Next, What Does $\sum\limits_{n = 1}^\infty {(\frac{a}{b})}^{n}$ Converge To?}
+
+\bigskip
+\noindent
+Here is one way to think about it:  
       
 \begin{equation*}
 \begin{array}{lllll}
 S
-&=& \sum\limits_{n = 1}^\infty (\frac{a}{b})^n = (\frac{a}{b})^1
+&=& \sum\limits_{n = 1}^\infty {(\frac{a}{b})}^n = (\frac{a}{b})^1
         + (\frac{a}{b})^2 + (\frac{a}{b})^3 + \cdots
-                &\qquad \mathrel{\#} \text{define $S$} \\  
-\vspace{2.0mm}
+                &\hspace{4em} \mathrel{\#} \text{define $S := 
+                	\sum\limits_{n = 1}^\infty {(\frac{a}{b})}^n$} \\  
+[12pt]
 &\Rightarrow& (\frac{b}{a}) \cdot S = (\frac{b}{a}) \cdot \Big
         [(\frac{a}{b})^1 + (\frac{a}{b})^2 + (\frac{a}{b})^3 +
         \cdots \Big ]
-                &\qquad \mathrel{\#} \text{multiply both sides by
-i               $\frac{b}{a}$} \\ 
-\vspace{2.0mm}
+                &\hspace{4em} \mathrel{\#} \text{multiply both sides by $(\frac{b}{a})$} \\ 
+[12pt]
 &\Rightarrow&  (\frac{b}{a}) \cdot S = 1 + \Big [(\frac{a}{b})^1
         + (\frac{a}{b})^2 + (\frac{a}{b})^3 + \cdots \Big ]
-                &\qquad  \mathrel{\#} \text{multiply through on right side} \\
-\vspace{2.0mm}
+                &\hspace{4em}  \mathrel{\#} \text{multiply through on right side} \\
+[12pt]
 &\Rightarrow&  (\frac{b}{a}) \cdot S = 1 + S
-                &\qquad  \mathrel{\#} \text{definition of $S$} \\
-\vspace{2.0mm}
+                &\hspace{4em}  \mathrel{\#} \text{definition of $S$} \\
+[12pt]
 &\Rightarrow&  (\frac{b}{a}) \cdot S - S = 1
-                &\qquad  \mathrel{\#} \text{subtract $S$ from both sides} \\
-\vspace{2.0mm}
+                &\hspace{4em}  \mathrel{\#} \text{subtract $S$ from both sides} \\
+[12pt]
 &\Rightarrow&  (\frac{b}{a}) \cdot S - (\frac{a}{a}) \cdot S = 1
-                &\qquad  \mathrel{\#} \text{multiply $S$ by $1 = \frac{a}{a}$} \\
-\vspace{2.0mm}
+                &\hspace{4em}  \mathrel{\#} \text{multiply $S$ by $1 = \frac{a}{a}$} \\
+[12pt]
 &\Rightarrow&  S \cdot \Big [\frac{b}{a}  - \frac{a}{a} \Big ] = 1
-                &\qquad  \mathrel{\#} \text{factor out $S$} \\
-\vspace{2.0mm}
+                &\hspace{4em}  \mathrel{\#} \text{factor out $S$} \\
+[12pt]
 &\Rightarrow& S \cdot \Big [ \frac{b \:-\: a} {a} \Big ] = 1
-                &\qquad  \mathrel{\#} \text{simplify} \\ 
-\vspace{2.0mm} 
+                &\hspace{4em}  \mathrel{\#} \text{simplify} \\ 
+[12pt] 
 &\Rightarrow& S  = \frac{a}{b \:-\: a}
-                &\qquad  \mathrel{\#} \text{multiply both sides
+                &\hspace{4em}  \mathrel{\#} \text{multiply both sides
                  by $ \frac{a}{b \:-\: a} $} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So $S = \sum\limits_{n = 1}^\infty (\frac{a}{b})^n  =  \frac{a}{b
-\:-\: a}$ where $a,b \in \mathbb{N}$, $b \neq 0$ and $a < b$.   
+So $S = \sum\limits_{n = 1}^\infty {(\frac{a}{b})}^n  =  \frac{a}{b
+\:-\: a}$, where $a,b \in \mathbb{Z}_{+}$ and $a < b$.   
 
 \bigskip
 \noindent
 For example, if we let $a =1$ and $b =2$ then $\sum\limits_{n =
-1}^\infty (\frac{1}{2})^n = \frac{1}{2 \:-\: 1} = 1$. Similarly,
+1}^\infty {(\frac{1}{2})}^n = \frac{1}{2 \:-\: 1} = 1$. Similarly,
 if $a =1$ and $b = 3$ then $\sum\limits_{n = 1}^\infty
-(\frac{1}{3})^n = \frac{1}{3 \:-\: 1} = \frac{1}{2}$.
-%
+{(\frac{1}{3})}^n = \frac{1}{3 \:-\: 1} = \frac{1}{2}$.
 %
 %
 % \section{Conclusions}
 %
 %
-%
 \section*{Acknowledgements}
-Thanks to Dave Neary for pointing out that this series diverges if $a \geq b$.
-
 %
 %	LaTeX source on overleaf.com
 %
-% \section*{\LaTeX \hspace{0.10 mm} Source}
+\section*{\LaTeX \hspace{0.10 mm} Source}
 % \url{}
 %
 %	get a bibliography
