@@ -119,13 +119,13 @@ norm $\norm{\mathbf{x}} \coloneqq \sqrt{\langle
 \mathbf{x},\mathbf{x}\rangle}$ and consequently $(V,d)$ is a
 metric space with metric $d(\mathbf{x},\mathbf{y}) =
 \sqrt{\langle
-\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.  
+\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.
 
 \bigskip
 \noindent
-One quick thing is to notice is that as we go from metric 
-to norm to inner product we are adding structure to a vector 
-space. Specifically 
+One quick thing is to notice is that as we go from metric to norm
+to inner product we are adding structure to a vector space.
+Specifically
 
 \begin{equation*}
 \begin{array}{rclll}
@@ -141,15 +141,14 @@ space. Specifically
 
 \bigskip
 \noindent
-If we consider an arbitrary set $X$ with no other structure we can 
-only tell if two points are equal. A metric adds structure
-to such a set which allows us to calculate the distance between
-any two points (as well as whether they are equal or now). Similarly,
-a norm adds structure to a vector space that allows us to calculate
-length (as well as distance and equality). A inner product
-adds the ability to calculate angles, etc. Both the algebraic 
-and geometric aspects of this increasing structure are pretty 
-interesting.
+If we consider an arbitrary set $X$ with no other structure we
+can only tell if two points are equal. A metric adds structure to
+$X$ which allows us to calculate the distance between any two
+points $x,y \in X$. Similarly, a norm adds structure to a vector
+space that allows us to calculate length (as well as distance and
+equality).  An inner product adds the ability to calculate
+angles, etc. Both the algebraic and geometric aspects of this
+increasing structure are pretty interesting.
 
 \section{Metric Spaces}
 \label{sec:metric_spaces}
@@ -164,8 +163,8 @@ Figure \ref{fig:set}.
 \begin{figure}[H]
 \centering
   \resizebox{0.40 \textwidth}{!} {	
-    \tikzstyle{background rectangle}=[thin,draw=black]												% make the frame thinner (there must be an easier way)
-    \begin{tikzpicture}[use Hobby shortcut, show background rectangle]								% couldn't control thickness with \begin{tikzpicture} [framed]
+    \tikzstyle{background rectangle}=[thin,draw=black]          % make the frame thinner (there must be an easier way) 
+    \begin{tikzpicture}[use Hobby shortcut, show background rectangle] % couldn't control thickness with \begin{tikzpicture} [framed]
 %
 %	\begin{tikzpicture}[use Hobby shortcut]
 %														
@@ -204,11 +203,14 @@ following three properties:
 
 \begin{equation*}
 \begin{array}{llll}
-1. & d(x,y) = 0 \Leftrightarrow x = y	&& \qquad \qquad \mathrel{\#} \text{this property is called "positive definiteness"} \\
+1. & d(x,y) = 0 \Leftrightarrow x = y
+                && \qquad \qquad \mathrel{\#} \text{this property is called "positive definiteness"} \\
 [8pt]
-2. & d(x,y) = d(y,x)					&& \qquad \qquad \mathrel{\#} \text{this property is called "symmetry"} \\
+2. & d(x,y) = d(y,x)
+                && \qquad \qquad \mathrel{\#} \text{this property is called "symmetry"} \\
 [8pt]
-3. & d(x,y) \leq d(x,z) + d(z,y)		&& \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"} 
+3. & d(x,y) \leq d(x,z) + d(z,y)
+                && \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"} 
 \end{array}
 \end{equation*}
 
@@ -221,14 +223,15 @@ distance from $x$ to $y$ to be the same as the distance from $y$
 to $x$; this is property 2.  Finally, property 3, the triangle
 inequality, is what we would expect in normal Euclidian space
 \cite{euclidian_space}. The triangle inequality tells us that if
-we take a "detour" through a third point $z$ then the distance 
-between $x$ and $y$ though $z$ will be greater than (or possibly equal to) the distance
-between $x$ and $y$ on the direct path (see Figure \ref{fig:triangle_inequality}). 
-Note that there are important differences (which we will get to 
-later) between distance, as measured by a metric $d(x,y)$ and 
-length, as measured by a norm $\norm{\mathbf{x}}$, but for now 
-we'll consider the "distance version" of the triangle inequality 
-as shown in Figure \ref{fig:triangle_inequality}.
+we take a "detour" through a third point $z$ then the distance
+between $x$ and $y$ though $z$ will be greater than (or possibly
+equal to) the distance between $x$ and $y$ on the direct path
+(see Figure \ref{fig:triangle_inequality}).  Note that there are
+important differences (which we will get to later) between
+distance, as measured by a metric $d(x,y)$ and length, as
+measured by a norm $\norm{\mathbf{x}}$, but for now we'll
+consider the "distance version" of the triangle inequality as
+shown in Figure \ref{fig:triangle_inequality}.
 
 \bigskip
 %
