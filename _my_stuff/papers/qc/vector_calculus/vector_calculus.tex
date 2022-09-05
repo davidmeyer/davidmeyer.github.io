@@ -1,57 +1,52 @@
 \documentclass{article}
 %
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
 %   get various packages
 %
 \usepackage[margin=1.0in]{geometry}                                     % adjust margins
-\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{setspace}                                                   % need this for \setstrech{...}
 \usepackage{scrextend}                                                  % need this for addmargin
 \usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
-\usepackage{bigints}                                                    % bigger integral symbol
 %
 %   tikz et al
 %
 \usepackage{tikz}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,
-                math,decorations,through,intersections,
-                lindenmayersystems,backgrounds}    
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
-\usepackage{pgfplots}	
 %
-%	math stuff
+%	more math stuff
 %
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}                                                    % get \mathbold
 \usepackage{gensymb}                                                    % get \degree
-\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{mathrsfs}
-
 \usepackage{hyperref}
-\usepackage{url}
 \usepackage{subcaption}
 \usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{mathtools}
 \usepackage{graphicx}
-\usepackage[export]{adjustbox}
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \usepackage{float}
-\usepackage{bigints}
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-
-
-
 %
 %	watermarks
 %
@@ -62,6 +57,8 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 %
 %
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
@@ -69,25 +66,40 @@
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{remark}{Remark}[section]
-
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
 %
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 %
-%	handy command
+%	handy commands
 %
-\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
-
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
 %
-%	title, etc
+%	Title, author and date
 %
 \title{A Few Notes on Vector Calculus }
-\author{David Meyer \\ dmm613@gmail.com}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
 \date{Last update: \today}
 %
 %	be compatible
 %
 \pgfplotsset{compat=1.17} 
+%
 %
 %
 \begin{document}
@@ -1197,7 +1209,7 @@ ${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial
 \setstretch{1.0}
 
 \begin{figure}[t]
-\center{\includegraphics[scale=0.95] {images/r_theta_to_x_y.jpg}}
+\center{\includegraphics[scale=1.0] {images/r_theta_to_x_y.jpg}}
 \caption{Transforming the $r\theta$-plane to the $xy$ plane}
 \label{fig:r_theta_to_x_y}
 \end{figure}
@@ -2198,7 +2210,7 @@ was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
 (\ref{eqn:magnitude}), so the triangle inequality (or reverse
 triangle inequality) was not needed.
 
-\section{Appendix A}
+\section*{Appendix A}
 I had thought that one way to prove the Cauchy–Schwarz inequality
 is to use the reverse triangle inequality, but Dave Neary pointed
 out that I didn't need it.  So I'm leaving the derivation of the
@@ -2296,11 +2308,10 @@ $\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big |
 \leq \| \mathbf{x} - \mathbf{y}\|. \;\; \square$ 
 \setstretch{1.0}
 \end{theorem}
-
 %
 %	LaTeX source on overleaf.com
 %
-\section*{\LaTeX}
+\section*{\LaTeX \hspace{0.10 mm} Source}
 \url{https://www.overleaf.com/read/fgtfvmgdkbhh}
 %
 %	get a bibliography
