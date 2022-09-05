@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 SEP 2022 06:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 SEP 2022 07:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1428,7 +1428,7 @@ File: uesvect.fd
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-<images/orthogonal_projection.png, id=161, 595.22375pt x 437.635pt>
+<images/orthogonal_projection.png, id=149, 595.22375pt x 437.635pt>
 File: images/orthogonal_projection.png Graphic file (type png)
 <use images/orthogonal_projection.png>
 Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
@@ -1440,13 +1440,13 @@ Overfull \hbox (29.96326pt too wide) detected at line 632
  []
 
 [5 <./images/orthogonal_projection.png>]
-<images/cross_product_parallelogram.png, id=194, 1927.2pt x 1505.625pt>
+<images/cross_product_parallelogram.png, id=182, 1927.2pt x 1505.625pt>
 File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
 line 702.
 (pdftex.def)             Requested size: 202.34727pt x 158.0838pt.
-<images/right_hand_rule_cross_product.png, id=197, 1284.8pt x 1163.34625pt>
+<images/right_hand_rule_cross_product.png, id=185, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
@@ -1454,19 +1454,19 @@ t line 739.
 (pdftex.def)             Requested size: 192.71169pt x 174.4944pt.
  [6 <./images/cross_product_parallelogram.png>] [7 <./images/right_hand_rule_cr
 oss_product.png>] [8] [9]
-<images/r_theta_to_x_y.jpg, id=257, 344.487pt x 132.9768pt>
+<images/r_theta_to_x_y.jpg, id=245, 344.487pt x 132.9768pt>
 File: images/r_theta_to_x_y.jpg Graphic file (type jpg)
 <use images/r_theta_to_x_y.jpg>
 Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1212.
 (pdftex.def)             Requested size: 344.48615pt x 132.97647pt.
  [10]
-<images/type_I_region.png, id=264, 1163.34625pt x 348.30125pt>
+<images/type_I_region.png, id=252, 1163.34625pt x 348.30125pt>
 File: images/type_I_region.png Graphic file (type png)
 <use images/type_I_region.png>
 Package pdftex.def Info: images/type_I_region.png  used on input line 1290.
 (pdftex.def)             Requested size: 349.00658pt x 104.49118pt.
  [11 <./images/r_theta_to_x_y.jpg>]
-<images/type_II_region.png, id=274, 904.37875pt x 406.51875pt>
+<images/type_II_region.png, id=262, 904.37875pt x 406.51875pt>
 File: images/type_II_region.png Graphic file (type png)
 <use images/type_II_region.png>
 Package pdftex.def Info: images/type_II_region.png  used on input line 1312.
@@ -1484,7 +1484,7 @@ Overfull \hbox (65.56273pt too wide) detected at line 1669
  []
 
 [15]
-<images/delta-r.png, id=328, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=316, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
 Package pdftex.def Info: images/delta-r.png  used on input line 1724.
@@ -1511,13 +1511,13 @@ LaTeX Warning: Command \textdagger invalid in math mode on input line 1989.
 LaTeX Warning: Command \textdagger invalid in math mode on input line 1989.
 
 Missing character: There is no „ in font cmr10!
-<images/definite_integral.png, id=373, 752.8125pt x 661.47125pt>
+<images/definite_integral.png, id=360, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
 Package pdftex.def Info: images/definite_integral.png  used on input line 1994.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
-<images/line_integral.png, id=375, 730.73pt x 244.915pt>
+<images/line_integral.png, id=362, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
 Package pdftex.def Info: images/line_integral.png  used on input line 2015.
@@ -1536,7 +1536,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [19 <./images/definite_integral.png> <./images/line_integral.png>] [20]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=394, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=382, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
@@ -1565,61 +1565,52 @@ ttps : / / www . nist . gov / disaster-[]failure-[]studies /
  []
 
 [23]) [24] (./vector_calculus.aux)
-
-Package rerunfilecheck Warning: File `vector_calculus.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `vector_calculus.out':
-(rerunfilecheck)             Before: E756025CD8FE62F0F3398B8264499E5A;2989
-(rerunfilecheck)             After:  7FF1A0D6B973FEE982A1DB3FAD6C5FA3;2873.
+Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
+(rerunfilecheck)             Checksum: 09D6BA35DEB9DB954E94D3273ED452C7;2652.
  ) 
 Here is how much of TeX's memory you used:
- 53728 strings out of 478994
- 1351342 string characters out of 5858184
- 1991633 words of memory out of 5000000
- 70288 multiletter control sequences out of 15000+600000
+ 53723 strings out of 478994
+ 1351291 string characters out of 5858184
+ 1991632 words of memory out of 5000000
+ 70285 multiletter control sequences out of 15000+600000
  424661 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,22n,131p,755b,996s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
-ype1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dis
-t/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (24 pages, 1868801 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/esvect/vect10.pfb>
+Output written on vector_calculus.pdf (24 pages, 1867891 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 429 compressed objects within 5 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

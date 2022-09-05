@@ -1,11 +1,11 @@
 \documentclass{article}
 %
 %
-%	LaTeX template
+%	vector_calculus.tex
 %
 %	David Meyer
 %	dmm613@gmail.com
-%	15 July 2022
+%	05 Sep 2022
 %
 %
 %   get various packages
@@ -2202,7 +2202,7 @@ where $P$, $Q$, and $R$ are scalar functions.
 \section{Conclusions}
 \label{sec:conclusions}
 
-\section{Acknowledgements}
+\section*{Acknowledgements}
 Thanks to Dave Neary who pointed out that using the reverse
 triangle inequality in my proof of the Cauchy–Schwarz inequality
 was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
@@ -2210,7 +2210,7 @@ was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
 (\ref{eqn:magnitude}), so the triangle inequality (or reverse
 triangle inequality) was not needed.
 
-\section{Appendix A}
+\section*{Appendix A}
 I had thought that one way to prove the Cauchy–Schwarz inequality
 is to use the reverse triangle inequality, but Dave Neary pointed
 out that I didn't need it.  So I'm leaving the derivation of the
@@ -2218,7 +2218,7 @@ reverse triangle inequality in this appendix.
 
 \bigskip
 \noindent
-\begin{theorem} {\bf Reverse Triangle Inequality:} 
+{\bf Theorem: Reverse Triangle Inequality:} 
 $\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big |
 \leq \| \mathbf{x} - \mathbf{y}\|$ 
 
@@ -2237,25 +2237,25 @@ observing that
 					&\hspace{1.1cm} \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
 					\mathbf{x} =  \mathbf{x} + 0 
 					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
-[8pt]
+[5pt]
 &=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
 					&\hspace{1.1cm} \mathrel{\#} \text{addition is associative: 
 					$\mathbf{v}_1 + (\mathbf{v}_2 + \mathbf{v}_3) 
 					= (\mathbf{v}_1 + \mathbf{v}_2) + \mathbf{v}_3$} \\
-[8pt]
+[5pt]
 &\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
 					&\hspace{1.1cm} \mathrel{\#} \text{by the triangle inequality:
 					$\| \mathbf{v}_1 + \mathbf{v}_2 \| \leq \| \mathbf{v}_1 \| + \| \mathbf{v}_2 \|$} \\
-[8pt]
+[5pt]
 &\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
 					&\hspace{1.1cm} \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
-[8pt]
+[5pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
 					&\hspace{1.1cm} \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}
 \end{array}
 \end{equation*}
 
-
+\smallskip
 \noindent
 and
 
@@ -2266,29 +2266,29 @@ and
 					&\quad \mathrel{\#} \text{add 0 to $\mathbf{y}$: }
 					\mathbf{y} = \mathbf{y} + 0
 					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
-[8pt]
+[5pt]
 &=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
 					&\quad \mathrel{\#} \text{addition is associative} \\
-[8pt] 
+[5pt] 
 &\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
 					&\quad \mathrel{\#} \text{by the triangle inequality} \\
-[8pt]
+[5pt]
 &\Rightarrow& \| \mathbf{y} \| \leq \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \|
 					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{y} \|$}\\
-[8pt]
+[5pt]
 &\Rightarrow& \| \mathbf{y} \| - \| \mathbf{x} \| \leq \| \mathbf{y} - \mathbf{x}\| 
 					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
-[8pt]
+[5pt]
 &\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
 					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{v}_1 \leq \mathbf{v}_2) 
 					\Rightarrow -\mathbf{v}_1 \geq -\mathbf{v}_2$} \\
-[8pt]
+[5pt]
 &\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
 					&\quad \mathrel{\#} \| \mathbf{y} - \mathbf{x}\|
 					= \| - (\mathbf{y} - \mathbf{x}) \|
 					= \| \mathbf{x} - \mathbf{y} \|
 					\text{ by Equation (\ref{eqn:magnitude})} \\
-[8pt]
+[5pt]
 &\Rightarrow& -\| \mathbf{x} - \mathbf{y}\| \leq \| \mathbf{x} \| - \| \mathbf{y} \| 
 					&\quad \mathrel{\#} \text{rearrange}
 
@@ -2297,7 +2297,7 @@ and
 \end{equation*}
 
 \bigskip
-\setstretch{1.5}
+{\setstretch{1.5}
 \noindent
 Combining the expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
 we get $-\| \mathbf{x} - \mathbf{y} \| 
@@ -2306,8 +2306,7 @@ we get $-\| \mathbf{x} - \mathbf{y} \|
 that is, the reverse triangle inequality
 $\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
 \leq \| \mathbf{x} - \mathbf{y}\|. \;\; \square$ 
-\setstretch{1.0}
-\end{theorem}
+\par}
 %
 %	LaTeX source on overleaf.com
 %
