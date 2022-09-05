@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  10 JUN 2022 11:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 SEP 2022 06:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,7 +1478,7 @@ oss_product.png>] [8] [9]
 File: images/r_theta_to_x_y.jpg Graphic file (type jpg)
 <use images/r_theta_to_x_y.jpg>
 Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1200.
-(pdftex.def)             Requested size: 292.81532pt x 113.0308pt.
+(pdftex.def)             Requested size: 327.26077pt x 126.32724pt.
  [10]
 <images/type_I_region.png, id=259, 1163.34625pt x 348.30125pt>
 File: images/type_I_region.png Graphic file (type png)
@@ -1591,7 +1591,7 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 Here is how much of TeX's memory you used:
  54041 strings out of 478994
  1350404 string characters out of 5858184
- 2008246 words of memory out of 5000000
+ 2008245 words of memory out of 5000000
  70594 multiletter control sequences out of 15000+600000
  424661 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1627,7 +1627,7 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (24 pages, 1868471 bytes).
+Output written on vector_calculus.pdf (24 pages, 1868711 bytes).
 PDF statistics:
  573 PDF objects out of 1000 (max. 8388607)
  435 compressed objects within 5 object streams
