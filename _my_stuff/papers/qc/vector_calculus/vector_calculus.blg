@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: vector_calculus.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 16 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            572 strings with 6637 characters,
-and the built_in function-call counts, 3510 in all, are:
-= -- 352
-> -- 112
+            578 strings with 6841 characters,
+and the built_in function-call counts, 3727 in all, are:
+= -- 371
+> -- 119
 < -- 0
-+ -- 48
-- -- 32
-* -- 110
-:= -- 606
-add.period$ -- 64
-call.type$ -- 16
-change.case$ -- 63
++ -- 51
+- -- 34
+* -- 120
+:= -- 644
+add.period$ -- 67
+call.type$ -- 17
+change.case$ -- 66
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 117
-empty$ -- 353
-format.name$ -- 32
-if$ -- 770
+cite$ -- 17
+duplicate$ -- 129
+empty$ -- 375
+format.name$ -- 34
+if$ -- 816
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 2
-newline$ -- 98
-num.names$ -- 32
-pop$ -- 128
+int.to.str$ -- 17
+missing$ -- 4
+newline$ -- 103
+num.names$ -- 34
+pop$ -- 136
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 51
 quote$ -- 0
-skip$ -- 94
+skip$ -- 100
 stack$ -- 0
-substring$ -- 80
-swap$ -- 16
+substring$ -- 85
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 62
+type$ -- 64
 warning$ -- 0
-while$ -- 32
-width$ -- 18
-write$ -- 192
+while$ -- 34
+width$ -- 19
+write$ -- 202
