@@ -2211,6 +2211,92 @@ was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
 triangle inequality) was not needed.
 
 \section*{Appendix A}
+\subsection*{{\Large Fields and Vector Spaces}}
+
+\subsubsection*{{\large Fields}}
+A \emph{field} is an algebraic structure $\mathbb{K}$ in which we can 
+add and multiply elements, such that the following laws hold:
+
+\bigskip
+\noindent
+{\bf Addition Laws}
+\smallskip
+\begin{itemize}
+\item [] (FA0) For any $a,b \in \mathbb{K}$ there is a unique element $a+b \in \mathbb{K}$.
+\item [] (FA1) For all $a,b,c \in \mathbb{K}$ we have $a+(b+c) = (a+b)+c$.
+\item [] (FA2) There is an element $0 \in \mathbb{K}$ such that $a+0= 0+a = a$ for all  $a \in \mathbb{K}$.
+\item [] (FA3) For any $a \in \mathbb{K}$ there exists $-a \in \mathbb{K}$ such that $a+(-a) = (-a)+a = 0$.
+\item [] (FA4) For any $a,b \in \mathbb{K}$ we have $a+b = b+a$.
+\end{itemize}
+
+\medskip
+\noindent
+{\bf Multiplication laws}
+\smallskip
+\begin{itemize}
+\item [] (FM0) For any $a, b \in \mathbb{K}$, there is a unique element $ab \in \mathbb{K}$.
+\item [] (FM1) Forall $a,b,c \in \mathbb{K}$ we have a $(bc)=(ab)c$.
+\item [] (FM2) There is an element $1 \in \mathbb{K}$, $1 \ne 0$ from (FA2),
+               such that $a1 = 1a = a$ for all $a \in \mathbb{K}$.
+\item [] (FM3) For any $a \in \mathbb{K}$ with $a \ne 0$, there exists $a^{-1} \in \mathbb{K}$
+               such that $aa^{-1} = a^{-1}a = 1$.
+\item [] (FM4) For any $a,b \in \mathbb{K}$ we have $ab=ba$.
+\end{itemize}
+
+\medskip
+\noindent
+{\bf Distributive law}
+\smallskip
+\begin{itemize}
+\item [] (D) For all $a,b,c \in \mathbb{K}$, we have $a(b+c) = ab+ac$.
+\end{itemize}
+
+\bigskip
+\noindent
+Note the similarity of the addition and multiplication laws. We say 
+that $(\mathbb{K},+)$ is an \emph{abelian} group if (FA0)-(FA4) hold. 
+(FM0)-(FM4) say that $(\mathbb{K} \backslash \{0\}, \cdot)$ is 
+also an abelian group (we have to leave out $0$ because as (FM3) 
+says, $0$ does not have a multiplicative inverse).
+
+\bigskip
+\noindent
+Examples of fields include $\mathbb{Q}$ (the rational numbers), 
+$\mathbb{R}$ (the real numbers), $\mathbb{C}$ (the complex numbers), 
+and $\mathbb{Z}_{p}$ (the integers mod $p$, for $p$ a prime number).
+
+\bigskip
+\noindent
+Associated with any field $\mathbb{K}$ is a non-negative integer called its 
+characteristic, which is defined as follows:
+the characteristic of a field $\mathbb{K}$, often denoted $\text{char} (\mathbb{K})$, 
+is the smallest number of times one must use the field's (or ring's) multiplicative 
+identity (1) in a sum to get the additive identity (0). If this sum never reaches 
+the additive identity the field is said to have characteristic zero.
+That is, 
+
+\bigskip
+\begin{equation*}
+\text{char}(\mathbb{K}) = 
+    \begin{cases}
+        n & \text{$n$ is the smallest positive number such that } 
+              \underbrace{1+1+ \cdots + 1}_{n} = 0 \\
+        0 & \text{if the sum of ones never reaches 0}
+    \end{cases}
+\end{equation*}
+
+\bigskip
+\noindent
+Important examples such as $\mathbb{Q}$, $\mathbb{R}$ and $\mathbb{C}$ 
+have characteristic zero, while $\mathbb{Z}_{p}$ has characteristic $p$
+(for prime $p$).
+
+\bigskip
+\subsubsection*{{\large Vector Spaces}}
+
+
+\bigskip
+\section*{Appendix B}
 I had thought that one way to prove the Cauchy–Schwarz inequality
 is to use the reverse triangle inequality, but Dave Neary pointed
 out that I didn't need it.  So I'm leaving the derivation of the

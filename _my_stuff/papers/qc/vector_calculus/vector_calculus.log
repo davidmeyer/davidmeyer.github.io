@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 SEP 2022 07:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 SEP 2022 09:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1546,7 +1546,7 @@ locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2167.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [21 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
-11-Joplin-MO-tornado.png>] [22] (./vector_calculus.bbl
+11-Joplin-MO-tornado.png>] [22] [23] (./vector_calculus.bbl
 Underfull \hbox (badness 1107) in paragraph at lines 44--48
 []\OT1/cmr/m/n/10 Jean H. Gal-lier.  Vec-tor Norms and Ma-trix Norms.  []$\OT1/
 cmtt/m/n/10 https : / / www . cis . upenn . edu / []cis515 /
@@ -1564,14 +1564,14 @@ Underfull \hbox (badness 1655) in paragraph at lines 56--62
 ttps : / / www . nist . gov / disaster-[]failure-[]studies /
  []
 
-[23]) [24] (./vector_calculus.aux)
+[24]) [25] (./vector_calculus.aux)
 Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: 09D6BA35DEB9DB954E94D3273ED452C7;2652.
  ) 
 Here is how much of TeX's memory you used:
- 53723 strings out of 478994
- 1351291 string characters out of 5858184
- 1991632 words of memory out of 5000000
+ 53728 strings out of 478994
+ 1351342 string characters out of 5858184
+ 1991633 words of memory out of 5000000
  70285 multiletter control sequences out of 15000+600000
  424661 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1607,10 +1607,10 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (24 pages, 1867891 bytes).
+Output written on vector_calculus.pdf (25 pages, 1874697 bytes).
 PDF statistics:
- 567 PDF objects out of 1000 (max. 8388607)
- 429 compressed objects within 5 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 578 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
