@@ -429,7 +429,7 @@ where $c \in \mathbb{R}$.
 \setstretch{1.5}									% get a bit of extra space
 \noindent
 According to the Pythagorean theorem, the length of a vector
-$\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted
+$\mathbf{a} = [a_1,a_2,a_3] \in \mathbb{R}^3$, denoted
 $\|\mathbf{a} \|$, equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The
 next definition is a generalization of the notion of length to
 vectors in $\mathbb{R}^n$.
@@ -514,22 +514,22 @@ We can also see that
 \| \mathbf{x} - \mathbf{y} \|^2
 &=&
  \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
- 		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+ 		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:magnitude})} \\
 [8pt]
 &=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
-		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:magnitude})} \\
 [12pt]
 &=& \sum\limits_{j = 1}^{n} (x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} )
-		&\qquad \qquad \mathrel{\#} \text{expand previous line} \\
+		&\hspace{8em} \mathrel{\#} \text{expand previous line} \\
 [12pt]
 &=& \sum\limits_{j = 1}^{n} x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
-		&\qquad \qquad \mathrel{\#} \text{sum is a linear operator} \\
+		&\hspace{8em} \mathrel{\#} \text{sum is a linear operator} \\
 [12pt]
 &=&  \| \mathbf{x} \|^2 + - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \| \mathbf{y} \|^2 
- 		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+ 		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:magnitude})} \\
 [12pt]
 &=&  \| \mathbf{x} \|^2 + \| \mathbf{y} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
- 		&\qquad \qquad \mathrel{\#} \text{rearrange}
+ 		&\hspace{8em} \mathrel{\#} \text{rearrange}
 \end{array}
 \end{equation*}
 
