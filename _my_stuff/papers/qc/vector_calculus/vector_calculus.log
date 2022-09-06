@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  6 SEP 2022 09:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  6 SEP 2022 09:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1427,126 +1427,127 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<images/orthogonal_projection.png, id=147, 595.22375pt x 437.635pt>
+ [4]
+<images/orthogonal_projection.png, id=153, 595.22375pt x 437.635pt>
 File: images/orthogonal_projection.png Graphic file (type png)
 <use images/orthogonal_projection.png>
 Package pdftex.def Info: images/orthogonal_projection.png  used on input line 5
-57.
+73.
 (pdftex.def)             Requested size: 595.2223pt x 437.63393pt.
- [4]
-Overfull \hbox (29.96326pt too wide) detected at line 625
+
+Overfull \hbox (29.96326pt too wide) detected at line 641
 []
  []
 
 [5 <./images/orthogonal_projection.png>]
-<images/cross_product_parallelogram.png, id=187, 1927.2pt x 1505.625pt>
+<images/cross_product_parallelogram.png, id=186, 1927.2pt x 1505.625pt>
 File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
-line 695.
+line 711.
 (pdftex.def)             Requested size: 202.34727pt x 158.0838pt.
-<images/right_hand_rule_cross_product.png, id=190, 1284.8pt x 1163.34625pt>
+<images/right_hand_rule_cross_product.png, id=189, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
-t line 732.
+t line 748.
 (pdftex.def)             Requested size: 192.71169pt x 174.4944pt.
  [6 <./images/cross_product_parallelogram.png>] [7 <./images/right_hand_rule_cr
 oss_product.png>] [8] [9]
-<images/r_theta_to_x_y.jpg, id=250, 344.487pt x 132.9768pt>
+<images/r_theta_to_x_y.jpg, id=248, 344.487pt x 132.9768pt>
 File: images/r_theta_to_x_y.jpg Graphic file (type jpg)
 <use images/r_theta_to_x_y.jpg>
-Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1205.
+Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1221.
 (pdftex.def)             Requested size: 344.48615pt x 132.97647pt.
  [10]
-<images/type_I_region.png, id=259, 1163.34625pt x 348.30125pt>
+<images/type_I_region.png, id=255, 1163.34625pt x 348.30125pt>
 File: images/type_I_region.png Graphic file (type png)
 <use images/type_I_region.png>
-Package pdftex.def Info: images/type_I_region.png  used on input line 1283.
+Package pdftex.def Info: images/type_I_region.png  used on input line 1299.
 (pdftex.def)             Requested size: 349.00658pt x 104.49118pt.
  [11 <./images/r_theta_to_x_y.jpg>]
-<images/type_II_region.png, id=267, 904.37875pt x 406.51875pt>
+<images/type_II_region.png, id=265, 904.37875pt x 406.51875pt>
 File: images/type_II_region.png Graphic file (type png)
 <use images/type_II_region.png>
-Package pdftex.def Info: images/type_II_region.png  used on input line 1305.
+Package pdftex.def Info: images/type_II_region.png  used on input line 1321.
 (pdftex.def)             Requested size: 271.31572pt x 121.95656pt.
  [12 <./images/type_I_region.png> <./images/type_II_region.png>] [13] [14]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1643.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1659.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1653.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1669.
 
 
-Overfull \hbox (65.56273pt too wide) detected at line 1662
+Overfull \hbox (65.56273pt too wide) detected at line 1678
 []
  []
 
 [15]
-<images/delta-r.png, id=321, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=319, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1717.
+Package pdftex.def Info: images/delta-r.png  used on input line 1733.
 (pdftex.def)             Requested size: 525.9637pt x 470.7576pt.
 
-Overfull \hbox (28.8371pt too wide) detected at line 1787
+Overfull \hbox (28.8371pt too wide) detected at line 1803
 []
  []
 
 [16 <./images/delta-r.png>] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1944.
+(hyperref)                removing `math shift' on input line 1960.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1944.
+(hyperref)                removing `math shift' on input line 1960.
 
 [18]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1982.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1998.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 1982.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 1998.
 
 Missing character: There is no „ in font cmr10!
-<images/definite_integral.png, id=365, 752.8125pt x 661.47125pt>
+<images/definite_integral.png, id=363, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 1987.
+Package pdftex.def Info: images/definite_integral.png  used on input line 2003.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
-<images/line_integral.png, id=367, 730.73pt x 244.915pt>
+<images/line_integral.png, id=365, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 2008.
+Package pdftex.def Info: images/line_integral.png  used on input line 2024.
 (pdftex.def)             Requested size: 730.72821pt x 244.91438pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2013.
+(hyperref)                than one, level fixed on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2013.
+(hyperref)                removing `math shift' on input line 2029.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2013.
+(hyperref)                removing `math shift' on input line 2029.
 
 [19 <./images/definite_integral.png> <./images/line_integral.png>] [20]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=387, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=385, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2160.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2176.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [21 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (37.03775pt too wide) in paragraph at lines 2230--2231
+Overfull \hbox (37.03775pt too wide) in paragraph at lines 2246--2247
 [][] 
  []
 
@@ -1570,13 +1571,13 @@ ttps : / / www . nist . gov / disaster-[]failure-[]studies /
 
 ) [26] (./vector_calculus.aux)
 Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
-(rerunfilecheck)             Checksum: 637E3D5C3F828E0E1208165BD471AF28;2860.
+(rerunfilecheck)             Checksum: 3F9C090BB703857BEA611FD1DCD8C3D1;2690.
  ) 
 Here is how much of TeX's memory you used:
- 53746 strings out of 478994
- 1351596 string characters out of 5858184
- 1991761 words of memory out of 5000000
- 70291 multiletter control sequences out of 15000+600000
+ 53745 strings out of 478994
+ 1351587 string characters out of 5858184
+ 1991735 words of memory out of 5000000
+ 70290 multiletter control sequences out of 15000+600000
  424661 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,22n,131p,755b,996s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1611,10 +1612,10 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (26 pages, 1884922 bytes).
+Output written on vector_calculus.pdf (26 pages, 1886823 bytes).
 PDF statistics:
- 600 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
+ 598 PDF objects out of 1000 (max. 8388607)
+ 458 compressed objects within 5 object streams
  122 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

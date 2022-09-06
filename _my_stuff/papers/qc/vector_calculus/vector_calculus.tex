@@ -113,11 +113,28 @@
 
 \begin{definition}A \emph{field} is an algebraic structure consisting 
 of a non-empty set $\mathbb{K}$ equipped with two binary operations $+$ 
-(addition) and $*$ (multiplication) satisfying the conditions:
+(addition) and $\cdot$ (multiplication) satisfying the conditions:
+
+\bigskip
+\begin{itemize}
+\item [] (A) $(\mathbb{K},+)$ is an abelian group\footnote{See Appendix A and B for more on
+             fields and abelian groups.} with identity element $0$ (called zero).
+\item [] (M) $(\mathbb{K} \backslash \{0\}, \cdot)$ is an abelian group with identity element 1.
+\item [] (D) The distributive law $a(b+c)=ab+ac$ holds for all $a,b,c \in \mathbb{K}$.
+\end{itemize}
+
+\bigskip
+\noindent
+Examples of important fields include
+
+\begin{itemize}
+\item $\mathbb{Q}$,     the field of rational numbers.
+\item $\mathbb{R}$,     the field of real numbers.
+\item $\mathbb{C}$,     the field of complex numbers.
+\item $\mathbb{Z}_{p}$, the field of integers mod $p$, where $p$ is a prime number.
+\end{itemize}
 \end{definition}
 
-\subsection{Notation}
-Some of the notation we'll use is described in this section.
 
 \subsection{Vectors}
 Some authors use bold font to denote a vector, e.g. 
@@ -253,7 +270,6 @@ $\vec{r}(t)$ might be defined as follows:
 \noindent
 In this document I'll use these notations interchangeably.
 
-\section{Definitions and a Few Theorems}
 
 \begin{definition}
 {\bf Vector Notation:} 
@@ -553,7 +569,7 @@ situation is shown in Figure \ref{fig:orthogonal_projection}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[cfbox=black,scale=0.40] 
+\center{\includegraphics[cfbox=black,scale=0.305] 
 {images/orthogonal_projection.png}}
 \caption{Orthogonal Projection}
 \label{fig:orthogonal_projection}
@@ -866,7 +882,7 @@ $\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) +
 \end{definition}
 
 
-
+\subsection{A Few Theorems}
 \bigskip
 \begin{theorem} {\bf Cauchy–Schwarz Inequality:} 
 $\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|
