@@ -107,10 +107,15 @@
 %
 %
 %
-\section{Introduction}
-TBD
+\section{Introduction: Vector Spaces}
+\subsection{Definitions}
 
-\section{Notation}
+\begin{definition}A \emph{field} is an algebraic structure consisting 
+of a non-empty set $\mathbb{K}$ equipped with two binary operations $+$ 
+(addition) and $\cdot$ (multiplication) satisfying the conditions:
+\end{definition}
+
+\subsection{Notation}
 Some of the notation we'll use is described in this section.
 
 \subsection{Vectors}
@@ -2425,9 +2430,20 @@ Again, we can summarize (VA0)–(VA4) by saying that $(V,+)$ is an abelian group
 \bigskip
 \noindent
 One of the most important examples of a vector space over a field $\mathbb{K}$ 
-is the set $\mathbb{K}^{n}$ of all $n$-tuples with elements from $\mathbb{K}$.  
-Addition and scalar multiplication in ${\mathbb{K}}^{n}$ are defined by 
+is the set $\mathbb{K}^{n}$ of all $n$-tuples with elements from $\mathbb{K}$
+(should prove that $\mathbb{K}^{n}$ is a vector space). Addition and scalar 
+multiplication in ${\mathbb{K}}^{n}$ are defined by 
 the following rules:
+
+\begin{flalign*}
+(u_1,u_2,\hdots,u_n)+(v_1,v_2,\hdots,v_n) &= (u_1+v_1,u_2+v_2,\hdots,u_n+v_n) \\
+a(v_1,v_2,\hdots,v_n)                     &= (av_1,av_2,\hdots,av_n)
+\end{flalign*}
+
+\bigskip
+\noindent
+Note that one of the key features of a vector space is closure under 
+\emph{componentwise} addition, as shown above.
 
 
 \bigskip
