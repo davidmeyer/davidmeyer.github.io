@@ -115,15 +115,17 @@
 of a non-empty set $\mathbb{K}$ equipped with two binary operations $+$ 
 (addition) and $\cdot$ (multiplication) satisfying the conditions:
 
-\bigskip
+\medskip
 \begin{itemize}
-\item [] (A) $(\mathbb{K},+)$ is an abelian group\footnote{See Appendix A and B for more on
-             fields and abelian groups.} with identity element $0$ (called zero).
-\item [] (M) $(\mathbb{K} \backslash \{0\}, \cdot)$ is an abelian group with identity element 1.
+\item [] (A) $(\mathbb{K},+)$ is an abelian group\footnote{See Appendices A and B 
+             for more on fields and abelian groups.} with identity element $0$ 
+             (called zero).
+\item [] (M) $(\mathbb{K} \backslash \{0\}, \cdot)$ is an abelian group with 
+             identity element 1.
 \item [] (D) The distributive law $a(b+c)=ab+ac$ holds for all $a,b,c \in \mathbb{K}$.
 \end{itemize}
 
-\bigskip
+\medskip
 \noindent
 Examples of important fields include
 
@@ -135,6 +137,43 @@ Examples of important fields include
 \end{itemize}
 \end{definition}
 
+\smallskip
+\begin{definition}
+A vector space $V$ over a field $\mathbb{K}$ is an algebraic structure consisting 
+of a non-empty \\ set $V$ equipped with a binary operation $+$ (vector addition) 
+and a scalar multiplication operation \\
+$(a,v) \in \mathbb{K} \times V \mapsto av \in V$
+such that the following rules hold:
+
+
+\bigskip
+\noindent
+(VA) $(V,+)$ is an abelian group with identity element $\mathbf{0}$ (the zero vector). 
+
+\bigskip
+\noindent
+(VM) Rules for scalar multiplication:
+
+\medskip
+\begin{itemize}
+\item [] (VM0) Closure: For any $a   \in \mathbb{K}$ and $v \in V$ there is a unique element $av \in V$.
+\item [] (VM1) $\text{Distributivity}_{1}$: For any $a \in \mathbb{K}$ and $u,v \in V$ we have $a(u+v)=au+av$.
+\item [] (VM2) $\text{Distributivity}_{2}$: For any $a,b \in \mathbb{K}$ and $v \in V$ we have $(a+b)v=av+bv$.
+\item [] (VM3) Associativity: For any $a,b \in \mathbb{K}$ and $v \in V$ we have $(ab)v=a(bv)$.
+\item [] (VM4) Identity: For any $v \in V$ we have $1v = v$ (where $1$ is the identity element of $\mathbb{K}$).
+\end{itemize}
+\end{definition}
+
+\medskip
+\noindent
+Since vector spaces have two kinds of elements, namely elements of $\mathbb{K}$ and 
+elements of $V$, we distinguish them by calling the elements of $\mathbb{K}$ scalars 
+and the elements of $V$ vectors.
+
+\bigskip
+\noindent
+A vector space over the field $\mathbb{R}$ is often called a real vector space 
+while a vector space over $\mathbb{C}$ is a complex vector space.
 
 \subsection{Vectors}
 Some authors use bold font to denote a vector, e.g. 
@@ -569,7 +608,7 @@ situation is shown in Figure \ref{fig:orthogonal_projection}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[cfbox=black,scale=0.305] 
+\center{\includegraphics[cfbox=red,scale=0.35] 
 {images/orthogonal_projection.png}}
 \caption{Orthogonal Projection}
 \label{fig:orthogonal_projection}
@@ -645,12 +684,12 @@ to take the inner product of $\mathbf{b}$ and Equation
 \noindent
 So we see that
 
-\bigskip
+\medskip
 \begin{equation*}
 \langle \mathbf{a}, \mathbf{b} \rangle = \alpha \| \mathbf{b} \|
 \end{equation*}
 
-\bigskip
+\medskip
 \noindent
 and so
 
