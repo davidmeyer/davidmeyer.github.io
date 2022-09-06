@@ -23,6 +23,7 @@
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby}
+\tikzset{>=latex}														% default to LaTeX arrow head
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %
@@ -112,7 +113,7 @@
 
 \begin{definition}A \emph{field} is an algebraic structure consisting 
 of a non-empty set $\mathbb{K}$ equipped with two binary operations $+$ 
-(addition) and $\cdot$ (multiplication) satisfying the conditions:
+(addition) and $*$ (multiplication) satisfying the conditions:
 \end{definition}
 
 \subsection{Notation}
@@ -388,17 +389,10 @@ vectors in $\mathbb{R}^n$.
 
 \bigskip
 \noindent
-The Euclidean norm of a vector
-
-\bigskip
-\begin{equation*}
-\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \mathbb{R}^{n}
-\end{equation*}
-
-\bigskip
-\noindent
+The Euclidean norm of a vector $\mathbf{x} = [x_1,x_2,\ldots, x_n] \in \mathbb{R}^{n}$
 is defined to be
 
+\bigskip
 \begin{equation}
 \|\mathbf{x}\| := \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
 \sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
@@ -406,24 +400,18 @@ is defined to be
 \end{equation}
 \end{definition}
 
-\bigskip
+\medskip
 \begin{definition}
 {\bf $p$-Norm:} $\left\|\mathbf {x} \right\|_{p}$
 
-\medskip
-\noindent
-The $p$-norm of a vector 
-
-\smallskip
-\begin{equation*}
-\mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})
-\end{equation*}
 
 \medskip
 \noindent
+The $p$-norm of a vector $\mathbf{x} = [x_{1},x_{2}. \ldots , x_{n}]$
 is defined to be
 
 
+\bigskip
 \begin{equation*}
 \left\|\mathbf {x} \right\|_{p} := \left(\sum _{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1/p}
 \end{equation*}
