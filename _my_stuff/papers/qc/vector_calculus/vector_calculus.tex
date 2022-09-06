@@ -2396,6 +2396,38 @@ structure in which we can add two elements of $V$ and multiply an element of $V$
 by an element of $\mathbb{K}$ (this is called \emph{scalar multiplication}) such 
 that the following rules hold:
 
+\bigskip
+{\bf Addition Laws}
+\smallskip
+\begin{itemize}
+\item [] (VA0) Closure: For any $u,v \in V$ there is a unique element $u+v \in V$.
+\item [] (VA1) Associativity: For all $u,v \in V$ we have $u+(v+w)=(u+v)+w$.
+\item [] (VA2) Identity: There is an element $0 \in V$ such that $v+0=0+v=v$ for all $v \in V$. 
+\item [] (VA3) Inverse: For any $v \in V$, there exists $-v \in V$ such that $v+(-v)=(-v)+v=0$.
+\item [] (VA4) Commutativity: For any $u,v \in V$ we have $u+v=v+u$.
+\end{itemize}
+
+\bigskip
+{\bf Scalar multiplication laws}
+\smallskip
+\begin{itemize}
+\item [] (VM0) Closure: For any $a \in \mathbb{K}$, $v \in V$ there is a unique element $av \in V$. 
+\item [] (VM1) $\text{Distributivity}_1$: For any $a \in \mathbb{K}$, $u,v \in V$ we have $a(u+v)=au+av$. 
+\item [] (VM2) $\text{Distributivity}_2$: For any $a,b \in \mathbb{K}$, $v \in V$ we have $(a+b)v=av+bv$. 
+\item [] (VM3) Associativity: For any $a,b \in \mathbb{K}$, $v \in V$ we have $(ab)v=a(bv)$.
+\item [] (VM4) Identity: For any $v \in V$ we have $1v=v$ (where 1 is the element given by (FM2)).
+\end{itemize}
+
+\bigskip
+\noindent
+Again, we can summarize (VA0)–(VA4) by saying that $(V,+)$ is an abelian group.
+
+\bigskip
+\noindent
+One of the most important examples of a vector space over a field $\mathbb{K}$ 
+is the set $\mathbb{K}^{n}$ of all $n$-tuples with elements from $\mathbb{K}$.  
+Addition and scalar multiplication in ${\mathbb{K}}^{n}$ are defined by 
+the following rules:
 
 
 \bigskip
