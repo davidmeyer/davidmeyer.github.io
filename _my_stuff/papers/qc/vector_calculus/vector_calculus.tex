@@ -638,22 +638,24 @@ to take the inner product of $\mathbf{b}$ and Equation
 \begin{array}{lllll}
 \langle \mathbf{a}, \mathbf{b} \rangle
 &=& \langle \mathbf{b}, \mathbf{a} \rangle
-					&\qquad \mathrel{\#} \text{Equation (\ref{eqn:dot_product})} \\
+					&\hspace{3em} \mathrel{\#} \text{Equation (\ref{eqn:dot_product}) and 
+					$\sum\limits_{j = 1}^{n} a_j b_j = \sum\limits_{j = 1}^{n} b_j a_j$
+					for scalars $a_j$ and $b_j$} \\
 [15pt]
 &=& \langle \mathbf{b}, (\alpha \mathbf{v}_1 + \beta \mathbf{v}_2) \rangle
-					&\qquad \mathrel{\#} \text{Equation (\ref{eqn:alpha_beta})} \\
+					&\hspace{3em} \mathrel{\#} \text{Equation (\ref{eqn:alpha_beta})} \\
 [15pt]
 &=& \langle \mathbf{b}, \alpha \mathbf{v}_1 \rangle + \langle \mathbf{b}, \beta \mathbf{v}_2 \rangle
-					&\qquad \mathrel{\#} \text{dot product is distributive 
+					&\hspace{3em} \mathrel{\#} \text{the dot product is distributive 
 					over vector addition \cite{wiki:dot_product}} \\
 [15pt]
 &=& \alpha \langle \mathbf{b},\mathbf{v}_1 \rangle + \beta  \langle \mathbf{b}, \mathbf{v}_2 \rangle
-					&\qquad \mathrel{\#} \text{by the scalar product rule:
+					&\hspace{3em} \mathrel{\#} \text{by the scalar product rule:
 					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle
 					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$ \cite{wiki:dot_product}} \\
 [12pt]
 &=& \alpha \langle \mathbf{v}_1, \mathbf{b}\rangle + \beta \, 0
-					&\qquad \mathrel{\#} \text{since }  \langle \mathbf{v}_1, \mathbf{v}_2 \rangle = 0 
+					&\hspace{3em} \mathrel{\#} \text{since }  \langle \mathbf{v}_1, \mathbf{v}_2 \rangle = 0 
 					\text{ and } \mathbf{v}_1 = \mathbf{\hat{b}} 
 					\Rightarrow \langle \mathbf{\hat{b}}, \mathbf{v}_2  \rangle
 					= \frac{1}{\| \mathbf{b} \|}  \langle \mathbf{b}, \mathbf{v}_2  \rangle
@@ -662,15 +664,15 @@ to take the inner product of $\mathbf{b}$ and Equation
 					= 0 \\
 [15pt]
 &=& \alpha \langle \mathbf{v}_1, \mathbf{v_1} \| \mathbf{b} \| \rangle
-					&\qquad \mathrel{\#} \text{since $\beta \, 0 = 0$ and
+					&\hspace{3em} \mathrel{\#} \text{since $\beta \, 0 = 0$ and
 					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}$
 					 so $\mathbf{b} = \mathbf{v_1} \| \mathbf{b} \| $} \\
 [15pt]
 &=& \alpha \| \mathbf{b} \| \langle \mathbf{v}_1, \mathbf{v}_1 \rangle
-					&\qquad \mathrel{\#} \text{by the scalar product rule for dot products } \\
+					&\hspace{3em} \mathrel{\#} \text{by the scalar product rule for dot products } \\
 [15pt]
 &=& \alpha \| \mathbf{b} \|
-					&\qquad \mathrel{\#} \text{since 
+					&\hspace{3em} \mathrel{\#} \text{since 
 					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}
 					\Rightarrow \| \mathbf{v}_1 \| = 1
 					\text{ and so } \langle \mathbf{v}_1, \mathbf{v_1} \rangle 
