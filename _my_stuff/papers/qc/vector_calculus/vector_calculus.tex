@@ -1770,7 +1770,7 @@ by the chord length $\| \Delta \mathbf{r} \|$.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[cfbox=black,scale=0.35] {images/delta-r.png}}
+\center{\includegraphics[cfbox=black,scale=0.40] {images/delta-r.png}}
 \caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
@@ -1795,67 +1795,15 @@ and so
 
 \bigskip
 \noindent
-Now we can compute the infinitesimal arc length $ds$:
-
-\begin{equation*}
-\begin{array}{lllll}
-\Delta s
-&\approx& \| \Delta \mathbf{r} \|							
-			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
-[15pt]
-&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
-			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
-[15pt]
-&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
-			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
-[15pt]
-&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
-			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
-[15pt]
-&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
-			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
-			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
-[15pt]
-&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
-			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
-			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
-[15pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
-			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
-			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
-[15pt]
-&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
-			\cdot \lim_{\Delta t \to 0} \Delta t}
-			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
-[15pt]
-&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
-			\cdot \lim_{\Delta t \to 0} \Delta t}
-			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
-[15pt]
-&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
-			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
-			\; \lim_{\Delta t \to 0} \Delta t} = dt
-\end{array}
-\end{equation*}
-
+Now we can compute the infinitesimal arc length $ds$,
+as shown in Figure \ref{fig:pythagorean_theorem}:
 
 \bigskip
-\noindent
-Interestingly we can also see this using the Pythagorean theorem.
-Specifically, if we move an infinitesimal distance in the $x$ and
-$y$ directions we get a triangle in the $xy$-plane who's sides
-have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
-scenario is shown for some curve $f(x)$ in Figure
-\ref{fig:pythagorean_theorem}.
-
+\bigskip
 %
 %	draw Pythagorean theorem stuff
 %
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
   \resizebox{0.60 \textwidth}{!} {																							% resize figure if you want 
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
@@ -1917,6 +1865,63 @@ scenario is shown for some curve $f(x)$ in Figure
  \caption{$f(x)$, $ds$ and the Pythagorean Theorem}
  \label{fig:pythagorean_theorem}
  \end{figure}
+
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta s
+&\approx& \| \Delta \mathbf{r} \|							
+			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
+			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
+			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
+[15pt]
+&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
+			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
+[15pt]
+&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
+[15pt]
+&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
+			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
+			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
+			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
+[15pt]
+&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
+			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
+			\; \lim_{\Delta t \to 0} \Delta t} = dt
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+Interestingly we can also see this using the Pythagorean theorem.
+Specifically, if we move an infinitesimal distance in the $x$ and
+$y$ directions we get a triangle in the $xy$-plane who's sides
+have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
+scenario is shown for some curve $f(x)$ in Figure
+\ref{fig:pythagorean_theorem}.
+
  
 
 \bigskip
