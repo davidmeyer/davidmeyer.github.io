@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 SEP 2022 07:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 SEP 2022 07:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1445,14 +1445,14 @@ File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
 line 750.
-(pdftex.def)             Requested size: 1927.19533pt x 1505.62134pt.
+(pdftex.def)             Requested size: 202.34727pt x 158.0838pt.
  [6]
 <images/right_hand_rule_cross_product.png, id=198, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
 t line 787.
-(pdftex.def)             Requested size: 1284.79688pt x 1163.34343pt.
+(pdftex.def)             Requested size: 192.71169pt x 174.4944pt.
  [7 <./images/cross_product_parallelogram.png> <./images/right_hand_rule_cross_
 product.png>] [8] [9] [10]
 <images/r_theta_to_x_y.jpg, id=253, 344.487pt x 132.9768pt>
@@ -1520,19 +1520,19 @@ Package pdftex.def Info: images/definite_integral.png  used on input line 2046.
 <images/line_integral.png, id=373, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 2067.
-(pdftex.def)             Requested size: 730.72821pt x 244.91438pt.
+Package pdftex.def Info: images/line_integral.png  used on input line 2066.
+(pdftex.def)             Requested size: 328.82545pt x 110.21072pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2072.
+(hyperref)                than one, level fixed on input line 2071.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2072.
+(hyperref)                removing `math shift' on input line 2071.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2072.
+(hyperref)                removing `math shift' on input line 2071.
 
 [20 <./images/definite_integral.png> <./images/line_integral.png>] [21]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
@@ -1542,12 +1542,12 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2219.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2218.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [22 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (37.03775pt too wide) in paragraph at lines 2289--2290
+Overfull \hbox (37.03775pt too wide) in paragraph at lines 2288--2289
 [][] 
  []
 
@@ -1612,7 +1612,7 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (27 pages, 1888193 bytes).
+Output written on vector_calculus.pdf (27 pages, 1887988 bytes).
 PDF statistics:
  604 PDF objects out of 1000 (max. 8388607)
  463 compressed objects within 5 object streams
