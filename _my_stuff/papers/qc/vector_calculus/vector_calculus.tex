@@ -23,7 +23,7 @@
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby}
-\tikzset{>=latex}														% default to LaTeX arrow head
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %
@@ -744,10 +744,9 @@ the area of the parallelogram that the vectors span (Figure
 \ref{fig:cross_product_parallelogram})
 \end{itemize}
 
-
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.105]
+\center{\includegraphics[cfbox=red,scale=0.105]
 {images/cross_product_parallelogram.png}}
 \caption{The parallelogram formed by $\mathbf{a} \times
 \mathbf{b}$ \cite{wiki:cross_product}}
@@ -783,14 +782,16 @@ containing $\mathbf{a}$ and $\mathbf{b}$ in the direction given
 by the right-hand rule
 \end{itemize}
 
-\begin{figure}[t]
-\center{\includegraphics[scale=0.15]
-{images/right_hand_rule_cross_product.png}}
-\caption{The right hand rule for vectors $\mathbf{a}$ and $\mathbf{b}$ \cite{wiki:right_hand_rule_for_cross_products}}
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[cfbox=red,scale=0.15] {images/right_hand_rule_cross_product.png}}
+\caption{The right hand rule for vectors $\mathbf{a}$ and 
+         $\mathbf{b}$ \cite{wiki:right_hand_rule_for_cross_products}}
 \label{fig:right_hand_rule_for_cross_products}
 \end{figure}
 
 
+\medskip
 \bigskip
 \noindent
 If the cross product of two vectors is the zero vector (that is,
@@ -921,7 +922,7 @@ $\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) +
 \end{itemize}
 \end{definition}
 
-
+\medskip
 \subsection{A Few Theorems}
 \bigskip
 \begin{theorem} {\bf Cauchy–Schwarz Inequality:} 
@@ -930,6 +931,7 @@ $\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|
 
 
 \bigskip
+{\setstretch {2.00}
 \noindent
 {\bf Proof:} The inequality is trivial if either $ \mathbf{a}$ or
 $\mathbf{b}$ is zero, so assume that neither is. So without loss
@@ -938,6 +940,7 @@ of generality let ${\displaystyle \mathbf{x} =
 \mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so $\|
 \mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} =
 \mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$).  Then
+\par}
 
 
 \begin{equation*}
@@ -1258,7 +1261,7 @@ ${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial
 \setstretch{1.0}
 
 \begin{figure}[t]
-\center{\includegraphics[scale=0.90] {images/r_theta_to_x_y.jpg}}
+\center{\includegraphics[scale=0.95] {images/r_theta_to_x_y.jpg}}
 \caption{Transforming the $r\theta$-plane into the $xy$-plane}
 \label{fig:r_theta_to_x_y}
 \end{figure}
@@ -1322,12 +1325,8 @@ Type I and Type II regions.
 \noindent
 A region $D$ in the xy-plane is of Type I if it lies between two
 vertical lines and the graphs of two continuous functions
-$g_1(x)$ and $g_2(x)$. That is
-
-\bigskip
-\begin{equation*}
-D = \{(x, y) \, | \, a \leq x \leq b, \, g_1(x)  \leq y \leq  g_2(x)\}
-\end{equation*}
+$g_1(x)$ and $g_2(x)$. That is:
+$D = \{(x, y) \, | \, a \leq x \leq b, \, g_1(x)  \leq y \leq  g_2(x)\}$.
 
 \bigskip
 \noindent
@@ -1336,7 +1335,7 @@ Type I regions are shown in Figure \ref{fig:type_I_region}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.30] {images/type_I_region.png}}
+\center{\includegraphics[scale=0.35] {images/type_I_region.png}}
 \caption{Type I Regions}
 \label{fig:type_I_region}
 \end{figure}
@@ -1358,7 +1357,7 @@ Type II regions are shown in  Figure \ref{fig:type_II_region}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[scale=0.30] {images/type_II_region.png}}
+\center{\includegraphics[scale=0.35] {images/type_II_region.png}}
 \caption{Type II Regions}
 \label{fig:type_II_region}
 \end{figure}
@@ -1690,29 +1689,29 @@ get
 			and $dA = \left ( \frac{1}{10} \right ) du \, dv$}
 
 \\
-[20pt]
+[25pt]
 &=& {\displaystyle \dfrac{1}{10} \int\limits_{-10}^{0} \int\limits_{0}^{10}}
     \left ( - \dfrac{2}{5} u - \dfrac{1}{5} v \right ) du \, dv
-			&\mathrel{\#} \text{\small simplify, moving the Jacobian to the front} \\
-[20pt]
+			&\hspace{-4em} \mathrel{\#} \text{\small simplify, moving the Jacobian to the front} \\
+[25pt]
 &=& {\displaystyle \dfrac{1}{10} \int\limits_{-10}^{0} \! (-20 -2v) \,dv}
-			&\mathrel{\#} {\small {\displaystyle \int\limits_{0}^{10} \! \left ( - \dfrac{2}{5} u - \dfrac{1}{5} v \right ) du}
+			&\hspace{-4em} \mathrel{\#} {\small {\displaystyle \int\limits_{0}^{10} \! \left ( - \dfrac{2}{5} u - \dfrac{1}{5} v \right ) du}
 			= \left [ - \dfrac{1}{5} u^2 - \dfrac{1}{5} uv \right ] \Bigg |_{0}^{10}} \\
-[20pt]
+[25pt]
 &=& \dfrac{1}{10} \Big [ -20 v - v^2 \Big ] \bigg |_{-10}^{0}
-			&\mathrel{\#} \text{\small evaluate integral + FToC} \\
-[20pt]
+			&\hspace{-4em} \mathrel{\#} \text{\small evaluate integral + FToC} \\
+[25pt]
 &=& 0 - \dfrac{1}{10}  \bigg [ - 20 (-10) - (-10)^2  \bigg ] 
-			&\mathrel{\#} \text{\small evaluate at limits} \\
-[20pt]
+			&\hspace{-4em} \mathrel{\#} \text{\small evaluate at limits} \\
+[25pt]
 &=& \left (-\dfrac{1}{10} \right ) (100)
-			&\mathrel{\#} {\small \bigg ( - \dfrac{1}{10} \bigg ) \big ( 200 - 100 \big ) = -\dfrac{1}{10} (100)}\\
-[20pt]
+			&\hspace{-4em} \mathrel{\#} {\small \bigg ( - \dfrac{1}{10} \bigg ) \big ( 200 - 100 \big ) = -\dfrac{1}{10} (100)}\\
+[25pt]
 &=& -10
-			&\mathrel{\#} \text{\small the region is completely below the $u$ axis} \\
-[10pt]
+			&\hspace{-4em} \mathrel{\#} \text{\small the region is completely below the $u$ axis} \\
+[15pt]
 &\Rightarrow& {\displaystyle \Bigg | \iint\limits_{R} (x - 2y) \, dA} \Bigg | = 10
-			&\mathrel{\#} \text{\small the volume is $10 \text{ units}^3$} \\
+			&\hspace{-4em} \mathrel{\#} \text{\small the volume is $10 \text{ units}^3$} \\
 
 \end{array}
 \end{equation*}
@@ -1770,7 +1769,7 @@ by the chord length $\| \Delta \mathbf{r} \|$.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[cfbox=black,scale=0.40] {images/delta-r.png}}
+\center{\includegraphics[cfbox=red,scale=0.40] {images/delta-r.png}}
 \caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
 \label{fig:delta-r}
 \end{figure}
@@ -2044,14 +2043,14 @@ $[†a,b]$ and below the curve $f(x)$.
 
 
 \begin{figure}[H]
-\center{\includegraphics[scale=0.17]
-{images/definite_integral.png}}
-\caption{Definite Integral:  The area ${\mathbf S = {\displaystyle \int_{a}^{b} f(x) \, dx}}$}
+\center{\includegraphics[scale=0.17] {images/definite_integral.png}}
+\caption{The Definite Integral: The area ${\mathbf S = 
+         {\displaystyle \int_{a}^{b} f(x) \, dx}}$}
 \label{fig:definte_integral}
 \end{figure}
 
 \smallskip
-\setstretch{1.70}
+{\setstretch{1.80}
 \noindent
 The line integral, denoted ${\displaystyle \int_{C} f(x,y) \,
 ds}$, is similar except that here we want to find the area above
@@ -2060,12 +2059,11 @@ integral is by definition in three dimensions).  The comparison
 between the definite integral ${\displaystyle \int_{a}^{b} f(x)
 \, dx}$ and the line integral ${\displaystyle \int_{C} f(x,y) \,
 ds}$ is shown in Figure \ref{fig:line_integral}.
-
-\setstretch{1.0}
+\par}
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[cfbox=black,scale=0.50]
+\center{\includegraphics[cfbox=red,scale=0.45]
 {images/line_integral.png}}
 \caption{Definite vs. Line Integrals}
 \label{fig:line_integral}
