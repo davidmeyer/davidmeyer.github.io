@@ -387,11 +387,10 @@ denoted $\mathbf{a} \cdot \mathbf{b}$,
 is defined to be the scalar value
 
 \medskip
-\begin{equation}
+\begin{equation*}
 \mathbf{a} \cdot \mathbf{b}
 := \sum\limits_{j = 1}^{n} a_j b_j
-\label{eqn:dot_product}
-\end{equation}
+\end{equation*}
 \end{definition}
 
 \smallskip
@@ -399,7 +398,16 @@ is defined to be the scalar value
 Another common notation for the dot product of
 $\mathbf{a}$ and $\mathbf{b}$ is $\langle \mathbf{a},
 \mathbf{b} \rangle$. That is, $\langle \mathbf{a}, \mathbf{b} \rangle
-= \mathbf{a} \cdot \mathbf{b}$.
+= \mathbf{a} \cdot \mathbf{b}$. Note also that
+
+\bigskip
+\begin{equation}
+  \langle \mathbf{a}, \mathbf{b} \rangle
+  = \sum\limits_{j = 1}^{n} a_j b_j
+  = \sum\limits_{j = 1}^{n} b_j a_j
+  =  \langle \mathbf{b}, \mathbf{a} \rangle 
+\label{eqn:dot_reverse}
+\end{equation}
 
 
 \bigskip
@@ -643,7 +651,7 @@ to take the inner product of $\mathbf{b}$ and Equation
 					\sum\limits_{j = 1}^{n} a_j b_j = 
 					\sum\limits_{j = 1}^{n} b_j a_j = 
 					\langle \mathbf{b}, \mathbf{a} \rangle
-					\text{ (Equation (\ref{eqn:dot_product}))} \\
+					\text{ (Equation (\ref{eqn:dot_reverse}))} \\
 [15pt]
 &=& \langle \mathbf{b}, (\alpha \mathbf{v}_1 + \beta \mathbf{v}_2) \rangle
 					&\hspace{3em} \mathrel{\#} \mathbf{a} = \alpha \mathbf{v}_1 + 
