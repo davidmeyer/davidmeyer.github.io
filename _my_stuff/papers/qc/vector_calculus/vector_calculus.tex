@@ -302,8 +302,8 @@ consists of the ordered set of $n$ distinct vectors
 \noindent
 where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is,
 it has a one in the $i^\text{th}$ coordinate (position) and zeros
-everywhere else.\footnote{This is also called a "one-hot"
-encoding in machine learning parlance, where the $i$'s might be
+everywhere else.\footnote{This is called a "one-hot"
+encoding in machine learning, where the $i$'s might be
 the classes in a classification problem.} The $\mathbf{e}_i$ have
 column vector format
 
@@ -382,23 +382,21 @@ In this document I'll use these notations interchangeably.
 
 \smallskip
 \begin{definition}
-{\bf Dot Product:} $\mathbf{a} \cdot \mathbf{b} \equiv 
-                    \langle \mathbf{a}, \mathbf{b} \rangle$
+{\bf Dot Product:} $\langle \mathbf{a}, \mathbf{b} \rangle$
 
 \bigskip
 \noindent
 The dot product (aka scalar product 
 or inner product) of two $n$-dimensional vectors 
 $\mathbf{a} = [a_1,a_2,\hdots, a_n]$ and 
-$\mathbf{b} = [b_1,b_2,\hdots, b_n]$,
-denoted $\mathbf{a} \cdot \mathbf{b}$
-or $\langle \mathbf{a}, \mathbf{b} \rangle$,
+$\mathbf{b} = [b_1,b_2,\hdots, b_n]$, usually 
+denoted by either $\langle \mathbf{a}, \mathbf{b} 
+\rangle$ or $\mathbf{a} \cdot \mathbf{b}$,
 is defined to be the scalar value
 
 \medskip
 \begin{equation*}
-\mathbf{a} \cdot \mathbf{b} \equiv\langle \mathbf{a}, \mathbf{b} \rangle
-:= \sum\limits_{j = 1}^{n} a_j b_j
+\langle \mathbf{a}, \mathbf{b} \rangle := \sum\limits_{j = 1}^{n} a_j b_j
 \end{equation*}
 \end{definition}
 
@@ -421,7 +419,7 @@ we have
 \bigskip
 \noindent
 If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then their
-dot product $\mathbf{a} \cdot \mathbf{b}$ can also be written as
+dot product $\langle \mathbf{a}, \mathbf{b} \rangle$ can also be written as
 the matrix product $\mathbf{a}^{\intercal}\mathbf{b}$. Similarly,
 if $\mathbf{a}$ and $\mathbf{b}$ are row vectors then their dot
 product can be written as the matrix product
@@ -431,7 +429,7 @@ is equivalent to the following matrix multiplication:
 
 
 \begin{flalign*}
-\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}
+\langle \mathbf{a}, \mathbf{b}\rangle  = \mathbf{a}^{\intercal}\mathbf{b}
 \rightarrow \begin{bmatrix} a_1, a_2, \hdots, a_n \end{bmatrix} 
 \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}
 \rightarrow \sum\limits_{j = 1}^{n} a_j b_j
@@ -555,7 +553,7 @@ We can also see that
 Combining these expressions for $\| \mathbf{x} - \mathbf{y} \|^2$ we get
 
 
-\bigskip
+\medskip
 \begin{equation*}
 \| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \cos (\theta) \| \mathbf{x}\| \|\mathbf{y} \|
 = \| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \langle \mathbf{x}, \mathbf{y} \rangle
@@ -606,7 +604,7 @@ orthogonal if $\langle \mathbf{x}, \mathbf{y} \rangle = 0$, since
 
 \bigskip
 \begin{definition} 
-{\bf Orthogonal Projection:} 
+{\bf Orthogonal Projection} 
 
 \bigskip
 \noindent
@@ -743,7 +741,7 @@ of $\mathbf{a}$ in the $\mathbf{b}$ direction.
 
 \bigskip
 \begin{definition}
-{\bf The Cross Product of Two Vectors:} $\mathbf{a} \times \mathbf{b}$
+{\bf Cross Product:} $\mathbf{a} \times \mathbf{b}$
 
 \bigskip
 \noindent
