@@ -177,6 +177,74 @@ A vector space over the field $\mathbb{R}$ is often called a real vector space
 while a vector space over $\mathbb{C}$ is called a complex vector space.
 
 \subsection{Vectors}
+In this section we'll define vector notation and a few important vector
+operations.
+
+\smallskip
+\begin{definition}
+{\bf Vector Notation:} 
+
+\bigskip
+\noindent
+In these notes we will use $\mathbf{a} = [a_1,a_2,\hdots, a_n]$ 
+to represent a column or row vector in some $n$-dimensional
+space (usually $\mathbb{R}$ or $\mathbb{C}$). 
+If $\mathbf{a}$ is a column vector then in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace {
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}}_{n \times 1}
+\end{flalign*}
+
+
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace{
+\begin{bmatrix} 
+a_1, a_2, \hdots, a_n
+\end{bmatrix}}_{1 \times n}
+\end{flalign*}
+
+\bigskip
+\noindent
+The \emph{transpose} of a vector $\mathbf{a}$,
+$\mathbf{a}^{\intercal}$, is defined as follows: 
+If $\mathbf{a}$ is a column vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1, a_2, \hdots, a_n
+\end{bmatrix}
+\end{flalign*}
+
+\smallskip
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}
+\end{flalign*}
+\end{definition}
+
+\bigskip
+\noindent
 Some authors use bold font to denote a vector, e.g. 
 $\mathbf{u}$. Adding a "hat" denotes a unit vector. 
 That is, for a vector $\mathbf{u}$, 
@@ -225,6 +293,7 @@ In general, the standard basis (which is sometimes called the
 computational basis) for the $n$-dimensional Euclidean space
 consists of the ordered set of $n$ distinct vectors
 
+\medskip
 \begin{equation*}
 \{\mathbf {e} _{i}: 1 \leq i \leq n\}
 \end{equation*}
@@ -310,68 +379,6 @@ $\vec{r}(t)$ might be defined as follows:
 \noindent
 In this document I'll use these notations interchangeably.
 
-
-\begin{definition}
-{\bf Vector Notation:} 
-
-\bigskip
-\noindent
-Here we will use $\mathbf{a} = [a_1,a_2,\hdots, a_n]$ to
-represent a column or row vector in some $n$-dimensional
-space (usually $\mathbb{R}$ or $\mathbb{C}$). 
-If $\mathbf{a}$ is a column vector then in matrix format
-
-\begin{flalign*}
-\mathbf{a} = 
-\underbrace {
-\begin{bmatrix} 
-a_1 \\
-a_2 \\
-\vdots \\
-a_n
-\end{bmatrix}}_{n \times 1}
-\end{flalign*}
-
-
-\noindent
-Alternatively, if $\mathbf{a}$ is a row vector then
-in matrix format
-
-\begin{flalign*}
-\mathbf{a} = 
-\underbrace{
-\begin{bmatrix} 
-a_1, a_2, \hdots, a_n
-\end{bmatrix}}_{1 \times n}
-\end{flalign*}
-
-\bigskip
-\noindent
-The \emph{transpose} of a vector $\mathbf{a}$,
-$\mathbf{a}^{\intercal}$, is defined as follows: 
-If $\mathbf{a}$ is a column vector then
-
-\begin{flalign*}
-\mathbf{a}^{\intercal} = 
-\begin{bmatrix} 
-a_1, a_2, \hdots, a_n
-\end{bmatrix}
-\end{flalign*}
-
-\smallskip
-\noindent
-Alternatively, if $\mathbf{a}$ is a row vector then
-
-\begin{flalign*}
-\mathbf{a}^{\intercal} = 
-\begin{bmatrix} 
-a_1 \\
-a_2 \\
-\vdots \\
-a_n
-\end{bmatrix}
-\end{flalign*}
-\end{definition}
 
 \smallskip
 \begin{definition}
