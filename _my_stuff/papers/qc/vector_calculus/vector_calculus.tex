@@ -652,20 +652,24 @@ to take the inner product of $\mathbf{b}$ and Equation
 					\sum\limits_{j = 1}^{n} b_j a_j = 
 					\langle \mathbf{b}, \mathbf{a} \rangle
 					\text{ (Equation (\ref{eqn:dot_reverse}))} \\
-[15pt]
+[10pt]
 &=& \langle \mathbf{b}, (\alpha \mathbf{v}_1 + \beta \mathbf{v}_2) \rangle
 					&\hspace{3em} \mathrel{\#} \text{since } \mathbf{a} = \alpha \mathbf{v}_1 + 
 					\beta \mathbf{v}_2 \text{ (Equation (\ref{eqn:alpha_beta}))} \\
-[15pt]
+[10pt]
 &=& \langle \mathbf{b}, \alpha \mathbf{v}_1 \rangle + \langle \mathbf{b}, \beta \mathbf{v}_2 \rangle
 					&\hspace{3em} \mathrel{\#} \text{the dot product is distributive 
 					over vector addition \cite{wiki:dot_product}} \\
-[15pt]
+[10pt]
 &=& \alpha \langle \mathbf{b},\mathbf{v}_1 \rangle + \beta  \langle \mathbf{b}, \mathbf{v}_2 \rangle
 					&\hspace{3em} \mathrel{\#} \text{by the scalar product rule:
 					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle
 					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$ \cite{wiki:dot_product}} \\
-[12pt]
+[10pt]
+&=& \alpha \langle \mathbf{v}_{1},\mathbf{b} \rangle + \beta  \langle \mathbf{b}, \mathbf{v}_2 \rangle
+					&\hspace{3em} \mathrel{\#} \text{since $\langle \mathbf{b}, \mathbf{v}_1 \rangle 
+					= \langle \mathbf{v}_{1},\mathbf{b} \rangle$ (Equation (\ref{eqn:dot_reverse}))} \\
+[10pt]
 &=& \alpha \langle \mathbf{v}_1, \mathbf{b}\rangle + \beta \, 0
 					&\hspace{3em} \mathrel{\#} \text{since }  \langle \mathbf{v}_1, \mathbf{v}_2 \rangle = 0 
 					\text{ and } \mathbf{v}_1 = \mathbf{\hat{b}} 
@@ -674,15 +678,15 @@ to take the inner product of $\mathbf{b}$ and Equation
 					= 0 
 					\Rightarrow  \langle \mathbf{b}, \mathbf{v}_2  \rangle
 					= 0 \\
-[15pt]
+[10pt]
 &=& \alpha \langle \mathbf{v}_1, \mathbf{v_1} \| \mathbf{b} \| \rangle
 					&\hspace{3em} \mathrel{\#} \text{since $\beta \, 0 = 0$ and
 					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}$
 					 so $\mathbf{b} = \mathbf{v_1} \| \mathbf{b} \| $} \\
-[15pt]
+[10pt]
 &=& \alpha \| \mathbf{b} \| \langle \mathbf{v}_1, \mathbf{v}_1 \rangle
 					&\hspace{3em} \mathrel{\#} \text{by the scalar product rule} \\
-[15pt]
+[10pt]
 &=& \alpha \| \mathbf{b} \|
 					&\hspace{3em} \mathrel{\#} \text{since 
 					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}

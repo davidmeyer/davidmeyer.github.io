@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 SEP 2022 07:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 SEP 2022 07:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1436,120 +1436,120 @@ Package pdftex.def Info: images/orthogonal_projection.png  used on input line 6
 (pdftex.def)             Requested size: 208.33144pt x 153.17455pt.
 
 [5]
-Overfull \hbox (39.96327pt too wide) detected at line 695
+Overfull \hbox (39.96327pt too wide) detected at line 699
 []
  []
 
 [6 <./images/orthogonal_projection.png>]
-<images/cross_product_parallelogram.png, id=191, 1927.2pt x 1505.625pt>
+<images/cross_product_parallelogram.png, id=195, 1927.2pt x 1505.625pt>
 File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
-line 764.
+line 768.
 (pdftex.def)             Requested size: 202.34727pt x 158.0838pt.
-<images/right_hand_rule_cross_product.png, id=194, 1284.8pt x 1163.34625pt>
+<images/right_hand_rule_cross_product.png, id=198, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
-t line 801.
+t line 805.
 (pdftex.def)             Requested size: 192.71169pt x 174.4944pt.
  [7 <./images/cross_product_parallelogram.png>] [8 <./images/right_hand_rule_cr
 oss_product.png>] [9] [10]
-<images/r_theta_to_x_y.jpg, id=253, 344.487pt x 132.9768pt>
+<images/r_theta_to_x_y.jpg, id=257, 344.487pt x 132.9768pt>
 File: images/r_theta_to_x_y.jpg Graphic file (type jpg)
 <use images/r_theta_to_x_y.jpg>
-Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1278.
+Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1282.
 (pdftex.def)             Requested size: 327.26077pt x 126.32724pt.
  [11]
-<images/type_I_region.png, id=260, 1163.34625pt x 348.30125pt>
+<images/type_I_region.png, id=264, 1163.34625pt x 348.30125pt>
 File: images/type_I_region.png Graphic file (type png)
 <use images/type_I_region.png>
-Package pdftex.def Info: images/type_I_region.png  used on input line 1352.
+Package pdftex.def Info: images/type_I_region.png  used on input line 1356.
 (pdftex.def)             Requested size: 407.17729pt x 121.90726pt.
 
 [12 <./images/r_theta_to_x_y.jpg>]
-<images/type_II_region.png, id=270, 904.37875pt x 406.51875pt>
+<images/type_II_region.png, id=274, 904.37875pt x 406.51875pt>
 File: images/type_II_region.png Graphic file (type png)
 <use images/type_II_region.png>
-Package pdftex.def Info: images/type_II_region.png  used on input line 1374.
+Package pdftex.def Info: images/type_II_region.png  used on input line 1378.
 (pdftex.def)             Requested size: 316.53731pt x 142.28369pt.
  [13 <./images/type_I_region.png> <./images/type_II_region.png>] [14] [15]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1712.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1716.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1722.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1726.
 
 
-Overfull \hbox (60.8398pt too wide) detected at line 1731
+Overfull \hbox (60.8398pt too wide) detected at line 1735
 []
  []
 
 [16]
-<images/delta-r.png, id=321, 525.965pt x 470.75874pt>
+<images/delta-r.png, id=325, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1786.
+Package pdftex.def Info: images/delta-r.png  used on input line 1790.
 (pdftex.def)             Requested size: 210.38226pt x 188.30016pt.
  [17]
-Overfull \hbox (28.8371pt too wide) detected at line 1926
+Overfull \hbox (28.8371pt too wide) detected at line 1930
 []
  []
 
 [18 <./images/delta-r.png>] [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2018.
+(hyperref)                removing `math shift' on input line 2022.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2018.
+(hyperref)                removing `math shift' on input line 2022.
 
 [20]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 2056.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 2060.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 2056.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 2060.
 
 Missing character: There is no „ in font cmr10!
-<images/definite_integral.png, id=375, 752.8125pt x 661.47125pt>
+<images/definite_integral.png, id=379, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 2060.
+Package pdftex.def Info: images/definite_integral.png  used on input line 2064.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
-<images/line_integral.png, id=377, 730.73pt x 244.915pt>
+<images/line_integral.png, id=381, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 2080.
+Package pdftex.def Info: images/line_integral.png  used on input line 2084.
 (pdftex.def)             Requested size: 328.82545pt x 110.21072pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2085.
+(hyperref)                than one, level fixed on input line 2089.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2085.
+(hyperref)                removing `math shift' on input line 2089.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2085.
+(hyperref)                removing `math shift' on input line 2089.
 
 [21 <./images/definite_integral.png> <./images/line_integral.png>] [22]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
-lin-MO-tornado.png, id=395, 607.26875pt x 527.9725pt>
+lin-MO-tornado.png, id=399, 607.26875pt x 527.9725pt>
 File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 1-Joplin-MO-tornado.png Graphic file (type png)
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2232.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2236.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [23 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (37.03775pt too wide) in paragraph at lines 2302--2303
+Overfull \hbox (37.03775pt too wide) in paragraph at lines 2306--2307
 [][] 
  []
 
@@ -1614,10 +1614,10 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (28 pages, 1888333 bytes).
+Output written on vector_calculus.pdf (28 pages, 1888432 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
+ 612 PDF objects out of 1000 (max. 8388607)
+ 467 compressed objects within 5 object streams
  125 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
