@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  10 SEP 2022 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  10 SEP 2022 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1573,11 +1573,11 @@ ttps : / / www . nist . gov / disaster-[]failure-[]studies /
 
 ) [28] (./vector_calculus.aux)
 Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
-(rerunfilecheck)             Checksum: C1C4AAA90BC61BC244B2691CA464F955;2865.
+(rerunfilecheck)             Checksum: 2AF9B767E6B578D29EA1E764CF4D3576;2875.
  ) 
 Here is how much of TeX's memory you used:
  53751 strings out of 478994
- 1351641 string characters out of 5858184
+ 1351651 string characters out of 5858184
  1988712 words of memory out of 5000000
  70292 multiletter control sequences out of 15000+600000
  424661 words of font info for 119 fonts, out of 8000000 for 9000
@@ -1614,7 +1614,7 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (28 pages, 1888732 bytes).
+Output written on vector_calculus.pdf (28 pages, 1888846 bytes).
 PDF statistics:
  619 PDF objects out of 1000 (max. 8388607)
  474 compressed objects within 5 object streams
