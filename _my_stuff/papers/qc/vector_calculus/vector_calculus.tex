@@ -181,12 +181,11 @@ In this section we'll define the vector notation that we will use in these
 notes as well as a few important vector operations.
 
 \smallskip
-\begin{definition}
-{\bf Vector Notation} 
+\subsubsection{Notation} 
 
-\bigskip
+\medskip
 \noindent
-In these notes we will use $\mathbf{a} = [a_1,a_2,\hdots, a_n]$ 
+In these notes we will use $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ 
 to represent a column or row vector in some $n$-dimensional
 space (usually $\mathbb{R}$ or $\mathbb{C}$). 
 If $\mathbf{a}$ is a column vector then in matrix format
@@ -211,7 +210,7 @@ in matrix format
 \mathbf{a} = 
 \underbrace{
 \begin{bmatrix} 
-a_1, a_2, \hdots, a_n
+a_1 \; a_2 \; \hdots \; a_n
 \end{bmatrix}}_{1 \times n}
 \end{flalign*}
 
@@ -224,7 +223,7 @@ If $\mathbf{a}$ is a column vector then
 \begin{flalign*}
 \mathbf{a}^{\intercal} = 
 \begin{bmatrix} 
-a_1, a_2, \hdots, a_n
+a_1 \; a_2 \; \hdots \; a_n
 \end{bmatrix}
 \end{flalign*}
 
@@ -241,7 +240,7 @@ a_2 \\
 a_n
 \end{bmatrix}
 \end{flalign*}
-\end{definition}
+
 
 \bigskip
 \noindent
@@ -374,13 +373,9 @@ $\vec{r}(t)$ might be defined as follows:
 \end{equation*}
 
 
+\subsection{A Few Vector Operations}
 
 \bigskip
-\noindent
-In this document I'll use these notations interchangeably.
-
-
-\smallskip
 \begin{definition}
 {\bf Dot Product:} $\langle \mathbf{a}, \mathbf{b} \rangle$
 
@@ -388,8 +383,8 @@ In this document I'll use these notations interchangeably.
 \noindent
 The dot product (aka scalar product 
 or inner product) of two $n$-dimensional vectors 
-$\mathbf{a} = [a_1,a_2,\hdots, a_n]$ and 
-$\mathbf{b} = [b_1,b_2,\hdots, b_n]$, usually 
+$\mathbf{a} = (a_1,a_2,\hdots, a_n)$ and 
+$\mathbf{b} = (b_1,b_2,\hdots, b_n)$, usually 
 denoted by either $\langle \mathbf{a}, \mathbf{b} 
 \rangle$ or $\mathbf{a} \cdot \mathbf{b}$,
 is defined to be the scalar value
@@ -430,7 +425,7 @@ is equivalent to the following matrix multiplication:
 
 \begin{flalign*}
 \langle \mathbf{a}, \mathbf{b}\rangle  = \mathbf{a}^{\intercal}\mathbf{b}
-\rightarrow \begin{bmatrix} a_1, a_2, \hdots, a_n \end{bmatrix} 
+\rightarrow \begin{bmatrix} a_1 \; a_2 \; \hdots \; a_n \end{bmatrix} 
 \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}
 \rightarrow \sum\limits_{j = 1}^{n} a_j b_j
 \rightarrow c
@@ -444,7 +439,7 @@ where $c \in \mathbb{R}$.
 \setstretch{1.5}									% get a bit of extra space
 \noindent
 According to the Pythagorean theorem, the length of a vector
-$\mathbf{a} = [a_1,a_2,a_3] \in \mathbb{R}^3$, denoted
+$\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted
 $\|\mathbf{a} \|$, equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The
 next definition is a generalization of the notion of length to
 vectors in $\mathbb{R}^n$.
@@ -459,7 +454,7 @@ vectors in $\mathbb{R}^n$.
 
 \bigskip
 \noindent
-The Euclidean norm of a vector $\mathbf{x} = [x_1,x_2,\ldots, x_n] \in \mathbb{R}^{n}$
+The Euclidean norm of a vector $\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \mathbb{R}^{n}$
 is defined to be
 
 \bigskip
@@ -477,7 +472,7 @@ is defined to be
 
 \medskip
 \noindent
-The $p$-norm of a vector $\mathbf{x} = [x_{1},x_{2}. \ldots , x_{n}]$
+The $p$-norm of a vector $\mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})$
 is defined to be
 
 
