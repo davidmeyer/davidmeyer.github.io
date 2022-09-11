@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 SEP 2022 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 SEP 2022 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1474,7 +1474,7 @@ Package rerunfilecheck Info: File `infinite_sum_a_over_b.out' has not changed.
 Here is how much of TeX's memory you used:
  51778 strings out of 478994
  1309934 string characters out of 5858184
- 1944502 words of memory out of 5000000
+ 1944505 words of memory out of 5000000
  68482 multiletter control sequences out of 15000+600000
  414716 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1495,7 +1495,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on infinite_sum_a_over_b.pdf (2 pages, 159044 bytes).
+Output written on infinite_sum_a_over_b.pdf (2 pages, 158740 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
