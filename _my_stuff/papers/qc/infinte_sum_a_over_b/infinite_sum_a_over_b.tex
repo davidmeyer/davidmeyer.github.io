@@ -175,52 +175,53 @@ Here is one way to think about it:
 \begin{equation*}
 \begin{array}{lllll}
 S
-&=& \sum\limits_{n = 1}^\infty {(\frac{a}{b})}^n = (\frac{a}{b})^1
-        + (\frac{a}{b})^2 + (\frac{a}{b})^3 + \cdots
-                &\hspace{4em} \mathrel{\#} \text{define $S := 
-                	\sum\limits_{n = 1}^\infty {(\frac{a}{b})}^n$} \\  
-[12pt]
-&\Rightarrow& (\frac{b}{a}) \cdot S = (\frac{b}{a}) \cdot \Big
-        [(\frac{a}{b})^1 + (\frac{a}{b})^2 + (\frac{a}{b})^3 +
-        \cdots \Big ]
-                &\hspace{4em} \mathrel{\#} \text{multiply both sides by $(\frac{b}{a})$} \\ 
-[12pt]
-&\Rightarrow&  (\frac{b}{a}) \cdot S = 1 + \Big [(\frac{a}{b})^1
-        + (\frac{a}{b})^2 + (\frac{a}{b})^3 + \cdots \Big ]
-                &\hspace{4em}  \mathrel{\#} \text{multiply through on right side} \\
-[12pt]
-&\Rightarrow&  (\frac{b}{a}) \cdot S = 1 + S
-                &\hspace{4em}  \mathrel{\#} \text{definition of $S$} \\
-[12pt]
-&\Rightarrow&  (\frac{b}{a}) \cdot S - S = 1
-                &\hspace{4em}  \mathrel{\#} \text{subtract $S$ from both sides} \\
-[12pt]
-&\Rightarrow&  (\frac{b}{a}) \cdot S - (\frac{a}{a}) \cdot S = 1
-                &\hspace{4em}  \mathrel{\#} \text{multiply $S$ by $1 = \frac{a}{a}$} \\
-[12pt]
+&=& \sum\limits_{n = 1}^\infty {\Big (\frac{a}{b} \Big )}^n = {\Big (\frac{a}{b} \Big )}^1
+        + {\Big (\frac{a}{b} \Big )}^2 + {\Big (\frac{a}{b} \Big )}^3 + \cdots
+                &\hspace{5em} \mathrel{\#} \text{define $S := 
+                	\sum\limits_{n = 1}^\infty {\Big (\frac{a}{b} \Big )}^n$} \\  
+[15pt]
+&\Rightarrow& \Big (\frac{b}{a} \Big ) \cdot S = \Big (\frac{b}{a} \Big ) \cdot \bigg
+        [{\Big (\frac{a}{b} \Big )}^1 + {\Big (\frac{a}{b} \Big )}^2 + 
+        {\Big (\frac{a}{b} \Big )}^3 + \; \cdots \bigg ]
+                &\hspace{5em} \mathrel{\#} \text{multiply both sides by 
+                                       $\Big (\frac{b}{a} \Big )$} \\ 
+[15pt]
+&\Rightarrow& \Big (\frac{b}{a} \Big ) \cdot S = 1 + \bigg [{\Big (\frac{a}{b} \Big )}^1
+        + {\Big (\frac{a}{b} \Big )}^2 + {\Big (\frac{a}{b} \Big )}^3 + \; \cdots \bigg ]
+                &\hspace{5em}  \mathrel{\#} \text{multiply through on right side} \\
+[15pt]
+&\Rightarrow&  \left (\frac{b}{a} \right ) \cdot S = 1 + S
+                &\hspace{5em}  \mathrel{\#} \text{definition of $S$} \\
+[15pt]
+&\Rightarrow&  \left (\frac{b}{a} \right ) \cdot S - S = 1
+                &\hspace{5em}  \mathrel{\#} \text{subtract $S$ from both sides} \\
+[15pt]
+&\Rightarrow&  \left (\frac{b}{a} \right ) \cdot S - \Big (\frac{a}{a} \Big ) \cdot S = 1
+                &\hspace{5em}  \mathrel{\#} \text{multiply $S$ by $1 = \frac{a}{a}$} \\
+[15pt]
 &\Rightarrow&  S \cdot \Big [\frac{b}{a}  - \frac{a}{a} \Big ] = 1
-                &\hspace{4em}  \mathrel{\#} \text{factor out $S$} \\
-[12pt]
+                &\hspace{5em}  \mathrel{\#} \text{factor out $S$} \\
+[15pt]
 &\Rightarrow& S \cdot \Big [ \frac{b \:-\: a} {a} \Big ] = 1
-                &\hspace{4em}  \mathrel{\#} \text{simplify} \\ 
-[12pt] 
+                &\hspace{5em}  \mathrel{\#} \text{simplify} \\ 
+[15pt] 
 &\Rightarrow& S  = \frac{a}{b \:-\: a}
-                &\hspace{4em}  \mathrel{\#} \text{multiply both sides
+                &\hspace{5em}  \mathrel{\#} \text{multiply both sides
                  by $ \frac{a}{b \:-\: a} $} 
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So $S = \sum\limits_{n = 1}^\infty {(\frac{a}{b})}^n  =  \frac{a}{b
+So $S = \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^n  =  \frac{a}{b
 \:-\: a}$, where $a,b \in \mathbb{Z}$ and $a < b$.   
 
 \bigskip
 \noindent
 For example, if we let $a =1$ and $b =2$ then $\sum\limits_{n =
-1}^\infty {(\frac{1}{2})}^n = \frac{1}{2 \:-\: 1} = 1$. Similarly,
+1}^\infty {\left (\frac{1}{2} \right )}^n = \frac{1}{2 \:-\: 1} = 1$. Similarly,
 if $a =1$ and $b = 3$ then $\sum\limits_{n = 1}^\infty
-{(\frac{1}{3})}^n = \frac{1}{3 \:-\: 1} = \frac{1}{2}$.
+{\left (\frac{1}{3} \right )}^n = \frac{1}{3 \:-\: 1} = \frac{1}{2}$.
 %
 %
 % \section{Conclusions}
