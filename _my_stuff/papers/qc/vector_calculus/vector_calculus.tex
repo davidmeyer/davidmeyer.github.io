@@ -257,8 +257,13 @@ $\hat{\mathbf{u}}$ is defined to be
 
 \bigskip
 \noindent
+where $\| \mathbf{u} \|$ is the Euclidean Norm
+of the vector $\mathbf{u}$ (Definition \ref{def:euclidean_norm}).
+
+\bigskip
+\noindent
 In words: $\hat{\mathbf{u}}$ is a vector of unit
-length in the $\mathbf{u}$ direction.
+length in the $\mathbf{u}$ direction. 
 
 \bigskip
 \noindent
@@ -435,19 +440,19 @@ is equivalent to the following matrix multiplication:
 
 
 \medskip
-\setstretch{1.5}									% get a bit of extra space
+{\setstretch{1.5}									% get a bit of extra space
 \noindent
 According to the Pythagorean theorem, the length of a vector
 $\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted
 $\|\mathbf{a} \|$, equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The
 next definition is a generalization of the notion of length to
 vectors in $\mathbb{R}^n$.
-
-\setstretch{1.0}									% set it back to default
+\par}
 
 
 \bigskip
 \begin{definition}
+\label{def:euclidean_norm}
 {\bf Euclidean Norm:} $\|\mathbf{x}\|$
 
 
@@ -466,6 +471,7 @@ is defined to be
 
 \medskip
 \begin{definition}
+\label{def:p_norm}
 {\bf $p$-Norm:} $\left\|\mathbf {x} \right\|_{p}$
 
 
