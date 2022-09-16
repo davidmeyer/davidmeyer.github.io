@@ -92,7 +92,8 @@
 %
 %	Title, author and date
 %
-\title{What Does The Series $\sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^{n}$ Converge To?}
+\title{What Does The Series $S = \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^{n}$ 
+       Converge To?}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -107,12 +108,13 @@
 \bigskip
 \section{First Up: Does This Series Converge?}
 Here we'll use the ratio test for convergence \cite{wiki:ratio_test}
-and so we want to think of our series $S$ as
+and so we want to think of $S$ as
 
 \bigskip
-\begin{equation*}
+\begin{equation}
 S = \sum\limits_{n = 1}^{\infty} a_n
-\end{equation*}
+\label{eqn:S}
+\end{equation}
 
 \medskip
 \noindent
@@ -120,9 +122,9 @@ where $a_n = {\left ( \frac{a}{b} \right )}^n.$
 
 \bigskip
 \noindent
-Next, notice that the usual form of the ratio test uses 
-the limit $L = \lim\limits_{n\to \infty}\left|{\frac {a_{{n+1}}}{a_{n}}}\right|$,
-where 
+The usual form of the ratio test uses the limit 
+$L = \lim\limits_{n\to \infty}\left|{\frac {a_{{n+1}}}{a_{n}}}\right|$.
+The ratio test tells us that 
 
 \medskip
 \begin{enumerate}
@@ -135,7 +137,7 @@ where
 
 \bigskip
 \noindent
-So to apply the ratio test we want to compute the following
+To apply the ratio test we want to compute the following
 limit:
 
 \bigskip
@@ -163,22 +165,25 @@ L = \lim _{n\to \infty}\left| \dfrac{\hphantom{^15}						% \hpantom is trying to
 \bigskip
 \noindent
 If $a < b$ then $\dfrac{a}{b} < 1$ and so by clause \ref{enumerate:less_than_one}
-of the ratio test we know that the series converges absolutely.
+of the ratio test we know that $S$ converges absolutely.
 
 
-\section{Next, What Does $\sum\limits_{n = 1}^\infty {(\frac{a}{b})}^{n}$ Converge To?}
+\section{Next, What Does $S$ Converge To?}
 
 \bigskip
 \noindent
-Here is one way to think about it:  
+Since we know that $S$ converges absolutely when $a < b$,
+here is one way to think about the question:  
       
 \begin{equation*}
 \begin{array}{lllll}
 S
-&=& \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^n = {\left (\frac{a}{b} \right )}^1
+&=& \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^n
+			&\hspace{5em} \mathrel{\#} \text{definiton of $S$ (Equation (\ref{eqn:S}))} \\  
+[15pt]
+&=& {\left (\frac{a}{b} \right )}^1
         + {\left (\frac{a}{b} \right )}^2 + {\left (\frac{a}{b} \right )}^3 + \cdots
-                &\hspace{5em} \mathrel{\#} \text{define $S = 
-                	\sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^n$} \\  
+			&\hspace{5em} \mathrel{\#} \text{expand $S$} \\  
 [15pt]
 &\Rightarrow& \big (\frac{b}{a} \big ) \cdot S = \big (\frac{b}{a} \big ) \cdot \left
         [{\left (\frac{a}{b} \right )}^1 + {\left (\frac{a}{b} \right )}^2 + 
