@@ -1,0 +1,246 @@
+\documentclass{article}
+%
+%
+%	wave_particle_duality.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	22 Sep 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}														% default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Wave-Particle Duality (etc)}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+
+\smallskip
+\noindent
+We know from basic electromagnetism
+\cite{wiki:electromagnetic_radiation} that $c = \lambda \nu$,
+where $c$ is the speed of light, $\lambda$ is the wavelength, and
+$\nu$ is the frequency. Rearranging we get
+
+
+\bigskip
+\begin{equation}
+	\nu = \dfrac{c}{\lambda}
+	\label{eqn:frequency}
+\end{equation}
+
+\bigskip
+\noindent
+We know from Planck's work \cite{planck_energy} that
+electromagnetic waves have energy $E_{\text{{\tiny P}}}$, where
+$E_{\text{{\tiny P}}}$ is defined as
+
+
+\smallskip
+\begin{equation}
+	E_{\text{{\tiny P}}} = h \nu
+	\label{eqn:planck_energy}
+\end{equation}
+
+
+\bigskip
+\noindent
+Substituting Equation (\ref{eqn:frequency}) into Equation
+(\ref{eqn:planck_energy}) we get
+
+\medskip
+\begin{equation}
+	E_{\text{{\tiny P}}} = h \dfrac{c}{\lambda}
+	\label{eqn:planck_c_over_lambda}
+\end{equation}
+
+\medskip
+\noindent
+We also know from Einstein \cite{wiki:mass_energy_equivalence}
+that
+
+
+\begin{equation}
+	E_{\text{{\tiny E}}} = mc^2
+	\label{eqn:E=mc^2}
+\end{equation}
+
+\bigskip
+\noindent
+where $m$ is the mass of the particle.
+
+\bigskip
+\noindent
+What de Broglie \cite{wiki:de_broglie} realized was that matter
+must also behave as a wave\footnote{Einstein had already shown
+that an electromagnetic wave can behave like a particle
+\cite{wiki:photoelectric_effect}.}  (aka wave-particle duality
+\cite{wiki:wave_particle_duality}) and so Equation
+(\ref{eqn:planck_c_over_lambda}) must equal Equation
+(\ref{eqn:E=mc^2}). This implies that $\lambda =
+\dfrac{h}{\mathbf{p}}$, where $\mathbf{p}$ is the momentum vector
+($\mathbf{p} = m \mathbf{\mathbf{v}}$). Here's one way to see
+this:
+
+
+\smallskip
+\begin{equation*}
+\begin{array}{llll}
+h \dfrac{c}{\lambda}
+&=& mc^2	
+			&\hspace{5em} \mathrel{\#} \text{de Broglie's insight: 
+				$E_{\text{{\tiny P}}} = E_{\text{{\tiny E}}}$ (aka 
+				wave-particle duality \cite{wiki:matter_wave})} \\
+[12pt]
+&\Rightarrow& \dfrac{h}{\lambda} = m c
+			&\hspace{5em} \mathrel{\#} \text{cancel $c$}\\
+[12pt]
+&\Rightarrow& \dfrac{h}{\lambda} = m \mathbf{v}
+			&\hspace{5em} \mathrel{\#} \mathbf{v} = c \\
+[12pt]
+&\Rightarrow& \lambda = \dfrac{h}{m \mathbf{v}}
+			&\hspace{5em} \mathrel{\#} \text{solve for $\lambda$}\\
+[12pt]
+&\Rightarrow& \lambda = \dfrac{h}{\mathbf{p}}
+			&\hspace{5em} \mathrel{\#} \text{$\lambda$ is called the 
+	               		de Broglie wavelength} \\
+[12pt] 
+\end{array}
+\end{equation*}
+%
+%
+%	show a derivation/proof
+%
+% \begin{equation*}
+% \begin{array}{llll}
+% x
+% &=& y				&\qquad \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
+% [10pt]
+% \end{array}
+% \end{equation*}
+%
+%
+%
+%	include an image
+%
+% \begin{figure}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
+% \label{fig:X}
+% \end{figure}
+%
+\section{Conclusions}
+%
+%
+%
+\section{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+
