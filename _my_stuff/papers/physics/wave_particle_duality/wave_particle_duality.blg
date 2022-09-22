@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: wave_particle_duality.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 7 entries,
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            522 strings with 5258 characters,
-and the built_in function-call counts, 1539 in all, are:
-= -- 154
-> -- 49
+            525 strings with 5418 characters,
+and the built_in function-call counts, 1756 in all, are:
+= -- 176
+> -- 56
 < -- 0
-+ -- 21
-- -- 14
-* -- 44
-:= -- 268
-add.period$ -- 28
-call.type$ -- 7
-change.case$ -- 28
++ -- 24
+- -- 16
+* -- 50
+:= -- 305
+add.period$ -- 32
+call.type$ -- 8
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 49
-empty$ -- 155
-format.name$ -- 14
-if$ -- 337
+cite$ -- 8
+duplicate$ -- 56
+empty$ -- 177
+format.name$ -- 16
+if$ -- 385
 int.to.chr$ -- 0
-int.to.str$ -- 7
+int.to.str$ -- 8
 missing$ -- 0
-newline$ -- 45
-num.names$ -- 14
-pop$ -- 56
+newline$ -- 51
+num.names$ -- 16
+pop$ -- 64
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 24
 quote$ -- 0
-skip$ -- 42
+skip$ -- 48
 stack$ -- 0
-substring$ -- 35
-swap$ -- 7
+substring$ -- 40
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
+type$ -- 32
 warning$ -- 0
-while$ -- 14
-width$ -- 8
-write$ -- 86
+while$ -- 16
+width$ -- 9
+write$ -- 98
