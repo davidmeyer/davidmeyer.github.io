@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  23 SEP 2022 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  23 SEP 2022 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1437,29 +1437,29 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
-Overfull \hbox (2.77388pt too wide) detected at line 567
+Overfull \hbox (2.77388pt too wide) detected at line 569
 []
  []
 
 [4] [5] [6] [7] [8]
-Overfull \hbox (44.57487pt too wide) detected at line 981
+Overfull \hbox (44.57487pt too wide) detected at line 983
 []
  []
 
 
-Overfull \hbox (16.58653pt too wide) detected at line 1013
+Overfull \hbox (16.58653pt too wide) detected at line 1015
 []
  []
 
 [9] [10] [11] [12]
-<images/damped_harmonic_oscillator.png, id=319, 501.875pt x 430.60875pt>
+<images/damped_harmonic_oscillator.png, id=321, 501.875pt x 430.60875pt>
 File: images/damped_harmonic_oscillator.png Graphic file (type png)
 <use images/damped_harmonic_oscillator.png>
 Package pdftex.def Info: images/damped_harmonic_oscillator.png  used on input l
-ine 1383.
+ine 1385.
 (pdftex.def)             Requested size: 200.74643pt x 172.24043pt.
  [13 <./images/damped_harmonic_oscillator.png>] [14]
-Overfull \hbox (51.33952pt too wide) detected at line 1592
+Overfull \hbox (51.33952pt too wide) detected at line 1594
 []
  []
 
@@ -1492,9 +1492,9 @@ Package rerunfilecheck Info: File `oscillators.out' has not changed.
 (rerunfilecheck)             Checksum: 4D07C116FADDAD0994CD16927C7B8FD9;2823.
  ) 
 Here is how much of TeX's memory you used:
- 54123 strings out of 478994
- 1361227 string characters out of 5858184
- 2063133 words of memory out of 5000000
+ 54124 strings out of 478994
+ 1361238 string characters out of 5858184
+ 2063276 words of memory out of 5000000
  70701 multiletter control sequences out of 15000+600000
  421708 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1525,10 +1525,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (18 pages, 377836 bytes).
+Output written on oscillators.pdf (18 pages, 378806 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
+ 540 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
  134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
