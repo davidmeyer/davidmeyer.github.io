@@ -24,7 +24,7 @@
 \geometry{letterpaper}                  % ... or a4paper or a5paper or ... 
 %\geometry{landscape}                   % Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}          % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}                   % Use pdf, png, jpg, or eps with pdflatex; use eps in DVI mode
+\usepackage{graphicx}                   % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{hyperref}
@@ -64,81 +64,54 @@
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.60 \textwidth}{!} {                      % resize figure if you want
   \begin{tikzpicture}
-       \coordinate (O)                  at (0,0);               % origin O
-       \coordinate (Xstart)             at (-1,0);              % x-axis 
-       \coordinate (Xend)               at (10,0);              % x-axis
-       \coordinate (Ystart)             at (0,-1);              % y-axis
-       \coordinate (Yend)               at (0, 7.5);            % y-axis
-       \coordinate (EP)                 at (7,5);               % endpoint of the F vs. x line
-       \coordinate (EPO)                at (8,5);               % endpoint origin
-       \coordinate (TopHalf1)           at (7.5,2.75);          % top half of kx line
-       \coordinate (TopHalf2)           at (7.5,5);             % top half of kx line
-       \coordinate (BottomHalf1)        at (7.5,2);             % bottom half of kx line
-       \coordinate (BottomHalf2)        at (7.5,0);             % bottom halft of kx line
-       \coordinate (X)                  at (7,0);               % x coordinate of kx line
-       \coordinate (Y)					at (0,5);
-       \coordinate (A)					at (4.0,6.25);			% A = ... rectangle
-%
-%
-%
-       
-       \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};      % x axis
-       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F$};      % y axis
+       \coordinate (O)          at (0,0);				% origin O
+       \coordinate (Xstart)     at (-2,0);             % x-axis out to 8
+       \coordinate (Xend)       at (9.5,0);              % x-axis out to 8
+       \coordinate (Ystart)     at (0,-2);             % y-axis up to 6
+       \coordinate (Yend)       at (0, 7);             % y-axis up to 6
+       \coordinate (EP)         at (7,5);
+       \coordinate (EPO)        at (8,5);
+       \coordinate (TopHalf1)    at (7.5,2.75);
+       \coordinate (TopHalf2)    at (7.5,5);
+       \coordinate (BottomHalf1)  at (7.5,2);
+       \coordinate (BottomHalf2)	at (7.5,0);
+
+
+       \coordinate (X)          at (7,0);
+
+
+       \draw[thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};				% x axis
+       \draw[thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F$};				% y axis
        \draw [draw=none, fill=gray!20] (O) -- (EP) -- (X) -- cycle;
-       \draw [draw=none] (O) -- (X) node[midway,above,scale=1.25,yshift=0.250cm,xshift=0.80cm] 
-       				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
-       \draw[very thick,red](O) -- (EP) node [left,midway,xshift=-0.20cm,yshift=0.25cm,scale=1.35] 
+       \draw [draw=none] (O) -- (X) node[midway,above,scale=1.25,yshift=0.75cm,xshift=1.0cm] 
+       				{${\text{A} = \frac{1}{2}kx^2}$};
+
+       \draw[very thick,red](O) -- (EP) node [left,midway,xshift=-0.25cm,yshift=0.25cm,scale=1.35] 
        				{${\color{black}{\text{slope} = k}}$}; 
        \draw[thick,dashed](EP) -- (X) coordinate []; 
+       
        \fill [black] (O)  circle (0.075);
        \fill [black] (EP) circle (0.075);
-       \fill [black] (X)  circle (0.075) node [below,yshift=-0.20cm,scale=1.35] {$x$};
+       \fill [black] (X)  circle (0.075) node [below,yshift=-0.25cm,scale=1.35] {$x$};
        \draw [thick] (EP) -- (EPO) [];
-
-%
-%	Surely there is a better way to do this but this is what I came up with
-%
-       \draw [latex-, thick] (TopHalf2) -- (TopHalf1) node [below, yshift=0.05cm,scale=1.35] {$kx$};
-       \draw [-latex, thick] (BottomHalf1) -- (BottomHalf2) [];
-%
-%	Show kx on the F axis
-%
-       \draw [dashed] (EP) -- (Y) node [left,xshift=-0.10cm,yshift=0.10cm,scale=1.35] {$kx$};
-       \fill [black] (Y) circle (0.075);
-%
-%	Draw the rectangle with A = ...
-%
-	   \node [draw,rectangle,blue,scale=1.15] at (A) 
-	   		{$\color{black}{\text{A} = 
-	   		  \int_{x} F(x) \, dx    =
-			  \int_{x} kx \, dx      = 
-			  \frac{1}{2}kx^{2}}$
-			  };
-%
-%
-%
-
-	   \node [draw,rectangle,blue,scale=1.15] at (11.55,2.36) 
-	   		{$\color{black}{\text{A} = \frac{1}{2} \big (
-	   		  \text{Base} \times \text{Height} \big )  = \frac{1}{2} kx^{2}}$
-			  };
+       \draw [<-, thick] (TopHalf2) -- (TopHalf1) node [below, scale=1.35] {$kx$};
+       \draw [->, thick] (BottomHalf1) -- (BottomHalf2) [];
 
        
- %       \fill [red] (8.6,2.40) circle (0.075);
-    
+
+
 %
 %	done
 %       
    \end{tikzpicture}
-  }  % end \resizebox
- \caption{Potential Energy of a Simple Harmonic Oscillator}
+  }																									% end \resizebox
+ \caption{$\text{PE} = \text{W} = \text{A} = \frac{1}{2}kx^2$}
  \label{fig:PE}
 \end{figure}
 
-\bigskip
-\bigskip
+
 %
 %	draw the transformation: rectangle in the uv-plane
 %
@@ -146,7 +119,7 @@
 \centering
   \resizebox{0.60 \textwidth}{!} {                      % resize figure if you want
   \begin{tikzpicture}
-       \coordinate (O)          at (0,0);		% origin O
+       \coordinate (O)          at (0,0);				% origin O
        \coordinate (Xstart)     at (-10,0);             % x-axis out to 8
        \coordinate (Xend)       at (15,0);              % x-axis out to 8
        \coordinate (Ystart)     at (0,-15);             % y-axis up to 6

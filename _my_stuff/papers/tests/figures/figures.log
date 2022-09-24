@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 APR 2022 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 SEP 2022 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1538,11 +1538,11 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 114.
+(Font)              <20.74> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 114.
+(Font)              <14.4> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 114.
+(Font)              <12> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1552,18 +1552,19 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
+ [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [2]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [3]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [4]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 507.
+LaTeX Font Warning: Command \small invalid in math mode on input line 584.
 
-[4] [5] [6] [7] (./figures.aux)
+[5] [6] [7] [8] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1571,34 +1572,36 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 46644 strings out of 478994
- 1083598 string characters out of 5858184
- 1511149 words of memory out of 5000000
- 63152 multiletter control sequences out of 15000+600000
+ 46705 strings out of 478994
+ 1084604 string characters out of 5858184
+ 1512232 words of memory out of 5000000
+ 63211 multiletter control sequences out of 15000+600000
  520618 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,15n,117p,789b,1118s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type
-1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
-m/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texliv
-e/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2021/texmf-dist/font
-s/type1/public/lm/lmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
-lic/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr1
-2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fon
-ts/type1/public/lm/lmsy6.pfb>
-Output written on figures.pdf (7 pages, 205033 bytes).
+ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/
+enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
+m/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/lm/lmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lm
+mi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
+msy6.pfb>
+Output written on figures.pdf (8 pages, 210739 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
