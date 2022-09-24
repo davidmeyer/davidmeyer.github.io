@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 SEP 2022 17:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 SEP 2022 18:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1437,17 +1437,17 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-Overfull \hbox (2.77388pt too wide) detected at line 653
+Overfull \hbox (2.77388pt too wide) detected at line 652
 []
  []
 
 [5] [6] [7] [8]
-Overfull \hbox (44.57487pt too wide) detected at line 1067
+Overfull \hbox (44.57487pt too wide) detected at line 1066
 []
  []
 
 
-Overfull \hbox (16.58653pt too wide) detected at line 1099
+Overfull \hbox (16.58653pt too wide) detected at line 1098
 []
  []
 
@@ -1456,10 +1456,10 @@ Overfull \hbox (16.58653pt too wide) detected at line 1099
 File: images/damped_harmonic_oscillator.png Graphic file (type png)
 <use images/damped_harmonic_oscillator.png>
 Package pdftex.def Info: images/damped_harmonic_oscillator.png  used on input l
-ine 1469.
+ine 1468.
 (pdftex.def)             Requested size: 200.74643pt x 172.24043pt.
  [13 <./images/damped_harmonic_oscillator.png>] [14]
-Overfull \hbox (51.33952pt too wide) detected at line 1678
+Overfull \hbox (51.33952pt too wide) detected at line 1677
 []
  []
 
@@ -1525,7 +1525,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (18 pages, 382058 bytes).
+Output written on oscillators.pdf (18 pages, 382020 bytes).
 PDF statistics:
  542 PDF objects out of 1000 (max. 8388607)
  448 compressed objects within 5 object streams
