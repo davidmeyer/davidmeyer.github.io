@@ -500,27 +500,25 @@ at above is
 E_{\text{total}} = \text{KE} + \text{PE}
 \end{equation*}
 
-\bigskip
+\medskip
 \noindent
 All good, but what is the kinetic energy (KE) and potential
-energy (PE) of such as system?
+energy (PE) of such as system? Well, we know that $\text{KE} 
+= \frac{1}{2} mv^{2}$ (where $v := \norm{\mathbf{v}}$)
+\cite{oscillations_and_waves}, but what about PE, the potential 
+energy of the system?
 
-\bigskip
-\noindent
-We know from \cite{oscillations_and_waves} that
 
-\begin{equation*}
-E_{\text{total}} = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 
-\end{equation*}
-
-\bigskip
+\medskip
 \noindent
 It turns out that the potential energy at a position $x$ is 
 equal to the area under the force function curve between the 
 equilibrium point (usually the origin) and $x$. Figure 
 \ref{fig:PE} attempts to explain why $\text{PE} = \frac{1}{2}kx^2$ 
-for the force function $F(x) = -kx$ when only the magnitude 
-of $F(x)$ is considered. That is, $F(x) = \norm{-kx} = kx$. 
+(where $x := \norm{\mathbf{x}}$) for the force function 
+$\mathbf{F(x)} = -k\mathbf{x}$ when only the magnitude of $F(x)$ 
+is considered. That is, $F(x) = \norm{-k\mathbf{x}} = 
+-k\norm{\mathbf{x}} = kx$. 
 
 
 \medskip
@@ -529,7 +527,7 @@ of $F(x)$ is considered. That is, $F(x) = \norm{-kx} = kx$.
 %	
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.60 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
        \coordinate (O)                  at (0,0);               % origin O
        \coordinate (Xstart)             at (-1,0);              % x-axis 
@@ -593,7 +591,16 @@ of $F(x)$ is considered. That is, $F(x) = \norm{-kx} = kx$.
 
 
 \noindent
-Now we know that
+So now we know that
+
+\begin{equation*}
+E_{\text{total}} = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 
+\end{equation*}
+
+\bigskip
+\noindent
+again where $v := \norm{\mathbf{v}}$ and $x := \norm{\mathbf{x}}$.
+Further, we know that
 
 \begin{equation*}
 \begin{array}{llll}
