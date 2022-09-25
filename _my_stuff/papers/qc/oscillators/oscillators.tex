@@ -504,9 +504,9 @@ E_{\text{total}} = \text{KE} + \text{PE}
 \noindent
 All good, but what is the kinetic energy (KE) and potential
 energy (PE) of such as system? Well, we know that $\text{KE} 
-= \frac{1}{2} mv^{2}$ (where $v := \norm{\mathbf{v}}$)
-\cite{oscillations_and_waves}, but what about PE, the potential 
-energy of the system?
+= \frac{1}{2} mv^{2}$ (where $v := \norm{\mathbf{v}}$; see
+\cite{kinetic_energy} for more), but what about PE, the 
+potential energy of the system?
 
 
 \medskip
@@ -516,8 +516,8 @@ equal to the area under the force function curve between the
 equilibrium point (usually the origin) and $x$. Figure 
 \ref{fig:PE} attempts to explain why $\text{PE} = \frac{1}{2}kx^2$ 
 (where $x := \norm{\mathbf{x}}$) for the force function 
-$\mathbf{F(x)} = -k\mathbf{x}$ when only the magnitude of $\mathbf{F(x)}$ 
-is considered. That is, $F(x) = kx$. 
+$\mathbf{F(x)} = -k\mathbf{x}$ when only the magnitude of 
+$\mathbf{F(x)}$ is considered. That is, $F(x) = kx$. 
 
 
 \medskip
@@ -540,25 +540,31 @@ is considered. That is, $F(x) = kx$.
        \coordinate (BottomHalf1)        at (7.5,2);             % bottom half of kx line
        \coordinate (BottomHalf2)        at (7.5,0);             % bottom halft of kx line
        \coordinate (X)                  at (7,0);               % x coordinate of kx line
-       \coordinate (Y)					at (0,5);
+       \coordinate (Y)					at (0,5);				% draw a dot on the y axis
        \coordinate (A)					at (4.0,6.25);			% A = ... rectangle
 %
 %
 %
        
-       \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};      % x axis
-       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F(x)$};      % y axis
+       \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
+       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F(x)$};		% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
-       \draw [draw=none] (O) -- (X) node[midway,above,scale=1.35,yshift=0.250cm,xshift=0.80cm] 
+       \draw [draw=none] (O) -- (X) node[midway,above,scale=1.35,yshift=0.40cm,xshift=0.80cm] 
        				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
-       \draw[very thick,red](O) -- (EP) node [left,midway,xshift=-0.20cm,yshift=0.25cm,scale=1.35] 
-       				{${\color{black}{\text{slope} = k}}$}; 
+       % \draw[very thick,red](O) -- (EP) node [left,midway,xshift=-0.20cm,yshift=0.25cm,scale=1.35] 
+       \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35] 
+       				{${\color{black}{F(x) = kx}}$}; 
        \draw[thick,dashed](EP) -- (X) coordinate []; 
        \fill [black] (O)  circle (0.075);
        \fill [black] (EP) circle (0.075);
        \fill [black] (X)  circle (0.075) node [below,yshift=-0.20cm,scale=1.35] {$x$};
+%
+%	Draw the top horizontal line for the kx arrow
+%
        \draw [thick] (EP) -- (EPO) [];
-       
+%
+%	Label the origin
+%
        \node [xshift=-0.35cm,yshift=-0.35cm,scale=1.15] at (0,0) {$O$};
 %
 %	Surely there is a better way to do this but this is what I came up with
@@ -653,7 +659,7 @@ E_{\text{total}}
 
 \bigskip
 \noindent
-So now we know that the oscillator has $E_{\text{total}} = 2
+So we see that the oscillator has $E_{\text{total}} = 2
 \pi^2 f^2 A^2 m$, or said another way $E_{\text{total}} \propto
 f^2 A^2$. This result will become useful when we consider the
 quantum harmonic oscillator.
