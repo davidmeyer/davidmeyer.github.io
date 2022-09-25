@@ -503,21 +503,23 @@ E_{\text{total}} = \text{KE} + \text{PE}
 \medskip
 \noindent
 All good, but what is the kinetic energy (KE) and potential
-energy (PE) of such as system? Well, we know that $\text{KE} 
-= \frac{1}{2} mv^{2}$ (where $v := \norm{\mathbf{v}}$; see
-\cite{dmm:vector_calculus,kinetic_energy} for more), 
-but what about the potential energy of the system?
+energy (PE) of such as system? Well, we know that $\text{KE} =
+\frac{1}{2} mv^{2}$ (where $v := \norm{\mathbf{v}}$; see
+\cite{dmm:vector_calculus,kinetic_energy} for more), but what
+about the potential energy of the system?
 
 
 \medskip
+{\setstretch{1.10}
 \noindent
-It turns out that the potential energy at a position $x$ is 
-equal to the area under the force function curve between the 
-equilibrium point (usually the origin) and $x$. Figure 
-\ref{fig:PE} attempts to explain why $\text{PE} = \frac{1}{2}kx^2$ 
-(where $x := \norm{\mathbf{x}}$) for the force function 
-$\mathbf{F(x)} = -k\mathbf{x}$ when only the magnitude of 
-$\mathbf{F(x)}$ is considered. That is, $F(x) = kx$. 
+The potential energy is defined to be the work done by the system
+\cite{wiki:potential_energy}.  Why? It turns out that the work
+done by a conservative force is equal to the area under the force
+curve \cite{wiki:conservative_force}. Figure \ref{fig:PE} is a
+graph of $F$ vs. $x$ where the line has slope $k$. In this case
+the area under the curve is $\frac{1}{2} kx^2$ and thus the
+work done or potential energy stored is $\frac{1}{2} kx^2$.
+\par}
 
 
 \medskip
@@ -547,7 +549,7 @@ $\mathbf{F(x)}$ is considered. That is, $F(x) = kx$.
 %
        
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
-       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F(x)$};		% y axis
+       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F$};		% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
        \draw [draw=none] (O) -- (X) node[midway,above,scale=1.35,yshift=0.40cm,xshift=0.80cm] 
        				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
