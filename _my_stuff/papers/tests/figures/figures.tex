@@ -86,11 +86,11 @@
        
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};      % x axis
        \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F$};      % y axis
-       \draw [draw=none, fill=gray!20] (O) -- (EP) -- (X) -- cycle;
-       \draw [draw=none] (O) -- (X) node[midway,above,scale=1.25,yshift=0.250cm,xshift=0.80cm] 
+       \draw [draw=none, fill=gray!15] (O) -- (EP) -- (X) -- cycle;
+       \draw [draw=none] (O) -- (X) node[midway,above,scale=1.25,yshift=0.40cm,xshift=0.80cm] 
        				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
-       \draw[very thick,red](O) -- (EP) node [left,midway,xshift=-0.20cm,yshift=0.25cm,scale=1.35] 
-       				{${\color{black}{\text{slope} = k}}$}; 
+       \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35] 
+       				{${\color{black}{F(x) = kx}}$}; 
        \draw[thick,dashed](EP) -- (X) coordinate []; 
        \fill [black] (O)  circle (0.075);
        \fill [black] (EP) circle (0.075);
