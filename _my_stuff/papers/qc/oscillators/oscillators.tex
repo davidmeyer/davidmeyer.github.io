@@ -532,12 +532,15 @@ Thus the work done or potential energy stored is $\frac{1}{2} kx^2$.
   \resizebox{0.50 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
        \coordinate (O)                  at (0,0);               % origin O
+       \coordinate (Ominus)				at (-1,-.71428571428571428571);
+
        \coordinate (Xstart)             at (-1,0);              % x-axis 
        \coordinate (Xend)               at (10,0);              % x-axis
        \coordinate (Ystart)             at (0,-1);              % y-axis
        \coordinate (Yend)               at (0, 7.5);            % y-axis
-       \coordinate (EP)                 at (7,5);               % endpoint of the F vs. x line
-       \coordinate (EPO)                at (8,5);               % endpoint origin
+       \coordinate (EP)                 at (7,5);               % endpoint of the F vs. x line segment of interest
+       \coordinate (EPO)                at (8,5);               % endpoint of extension for kx vertical line
+       \coordinate (EPL)                at (7.75,5.56);			% endpoint of the F vs. x line: (5/7) * 7.75 ≈ 5.53571429
        \coordinate (TopHalf1)           at (7.5,2.75);          % top half of kx line
        \coordinate (TopHalf2)           at (7.5,5);             % top half of kx line
        \coordinate (BottomHalf1)        at (7.5,2);             % bottom half of kx line
@@ -549,15 +552,28 @@ Thus the work done or potential energy stored is $\frac{1}{2} kx^2$.
 %
 %
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
-       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F_{m}$};		% y axis
+       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F_{m}$};	% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
        \draw [draw=none] (O) -- (X) node[midway,above,scale=1.35,yshift=0.40cm,xshift=0.80cm] 
        				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
-       \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35] 
-       				{${\color{black}{F_{m}(x) = kx}}$}; 
-       \draw[thick,dashed](EP) -- (X) coordinate []; 
-       \fill [black] (O)  circle (0.075);
+       \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35]	% draw the line segment of interest
+       				{${\color{black}{F_{m}(x) = kx}}$};
+%
+%	Draw the dashed segments of the line
+%
+	   \draw[very thick,dashed,red](EP) -- (EPL) node [scale=1.35] {};
+	   \draw[very thick,dashed,red](Ominus) -- (O) node [scale=1.35] {};
+
+%
+%	Draw dots at the endpoints of the line segment of interest
+%
+	   \fill [black] (O)  circle (0.075);
        \fill [black] (EP) circle (0.075);
+%
+%	Draw dashed line from the endpoint of the line segment (EP) down 
+%	to the x axis (O)
+%       
+       \draw[thick,dashed](EP) -- (X) coordinate [];
        \fill [black] (X)  circle (0.075) node [below,yshift=-0.20cm,scale=1.35] {$x$};
 %
 %	Draw the top horizontal line for the kx arrow
