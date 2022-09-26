@@ -517,13 +517,12 @@ The potential energy is defined to be the work done by the system
 \cite{wiki:potential_energy}.  Why? It turns out that the work
 done by a conservative force is equal to the area under the force
 curve $F$ \cite{wiki:conservative_force}. Since potential energy is 
-a scalar quantity \cite{elastic_potential_energy} we only interested 
-in the magnitude of $F$, so in this case $F = kx$ (the sign is the 
-direction of the $F$ vector in the one-dimensional case, so 
-the magnitude of $F$ equals $|F| = |-kx| = kx$). 
-Figure \ref{fig:PE} is a graph of $F = kx$ where we can see that the 
-area under the curve is $\frac{1}{2} kx^2$. Thus the work done or 
-potential energy stored is $\frac{1}{2} kx^2$. 
+a scalar quantity \cite{elastic_potential_energy} we are only 
+interested in the magnitude of $F$, $kx$, at each point $x$ (the sign 
+might be taken as the the direction of the $F$ vector in the one-dimensional 
+case). So if we set $F_{m} = kx$ we get the graph in Figure \ref{fig:PE}, 
+where we can see that the area under the curve is $\frac{1}{2} kx^2$. 
+Thus the work done or potential energy stored is $\frac{1}{2} kx^2$. 
 \par}
 %
 %	draw "Potential Energy of a Spring and Mass System"
@@ -550,12 +549,12 @@ potential energy stored is $\frac{1}{2} kx^2$.
 %
 %
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
-       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F$};		% y axis
+       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F_{m}$};		% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
        \draw [draw=none] (O) -- (X) node[midway,above,scale=1.35,yshift=0.40cm,xshift=0.80cm] 
        				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
        \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35] 
-       				{${\color{black}{F(x) = kx}}$}; 
+       				{${\color{black}{F_{m}(x) = kx}}$}; 
        \draw[thick,dashed](EP) -- (X) coordinate []; 
        \fill [black] (O)  circle (0.075);
        \fill [black] (EP) circle (0.075);
@@ -583,8 +582,8 @@ potential energy stored is $\frac{1}{2} kx^2$.
 %
 	   \node [draw,rectangle,blue,scale=1.25] at (A) 
 	   		{$\color{black}{\text{A} = 
-	   		  \int_{x} F(x) \, dx    =
-			  \int_{x} kx \, dx      = 
+	   		  \int_{x} F_{m}(x) \, dx =
+			  \int_{x} kx \, dx = 
 			  \frac{1}{2}kx^{2}}$
 			  };   
 %
