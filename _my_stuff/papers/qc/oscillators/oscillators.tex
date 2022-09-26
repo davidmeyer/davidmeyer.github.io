@@ -119,7 +119,7 @@ looks at the simple pendulum, and Section \ref{subsec:lc_circuit}
 which considers LC circuits. Section
 \ref{sec:quantum_harmonic_oscillators} looks at the Quantum
 Harmonic Oscillator. Section \ref{sec:quantum_fields} outlines
-how quantum fields fit into all of this. Finally,
+how quantum fields fit into all of this. Finally, Section
 \ref{sec:conclusions} offers a few observations and conclusions.
 
 
@@ -147,13 +147,14 @@ Hooke's Law describes a form of simple harmonic motion, which as
 mentioned above occurs when the restoring force in a system (the
 force directed toward a stable equilibrium point) is proportional
 to the displacement from that equilibrium. Hooke's Law is most
-frequently stated as\footnote{It seems to be convention to use $x$ 
-and $x(t)$, $F$, $F(x)$ and $F(x(t))$, and $a$ and $a(t)$
-interchangeably.} $F \propto -x$. That is, the force $F$ is
-proportional to the displacement $x$ (hence Hooke's Law describes
-simple harmonic motion aka simple harmonic oscillation). More
-frequently this relationship is converted into an equality by the
-use of a constant $k$ so that we have
+frequently stated as\footnote{It seems to be (a confusing) convention 
+to use $x$, $x(t)$, $\mathbf{x}$, $\mathbf{x}(t)$, etc. interchangeably.} 
+$F \propto -x$. That is, the force $F$ is proportional to the displacement 
+$x$ (hence Hooke's Law describes simple harmonic motion aka simple harmonic 
+oscillation; note also that both $F$ and $x$ are vectors so perhaps we should
+be using $\mathbf{F}$, $\mathbf{a}$ and $\mathbf{x}$). More frequently 
+this relationship is converted into an equality by the use of a constant 
+$k$ so that we have
 
 
 \begin{equation}
@@ -161,17 +162,19 @@ F =-kx
 \label{eqn:hookes_law}
 \end{equation}
 
+
 \bigskip
 \noindent
-We also know that Newton's Second Law of Motion 
-\cite{wiki:newtons_laws} tells us that 
+We also know that Newton's 
+Second Law of Motion \cite{wiki:newtons_laws} 
+tells us that 
 
 \begin{equation}
 F = ma
 \label{eqn:newtons_2nd_law}
 \end{equation}
 
-\bigskip
+\medskip
 \noindent
 Setting Newton's force (Equation (\ref{eqn:newtons_2nd_law})) 
 equal to Hooke's force (Equation (\ref{eqn:hookes_law})) 
@@ -308,7 +311,6 @@ its equilibrium position.} in Figure \ref{fig:spring_and_mass_system}.
 	      \draw [draw=none] (12.00,0.00) -- (12.00,0.00) node[draw,rectangle,blue,midway,yshift=-0.05cm] 
                                 {${\; \color{black}{a(t) = -\dfrac{k}{m} x(t) \;}}$};			 
         \end{footnotesize}
-		 
     \end{tikzpicture}
   }                                                             			% end resizebox
 \caption{Spring and Mass System with Spring Constant $k$ and Mass $m$}
@@ -337,7 +339,7 @@ pattern shown in Figure \ref{fig:smh_displacement_function}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.45 \textwidth}{!} {																	% resize figure if you want
+  \resizebox{0.40 \textwidth}{!} {																	% resize figure if you want
   \begin{tikzpicture}
     \def \A {1.0}																					% x(t) = A cos (wt)
     \def \w {1.0}																					% x(t) = A cos (wt)
@@ -406,28 +408,28 @@ really a solution to Equation (\ref{eqn:d2xdt2}) as follows:
 \begin{array}{llll}
 \dfrac{d^2 x}{dt^2}
 &=& - \dfrac{k}{m} x            &\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:d2xdt2})} \\
-[10pt]
+[8pt]
 &\Rightarrow& \dfrac{d^2}{dt^2}  \Big [A \cos (\omega t) \Big ] = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad \mathrel{\#} \text{guess that $x(t) = A \cos (\omega t)$} \\
-[10pt]
+[8pt]
 &\Rightarrow& \dfrac{d}{dt}  \Big [-\omega A \sin (\omega t) \Big ] = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) 
                                 = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
-[10pt]
+[8pt]
 &\Rightarrow& -\omega^2 A \cos (\omega t) = -\dfrac{k}{m} x
 				&\qquad \qquad \qquad
                                 \mathrel{\#} \text{$\dfrac{d}{dt}\sin (u)
                                 = \cos (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
-[10pt]
+[8pt]
 &\Rightarrow& \omega^2 A \cos (\omega t) = \dfrac{k}{m} x
                                 &\qquad \qquad \qquad \mathrel{\#} \text{cancel minus} \\
-[10pt]
+[8pt]
 &\Rightarrow& \omega^2 x = \dfrac{k}{m} x
                                 &\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
-[10pt]
+[8pt]
 &\Rightarrow& \omega^2  = \dfrac{k}{m}
                                 &\qquad \qquad \qquad \mathrel{\#} \text{cancel $x$} \\
-[10pt]
+[8pt]
 &\Rightarrow& \omega  = \sqrt{\dfrac{k}{m}}
                                 &\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
 \end{array}
@@ -465,7 +467,7 @@ $\text{seconds}^{-1}$.
 
 \bigskip
 \noindent
-Give this information we can write the displacement function
+Given this information we can write the displacement function
 $x(t)$ as in terms of the frequency $f$ as follows:
 
 \begin{equation*}
@@ -475,13 +477,12 @@ x(t) = A \cos (2 \pi f t)
 \bigskip
 \noindent
 We can also put Equations (\ref{eqn:omega0}) and (\ref{eqn:omega1}) 
-together to find
+together to find that
 
 \begin{equation*}
 f = \dfrac{1}{2 \pi} \sqrt{\dfrac{k}{m}}
 \end{equation*}
 
-\bigskip
 \noindent
 and
 
@@ -495,7 +496,7 @@ We know that the total energy of an oscillator
 such as the spring and mass system we looked 
 at above is
 
-
+\vspace{-0.15cm}
 \begin{equation*}
 E_{\text{total}} = \text{KE} + \text{PE}
 \end{equation*}
@@ -503,34 +504,32 @@ E_{\text{total}} = \text{KE} + \text{PE}
 \medskip
 \noindent
 All good, but what is the kinetic energy (KE) and potential
-energy (PE) of such as system? Well, we know that $\text{KE} =
-\frac{1}{2} mv^{2}$ (where $v := \norm{\mathbf{v}}$; see
-\cite{dmm:vector_calculus,kinetic_energy} for more), but what
-about the potential energy of the system?
+energy (PE) of such as system? Well, we know that 
+$\text{KE} = \frac{1}{2} mv^{2}$ \cite{kinetic_energy}, but 
+what about the potential energy of the system?
 
 
-\medskip
-{\setstretch{1.10}
+\bigskip
+{\setstretch{1.05}
 \noindent
 The potential energy is defined to be the work done by the system
 \cite{wiki:potential_energy}.  Why? It turns out that the work
 done by a conservative force is equal to the area under the force
-curve \cite{wiki:conservative_force}. Figure \ref{fig:PE} is a
-graph of a linear force $F$ versus position $x$, where the 
-slope of the line is $k$. In this case the area under the curve 
-is $\frac{1}{2} kx^2$ and thus the work done or potential energy 
-stored is $\frac{1}{2} kx^2$. See \cite{elastic_potential_energy}
-for more.
+curve $F$ \cite{wiki:conservative_force}. Since potential energy is 
+a scalar quantity \cite{elastic_potential_energy} we only interested 
+in the magnitude of $F$, so in this case $F = kx$ (the sign is the 
+direction of the $F$ vector in the one-dimensional case, so 
+the magnitude of $F$ equals $|F| = |-kx| = kx$). 
+Figure \ref{fig:PE} is a graph of $F = kx$ where we can see that the 
+area under the curve is $\frac{1}{2} kx^2$. Thus the work done or 
+potential energy stored is $\frac{1}{2} kx^2$. 
 \par}
-
-
-\medskip
 %
 %	draw "Potential Energy of a Spring and Mass System"
 %	
 \begin{figure}[H]
 \centering
-  \resizebox{0.60 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
        \coordinate (O)                  at (0,0);               % origin O
        \coordinate (Xstart)             at (-1,0);              % x-axis 
@@ -549,7 +548,6 @@ for more.
 %
 %
 %
-       
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
        \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F$};		% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
@@ -597,18 +595,10 @@ for more.
  \label{fig:PE}
 \end{figure}
 
-
-\noindent
-So now we know that
-
-\begin{equation*}
-E_{\text{total}} = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 
-\end{equation*}
-
 \bigskip
 \noindent
-again where $v := \norm{\mathbf{v}}$ and $x := \norm{\mathbf{x}}$.
-Further, we know that
+So now we know that $E_{\text{total}} = \frac{1}{2}mv^2 + 
+\frac{1}{2}kx^2$. This implies that
 
 \begin{equation*}
 \begin{array}{llll}
@@ -821,7 +811,7 @@ torque. Angular acceleration is simply the change in velocity of
 the angle $\theta$ of the pendulum and is typically
 denoted\footnote{Here again $\theta$ and $\theta(t)$ are used
 interchangeably.} by either $\ddot{\theta}(t)$ or
-$\dfrac{d^2 \theta}{dt^2}$. \
+$\frac{d^2 \theta}{dt^2}$. 
 
 \bigskip
 \noindent
@@ -901,15 +891,19 @@ Now, if we let $\omega = \sqrt{\dfrac{g}{L}}$ and
 recall that $\alpha = \dfrac{d^2 \theta}{dt^2}$
 we see that 
 
-\bigskip
+\smallskip
 \begin{equation*}
 \begin{array}{llll}
 \alpha
-&=& - \dfrac{g}{L} \sin \theta                                          &\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:alpha})} \\
-[12pt]
-&=& - \omega^2 \sin \theta                                              &\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
-[12pt]
-&\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta    &\qquad \qquad \mathrel{\#} \alpha = \dfrac{d^2 \theta}{dt^2} \\
+&=& - \dfrac{g}{L} \sin \theta                                          
+		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:alpha})} \\
+[10pt]
+&=& - \omega^2 \sin \theta                                              
+		&\qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{g}{L}} \\
+[10pt]
+&\Rightarrow& \dfrac{d^2 \theta}{dt^2} = - \omega^2 \, \sin \,\theta    
+		&\qquad \qquad \mathrel{\#} \alpha = \dfrac{d^2 \theta}{dt^2} \\
+[5pt]
 \end{array}
 \end{equation*}
 
@@ -954,19 +948,18 @@ in Equation (\ref{eqn:d2_theta}) and write
 \end{equation}
 
 \bigskip
-{\setstretch{1.5}
 \noindent
 This is a much simpler differential equation, one which we know how
 to solve\footnote{Notice that this equation has the same form as
 the equation of motion for the spring and mass problem, namely
 $\dfrac{d^2 x}{dt^2} = -\omega^2 x$.}. In order to solve this 
 differential equation, first notice that the second 
-derivative of $\dfrac{d^2 \theta}{dt^2}$ is the function
+derivative of $\frac{d^2 \theta}{dt^2}$ is the function
 itself (that is, $\theta$) scaled by a constant ($- \omega^2$). 
 This form is known as a second order linear homogeneous differential 
 equation \cite{tseng_second_order} and we can guess the 
 function that exhibits this behavior. It's the exponential 
-function: \par}
+function:
 
 \bigskip
 \begin{equation*}
@@ -1113,7 +1106,6 @@ where $A, B \in \mathbb{R}$ are constants defined by the initial
 conditions of the pendulum. 
 
 \bigskip
-{\setstretch{1.75}
 \noindent
 Since $\theta$ is a linear
 combination of periodic functions it is also periodic
@@ -1121,10 +1113,10 @@ combination of periodic functions it is also periodic
 periodic functions with the same period results in another
 periodic function with that same period
 \cite{periodic_functions}. Since the periods of both $\cos (
-\omega t)$ and $\sin ( \omega t)$ are $\dfrac{2 \pi}{\omega}$ we
+\omega t)$ and $\sin ( \omega t)$ are $\frac{2 \pi}{\omega}$ we
 know that the period of the pendulum, recalling that we
-defined $\omega = \sqrt{\dfrac{g}{L}}$ and applying the
-small-angle approximation, is \par }
+defined $\omega = \sqrt{\frac{g}{L}}$ and applying the
+small-angle approximation, is
 
 \bigskip
 \begin{equation*}
@@ -1139,32 +1131,31 @@ pendulum, which is in accordance with Galileo’s observations as
 described in \cite{helden1995}.
 
 \bigskip
-{\setstretch{1.25}
 \noindent
-\underline{{\bf Summary:}} It turns out that the small-angle
+\underline{\bf Summary:} It turns out that the small-angle
 approximation for the pendulum period is fairly good and many
 papers study the error in this approximation. For example, when
-$\theta < \dfrac{\pi}{4}$ the relative (or approximation)
+$\theta < \frac{\pi}{4}$ the relative (or approximation)
 error\footnote{The Relative Error $R$ is computed as follows: $R
 = 100 * \Bigg ( \dfrac{T_{\text{exact}} -
 T_{\text{approx}}}{T_{\text{exact}}} \Bigg )$
 \cite{wiki:approximation_error}.}  $R$ is less than
 3.84\%. However, even this small inaccuracy can add up: after
 about 13 full oscillations of a pendulum with $\omega = \pi$ and
-$\theta_{\text{max}} = \dfrac{\pi}{4}$, the approximation is out
+$\theta_{\text{max}} = \frac{\pi}{4}$, the approximation is out
 of phase by half a period with the exact pendulum. This means
 that after 13 oscillations, when the approximate pendulum is at
 equilibrium, the exact pendulum is maximally displaced, and
 vice-versa \cite{grabermitchell2018finding}.
 
-\smallskip
+\bigskip
 \noindent 
 Finally, pendulums with small angles do not appear to 
 be uncommon. For example, many clocks have long, thin 
 pendulums, essentially large $L$ and small 
 $\theta_{\text{max}}$. In practice these two constants 
 are used produce clocks with long and accurate periods
-\cite{wiki:pendulum_clock}.\par}
+\cite{wiki:pendulum_clock}.
 
 
 \subsection{The LC Circuit Oscillator}
@@ -1172,7 +1163,7 @@ are used produce clocks with long and accurate periods
 Amazingly, it turns out that the equation of motion for the
 series LC circuit, shown in Figure \ref{fig:series_lc_circuit},
 has the same form as the equations of motion for both spring and
-mass and the small-angle pendulum systems,
+mass system and the small-angle pendulum system
 \cite{differential_equations_rlc_circuits,rlc_circuits}, namely
 
 \medskip
@@ -1205,13 +1196,14 @@ Ok, but why? First, let
 \begin{equation*}
  \begin{array}{llll}
 V_{L}(t) &-& \text{denote the voltage drop across the inductor} \\
-[5pt]
+[4pt]
 V_{R}(t) &-& \text{denote the voltage drop across the resistor} \\
-[5pt]
+[4pt]
 V_{C}(t) &-& \text{denote the voltage drop across the capacitor} \\
-[5pt]
-V(t)     &-& \text{denote the voltage \emph{increase} across the power source}
- \end{array}
+[4pt]
+V(t)     &-& \text{denote the voltage increase across the power source} \\
+[3pt]																					% extra space
+\end{array}
 \end{equation*}
 
 
@@ -1220,7 +1212,7 @@ V(t)     &-& \text{denote the voltage \emph{increase} across the power source}
 Then the voltage drop across the various components
 of the circuit\footnote{In the following we use "dot"
 notation to represent the time derivative of $x$. Specifically
-$\dot{x} = \dfrac{dx}{dt}$ and $\ddot{x} = \dfrac{d^2 x}{dt^2}$.} 
+$\dot{x} = \frac{dx}{dt}$ and $\ddot{x} = \frac{d^2 x}{dt^2}$.} 
 is given by \cite{differential_equations_rlc_circuits}:
 
 \medskip
@@ -1280,13 +1272,17 @@ we can see that
 \begin{equation*}
 \begin{array}{llll}
 0
-&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I			&\qquad \qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:V}) with $\dot{V} = 0$} \\
+&=& L \ddot{I} + \bigg (\dfrac{1}{C} \bigg ) I			
+		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:V}) with $\dot{V} = 0$} \\
 [12pt]
-&=& \ddot{I} + \bigg (\dfrac{1}{LC} \bigg ) I			&\qquad \qquad \qquad \mathrel{\#} \text{divide both sides by $L$} \\	
+&=& \ddot{I} + \bigg (\dfrac{1}{LC} \bigg ) I			
+		&\hspace{8em} \mathrel{\#} \text{divide both sides by $L$} \\	
 [12pt]
-&\Rightarrow& \ddot{I} = - \bigg (\dfrac{1}{LC} \bigg ) I       &\qquad \qquad \qquad \mathrel{\#} \text{rearrange}	\\	
+&\Rightarrow& \ddot{I} = - \bigg (\dfrac{1}{LC} \bigg ) I       
+		&\hspace{8em} \mathrel{\#} \text{rearrange}	\\	
 [12pt]
-&\Rightarrow& \ddot{I} = - \omega_{0}^{2} I			&\qquad \qquad \qquad \mathrel{\#} \text{set $\omega_{0} = \sqrt{\dfrac{1}{LC}}$}
+&\Rightarrow& \ddot{I} = - \omega_{0}^{2} I			
+		&\hspace{8em} \mathrel{\#} \text{set $\omega_{0} = \sqrt{\dfrac{1}{LC}}$}
 \end{array}
 \end{equation*}
 
@@ -1427,23 +1423,25 @@ of Equation (\ref{eqn:damp_general_form}) with $\psi = I$, $\beta
 Next, consider the equation of motion for the damped spring and
 mass system. There we know that
 
+\medskip
 \begin{equation*}
 \begin{array}{llll}
 ma 
 &=& - kx -b \dot{x} 
-		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:balancing_force}) minus the damping force $b \dot{x}$} \\
-[14pt]	
+		&\hspace{2em}\mathrel{\#} \text{Equation (\ref{eqn:balancing_force}) 
+		                                  minus the damping force $b \dot{x}$} \\
+[16pt]	
 &=& -b \dot{x} - kx 
-		&\qquad \qquad \mathrel{\#} \text{rearrange}	\\
-[14pt]	
+		&\hspace{2em} \mathrel{\#} \text{rearrange}	\\
+[16pt]	
 &\Rightarrow& ma + b \dot{x} + kx = 0
-		&\qquad \qquad \mathrel{\#} \text{add $b \dot{x} + kx$ to both sides} \\
+		&\hspace{2em} \mathrel{\#} \text{add $b \dot{x} + kx$ to both sides} \\
 [14pt]
 &\Rightarrow& a + \left (\dfrac{b}{m} \right )\dot{x} + \left (\dfrac{k}{m} \right)  x = 0
-		&\qquad \qquad \mathrel{\#} \text{divide through by $m$} \\
+		&\hspace{2em} \mathrel{\#} \text{divide through by $m$} \\
 [14pt]
 &\Rightarrow& \ddot{x} + \left ( \dfrac{b}{m}\right ) \dot{x} + \left (\dfrac{k}{m} \right ) x = 0
-		&\qquad \qquad \mathrel{\#} a = \dfrac{d^2x}{dt^2} = \ddot{x} \\
+		&\hspace{2em} \mathrel{\#} a = \dfrac{d^2x}{dt^2} = \ddot{x} \\
 
 \end{array}
 \end{equation*}
@@ -1453,21 +1451,20 @@ ma
 So we see that equation of motion for the damped 
 spring and mass system is
 
-\smallskip
+\medskip
 \begin{equation}
 \ddot{x} + \bigg (\dfrac{b}{m} \bigg ) \dot{x} + \bigg ( \dfrac{k}{m} \bigg ) x = 0
 \label{eqn:damped_spring_and_mass}
 \end{equation}
 
 \smallskip
-{\setstretch{1.85}
+{\setstretch{1.80}
 \noindent
 where $\bigg (\dfrac{b}{m} \bigg ) \dot{x}$ is a new term that
 represents the damping force (e.g. resistance or friction).  Here
-again the equation of motion, Equation
-(\ref{eqn:damped_spring_and_mass}), is of the same form as
-Equation (\ref{eqn:damp_general_form}).  Finally, the
-displacement function for the damped harmonic oscillator is shown
+again the equation of motion, Equation(\ref{eqn:damped_spring_and_mass}), 
+is of the same form as Equation (\ref{eqn:damp_general_form}).  
+Finally, the displacement function for the damped harmonic oscillator is shown
 in Figure \ref{fig:critically_damped_harmonic_oscillator}.  \par
 }
 
@@ -1669,7 +1666,9 @@ in their electric fields.
 \begin{array}{llll}
 T_{\text{body}} \uparrow  
 &\Rightarrow& \overline{\text{KE}}_{\text{particles}} \uparrow
-		&\qquad \mathrel{\#} \text{increase in $T_{\text{body}}$ $\Rightarrow$ increase in average KE} \\
+		&\qquad \mathrel{\#} \text{increase in $T_{\text{body}}$ 
+		                           $\Rightarrow$ increase in average 
+		                           kinetic energy ($\overline{\text{KE}}$)} \\
 [5pt]	
 &\Rightarrow& \overline{v}_{\text{electrons}} \uparrow
 		&\qquad \mathrel{\#} \text{increase in $\overline{\text{KE}} \Rightarrow$ increase in average frequency} \\

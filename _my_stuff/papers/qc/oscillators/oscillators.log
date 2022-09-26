@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 SEP 2022 08:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 SEP 2022 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1436,30 +1436,30 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
-Overfull \hbox (2.77388pt too wide) detected at line 661
+
+Overfull \hbox (2.77388pt too wide) detected at line 651
 []
  []
 
-[5] [6] [7] [8]
-Overfull \hbox (44.57487pt too wide) detected at line 1075
+[4] [5] [6] [7] [8]
+Overfull \hbox (44.57487pt too wide) detected at line 1068
 []
  []
 
 
-Overfull \hbox (16.58653pt too wide) detected at line 1107
+Overfull \hbox (16.58653pt too wide) detected at line 1100
 []
  []
 
 [9] [10] [11] [12]
-<images/damped_harmonic_oscillator.png, id=331, 501.875pt x 430.60875pt>
+<images/damped_harmonic_oscillator.png, id=332, 501.875pt x 430.60875pt>
 File: images/damped_harmonic_oscillator.png Graphic file (type png)
 <use images/damped_harmonic_oscillator.png>
 Package pdftex.def Info: images/damped_harmonic_oscillator.png  used on input l
-ine 1477.
+ine 1474.
 (pdftex.def)             Requested size: 200.74643pt x 172.24043pt.
  [13 <./images/damped_harmonic_oscillator.png>] [14]
-Overfull \hbox (51.33952pt too wide) detected at line 1686
+Overfull \hbox (51.33952pt too wide) detected at line 1685
 []
  []
 
@@ -1492,11 +1492,11 @@ Package rerunfilecheck Info: File `oscillators.out' has not changed.
 (rerunfilecheck)             Checksum: 4D07C116FADDAD0994CD16927C7B8FD9;2823.
  ) 
 Here is how much of TeX's memory you used:
- 54235 strings out of 478994
- 1363042 string characters out of 5858184
+ 54232 strings out of 478994
+ 1363009 string characters out of 5858184
  2063530 words of memory out of 5000000
- 70807 multiletter control sequences out of 15000+600000
- 421708 words of font info for 99 fonts, out of 8000000 for 9000
+ 70805 multiletter control sequences out of 15000+600000
+ 421010 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,15n,131p,729b,2252s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1509,26 +1509,28 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (18 pages, 382934 bytes).
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on oscillators.pdf (18 pages, 399229 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
+ 565 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
  105 named destinations out of 1000 (max. 500000)
  134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
