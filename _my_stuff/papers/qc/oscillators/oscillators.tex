@@ -514,14 +514,14 @@ what about the potential energy of the system?
 {\setstretch{1.05}
 \noindent
 The potential energy is defined to be the work done by the system
-\cite{wiki:potential_energy}.  Why? It turns out that the work
-done by a conservative force is equal to the area under the force
-curve $F$ \cite{wiki:conservative_force}. Since potential energy is 
-a scalar quantity \cite{elastic_potential_energy} we are only 
-interested in the magnitude of $F$, $kx$, at each point $x$ (the sign 
-might be taken as the the direction of the $F$ vector in the one-dimensional 
-case). So if we set $F_{m} = kx$ we get the graph in Figure \ref{fig:PE}, 
-where we can see that the area under the curve is $\frac{1}{2} kx^2$. 
+\cite{wiki:potential_energy}.  Why? It turns out that in this case 
+the work $W$ done by a force $F$ is equal to $\int F(x) \; dx$. 
+That is, $W$ equals the area under $F$ \cite{wiki:conservative_force}. 
+Since potential energy is a scalar quantity \cite{elastic_potential_energy} 
+we are only interested in the magnitude of $F$, $kx$, at each point $x$ 
+(the sign is the direction of the $F$ vector in the one dimensional case). 
+So if we set $F_{m} := kx$ we get the graph in Figure \ref{fig:PE}, where 
+we can see that the area under the curve is $\frac{1}{2} kx^2$. 
 Thus the work done or potential energy stored is $\frac{1}{2} kx^2$. 
 \par}
 %
@@ -529,7 +529,7 @@ Thus the work done or potential energy stored is $\frac{1}{2} kx^2$.
 %	
 \begin{figure}[H]
 \centering
-  \resizebox{0.50 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.55 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
        \coordinate (O)                  at (0,0);               % origin O
        \coordinate (Ominus)				at (-1,-.71428571428571428571);
