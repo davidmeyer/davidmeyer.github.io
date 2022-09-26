@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  25 SEP 2022 10:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  25 SEP 2022 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1360,6 +1360,9 @@ s/tikzlibrary3d.code.tex
 File: tikzlibrary3d.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )) (./figures.aux
 
+LaTeX Warning: Label `fig:PE' multiply defined.
+
+
 LaTeX Warning: Label `fig:wave_functions' multiply defined.
 
 
@@ -1538,11 +1541,11 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 191.
+(Font)              <20.74> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 191.
+(Font)              <14.4> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 191.
+(Font)              <12> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1562,7 +1565,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [4]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 584.
+LaTeX Font Warning: Command \small invalid in math mode on input line 588.
 
 [5] [6] [7] [8] (./figures.aux)
 
