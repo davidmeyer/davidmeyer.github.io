@@ -175,6 +175,10 @@ F = ma
 
 \medskip
 \noindent
+(here $a$ is a vector so perhaps we should be using $\mathbf{a}$).
+
+\medskip
+\noindent
 Setting Newton's force (Equation (\ref{eqn:newtons_2nd_law})) 
 equal to Hooke's force (Equation (\ref{eqn:hookes_law})) 
 gives us
@@ -186,8 +190,7 @@ ma = -kx
 
 \medskip
 \noindent
-(here $a$ is a vector so perhaps we should be using $\mathbf{a}$).
-In any event,
+This implies that
 
 \begin{equation*}
 \begin{array}{llll}
@@ -216,7 +219,7 @@ its equilibrium position.} in Figure \ref{fig:spring_and_mass_system}.
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.75 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.85 \textwidth}{!} {                                                              % resize figure if you want
    \begin{tikzpicture}[black!75,thick]                                                          % make a picture
         \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
         \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support
@@ -513,15 +516,14 @@ what about the potential energy of the system?
 \bigskip
 {\setstretch{1.05}
 \noindent
-The potential energy is defined to be the work done by the system
-\cite{wiki:potential_energy}.  Why? It turns out that in this case 
-the work $W$ done by a force $F$ is equal to $\int F(x) \; dx$. 
-That is, $W$ equals the area under $F$ \cite{wiki:conservative_force}. 
-Since work (and therefore potential energy) is a scalar quantity 
-\cite{elastic_potential_energy} we are only interested in the magnitude 
-of $F$, $kx$, at each point $x$ (the sign is the direction of the $F$ 
-vector in the one dimensional case). So if we set $F_{m} := kx$ we get 
-the graph in Figure \ref{fig:PE}, where we can see that the area under 
+The potential energy is defined to be equal to the work done by the system
+\cite{wiki:potential_energy}, and in this case the work $W$ done by a force 
+$F$ is equal to $\int F(x) \; dx$. That is, $W$ equals the area under $F$ 
+\cite{wiki:conservative_force}. Since work (and therefore potential energy) 
+is a scalar quantity \cite{elastic_potential_energy} we are only interested 
+in the magnitude of $F$, $kx$, at each point $x$ (the sign is the direction 
+of the $F$ vector in the one dimensional case). So if we set $F_{m} = kx$ we 
+get the curve shown in Figure \ref{fig:PE}, where we can see that the area under 
 the curve is $\frac{1}{2} kx^2$. Thus the work done or potential energy 
 stored is $\frac{1}{2} kx^2$. 
 \par}
@@ -530,15 +532,17 @@ stored is $\frac{1}{2} kx^2$.
 %	
 \begin{figure}[H]
 \centering
-  \resizebox{0.55 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.54 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
+%
+%	Set up coordinates
+%
        \coordinate (O)                  at (0,0);               % origin O
-       \coordinate (Ominus)				at (-1,-.71428571428571428571);
-
+       \coordinate (Ominus)				at (-1,-.72);			% (5/7)*-1 ≈ -.71428571428571428571
        \coordinate (Xstart)             at (-1,0);              % x-axis 
        \coordinate (Xend)               at (10,0);              % x-axis
        \coordinate (Ystart)             at (0,-1);              % y-axis
-       \coordinate (Yend)               at (0, 7.5);            % y-axis
+       \coordinate (Yend)               at (0,7.75);            % y-axis
        \coordinate (EP)                 at (7,5);               % endpoint of the F vs. x line segment of interest
        \coordinate (EPO)                at (8,5);               % endpoint of extension for kx vertical line
        \coordinate (EPL)                at (7.75,5.56);			% endpoint of the F vs. x line: (5/7) * 7.75 ≈ 5.53571429
@@ -548,16 +552,22 @@ stored is $\frac{1}{2} kx^2$.
        \coordinate (BottomHalf2)        at (7.5,0);             % bottom halft of kx line
        \coordinate (X)                  at (7,0);               % x coordinate of kx line
        \coordinate (Y)					at (0,5);				% draw a dot on the y axis
-       \coordinate (A)					at (4.0,6.15);			% A = ... rectangle
+       \coordinate (A)					at (4.0,6.25);			% A = ... rectangle
 %
-%
+%	Draw the axes, shading the lower triangle
 %
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
        \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F_{m}$};	% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
+%
+%	Draw the area and the force function
+%
        \draw [draw=none] (O) -- (X) node[midway,above,scale=1.35,yshift=0.40cm,xshift=0.80cm] 
        				{${\text{PE} = \text{A} = \frac{1}{2}kx^2}$};
-       \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35]	% draw the line segment of interest
+%
+%	Label the line segment of interest (F_{m} = kx)
+%
+       \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35]	
        				{${\color{black}{F_{m}(x) = kx}}$};
 %
 %	Draw the dashed segments of the line
@@ -583,11 +593,11 @@ stored is $\frac{1}{2} kx^2$.
 %
 %	Label the origin
 %
-       \node [xshift=-0.35cm,yshift=-0.35cm,scale=1.15] at (0,0) {$O$};
+       \node [xshift=-0.35cm,yshift=-0.30cm,scale=1.15] at (0,0) {$O$};
 %
 %	Surely there is a better way to do this but this is what I came up with
 %
-       \draw [latex-, thick] (TopHalf2) -- (TopHalf1) node [below, yshift=0.05cm,scale=1.35] {$kx$};
+       \draw [latex-, thick] (TopHalf2) -- (TopHalf1) node [below,yshift=0.05cm,scale=1.35] {$kx$};
        \draw [-latex, thick] (BottomHalf1) -- (BottomHalf2) [];
 %
 %	Show kx on the F axis
