@@ -246,10 +246,10 @@ One of the main reasons this energy function is important is that it is
 \emph{conserved}, meaning that its value along any trajectory is constant.
 
 \begin{theorem}
-Suppose a particle satisfies Newton’s law in the form $m\ddot{x} = F(x)$. Let $V$ and 
-$E$ be as in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the energy $E$ is 
-conserved, meaning that for each solution $x(t)$ of Newton’s law, $E(x(t),\dot{x}(t))$ 
-is independent of $t$.
+Suppose a particle satisfies Newton’s Second Law in the form $m\ddot{x} = F(x)$. 
+Let $V$ and $E$ be as in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the 
+energy $E$ is conserved. Said another way: For each solution $x(t)$ of Newton’s 
+Second Law, $E(x(t),\dot{x}(t))$ is independent of $t$.
 
 \bigskip
 \noindent
@@ -259,43 +259,44 @@ is independent of $t$.
 \begin{array}{llll}
 E(x,\dot{x})
 &=& \dfrac{d}{dt} \bigg (\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg )	
-		&\hspace{2em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ and $v = \dot{x}(t)$} \\	
+		&\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ and $v = \dot{x}(t)$} \\	
 [15pt]
 &=& \dfrac{d}{dt} \bigg ( \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ) + \dfrac{d}{dt} V(x(t))
-		&\hspace{2em} \mathrel{\#} \text{derivative is a linear operator \cite{wiki:linearity_of_differentiation}} \\
+		&\hspace{1em} \mathrel{\#} \text{derivative is a linear operator \cite{wiki:linearity_of_differentiation}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
-		&\hspace{2em} \mathrel{\#} \text{power rule + chain rule} \\
+		&\hspace{1em} \mathrel{\#} \text{by the power rule \cite{wiki:power_rule}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
-		&\hspace{2em} \mathrel{\#} u = x(t), \, du = dx \\
+		&\hspace{1em} \mathrel{\#} u = x(t), \, du = dx \\
 [15pt]
-&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u) \, \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} \text{chain rule \cite{wiki:chain_rule}: 
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{du} V(u) \, \dot{x}(t)
+		&\hspace{1em} \mathrel{\#} \text{by the chain rule \cite{wiki:chain_rule}: 
 								   $\dfrac{d}{dt} V(u) = 
 					                \dfrac{dV}{du} \, \dfrac{du}{dt}$
 					                and 
-							       $\dfrac{du}{dt}   = 
-							        \dfrac{x(t)}{dt} = 
+							       $\dfrac{du}{dt}     = 
+							        \dfrac{d}{dt} x(t) = 
 							        \dot{x}(t)$} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dx}V(u)\, \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} \text{apply the chain rule again:
+		&\hspace{1em} \mathrel{\#} \text{by the chain rule:
 								   $\dfrac{d}{dx} V(u) =
    	                                \dfrac{dV}{du} \,\dfrac{du}{dx}$} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dx}V(x(t))\, \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} u = x(t) \\
-[12pt]
+		&\hspace{1em} \mathrel{\#} u = x(t) \\
+[15pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
-		&\hspace{2em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
 [15pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) - F(x(t)) \right ]
-		&\hspace{2em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		&\hspace{1em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
 [15pt]
 &=& 0
-		&\hspace{2em} \mathrel{\#} \text{$m \ddot{x}(t) - F(x(t)) = 0$ by Newton's Second Law}
+		&\hspace{1em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
+		                                 by Newton's Second Law}
 \end{array}
 \end{equation*}
 % 
