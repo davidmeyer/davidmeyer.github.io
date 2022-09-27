@@ -147,13 +147,15 @@ Hooke's Law describes a form of simple harmonic motion, which as
 mentioned above occurs when the restoring force in a system (the
 force directed toward a stable equilibrium point) is proportional
 to the displacement from that equilibrium. Hooke's Law is most
-frequently stated as\footnote{It seems to be (a confusing) convention 
-to use $x$, $x(t)$, $\mathbf{x}$, $\mathbf{x}(t)$, etc. interchangeably.} 
-$F \propto -x$. That is, the force $F$ is proportional to the displacement 
-$x$ (hence Hooke's Law describes simple harmonic motion aka simple harmonic 
-oscillation; note also that both $F$ and $x$ are vectors so perhaps we should
-be using $\mathbf{F}$ and $\mathbf{x}$). More frequently this relationship 
-is converted into an equality by the use of a constant $k$ so that we have
+frequently stated as\footnote{It seems to be (a confusing)
+convention to use $x$, $x(t)$, $\mathbf{x}$, $\mathbf{x}(t)$,
+etc. interchangeably.}  $F \propto -x$. That is, the force $F$ is
+proportional to the displacement $x$ (hence Hooke's Law describes
+simple harmonic motion aka simple harmonic oscillation; note also
+that both $F$ and $x$ are vectors so perhaps we should be using
+$\mathbf{F}$ and $\mathbf{x}$). More frequently this relationship
+is converted into an equality by the use of a constant $k$ so
+that we have
 
 
 \begin{equation}
@@ -512,27 +514,39 @@ energy (PE) of such as system? Well, we know that
 $\text{KE} = \frac{1}{2} mv^{2}$ \cite{kinetic_energy}, but 
 what about the potential energy of the system?
 
+\subsubsection{Potential Energy of a Simple Harmonic Oscillator}
+Potential energy is the energy a system has due to position,
+shape, or configuration. It is stored energy that is completely
+recoverable.
 
-\bigskip
-{\setstretch{1.05}
+\begin{definition} {\bf Conservative Force: }
+A conservative force is one for which work done by or against it
+depends only on the starting and ending points of a motion and
+not on the path taken \cite{wiki:potential_energy}.
+\end{definition}
+
 \noindent
-The potential energy is defined to be equal to the work done by the system
-\cite{wiki:potential_energy}, and in this case the work $W$ done by a force 
-$F$ is equal to $\int F(x) \; dx$. That is, $W$ equals the area under $F$ 
-\cite{wiki:conservative_force}. Since work (and therefore potential energy) 
-is a scalar quantity \cite{elastic_potential_energy} we are only interested 
-in the magnitude of $F$, $kx$, at each point $x$ (the sign is the direction 
-of the $F$ vector in the one dimensional case). So if we set $F_{m} = kx$ we 
-get the curve shown in Figure \ref{fig:PE}, where we can see that the area under 
-the curve is $\frac{1}{2} kx^2$. Thus the work done or potential energy 
-stored is $\frac{1}{2} kx^2$. 
-\par}
+Now we can define the potential energy (PE) for any conservative
+force.  The work done against a conservative force to reach a
+final configuration depends on the configuration, not the path
+followed, and is the potential energy added. So in the case of a
+simple harmonic oscillator the work $W$ done by a force $F$ is
+equal to $\int F(x) \; dx$. That is, $W$ equals the area under
+$F$ \cite{wiki:conservative_force}. Since work (and therefore
+potential energy) is a scalar quantity
+\cite{elastic_potential_energy} we are only interested in the
+magnitude of $F$, $kx$, at each point $x$ (the sign is the
+direction of the $F$ vector in the one dimensional case). So if
+we set $F_{m} = kx$ we get the curve shown in Figure
+\ref{fig:PE}, where we can see that the area under the curve is
+$\frac{1}{2} kx^2$. Thus the work done or potential energy stored
+is $\frac{1}{2} kx^2$.
 %
 %	draw "Potential Energy of a Spring and Mass System"
 %	
 \begin{figure}[H]
 \centering
-  \resizebox{0.54 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.44 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
 %
 %	Set up coordinates
