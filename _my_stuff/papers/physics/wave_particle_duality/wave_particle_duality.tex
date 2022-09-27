@@ -204,6 +204,110 @@ h \dfrac{c}{\lambda}
 [22pt] 
 \end{array}
 \end{equation*}
+
+\begin{definition}
+{\bf Trajectory:} A solution x(t) to the equation $F(x(t)) = m \ddot{x}(t)$,
+Newton’s Second Law, is called a trajectory.
+\end{definition}
+
+\subsection{Conservation of Energy}
+
+\bigskip
+\noindent
+Consider the case of a general force function $F(x)$. We define the kinetic energy of 
+the system to be $\frac{1}{2}mv^{2}$. We also define the potential energy of the system,
+$V(x)$, as the function
+
+\begin{equation}
+V(x) = \int F(x) \, dx
+\label{eqn:V(x)}
+\end{equation}
+
+\noindent
+such that 
+
+\begin{equation}
+F(x) = -\dfrac{dV}{dx}
+\label{eqn:F}
+\end{equation}
+
+\medskip
+\noindent
+The total energy $E(x,v)$ of the system is then
+
+\begin{equation}
+E(x,v) = \dfrac{1}{2}mv^{2} + V(x)
+\label{eqn:E}
+\end{equation}
+
+\medskip
+\noindent
+One of the main reasons this energy function is important is that it is 
+\emph{conserved}, meaning that its value along any trajectory is constant.
+
+\begin{theorem}
+Suppose a particle satisfies Newton’s law in the form $m\ddot{x} = F(x)$. Let $V$ and 
+$E$ be as in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the energy $E$ is 
+conserved, meaning that for each solution $x(t)$ of Newton’s law, $E(x(t),\dot{x}(t))$ 
+is independent of $t$.
+
+\bigskip
+\noindent
+{\bf Proof:} We can verify this by differentiation using the chain rule:
+
+\begin{equation*}
+\begin{array}{llll}
+E(x,\dot{x})
+&=& \dfrac{d}{dt} \bigg (\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg )	
+		&\hspace{2em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ and $v = \dot{x}(t)$} \\	
+[15pt]
+&=& \dfrac{d}{dt} \bigg ( \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ) + \dfrac{d}{dt} V(x(t))
+		&\hspace{2em} \mathrel{\#} \text{derivative is a linear operator \cite{wiki:linearity_of_differentiation}} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
+		&\hspace{2em} \mathrel{\#} \text{power rule + chain rule} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
+		&\hspace{2em} \mathrel{\#} u = x(t), \, du = dx \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u) \, \dot{x}(t)
+		&\hspace{2em} \mathrel{\#} \text{chain rule \cite{wiki:chain_rule}: 
+								   $\dfrac{d}{dt} V(u) = 
+					                \dfrac{dV}{du} \, \dfrac{du}{dt}$
+					                and 
+							       $\dfrac{du}{dt}   = 
+							        \dfrac{x(t)}{dt} = 
+							        \dot{x}(t)$} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dx}V(u)\, \dot{x}(t)
+		&\hspace{2em} \mathrel{\#} \text{apply the chain rule again:
+								   $\dfrac{d}{dx} V(u) =
+   	                                \dfrac{dV}{du} \,\dfrac{du}{dx}$} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dx}V(x(t))\, \dot{x}(t)
+		&\hspace{2em} \mathrel{\#} u = x(t) \\
+[12pt]
+&=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
+		&\hspace{2em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+[15pt]
+&=& \dot{x}(t)\left [m \ddot{x}(t) - F(x(t)) \right ]
+		&\hspace{2em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		                                 (Equation (\ref{eqn:F}))} \\
+[15pt]
+&=& 0
+		&\hspace{2em} \mathrel{\#} \text{$m \ddot{x}(t) - F(x(t)) = 0$ by Newton's Second Law}
+\end{array}
+\end{equation*}
+% 
+%	there is (or was) a page break here
+%
+\noindent
+Thus, the time derivative of the energy along any trajectory is zero which implies that
+$E(x(t), \dot{x}(t))$ is independent of $t$. In summary, we may call the energy a conserved 
+quantity (or constant of motion), since the particle neither gains nor loses energy as the 
+particle moves according to Newton’s Second Law.
+\end{theorem}
+
 %
 %
 %	show a derivation/proof

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{dmm:vector_calculus}
 {David Meyer}.
@@ -11,6 +11,23 @@
 \newblock {Planck Energy}.
 \newblock \url{https://astronomy.swin.edu.au/cosmos/p/Planck+Energy}, 2022.
 \newblock [Online; accessed 22-September-2022].
+
+\bibitem{wiki:linearity_of_differentiation}
+{Wikipedia Contributors}.
+\newblock {Linearity of Differentiation --- {Wikipedia}{,} The Free
+  Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Linearity_of_differentiation&oldid=1026177205},
+  2021.
+\newblock [Online; accessed 1-September-2021].
+
+\bibitem{wiki:chain_rule}
+{Wikipedia Contributors}.
+\newblock {Chain Rule --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Chain_rule&oldid=1102134961},
+  2022.
+\newblock [Online; accessed 27-September-2022].
 
 \bibitem{wiki:electromagnetic_radiation}
 {Wikipedia Contributors}.

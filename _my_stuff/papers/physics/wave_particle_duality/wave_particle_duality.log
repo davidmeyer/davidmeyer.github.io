@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  23 SEP 2022 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 SEP 2022 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1427,44 +1427,55 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-(./wave_particle_duality.bbl [1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1655) in paragraph at lines 32--38
-\OT1/cmtt/m/n/10 wikipedia . org / w / index . php ? title = Mass % E2 % 80 % 9
-3energy _ equivalence & oldid = 1111691943$[]\OT1/cmr/m/n/10 , 2022.
+Overfull \hbox (8.94742pt too wide) detected at line 300
+[]
  []
 
-) [2] (./wave_particle_duality.aux)
+[2] (./wave_particle_duality.bbl
+Underfull \hbox (badness 1902) in paragraph at lines 33--39
+\OT1/cmtt/m/n/10 / / en . wikipedia . org / w / index . php ? title = Electroma
+gnetic _ radiation & oldid = 1111613409$[]\OT1/cmr/m/n/10 , 2022.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--87
+\OT1/cmtt/m/n/10 / / en . wikipedia . org / w / index . php ? title = Wave % E2
+ % 80 % 93particle _ duality & oldid = 1110309506$[]\OT1/cmr/m/n/10 ,
+ []
+
+) [3] (./wave_particle_duality.aux)
 Package rerunfilecheck Info: File `wave_particle_duality.out' has not changed.
-(rerunfilecheck)             Checksum: EF9DF79C9CB193DAB7CEC2E16A588F32;324.
+(rerunfilecheck)             Checksum: BA4E9344008FF643369C57EC241BE59D;497.
  ) 
 Here is how much of TeX's memory you used:
- 52332 strings out of 478994
- 1323861 string characters out of 5858184
- 1948596 words of memory out of 5000000
- 69004 multiletter control sequences out of 15000+600000
- 416271 words of font info for 84 fonts, out of 8000000 for 9000
+ 52348 strings out of 478994
+ 1324107 string characters out of 5858184
+ 1953837 words of memory out of 5000000
+ 69011 multiletter control sequences out of 15000+600000
+ 416578 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,14n,131p,761b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,14n,131p,761b,817s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on wave_particle_duality.pdf (2 pages, 152238 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on wave_particle_duality.pdf (3 pages, 172213 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
