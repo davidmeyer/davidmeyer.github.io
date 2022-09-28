@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2022 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2022 13:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1430,7 +1430,7 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (39.13416pt too wide) detected at line 306
+Overfull \hbox (39.13416pt too wide) detected at line 311
 []
  []
 
@@ -1457,7 +1457,7 @@ Here is how much of TeX's memory you used:
  69013 multiletter control sequences out of 15000+600000
  416578 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,14n,131p,761b,817s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,14n,131p,761b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1472,7 +1472,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on wave_particle_duality.pdf (3 pages, 172360 bytes).
+Output written on wave_particle_duality.pdf (3 pages, 172373 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams
