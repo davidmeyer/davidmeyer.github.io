@@ -57,12 +57,16 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 %
 %
-\newtheorem{thm}{Theorem}[section]
+%
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
 %
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
@@ -497,7 +501,7 @@ T = 2 \pi \sqrt{\dfrac{m}{k}}
 \end{equation*}
 
 
-\subsection{Total Energy of a Simple Harmonic Oscillator}
+\section{Total Energy of a Simple Harmonic Oscillator}
 We know that the total energy of an oscillator  
 such as the spring and mass system we looked 
 at above is
@@ -514,7 +518,7 @@ energy (PE) of such as system? Well, we know that
 $\text{KE} = \frac{1}{2} mv^{2}$ \cite{kinetic_energy}, but 
 what about the potential energy of the system?
 
-\subsubsection{Potential Energy of a Simple Harmonic Oscillator}
+\subsection{Potential Energy of a Simple Harmonic Oscillator}
 Potential energy is the energy a system has due to position,
 shape, or configuration. It is stored energy that is completely
 recoverable.
@@ -546,7 +550,7 @@ is $\frac{1}{2} kx^2$.
 %	
 \begin{figure}[H]
 \centering
-  \resizebox{0.44 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.42 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture}
 %
 %	Set up coordinates
@@ -645,48 +649,52 @@ So now we know that $E_{\text{total}} = \frac{1}{2}mv^2 +
 \begin{array}{llll}
 E_{\text{total}}
 &=& \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 									
-						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}}
+						&\hspace{4em} \mathrel{\#} E_{\text{total}}
                                                 = \text{KE} + \text{PE} \\
-[12pt]
+[10pt]
 &=& \dfrac{1}{2} m \left (\dfrac{dx}{dt} \right )^2 + \dfrac{1}{2}kx^2 		
-						&\qquad \qquad \qquad \mathrel{\#} v = \dfrac{dx}{dt} \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} v = \dfrac{dx}{dt} \\
+[10pt]
 &=& \dfrac{1}{2} m \left (\dfrac{d}{dt} \Big [A \cos (\omega t) \Big ] \right )^2 + \dfrac{1}{2}kx^2 
-						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} x(t) = A \cos (\omega t) \\
+[10pt]
 &=& \dfrac{1}{2} m \left (- \omega A \sin (\omega t) \right )^2 + \dfrac{1}{2}kx^2 
-						&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u)
+						&\hspace{4em} \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u)
                                                 = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
-[12pt]
+[10pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}kx^2 
-						&\qquad \qquad \qquad \mathrel{\#} \left (- \omega A \sin (\omega t) \right )^2 = \omega^2 A^2 \sin^2 (\omega t) \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \left (- \omega A \sin (\omega t) \right )^2 = 
+						                           \omega^2 A^2 \sin^2 (\omega t) \\
+[10pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k\left (A \cos (\omega t) \right )^2 
-						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t)\\
-[12pt]
+						&\hspace{4em} \mathrel{\#} x(t) = A \cos (\omega t)\\
+[10pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k A^2 \cos^2 (\omega t) 
-						&\qquad \qquad \qquad \mathrel{\#} \left ( A \cos (\omega t) \right )^2 = A^2 \cos^2 (\omega t) \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \left ( A \cos (\omega t) \right )^2 = A^2 \cos^2 (\omega t) \\
+[10pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2} m \omega^2 A^2 \cos^2 (\omega t) 
-						&\qquad \qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m \omega^2 \text{ (Equation (\ref{eqn:omega0}))} \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m 
+						                           \omega^2 \text{ (Equation (\ref{eqn:omega0}))} \\
+[10pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \left (\sin^2 (\omega t) + \cos^2 (\omega t) \right )
-						&\qquad \qquad \qquad \mathrel{\#} \text{factor out $\dfrac{1}{2} m \omega^2 A^2$} \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \text{factor out $\dfrac{1}{2} m 
+						                           \omega^2 A^2$} \\
+[10pt]
 &=& \dfrac{1}{2} m \omega^2 A^2
-						&\qquad \qquad \qquad \mathrel{\#} \sin^2 (\omega t) + \cos^2 (\omega t) = 1 \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \sin^2 (\omega t) + \cos^2 (\omega t) = 1 \\
+[10pt]
 &=& \dfrac{1}{2} m (2 \pi f)^2 A^2 
-						&\qquad \qquad \qquad \mathrel{\#} \omega = 2 \pi f \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \omega = 2 \pi f \\
+[10pt]
 &=& \dfrac{1}{2} 4 \pi^2 f^2 A^2 m
-						&\qquad \qquad \qquad \mathrel{\#} \text{expand $\left (2 \pi f \right)^2$ and rearrange} \\
-[12pt]
+						&\hspace{4em} \mathrel{\#} \text{expand $\left (2 \pi f \right)^2$ 
+						                           and rearrange} \\
+[10pt]
 &=& 2 \pi^2 f^2 A^2 m
-						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}} = 2 \pi^2 f^2 A^2 m\\
-[12pt]
+						&\hspace{4em} \mathrel{\#} E_{\text{total}} = 2 \pi^2 f^2 A^2 m\\
+[10pt]
 &\Rightarrow& E_{\text{total}} \propto f^2 A^2 
-						&\qquad \qquad \qquad \mathrel{\#} \text{$E_{\text{total}}$ is proportional to $f^2 A^2$}\\
+						&\hspace{4em} \mathrel{\#} \text{$E_{\text{total}}$ is proportional to $f^2 A^2$}\\
 
 \end{array}
 \end{equation*}
@@ -697,6 +705,120 @@ So we see that the oscillator has $E_{\text{total}} = 2
 \pi^2 f^2 A^2 m$, or said another way $E_{\text{total}} \propto
 f^2 A^2$. This result will become useful when we consider the
 quantum harmonic oscillator.
+
+\bigskip
+\noindent
+Interestingly, $E_{\text{total}}$ has an important property: it is 
+conserved. Section \ref{subsec:conservation_of_energy} explores 
+this property.
+
+\subsection{Conservation of Energy}
+\label{subsec:conservation_of_energy}
+\noindent
+Consider the case of a general force function $F(x)$. Here we define 
+the kinetic energy of the system to be $\frac{1}{2}mv^{2}$. We also 
+define the potential energy of the system, $V(x)$, as the function
+
+\begin{equation}
+V(x) = - \int F(x) \, dx
+\label{eqn:V(x)}
+\end{equation}
+
+\noindent
+such that 
+
+\begin{equation}
+F(x) = -\dfrac{dV}{dx}
+\label{eqn:F}
+\end{equation}
+
+\medskip
+\noindent
+Then the total energy of the system as a function of displacement and velocity, 
+$E(x,v)$, is defined to be 
+
+\begin{equation}
+E(x,v) = \dfrac{1}{2}mv^{2} + V(x)
+\label{eqn:E}
+\end{equation}
+
+\medskip
+\noindent
+One of the main reasons this energy function is important is that it is 
+\emph{conserved}, meaning that its value along any trajectory is constant.
+Said another way: For each trajectory $x(t)$ conforming to Newton’s 
+Second Law, the system's total energy $E(x(t),\dot{x}(t))$ is independent 
+of $t$.
+
+\begin{theorem}
+Suppose a particle satisfies Newton’s Second Law in the form 
+$m\ddot{x}(t) = F(x(t))$ and let $V$ and $E$ be as in Equations 
+(\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the total energy of
+the system, $E(x(t),\dot{x}(t))$, is conserved.
+
+\bigskip
+\noindent
+{\bf Proof:} One way to prove that energy is independent of time
+is to show that $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
+
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{d}{dt} E(x,\dot{x})
+&=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
+		&\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ 
+		                                 and $v = \dot{x}(t)$} \\	
+[15pt]
+&=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
+		&\hspace{1em} \mathrel{\#} \text{derivative is a linear 
+		                                 operator \cite{wiki:linearity_of_differentiation}} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
+		&\hspace{1em} \mathrel{\#} \text{by the power rule \cite{wiki:power_rule}} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
+		&\hspace{1em} \mathrel{\#} u = x(t), \, du = dx \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
+		&\hspace{1em} \mathrel{\#} \text{by the chain rule \cite{wiki:chain_rule}: 
+								   $\dfrac{d}{dt} V(u) = 
+					                \dfrac{dV}{du} \, \dfrac{du}{dt}$
+					                and 
+							       $\dfrac{du}{dt}     = 
+							        \dfrac{d}{dt} x(t) = 
+							        \dot{x}(t)$} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
+		&\hspace{1em} \mathrel{\#} \text{by the chain rule:
+								   $\dfrac{d}{dx} V(u) =
+   	                                \dfrac{dV}{du} \,\dfrac{du}{dx}$
+	                                and
+	                                $du = dx$} \\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
+		&\hspace{1em} \mathrel{\#} u = x(t) \\
+[15pt]
+&=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
+		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+[15pt]
+&=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
+		&\hspace{1em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		                                 (Equation (\ref{eqn:F}))} \\
+[15pt]
+&=& 0
+		&\hspace{1em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
+		                                 by Newton's Second Law}
+\end{array}
+\end{equation*}
+% 
+%	there is (or was) a page break here
+%
+\noindent
+Thus, the time derivative of the energy along any trajectory is zero which implies that
+$E(x(t), \dot{x}(t))$ is independent of $t$. In summary, we may call the energy a conserved 
+quantity (or constant of motion), since the particle neither gains nor loses energy as the 
+particle moves according to Newton’s Second Law.
+\end{theorem}
+
 
 \section{Other Simple Harmonic Oscillators}
 \label{sec:smo}

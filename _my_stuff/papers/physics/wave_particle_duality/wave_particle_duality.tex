@@ -211,12 +211,13 @@ Newton’s Second Law, is called a trajectory.
 \end{definition}
 
 \subsection{Conservation of Energy}
+\label{subsec:conservation_of_energy}
 
 \bigskip
 \noindent
-Consider the case of a general force function $F(x)$. We define the kinetic energy of 
-the system to be $\frac{1}{2}mv^{2}$. We also define the potential energy of the system,
-$V(x)$, as the function
+Consider the case of a general force function $F(x)$. Here we define the kinetic 
+energy of the system to be $\frac{1}{2}mv^{2}$. We also define the potential 
+energy of the system, $V(x)$, to be the function
 
 \begin{equation}
 V(x) = - \int F(x) \, dx
@@ -244,17 +245,20 @@ E(x,v) = \dfrac{1}{2}mv^{2} + V(x)
 \noindent
 One of the main reasons this energy function is important is that it is 
 \emph{conserved}, meaning that its value along any trajectory is constant.
+Said another way: For each trajectory $x(t)$ conforming to Newton’s 
+Second Law, the system's total energy $E(x(t),\dot{x}(t))$ is independent 
+of $t$.
 
 \begin{theorem}
-Suppose a particle satisfies Newton’s Second Law in the form $m\ddot{x} = F(x)$. 
-Let $V$ and $E$ be as in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the 
-energy $E$ is conserved. Said another way: For each solution $x(t)$ of Newton’s 
-Second Law, $E(x(t),\dot{x}(t))$ is independent of $t$.
+Suppose a particle satisfies Newton’s Second Law in the form 
+$m\ddot{x}(t) = F(x(t))$ and let $V$ and $E$ be as in Equations 
+(\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the total energy of the
+system, $E(x(t),\dot{x}(t))$, is conserved. 
 
 \bigskip
 \noindent
-{\bf Proof:} One way to prove that energy is independent of time
-is to show that $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
+{\bf Proof:} One way to prove that energy is conserved
+is to show that $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$:
 
 \begin{equation*}
 \begin{array}{llll}

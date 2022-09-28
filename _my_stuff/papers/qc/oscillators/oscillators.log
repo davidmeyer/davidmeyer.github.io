@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 SEP 2022 08:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2022 07:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1287,33 +1287,34 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@dima=\skip69
 \bigstrutjot=\dimen353
 )
-\c@thm=\count349
+\c@theorem=\count349
 \c@definition=\count350
 \c@proposition=\count351
 \c@lemma=\count352
 \c@example=\count353
+\c@remark=\count354
 
 (./oscillators.aux)
 \openout1 = `oscillators.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1351,16 +1352,16 @@ LaTeX Font Info:    ... okay on input line 87.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count354
+\scratchcounter=\count355
 \scratchdimen=\dimen354
 \scratchbox=\box98
-\nofMPsegments=\count355
-\nofMParguments=\count356
+\nofMPsegments=\count356
+\nofMParguments=\count357
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count357
+\MPscratchCnt=\count358
 \MPscratchDim=\dimen355
-\MPnumerator=\count358
-\makeMPintoPDFobject=\count359
+\MPnumerator=\count359
+\makeMPintoPDFobject=\count360
 \everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1374,18 +1375,18 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-LaTeX Info: Redefining \celsius on input line 87.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 87.
+LaTeX Info: Redefining \celsius on input line 91.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 91.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 87.
-Package gensymb Info: Using \upOmega for \ohm on input line 87.
+LaTeX Info: Redefining \ohm on input line 91.
+Package gensymb Info: Using \upOmega for \ohm on input line 91.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 87.
+Package hyperref Info: Link coloring OFF on input line 91.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1396,11 +1397,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count360
+\c@section@level=\count361
 )
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
  (./oscillators.out) (./oscillators.out)
 \@outlinefile=\write4
 \openout4 = `oscillators.out'.
@@ -1416,19 +1417,19 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 87
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 91
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -1437,33 +1438,34 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-Overfull \hbox (2.77388pt too wide) detected at line 692
+[5]
+Overfull \hbox (58.02309pt too wide) detected at line 811
 []
  []
 
-[5] [6] [7] [8]
-Overfull \hbox (44.57487pt too wide) detected at line 1109
+[6] [7] [8] [9]
+Overfull \hbox (44.57487pt too wide) detected at line 1231
 []
  []
 
 
-Overfull \hbox (16.58653pt too wide) detected at line 1141
+Overfull \hbox (16.58653pt too wide) detected at line 1263
 []
  []
 
-[9] [10] [11] [12]
-<images/damped_harmonic_oscillator.png, id=337, 501.875pt x 430.60875pt>
+[10] [11] [12] [13]
+<images/damped_harmonic_oscillator.png, id=377, 501.875pt x 430.60875pt>
 File: images/damped_harmonic_oscillator.png Graphic file (type png)
 <use images/damped_harmonic_oscillator.png>
 Package pdftex.def Info: images/damped_harmonic_oscillator.png  used on input l
-ine 1515.
+ine 1637.
 (pdftex.def)             Requested size: 200.74643pt x 172.24043pt.
- [13 <./images/damped_harmonic_oscillator.png>] [14]
-Overfull \hbox (51.33952pt too wide) detected at line 1726
+ [14 <./images/damped_harmonic_oscillator.png>] [15]
+Overfull \hbox (51.33952pt too wide) detected at line 1848
 []
  []
 
-[15] (./oscillators.bbl [16]
+[16] (./oscillators.bbl [17]
 Underfull \hbox (badness 10000) in paragraph at lines 10--16
 []\OT1/cmr/m/n/10 Arthur Mat-tuck.  RLC Cir-cuits.  []$\OT1/cmtt/m/n/10 https :
  / / ocw . mit . edu / courses / mathematics /
@@ -1487,15 +1489,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--62
 -[]law-[]of-[]thermal-[]radiation-[]definition$[]\OT1/cmr/m/n/10 ,
  []
 
-[17]) [18] (./oscillators.aux)
+[18]) [19] (./oscillators.aux)
 Package rerunfilecheck Info: File `oscillators.out' has not changed.
-(rerunfilecheck)             Checksum: 18ABB5FA76663292872D65609988F78E;3149.
+(rerunfilecheck)             Checksum: 9E93CD0512E73698D9D56B4B548BFA20;3299.
  ) 
 Here is how much of TeX's memory you used:
- 54248 strings out of 478994
- 1363248 string characters out of 5858184
- 2063540 words of memory out of 5000000
- 70820 multiletter control sequences out of 15000+600000
+ 54272 strings out of 478994
+ 1363600 string characters out of 5858184
+ 2063993 words of memory out of 5000000
+ 70835 multiletter control sequences out of 15000+600000
  421010 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,15n,131p,729b,2252s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1527,10 +1529,10 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (18 pages, 400740 bytes).
+Output written on oscillators.pdf (19 pages, 406371 bytes).
 PDF statistics:
- 567 PDF objects out of 1000 (max. 8388607)
- 471 compressed objects within 5 object streams
- 106 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 616 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
