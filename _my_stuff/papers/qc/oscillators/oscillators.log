@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2022 10:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2022 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1443,12 +1443,12 @@ Overfull \hbox (39.13416pt too wide) detected at line 809
 []
  []
 
-[6] [7] [8]
+[6] [7] [8] [9]
 Overfull \hbox (44.57487pt too wide) detected at line 1228
 []
  []
 
-[9]
+
 Overfull \hbox (16.58653pt too wide) detected at line 1260
 []
  []
@@ -1496,7 +1496,7 @@ Package rerunfilecheck Info: File `oscillators.out' has not changed.
 Here is how much of TeX's memory you used:
  54272 strings out of 478994
  1363600 string characters out of 5858184
- 2064950 words of memory out of 5000000
+ 2064952 words of memory out of 5000000
  70835 multiletter control sequences out of 15000+600000
  421010 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1529,7 +1529,7 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (19 pages, 405852 bytes).
+Output written on oscillators.pdf (19 pages, 405900 bytes).
 PDF statistics:
  616 PDF objects out of 1000 (max. 8388607)
  503 compressed objects within 6 object streams
