@@ -749,7 +749,7 @@ Second Law, the system's total energy $E(x(t),\dot{x}(t))$ is independent
 of $t$.
 
 \begin{theorem}
-Suppose a particle satisfies Newton’s Second Law in the form 
+Suppose a particle conforms to Newton’s Second Law in the form 
 $m\ddot{x}(t) = F(x(t))$ and let $V$ and $E$ be as in Equations 
 (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the total energy of
 the system, $E(x(t),\dot{x}(t))$, is conserved.
@@ -765,18 +765,18 @@ $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
 		&\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ 
 		                                 and $v = \dot{x}(t)$} \\	
-[15pt]
+[12pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
 		&\hspace{1em} \mathrel{\#} \text{derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
-[15pt]
+[12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
 		&\hspace{1em} \mathrel{\#} \text{by the chain and power rules \cite{wiki:chain_rule,wiki:power_rule}} \\
-[15pt]
+[12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
 		&\hspace{1em} \mathrel{\#} \text{let $u = x(t)$; this implies that 
 		                                 $\dfrac{du}{dx} = 1 \Rightarrow du = dx$} \\
-[15pt]
+[12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
 		&\hspace{1em} \mathrel{\#} \text{by the chain rule: 
 								         $\dfrac{d}{dt} V(u) = 
@@ -785,32 +785,31 @@ $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
 							             $\dfrac{du}{dt}     = 
 							             \dfrac{d}{dt} x(t) = 
 							             \dot{x}(t)$} \\
-[15pt]
+[12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
 		&\hspace{1em} \mathrel{\#} \text{by the chain rule:
 								         $\dfrac{d}{dx} V(u) =
    	                                     \dfrac{dV}{du} \,\dfrac{du}{dx}$
 	                                     and/or
 	                                     $du = dx$} \\
-[15pt]
+[12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
 		&\hspace{1em} \mathrel{\#} u = x(t) \\
-[15pt]
+[12pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
 		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
-[15pt]
+[12pt]
 &=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
 		&\hspace{1em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
-[15pt]
+[12pt]
 &=& 0
 		&\hspace{1em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
 		                                 by Newton's Second Law}
 \end{array}
 \end{equation*}
-% 
-%	there is (or was) a page break here
-%
+
+\medskip
 \noindent
 Thus, the time derivative of the energy along any trajectory is zero which implies that
 $E(x(t), \dot{x}(t))$ is independent of $t$. In summary, we may call the energy a conserved 
