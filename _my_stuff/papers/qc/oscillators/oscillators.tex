@@ -773,13 +773,13 @@ is to show that $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
-		&\hspace{1em} \mathrel{\#} \text{by the power rule \cite{wiki:power_rule}} \\
+		&\hspace{1em} \mathrel{\#} \text{by the chain and power rules \cite{wiki:chain_rule,wiki:power_rule}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
 		&\hspace{1em} \mathrel{\#} u = x(t), \, du = dx \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
-		&\hspace{1em} \mathrel{\#} \text{by the chain rule \cite{wiki:chain_rule}: 
+		&\hspace{1em} \mathrel{\#} \text{by the chain rule: 
 								   $\dfrac{d}{dt} V(u) = 
 					                \dfrac{dV}{du} \, \dfrac{du}{dt}$
 					                and 
@@ -791,7 +791,7 @@ is to show that $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
 		&\hspace{1em} \mathrel{\#} \text{by the chain rule:
 								   $\dfrac{d}{dx} V(u) =
    	                                \dfrac{dV}{du} \,\dfrac{du}{dx}$
-	                                and
+	                                and/or
 	                                $du = dx$} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
