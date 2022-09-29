@@ -776,47 +776,48 @@ $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
 \begin{array}{llll}
 \dfrac{d}{dt} E(x,\dot{x})
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
-		&\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ 
+		&\hspace{2em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ 
 		                                 and $v = \dot{x}(t)$} \\	
 [12pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
-		&\hspace{1em} \mathrel{\#} \text{derivative is a linear 
+		&\hspace{2em} \mathrel{\#} \text{derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
-		&\hspace{1em} \mathrel{\#} \text{by the chain and power rules \cite{wiki:chain_rule,wiki:power_rule}} \\
+		&\hspace{2em} \mathrel{\#} \text{by the chain and power rules \cite{wiki:chain_rule,wiki:power_rule}} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
-		&\hspace{1em} \mathrel{\#} \text{let $u := x(t) \Rightarrow \dfrac{du}{dx} = 1$} \\
+		&\hspace{2em} \mathrel{\#} \text{let $u = x(t) \Rightarrow \dfrac{du}{dx} = 1$
+		                                 and $\dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
-		&\hspace{1em} \mathrel{\#} \text{by the chain rule: 
+		&\hspace{2em} \mathrel{\#} \text{by the chain rule: 
 								         $\dfrac{dV}{dt} = 
 					                     \dfrac{dV}{du} \, \dfrac{du}{dt}$
 					                     and
-							             $\dfrac{du}{dt}     = 
-							             \dfrac{dx}{dt} = 
-							             \dot{x}(t)$} \\
+							             $\dfrac{du}{dt} = \dot{x} 
+							             \Rightarrow 
+							             \dfrac{dV}{dt} = \dfrac{dV}{du} \dot{x}$} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
-		&\hspace{1em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{dx} = \dfrac{dV}{du} \dfrac{du}{dx}$ 
-										 and  
+		&\hspace{2em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{dx} = \dfrac{dV}{du} \dfrac{du}{dx}$ 
+										 and 
 										 $\dfrac{du}{dx} = 1
-										 \Rightarrow
+										 \, \Rightarrow
 										 \dfrac{dV}{du} = \dfrac{dV}{dx}$}\\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
-		&\hspace{1em} \mathrel{\#} \text{since $u := x(t)$} \\
+		&\hspace{2em} \mathrel{\#} \text{since $u = x(t)$} \\
 [12pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
-		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+		&\hspace{2em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
 [12pt]
 &=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
-		&\hspace{1em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		&\hspace{2em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
 [12pt]
 &=& 0
-		&\hspace{1em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
+		&\hspace{2em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
 		                                 by Newton's Second Law}
 \end{array}
 \end{equation*}
