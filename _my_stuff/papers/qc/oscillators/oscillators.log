@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 SEP 2022 07:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 SEP 2022 07:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1439,7 +1439,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
 [5]
-Overfull \hbox (44.90314pt too wide) detected at line 823
+Overfull \hbox (43.23651pt too wide) detected at line 823
 []
  []
 
@@ -1529,7 +1529,7 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (19 pages, 406343 bytes).
+Output written on oscillators.pdf (19 pages, 406325 bytes).
 PDF statistics:
  617 PDF objects out of 1000 (max. 8388607)
  504 compressed objects within 6 object streams
