@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2022 13:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 SEP 2022 06:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1439,17 +1439,17 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
 [5]
-Overfull \hbox (39.13416pt too wide) detected at line 819
+Overfull \hbox (26.80597pt too wide) detected at line 822
 []
  []
 
 [6] [7] [8] [9]
-Overfull \hbox (44.57487pt too wide) detected at line 1238
+Overfull \hbox (44.57487pt too wide) detected at line 1241
 []
  []
 
 
-Overfull \hbox (16.58653pt too wide) detected at line 1270
+Overfull \hbox (16.58653pt too wide) detected at line 1273
 []
  []
 
@@ -1458,10 +1458,10 @@ Overfull \hbox (16.58653pt too wide) detected at line 1270
 File: images/damped_harmonic_oscillator.png Graphic file (type png)
 <use images/damped_harmonic_oscillator.png>
 Package pdftex.def Info: images/damped_harmonic_oscillator.png  used on input l
-ine 1644.
+ine 1647.
 (pdftex.def)             Requested size: 200.74643pt x 172.24043pt.
  [14 <./images/damped_harmonic_oscillator.png>] [15]
-Overfull \hbox (51.33952pt too wide) detected at line 1855
+Overfull \hbox (51.33952pt too wide) detected at line 1858
 []
  []
 
@@ -1496,7 +1496,7 @@ Package rerunfilecheck Info: File `oscillators.out' has not changed.
 Here is how much of TeX's memory you used:
  54273 strings out of 478994
  1363614 string characters out of 5858184
- 2064952 words of memory out of 5000000
+ 2064951 words of memory out of 5000000
  70835 multiletter control sequences out of 15000+600000
  421010 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1529,7 +1529,7 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (19 pages, 406157 bytes).
+Output written on oscillators.pdf (19 pages, 406265 bytes).
 PDF statistics:
  617 PDF objects out of 1000 (max. 8388607)
  504 compressed objects within 6 object streams

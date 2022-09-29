@@ -787,23 +787,26 @@ $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
 		&\hspace{1em} \mathrel{\#} \text{by the chain and power rules \cite{wiki:chain_rule,wiki:power_rule}} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
-		&\hspace{1em} \mathrel{\#} \text{let $u = x(t)$; this implies that 
-		                                 $\dfrac{du}{dx} = 1 \Rightarrow du = dx$} \\
+		&\hspace{1em} \mathrel{\#} \text{let $u := x(t) \Rightarrow \dfrac{du}{dx} = 1$} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
 		&\hspace{1em} \mathrel{\#} \text{by the chain rule: 
-								         $\dfrac{d}{dt} V(u) = 
+								         $\dfrac{dV}{dt} = 
 					                     \dfrac{dV}{du} \, \dfrac{du}{dt}$
-					                     and 
+					                     and
 							             $\dfrac{du}{dt}     = 
-							             \dfrac{d}{dt} x(t) = 
+							             \dfrac{dx}{dt} = 
 							             \dot{x}(t)$} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
-		&\hspace{1em} \mathrel{\#} du = dx \\
+		&\hspace{1em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{dx} = \dfrac{dV}{du} \dfrac{du}{dx}$ 
+										 and  
+										 $\dfrac{du}{dx} = 1
+										 \Rightarrow
+										 \dfrac{dV}{du} = \dfrac{dV}{dx}$}\\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
-		&\hspace{1em} \mathrel{\#} u = x(t) \\
+		&\hspace{1em} \mathrel{\#} \text{since $u := x(t)$} \\
 [12pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
 		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
