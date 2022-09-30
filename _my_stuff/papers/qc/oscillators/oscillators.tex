@@ -784,22 +784,22 @@ $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$:
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
 		&\hspace{0em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
 		                                 (Equation (\ref{eqn:E}))} \\	
-[12pt]
+[10pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
 		&\hspace{0em} \mathrel{\#} \text{derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
-[12pt]
+[10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
 		&\hspace{0em} \mathrel{\#} \text{chain \& power rules \cite{wiki:chain_rule,wiki:power_rule}:
 										 $\dfrac{d}{dt} \left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
 										 m\dot{x}(t)\ddot{x}(t)$} \\
-[12pt]
+[10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
 		&\hspace{0em} \mathrel{\#} \text{let $u = x(t)$; this implies that
 		                                 $\dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$
 		                                 and 
 		                                 $\dfrac{du}{dx} = 1$} \\
-[12pt]
+[10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
 		&\hspace{0em} \mathrel{\#} \text{chain rule: 
 								         $\dfrac{dV}{dt} = 
@@ -808,7 +808,7 @@ $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$:
 							             $\dfrac{du}{dt} = \dot{x} 
 							             \Rightarrow 
 							             \dfrac{dV}{dt} = \left [ \dfrac{dV}{du} \right ] \dot{x}$} \\
-[12pt]
+[10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
 		&\hspace{0em} \mathrel{\#} \text{chain rule: $\dfrac{dV}{dx} = 
 									     \dfrac{dV}{du} \dfrac{du}{dx}$ 
@@ -816,17 +816,17 @@ $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$:
 										 $\dfrac{du}{dx} = 1
 										 \, \Rightarrow
 										 \dfrac{dV}{dx} = \dfrac{dV}{du}$}\\
-[12pt]
+[10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
 		&\hspace{0em} \mathrel{\#} \text{since $u = x(t)$} \\
-[12pt]
+[10pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
 		&\hspace{0em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
-[12pt]
+[10pt]
 &=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
 		&\hspace{0em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
-[12pt]
+[10pt]
 &=& 0
 		&\hspace{0em} \mathrel{\#} \text{Newton's Second Law: $m \ddot{x}(t) - F(x(t)) = 0$}
 \end{array}
