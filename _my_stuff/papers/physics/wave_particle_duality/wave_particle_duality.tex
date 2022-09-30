@@ -263,52 +263,60 @@ energy of the system, $E(x(t),\dot{x}(t))$, is conserved.
 \noindent
 {\bf Proof:} One way to see this is to show that 
 $\dfrac{d}{dt}E(x,\dot{x}) = 0$:
-
+%
+%
+%
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{d}{dt} E(x,\dot{x})
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
-		&\hspace{2em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ 
+		&\hspace{0em} \mathrel{\#} \text{Equation (\ref{eqn:E}) with $x = x(t)$ 
 		                                 and $v = \dot{x}(t)$} \\	
 [12pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
-		&\hspace{2em} \mathrel{\#} \text{derivative is a linear 
+		&\hspace{0em} \mathrel{\#} \text{derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
 [12pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
+		&\hspace{0em} \mathrel{\#} \text{by the chain \& power rules \cite{wiki:chain_rule,wiki:power_rule}:
+										 $\dfrac{d}{dt} \left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
+										 m\dot{x}(t)\ddot{x}(t)$} \\
+[12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
-		&\hspace{2em} \mathrel{\#} \text{let $u = x(t) \Rightarrow
-		                                 \dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$
+		&\hspace{0em} \mathrel{\#} \text{let $u = x(t)$; this implies that
+		                                 $\dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$
 		                                 and 
 		                                 $\dfrac{du}{dx} = 1$} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} \text{by the chain rule: 
+		&\hspace{0em} \mathrel{\#} \text{by the chain rule: 
 								         $\dfrac{dV}{dt} = 
-					                     \dfrac{dV}{du}  \dfrac{du}{dt}$
+					                     \dfrac{dV}{du} \dfrac{du}{dt}$
 					                     and
 							             $\dfrac{du}{dt} = \dot{x} 
 							             \Rightarrow 
 							             \dfrac{dV}{dt} = \dfrac{dV}{du} \dot{x}$} \\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{dx} = \dfrac{dV}{du} \dfrac{du}{dx}$ 
+		&\hspace{0em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{dx} = 
+									     \dfrac{dV}{du} \dfrac{du}{dx}$ 
 										 and 
 										 $\dfrac{du}{dx} = 1
 										 \, \Rightarrow
 										 \dfrac{dV}{dx} = \dfrac{dV}{du}$}\\
 [12pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} \text{since $u = x(t)$} \\
+		&\hspace{0em} \mathrel{\#} \text{since $u = x(t)$} \\
 [12pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
-		&\hspace{2em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+		&\hspace{0em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
 [12pt]
 &=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
-		&\hspace{2em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		&\hspace{0em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
 [12pt]
 &=& 0
-		&\hspace{2em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
+		&\hspace{0em} \mathrel{\#} \text{since $m \ddot{x}(t) - F(x(t)) = 0$ 
 		                                 by Newton's Second Law}
 \end{array}
 \end{equation*}
