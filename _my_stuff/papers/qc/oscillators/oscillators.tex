@@ -542,7 +542,7 @@ potential energy) is a scalar quantity
 \cite{elastic_potential_energy} we are only interested in the
 magnitude of $F$, $kx$, at each point $x$ (the sign is the
 direction of the $F$ vector in the one dimensional case). So if
-we set $F_{m} = kx$ we get the curve shown in Figure
+we set $F_{1} = kx$ we get the curve shown in Figure
 \ref{fig:PE}, where we can see that the area under the curve is
 $\frac{1}{2} kx^2$. Thus the work done or potential energy stored
 is $\frac{1}{2} kx^2$.
@@ -576,7 +576,7 @@ is $\frac{1}{2} kx^2$.
 %	Draw the axes, shading the lower triangle
 %
        \draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
-       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F_{m}$};	% y axis
+       \draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$F_{1}$};	% y axis
        \draw [draw=none,fill=gray!15] (O) -- (EP) -- (X) -- cycle;
 %
 %	Draw the area and the force function
@@ -587,7 +587,7 @@ is $\frac{1}{2} kx^2$.
 %	Label the line segment of interest (F_{m} = kx)
 %
        \draw[very thick,red](O) -- (EP) node [left,above,midway,scale=1.35,rotate=35]	
-       				{${\color{black}{F_{m}(x) = kx}}$};
+       				{${\color{black}{F_{1}(x) = kx}}$};
 %
 %	Draw the dashed segments of the line
 %
@@ -628,7 +628,7 @@ is $\frac{1}{2} kx^2$.
 %
 	   \node [draw,rectangle,blue,scale=1.25] at (A) 
 	   		{$\color{black}{\text{A} = 
-	   		  \int_{x} F_{m}(x) \, dx =
+	   		  \int_{x} F_{1}(x) \, dx =
 			  \int_{x} kx \, dx = 
 			  \frac{1}{2}kx^{2}}$
 			  };   
@@ -651,48 +651,48 @@ So now we know that $E_{\text{total}} = E(x,v) = \frac{1}{2}mv^2 +
 E(x,v)
 &=& \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 									
 						&\hspace{4em} \mathrel{\#} E(x,v) = \text{KE} + \text{PE} \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \left (\dfrac{dx}{dt} \right )^2 + \dfrac{1}{2}kx^2 		
 						&\hspace{4em} \mathrel{\#} v = \dfrac{dx}{dt} \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \left (\dfrac{d}{dt} \Big [A \cos (\omega t) \Big ] \right )^2 + \dfrac{1}{2}kx^2 
 						&\hspace{4em} \mathrel{\#} x(t) = A \cos (\omega t) \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \left (- \omega A \sin (\omega t) \right )^2 + \dfrac{1}{2}kx^2 
 						&\hspace{4em} \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u)
                                                 = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}kx^2 
 						&\hspace{4em} \mathrel{\#} \left (- \omega A \sin (\omega t) \right )^2 = 
 						                           \omega^2 A^2 \sin^2 (\omega t) \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k\left (A \cos (\omega t) \right )^2 
 						&\hspace{4em} \mathrel{\#} x(t) = A \cos (\omega t)\\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k A^2 \cos^2 (\omega t) 
 						&\hspace{4em} \mathrel{\#} \left ( A \cos (\omega t) \right )^2 = A^2 \cos^2 (\omega t) \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2} m \omega^2 A^2 \cos^2 (\omega t) 
 						&\hspace{4em} \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m 
 						                           \omega^2 \text{ (Equation (\ref{eqn:omega0}))} \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2 \left (\sin^2 (\omega t) + \cos^2 (\omega t) \right )
 						&\hspace{4em} \mathrel{\#} \text{factor out $\dfrac{1}{2} m 
 						                           \omega^2 A^2$} \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m \omega^2 A^2
 						&\hspace{4em} \mathrel{\#} \sin^2 (\omega t) + \cos^2 (\omega t) = 1 \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} m (2 \pi f)^2 A^2 
 						&\hspace{4em} \mathrel{\#} \omega = 2 \pi f \\
-[10pt]
+[12pt]
 &=& \dfrac{1}{2} 4 \pi^2 f^2 A^2 m
 						&\hspace{4em} \mathrel{\#} \text{expand $\left (2 \pi f \right)^2$ 
 						                           and rearrange} \\
-[10pt]
+[12pt]
 &=& 2 \pi^2 f^2 A^2 m
 						&\hspace{4em} \mathrel{\#} E_{\text{total}} = 2 \pi^2 f^2 A^2 m\\
-[10pt]
+[12pt]
 &\Rightarrow& E(x,v) \propto f^2 A^2 
 						&\hspace{4em} \mathrel{\#} \text{$E(x,v)$ is proportional to $f^2 A^2$}\\
 
@@ -708,9 +708,9 @@ quantum harmonic oscillator.
 
 \bigskip
 \noindent
-Interestingly, $E(x,v)$ has an important property: it is 
-conserved. Section \ref{subsec:conservation_of_energy} briefly
-explores this property.
+The next section drills down a bit on conservation of energy
+in the one-dimensional case.
+
 
 \subsection{Conservation of Energy in $\mathbb{R}^{1}$}
 \label{subsec:conservation_of_energy}
@@ -723,7 +723,7 @@ working in $\mathbb{R}^{1}$.
 
 \bigskip
 \noindent
-Next, we need one definition:
+Next, we will need the following definition:
 
 \medskip
 \begin{definition}
