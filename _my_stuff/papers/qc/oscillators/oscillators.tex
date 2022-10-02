@@ -757,7 +757,7 @@ velocity, $E(x,v)$, is defined to be
 
 \begin{equation}
 E(x,v) = \dfrac{1}{2}mv^{2} + V(x)
-\label{eqn:E}
+\label{eqn:E(x,v)}
 \end{equation}
 
 \medskip
@@ -767,24 +767,28 @@ One of the main reasons this energy function is important is that it is
 Switching notation ($x = x(t)$ and $v = \dot{x}(t)$) and saying this in 
 a slightly different way: An energy function is \emph{conserved} if, for 
 each trajectory $x(t)$ conforming to Newton’s Second Law, a particle's 
-total energy $E(x(t),\dot{x}(t))$ is independent of $t$.
+total energy $E(x(t),\dot{x}(t))$ is independent of $t$. The conditions
+under which the total energy of a particle is conserved is the topic of 
+Theorem \ref{theorem:conservation_of_energy_in_R1}.
+
+
 
 \medskip
 \begin{theorem}
 \label{theorem:conservation_of_energy_in_R1}
 Suppose a particle's trajectory conforms to Newton’s Second Law 
 in the form $F(x(t)) = m\ddot{x}(t)$ and let $V$ and $E$ be as 
-in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the total 
+in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E(x,v)}). Then the total 
 energy of the particle is conserved.
 
 \medskip
-{\setstretch{1.50}
+{\setstretch{1.750}
 \noindent
 {\bf Proof.} To show that the total energy of the particle is
 conserved we want to show that a particle's total energy does 
 not change with time, that is, $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$.
-To do tbis we use the chain and power rules for differentiation
-\cite{wiki:chain_rule,wiki:power_rule}:
+Computing this derivative requires some machinery from both the 
+chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 \par}
 %
 %
@@ -794,7 +798,7 @@ To do tbis we use the chain and power rules for differentiation
 \dfrac{d}{dt} E(x(t),\dot{x}(t))
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
 		&\hspace{0em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
-		                                 (Equation (\ref{eqn:E}))} \\	
+		                                 (Equation (\ref{eqn:E(x,v)}))} \\	
 [10pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
 		&\hspace{0em} \mathrel{\#} \text{since derivative is a linear 
