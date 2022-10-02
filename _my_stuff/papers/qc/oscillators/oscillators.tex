@@ -786,10 +786,11 @@ energy of the particle is conserved.
 \noindent
 {\bf Proof.} To show that the total energy of the particle is
 conserved we want to show that a particle's total energy does 
-not change with time, that is, $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$.
+not change with time, that is, we want to show that $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$.
 Computing this derivative requires some machinery from both the 
 chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 \par}
+\smallskip
 %
 %
 %
@@ -847,14 +848,17 @@ chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 \end{array}
 \end{equation*}
 
-\medskip
+\bigskip
+{\setstretch{1.50}
 \noindent
-So we see that the time derivative of the energy along any trajectory 
-is zero, which implies that $E(x(t), \dot{x}(t))$ is independent of $t$. 
+So we see that $\dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0$ along any 
+trajectory, which implies that $E(x(t), \dot{x}(t))$ is independent 
+of $t$. Hence the total energy of the particle is conserved. 
 $\blacksquare$
+\par}
 \end{theorem}
 
-\medskip
+% \medskip
 \noindent
 Energy is sometimes called a \emph{conserved quantity} (or \emph{constant 
 of motion}), since a particle neither gains nor loses energy 
