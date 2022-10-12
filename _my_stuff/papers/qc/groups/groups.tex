@@ -230,17 +230,17 @@ x \sim y \; \text{iff} \; x = yh \;\text{for some}\;  h \in H
 \label{eqn:er}
 \end{equation}
 
-\bigskip
+\medskip
 \noindent
 The equivalence relation $\sim$ implies $H$ partitions $G$. In
 particular, fix some $x \in G$. Then 
 
-\bigskip
+
 \begin{equation*}
 E_x = \{y \in G \mid x \sim y \}
 \end{equation*}
 
-\bigskip
+\medskip
 \noindent
 $E_x$ is sometimes denoted $[x]$.  In this case the notation $[x]
 = \{y \in G \mid x \sim y\} \Rightarrow x^{-1}y \in H$ or $y \in
@@ -248,14 +248,21 @@ xH$.
 
 \bigskip
 \noindent
-Ok, but why does $x \sim y \Rightarrow x^{-1}y \in H$?
-One way to see this is
+Note that the $E_x$'s form a disjoint union: $\underset{x \in
+G}{\cup} E_x = G$ and either $E_x = E_y$ or $E_x \cap \E_y =
+\emptyset$ (this will become important later when we consider
+Lagrange's Theorem (Theorem \ref{thm:lagrange})).
+
+\bigskip
+\noindent
+This is all good, but why does $x \sim y \Rightarrow x^{-1}y \in H$?
+One way to think about this is
 
 \begin{equation*}
 \begin{array}{llll}
 x \sim y
 &\Rightarrow& x = yh					&\hspace{4em} \mathrel{\#} 
-												\text{Equation (\ref{eqn:er})} \\
+												\text{definition of $\sim$ (Equation (\ref{eqn:er}))} \\
 [3pt]
 &\Rightarrow& x^{-1}x = x^{-1}yh		&\hspace{4em} \mathrel{\#} 
 												\text{multiply both sides on the left by $x^{-1}$ 
@@ -278,30 +285,25 @@ x \sim y
 \noindent
 So $x \sim y \Rightarrow x^{-1}y \in H$. $\blacksquare$
 
-\bigskip
-\noindent
-Note that the $E_x$'s form a disjoint union: $\underset{x \in
-G}{\cup} E_x = G$ and either $E_x = E_y$ or $E_x \cap \E_y =
-\emptyset$ (this will become important later when we consider
-Lagrange's Theorem (Theorem \ref{thm:lagrange})).
-
 
 \bigskip
 \noindent
-More generally
+In terms of $E_x$ we see that
 
 
 \smallskip
 \begin{equation*}
 \begin{array}{rcll}
 E_x
-&=& \{y \in G \mid x \sim y\}                           &\quad  \mathrel{\#} \text{definition of $E_x$} \\
+&=& \{y \in G \mid x \sim y\}                           &\hspace{3em} \mathrel{\#} \text{definition of $E_x$} \\
 [2pt]
-&=& \{y \in G \mid y = xh \text{ for some } h \in H\}   &\quad  \mathrel{\#} \text{definition of $\sim$} \\
+&=& \{y \in G \mid y = xh \text{ for some } h \in H\}   &\hspace{3em} \mathrel{\#} \text{definition of $\sim$ 
+															(Equation (\ref{eqn:er}))} \\
 [2pt]
-&=& \{xh \mid h \in H\}                                 &\quad  \mathrel{\#} \text{simplify} \\
+&=& \{xh \mid h \in H\}                                 &\hspace{3em} \mathrel{\#} \text{simplify} \\
 [2pt]
-&=& xH                                                  &\quad  \mathrel{\#} xH \text{ is the left \emph{coset} of H for x} \\
+&=& xH                                                  &\hspace{3em} \mathrel{\#} xH \text{ is called the 
+															\emph{left coset} of H for x} \\
 \end{array}
 \end{equation*}
 
@@ -311,7 +313,6 @@ So $E_x = [x] = \{xh \mid h \in H\} = xH$. $\blacksquare$
 
 \bigskip
 \noindent
-$xH$ is called a \emph{left coset} of $H$ for $x$.
 Somewhat surprisingly, $H$ and all of its cosets have the same
 cardinality. That is, $|H| = |xH|\; \forall x \in G$.  The proof
 of this is pretty straightforward. Here we just need to construct
@@ -323,10 +324,10 @@ xh$. Then we need to show that $l_x$ is one-to-one and onto.
 \item \textbf{one-to-one} \\ For one-to-one we want to show that
 $l_x(h_1) = l_x(h_2) \Rightarrow h_1 = h_2$. In this case we can
 cancel on the left: $l_x(h_1) = l_x(h_2) \Rightarrow xh_1 = xh_2
-\Rightarrow h_1 = h_2$.  So one-to-one.
+\Rightarrow h_1 = h_2$.  So $l_x$ is one-to-one.
 \item \textbf{onto} \\
 Consider some $z \in xH$. Then $z = xh$ for some $h \in H$, so
-$l_x(x) = z$ and $l_x$ is onto. 
+$l_x(x) = z$ and therefore $l_x$ is onto. 
 \end{itemize}
 
 \noindent
