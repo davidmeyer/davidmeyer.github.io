@@ -298,10 +298,13 @@ In terms of $E_x$ we see that
 E_x
 &=& \{y \in G \mid x \sim y\}                           &\hspace{3em} \mathrel{\#} \text{definition of $E_x$ (Equation (\ref{eqn:E_x}))} \\
 [2pt]
-&=& \{y \in G \mid y = xh \text{ for some } h \in H\}   &\hspace{3em} \mathrel{\#} \text{definition of $\sim$ 
+&=& \{y \in G \mid y \sim x\}                           &\hspace{3em} \mathrel{\#} \text{$\sim$ is symmetric:
+															$x\sim y \Leftrightarrow y\sim x$} \\
+[2pt]
+&=& \{y \in G \mid y = xh \text{ for some } h \in H\}	&\hspace{3em} \mathrel{\#} \text{definition of $\sim$ 
 															(Equation (\ref{eqn:er}))} \\
 [2pt]
-&=& \{xh \mid h \in H\}                                 &\hspace{3em} \mathrel{\#} \text{simplify} \\
+&=& \{xh \mid h \in H\}                                 &\hspace{3em} \mathrel{\#} y = xh \\
 [2pt]
 &=& xH                                                  &\hspace{3em} \mathrel{\#} xH \text{ is called the 
 															\emph{left coset} of $H$ for $x$} \\
@@ -322,11 +325,11 @@ G$ and considering $l_x: H \rightarrow xH$ by the map $h \mapsto
 xh$. Then we need to show that $l_x$ is one-to-one and onto.
 
 \begin{itemize}
-\item \textbf{one-to-one} \\ For one-to-one we want to show that
+\item one-to-one: \\ For one-to-one we want to show that
 $l_x(h_1) = l_x(h_2) \Rightarrow h_1 = h_2$. In this case we can
 cancel on the left: $l_x(h_1) = l_x(h_2) \Rightarrow xh_1 = xh_2
 \Rightarrow h_1 = h_2$.  So $l_x$ is one-to-one.
-\item \textbf{onto} \\
+\item onto: \\
 Consider some $z \in xH$. Then $z = xh$ for some $h \in H$, so
 $l_x(x) = z$ and therefore $l_x$ is onto. 
 \end{itemize}
