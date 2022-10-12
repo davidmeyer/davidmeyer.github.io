@@ -223,7 +223,7 @@ One other definition we'll need here: A non-empty subset $H
 \section{Subgroups, Equivalence Relations, and Cosets}
 
 Let $H \leq G$. $H$ induces an equivalence relation $\sim$ on $G$
-as follows: For a group $G$ and a subgroup $H \leq G$ 
+as follows: For a group $G$, a subgroup $H \leq G$, and $x,y \in G$
 
 \begin{equation}
 x \sim y \; \text{iff} \; x = yh \;\text{for some}\;  h \in H
@@ -236,9 +236,10 @@ The equivalence relation $\sim$ implies $H$ partitions $G$. In
 particular, fix some $x \in G$. Then 
 
 
-\begin{equation*}
+\begin{equation}
 E_x = \{y \in G \mid x \sim y \}
-\end{equation*}
+\label{eqn:E_x}
+\end{equation}
 
 \medskip
 \noindent
@@ -295,7 +296,7 @@ In terms of $E_x$ we see that
 \begin{equation*}
 \begin{array}{rcll}
 E_x
-&=& \{y \in G \mid x \sim y\}                           &\hspace{3em} \mathrel{\#} \text{definition of $E_x$} \\
+&=& \{y \in G \mid x \sim y\}                           &\hspace{3em} \mathrel{\#} \text{definition of $E_x$ (Equation (\ref{eqn:E_x}))} \\
 [2pt]
 &=& \{y \in G \mid y = xh \text{ for some } h \in H\}   &\hspace{3em} \mathrel{\#} \text{definition of $\sim$ 
 															(Equation (\ref{eqn:er}))} \\
@@ -303,7 +304,7 @@ E_x
 &=& \{xh \mid h \in H\}                                 &\hspace{3em} \mathrel{\#} \text{simplify} \\
 [2pt]
 &=& xH                                                  &\hspace{3em} \mathrel{\#} xH \text{ is called the 
-															\emph{left coset} of H for x} \\
+															\emph{left coset} of $H$ for $x$} \\
 \end{array}
 \end{equation*}
 
