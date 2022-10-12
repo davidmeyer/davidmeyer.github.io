@@ -248,15 +248,47 @@ xH$.
 
 \bigskip
 \noindent
+Ok, but why does $x \sim y \Rightarrow x^{-1}y \in H$?
+One way to see this is
+
+\begin{equation*}
+\begin{array}{llll}
+x \sim y
+&\Rightarrow& x = yh					&\hspace{4em} \mathrel{\#} 
+												\text{for all $x,y \in G$ and some $h \in H$ 
+												(Equation (\ref{eqn:er}))} \\
+[4pt]
+&\Rightarrow& x^{-1}x = x^{-1}yh		&\hspace{4em} \mathrel{\#} 
+												\text{multiply both sides on the left by $x^{-1}$ 
+												($x \in G \Rightarrow x^{-1} \in G$)} \\
+[4pt]
+&\Rightarrow& 1 = x^{-1}yh				&\hspace{4em} \mathrel{\#} x^{-1}x = 1 \\
+[4pt]
+&\Rightarrow& 1h^{-1} = x^{-1}yh h^{-1}	&\hspace{4em} \mathrel{\#} \text{multiply both sides on the right 
+												by $h^{-1}$ ($h \in H \Rightarrow h^{-1} \in H$)} \\
+[4pt]
+&\Rightarrow& h^{-1} = x^{-1}y			&\hspace{4em} \mathrel{\#} 1h^{-1} = h^{-1},\; hh^{-1} = 1 
+												\text{ and } (x^{-1}y)1 = x^{-1}y \\
+[4pt]
+&\Rightarrow& x^{-1}y \in H				&\hspace{4em} \mathrel{\#} h^{-1} \in H \Rightarrow x^{-1}y \in H
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $x \sim y \Rightarrow x^{-1}y \in H$. $\blacksquare$
+
+\bigskip
+\noindent
 Note that the $E_x$'s form a disjoint union: $\underset{x \in
 G}{\cup} E_x = G$ and either $E_x = E_y$ or $E_x \cap \E_y =
-\emptyset$. This will become important later when we consider
-Lagrange's Theorem (Theorem \ref{thm:lagrange}).
+\emptyset$ (this will become important later when we consider
+Lagrange's Theorem (Theorem \ref{thm:lagrange})).
 
 
 \bigskip
 \noindent
-More generally, 
+More generally
 
 
 \smallskip
@@ -264,19 +296,22 @@ More generally,
 \begin{array}{rcll}
 E_x
 &=& \{y \in G \mid x \sim y\}                           &\quad  \mathrel{\#} \text{definition of $E_x$} \\
+[2pt]
 &=& \{y \in G \mid y = xh \text{ for some } h \in H\}   &\quad  \mathrel{\#} \text{definition of $\sim$} \\
+[2pt]
 &=& \{xh \mid h \in H\}                                 &\quad  \mathrel{\#} \text{simplify} \\
+[2pt]
 &=& xH                                                  &\quad  \mathrel{\#} xH \text{ is the left \emph{coset} of H for x} \\
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Summary: $E_x = [x] = \{xh \mid h \in H\} = xH$. $xH$ is called a
-\emph{left coset} of $H$ for $x$.
+So $E_x = [x] = \{xh \mid h \in H\} = xH$. $\blacksquare$
 
 \bigskip
 \noindent
+$xH$ is called a \emph{left coset} of $H$ for $x$.
 Somewhat surprisingly, $H$ and all of its cosets have the same
 cardinality. That is, $|H| = |xH|\; \forall x \in G$.  The proof
 of this is pretty straightforward. Here we just need to construct
