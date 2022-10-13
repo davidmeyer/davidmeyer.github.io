@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  13 OCT 2022 08:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  13 OCT 2022 12:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,7 +1478,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on groups.pdf (13 pages, 290202 bytes).
+Output written on groups.pdf (13 pages, 290209 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  256 compressed objects within 3 object streams
