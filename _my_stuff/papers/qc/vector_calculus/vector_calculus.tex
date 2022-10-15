@@ -989,62 +989,61 @@ of generality let ${\displaystyle \mathbf{x} =
 \begin{array}{lllll}
 0
 &\leq& \|\mathbf{x} - \mathbf{y}\|
-					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0
-					\text{ for all } \mathbf{x}, \mathbf{y} \in \mathbb{R}^{n} 
-					\text{Equation (\ref{eqn:magnitude})} \\
+					&\mathrel{\#} \text{$\|\mathbf{x} - \mathbf{y}\| \geq 0$ for all 
+					$\mathbf{x}, \mathbf{y} \in \mathbb{R}^{n}$ (Equation (\ref{eqn:magnitude}))}\\
 [8pt]
 &\leq&  \| \mathbf{x} - \mathbf{y} \|^2
-					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
+					&\mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
 					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0 \\ 
 [6pt]
 &\leq& {\displaystyle \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
-				&\quad \mathrel{\#} \| \mathbf{x} - \mathbf{y} \|^2
-				= {\displaystyle \sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}
-				\text{Equation (\ref{eqn:magnitude})} \\
+					&\mathrel{\#} \text{$\| \mathbf{x} - \mathbf{y} \|^2 = {\displaystyle 
+					\sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}$ (Equation (\ref{eqn:magnitude}))} \\
 [8pt]
 &\leq& {\displaystyle \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
-					&\quad \mathrel{\#} \text{expand previous line} \\
+					&\mathrel{\#} \text{expand previous line} \\
 [8pt]
 &\leq& {\displaystyle \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j}} 
 					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
-					&\quad \mathrel{\#} \text{sum is a linear operator} \\
+					&\mathrel{\#} \text{sum is a linear operator} \\
 [12pt]
 &\leq& \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
 					+ \|\mathbf{y}\|^2
-					&\quad \mathrel{\#} {\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} x_{j}^2
-					\text{ and }
-					\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}
-					\text{Equation (\ref{eqn:magnitude})} \\				
+					&\mathrel{\#} \text{${\| \mathbf{x} \|}^2 = 
+					\sum\limits_{j = 1}^{n} x_{j}^2$  and 
+					$\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 
+					1}^{n} x_{j} y_{j}$ (Equations  (\ref{eqn:magnitude}) and (\ref{eqn:dot}) 
+					respectively)} \\
 [12pt]
 &\leq& 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
-					&\quad \mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
+					&\mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
 					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
 [8pt]
 &\leq& 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
-					&\quad \mathrel{\#} 1 + 1 = 2 \\
+					&\mathrel{\#} 1 + 1 = 2 \\
 [8pt]
 &\Rightarrow& -2 \leq -2 \langle \mathbf{x},\mathbf{y} \rangle
-					&\quad \mathrel{\#} \text{subtract 2 from both sides}  \\
+					&\mathrel{\#} \text{subtract 2 from both sides}  \\
 [8pt]
 &\Rightarrow& 1 \geq \langle \mathbf{x},\mathbf{y} \rangle 
-					&\quad \mathrel{\#} \text{divide by -2, reversing inequality}  \\
+					&\mathrel{\#} \text{divide by -2, reversing inequality}  \\
 [8pt]
 &\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
-					&\quad \mathrel{\#} \text{rearrange}  \\
+					&\mathrel{\#} \text{rearrange}  \\
 [4pt]
 &\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, 
 					{\dfrac{\mathbf{b}}{\|\mathbf{b}\|}} \right\rangle \leq 1
-					&\quad \mathrel{\#} \text{$\mathbf{x} 
+					&\mathrel{\#} \text{$\mathbf{x} 
 					= \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, \; \mathbf{y} 
 					= \dfrac{\mathbf{b}}{\|\mathbf{b}\|}$ by definition above} \\
 [12pt]
 &\Rightarrow& \dfrac{\langle \mathbf{a},\mathbf{b} \rangle}{\|\mathbf{a}\| \|\mathbf{b}\|} \leq 1
-					&\quad \mathrel{\#} \text{scalar multiplication rule:
+					&\mathrel{\#} \text{scalar multiplication rule:
 					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle 
 					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$} \\
 [12pt]
 &\Rightarrow& \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
-					&\quad \mathrel{\#} \text{multiply both sides by $\|\mathbf{a}\| \|\mathbf{b}\|$}
+					&\mathrel{\#} \text{multiply both sides by $\|\mathbf{a}\| \|\mathbf{b}\|$}
 
 \end{array}
 \end{equation*}
