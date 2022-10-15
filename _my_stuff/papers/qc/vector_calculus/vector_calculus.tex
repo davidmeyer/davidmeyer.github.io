@@ -405,8 +405,10 @@ is defined to be the scalar value
 \smallskip
 \noindent
 Note that since $a_{j}b_{j} = b_{j}a_{j}$ ($a_j$ and $b_j$ 
-are scalars and scalar multiplication is commutative) 
-we have
+are scalars and scalar multiplication is commutative\footnote{Note that not 
+all dot products are commutative. For example, for the \emph{divergence} of 
+$\mathbf{A}$, $\text{div}(\mathbf{A})$, we have $\nabla \cdot \mathbf{A} 
+\neq \mathbf{A} \cdot \nabla$.}) we have
 
 \bigskip
 \begin{equation}
@@ -421,10 +423,10 @@ we have
 \bigskip
 \noindent
 If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then their
-dot product $\langle \mathbf{a}, \mathbf{b} \rangle$ can also be written as
-the matrix product $\mathbf{a}^{\intercal}\mathbf{b}$. Similarly,
-if $\mathbf{a}$ and $\mathbf{b}$ are row vectors then their dot
-product can be written as the matrix product
+dot product $\langle \mathbf{a}, \mathbf{b} \rangle$ can also be 
+written as the matrix product $\mathbf{a}^{\intercal}\mathbf{b}$. 
+Similarly, if $\mathbf{a}$ and $\mathbf{b}$ are row vectors then 
+their dot product can be written as the matrix product
 $\mathbf{a}\mathbf{b}^{\intercal}$. For example, the dot product
 of two $n \times 1$ column vectors $\mathbf{a}$ and $\mathbf{b}$
 is equivalent to the following matrix multiplication:
