@@ -404,11 +404,7 @@ is defined to be the scalar value
 
 \smallskip
 \noindent
-Note that since $a_{j}b_{j} = b_{j}a_{j}$ ($a_j$ and $b_j$ 
-are scalars and scalar multiplication is commutative\footnote{Note that not 
-all dot products are commutative. For example, for the \emph{divergence} of 
-$\mathbf{A}$, $\text{div}(\mathbf{A})$, we have $\nabla \cdot \mathbf{A} 
-\neq \mathbf{A} \cdot \nabla$.}) we have
+When $a_j$ and $b_j$ are scalars the dot product commutes:
 
 \bigskip
 \begin{equation}
@@ -866,11 +862,6 @@ determinant
     a_{1} & a_{2} &a_{3} \\
     b_{1} & b_{2} &b_{3}
   \end{bmatrix} \\
-  = \begin{vmatrix}
-    \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
-    a_{1} & a_{2} &a_{3} \\
-    b_{1} & b_{2} &b_{3}
-  \end{vmatrix}
 \end{equation*}
 
 \bigskip
@@ -1077,10 +1068,9 @@ equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in Equation
 0$ we have $\big | \langle \mathbf{a}, \mathbf{b} \rangle \big |
 = - \langle \mathbf{a},\mathbf{b} \rangle$ and we showed that $-
 \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\|
-\|\mathbf{b} \|$.  Together these give us $\big | \langle
+\|\mathbf{b} \|$.  Together these give $\big | \langle
 \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\|
-\|\mathbf{b} \|$, that is, the Cauchy–Schwarz
-inequality. $\blacksquare$
+\|\mathbf{b} \|$. $\blacksquare$
 \end{theorem}
 
 \section{Derivatives}
