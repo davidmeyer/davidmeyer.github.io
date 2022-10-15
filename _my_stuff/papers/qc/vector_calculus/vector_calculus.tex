@@ -397,9 +397,10 @@ denoted by either $\langle \mathbf{a}, \mathbf{b}
 is defined to be the scalar value
 
 \medskip
-\begin{equation*}
+\begin{equation}
 \langle \mathbf{a}, \mathbf{b} \rangle := \sum\limits_{j = 1}^{n} a_j b_j
-\end{equation*}
+\label{eqn:dot}
+\end{equation}
 \end{definition}
 
 \smallskip
@@ -415,6 +416,26 @@ When $a_j$ and $b_j$ are scalars the dot product commutes:
 \label{eqn:dot_reverse}
 \end{equation}
 
+\bigskip
+\noindent
+It is worth noting that there are some cases in which the dot notation
+is used but the operation does not commute. For example, the \emph{divergence} 
+of $\mathbf{A}$, is defined to be div $\mathbf{A} = \nabla \cdot \mathbf{A}$ 
+\cite{the_role_of_grad}. Here the operation denoted by $\cdot$ is "reminiscent" 
+of the dot product (as defined in Equation (\ref{eqn:dot})) but does not commute. 
+That is
+
+
+\begin{equation}
+\nabla \cdot \mathbf{A} \neq \mathbf{A} \cdot \nabla
+\label{eqn:dot_does_not_commute}
+\end{equation}
+
+\bigskip
+\noindent
+One way to see this is to notice that the LHS of Equation 
+(\ref{eqn:dot_does_not_commute}) is a scalar function while
+the RHS  is a differential operator.
 
 \bigskip
 \noindent
