@@ -188,8 +188,8 @@ notes as well as a few important vector operations.
 In these notes we will use boldface to represent a vector.
 Specifically, we will use $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ 
 to represent a column or row vector in some $n$-dimensional
-space (usually $\mathbb{R}$ or $\mathbb{C}$). 
-If $\mathbf{a}$ is a column vector then in matrix format
+space (usually $\mathbb{R}$ or $\mathbb{C}$). If $\mathbf{a}$ 
+is a column vector then in matrix format
 
 \begin{flalign*}
 \mathbf{a} = 
@@ -544,30 +544,31 @@ $M$, then the Law of Cosines \cite{law_of_cosines} gives us
 \noindent
 We can also see that 
 
-
-
-\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \| \mathbf{x} - \mathbf{y} \|^2
-&=&
- \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
- 		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:magnitude})} \\
+&=& \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
+ 		&\hspace{2em} \mathrel{\#} \text{${\| \mathbf{x} \|}^2 = \langle \mathbf{x},\mathbf{x} \rangle$
+					(Equation (\ref{eqn:magnitude}))} \\
 [8pt]
 &=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
-		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:magnitude})} \\
+		&\hspace{2em} \mathrel{\#} \text{$\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 
+					1}^{n} x_{j} y_{j}$ (Equation (\ref{eqn:magnitude}))}\\
 [12pt]
 &=& \sum\limits_{j = 1}^{n} (x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} )
-		&\hspace{8em} \mathrel{\#} \text{expand previous line} \\
+		&\hspace{2em} \mathrel{\#} \text{expand previous line} \\
 [12pt]
 &=& \sum\limits_{j = 1}^{n} x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
-		&\hspace{8em} \mathrel{\#} \text{sum is a linear operator} \\
-[12pt]
-&=&  \| \mathbf{x} \|^2 + - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \| \mathbf{y} \|^2 
- 		&\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:magnitude})} \\
-[12pt]
+		&\hspace{2em} \mathrel{\#} \text{sum is a linear operator} \\
+[10pt]
+&=&  \| \mathbf{x} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \| \mathbf{y} \|^2 
+ 		&\hspace{2em} \mathrel{\#} \text{${\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} {x_{j}}^2$ 
+					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 
+					1}^{n} x_{j} y_{j}$ (Equations  (\ref{eqn:magnitude}) and (\ref{eqn:dot}))} \\
+[13pt]
 &=&  \| \mathbf{x} \|^2 + \| \mathbf{y} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
- 		&\hspace{8em} \mathrel{\#} \text{rearrange}
+ 		&\hspace{2em} \mathrel{\#} \text{rearrange: $\| \mathbf{x} - \mathbf{y} \|^2 = \| \mathbf{x} \|^2 +
+					\| \mathbf{y} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle$}
 \end{array}
 \end{equation*}
 
@@ -586,16 +587,16 @@ Combining these expressions for $\| \mathbf{x} - \mathbf{y} \|^2$ we get
 \bigskip
 \noindent
 Subtracting $\| \mathbf{x} \|^2 + \| \mathbf{y}\|^2$ from both sides,
-dividing by $-2$, and rearranging gives us
+dividing by $-2$ and rearranging gives us
 
-\bigskip
+\medskip
 \begin{equation}
 \langle \mathbf{x}, \mathbf{y} \rangle = 
 \| \mathbf{x} \| \| \mathbf{y} \| \cos \theta
 \label{eqn:cos_identity}
 \end{equation}
 
-\bigskip
+\medskip
 \begin{definition} {\bf Orthogonal Vectors:} $\langle \mathbf{x}, \mathbf{y} \rangle = 0$
 
 \bigskip
