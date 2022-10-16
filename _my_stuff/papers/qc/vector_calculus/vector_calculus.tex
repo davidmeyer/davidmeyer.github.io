@@ -1076,14 +1076,17 @@ is defined to be
 
 
 \bigskip
-\setstretch{1.10}
+{\setstretch{1.30}
 \noindent
 So one way to see the Cauchy–Schwarz inequality is by setting $x$
 equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in Equation
-(\ref{eqn:absolute_value}). Then when $\langle
+(\ref{eqn:absolute_value}). Then when 
+$\langle
 \mathbf{a},\mathbf{b} \rangle \geq 0$ we have $\big | \langle
-\mathbf{a}, \mathbf{b} \rangle \big | = \langle
-\mathbf{a},\mathbf{b} \rangle$ and we showed above that $\langle
+\mathbf{a},\mathbf{b} \rangle \big | = \langle
+\mathbf{a},\mathbf{b} 
+\rangle$ 
+and we showed above that $\langle
 \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
 \|$.  Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle <
 0$ we have $\big | \langle \mathbf{a}, \mathbf{b} \rangle \big |
@@ -1091,7 +1094,13 @@ equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in Equation
 \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\|
 \|\mathbf{b} \|$.  Together these give $\big | \langle
 \mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\|
+\|\mathbf{b} \|$. Said another way:
+$\left [ \left (- \langle \mathbf{a},\mathbf{b} \rangle \leq 
+\|\mathbf{a}\| \|\mathbf{b} \| \right ) \land \left ( \langle\mathbf{a},
+\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \| \right )  \right ]
+\Rightarrow \big | \langle \mathbf{a},\mathbf{b} \rangle \big |  \leq \|\mathbf{a}\| 
 \|\mathbf{b} \|$. $\blacksquare$
+\par}
 \end{theorem}
 
 \section{Derivatives}
