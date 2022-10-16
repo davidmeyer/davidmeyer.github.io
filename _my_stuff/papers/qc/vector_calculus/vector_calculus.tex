@@ -703,27 +703,25 @@ to take the inner product of $\mathbf{b}$ and Equation
 					&\hspace{3em} \mathrel{\#} \text{since }  \langle \mathbf{v}_1, \mathbf{v}_2 \rangle = 0 
 					\text{ and } \mathbf{v}_1 = \mathbf{\hat{b}} 
 					\Rightarrow \langle \mathbf{\hat{b}}, \mathbf{v}_2  \rangle
-					= \frac{1}{\| \mathbf{b} \|}  \langle \mathbf{b}, \mathbf{v}_2  \rangle
+					= \frac{1}{\norm{\mathbf{b}}}  \langle \mathbf{b}, \mathbf{v}_2  \rangle
 					= 0 
 					\Rightarrow  \langle \mathbf{b}, \mathbf{v}_2  \rangle
 					= 0 \\
 [10pt]
-&=& \alpha \langle \mathbf{v}_1, \mathbf{v_1} \| \mathbf{b} \| \rangle
+&=& \alpha \langle \mathbf{v}_1, \mathbf{v_1} \norm{\mathbf{b}} \rangle
 					&\hspace{3em} \mathrel{\#} \text{since $\beta \, 0 = 0$ and
-					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}$
-					so $\mathbf{b} = \mathbf{v_1} \| \mathbf{b} \| $} \\
+					$\mathbf{v}_1 = \frac{\mathbf{b}}{\norm{\mathbf{b}}}$
+					so $\mathbf{b} = \mathbf{v_1} \norm{\mathbf{b}}$} \\
 [10pt]
-&=& \alpha \| \mathbf{b} \| \langle \mathbf{v}_1, \mathbf{v}_1 \rangle
+&=& \alpha \norm{\mathbf{b}} \langle \mathbf{v}_1, \mathbf{v}_1 \rangle
 					&\hspace{3em} \mathrel{\#} \text{by the scalar product rule} \\
 [10pt]
-&=& \alpha \| \mathbf{b} \|
+&=& \alpha \norm{\mathbf{b}}
 					&\hspace{3em} \mathrel{\#} \text{since 
-					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}
-					\Rightarrow \| \mathbf{v}_1 \| = 1
+					$\mathbf{v}_1 = \frac{\mathbf{b}}{\norm{\mathbf{b}}}
+					\Rightarrow \norm{\mathbf{v}_1} = 1
 					\text{ and so } \langle \mathbf{v}_1, \mathbf{v_1} \rangle 
-					= \| \mathbf{v}_1 \|^2
-					= 1^2 = 1$}
-
+					= {\norm{\mathbf{v}_1}}^2 = 1^2 = 1$}
 \end{array}
 \end{equation*} 
 
@@ -734,7 +732,7 @@ So we see that
 
 \medskip
 \begin{equation*}
-\langle \mathbf{a}, \mathbf{b} \rangle = \alpha \| \mathbf{b} \|
+\langle \mathbf{a}, \mathbf{b} \rangle = \alpha \norm{\mathbf{b}}
 \end{equation*}
 
 \medskip
@@ -744,9 +742,9 @@ and so
 
 \begin{equation*}
 \alpha
-= \dfrac{\langle \mathbf{a}, \mathbf{b} \rangle}{\|\mathbf{b} \|} 
-= \left \langle \mathbf{a}, \dfrac{\mathbf{b}}{\|\mathbf{b} \|} \right \rangle 
-= \langle \mathbf{a}, \mathbf{\hat{b}} \rangle 
+= \dfrac{\langle \mathbf{a}, \mathbf{b} \rangle}{\norm{\mathbf{b}}} 
+= \left \langle \mathbf{a}, \dfrac{\mathbf{b}}{\norm{\mathbf{b}}} 
+\right \rangle = \langle \mathbf{a}, \mathbf{\hat{b}} \rangle 
 \end{equation*}
 
 
@@ -787,8 +785,8 @@ right-hand rule (Figure \ref{fig:right_hand_rule_for_cross_products})
 
  
 \item $\mathbf{a} \times \mathbf{b}$ has magnitude equal to
-the area of the parallelogram that the vectors span (Figure
-\ref{fig:cross_product_parallelogram})
+the area of the parallelogram spanned by $\mathbf{a}$ and
+$\mathbf{b}$ (Figure \ref{fig:cross_product_parallelogram}).
 \end{itemize}
 
 \bigskip
@@ -807,8 +805,8 @@ One definition of the cross product is
 
 \bigskip
 \begin{equation}
-\mathbf{a} \times \mathbf{b} = \left \| \mathbf{a} \right \|
-\left \| \mathbf{b} \right \| \sin (\theta) \, \mathbf{n}
+\mathbf{a} \times \mathbf{b} = \norm{\mathbf{a}}
+\norm{\mathbf{b}} \sin (\theta) \, \mathbf{n}
 \label{eqn:cross_product}
 \end{equation}
 
@@ -821,7 +819,7 @@ where
 \item $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$
 in the plane containing them, so $0 \leq \theta \leq \pi$
 
-\item $\|\mathbf{a}\|$ and $\|\mathbf{b}\|$ are the magnitudes of
+\item $\norm{\mathbf{a}}$ and $\norm{\mathbf{b}}$ are the magnitudes of
 vectors $\mathbf{a}$ and $\mathbf{b}$
 
 \item $\mathbf{n}$ is a unit vector normal to the plane
@@ -849,10 +847,9 @@ anti-parallel ($\theta \in \{0, \pi\}$).  In the second case
 ($\theta \in \{0, \pi\}$), since the angle between a vector and
 itself is zero, Equation (\ref{eqn:cross_product}) tells us that
 the cross product of a vector with itself is the zero vector:
-$\mathbf{a} \times \mathbf{a} = \left \| \mathbf{a} \right \|
-\left \| \mathbf{a} \right \| \sin (0) \, \mathbf{n} = \left \|
-\mathbf{a} \right \| \left \| \mathbf{a} \right \| 0 \,
-\mathbf{n} = \mathbf{0}$.
+$\mathbf{a} \times \mathbf{a} = \norm{\mathbf{a}} 
+\norm{\mathbf{a}}  \sin (0) \, \mathbf{n} = \norm{\mathbf{a}} 
+ \norm{\mathbf{a}} 0 \, \mathbf{n} = \mathbf{0}$.
 
 
 
@@ -968,19 +965,19 @@ $\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) +
 \section{A Few Theorems}
 \bigskip
 \begin{theorem} {\bf Cauchy–Schwarz Inequality:} 
-$\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|
-\mathbf{a} \| \| \mathbf{b} \|$
+$\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq 
+\norm{\mathbf{a}} \norm{\mathbf{b}}$
 
 
 
 {\setstretch {1.50}
 \noindent
-{\bf Proof:} The inequality is trivial if either $ \mathbf{a}$ or
+{\bf Proof.} The inequality is trivial if either $ \mathbf{a}$ or
 $\mathbf{b}$ is zero, so assume that neither is. So without loss
 of generality let ${\displaystyle \mathbf{x} =
-\frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and ${\displaystyle
-\mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so $\|
-\mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} =
+\frac{\mathbf{a}}{\norm{\mathbf{a}}}}$ and ${\displaystyle
+\mathbf{y} = \frac{\mathbf{b}}{\norm{\mathbf{b}}}}$ and so $\norm{
+\mathbf{x}} = \norm{\mathbf{y}} = 1$ ($\mathbf{x} =
 \mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$).  Then
 \par}
 
@@ -988,16 +985,16 @@ of generality let ${\displaystyle \mathbf{x} =
 \begin{equation*}
 \begin{array}{lllll}
 0
-&\leq& \|\mathbf{x} - \mathbf{y}\|
-					&\mathrel{\#} \text{$\|\mathbf{x} - \mathbf{y}\| \geq 0$ for all 
+&\leq& \norm{\mathbf{x} - \mathbf{y}}
+					&\mathrel{\#} \text{$\norm{\mathbf{x} - \mathbf{y}} \geq 0$ for all 
 					$\mathbf{x}, \mathbf{y} \in \mathbb{R}^{n}$ (Equation (\ref{eqn:magnitude}))}\\
 [8pt]
-&\leq&  \| \mathbf{x} - \mathbf{y} \|^2
-					&\mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
-					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0 \\ 
+&\leq&  {\norm{\mathbf{x} - \mathbf{y}}}^2
+					&\mathrel{\#} \norm{\mathbf{x} - \mathbf{y}} \geq 0 
+					\Rightarrow  {\norm{\mathbf{x} - \mathbf{y}}}^2 \geq 0 \\ 
 [6pt]
 &\leq& {\displaystyle \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
-					&\mathrel{\#} \text{$\| \mathbf{x} - \mathbf{y} \|^2 = {\displaystyle 
+					&\mathrel{\#} \text{${\norm{\mathbf{x} - \mathbf{y}}}^2 = {\displaystyle 
 					\sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}$ (Equation (\ref{eqn:magnitude}))} \\
 [8pt]
 &\leq& {\displaystyle \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
@@ -1007,17 +1004,14 @@ of generality let ${\displaystyle \mathbf{x} =
 					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
 					&\mathrel{\#} \text{sum is a linear operator} \\
 [12pt]
-&\leq& \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
-					+ \|\mathbf{y}\|^2
-					&\mathrel{\#} \text{${\| \mathbf{x} \|}^2 = 
-					\sum\limits_{j = 1}^{n} x_{j}^2$  and 
-					$\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 
-					1}^{n} x_{j} y_{j}$ (Equations  (\ref{eqn:magnitude}) and (\ref{eqn:dot}) 
-					respectively)} \\
+&\leq& {\norm{\mathbf{x}}}^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle + {\norm{\mathbf{y}}}^2
+					&\mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = \sum\limits_{j = 1}^{n} x_{j}^2$  
+					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}$ 
+					(Equations  (\ref{eqn:magnitude}) and (\ref{eqn:dot}) respectively)} \\
 [12pt]
 &\leq& 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
-					&\mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
-					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
+					&\mathrel{\#} \norm{\mathbf{x}} = \norm{\mathbf{y}} 
+					= 1 \Rightarrow {\norm{\mathbf{x}}}^2 = {\norm{\mathbf{y}}}^2 = 1 \\
 [8pt]
 &\leq& 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
 					&\mathrel{\#} 1 + 1 = 2 \\
@@ -1031,19 +1025,20 @@ of generality let ${\displaystyle \mathbf{x} =
 &\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
 					&\mathrel{\#} \text{rearrange}  \\
 [4pt]
-&\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, 
-					{\dfrac{\mathbf{b}}{\|\mathbf{b}\|}} \right\rangle \leq 1
+&\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\norm{\mathbf{a}}}, 
+					{\dfrac{\mathbf{b}}{\norm{\mathbf{b}}}} \right\rangle \leq 1
 					&\mathrel{\#} \text{$\mathbf{x} 
-					= \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, \; \mathbf{y} 
-					= \dfrac{\mathbf{b}}{\|\mathbf{b}\|}$ by definition above} \\
+					= \dfrac{\mathbf{a}}{\norm{\mathbf{a}}}, \; \mathbf{y} 
+					= \dfrac{\mathbf{b}}{\norm{\mathbf{b}}}$ by the definition above} \\
 [12pt]
-&\Rightarrow& \dfrac{\langle \mathbf{a},\mathbf{b} \rangle}{\|\mathbf{a}\| \|\mathbf{b}\|} \leq 1
+&\Rightarrow& \dfrac{\langle \mathbf{a},\mathbf{b} \rangle}{\norm{\mathbf{a}} \norm{\mathbf{b}}} \leq 1
 					&\mathrel{\#} \text{scalar multiplication rule:
 					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle 
 					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$} \\
 [12pt]
-&\Rightarrow& \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
-					&\mathrel{\#} \text{multiply both sides by $\|\mathbf{a}\| \|\mathbf{b}\|$}
+&\Rightarrow& \langle \mathbf{a},\mathbf{b} \rangle \leq \norm{\mathbf{a}}\norm{\mathbf{b}}
+					&\mathrel{\#} \text{multiply both sides by 
+					$\norm{\mathbf{a}} \norm{\mathbf{b}}$}
 
 \end{array}
 \end{equation*}
@@ -1051,13 +1046,14 @@ of generality let ${\displaystyle \mathbf{x} =
 \bigskip
 \noindent
 If we replace $\mathbf{a}$ by $-\mathbf{a}$ we see by Equation
-(\ref{eqn:magnitude}) that $\|-\mathbf{a}\| = \|
-\mathbf{a}\|$. Further, by the scalar multiplication rule for dot
+(\ref{eqn:magnitude}) that $\norm{-\mathbf{a}} = \norm{\mathbf{a}}$. 
+Further, by the scalar multiplication rule for dot
 products with $c_1 = -1$ and $c_2 = 1$ we have $\langle
 -\mathbf{a},\mathbf{b} \rangle = - \langle \mathbf{a},\mathbf{b}
 \rangle$. Taken together these results imply that $- \langle
-\mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
-\|$.
+\mathbf{a},\mathbf{b} \rangle \leq \norm{\mathbf{a}} 
+\norm{\mathbf{b}}$.
+
 
 \bigskip
 \noindent
@@ -1087,8 +1083,8 @@ $\langle
 \mathbf{a},\mathbf{b} 
 \rangle$ 
 and we showed above that $\langle
-\mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
-\|$.  Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle <
+\mathbf{a},\mathbf{b} \rangle \leq \norm{\mathbf{a}} \norm{\mathbf{b}}$.  
+Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle <
 0$ we have $\big | \langle \mathbf{a}, \mathbf{b} \rangle \big |
 = - \langle \mathbf{a},\mathbf{b} \rangle$ and we showed that $-
 \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\|
@@ -1098,8 +1094,8 @@ and we showed above that $\langle
 $\left [ \left (- \langle \mathbf{a},\mathbf{b} \rangle \leq 
 \|\mathbf{a}\| \|\mathbf{b} \| \right ) \land \left ( \langle\mathbf{a},
 \mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \| \right )  \right ]
-\Rightarrow \big | \langle \mathbf{a},\mathbf{b} \rangle \big |  \leq \|\mathbf{a}\| 
-\|\mathbf{b} \|$. $\blacksquare$
+\Rightarrow \big | \langle \mathbf{a},\mathbf{b} \rangle \big |  
+\leq \norm{\mathbf{a}} \norm{\mathbf{b}}$. $\blacksquare$
 \par}
 \end{theorem}
 
