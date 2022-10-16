@@ -552,19 +552,18 @@ We can also see that
 					(Equation (\ref{eqn:magnitude}))} \\
 [8pt]
 &=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
-		&\hspace{2em} \mathrel{\#} \text{$\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 
-					1}^{n} x_{j} y_{j}$ (Equation (\ref{eqn:magnitude}))}\\
+		&\hspace{2em} \mathrel{\#} \text{$\langle \mathbf{x},\mathbf{x} \rangle  = \sum\limits_{j = 
+					1}^{n} {x}^{2}_{j}$ (Equation (\ref{eqn:magnitude}))}\\
 [12pt]
-&=& \sum\limits_{j = 1}^{n} (x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} )
+&=& \sum\limits_{j = 1}^{n} \left [ x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} \right ]
 		&\hspace{2em} \mathrel{\#} \text{expand previous line} \\
 [12pt]
 &=& \sum\limits_{j = 1}^{n} x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
-		&\hspace{2em} \mathrel{\#} \text{sum is a linear operator} \\
+		&\hspace{2em} \mathrel{\#} \text{sum is a linear operator \cite{wiki:linear_map}} \\
 [10pt]
 &=&  \| \mathbf{x} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \| \mathbf{y} \|^2 
- 		&\hspace{2em} \mathrel{\#} \text{${\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} {x_{j}}^2$ 
-					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 
-					1}^{n} x_{j} y_{j}$ (Equations  (\ref{eqn:magnitude}) and (\ref{eqn:dot}))} \\
+ 		&\hspace{2em} \mathrel{\#} \text{${\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} {x}^{2}_{j}$ 
+					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j =  1}^{n} x_{j} y_{j}$ (Equations (\ref{eqn:magnitude}) and (\ref{eqn:dot}))} \\
 [13pt]
 &=&  \| \mathbf{x} \|^2 + \| \mathbf{y} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
  		&\hspace{2em} \mathrel{\#} \text{rearrange: $\| \mathbf{x} - \mathbf{y} \|^2 = \| \mathbf{x} \|^2 +
