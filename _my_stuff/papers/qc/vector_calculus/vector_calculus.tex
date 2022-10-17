@@ -30,6 +30,7 @@
 %	more math stuff
 %
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}															% get bold math symbols
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}                                                    % get \mathbold
@@ -481,7 +482,7 @@ vectors in $\mathbb{R}^n$.
 The Euclidean norm of a vector $\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \mathbb{R}^{n}$
 is defined to be
 
-\bigskip
+\smallskip
 \begin{equation}
 \|\mathbf{x}\| := \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
 \sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
@@ -489,10 +490,10 @@ is defined to be
 \end{equation}
 \end{definition}
 
-\medskip
+\smallskip
 \begin{definition}
 \label{def:p_norm}
-{\bf $p$-Norm:} $\left\|\mathbf {x} \right\|_{p}$
+{\bf $p$-Norm:} ${\norm{\mathbf {x}}}_{p}$
 
 
 \bigskip
@@ -500,14 +501,12 @@ is defined to be
 The $p$-norm of a vector $\mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})$
 is defined to be
 
-
-\bigskip
+\smallskip
 \begin{equation*}
-\left\|\mathbf {x} \right\|_{p} := {\left(\sum _{i=1}^{n} 
+{\norm{\mathbf {x}}}_{p} := {\left(\sum _{i=1}^{n} 
 	{\left | x_{i} \right |}^{p}\right)}^{1/p}
 \end{equation*}
 
-\bigskip
 \noindent
 for $p \geq 1$ and $p \in \mathbb{R}$. 
 
@@ -517,88 +516,98 @@ for $p \geq 1$ and $p \in \mathbb{R}$.
 For $p = 1$, we get the taxicab norm, for $p = 2$ we get the
 Euclidean norm, and as $p$ approaches $\infty$ the $p$-norm
 approaches the infinity norm or maximum norm: ${\displaystyle
-\left\|\mathbf {x} \right\|_{\infty } :=\max
+{\norm{\mathbf {x}}}_{\infty } :=\max
 _{i}\left|x_{i}\right|}$.
 \end{definition}
 
-\smallskip
-{\setstretch{1.25}
 \noindent
-Next, assume that $\mathbf{x}$ and $\mathbf{y}$ are two linearly
+Here's a small theorem relating the inner product 
+$\langle \mathbf{a}, \mathbf{b} \rangle$ to the norms 
+$\norm{\mathbf{a}}$ and $\norm{\mathbf{b}}$:
+
+\smallskip
+\begin{theorem} {$\langle \mathbf{x}, \mathbf{y} \rangle = 
+\norm{\mathbf{x}} \norm{\mathbf{y}}\cos \theta$}
+\label{theorem:ip}
+
+\medskip
+{\setstretch{1.25}
+\noindent 
+{\bf Proof.} Assume that $\mathbf{x}$ and $\mathbf{y}$ are two linearly
 independent vectors in $\mathbb{R}^3$ and that $M$ is the plane
 spanned by them. Then these two vectors generate a triangle in
-$M$ with sides of length $\| \mathbf{x} \|$, $\| \mathbf{y} \|$,
-and $\| \mathbf{x} - \mathbf{y} \|$. If $\theta \in \{0, \pi \}$
-is the angle between the vectors $\mathbf{x}$ and $\mathbf{y}$ in
-$M$, then the Law of Cosines \cite{law_of_cosines} gives us
+$M$ with sides of length $\norm{\mathbf{x}}$, $\norm{\mathbf{y}}$,
+and $\norm{\mathbf{x} - \mathbf{y}}$. If $\theta \in \{0, \pi \}$
+is the angle between $\mathbf{x}$ and $\mathbf{y}$ in $M$ then 
+by the Law of Cosines \cite{law_of_cosines} we have
 \par}
 
 \medskip
-\bigskip
-\begin{equation*}
-{\norm{\mathbf{x} - \mathbf{y}}}^2 = {\norm{\mathbf{x}}}^2 + 
+\begin{equation}
+{\norm{\mathbf{x} - \mathbf{y}}}^2 = {\norm{\mathbf{x}}}^2 + \; 
 {\norm{\mathbf{y}}}^2 - 2 \norm{\mathbf{x}} \norm{\mathbf{y}} 
 \cos \theta
-\end{equation*}
+\label{eqn:law_of_cosines}
+\end{equation}
 
 \medskip
-\bigskip
 \noindent
-We can also see that 
+We can also notice that 
 
 \begin{equation*}
 \begin{array}{lllll}
 {\norm{\mathbf{x} - \mathbf{y}}}^2
-&=& \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
- 		&\hspace{2em} \mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = 
-					\langle \mathbf{x},\mathbf{x} \rangle$
-					(Equation (\ref{eqn:magnitude}))} \\
-[8pt]
 &=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
-		&\hspace{2em} \mathrel{\#} \text{$\langle \mathbf{x},\mathbf{x} \rangle  = \sum\limits_{j = 
+		&\hspace{2em} \mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = \sum\limits_{j = 
 					1}^{n} {x}^{2}_{j}$ (Equation (\ref{eqn:magnitude}))}\\
 [12pt]
-&=& \sum\limits_{j = 1}^{n} \left [ x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} \right ]
-		&\hspace{2em} \mathrel{\#} \text{expand previous line} \\
+&=& \sum\limits_{j = 1}^{n} \left ( x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} \right )
+		&\hspace{2em} \mathrel{\#} (x_j - y_j)^2 = x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} \\
 [12pt]
 &=& \sum\limits_{j = 1}^{n} x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
 		&\hspace{2em} \mathrel{\#} \text{sum is a linear operator \cite{wiki:linear_map}} \\
 [10pt]
-&=& {\norm{\mathbf{x}}}^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle + {\norm{\mathbf{y}}}^2 
+&=& {\norm{\mathbf{x}}}^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \; {\norm{\mathbf{y}}}^2 
  		&\hspace{2em} \mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = \sum\limits_{j = 1}^{n} {x}^{2}_{j}$ 
 					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j =  1}^{n} x_{j} y_{j}$ 
 					(Equations (\ref{eqn:magnitude}) and (\ref{eqn:dot}))} \\
 [13pt]
-&=& {\norm{\mathbf{x}}}^2 + {\norm{\mathbf{y}}}^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
+&=& {\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
  		&\hspace{2em} \mathrel{\#} \text{rearrange: ${\norm{\mathbf{x} - \mathbf{y}}}^2 = 
-					{\norm{\mathbf{x}}}^2 + {\norm{\mathbf{y}}}^2 - 2  \langle \mathbf{x} , 
+					{\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2 - 2  \langle \mathbf{x} , 
 					\mathbf{y} \rangle$}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Combining these expressions for ${\norm{\mathbf{x} - \mathbf{y}}}^2$ we get
+Setting this last expression for ${\norm{\mathbf{x} - \mathbf{y}}}^2$
+equal to the right-hand side (RHS) of Equation (\ref{eqn:law_of_cosines}) 
+we get
 
 
 \medskip
 \begin{equation*}
-{\norm{\mathbf{x}}}^2 + {\norm{\mathbf{y}}}^2 - 2  \norm{\mathbf{x}} \norm{\mathbf{y}}  \cos \theta
-= {\norm{\mathbf{x}}}^2 + {\norm{\mathbf{y}}}^2 - 2 \langle \mathbf{x}, \mathbf{y} \rangle
+{\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle
+=
+{\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2 - 2 \norm{\mathbf{x}} \norm{\mathbf{y}} \cos \theta
 \end{equation*}
 
 
 \bigskip
 \noindent
-Subtracting ${\norm{\mathbf{x}}}^2 + {\norm{\mathbf{y}}}^2$ from both sides,
-dividing by $-2$ and rearranging gives us
+Subtracting ${\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2$ from both sides
+of this equation and dividing by $-2$ gives us
 
 \medskip
-\begin{equation}
+\begin{equation*}
 \langle \mathbf{x}, \mathbf{y} \rangle = 
 \norm{\mathbf{x}} \norm{\mathbf{y}} \cos \theta
-\label{eqn:cos_identity}
-\end{equation}
+\end{equation*}
+\noindent
+$\blacksquare$
+\end{theorem}
+
 
 \medskip
 \begin{definition} {\bf Orthogonal Vectors:} $\langle \mathbf{x}, \mathbf{y} \rangle = 0$
@@ -608,28 +617,28 @@ dividing by $-2$ and rearranging gives us
 We say that $\mathbf{x}, \mathbf{y} \in \mathbb{R}^{n}$ are
 orthogonal if $\langle \mathbf{x}, \mathbf{y} \rangle = 0$, since
 
-\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \langle \mathbf{x}, \mathbf{y} \rangle 
 &=& \norm{\mathbf{x}} \norm{\mathbf{y}} \cos \theta
-		&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:cos_identity})} \\
+		&\hspace{5em} \mathrel{\#} \text{Theorem \ref{theorem:ip}} \\
 [10pt]
 &\Rightarrow& \langle \mathbf{x}, \mathbf{y} \rangle 
 		= \norm{\mathbf{x}} \norm{\mathbf{y}} \cos \frac{\pi}{2}
-		&\qquad \qquad \mathrel{\#} \mathbf{x} \perp\mathbf{y} \Rightarrow \theta = \frac{\pi}{2} \\
+		&\hspace{5em} \mathrel{\#} \mathbf{x} \perp\mathbf{y} \Rightarrow 
+		\theta = \frac{\pi}{2} \\
 [10pt]
 &\Rightarrow& \langle \mathbf{x}, \mathbf{y} \rangle 
 		= \norm{\mathbf{x}} \norm{\mathbf{y}} 0
-		&\qquad \qquad \mathrel{\#} \cos \frac{\pi}{2} = 0 \\
+		&\hspace{5em} \mathrel{\#} \cos \frac{\pi}{2} = 0 \\
 [10pt]
 &\Rightarrow & \langle \mathbf{x}, \mathbf{y} \rangle  = 0
-		&\qquad \qquad \mathrel{\#} \norm{\mathbf{x}} \norm{\mathbf{y}} 0 = 0
+		&\hspace{5em} \mathrel{\#} \norm{\mathbf{x}} \norm{\mathbf{y}} 0 = 0
 \end{array}
 \end{equation*}
 \end{definition}
 
-\bigskip
+\smallskip
 \begin{definition} 
 {\bf Orthogonal Projection} 
 
@@ -673,7 +682,7 @@ exist scalars $\alpha$ and $\beta$ such that
 \noindent
 Here we want to solve for $\alpha$. One way to do that is 
 to take the inner product of $\mathbf{b}$ and Equation
-(\ref{eqn:alpha_beta}), since
+(\ref{eqn:alpha_beta}):
 
 \begin{equation*}
 \begin{array}{lllll}
@@ -1009,7 +1018,7 @@ of generality let ${\displaystyle \mathbf{x} =
 					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
 					&\mathrel{\#} \text{sum is a linear operator} \\
 [12pt]
-&\leq& {\norm{\mathbf{x}}}^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle + {\norm{\mathbf{y}}}^2
+&\leq& {\norm{\mathbf{x}}}^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle + \; {\norm{\mathbf{y}}}^2
 					&\mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = \sum\limits_{j = 1}^{n} x_{j}^2$  
 					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}$ 
 					(Equations  (\ref{eqn:magnitude}) and (\ref{eqn:dot}) respectively)} \\
