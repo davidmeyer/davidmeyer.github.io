@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 OCT 2022 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 OCT 2022 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -939,14 +939,6 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip54
 \dth@everypar=\toks46
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup6
-\symboldletters=\mathgroup7
-\symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
-LaTeX Info: Redefining \bm on input line 209.
-)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
 
@@ -1034,7 +1026,7 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup9
+\symrsfs=\mathgroup6
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
@@ -1277,7 +1269,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/esvect.sty
 Package: esvect 
-\symesvector=\mathgroup10
+\symesvector=\mathgroup7
 )
 \c@theorem=\count353
 \c@definition=\count354
@@ -1289,24 +1281,24 @@ Package: esvect
 (./vector_calculus.aux)
 \openout1 = `vector_calculus.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1367,18 +1359,18 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-LaTeX Info: Redefining \celsius on input line 107.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 107
+LaTeX Info: Redefining \celsius on input line 106.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 106
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 107.
-Package gensymb Info: Using \upOmega for \ohm on input line 107.
+LaTeX Info: Redefining \ohm on input line 106.
+Package gensymb Info: Using \upOmega for \ohm on input line 106.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 107.
+Package hyperref Info: Link coloring OFF on input line 106.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1391,9 +1383,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count365
 )
-LaTeX Info: Redefining \ref on input line 107.
-LaTeX Info: Redefining \pageref on input line 107.
-LaTeX Info: Redefining \nameref on input line 107.
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
  (./vector_calculus.out) (./vector_calculus.out)
 \@outlinefile=\write4
 \openout4 = `vector_calculus.out'.
@@ -1409,26 +1401,26 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 107
+LaTeX Font Info:    Trying to load font information for U+msa on input line 106
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 107
+LaTeX Font Info:    Trying to load font information for U+msb on input line 106
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-7.
+6.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-107.
+106.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1436,7 +1428,7 @@ File: uesvect.fd
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
-Overfull \hbox (22.1584pt too wide) detected at line 580
+Overfull \hbox (22.1584pt too wide) detected at line 579
 []
  []
 
@@ -1445,10 +1437,10 @@ Overfull \hbox (22.1584pt too wide) detected at line 580
 File: images/orthogonal_projection.png Graphic file (type png)
 <use images/orthogonal_projection.png>
 Package pdftex.def Info: images/orthogonal_projection.png  used on input line 6
-63.
+62.
 (pdftex.def)             Requested size: 226.18738pt x 166.30302pt.
  [5]
-Overfull \hbox (38.59753pt too wide) detected at line 739
+Overfull \hbox (38.59753pt too wide) detected at line 738
 []
  []
 
@@ -1457,17 +1449,17 @@ Overfull \hbox (38.59753pt too wide) detected at line 739
 File: images/cross_product_parallelogram.png Graphic file (type png)
 <use images/cross_product_parallelogram.png>
 Package pdftex.def Info: images/cross_product_parallelogram.png  used on input 
-line 808.
+line 807.
 (pdftex.def)             Requested size: 202.34727pt x 158.0838pt.
 <images/right_hand_rule_cross_product.png, id=222, 1284.8pt x 1163.34625pt>
 File: images/right_hand_rule_cross_product.png Graphic file (type png)
 <use images/right_hand_rule_cross_product.png>
 Package pdftex.def Info: images/right_hand_rule_cross_product.png  used on inpu
-t line 846.
+t line 845.
 (pdftex.def)             Requested size: 192.71169pt x 174.4944pt.
  [7 <./images/cross_product_parallelogram.png>] [8 <./images/right_hand_rule_cr
 oss_product.png>]
-Overfull \hbox (28.41132pt too wide) detected at line 1058
+Overfull \hbox (28.41132pt too wide) detected at line 1057
 []
  []
 
@@ -1475,29 +1467,29 @@ Overfull \hbox (28.41132pt too wide) detected at line 1058
 <images/r_theta_to_x_y.jpg, id=283, 344.487pt x 132.9768pt>
 File: images/r_theta_to_x_y.jpg Graphic file (type jpg)
 <use images/r_theta_to_x_y.jpg>
-Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1323.
+Package pdftex.def Info: images/r_theta_to_x_y.jpg  used on input line 1322.
 (pdftex.def)             Requested size: 327.26077pt x 126.32724pt.
  [11]
 <images/type_I_region.png, id=290, 1163.34625pt x 348.30125pt>
 File: images/type_I_region.png Graphic file (type png)
 <use images/type_I_region.png>
-Package pdftex.def Info: images/type_I_region.png  used on input line 1397.
+Package pdftex.def Info: images/type_I_region.png  used on input line 1396.
 (pdftex.def)             Requested size: 407.17729pt x 121.90726pt.
  [12 <./images/r_theta_to_x_y.jpg>]
 <images/type_II_region.png, id=300, 904.37875pt x 406.51875pt>
 File: images/type_II_region.png Graphic file (type png)
 <use images/type_II_region.png>
-Package pdftex.def Info: images/type_II_region.png  used on input line 1419.
+Package pdftex.def Info: images/type_II_region.png  used on input line 1418.
 (pdftex.def)             Requested size: 316.53731pt x 142.28369pt.
  [13 <./images/type_I_region.png> <./images/type_II_region.png>] [14] [15]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1757.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1756.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1767.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1766.
 
 
-Overfull \hbox (65.46477pt too wide) detected at line 1776
+Overfull \hbox (65.46477pt too wide) detected at line 1775
 []
  []
 
@@ -1505,52 +1497,52 @@ Overfull \hbox (65.46477pt too wide) detected at line 1776
 <images/delta-r.png, id=351, 525.965pt x 470.75874pt>
 File: images/delta-r.png Graphic file (type png)
 <use images/delta-r.png>
-Package pdftex.def Info: images/delta-r.png  used on input line 1831.
+Package pdftex.def Info: images/delta-r.png  used on input line 1830.
 (pdftex.def)             Requested size: 210.38226pt x 188.30016pt.
  [17]
-Overfull \hbox (28.8371pt too wide) detected at line 1971
+Overfull \hbox (28.8371pt too wide) detected at line 1970
 []
  []
 
 [18 <./images/delta-r.png>] [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2063.
+(hyperref)                removing `math shift' on input line 2062.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2063.
+(hyperref)                removing `math shift' on input line 2062.
 
 [20]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 2101.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 2100.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 2101.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 2100.
 
 Missing character: There is no „ in font cmr10!
 <images/definite_integral.png, id=405, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 2105.
+Package pdftex.def Info: images/definite_integral.png  used on input line 2104.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
 <images/line_integral.png, id=407, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 2125.
+Package pdftex.def Info: images/line_integral.png  used on input line 2124.
 (pdftex.def)             Requested size: 328.82545pt x 110.21072pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2130.
+(hyperref)                than one, level fixed on input line 2129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2130.
+(hyperref)                removing `math shift' on input line 2129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2130.
+(hyperref)                removing `math shift' on input line 2129.
 
 [21 <./images/definite_integral.png> <./images/line_integral.png>] [22]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
@@ -1560,12 +1552,12 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2277.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2276.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [23 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (37.03775pt too wide) in paragraph at lines 2347--2348
+Overfull \hbox (37.03775pt too wide) in paragraph at lines 2346--2347
 [][] 
  []
 
@@ -1592,11 +1584,11 @@ Package rerunfilecheck Info: File `vector_calculus.out' has not changed.
 (rerunfilecheck)             Checksum: 2AF9B767E6B578D29EA1E764CF4D3576;2875.
  ) 
 Here is how much of TeX's memory you used:
- 53861 strings out of 478994
- 1352938 string characters out of 5858184
- 1992178 words of memory out of 5000000
- 70382 multiletter control sequences out of 15000+600000
- 430171 words of font info for 137 fonts, out of 8000000 for 9000
+ 53763 strings out of 478994
+ 1351845 string characters out of 5858184
+ 1990851 words of memory out of 5000000
+ 70299 multiletter control sequences out of 15000+600000
+ 424661 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,22n,131p,755b,995s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1630,7 +1622,7 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (28 pages, 1890889 bytes).
+Output written on vector_calculus.pdf (28 pages, 1890879 bytes).
 PDF statistics:
  643 PDF objects out of 1000 (max. 8388607)
  492 compressed objects within 5 object streams
