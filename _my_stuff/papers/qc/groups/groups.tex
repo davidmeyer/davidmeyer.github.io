@@ -232,8 +232,9 @@ x \sim y \; \text{iff} \; x = yh \;\text{for some}\;  h \in H
 
 \medskip
 \noindent
-The equivalence relation $\sim$ implies $H$ partitions $G$. In
-particular, fix some $x \in G$. Then 
+The equivalence relation $\sim$ implies $H$ partitions $G$. To
+see this, define for each $x \in G$ the \emph{equivalence class} 
+of $x$, $E_{x}$, as
 
 
 \begin{equation}
@@ -252,12 +253,12 @@ xH$.
 Note that the $E_x$'s form a disjoint union: $\underset{x \in
 G}{\cup} E_x = G$ and either $E_x = E_y$ or $E_x \cap \E_y =
 \emptyset$ (this will become important later when we consider
-Lagrange's Theorem (Theorem \ref{thm:lagrange})).
+Lagrange's Theorem (Theorem \ref{thm:lagrange})). 
 
 \bigskip
 \noindent
 This is all good, but why does $x \sim y \Rightarrow x^{-1}y \in H$?
-One way to think about this is as follows:
+Here's one way to think about it:
 
 \begin{equation*}
 \begin{array}{llll}
@@ -284,7 +285,7 @@ x \sim y
 
 \smallskip
 \noindent
-So $x \sim y \Rightarrow x^{-1}y \in H$. $\blacksquare$
+So $x \sim y \Rightarrow x^{-1}y \in H$. 
 
 
 \bigskip
@@ -315,7 +316,8 @@ E_x
 
 \bigskip
 \noindent
-So $E_x = [x] = \{xh \mid h \in H\} = xH$. $\blacksquare$
+So $E_x = [x] = \{xh \mid h \in H\} = xH$ and \!\!\!\!
+${\displaystyle \underset{x \in G} {\cup} E_x = G}$. $\blacksquare$
 
 \bigskip
 \noindent
