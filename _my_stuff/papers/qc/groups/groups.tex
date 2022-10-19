@@ -248,7 +248,7 @@ $E_x$ is sometimes denoted $[x]$.  In this case the notation $[x]
 = \{y \in G \mid x \sim y\} \Rightarrow x^{-1}y \in H$ or $y \in
 xH$. 
 
-\bigskip
+%\bigskip
 \noindent
 Note that the $E_x$'s form a disjoint union: $\underset{x \in
 G}{\cup} E_x = G$ and either $E_x = E_y$ or $E_x \cap \E_y =
@@ -287,35 +287,38 @@ x \sim y
 \noindent
 So $x \sim y \Rightarrow x^{-1}y \in H$. $\blacksquare$
 
+\bigskip
+\noindent
+By multiplying on the left by $x$ we can state this conclusion 
+in a slightly different way: $x \sim y \Rightarrow y \in xH$. 
 
 \bigskip
 \noindent
-We can also see that $E_x = \{y \in G \mid x \sim y\} = \{xh \mid h \in H\}$,
-since
+$xH$ is called a \emph{left coset} of $H$ for $x$. Note that 
+this also means that $E_x = xH$. To see this consider
 
 
-\smallskip
 \begin{equation*}
 \begin{array}{llll}
 E_x
 &=& \{y \in G \mid x \sim y\}                           &\hspace{4em} \mathrel{\#} \text{definition of $E_x$ (Equation (\ref{eqn:E_x}))} \\
-[2pt]
+[3pt]
 &=& \{y \in G \mid y \sim x\}                           &\hspace{4em} \mathrel{\#} \text{$\sim$ is symmetric:
 															$x\sim y \Leftrightarrow y\sim x$} \\
-[2pt]
+[3pt]
 &=& \{y \in G \mid y = xh \text{ for } h \in H\}		&\hspace{4em} \mathrel{\#} \text{definition of $\sim$ 
 															(Equation (\ref{eqn:er}))} \\
-[2pt]
+[3pt]
 &=& \{xh \in G \mid h \in H\}							&\hspace{4em} \mathrel{\#} y = xh \\
-[2pt]
+[3pt]
 &=& \{xh \mid h \in H\}                                 &\hspace{4em} \mathrel{\#} \text{simplify} \\
-[2pt]
-&=& xH                                                  &\hspace{4em} \mathrel{\#} xH \text{ is called a 
-															\emph{left coset} of $H$ for $x$} \\
+[3pt]
+&=& xH                                                  &\hspace{4em} \mathrel{\#} \text{definition of $xH$
+															($xH := \{xh \mid h \in H\}$)}\\
 \end{array}
 \end{equation*}
 
-\bigskip
+\smallskip
 \noindent
 So $E_x = [x] = \{xh \mid h \in H\} = xH$. $\blacksquare$
 
@@ -348,7 +351,7 @@ all of its cosets have the same cardinality, namely, $|H|$.
 \noindent
 Here are a few useful definitions:
 
-\bigskip
+\medskip
 \begin{itemize}
 \item $| G |$ is the \emph{order} of $G$. If $G$ is finite then
       $|G| = \text{\# of elements in } G$. 
@@ -358,11 +361,11 @@ Here are a few useful definitions:
       \text{\# of cosets for $H$ (left or right) in $G$}$. 
 \end{itemize}
 
-\bigskip
+\medskip
 \noindent
 With this machinery we can state and prove Lagrange's Theorem:
 
-\bigskip
+%\bigskip
 \noindent
 \begin{theorem}
 \textbf{Lagrange's Theorem:}  Let  $G$ be a finite group and let
