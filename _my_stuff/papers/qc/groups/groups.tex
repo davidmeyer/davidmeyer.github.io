@@ -260,6 +260,7 @@ Lagrange's Theorem (Theorem \ref{thm:lagrange})).
 This is all good, but why does $x \sim y \Rightarrow x^{-1}y \in H$?
 Here's one way to think about it:
 
+
 \begin{equation*}
 \begin{array}{llll}
 x \sim y
@@ -289,13 +290,21 @@ So $x \sim y \Rightarrow x^{-1}y \in H$. $\blacksquare$
 
 \bigskip
 \noindent
-By multiplying on the left by $x$ we can state this conclusion 
-in a slightly different form: $x \sim y \Rightarrow y \in xH$. 
+By multiplying $x^{-1}y \in H$ on the left by $x$ we can state this conclusion 
+in a slightly different form: 
+
+\begin{equation*}
+x \sim y \Rightarrow y \in xH
+\end{equation*}
+
+\medskip
+\noindent
+Here $xH = \{xh \mid h \in H\}$ for a fixed $x \in G$ and 
+is called a \emph{left coset} of $H$ in $G$ for $x$. 
 
 \bigskip
 \noindent
-$xH$ is called a \emph{left coset} of $H$ for $x$. Note that 
-this also means that $E_x = xH$. To see this consider
+Note that this also means that $E_x = xH$. To see this consider
 
 
 \begin{equation*}
@@ -313,8 +322,7 @@ E_x
 [3pt]
 &=& \{xh \mid h \in H\}                                 &\hspace{4em} \mathrel{\#} \text{simplify} \\
 [3pt]
-&=& xH                                                  &\hspace{4em} \mathrel{\#} \text{definition of $xH$
-															($xH := \{xh \mid h \in H\}$)}\\
+&=& xH                                                  &\hspace{4em} \mathrel{\#} \text{definition of $xH$}\\
 \end{array}
 \end{equation*}
 
@@ -324,7 +332,7 @@ So $E_x = xH$. $\blacksquare$
 
 \bigskip
 \noindent
-Somewhat surprisingly, $H$ and all of its cosets have the same
+Somewhat surprisingly $H$ and all of its cosets have the same
 cardinality. That is, $|H| = |xH|\; \forall x \in G$.  The proof
 of this is pretty straightforward. Here we just need to construct
 a bijection $H \rightarrow xH$. We can do this by fixing a $x \in
@@ -332,7 +340,8 @@ G$ and considering $l_x: H \rightarrow xH$ by the map $h \mapsto
 xh$. Then we need to show that $l_x$ is one-to-one and onto.
 
 \begin{itemize}
-\item one-to-one \\ For one-to-one we want to show that
+\item one-to-one \\
+For one-to-one we want to show that
 $l_x(h_1) = l_x(h_2) \Rightarrow h_1 = h_2$. In this case we can
 cancel on the left: $l_x(h_1) = l_x(h_2) \Rightarrow xh_1 = xh_2
 \Rightarrow h_1 = h_2$.  So $l_x$ is one-to-one.
