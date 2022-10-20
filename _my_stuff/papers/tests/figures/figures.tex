@@ -32,6 +32,7 @@
 \usepackage{subcaption}
 \usepackage{authblk}
 \usepackage{amsmath}
+\usepackage{commath}                                                    % get \norm{x}
 \usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
@@ -61,6 +62,52 @@
 
 
 \begin{document}
+
+
+%
+%
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.60 \textwidth}{!} {                              % resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)                  at (0,0);               % origin O
+       \coordinate (Xstart)             at (-1,0);              % x-axis 
+       \coordinate (Xend)               at (10,0);              % x-axis
+       \coordinate (Ystart)             at (0,-1);              % y-axis
+       \coordinate (Yend)               at (0, 7.5);            % y-axis
+       \coordinate (T)					at (5,4);				% Top point
+       \coordinate (B)					at (5,-3);				% bottom point
+       \coordinate (TM)					at (2.5,2.00);			% (x,y_1) coordinate
+       \coordinate (BM)					at (2.5,-1.50);			% (x,y_2) coordinate
+      
+%
+%
+%	Don't draw coordinate system
+%       
+%	\draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};		% x axis
+%	\draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$y$};		% y axis
+%
+%
+       \draw [thick,-latex] (O) -- (T) node [above] {$\mathbf{y}$};					% top vector
+       \draw [thick,-latex] (O) -- (B) node [below] {$\mathbf{x}$};					% bottom vector
+       
+      \pic [draw,-latex,angle radius=11mm,angle eccentricity=1.2, "${
+      	\hspace{9em} \theta = \arccos \left(\dfrac{\mathbf{x}\cdot \mathbf{y}}
+		{\norm{\mathbf{x}} \norm{\mathbf{y}}} \right)}$"] 
+		{angle = BM--O--TM};														% this is the angle
+%
+%	done
+%       
+   \end{tikzpicture}
+  }  																				% end \resizebox
+ \caption{Geometric Interpretation of the Dot Product}
+ \label{fig:geometric_dot_product}
+\end{figure}
+
+
+%
+\bigskip
 %
 %
 %
