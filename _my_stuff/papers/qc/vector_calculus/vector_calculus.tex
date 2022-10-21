@@ -608,8 +608,8 @@ of this equation and then dividing by $-2$ gives us
 
 \bigskip
 \noindent
-This geometric interpretation is depicted in Figure 
-\ref{fig:geometric_dot_product}.
+This geometric interpretation of the dot product
+is shown in Figure \ref{fig:geometric_dot_product}.
 
 \bigskip
 %
@@ -617,9 +617,10 @@ This geometric interpretation is depicted in Figure
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.53 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.60 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture} [scale=1,framed]							% add a tikz frame
        \coordinate (O)                  at (0,0);               % origin O
+       \coordinate (Box)                at (0,-3.85);			% put the box here (roughtly)
        \coordinate (Xstart)             at (-1,0);              % x-axis 
        \coordinate (Xend)               at (10,0);              % x-axis
        \coordinate (Ystart)             at (0,-1);              % y-axis
@@ -632,20 +633,25 @@ This geometric interpretation is depicted in Figure
 %
 %	Don't draw coordinate system
 %       
-%	\draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};			% x axis
-%	\draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$y$};			% y axis
+%	\draw[ultra thick,-latex](Xstart) -- (Xend) node[right,scale=1.75] {$x$};				% x axis
+%	\draw[ultra thick,-latex](Ystart) -- (Yend) node[above,scale=1.75] {$y$};				% y axis
 %
 %
-		\draw [line width=0.35mm,-latex] (O) -- (T) node [above] {$\mathbf{y}$};		% draw y (top vector)
-		\draw [line width=0.35mm,-latex] (O) -- (B) node [below] {$\mathbf{x}$};		% draw x (bottom vector)
+		\draw [line width=0.35mm,-latex] (O) -- (T) node [midway,above,yshift=0.25cm]  {$\mathbf{y}$};	% draw y (top vector)
+		\draw [line width=0.35mm,-latex] (O) -- (B) node [midway,below,yshift=-0.25cm] {$\mathbf{x}$};	% draw x (bottom vector)
+		\draw [line width=0.35mm,dashed,latex-] (T) -- (B) node [midway,right,xshift=0.15cm]			% draw x-y
+			{$\mathbf{x} - \mathbf{y}$};																% continue drawing x - y
+		\fill [black] (T) circle (0.05);																% draw a dot, top of x - y
+		\fill [black] (B) circle (0.05);																% draw a dot, bottom of x - y
+
 %
-%
+%	Draw the angle, box, etc
 %       
-		\pic [draw,line width=0.25mm,-latex,angle radius=10mm,angle eccentricity=1.2]	% could do \pic [...,"${...}$"] {angle = ...}; 
-			{angle = BM--O--TM};														% this draws the angle
-		\fill [black] (O) circle (0.05) node[below,left,xshift=-0.10cm] {$O$};			% label the origin
-		\node [yshift=0.25mm,xshift=6.0mm] at (O) {$\theta$};							% label theta 		
-		\node[below,left,xshift=9.0cm,draw,rectangle,color=black,thin,scale=1] at (O)	% get \theta = ... in the right place
+		\pic [draw,line width=0.25mm,angle radius=10mm,angle eccentricity=1.2]				% or \pic [...,"${...}$"] {angle = ...}; 
+			{angle = BM--O--TM};															% this draws the angle
+		\fill [black] (O) circle (0.05) node[below,left,xshift=-0.05cm] {$O$};				% label the origin
+		\node [yshift=0.25mm,xshift=6.0mm] at (O) {$\theta$};								% label theta 		
+		\node[xshift=6.75cm,below,left,draw,rectangle,color=blue,thin,scale=1] at (Box)	% get \theta = ... in the right place
 			{$\color{black}{\langle \mathbf{x},\mathbf{y} \rangle = 
 			\norm{\mathbf{x}}\norm{\mathbf{y}} \cos \theta \Rightarrow 
 			\theta = \arccos \Bigg(\dfrac{\langle \mathbf{x},\mathbf{y} \rangle}
@@ -654,8 +660,8 @@ This geometric interpretation is depicted in Figure
 %	done
 %       
    \end{tikzpicture}
-  }  																					% end \resizebox
- \caption{Geometric Interpretation of $\langle \mathbf{x},\mathbf{y} \rangle$}
+  }  																						% end \resizebox
+ \caption{Geometric interpretation of $\langle \mathbf{x},\mathbf{y} \rangle$}
  \label{fig:geometric_dot_product}
 \end{figure}
 
