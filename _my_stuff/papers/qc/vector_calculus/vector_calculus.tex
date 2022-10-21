@@ -252,9 +252,10 @@ vector. That is, for a vector $\mathbf{u}$,
 $\hat{\mathbf{u}}$ is defined to be 
 
 \medskip
-\begin{equation*}
+\begin{equation}
 \hat{\mathbf{u}} := \dfrac{\mathbf{u}}{\| \mathbf{u} \|}
-\end{equation*}
+\label{eqn:hat}
+\end{equation}
 
 \bigskip
 \noindent
@@ -1044,7 +1045,7 @@ $\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq
 \norm{\mathbf{a}} \norm{\mathbf{b}}$
 
 
-
+\bigskip
 {\setstretch {1.50}
 \noindent
 {\bf Proof.} The inequality is trivial if either $ \mathbf{a}$ or
@@ -2131,20 +2132,19 @@ we also know that the unit tangent vector $\mathbf{T} =
 \begin{array}{lllll}
 \mathbf{T}
 &=& \dfrac{\dot{\mathbf{r}}} {\norm{\dot{\mathbf{r}}}} 
-			&\hspace{6em} \mathrel{\#} \text{the unit vector in the $\mathbf{u}$ 
-			direction (usually denoted $\hat{\mathbf{u}}$) equals
-			$\dfrac{\mathbf{u}}{\norm{\mathbf{u}}}$} \\
+			&\hspace{7em} \mathrel{\#} \text{$\mathbf{T}$ is the unit vector in the 
+			$\dot{\mathbf{r}}$ direction (Equation (\ref{eqn:hat}))} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\norm{\dot{\mathbf{r}}}} 
-			&\hspace{6em} \mathrel{\#} \dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}
+			&\hspace{7em} \mathrel{\#} \dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}
 			\text{ (definition of $\dot{\mathbf{r}}$)} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\hspace{6em} \mathrel{\#} \norm{\dot{\mathbf{r}}} = \dfrac{ds}{dt}
+			&\hspace{7em} \mathrel{\#} \norm{\dot{\mathbf{r}}} = \dfrac{ds}{dt}
 			\text{ (Equation (\ref{eqn:mag_r_dot}))} \\
 [25 pt]
 &=& \dfrac{d\mathbf{r}}{ds}
-			&\hspace{6em} \mathrel{\#} \text{simplify}
+			&\hspace{7em} \mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
