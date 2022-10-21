@@ -2063,15 +2063,15 @@ this expression for $ds$ we can see that
 ds
 &=& \sqrt{dx^2 + dy^2}				
 			&\hspace{2em} \mathrel{\#} \text{Figure \ref{fig:pythagorean_theorem}} \\
-[15pt]
+[14pt]
 &=& \sqrt{dg^2 + dh^2}	
 			&\hspace{2em} \mathrel{\#} \text{switch to parametric form: 
 			$x = g(t)$ and $y = h(t)$} \\
-[15pt]
+[14pt]
 &=& \sqrt{{dg}^2 + {dh}^2} \cdot \dfrac{dt}{dt}
 			&\hspace{2em} \mathrel{\#} \text{multiply by 
 			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
-[15pt]
+[14pt]
 &=& \sqrt{{dg}^2 + {dh}^2} \cdot \Bigg [\sqrt{\dfrac{1}{{dt}^2}} \cdot dt \Bigg ]
 			&\hspace{2em} \mathrel{\#} \dfrac{dt}{dt} 
 			= \sqrt{\left (\dfrac{dt}{dt} \right)^2}
@@ -2079,20 +2079,20 @@ ds
 			= \sqrt{\dfrac{1}{{dt}^2} \cdot {dt}^2} 
 			= \sqrt{\dfrac{1}{{dt}^2}} \cdot dt
 			= \left [ \sqrt{\dfrac{1}{{dt}^2}} \cdot dt \right ] \\
-[15pt]
+[14pt]
 &=& \sqrt{\Big ( {dg}^2 + {dh}^2 \Big ) \cdot \left (\dfrac{1}{{dt}^2} \right)} \cdot dt
 			&\hspace{2em} \mathrel{\#} \text{simplify} \\
-[15pt]
+[14pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
 			&\hspace{2em} \mathrel{\#} \text{simplify} \\
-[15pt]
-&=& \sqrt{{g^{\prime}(t)}^2 + {h^{\prime}(t)}^2} \cdot dt		
-			&\hspace{2em} \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
-			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
-[15pt]
-&=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
+% [14pt]
+% &=& \sqrt{{g^{\prime}(t)}^2 + {h^{\prime}(t)}^2} \cdot dt		
+%			&\hspace{2em} \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
+%			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
+[14pt]
+&=& \norm{\dfrac{d \mathbf{r}}{dt}} \cdot dt
 			&\hspace{2em} \mathrel{\#} \text{Equation (\ref{eqn:drdt}) 
-			and the definition of $\|\cdot\|$}
+			and the definition of $\norm{\cdot}$}
 \end{array}
 \end{equation*}
 
@@ -2103,7 +2103,7 @@ ds
 Now we can see that
 
 \begin{equation*}
-\dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
+\dfrac{ds}{dt} = \norm{\dfrac{d\mathbf{r}}{dt}}
 \end{equation*}
 
 \bigskip
@@ -2111,7 +2111,7 @@ Now we can see that
 and so
 
 \begin{equation}
-\dfrac{ds}{dt} = \| \dot{\mathbf{r}} \| 
+\dfrac{ds}{dt} = \norm{\dot{\mathbf{r}}}
 \label{eqn:mag_r_dot}
 \end{equation}
 
@@ -2119,32 +2119,32 @@ and so
 \bigskip
 \subsection{The Unit Tangent Vector $\mathbf{T}$}
 {\setstretch{2.0} 
-Since $\dfrac{ds}{dt} = \bigg \|
-\dfrac{d\mathbf{r}}{dt} \bigg \| = \big \| \dot{\mathbf{r}} \big
-\|$ we also know that the unit tangent vector $\mathbf{T} =
-\dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} =
-\dfrac{d\mathbf{r}}{ds}$ \cite{unit_tangent_and_normal_vectors}.
-One way to see this is to notice that
+Since $\dfrac{ds}{dt} = \norm{\dfrac{d\mathbf{r}}{dt}} = \norm{\dot{\mathbf{r}}}$
+we also know that the unit tangent vector $\mathbf{T} = 
+\dfrac{\dot{\mathbf{r}}}{\norm{\dot{\mathbf{r}}}}= \dfrac{d\mathbf{r}}{ds}$ 
+\cite{unit_tangent_and_normal_vectors}. Why? Consider
 \par}
 
 
-
+\bigskip
 \begin{equation*}
 \begin{array}{lllll}
 \mathbf{T}
-&=& \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
-			&\qquad \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
+&=& \dfrac{\dot{\mathbf{r}}} {\norm{\dot{\mathbf{r}}}} 
+			&\hspace{6em} \mathrel{\#} \text{the unit vector in the $\mathbf{u}$ 
+			direction (usually denoted $\hat{\mathbf{u}}$) equals
+			$\dfrac{\mathbf{u}}{\norm{\mathbf{u}}}$} \\
 [15 pt]
-&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\|\dot{\mathbf{r}} \|} 
-			&\qquad \mathrel{\#} \dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}
+&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\norm{\dot{\mathbf{r}}}} 
+			&\hspace{6em} \mathrel{\#} \dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}
 			\text{ (definition of $\dot{\mathbf{r}}$)} \\
 [15 pt]
 &=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
-			&\qquad \mathrel{\#} \|\dot{\mathbf{r}}\| = \dfrac{ds}{dt}
+			&\hspace{6em} \mathrel{\#} \norm{\dot{\mathbf{r}}} = \dfrac{ds}{dt}
 			\text{ (Equation (\ref{eqn:mag_r_dot}))} \\
 [25 pt]
 &=& \dfrac{d\mathbf{r}}{ds}
-			&\qquad \mathrel{\#} \text{simplify}
+			&\hspace{6em} \mathrel{\#} \text{simplify}
 \end{array}
 \end{equation*}
 
