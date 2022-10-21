@@ -560,18 +560,18 @@ We can also notice that
 &=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
 		&\hspace{2em} \mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = \sum\limits_{j = 
 					1}^{n} {x}^{2}_{j}$ (Equation (\ref{eqn:magnitude}))}\\
-[10pt]
+[12pt]
 &=& \sum\limits_{j = 1}^{n} \left ( x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} \right )
 		&\hspace{2em} \mathrel{\#} (x_j - y_j)^2 = x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} \\
-[0pt]
+[12pt]
 &=& \sum\limits_{j = 1}^{n} x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
 		&\hspace{2em} \mathrel{\#} \text{sum is a linear operator \cite{wiki:linear_map}} \\
-[10pt]
+[12pt]
 &=& {\norm{\mathbf{x}}}^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \; {\norm{\mathbf{y}}}^2 
  		&\hspace{2em} \mathrel{\#} \text{${\norm{\mathbf{x}}}^2 = \sum\limits_{j = 1}^{n} {x}^{2}_{j}$ 
 					and $\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j =  1}^{n} x_{j} y_{j}$ 
 					(Equations (\ref{eqn:magnitude}) and (\ref{eqn:dot}))} \\
-[11pt]
+[12pt]
 &=& {\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
  		&\hspace{2em} \mathrel{\#} \text{rearrange: ${\norm{\mathbf{x} - \mathbf{y}}}^2 = 
 					{\norm{\mathbf{x}}}^2 + \; {\norm{\mathbf{y}}}^2 - 2  \langle \mathbf{x} , 
@@ -612,15 +612,16 @@ This geometric interpretation of the dot product
 is shown in Figure \ref{fig:geometric_dot_product}.
 
 \bigskip
+\bigskip
 %
 %
 %
 \begin{figure}[H]
   \centering
-  \resizebox{0.60 \textwidth}{!} {                              % resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {                              % resize figure if you want
   \begin{tikzpicture} [scale=1,framed]							% add a tikz frame
        \coordinate (O)                  at (0,0);               % origin O
-       \coordinate (Box)                at (0,-3.85);			% put the box here (roughtly)
+       \coordinate (Box)                at (0,-4);			% put the box here (roughtly)
        \coordinate (Xstart)             at (-1,0);              % x-axis 
        \coordinate (Xend)               at (10,0);              % x-axis
        \coordinate (Ystart)             at (0,-1);              % y-axis
@@ -628,7 +629,8 @@ is shown in Figure \ref{fig:geometric_dot_product}.
        \coordinate (T)					at (5,4);				% Top point
        \coordinate (B)					at (5,-3);				% bottom point
        \coordinate (TM)					at (2.5,2.00);			% (x,y_1) coordinate
-       \coordinate (BM)					at (2.5,-1.50);			% (x,y_2) coordinate     
+       \coordinate (BM)					at (2.5,-1.50);			% (x,y_2) coordinate 
+       \coordinate (M) 					at (7,4.75);				% draw M in upper right corner (x and y generate a plane M)    
 %
 %
 %	Don't draw coordinate system
@@ -643,6 +645,7 @@ is shown in Figure \ref{fig:geometric_dot_product}.
 			{$\mathbf{x} - \mathbf{y}$};																% continue drawing x - y
 		\fill [black] (T) circle (0.05);																% draw a dot, top of x - y
 		\fill [black] (B) circle (0.05);																% draw a dot, bottom of x - y
+		\node[] at (M) {$M$};
 
 %
 %	Draw the angle, box, etc
@@ -651,7 +654,7 @@ is shown in Figure \ref{fig:geometric_dot_product}.
 			{angle = BM--O--TM};															% this draws the angle
 		\fill [black] (O) circle (0.05) node[below,left,xshift=-0.05cm] {$O$};				% label the origin
 		\node [yshift=0.25mm,xshift=6.0mm] at (O) {$\theta$};								% label theta 		
-		\node[xshift=6.75cm,below,left,draw,rectangle,color=blue,thin,scale=1] at (Box)	% get \theta = ... in the right place
+		\node[xshift=7.075cm,below,left,draw,rectangle,color=blue,thin,scale=1] at (Box)	% get \theta = ... in the right place
 			{$\color{black}{\langle \mathbf{x},\mathbf{y} \rangle = 
 			\norm{\mathbf{x}}\norm{\mathbf{y}} \cos \theta \Rightarrow 
 			\theta = \arccos \Bigg(\dfrac{\langle \mathbf{x},\mathbf{y} \rangle}
