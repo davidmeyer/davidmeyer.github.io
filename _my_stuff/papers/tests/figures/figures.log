@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  20 OCT 2022 09:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 OCT 2022 09:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1551,11 +1551,11 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 240.
+(Font)              <20.74> on input line 252.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 240.
+(Font)              <14.4> on input line 252.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 240.
+(Font)              <12> on input line 252.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -1575,7 +1575,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [4]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 633.
+LaTeX Font Warning: Command \small invalid in math mode on input line 645.
 
 [5] [6] [7] [8] (./figures.aux)
 
@@ -1585,13 +1585,13 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 46882 strings out of 478994
- 1086751 string characters out of 5858184
- 1516198 words of memory out of 5000000
- 63379 multiletter control sequences out of 15000+600000
+ 46891 strings out of 478994
+ 1086808 string characters out of 5858184
+ 1516439 words of memory out of 5000000
+ 63388 multiletter control sequences out of 15000+600000
  526510 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,16n,117p,789b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,15n,117p,789b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
@@ -1611,7 +1611,7 @@ texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/f
 onts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
 ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb>
-Output written on figures.pdf (8 pages, 213246 bytes).
+Output written on figures.pdf (8 pages, 214542 bytes).
 PDF statistics:
  167 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
