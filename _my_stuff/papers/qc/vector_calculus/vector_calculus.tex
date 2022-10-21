@@ -2062,33 +2062,36 @@ this expression for $ds$ we can see that
 \begin{array}{lllll}
 ds
 &=& \sqrt{dx^2 + dy^2}				
-			&\qquad \qquad \mathrel{\#} \text{Figure \ref{fig:pythagorean_theorem}} \\
+			&\hspace{2em} \mathrel{\#} \text{Figure \ref{fig:pythagorean_theorem}} \\
 [15pt]
 &=& \sqrt{dg^2 + dh^2}	
-			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
+			&\hspace{2em} \mathrel{\#} \text{switch to parametric form: 
 			$x = g(t)$ and $y = h(t)$} \\
 [15pt]
-&=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
-			&\qquad \qquad \mathrel{\#} \text{multiply by 
+&=& \sqrt{{dg}^2 + {dh}^2} \cdot \dfrac{dt}{dt}
+			&\hspace{2em} \mathrel{\#} \text{multiply by 
 			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
 [15pt]
-&=& \sqrt{dg^2 + dh^2} \cdot \Bigg [\sqrt{\dfrac{1}{dt^2}} \cdot dt \Bigg ]
-			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} 
-			= \sqrt{\left (\dfrac{1}{x} \right)^2} \cdot x 
-			= \sqrt{\dfrac{1}{x^2}} \cdot x, \; x > 0  \\
+&=& \sqrt{{dg}^2 + {dh}^2} \cdot \Bigg [\sqrt{\dfrac{1}{{dt}^2}} \cdot dt \Bigg ]
+			&\hspace{2em} \mathrel{\#} \dfrac{dt}{dt} 
+			= \sqrt{\left (\dfrac{dt}{dt} \right)^2}
+			= \sqrt{\dfrac{{dt}^2}{{dt}^2}}
+			= \sqrt{\dfrac{1}{{dt}^2} \, {dt}^2} 
+			= \sqrt{\dfrac{1}{{dt}^2}} \cdot dt
+			= \left [ \sqrt{\dfrac{1}{{dt}^2}} \cdot dt \right ] \\
 [15pt]
-&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \cdot \left (\dfrac{1}{dt^2} \right)} \cdot dt
-			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+&=& \sqrt{\Big ( {dg}^2 + {dh}^2 \Big ) \cdot \left (\dfrac{1}{{dt}^2} \right)} \cdot dt
+			&\hspace{2em} \mathrel{\#} \text{simplify} \\
 [15pt]
 &=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+			&\hspace{2em} \mathrel{\#} \text{simplify} \\
 [15pt]
-&=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
-			&\qquad \qquad \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
+&=& \sqrt{{g^{\prime}(t)}^2 + {h^{\prime}(t)}^2} \cdot dt		
+			&\hspace{2em} \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
 			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
 [15pt]
 &=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
-			&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:drdt}) 
+			&\hspace{2em} \mathrel{\#} \text{Equation (\ref{eqn:drdt}) 
 			and the definition of $\|\cdot\|$}
 \end{array}
 \end{equation*}

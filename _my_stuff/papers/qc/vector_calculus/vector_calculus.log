@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 OCT 2022 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 OCT 2022 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1504,45 +1504,50 @@ Overfull \hbox (28.8371pt too wide) detected at line 2033
 []
  []
 
-[18 <./images/delta-r.png>] [19]
+[18 <./images/delta-r.png>]
+Overfull \hbox (16.97618pt too wide) detected at line 2097
+[]
+ []
+
+[19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2117.
+(hyperref)                removing `math shift' on input line 2120.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2117.
+(hyperref)                removing `math shift' on input line 2120.
 
 [20]
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 2155.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 2158.
 
 
-LaTeX Warning: Command \textdagger invalid in math mode on input line 2155.
+LaTeX Warning: Command \textdagger invalid in math mode on input line 2158.
 
 Missing character: There is no „ in font cmr10!
 <images/definite_integral.png, id=407, 752.8125pt x 661.47125pt>
 File: images/definite_integral.png Graphic file (type png)
 <use images/definite_integral.png>
-Package pdftex.def Info: images/definite_integral.png  used on input line 2159.
+Package pdftex.def Info: images/definite_integral.png  used on input line 2162.
 
 (pdftex.def)             Requested size: 127.97643pt x 112.44862pt.
 <images/line_integral.png, id=409, 730.73pt x 244.915pt>
 File: images/line_integral.png Graphic file (type png)
 <use images/line_integral.png>
-Package pdftex.def Info: images/line_integral.png  used on input line 2179.
+Package pdftex.def Info: images/line_integral.png  used on input line 2182.
 (pdftex.def)             Requested size: 328.82545pt x 110.21072pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2184.
+(hyperref)                than one, level fixed on input line 2187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2184.
+(hyperref)                removing `math shift' on input line 2187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2184.
+(hyperref)                removing `math shift' on input line 2187.
 
 [21 <./images/definite_integral.png> <./images/line_integral.png>] [22]
 <images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Jop
@@ -1552,12 +1557,12 @@ File: images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-201
 <use images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011
 -Joplin-MO-tornado.png>
 Package pdftex.def Info: images/wind-vector-and-isotachs-representing-a-wind-ve
-locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2331.
+locity-field-of-2011-Joplin-MO-tornado.png  used on input line 2334.
 (pdftex.def)             Requested size: 242.9032pt x 211.18526pt.
 
 [23 <./images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-20
 11-Joplin-MO-tornado.png>]
-Overfull \hbox (37.03775pt too wide) in paragraph at lines 2401--2402
+Overfull \hbox (37.03775pt too wide) in paragraph at lines 2404--2405
 [][] 
  []
 
@@ -1622,7 +1627,7 @@ onts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/esvect/vect10.pfb>
-Output written on vector_calculus.pdf (28 pages, 1893632 bytes).
+Output written on vector_calculus.pdf (28 pages, 1893773 bytes).
 PDF statistics:
  647 PDF objects out of 1000 (max. 8388607)
  496 compressed objects within 5 object streams
