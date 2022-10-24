@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 OCT 2022 07:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 OCT 2022 08:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1440,7 +1440,7 @@ Package pdftex.def Info: images/fanoplane.jpg  used on input line 248.
 File: images/parallel_lines.png Graphic file (type png)
 <use images/parallel_lines.png>
 Package pdftex.def Info: images/parallel_lines.png  used on input line 531.
-(pdftex.def)             Requested size: 314.82327pt x 152.66896pt.
+(pdftex.def)             Requested size: 349.80602pt x 169.63333pt.
  [6 <./images/parallel_lines.png>]
 (./projective_geometry.bbl [7]) [8] (./projective_geometry.aux)
 Package rerunfilecheck Info: File `projective_geometry.out' has not changed.
@@ -1449,7 +1449,7 @@ Package rerunfilecheck Info: File `projective_geometry.out' has not changed.
 Here is how much of TeX's memory you used:
  52343 strings out of 478994
  1323945 string characters out of 5858184
- 1962424 words of memory out of 5000000
+ 1962440 words of memory out of 5000000
  69002 multiletter control sequences out of 15000+600000
  412378 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1470,7 +1470,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on projective_geometry.pdf (8 pages, 878094 bytes).
+Output written on projective_geometry.pdf (8 pages, 878079 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  146 compressed objects within 2 object streams
