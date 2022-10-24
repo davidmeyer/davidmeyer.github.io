@@ -161,7 +161,7 @@ So the Euclidean plane is a geometry.
 \end{lemma}
 
 \noindent
-\textbf{Proof:} Assume that there are two lines that intersect in at least two points, and let two such points be $p_1$ and $p_2$. But by G1
+\textbf{Proof.} Assume that there are two lines that intersect in at least two points, and let two such points be $p_1$ and $p_2$. But by G1
 there is exactly one line on both $p_1$ and $p_2$ and so our assumption is contradicted. So two distinct lines in a geometry intersect in at 
 most one point.
 
@@ -181,7 +181,7 @@ If $l_1$ and $l_2$ are two parallel lines we write $l_1 \parallel l_2$.
 \end{lemma}
 
 \noindent
-\textbf{Proof:}  Let $l_1,l_2$ and $l_3$ be three distinct lines of $A$. Then
+\textbf{Proof.}  Let $l_1,l_2$ and $l_3$ be three distinct lines of $A$. Then
 
 \begin{itemize}
 \item By definition $l_1 \parallel l_1$ so $\parallel$ is reflexive. 
@@ -189,7 +189,7 @@ If $l_1$ and $l_2$ are two parallel lines we write $l_1 \parallel l_2$.
 \item Finally, to show transitivity  assume that $l_1 \parallel l_2$ 
 and $l_2 \parallel l_3$, but $l_1 \nparallel l_3$. Then $l_1$ and $l_3$ intersect in a point $p$. But then $p$ is on two lines ($l_1$ and $l_3$) but not on $l_2$.
 This contradicts AP since AP says there is a \emph{unique} parallel line and here we have two. Hence  $l_1 \parallel l_3$, and so $\parallel$  is transitive. 
-$\square$
+$\blacksquare$
 \end{itemize}
 
 \bigskip
@@ -201,9 +201,9 @@ we denote its parallel class by $[l]$. $[l]$ consists of all lines parallel to $
 \end{lemma}
 
 \noindent
-\textbf{Proof: } Let [l] be any parallel class for $l \in L$. If $l$ is not on $p$ then by AP there exists a unique line on $p$ parallel to $l$ so done. 
+\textbf{Proof.} Let [l] be any parallel class for $l \in L$. If $l$ is not on $p$ then by AP there exists a unique line on $p$ parallel to $l$ so done. 
 If $l$ is on $p$, we must show that no other line on $p$ is also in $[l]$. But any other line on $p$ intersects $l$ at $p$, so the lines are not parallel.
-$\square$
+$\blacksquare$
 
 \bigskip
 \noindent
@@ -558,7 +558,7 @@ in $\mathbb{C}P^2$ where
 
 \bigskip
 \begin{equation*}
-(x_1,x_2) \mapsto [x_1  \mathord{:}  x_2  \mathord{:}  x_3] \implies \\
+(x_1,x_2) \mapsto [x_1  \mathord{:}  x_2  \mathord{:}  x_3] \Rightarrow \\
 (x_1,x_2) \mapsto  \bigg [ \frac{x_1}{x_3}  \mathord{:}  \frac{x_2}{x_3}  \mathord{:}  1 \bigg ]
 \end{equation*}
 
@@ -599,7 +599,7 @@ at the point $[x_1  \mathord{:}  ax_1  \mathord{:}  0]$. That is, at infinity.
 
 \bigskip
 \noindent
-{\bf Proof: }  If the lines are not parallel (i.e., $a_1 \neq a_2$) then they intersect in $\mathbb{C}^2 \subset \mathbb{C}P^2$ in the usual way.
+{\bf Proof.}  If the lines are not parallel (i.e., $a_1 \neq a_2$) then they intersect in $\mathbb{C}^2 \subset \mathbb{C}P^2$ in the usual way.
 If $a_1 = a_2 = a$, then
 
 \begin{equation*}
@@ -613,9 +613,9 @@ If $a_1 = a_2 = a$, then
 
 \bigskip
 \noindent
-So $0 = 0 + (b_1 - b_2) x_3 \implies 0 = (b_1 - b_2) x_3$. Since the two lines were distinct but parallel we know that $b_1 \neq b_2 \implies b_1 - b_2 \neq 0$, So
+So $0 = 0 + (b_1 - b_2) x_3 \Rightarrow 0 = (b_1 - b_2) x_3$. Since the two lines were distinct but parallel we know that $b_1 \neq b_2 \Rightarrow b_1 - b_2 \neq 0$, So
 $x_3$ must be zero which implies that  $x_2 = a x_1 + b \cdot 0$ or $x_2 = ax_1$.  Then the original two lines intersect at the point
-$[x_1  \mathord{:}   ax_1  \mathord{:}   0] \in \mathbb{C}P^1 \subset \mathbb{C}P^2$. That is, at infinity. $\square$
+$[x_1  \mathord{:}   ax_1  \mathord{:}   0] \in \mathbb{C}P^1 \subset \mathbb{C}P^2$. That is, at infinity. $\blacksquare$
 \end{proposition}
 
 
