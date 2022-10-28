@@ -1,70 +1,109 @@
 \documentclass{article}
-
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}														% default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-
-\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
-\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{mathrsfs}
-\usepackage[hyphens,spaces,obeyspaces]{url}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
-\usepackage{mathtools}
-
-
-\usepackage{tikz}
-\usepackage{verbatim}
-\usetikzlibrary{plotmarks}
-\usepackage{pgfplots}
-\usepackage{amsmath}
-\usepackage{relsize}
- \usepackage[hyphenbreaks]{breakurl}
- 
- \newtheorem{thm}{Theorem}[section]
-% \newtheorem{defn}[thm]{Definition}
+%
+%
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
-
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
-
-
-
-
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
 \title{A Few Notes On The Dirac Delta Function And \\ The Laplace Transform}
-\author{David Meyer \\ dmm613@gmail.com}
-
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
 \date{Last update: \today}
-
+%
+%
+%
 \begin{document}
 \maketitle
-
+%
+%
+%
 \section{Introduction}
 These notes began life as some thoughts on the Dirac Delta
 Function and evolved into notes on several related topics
@@ -189,7 +228,7 @@ Figure \ref{fig:delta_limit}.
            \end{cases}$
        }; 
      \draw (1,0) node[below] {$a$};
-     \draw [dashed,red] (1,0) -- (1,2);
+     \draw [dashed] (1,0) -- (1,2);
      \draw (4,0) node [label=right:{$t$}] {};
      \draw (0,2) node [label=above:{$\delta_{a}(t)$}] {};
      \draw [thick,red] (0,0) -- (1,0);
@@ -459,12 +498,12 @@ Now we can answer the question of when $f$ has a Laplace
 Transfrom: 
 
 \bigskip
-\begin{thm} 
+\begin{theorem} 
 {\bf Existence Theorem for Laplace Transforms:} \normalfont If
 $f$ is s piecewise continuous on the interval $[0,\infty)$ and is
 of exponential order $c$ then $F (s) = \mathcal{L}\{f (t)\}
 \text{ is defined for all $s > c$}.$
-\end{thm}
+\end{theorem}
 
 \bigskip
 \noindent
@@ -1311,7 +1350,11 @@ f(t) \ast g(t)$. It is pretty easy to see why:
 %
 %
 %
-\section*{Acknowledgements}
+\section{Conclusions}
+%
+%
+%
+\section{Acknowledgements}
 Thanks to Dave Neary for catching a typo: was $-f(0) +
 \mathcal{L}\{f(t)\}$, should be $-f(0) + s \mathcal{L}\{f(t)\}$. 
 
@@ -1332,4 +1375,3 @@ Thanks to Dave Neary for catching a typo: was $-f(0) +
 %	done
 %
 \end{document} 
-
