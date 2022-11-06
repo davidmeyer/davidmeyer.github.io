@@ -1,7 +1,7 @@
 <!-- 
 #
 #	David Meyer
-#	dmm@1-4-5.net
+#	dmm613@gmail.com
 #	Fri Jul 21 08:33:24 2000
 #
 #	$Header: /mnt/disk0/dmm/public_html/ml/RCS/index.html,v 1.19 2017/09/15 19:26:01 dmm Exp $
@@ -59,7 +59,7 @@ data set </a>
 <br>
 <br>
 <hr>
-<i>Last Update: 06.08.2022 by
+<i>Last Update: 11.06.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
