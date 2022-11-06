@@ -18,7 +18,7 @@ A bit on Derek de Solla Price’s Metonic Gear Train (Antikythera Mechanism)</a>
 <br>
 <br>
 <hr>
-<i>Last Update: 04.16.2022 by
+<i>Last Update: 11.06.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
