@@ -1,65 +1,109 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-
-
+\documentclass{article}
+%
+%
+%	bloch_sphere.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations, 
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-\usepackage{tikz}
-\usetikzlibrary{angles, quotes}
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
-
 %
-% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
 %
-
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
 \makeatletter
 \renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
   \let\@ifnextchar\new@ifnextchar
   \array{*\c@MaxMatrixCols #1}}
 \makeatother
-
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
-
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
 \title{A Few Notes on the Bloch Sphere}
-\author{David Meyer \\ dmm613@gmail.com}
-
-\date{Last update: \today}							% Activate to display a given date or no date
-
-
-
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
 \begin{document}
 \maketitle
-
+%
+%
+%
 \section{Introduction}
 \label{sec:intro}
 The fundamental building block of classical computational devices
@@ -78,11 +122,37 @@ $\{\ket{0},\ket{1}\}$.
 More specifically, a qubit is defined as a 2-dimensional Hilbert
 space $H_2$ and we label an orthonormal basis of $H_2$ by
 $\{\ket{0}, \ket{1}\}$. The state of the qubit is an associated
-unit length vector in $H_2$. If a state is equal to a basis
-vector then we say it is a \emph{pure} state. If a state is any
-other linear combination of the basis vectors we say it is a
-\emph{mixed} state, or that the state is a superposition of
-$\ket{0}$ and $\ket{1}$.
+unit length vector in $H_2$. If a state is a basis vector then 
+we say it is a \emph{pure} state. If a state is any other linear 
+combination of the basis vectors we say it is a \emph{mixed} state. 
+
+
+\bigskip
+\noindent
+Note that a pure state is a \emph{superposition}. If a system can 
+exist in multiple states, then a superposition of states is a sum of
+states with definite phase and amplitude, represented by complex
+coefficients. One the other hand, a mixed state is represented by
+a sum of probabilities for finding the system in each state. The
+key difference is that probabilities have no phase information
+and hence cannot interfere in the way that complex amplitudes
+can. Also the terminology is important. The probability of
+finding a system in a specific state requires calculating an
+expectation value, which is a measurement. On the other hand a
+superposition is a quantum state that evolves according to
+Schr{\"o}dinger's equation \cite{wiki:schrodinger_equation}.
+
+\bigskip
+\noindent
+The key difference between a mixed state and a superposition of
+pure states lies in the latter being able to give rise to quantum
+interference \cite{wiki:wave_interference}. If you make a measurement 
+of a mixed state, you just get the various probabilities. However, 
+if the state is in a superposition, any measurement will give you 
+apparent probabilities that depend on the phase of the quantum state, 
+and so can change either with different points in time or space,
+which is characteristic of interference.
+
 
 \bigskip
 \noindent
@@ -943,10 +1013,39 @@ H^{\otimes 2} \ket{01} &=  H \ket{0} \otimes H \ket{1}
 &= \frac{1}{2} \big ( \ket{00} - \ket{01} + \ket{10} - \ket{11} \big ) \\
 &= \frac{1}{2} \sum\limits_{j \in \{0,1\}^2} (-1)^{01 \cdot j} \ket{j}
 \end{flalign*}
-
+%
+%
+%
+\section{Conclusions}
+%
+%
+%
 \section{Acknowledgements}
+Thanks to @az@scholar.social for pointing out inconsistencies
+in the second paragraph of the introduction. 
 
-\newpage
+\smallskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.34] {images/az_comment.png}}
+\end{figure}
+
+
+
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
+\bibliography{qc}
+%
+%	done
+%
 \end{document} 
+
