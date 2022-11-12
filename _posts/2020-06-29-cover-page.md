@@ -12,9 +12,11 @@ tags: [productivity]
 
 This is a test.
 
-% <kbd>
-% <img src="{{site.url}}/images/taylor_series_approximation.png" style="display: block; margin: auto;" width="256;" height="256;" />
-%</kbd>
+<!-- 
+<kbd>
+ <img src="{{site.url}}/images/taylor_series_approximation.png" style="display: block; margin: auto;" width="256;" height="256;" />
+</kbd>
+-->
 
 $$
  \begin{equation*}
