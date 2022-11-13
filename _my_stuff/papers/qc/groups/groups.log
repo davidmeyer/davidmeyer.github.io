@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  19 OCT 2022 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  13 NOV 2022 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1433,7 +1433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--435
  []
 
 [4] [5]
-Overfull \hbox (16.98965pt too wide) detected at line 662
+Overfull \hbox (16.98965pt too wide) detected at line 658
 []
  []
 
@@ -1478,7 +1478,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on groups.pdf (13 pages, 290550 bytes).
+Output written on groups.pdf (13 pages, 290397 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  256 compressed objects within 3 object streams
