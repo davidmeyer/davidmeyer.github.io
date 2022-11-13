@@ -593,17 +593,17 @@ homomorphism, let $x,y \in G$ and consider $q(xy)$:
 \begin{array}{rcll}
 q(xy) 
 &=& xyN                 &\hspace{5em} \mathrel{\#} \text{definition of $q$} \\
-[3pt]
+[5pt]
 &=& xyNN                &\hspace{5em} \mathrel{\#} NN =N \text{ for $N$ a subgroup in $G$} \\
-[3pt]
+[5pt]
 &=& x (yN) N            &\hspace{5em} \mathrel{\#} \text{group multiplication is associative} \\
-[3pt]
+[5pt]
 &=& x (Ny) N            &\hspace{5em} \mathrel{\#} \text{$N$ normal so  $xN = Nx$} \\
-[3pt]
+[5pt]
 &=& (xN)(yN)            &\hspace{5em} \mathrel{\#} \text{group multiplication is associative} \\
-[3pt]
+[5pt]
 &=& q(x) q(y)           &\hspace{5em} \mathrel{\#} \text{definition of $q$} \\
-[3pt]
+[5pt]
 &=& q(x) q(y)			&\hspace{5em} \mathrel{\#} q(xy) = q(x) q(y) \Rightarrow \text{$q$ is a homomorphism} 
 \end{array}
 \end{equation*}
@@ -633,25 +633,35 @@ first let $a = \phi(e)$. Then
 a 
 &=& \phi(e)
                 &\hspace{13em} \mathrel{\#}  \text{by assumption} \\
+[5pt]
 &=& \phi(e \cdot e)
-                &\hspace{13em} \mathrel{\#} x \cdot e = e \cdot x = x \text{ so } e = e \cdot e   \\
+                &\hspace{13em} \mathrel{\#} x \cdot e = e \cdot x = x \text{ so } e = e \cdot e \\
+[5pt]
 &=& \phi(e) \cdot \phi(e)
                 &\hspace{13em} \mathrel{\#} \text{$\phi$ is a homomorphism}\\
+[5pt]
 &=& a \cdot \phi(e)
                 &\hspace{13em} \mathrel{\#} a = \phi(e)  \text{ (by assumption)} \\
+[5pt]
 &=& a \cdot a
                 &\hspace{13em} \mathrel{\#} \hdots \\
+[5pt]
 &\Rightarrow& a \cdot a^{-1} =  (a \cdot a)  \cdot a^{-1}
                 &\hspace{13em} \mathrel{\#} \text{multiply on the right by  $a^{-1}$} \\
+[5pt]
 &\Rightarrow& a \cdot a^{-1} =  a \cdot (a \cdot a^{-1})
                 &\hspace{13em} \mathrel{\#} \text{multiplication is associative} \\
+[5pt]
 &\Rightarrow& a \cdot a^{-1} =  a \cdot  f
                 &\hspace{13em} \mathrel{\#} a \cdot a^{-1} = f, 
                  \text{ where $f$ is the identity in $H$} \\
+[5pt]
 &\Rightarrow& a \cdot a^{-1} =  a
                 &\hspace{13em} \mathrel{\#} a \cdot  f  = a \\
+[5pt]
 &\Rightarrow& f = a
                 &\hspace{13em} \mathrel{\#} a \cdot a^{-1} = f  \text{ by definition of inverse} \\
+[5pt]
 &\Rightarrow& \phi(e) =  f
                 &\hspace{13em} \mathrel{\#} \text{$\phi$ maps the identity in $G$ to the identity in $H$}
 \end{array}
