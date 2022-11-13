@@ -1,68 +1,109 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-
-
+\documentclass{article}
+%
+%
+%	cayleys_theorem.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}														% default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflat						
-								% TeX will automatically convert eps --> pdf in pdflatex		
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{mathrsfs}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
-
+%
+%
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
-\newtheorem{thm}{Theorem}[section]
-% \newtheorem{defn}[thm]{Definition}
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
-
-
-
-
-\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
-\DeclareMathOperator{\bda}{\Big \downarrow}
-
-
-\DeclareMathOperator{\E}{\mathbb{E}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
-
-\title{A Few Notes on Cayley's Theorem}
-\author{David Meyer \\ dmm@\{1-4-5.net,uoregon.edu\}}
-
-\date{Last update: \today}							% Activate to display a given date or no date
-
-
-
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Cayley’s Theorem}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
 \begin{document}
 \maketitle
-
+%
+%
+%
 \section{Introduction}
 Group Theory is the study of symmetry.  Cayley's Theorem is a fundamental theorem in Group Theory, and the topic of these notes.
 
@@ -104,10 +145,10 @@ corresponding operations on the corresponding elements of $H$.
 
 \section{Cayley's Theorem}
 
-\begin{thm}
+\begin{theorem}
 \textbf{Cayley's Theorem: }If $G$ is a group then there exists a subgroup $H$ of $Sym(G)$ such that $G$ is isomorphic to $H$.
 \label{thm:caley}
-\end{thm}
+\end{theorem}
 
 \noindent
 \textbf{Proof:} Suppose that $G$ is a group.  Then to prove Cayley's Theorem we need to find a subgroup $H$ of $Sym(G)$ and a bijective homomorphism 
@@ -157,8 +198,7 @@ First,  consider that $\phi_a$  is one-to-one since
 \noindent
 So $\phi_{a}$ is one-to-one.
 
-\newpage
-%\bigskip
+\bigskip
 \noindent
 \textbf{Aside on cancellation laws:} Note that in (\ref{eqn:1-to-1}) we used the fact that $a \in G$ and that $G$ is a group so $a^{-1} \in G$.
 Here we have  $a^{-1}a = 1$, which essentially gives us a \emph{cancellation law}\footnote{Note that having a cancellation law is equivalent to saying 
@@ -553,11 +593,29 @@ The Klein 4-group $K$ has many other interesting properties, including
 \item $K$ is the group of bitwise exclusive or operations on two-bit binary values
 \item $K = \mathbb{Z}_2 \times \mathbb{Z}_2$, the direct product of two copies of the cyclic group of order 2
 \end{itemize}
-
-
+%
+%
+%
+\section{Conclusions}
+%
+%
+%
 \section{Acknowledgements}
-
-\newpage
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
 \bibliographystyle{plain}
-\bibliography{/Users/dmm/papers/bib/qc}
+\bibliography{qc}
+%
+%	done
+%
 \end{document} 
+
