@@ -6,6 +6,13 @@
 \newblock \url{https://davidmeyer.github.io/qc/euler.pdf}, 2021.
 \newblock [See \url{https://davidmeyer.github.io/qc/}].
 
+\bibitem{complex_conjugation_is_automorphism}
+{Proof Wiki}.
+\newblock {Complex Conjugation is Automorphism}.
+\newblock \url{https://proofwiki.org/wiki/Complex_Conjugation_is_Automorphism},
+  September 2020.
+\newblock [Online; accessed 15-November-2022].
+
 \bibitem{wiki:eulers_formula}
 {Wikipedia Contributors}.
 \newblock {Euler's Formula --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -13,5 +20,29 @@
   \url{https://en.wikipedia.org/w/index.php?title=Euler%27s_formula&oldid=866429907},
   2018.
 \newblock [Online; accessed 11-November-2018].
+
+\bibitem{wiki:principle_branch}
+{Wikipedia Contributors}.
+\newblock {Principal Branch --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Principal_branch&oldid=1009085215},
+  2021.
+\newblock [Online; accessed 15-November-2022].
+
+\bibitem{wiki:taylor}
+{Wikipedia Contributors}.
+\newblock {Taylor Series --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Taylor_series&oldid=1033135703},
+  2021.
+\newblock [Online; accessed 6-August-2021].
+
+\bibitem{wiki:complex_conjugation}
+{Wikipedia Contributors}.
+\newblock {Complex Number --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Complex_number&oldid=1121858597},
+  2022.
+\newblock [Online; accessed 15-November-2022].
 
 \end{thebibliography}

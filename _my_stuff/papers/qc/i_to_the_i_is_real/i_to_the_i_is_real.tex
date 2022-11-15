@@ -3,6 +3,8 @@
 %
 %	LaTeX template
 %
+%       i_to_the_i_is_real.tex
+%
 %	David Meyer
 %	dmm613@gmail.com
 %	15 July 2022
@@ -104,13 +106,160 @@
 %
 %
 %
+\section{Introduction}
+There are a few different ways to approach this problem. In
+Section \ref{sec:automorphism} we use the fact that complex
+conjugation is an automorphism of $\mathbb{C}$. In Section
+\ref{sec:power_series} we use the power series expansion of $i^i$
+to show that $i^i \in \mathbb{R}$, and in Section
+\ref{sec:eulers_formula} we rely on Euler's Formula to show that
+$i^i \in \mathbb{R}$. Section \ref{what_does_i_to_the_i_equal} 
+does a bit of arithmetic to show what $i^i$ equals numerically. 
+Finally Section \ref{sec:conclusions} offers a few conclusions.
+
+\bigskip
+\noindent
+Before launching into all of this, note that we will make heavy
+use of the exponential function $\exp(z)$ (and therefore as you
+might expect, this means heavy use of $\log(z)$). The important
+point for this discussion is that $\exp(z)$ is injective over
+$\mathbb{R}$ but not over $\mathbb{C}$.  Therefore, if we want to
+define the logarithm as it's inverse (as we will), we will need
+to select a subset of $\mathbb{C}$ where the exponential function
+is injective. In this sense, it is not entirely correct to say
+that log is a multivalued function; rather, what we have is
+different logarithm functions depending on the choice of a set
+where $\exp(z)$, for some $z \in \mathbb{C}$, is
+injective. Generally this subset is called a principal branch (a
+principal branch is a function which selects one branch ("slice")
+of a multi-valued function \cite{wiki:principle_branch}).
+
+
+
+\section{Automorphism of $\mathbb{C}$}
+\label{sec:automorphism}
+In this section we look at solving this puzzle using the fact
+that complex conjugationis an automorphism of $\mathbb{C}$
+\cite{complex_conjugation_is_automorphism}. For this approach we
+need the following two facts:
+
+\begin{enumerate}
+\item If a complex number $z$ equals its complex
+conjugate $\overline{z}$ then $z \in \mathbb{R}$
+\label{item:complex_conjugate}
+\item $-i = i^{-1}$
+\label{item:minus_i}
+\end{enumerate}
+
+
+
+\noindent
+To see \ref{item:complex_conjugate}, consider the following
+argument: Let $z$ be a complex number so that $z = a+bi$. Then
+$\overline{z} = a-bi$. So $z = \overline{z} \Rightarrow a+bi =
+a-bi$. Subtracting $a$ from both sides of the right hand side of
+this implication gives us $bi = -bi$ or $2bi = 0$. Since we know
+that $2 \neq 0$ and $i \neq 0$ it must be the case that
+$b=0$. Said another way: $\operatorname{Im}(z) = 0$ and
+$\operatorname{Re}(z) = z$. That is, $z \in \mathbb{R}$. So if $z
+= \overline{z}$ we know that $z \in \mathbb{R}$.
+
+\medskip
+\noindent
+To see \ref{item:minus_i}, notice that $-(i\cdot i) = -i^2 =
+-(-1) = 1$ and $-i \cdot i = 1 \Rightarrow -i = i^{-1}$.
+
+
+\medskip
+\noindent
+Now, we want to show that $\overline{i^i} = i^i$, which would
+show that $i^i \in \mathbb{R}$ by the argument above. So
+consider:
+
+\begin{equation*}
+\begin{array}{llll}
+\overline{i^i}
+&=& {\overline{i}}^{\overline{i}}       &\hspace{7em} \mathrel{\#} \text{definition of complex conjugation \cite{wiki:complex_conjugation}} \\
+[1pt]
+&=& (-i)^{-i}                           &\hspace{7em} \mathrel{\#} \text{since $i = 0+1i$ and $\overline{0+1i} = -1i = -i$} \\
+[1pt]
+&=& {(i^{-1})}^{-i}                     &\hspace{7em} \mathrel{\#} \text{since $-i = i^{-1}$} \\
+[1pt]
+&=& i^{(-1 \cdot -i)}                   &\hspace{7em} \mathrel{\#} \text{since ${(x^m)}^{n} = x^{mn}$} \\
+[1pt]
+&=& i^i                                 &\hspace{7em} \mathrel{\#} \text{since $-1 \cdot -i = i$}
+\end{array}
+\end{equation*}
+
+\smallskip
+\noindent
+So we see that $\overline{i^i} = i^i$ and so $i^i \in
+\mathbb{R}$. $\blacksquare$ 
+
+\bigskip
+\noindent
+Note that this argument relies on the fact that complex
+conjugation is an automorphism of $\mathbb{C}$.  So one "problem"
+with this approach is that you would first need to know not only
+that conjugation is an automorphism of $\mathbb{C}$ but also that
+the automorphism is equipped with exponentiation. So one could
+argue that this is proof is incomplete since it may not be true 
+for branches (of the logarithm) other than the principal branch
+\cite{wiki:principle_branch}.
+
+
+\section{Power Series}
+\label{sec:power_series}
+
+{\setstretch{1.5} We know that the Taylor series
+\cite{wiki:taylor} for $e^x = \sum\limits_{k=0}^{\infty}
+\dfrac{x^k}{k!}$.  We also know from Euler's Formula
+\cite{notes:eulers_formula} that $i = e^{i \frac{\pi}{2}}$ (since
+$\cos \frac{\pi}{2} + i \sin \frac{\pi}{2} = i$).  Note that the
+same result can be obtained with $x \in \left \{\frac{\pi}{2},
+\frac{5 \pi}{2}, \frac{9\pi}{2}, \hdots \right \}$, so in general
+$x = \frac{\pi}{2} \cdot (1+4n)$ where $n \in \mathbb{N} \cup
+\{0\}$.  \par}
+
+\bigskip
+\noindent
+So we see that
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+i^t 
+&=& {\big ( e^{\frac{i\pi}{2}} \big )}^t 
+		&\hspace{7em} \mathrel{\#} \text{Euler's formula \cite{notes:eulers_formula} for $i$, 
+		raised to the power $t$}\\
+[8pt]
+&=& e^{\frac{it\pi}{2}}
+		&\hspace{7em} \mathrel{\#} \text{since ${(x^m)}^{n} = x^{mn}$} \\
+&=& \sum\limits_{k=0}^{\infty} \dfrac{{\big (\frac{it\pi}{2} \big )}^k}{k!}
+		&\hspace{7em} \mathrel{\#} \text{since $e^x = \sum\limits_{k=0}^{\infty} \dfrac{x^k}{k!}$ 
+		and $x = \frac{it\pi}{2}$} 
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+If we let $t = i$ we get $i^i = e^{i^2 \frac{\pi}{2}} =
+e^{-\frac{\pi}{2}}$. So $i^i = e^{-\frac{\pi}{2}}$ and since
+$e^{-\frac{\pi}{2}} \in \mathbb{R}$ we know that $i^i \in
+\mathbb{R}$. Fortunately this agrees with the result we find 
+in Section \ref{sec:eulers_formula}. $\blacksquare$
+
+
+\section{Euler's Formula}
+\label{sec:eulers_formula}
+
 \noindent
 To answer this question, consider Euler's formula
 \cite{notes:eulers_formula,wiki:eulers_formula} 
 evaluated at $x =\frac{\pi}{2}$: 
 
 \medskip
-{\large
 \begin{equation*}
 \begin{array}{lllll}
 e^{ix}
@@ -135,20 +284,21 @@ e^{ix}
 &\Rightarrow& e^{- \frac {\pi}{2}} \in \mathbb{R} \Rightarrow i^i \in \mathbb{R}
                                                		&\hspace{7em} \mathrel{\#} \text{$i^i$ is a real number} 
 \end{array}
-\end{equation*}}
-
+\end{equation*}
 
 \bigskip
 \noindent
-Ok, $i^i \in \mathbb{R}$, but what does $i^i$ equal? Well, we saw 
-that $e^{- \frac {\pi}{2}} = i^i$. So
+It is important to notice that this expression is multivalued,
+and when we evaluate it at $\frac{\pi}{2}$ we are on the
+principle branch. However, the same result can be obtained with
+$x \in \left \{\frac{\pi}{2}, \frac{5 \pi}{2}, \frac{9\pi}{2},
+\hdots \right \}$.  In general $x = \frac{\pi}{2} \cdot (1+4n)$
+for $n \in \mathbb{N} \cup \{0\}$. $\blacksquare$
 
-\bigskip
-{\large
-	\begin{equation*}
-		i^i = e^{- \frac {\pi}{2}} \approx 0.20788
-	\end{equation*}
-}
+\section{Ok, $i^i \in \mathbb{R}$, but what does it equal}
+\label{what_does_i_to_the_i_equal}
+We saw above that $i^i = e^{- \frac {\pi}{2}}$. So 
+$i^i = e^{- \frac {\pi}{2}} \approx 0.20788$.
 
 \begin{figure}[H]
 \center{\includegraphics[frame,scale=0.45] {images/e_to_the_minus_pi_over_two.png}}
@@ -156,8 +306,17 @@ that $e^{- \frac {\pi}{2}} = i^i$. So
 %
 %
 %
+\section{Conclusions}
+\label{sec:conclusions}
+TBD
+%
+%
+%
 \smallskip
 \section*{Acknowledgements}
+Thanks to Dima Pasechnik (@dimpase@mathstodon.xyz), Andrés E. Caicedo
+(@AndresCaicedo@mathstodon.xyz), and Ben Reiniger 
+(@bmreiniger@mathstodon.xyz)for their many helpful comments.
 %
 %	LaTeX source on overleaf.com
 %
