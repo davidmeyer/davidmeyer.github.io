@@ -139,7 +139,7 @@ of a multi-valued function \cite{wiki:principle_branch}).
 \section{Automorphism of $\mathbb{C}$}
 \label{sec:automorphism}
 In this section we look at solving this puzzle using the fact
-that complex conjugationis an automorphism of $\mathbb{C}$
+that complex conjugation is an automorphism of $\mathbb{C}$
 \cite{complex_conjugation_is_automorphism}. For this approach we
 need the following two facts:
 
@@ -255,38 +255,38 @@ in Section \ref{sec:eulers_formula}. $\blacksquare$
 \label{sec:eulers_formula}
 
 \noindent
-To answer this question, consider Euler's formula
-\cite{notes:eulers_formula,wiki:eulers_formula} 
+Another approach to answering this question is to consider Euler's 
+formula \cite{notes:eulers_formula,wiki:eulers_formula} 
 evaluated at $x =\frac{\pi}{2}$: 
 
-\medskip
+\smallskip
 \begin{equation*}
 \begin{array}{lllll}
 e^{ix}
 &=& \cos x + i \sin x                           	&\hspace{7em} \mathrel{\#} \text{Euler's formula
                                                 	  \cite{notes:eulers_formula}}   \\
-[5pt]
+[2pt]
 &\Rightarrow& e^{i \frac{\pi}{2}} = \cos \frac{\pi}{2} + i \sin \frac{\pi}{2}
                                                 	&\hspace{7em} \mathrel{\#} \text{set $x = \frac{\pi}{2}$} \\
-[5pt]
+[2pt]
 &\Rightarrow& e^{i \frac{\pi}{2}} = 0 +  i \cdot 1
                                                 	&\hspace{7em} \mathrel{\#} \cos \frac{\pi}{2} = 0
                                                 	  \text{ and} \sin \frac{\pi}{2} = 1 \\
-[5pt]
+[2pt]
 &\Rightarrow& e^{i \frac{\pi}{2}}  =  i         	&\hspace{7em}\mathrel{\#} \text{simplify} \\
-[5pt]
+[2pt]
 &\Rightarrow& {(e^{i \frac{\pi}{2}})}^i =  i^i  	&\hspace{7em} \mathrel{\#} \text{raise both sides to $i$} \\
-[5pt]
+[2pt]
 &\Rightarrow& e^{\frac{i^2 \pi}{2}} =  i^i      	&\hspace{7em} \mathrel{\#}  {(x^m)}^n = x^{mn} \\
-[5pt]
+[2pt]
 &\Rightarrow& e^{- \frac {\pi}{2}} =  i^i       	&\hspace{7em} \mathrel{\#} i^2 = -1 \\
-[5pt]
+[2pt]
 &\Rightarrow& e^{- \frac {\pi}{2}} \in \mathbb{R} \Rightarrow i^i \in \mathbb{R}
                                                		&\hspace{7em} \mathrel{\#} \text{$i^i$ is a real number} 
 \end{array}
 \end{equation*}
 
-\bigskip
+\medskip
 \noindent
 It is important to notice that this expression is multivalued,
 and when we evaluate it at $\frac{\pi}{2}$ we are on the
@@ -295,13 +295,15 @@ $x \in \left \{\frac{\pi}{2}, \frac{5 \pi}{2}, \frac{9\pi}{2},
 \hdots \right \}$.  In general $x = \frac{\pi}{2} \cdot (1+4n)$
 for $n \in \mathbb{N} \cup \{0\}$. $\blacksquare$
 
+
 \section{Ok, $i^i \in \mathbb{R}$, but what does it equal}
 \label{what_does_i_to_the_i_equal}
 We saw above that $i^i = e^{- \frac {\pi}{2}}$. So 
 $i^i = e^{- \frac {\pi}{2}} \approx 0.20788$.
 
+\medskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.45] {images/e_to_the_minus_pi_over_two.png}}
+\center{\includegraphics[frame,scale=0.40] {images/e_to_the_minus_pi_over_two.png}}
 \end{figure}
 %
 %
