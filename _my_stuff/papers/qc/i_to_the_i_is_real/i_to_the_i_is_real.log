@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 NOV 2022 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 NOV 2022 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1443,7 +1443,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 299.
 
-<images/e_to_the_minus_pi_over_two.png, id=85, 656.4525pt x 192.72pt>
+<images/e_to_the_minus_pi_over_two.png, id=81, 656.4525pt x 192.72pt>
 File: images/e_to_the_minus_pi_over_two.png Graphic file (type png)
 <use images/e_to_the_minus_pi_over_two.png>
 Package pdftex.def Info: images/e_to_the_minus_pi_over_two.png  used on input l
@@ -1462,7 +1462,7 @@ Package rerunfilecheck Info: File `i_to_the_i_is_real.out' has not changed.
 Here is how much of TeX's memory you used:
  51816 strings out of 478994
  1310672 string characters out of 5858184
- 1945944 words of memory out of 5000000
+ 1946944 words of memory out of 5000000
  68507 multiletter control sequences out of 15000+600000
  414716 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1484,10 +1484,10 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on i_to_the_i_is_real.pdf (3 pages, 209301 bytes).
+Output written on i_to_the_i_is_real.pdf (3 pages, 209258 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 179 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
  22 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
