@@ -104,7 +104,7 @@ Is the ith root of i a real number?
 <br>
 
 <li><a href="./i_to_the_i_is_real.pdf" target="_blank" 
-     rel="noopener noreferrer">Is i^i a real number?</a>
+     rel="noopener noreferrer">Why is i^i a real number?</a>
 <br>
 
 <li><a href="./three.pdf" target="_blank"
@@ -144,7 +144,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 08.17.2022 by
+<i>Last Update: 11.16.2022 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
