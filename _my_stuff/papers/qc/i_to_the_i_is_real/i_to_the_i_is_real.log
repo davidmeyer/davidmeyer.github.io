@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  16 NOV 2022 09:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  16 NOV 2022 09:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1462,7 +1462,7 @@ Package rerunfilecheck Info: File `i_to_the_i_is_real.out' has not changed.
 Here is how much of TeX's memory you used:
  51819 strings out of 478994
  1310708 string characters out of 5858184
- 1945941 words of memory out of 5000000
+ 1945918 words of memory out of 5000000
  68509 multiletter control sequences out of 15000+600000
  415051 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1486,7 +1486,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on i_to_the_i_is_real.pdf (3 pages, 215580 bytes).
+Output written on i_to_the_i_is_real.pdf (3 pages, 214672 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  149 compressed objects within 2 object streams
