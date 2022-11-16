@@ -107,14 +107,14 @@
 %
 %
 \section{Introduction}
-There are a few ways to approach this question. In
-Section \ref{sec:automorphism} we use the fact that complex
-conjugation is an automorphism of $\mathbb{C}$. In Section
+There are a few ways to think about this question. In Section
+\ref{sec:automorphism} we use the fact that complex conjugation
+is an automorphism of $\mathbb{C}$. In Section
 \ref{sec:power_series} we use the power series expansion of $i^i$
 to show that $i^i \in \mathbb{R}$, and in Section
 \ref{sec:eulers_formula} we rely on Euler's formula to show that
-$i^i \in \mathbb{R}$. Section \ref{what_does_i_to_the_i_equal} 
-does a bit of arithmetic to show what $i^i$ equals numerically. 
+$i^i \in \mathbb{R}$. Section \ref{what_does_i_to_the_i_equal}
+does a bit of arithmetic to show what $i^i$ equals numerically.
 Finally Section \ref{sec:conclusions} offers a few conclusions.
 
 \bigskip
@@ -123,17 +123,17 @@ Before launching into all of this, note that we will make heavy
 use of the exponential function $\exp(z)$ (and therefore as you
 might expect, this means heavy use of $\log(z)$). The important
 point for this discussion is that $\exp(z)$ is injective over
-$\mathbb{R}$ but not over $\mathbb{C}$.  Therefore, if we want to
-define the logarithm as it's inverse (as we will), we will need
-to select a subset of $\mathbb{C}$ where the exponential function
-is injective. In this sense, it is not entirely correct to say
-that log is a multivalued function; rather, what we have is
-different logarithm functions depending on the choice of a set
-where $\exp(z)$, for some $z \in \mathbb{C}$, is
-injective. Generally this subset is called a principal branch (a
-principal branch is a function which selects one branch ("slice")
-of a multi-valued function \cite{wiki:principle_branch}).
-
+$\mathbb{R}$ but not over $\mathbb{C}$. More specifically, for a
+complex number $z$ the the complex logarithm $\log(z)$ is defined
+as the inverse function to the exponential function. That is, it
+satisfies $e^{\log z} \equiv z$. Now since $re^{i\theta} =
+re^{i\theta + 2\pi ik}$ for all $k \in \mathbb{Z}$ we have that
+any choice of an integer $k$ in $re^{i\theta+2\pi ki}$ is a valid
+inverse for the complex exponential. The logarithm is therefore a
+multivalued function and each value of $k$ defines what we call a
+different \emph{branch} of the logarithm. The principal branch
+\cite{wiki:principle_branch} usually corresponds to the choice
+$k=0$.
 
 
 \section{Automorphism of $\mathbb{C}$}
@@ -179,7 +179,7 @@ consider:
 \begin{equation*}
 \begin{array}{llll}
 \overline{i^i}
-&=& {\overline{i}}^{\overline{i}}       &\hspace{7em} \mathrel{\#} \text{definition of complex conjugation \cite{wiki:complex_conjugation}} \\
+&=& {\overline{i}}^{\overline{i}}       &\hspace{7em} \mathrel{\#} \text{see Section \ref{sec:conclusions}} \\
 [2pt]
 &=& (-i)^{-i}                           &\hspace{7em} \mathrel{\#} \text{since $i = 0+1i$ and $\overline{0+1i} = -1i = -i$} \\
 [2pt]
@@ -214,12 +214,12 @@ for branches (of the logarithm) other than the principal branch
 {\setstretch{1.65} We know that the Taylor series
 \cite{wiki:taylor} for $e^x = \sum\limits_{k=0}^{\infty}
 \dfrac{x^k}{k!}$.  We also know from Euler's formula
-\cite{notes:eulers_formula} that $i = e^{i \frac{\pi}{2}}$ 
-(since $e^{i\frac{\pi}{2}} = \cos \frac{\pi}{2} + i \sin \frac{\pi}{2} = i$).  
-Note that the same result can be obtained with $x \in \left \{\frac{\pi}{2},
-\frac{5 \pi}{2}, \frac{9\pi}{2}, \hdots \right \}$, so in general
-$x = \frac{\pi}{2} \cdot (1+4n)$ where $n \in \mathbb{N} \cup
-\{0\}$.  \par}
+\cite{notes:eulers_formula} that $i = e^{i \frac{\pi}{2}}$ (since
+$e^{i\frac{\pi}{2}} = \cos \frac{\pi}{2} + i \sin \frac{\pi}{2} =
+i$).  Note that the same result can be obtained with $x \in \left
+\{\frac{\pi}{2}, \frac{5 \pi}{2}, \frac{9\pi}{2}, \hdots \right
+\}$, so in general $x = \frac{\pi}{2} \cdot (1+4n)$ where $n \in
+\mathbb{N} \cup \{0\}$.  \par}
 
 \bigskip
 \noindent
@@ -313,16 +313,17 @@ $i^i = e^{- \frac {\pi}{2}} \approx 0.20788$.
 What is missing:
 
 \begin{itemize}
-\item It would be helpful to have a proof that complex conjugation 
-distributes over complex exponentiation. In particular, a short 
-proof that $\overline{i^i} = {\overline{i}}^{\overline{i}}$
+\item It would be helpful to have a proof that complex
+conjugation distributes over exponentiation. In particular, a
+short proof that $\overline{i^i} = {\overline{i}}^{\overline{i}}$
 would improve Section \ref{sec:automorphism} of this note.
 
 \smallskip
 
-One argument is that since $i^i \in \mathbb{R}$ (as shown above) and the complex
-conjugate of a real number is itself, it must be that $\overline{i^i} = i^i$. But AFAICU 
-this doesn't show that $\overline{i^i} = {\overline{i}}^{\overline{i}}$.
+One argument is that since $i^i \in \mathbb{R}$ (as shown above)
+and the complex conjugate of a real number is itself, it must be
+that $\overline{i^i} = i^i$. But AFAICU this doesn't show that
+$\overline{i^i} = {\overline{i}}^{\overline{i}}$.
 \end{itemize}
 %
 %
