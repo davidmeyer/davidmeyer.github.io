@@ -135,27 +135,33 @@ for any choice of $k$, $\log(re^{i\theta+2\pi ki})$ is a valid
 inverse for $re^{i\theta}$. The logarithm is therefore a
 multivalued function and each value of $k$ defines what is called
 a different \emph{branch} of the logarithm. The principal branch
-\cite{wiki:principle_branch} usually corresponds to the choice
-$k=0$.
-%
-%
-%
+usually corresponds to the choice $k=0$ \cite{wiki:principle_branch}.
+
 \bigskip
+\begin{remark}
+Antoine Chambert-Loir (@antoinechambertloir@mathstodon.xyz) tells
+me that restricting the logarithm to any particular branch causes
+all algebraic relations break down. The example he gives is that
+$a^c \times b^c$ only equals $(ab)^c$ when the sum of the principal 
+arguments \cite{principal_argument} of $a$ and $b$ equals the principal 
+argument of $ab$. Apparently a similar problem arises for conjugacy 
+when $a$ is strictly negative.
+\end{remark}
+%
+%
+%
 \section{First: Why does a complex number $z$ equal $r\mathrm{e}^{i \theta}$?}
 \label{sec:why_is_z_equal_r}
 Our first question regards the nature of a complex number $z$,
 where the length of the line from the origin to the point $z$,
 $|z|$, equals $r$.  In particular, why does a complex number
-$z = a + bi = r \mathrm{e}^{i \theta}$?
+$z = a + bi = r \mathrm{e}^{i \theta}$? Consider the complex plane, 
+which is shown in Figure \ref{fig:complex_plane}:
 
-\bigskip
-\noindent
-Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
-
-\bigskip
+\medskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.385 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.31 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]		%
 		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
@@ -187,8 +193,8 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 
 \smallskip
 \noindent
-Figures \ref{fig:complex_plane} and \ref{fig:eulers_formula} make it easy to see 
-why $z = r \mathrm{e}^{i\theta}$. Specifically
+Given Figures \ref{fig:complex_plane} and \ref{fig:eulers_formula} it is pretty easy to see 
+why $z = r \mathrm{e}^{i\theta}$:
 \begin{equation*}
 \begin{array}{lllll}
 z

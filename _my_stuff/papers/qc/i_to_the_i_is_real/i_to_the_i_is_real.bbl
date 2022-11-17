@@ -1,10 +1,17 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{notes:eulers_formula}
 {David Meyer}.
 \newblock {A Few Notes on Euler’s Formula and Euler’s Identity}.
 \newblock \url{https://davidmeyer.github.io/qc/euler.pdf}, 2021.
 \newblock [See \url{https://davidmeyer.github.io/qc/}].
+
+\bibitem{principal_argument}
+{Juan Carlos Ponce Campuzano}.
+\newblock {The Principal Argument}.
+\newblock \url{https://complex-analysis.com/content/principal_argument.html},
+  2019.
+\newblock [Online; accessed 17-November-2022].
 
 \bibitem{eulers_formula_corollary}
 {Proof Wiki}.
