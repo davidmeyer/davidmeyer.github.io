@@ -134,21 +134,149 @@ therefore a multivalued function and each value of $k$ defines
 what is called a different \emph{branch} of the logarithm. The 
 principal branch \cite{wiki:principle_branch} usually corresponds 
 to the choice $k=0$.
+%
+%
+%
+\bigskip
+\section{First: Why does a complex number $z$ equal $r\mathrm{e}^{i \theta}$?}
+Our first question regards the nature of a complex number $z$,
+where the length of the line from the origin to the point $z$,
+$|z|$, equals $r$.  In particular, why does a complex number
+$z = a + bi = r \mathrm{e}^{i \theta}$?
+
+\bigskip
+\noindent
+Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
+
+\bigskip
+\begin{figure}[H]
+\centering
+  \resizebox{0.385 \textwidth}{!} {														% resize figure if you want
+    \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
+		\coordinate (O) at (0,0);														% name a coordinate for the origin
+%
+%	draw axes, saving the real part to calculate the angle (below)
+%
+		\draw[thick, -latex] (-0.35,0.00) -- (5.50,0.00) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
+		\draw[thick, -latex] (0.00,-0.35) -- (0.00,5.25) node[xshift=-0.2cm,left] {$\mathbb{I}$}
+				node[draw,rectangle,thin,blue,below right=5.0mm]						%
+            		{$\color{black}{													%
+						z = a + bi = 													% z = <a bunch of stuff>
+						r \cos \theta + i r \sin \theta = 								%
+						r \mathrm{e}^{i\theta}}$};										%
+		\coordinate[label=below left:$O$] (O);                                          % label origin
+		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
+		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
+		\draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};              % draw dashed lines to a and b
+		\draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};     % use [draw=none] to put label midway
+		\draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};	% use [draw=none] to put label midway
+		\fill (0,3) circle(0.05);                                                       % draw a dot on the y axis at b 
+		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
+		\draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);                          % label r
+		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};					% calculate the angle theta
+     \end{tikzpicture}																	% end tikzpicture
+  }																						% end resizebox
+ \caption{The Complex Plane}
+ \label{fig:complex_plane}
+\end{figure}
+
+\smallskip
+\noindent
+Figures \ref{fig:complex_plane} and \ref{fig:eulers_formula} make it easy to see 
+why $z = r \mathrm{e}^{i\theta}$. Specifically
+\begin{equation*}
+\begin{array}{lllll}
+z
+&=& a + ib
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{definition of a point $z$ in the complex plane} \\ 
+[2pt]
+&=&  r \cos \theta + i r \sin \theta
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{switch to polar coordinates: $a = r \cos
+					\theta$ and $b = r \sin \theta$} \\ 
+[2pt]
+&=&  r \left [ \cos \theta +i \sin \theta \right ]
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{factor out  $r$} \\ 
+[2pt]
+&=& r \mathrm{e}^{i\theta}
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{$e^{i\theta} = \cos \theta + i \sin \theta$
+					(Euler's formula \cite{wiki:eulers_formula})} 
+\end{array}
+\end{equation*}
+
+\noindent
+So we see that $z = r \mathrm{e}^{i\theta}$. $\blacksquare$
+%
+% Euler's formula on the unit circle in the complex plane
+%
+\begin{figure}[t]
+\centering
+  \resizebox{0.42 \textwidth}{!} {                                                     % resize figure if you want
+    \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
+      \draw[-latex] (-1.5,0) -- node[below left]{$O$} (1.5,0)
+                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);					% make and label the axes
+      \fill[black] (0,0) circle(0.02);                                                  % draw a black dot at the origin
+      \draw[-latex] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
+      \draw (0,0) coordinate(o) circle [radius=1cm];                                    % draw unit circle
+      \coordinate (p) at (60:1);                                                        % 60 degrees with r = 1
+      \fill (p) coordinate[label={above right: ${e^{i\theta} =
+                \cos \theta + i \sin \theta}$}] (p) circle(0.02);                       % Euler's formula 
+      \coordinate (q) at (p|-o);
+%
+% draw the various 1s around the unit circle
+%
+     \coordinate (a) at (0,1);
+     \fill (a) coordinate [label={above left: ${\scalebox {0.80}
+                          {(0,1)}} $}] (a) circle(0.02);                                % draw coordinates (making them a bit smaller) 
+     \coordinate (b) at (-1,0);
+     \fill (b) coordinate [label={below left:${\scalebox {0.80}
+                          {(-1,0)}}$}] (b) circle(0.02);                                % draw coordinates
+     \coordinate (c) at (0,-1);
+     \fill (c) coordinate [label={below left:${\scalebox {0.80}
+                          {(0,-1)}}$}] (c) circle(0.02);                                % draw coordinates
+     \coordinate (d) at (1,0);
+     \fill (d) coordinate [label={below right:${\scalebox {0.80}
+                          {(1,0)}}$}] (d) circle(0.02);                                 % draw coordinates
+%
+% do the rest of the labeling and draw the angle
+%
+     \draw[thick,line join=round] (o) -- node[rotate=60,above]{$r = 1$}(p);             % label r
+     \draw [dashed] (p) -- (q) node [midway, right]{${\sin \theta}$}; 
+     \draw [] (q) -- (o) node [midway, below] {${\cos \theta}$};        
+     \fill (q) coordinate [] (q) circle(0.02);                                          % put a dot at (q)
+     \pic[draw=red,"$\theta$",angle radius=15pt,angle
+                   eccentricity=1.5,->]{angle=x--o--p};                                 % draw the angle 
+    \end{tikzpicture}                                                                   % end tikzpicture
+  }                                                                                     % end resizebox
+\caption{Euler's Formula, the Unit Circle, and the Complex Plane}
+\label{fig:eulers_formula}
+\end{figure}
 
 
+%
+%
+%
 \section{Automorphism of $\mathbb{C}$}
 \label{sec:automorphism}
 In this section we look at solving this puzzle using the fact
 that complex conjugation is an automorphism of $\mathbb{C}$
 \cite{complex_conjugation_is_automorphism}. For this approach we
-need the following two facts:
+need the following facts:
 
 \begin{enumerate}
 \item If a complex number $z$ equals its complex
 conjugate $\overline{z}$ then $z \in \mathbb{R}$
 \label{item:complex_conjugate}
+
 \item $-i = i^{-1}$
 \label{item:minus_i}
+
+\item $\overline{z} = r \mathrm{e}^{-i\theta}$
+\label{item:overline_z}
 \end{enumerate}
 
 
@@ -164,11 +292,38 @@ $b=0$. Said another way: $\operatorname{Im}(z) = 0$ and
 $\operatorname{Re}(z) = z$. That is, $z \in \mathbb{R}$. So if $z
 = \overline{z}$ we know that $z \in \mathbb{R}$.
 
-\medskip
+\bigskip
 \noindent
 To see \ref{item:minus_i}., notice that $-(i\cdot i) = -i^2 =
 -(-1) = 1$ and $-i \cdot i = 1 \Rightarrow -i = i^{-1}$.
 
+\bigskip
+\noindent
+To see \ref{item:overline_z}., consider
+
+
+\begin{equation*}
+\begin{array}{llll}
+\overline{z}
+&=& \overline{r (\cos \theta + i \sin \theta)} 
+		&\hspace{5em} \mathrel{\#} \text{Euler's formula} \\
+[5pt]
+&=& \overline{r} \cdot \overline{(\cos \theta + i \sin \theta)} 
+		&\hspace{5em} \mathrel{\#} \text{$\overline{z_1 \cdot z_2} = \overline{z_1}\cdot \overline{z_2}$ 
+		(product rule for complex conjugates \cite{product_complex_conjugates})} \\
+[5pt]
+&=& r \cdot \overline{(\cos \theta + i \sin \theta)} 
+		&\hspace{5em} \mathrel{\#} \text{since $\overline{r} = \overline{r + 0i} = r - 0i = r$} \\
+[5pt]
+&=& r \cdot (\cos \theta - i \sin \theta)
+		&\hspace{5em} \mathrel{\#} \text{since $\overline{a+bi} = a-bi$} \\
+[5pt]
+&=& r \mathrm{e}^{-i\theta}
+		&\hspace{5em} \mathrel{\#} \text{Euler's formula, $\theta \in \mathbb{R}$, 
+		  $\overline{e^{i\theta}} = e^{\overline{i\theta}}= e^{\overline{i}\theta} 
+		  = e^{-i\theta}$, and $\overline{i} = -i$ (by \ref{item:minus_i}. above)}
+\end{array}
+\end{equation*}
 
 \medskip
 \noindent

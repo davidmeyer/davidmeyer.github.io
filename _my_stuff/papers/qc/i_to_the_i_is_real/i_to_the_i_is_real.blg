@@ -5,14 +5,14 @@ The style file: plain.bst
 Database file #1: qc.bib
 You've used 6 entries,
             2118 wiz_defined-function locations,
-            526 strings with 5114 characters,
-and the built_in function-call counts, 1324 in all, are:
+            526 strings with 5103 characters,
+and the built_in function-call counts, 1326 in all, are:
 = -- 132
 > -- 42
 < -- 0
 + -- 18
 - -- 12
-* -- 40
+* -- 42
 := -- 231
 add.period$ -- 24
 call.type$ -- 6

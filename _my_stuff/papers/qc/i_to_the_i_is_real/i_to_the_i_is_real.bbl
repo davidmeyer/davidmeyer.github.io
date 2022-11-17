@@ -13,6 +13,13 @@
   September 2020.
 \newblock [Online; accessed 15-November-2022].
 
+\bibitem{product_complex_conjugates}
+{Proof Wiki}.
+\newblock {Product of Complex Conjugates}.
+\newblock \url{https://proofwiki.org/wiki/Product_of_Complex_Conjugates},
+  September 2020.
+\newblock [Online; accessed 17-November-2022].
+
 \bibitem{wiki:eulers_formula}
 {Wikipedia Contributors}.
 \newblock {Euler's Formula --- {Wikipedia}{,} The Free Encyclopedia}.
@@ -36,13 +43,5 @@
   \url{https://en.wikipedia.org/w/index.php?title=Taylor_series&oldid=1033135703},
   2021.
 \newblock [Online; accessed 6-August-2021].
-
-\bibitem{wiki:complex_conjugation}
-{Wikipedia Contributors}.
-\newblock {Complex Number --- {Wikipedia}{,} The Free Encyclopedia}.
-\newblock
-  \url{https://en.wikipedia.org/w/index.php?title=Complex_number&oldid=1121858597},
-  2022.
-\newblock [Online; accessed 15-November-2022].
 
 \end{thebibliography}
