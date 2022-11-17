@@ -121,19 +121,20 @@ Finally Section \ref{sec:conclusions} offers a few conclusions.
 \noindent
 Before launching into all of this, note that we will make heavy
 use of the exponential function $\exp(z)$ (and therefore as you
-might expect, this means heavy use of $\log(z)$). The important
+might expect, this means heavy use of $\log(z)$, where by
+$\log(z)$ we mean $\log_{e}(z)$ aka $\ln (z)$). The important
 point for this discussion is that $\exp(z)$ is injective over
 $\mathbb{R}$ but not over $\mathbb{C}$. More specifically, for a
 complex number $z$ the the complex logarithm $\log(z)$ is defined
 as the inverse function to the exponential function. That is, it
 satisfies $e^{\log z} \equiv z$. Now since $re^{i\theta} =
 re^{i\theta + 2\pi ik}$ for all $k \in \mathbb{Z}$ we have that
-for any choice of $k$, $\log(re^{i\theta+2\pi ki})$ is a valid 
-inverse for $re^{i\theta}$. The logarithm is 
-therefore a multivalued function and each value of $k$ defines 
-what is called a different \emph{branch} of the logarithm. The 
-principal branch \cite{wiki:principle_branch} usually corresponds 
-to the choice $k=0$.
+for any choice of $k$, $\log(re^{i\theta+2\pi ki})$ is a valid
+inverse for $re^{i\theta}$. The logarithm is therefore a
+multivalued function and each value of $k$ defines what is called
+a different \emph{branch} of the logarithm. The principal branch
+\cite{wiki:principle_branch} usually corresponds to the choice
+$k=0$.
 %
 %
 %
@@ -151,19 +152,19 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.385 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.385 \textwidth}{!} {                                                             % resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
-		\coordinate (O) at (0,0);														% name a coordinate for the origin
+		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
 %	draw axes, saving the real part to calculate the angle (below)
 %
 		\draw[thick, -latex] (-0.35,0.00) -- (5.50,0.00) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
 		\draw[thick, -latex] (0.00,-0.35) -- (0.00,5.25) node[xshift=-0.2cm,left] {$\mathbb{I}$}
-				node[draw,rectangle,thin,blue,below right=5.0mm]						%
-            		{$\color{black}{													%
-						z = a + bi = 													% z = <a bunch of stuff>
-						r \cos \theta + i r \sin \theta = 								%
-						r \mathrm{e}^{i\theta}}$};										%
+				node[draw,rectangle,thin,blue,below right=5.0mm]                %
+            		{$\color{black}{                                                        %
+						z = a + bi =                                    % z = <a bunch of stuff>
+						r \cos \theta + i r \sin \theta =               %
+						r \mathrm{e}^{i\theta}}$};                      %
 		\coordinate[label=below left:$O$] (O);                                          % label origin
 		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
 		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
@@ -174,9 +175,9 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
 		\draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);                          % label r
 		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
-				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};					% calculate the angle theta
-     \end{tikzpicture}																	% end tikzpicture
-  }																						% end resizebox
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};          % calculate the angle theta
+     \end{tikzpicture}                                                                          % end tikzpicture
+  }                                                                                             % end resizebox
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
@@ -218,7 +219,7 @@ So we see that $z = r \mathrm{e}^{i\theta}$. $\blacksquare$
   \resizebox{0.42 \textwidth}{!} {                                                     % resize figure if you want
     \begin{tikzpicture}[>=stealth, inner sep=3pt,scale=2.5]
       \draw[-latex] (-1.5,0) -- node[below left]{$O$} (1.5,0)
-                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);					% make and label the axes
+                coordinate[yshift=-0.10cm,label=below:$\mathbb{R}$](x);                 % make and label the axes
       \fill[black] (0,0) circle(0.02);                                                  % draw a black dot at the origin
       \draw[-latex] (0,-1.5) -- (0,1.5) node[xshift=-0.10cm, left]{$\mathbb{I}$};
       \draw (0,0) coordinate(o) circle [radius=1cm];                                    % draw unit circle
@@ -242,7 +243,7 @@ So we see that $z = r \mathrm{e}^{i\theta}$. $\blacksquare$
      \fill (d) coordinate [label={below right:${\scalebox {0.80}
                           {(1,0)}}$}] (d) circle(0.02);                                 % draw coordinates
 %
-% do the rest of the labeling and draw the angle
+%       do the rest of the labeling and draw the angle
 %
      \draw[thick,line join=round] (o) -- node[rotate=60,above]{$r = 1$}(p);             % label r
      \draw [dashed] (p) -- (q) node [midway, right]{${\sin \theta}$}; 
@@ -255,8 +256,6 @@ So we see that $z = r \mathrm{e}^{i\theta}$. $\blacksquare$
 \caption{Euler's Formula, the Unit Circle, and the Complex Plane}
 \label{fig:eulers_formula}
 \end{figure}
-
-
 %
 %
 %
@@ -327,13 +326,13 @@ To see \ref{item:overline_z}., consider
 \medskip
 \noindent
 Now, we want to show that $\overline{i^i} = i^i$, which would
-show that $i^i \in \mathbb{R}$ by the argument above. So
+show that $i^i \in \mathbb{R}$ by the above argument. So
 consider:
 
 \begin{equation*}
 \begin{array}{llll}
 \overline{i^i}
-&=& {\overline{i}}^{\overline{i}}       &\hspace{7em} \mathrel{\#} \text{see Section \ref{sec:conclusions}} \\
+&=& {\overline{i}}^{\overline{i}}       &\hspace{7em} \mathrel{\#} \text{see proof below} \\
 [2pt]
 &=& (-i)^{-i}                           &\hspace{7em} \mathrel{\#} \text{since $i = 0+1i$ and $\overline{0+1i} = -1i = -i$} \\
 [2pt]
@@ -349,6 +348,122 @@ consider:
 \noindent
 So we see that $\overline{i^i} = i^i$ and so $i^i \in
 \mathbb{R}$. $\blacksquare$ 
+
+\bigskip
+\noindent
+All ok, but why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
+To see why first notice that
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+\log (\overline{z})
+&=& \log(\overline{re^{i\theta}})
+		&\hspace{7em} \mathrel{\#} \text{since $z = re^{i\theta}$ (Figure \ref{fig:complex_plane})} \\
+[5pt]
+&=& \log(r \mathrm{e}^{-i\theta})
+		&\hspace{7em} \mathrel{\#} \text{by item \ref{item:overline_z} above} \\
+[5pt]
+&=& \log(r) + \log(e^{-i\theta})	
+		&\hspace{7em} \mathrel{\#} \text{product rule for logarithms \cite{properties_of_logarithms}} \\
+[5pt]
+&=& \log(r) - \log(e^{i\theta})
+		&\hspace{7em} \mathrel{\#} \text{since $\log(a^{-b}) = -\log(a^b)$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So
+
+\begin{equation}
+\log (\overline{z}) = \log(r) - \log(e^{i\theta})
+\label{eqn:overline_z_equals}
+\end{equation}
+
+\bigskip
+\noindent
+
+\begin{equation*}
+\begin{array}{llll}
+\overline{\log(z)}
+&=& \overline{\log(re^{i\theta})}
+                &\hspace{7em} \mathrel{\#} \text{since $z = re^{i\theta}$ (Figure \ref{fig:complex_plane})} \\
+[5pt]
+&=& \overline{\log(r) + \log(e^{i\theta})}
+                &\hspace{7em} \mathrel{\#} \text{by the product rule for logarithms} \\
+[5pt]
+&=& \overline{\log(r)} + \overline{\log(e^{i\theta})}
+                &\hspace{7em} \mathrel{\#} \text{by sum rule for conjugates \cite{sum_of_conjugates}} \\
+[5pt]
+&=& \log(r) + \overline{\log(e^{i\theta})}
+                &\hspace{7em} \mathrel{\#} \text{since $\log(r) \in\mathbb{R}$} \\
+[5pt]
+&=& \log(r) + \overline{i\theta}
+                &\hspace{7em} \mathrel{\#} \text{since $\log (e^{i\theta}) = i\theta$} \\
+[5pt]
+&=& \log(r) - i\theta
+                &\hspace{7em} \mathrel{\#} \text{since $\overline{i\theta} = \overline{0+i\theta} = -i\theta$} \\
+[5pt]
+&=& \log(r) - \log (e^{i\theta})
+                &\hspace{7em} \mathrel{\#} \text{since $i \theta = \log (e^{i\theta})$} \\
+[5pt]
+&=& \log (\overline{z})
+                &\hspace{7em} \mathrel{\#} \text{by Equation (\ref{eqn:overline_z_equals})} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that 
+
+\begin{equation}
+\log (\overline{z}) = \overline{\log(z)}
+\label{eqn:log_of_conjugate}
+\end{equation}
+
+\bigskip
+\noindent
+and so we can see that 
+
+\begin{equation*}
+\begin{array}{llll}
+\log(\overline{z^w})
+&=& \overline{\log(z^w)}                        &\hspace{7em} \mathrel{\#} \text{by Equation (\ref{eqn:log_of_conjugate})} \\
+[5pt]
+&=& \overline{w\log(z)}                         &\hspace{7em} \mathrel{\#} \text{by the power rule for logarithms} \\
+[5pt]
+&=& \overline{w} \cdot \overline{\log(z)}       &\hspace{7em} \mathrel{\#} \text{by the product rule for conjugation} \\
+[5pt]
+&=& \overline{w} \cdot \log(\overline{z})	&\hspace{7em} \mathrel{\#} \text{by Equation (\ref{eqn:log_of_conjugate})} \\
+[5pt]
+&=& \log(\overline{z}^{\overline{w}})           &\hspace{7em} \mathrel{\#} \text{by the power rule for logarithms}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that
+
+\begin{equation}
+\log(\overline{z^w}) = \log(\overline{z}^{\overline{w}})
+\label{eqn:overlines}
+\end{equation}
+
+\bigskip
+\noindent
+Exponentiating both sides of Equation (\ref{eqn:overlines}) gives us
+
+\begin{equation}
+\overline{z^w} = \overline{z}^{\overline{w}}
+\label{overline_z_to_the_w}
+\end{equation}
+
+\smallskip
+\noindent
+So now if we set $z=w=i$ in Equation (\ref{overline_z_to_the_w})
+we see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$.
+$\blacksquare$
 
 \bigskip
 \noindent
@@ -462,29 +577,15 @@ $i^i = e^{- \frac {\pi}{2}} \approx 0.20788$.
 %
 \section{Conclusions}
 \label{sec:conclusions}
-What is missing:
-
-\begin{itemize}
-\item It would be helpful to have a proof that complex
-conjugation distributes over exponentiation. In particular, a
-short proof that $\overline{i^i} = {\overline{i}}^{\overline{i}}$
-would improve Section \ref{sec:automorphism} of this note.
-
-\smallskip
-
-One argument is that since $i^i \in \mathbb{R}$ (as shown above)
-and the complex conjugate of a real number is itself, it must be
-that $\overline{i^i} = i^i$. But AFAICU this doesn't show that
-$\overline{i^i} = {\overline{i}}^{\overline{i}}$.
-\end{itemize}
 %
 %
 %
 \smallskip
 \section*{Acknowledgements}
 Thanks to Dima Pasechnik (@dimpase@mathstodon.xyz), Andrés E. Caicedo
-(@AndresCaicedo@mathstodon.xyz), and Ben Reiniger 
-(@bmreiniger@mathstodon.xyz)for their many helpful comments.
+(@AndresCaicedo@mathstodon.xyz), Ben Reiniger 
+(@bmreiniger@mathstodon.xyz) and Dave Neary (@dneary@mastodon.ie) for 
+their many helpful comments.
 %
 %	LaTeX source on overleaf.com
 %

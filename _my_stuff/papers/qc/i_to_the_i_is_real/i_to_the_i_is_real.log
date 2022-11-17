@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 NOV 2022 08:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 NOV 2022 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1418,105 +1418,108 @@ File: uesvect.fd
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 141.
+(hyperref)                removing `superscript' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 141.
+(hyperref)                removing `\theta' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 142.
 
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 263.
+(hyperref)                removing `math shift' on input line 262.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 263.
+(hyperref)                removing `math shift' on input line 262.
 
-[2]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 451.
-
+[2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 451.
+(hyperref)                removing `math shift' on input line 566.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 451.
+(hyperref)                removing `superscript' on input line 566.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 451.
+(hyperref)                removing `\in' on input line 566.
 
-<images/e_to_the_minus_pi_over_two.png, id=109, 656.4525pt x 192.72pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 566.
+
+<images/e_to_the_minus_pi_over_two.png, id=147, 656.4525pt x 192.72pt>
 File: images/e_to_the_minus_pi_over_two.png Graphic file (type png)
 <use images/e_to_the_minus_pi_over_two.png>
 Package pdftex.def Info: images/e_to_the_minus_pi_over_two.png  used on input l
-ine 458.
+ine 573.
 (pdftex.def)             Requested size: 656.4509pt x 192.71951pt.
-[3]
-Overfull \hbox (24.38495pt too wide) in paragraph at lines 485--491
+[4]
+Overfull \hbox (24.38495pt too wide) in paragraph at lines 585--592
 \OT1/cmr/m/n/10 Thanks to Dima Pasech-nik (@dim-pase@mathstodon.xyz), Andr^^Ses
  E. Caicedo (@An-dresCaicedo@mathstodon.xyz),
  []
 
-(./i_to_the_i_is_real.bbl) [4 <./images/e_to_the_minus_pi_over_two.png>]
-(./i_to_the_i_is_real.aux)
+(./i_to_the_i_is_real.bbl
+Underfull \hbox (badness 2126) in paragraph at lines 31--36
+[]\OT1/cmr/m/n/10 Proof Wiki.  Sum of Com-plex Con-ju-gates.  []$\OT1/cmtt/m/n/
+10 https : / / proofwiki . org / wiki / Sum _ of _ Complex _
+ []
+
+) [5 <./images/e_to_the_minus_pi_over_two.png>] (./i_to_the_i_is_real.aux)
 Package rerunfilecheck Info: File `i_to_the_i_is_real.out' has not changed.
 (rerunfilecheck)             Checksum: 74CDD784BEA4342919DC3741D7C43522;1086.
  ) 
 Here is how much of TeX's memory you used:
- 52105 strings out of 478994
- 1316635 string characters out of 5858184
- 1950142 words of memory out of 5000000
- 68788 multiletter control sequences out of 15000+600000
- 415397 words of font info for 81 fonts, out of 8000000 for 9000
+ 52115 strings out of 478994
+ 1316830 string characters out of 5858184
+ 1947420 words of memory out of 5000000
+ 68792 multiletter control sequences out of 15000+600000
+ 415062 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,13n,131p,736b,1224s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on i_to_the_i_is_real.pdf (4 pages, 233587 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on i_to_the_i_is_real.pdf (5 pages, 232547 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 
