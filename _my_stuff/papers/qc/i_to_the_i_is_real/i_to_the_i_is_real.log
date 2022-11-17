@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 NOV 2022 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 NOV 2022 13:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1468,7 +1468,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 562.
 
-<images/e_to_the_minus_pi_over_two.png, id=143, 656.4525pt x 192.72pt>
+<images/e_to_the_minus_pi_over_two.png, id=144, 656.4525pt x 192.72pt>
 File: images/e_to_the_minus_pi_over_two.png Graphic file (type png)
 <use images/e_to_the_minus_pi_over_two.png>
 Package pdftex.def Info: images/e_to_the_minus_pi_over_two.png  used on input l
@@ -1516,7 +1516,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on i_to_the_i_is_real.pdf (5 pages, 232546 bytes).
+Output written on i_to_the_i_is_real.pdf (5 pages, 232965 bytes).
 PDF statistics:
  253 PDF objects out of 1000 (max. 8388607)
  188 compressed objects within 2 object streams
