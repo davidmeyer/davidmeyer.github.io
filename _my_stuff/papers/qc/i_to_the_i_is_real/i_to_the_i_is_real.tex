@@ -107,15 +107,17 @@
 %
 %
 \section{Introduction}
-There are a few ways to think about this question. In Section
-\ref{sec:automorphism} we use the fact that complex conjugation
-is an automorphism of $\mathbb{C}$. In Section
-\ref{sec:power_series} we use the power series expansion of $i^i$
-to show that $i^i \in \mathbb{R}$, and in Section
-\ref{sec:eulers_formula} we rely on Euler's formula to show that
-$i^i \in \mathbb{R}$. Section \ref{what_does_i_to_the_i_equal}
-does a bit of arithmetic to show what $i^i$ equals numerically.
-Finally Section \ref{sec:conclusions} offers a few conclusions.
+There are a few ways to think about this question. But first we
+look at why a complex number $z$ equals $r\mathrm{e}^{i \theta}$.
+Then in Section \ref{sec:automorphism} we use the fact that
+complex conjugation is an automorphism of $\mathbb{C}$ to show
+that $i^i \in \mathbb{R}$.  In Section \ref{sec:power_series} we
+use the power series expansion of $i^i$ to show that $i^i \in
+\mathbb{R}$, and in Section \ref{sec:eulers_formula} we rely on
+Euler's formula to show the same result. In Section
+\ref{what_does_i_to_the_i_equal} we do a bit of arithmetic to
+show the numerical value of $i^i$. Finally Section
+\ref{sec:conclusions} offers a few conclusions.
 
 \bigskip
 \noindent
@@ -140,6 +142,7 @@ $k=0$.
 %
 \bigskip
 \section{First: Why does a complex number $z$ equal $r\mathrm{e}^{i \theta}$?}
+\label{sec:why_is_z_equal_r}
 Our first question regards the nature of a complex number $z$,
 where the length of the line from the origin to the point $z$,
 $|z|$, equals $r$.  In particular, why does a complex number
@@ -152,19 +155,19 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.385 \textwidth}{!} {                                                             % resize figure if you want
-    \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
+  \resizebox{0.385 \textwidth}{!} {														% resize figure if you want
+    \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]		%
 		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
 %	draw axes, saving the real part to calculate the angle (below)
 %
 		\draw[thick, -latex] (-0.35,0.00) -- (5.50,0.00) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
 		\draw[thick, -latex] (0.00,-0.35) -- (0.00,5.25) node[xshift=-0.2cm,left] {$\mathbb{I}$}
-				node[draw,rectangle,thin,blue,below right=5.0mm]                %
-            		{$\color{black}{                                                        %
-						z = a + bi =                                    % z = <a bunch of stuff>
-						r \cos \theta + i r \sin \theta =               %
-						r \mathrm{e}^{i\theta}}$};                      %
+				node[draw,rectangle,thin,blue,below right=5.0mm]						%
+            		{$\color{black}{													%
+						z = a + bi =													% z = <a bunch of stuff>
+						r \cos \theta + i r \sin \theta =								%
+						r \mathrm{e}^{i\theta}}$};                      				%
 		\coordinate[label=below left:$O$] (O);                                          % label origin
 		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
 		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
@@ -173,11 +176,11 @@ Well, consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 		\draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};	% use [draw=none] to put label midway
 		\fill (0,3) circle(0.05);                                                       % draw a dot on the y axis at b 
 		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
-		\draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);                          % label r
+		\draw[thick] (O) to ["$r = |z|=\sqrt{z\overline{z}}$"] (3.5,3);					% label r
 		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
-				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};          % calculate the angle theta
-     \end{tikzpicture}                                                                          % end tikzpicture
-  }                                                                                             % end resizebox
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};					% calculate the angle theta
+     \end{tikzpicture}																	% end tikzpicture
+  }																						% end resizebox
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
