@@ -280,7 +280,6 @@ conjugate $\overline{z}$ then $z \in \mathbb{R}$
 \end{enumerate}
 
 
-
 \noindent
 To see \ref{item:complex_conjugate}., consider the following
 argument: Let $z$ be a complex number so that $z = a+bi$. Then
@@ -305,23 +304,23 @@ To see \ref{item:overline_z}., consider
 \begin{equation*}
 \begin{array}{llll}
 \overline{z}
-&=& \overline{r (\cos \theta + i \sin \theta)} 
-		&\hspace{5em} \mathrel{\#} \text{Euler's formula} \\
+&=& \overline{r \cdot (\cos \theta + i \sin \theta)} 
+		&\hspace{5em} \mathrel{\#} \text{since $z = r(\cos\theta+i\sin\theta)$ (Figure \ref{fig:complex_plane})}\\
 [5pt]
 &=& \overline{r} \cdot \overline{(\cos \theta + i \sin \theta)} 
-		&\hspace{5em} \mathrel{\#} \text{$\overline{z_1 \cdot z_2} = \overline{z_1}\cdot \overline{z_2}$ 
+		&\hspace{5em} \mathrel{\#} \text{since $\overline{z_1 \cdot z_2} = \overline{z_1}\cdot \overline{z_2}$ 
 		(product rule for complex conjugates \cite{product_complex_conjugates})} \\
 [5pt]
 &=& r \cdot \overline{(\cos \theta + i \sin \theta)} 
-		&\hspace{5em} \mathrel{\#} \text{since $\overline{r} = \overline{r + 0i} = r - 0i = r$} \\
+		&\hspace{5em} \mathrel{\#} \text{since $\overline{r} = \overline{r + 0i} = r - 0i = r$ 
+		($\overline{r} = r$ for $r \in \mathbb{R}$)} \\
 [5pt]
 &=& r \cdot (\cos \theta - i \sin \theta)
 		&\hspace{5em} \mathrel{\#} \text{since $\overline{a+bi} = a-bi$} \\
 [5pt]
 &=& r \mathrm{e}^{-i\theta}
-		&\hspace{5em} \mathrel{\#} \text{Euler's formula, $\theta \in \mathbb{R}$, 
-		  $\overline{e^{i\theta}} = e^{\overline{i\theta}}= e^{\overline{i}\theta} 
-		  = e^{-i\theta}$, and $\overline{i} = -i$ (by \ref{item:minus_i}. above)}
+		&\hspace{5em} \mathrel{\#} \text{since $e^{-i\theta} = \cos \theta - i \sin \theta$ (corollary to 
+		Euler's formula \cite{eulers_formula_corollary})}
 \end{array}
 \end{equation*}
 
@@ -411,15 +410,13 @@ in Section \ref{sec:eulers_formula}. $\blacksquare$
 
 \noindent
 Another approach to answering this question is to consider Euler's 
-formula \cite{notes:eulers_formula,wiki:eulers_formula} 
-evaluated at $x =\frac{\pi}{2}$: 
+formula evaluated at $x =\frac{\pi}{2}$: 
 
 \smallskip
 \begin{equation*}
 \begin{array}{lllll}
 e^{ix}
-&=& \cos x + i \sin x                           	&\hspace{7em} \mathrel{\#} \text{Euler's formula
-                                                	  \cite{notes:eulers_formula}}   \\
+&=& \cos x + i \sin x                           	&\hspace{7em} \mathrel{\#} \text{Euler's formula}   \\
 [2pt]
 &\Rightarrow& e^{i \frac{\pi}{2}} = \cos \frac{\pi}{2} + i \sin \frac{\pi}{2}
                                                 	&\hspace{7em} \mathrel{\#} \text{set $x = \frac{\pi}{2}$} \\

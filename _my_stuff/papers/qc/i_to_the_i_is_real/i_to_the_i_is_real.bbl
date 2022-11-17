@@ -6,6 +6,13 @@
 \newblock \url{https://davidmeyer.github.io/qc/euler.pdf}, 2021.
 \newblock [See \url{https://davidmeyer.github.io/qc/}].
 
+\bibitem{eulers_formula_corollary}
+{Proof Wiki}.
+\newblock {Corollary to Euler's Formula}.
+\newblock \url{https://proofwiki.org/wiki/Euler\%27s_Formula/Corollary},
+  September 2018.
+\newblock [Online; accessed 17-November-2022].
+
 \bibitem{complex_conjugation_is_automorphism}
 {Proof Wiki}.
 \newblock {Complex Conjugation is Automorphism}.
