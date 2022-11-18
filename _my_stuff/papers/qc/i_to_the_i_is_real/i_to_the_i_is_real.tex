@@ -1,8 +1,6 @@
 \documentclass{article}
 %
 %
-%	LaTeX template
-%
 %       i_to_the_i_is_real.tex
 %
 %	David Meyer
@@ -107,17 +105,17 @@
 %
 %
 \section{Introduction}
-There are a few ways to think about this question. But first we
-look at why a complex number $z$ equals $r\mathrm{e}^{i \theta}$.
-Then in Section \ref{sec:automorphism} we use the fact that
-complex conjugation is an automorphism of $\mathbb{C}$ to show
-that $i^i \in \mathbb{R}$.  In Section \ref{sec:power_series} we
-use the power series expansion of $i^i$ to show that $i^i \in
-\mathbb{R}$, and in Section \ref{sec:eulers_formula} we rely on
-Euler's formula to show the same result. In Section
-\ref{what_does_i_to_the_i_equal} we do a bit of arithmetic to
-show the numerical value of $i^i$. Finally Section
-\ref{sec:conclusions} offers a few conclusions.
+There are a many ways to think about this somewhat perplexing
+question. But first we look at why a complex number $z$ equals
+$r\mathrm{e}^{i \theta}$. Then in Section \ref{sec:automorphism}
+we use the fact that complex conjugation is an automorphism of
+$\mathbb{C}$ to show that $i^i \in \mathbb{R}$.  In Section
+\ref{sec:power_series} we use the power series expansion of $i^i$
+to show that $i^i \in \mathbb{R}$, and in Section
+\ref{sec:eulers_formula} we rely on Euler's formula to show the
+same result. In Section \ref{what_does_i_to_the_i_equal} we do a
+bit of arithmetic to show the numerical value of $i^i$. Finally
+Section \ref{sec:conclusions} offers a few conclusions.
 
 \bigskip
 \noindent
@@ -130,27 +128,27 @@ $\mathbb{R}$ but not over $\mathbb{C}$. More specifically, for a
 complex number $z$ the the complex logarithm $\log(z)$ is defined
 as the inverse function to the exponential function. That is, it
 satisfies $e^{\log z} \equiv z$. Now since $re^{i\theta} =
-re^{i(\theta+2k\pi)}$ for all $k \in \mathbb{Z}$ we have that
-for any choice of $k$, $\log(re^{i(\theta+2k\pi)})$ is a valid
+re^{i(\theta+2k\pi)}$ for all $k \in \mathbb{Z}$ we have that for
+any choice of $k$, $\log(re^{i(\theta+2k\pi)})$ is a valid
 inverse for $re^{i\theta}$. The logarithm is therefore a
 multivalued function and each value of $k$ defines what is called
 a different \emph{branch} of the logarithm. The principal branch
-usually corresponds to the choice $k=0$ \cite{wiki:principle_branch}.
-One note: here I will use log to refer to the the principal value,
-noting that some authors Log to distinguish the principal value 
-from other logarithms of $z$ \cite{wiki:complex_logarithm}. See
-Remark \ref{remark:complex_logarithm} for a bit more on this point.
+usually corresponds to the choice $k=0$
+\cite{wiki:principle_branch}.  One note: here I will use log to
+refer to the the principal value, noting that some authors Log to
+distinguish the principal value from other logarithms of $z$
+\cite{wiki:complex_logarithm}. See Remark
+\ref{remark:complex_logarithm} for a bit more on this point.
 %
 %
 %
 \section{First: A Bit of Complex Number Review}
 \label{sec:why_is_z_equal_r}
-This section reviews the nature of a complex number $z$,
-where the length of the line from the origin to the point $z$,
-$|z|$, equals $r$. In particular, why does a complex number
-$z = a + bi = r \mathrm{e}^{i \theta}$? To see why this is the
-case, consider the complex plane, shown in Figure 
-\ref{fig:complex_plane}:
+This section reviews the nature of a complex number $z$, where
+the length of the line from the origin to the point $z$, $|z|$,
+equals $r$. In particular, why does a complex number $z = a + bi
+= r \mathrm{e}^{i \theta}$? To see why this is the case, consider
+the complex plane, shown in Figure \ref{fig:complex_plane}:
 
 \medskip
 \begin{figure}[H]
@@ -176,11 +174,11 @@ case, consider the complex plane, shown in Figure
 		\draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};	% use [draw=none] to put label midway
 		\fill (0,3) circle(0.05);                                                       % draw a dot on the y axis at b 
 		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
-		\draw[thick] (O) to ["$r = |z|=\sqrt{z\overline{z}}$"] (3.5,3);					% label r
+		\draw[thick] (O) to ["$r = |z|=\sqrt{z\overline{z}}$"] (3.5,3);                 % label r
 		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
-				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};					% calculate the angle theta
-     \end{tikzpicture}																	% end tikzpicture
-  }																						% end resizebox
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};          % calculate the angle theta
+     \end{tikzpicture}                                                                          % end tikzpicture
+  }                                                                                             % end resizebox
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
@@ -320,7 +318,6 @@ To see \ref{item:overline_z}., consider
 \end{array}
 \end{equation*}
 
-\medskip
 \noindent
 Now, we want to show that $\overline{i^i} = i^i$, which would
 show that $i^i \in \mathbb{R}$ by the above argument. So
@@ -343,12 +340,12 @@ consider:
 
 \smallskip
 \noindent
-So we see that $\overline{i^i} = i^i$ and so $i^i \in
+So we see that $\overline{i^i} = i^i$, which implies that $i^i \in
 \mathbb{R}$. $\blacksquare$ 
 
 \bigskip
 \noindent
-All good, but still, why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
+This is all good, but still, why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
 To see this first notice that
 
 \medskip
@@ -368,82 +365,69 @@ To see this first notice that
 
 \bigskip
 \noindent
-So
-
-\begin{equation}
-\log (\overline{z}) = \log(r) - \log(e^{i\theta})
-\label{eqn:overline_z_equals}
-\end{equation}
+So $\log (\overline{z}) = \log(r) - \log(e^{i\theta})$.
 
 \bigskip
 \noindent
-The next result we need is that $\log (\overline{z}) = \overline{\log(z)}$,
-since
+The next result we need is $\log (\overline{z}) = \overline{\log(z)}$.
+To see this consider that
 
-\medskip
+\bigskip
 \begin{equation*}
 \begin{array}{llll}
 \overline{\log(z)}
 &=& \overline{\log(re^{i\theta})}
-                &\hspace{7em} \mathrel{\#} \text{since $z = re^{i\theta}$} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{since $z = re^{i\theta}$} \\
+[6pt]
 &=& \overline{\log(r) + \log(e^{i\theta})}
-                &\hspace{7em} \mathrel{\#} \text{by the product rule for logarithms} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{by the product rule for logarithms} \\
+[6pt]
 &=& \overline{\log(r)} + \overline{\log(e^{i\theta})}
-                &\hspace{7em} \mathrel{\#} \text{by the sum rule for conjugates \cite{sum_of_conjugates}} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{by the sum rule for conjugates \cite{sum_of_conjugates}} \\
+[6pt]
 &=& \log(r) + \overline{\log(e^{i\theta})}
-                &\hspace{7em} \mathrel{\#} \text{since $\log(r) \in\mathbb{R}$} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{since $\log(r) \in\mathbb{R}$} \\
+[6pt]
 &=& \log(r) + \overline{i\theta}
-                &\hspace{7em} \mathrel{\#} \text{since $\log (e^{i\theta}) = i\theta$} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{since $\log (e^{i\theta}) = i\theta$} \\
+[6pt]
 &=& \log(r) - i\theta
-                &\hspace{7em} \mathrel{\#} \text{since $\overline{i\theta} = \overline{0+i\theta} = -i\theta$} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{since $\overline{i\theta} = \overline{0+i\theta} = -i\theta$} \\
+[6pt]
 &=& \log(r) - \log (e^{i\theta})
-                &\hspace{7em} \mathrel{\#} \text{since $i \theta = \log (e^{i\theta})$} \\
-[5pt]
+                &\hspace{6em} \mathrel{\#} \text{since $i \theta = \log (e^{i\theta})$} \\
+[6pt]
 &=& \log (\overline{z})
-                &\hspace{7em} \mathrel{\#} \text{by Equation (\ref{eqn:overline_z_equals})} \\
+                &\hspace{6em} \mathrel{\#} \text{since $\log (\overline{z}) = \log(r) - \log(e^{i\theta})$}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Now we know that 
-
-\begin{equation}
-\log (\overline{z}) = \overline{\log(z)}
-\label{eqn:log_of_conjugate}
-\end{equation}
+Now we know that $\log (\overline{z}) = \overline{\log(z)}$ and so 
 
 \bigskip
-\noindent
-and so we can see that 
-
 \begin{equation*}
 \begin{array}{llll}
 \log(\overline{z^w})
-&=& \overline{\log(z^w)}                        &\hspace{10em} \mathrel{\#} \text{Equation (\ref{eqn:log_of_conjugate})} \\
-[5pt]
-&=& \overline{w\log(z)}                         &\hspace{10em} \mathrel{\#} \text{by the power rule for logarithms} \\
-[5pt]
-&=& \overline{w} \cdot \overline{\log(z)}       &\hspace{10em} \mathrel{\#} \text{by the product rule for conjugation} \\
-[5pt]
-&=& \overline{w} \cdot \log(\overline{z})		&\hspace{10em} \mathrel{\#} \text{by Equation (\ref{eqn:log_of_conjugate})} \\
-[5pt]
-&=& \log(\overline{z}^{\overline{w}})           &\hspace{10em} \mathrel{\#} \text{by the power rule for logarithms}
+&=& \overline{\log(z^w)}                        &\hspace{9em} \mathrel{\#} \text{as shown above} \\
+[8pt]
+&=& \overline{w\log(z)}                         &\hspace{9em} \mathrel{\#} \text{by the power rule for logarithms} \\
+[8pt]
+&=& \overline{w} \cdot \overline{\log(z)}       &\hspace{9em} \mathrel{\#} \text{by the product rule for conjugation} \\
+[8pt]
+&=& \overline{w} \cdot \log(\overline{z})       &\hspace{9em} \mathrel{\#} \text{since $\log (\overline{z}) = \overline{\log(z)}$} \\
+[8pt]
+&=& \log(\overline{z}^{\overline{w}})           &\hspace{9em} \mathrel{\#} \text{by the power rule for logarithms}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-So now we know that $\log(\overline{z^w}) = \log(\overline{z}^{\overline{w}})$.
-Exponentiating both sides of $\log(\overline{z^w}) = \log(\overline{z}^{\overline{w}})$ 
-gives us $\overline{z^w} = \overline{z}^{\overline{w}}$ and setting $z=w=i$ we 
-see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. $\blacksquare$
+Since $e^{\log(\overline{z^w})} = e^{\log(\overline{z}^{\overline{w}})}
+\Rightarrow \overline{z^w} = \overline{z}^{\overline{w}}$ if we set
+$z=w=i$ we see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. 
+$\blacksquare$
 
 
 
@@ -552,10 +536,10 @@ $i^i = e^{- \frac {\pi}{2}} \approx 0.20788$.
 Antoine Chambert-Loir (@antoinechambertloir@mathstodon.xyz) tells
 me that restricting the logarithm to any particular branch causes
 all algebraic relations break down. The example he gives is that
-$a^c \times b^c = (ab)^c$ only when the sum of the principal 
-arguments of $a$ and $b$ equals the principal argument of $ab$ 
-\cite{principal_argument}. Apparently a similar problem arises for 
-conjugacy when $a$ is strictly negative.
+$a^c \times b^c = (ab)^c$ only when the sum of the principal
+arguments of $a$ and $b$ equals the principal argument of $ab$
+\cite{principal_argument}. Apparently a similar problem arises
+for conjugacy when $a$ is strictly negative.
 \end{remark}
 
 %
@@ -563,10 +547,10 @@ conjugacy when $a$ is strictly negative.
 %
 \smallskip
 \section*{Acknowledgements}
-Thanks to Dima Pasechnik (@dimpase@mathstodon.xyz), Andrés E. Caicedo
-(@AndresCaicedo@mathstodon.xyz), Ben Reiniger 
-(@bmreiniger@mathstodon.xyz) and Dave Neary (@dneary@mastodon.ie) for 
-their many helpful comments.
+Thanks to Dima Pasechnik (@dimpase@mathstodon.xyz), Andrés
+E. Caicedo (@AndresCaicedo@mathstodon.xyz), Ben Reiniger
+(@bmreiniger@mathstodon.xyz) and Dave Neary (@dneary@mastodon.ie)
+for their many helpful comments.
 %
 %	LaTeX source on overleaf.com
 %
