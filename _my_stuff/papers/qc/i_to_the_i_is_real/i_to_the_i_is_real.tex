@@ -147,13 +147,13 @@ distinguish the principal value from other logarithms of $z$
 This section reviews the nature of a complex number $z$, where
 the length of the line from the origin to the point $z$, $|z|$,
 equals $r$. In particular, why does a complex number $z = a + bi
-= r \mathrm{e}^{i \theta}$? To see why this is the case, consider
+= r \mathrm{e}^{i \theta}$? To see why this is the case consider
 the complex plane, shown in Figure \ref{fig:complex_plane}:
 
 \medskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.40 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.375 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]		%
 		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
@@ -164,8 +164,7 @@ the complex plane, shown in Figure \ref{fig:complex_plane}:
 				node[draw,rectangle,thin,blue,below right=5.0mm]						%
             		{$\color{black}{													%
 						z = a + bi =													% z = <a bunch of stuff>
-						r \cos \theta + i r \sin \theta =								%
-						r \mathrm{e}^{i\theta}}$};                      				%
+						r \cos \theta + i r \sin \theta}$};								%
 		\coordinate[label=below left:$O$] (O);                                          % label origin
 		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
 		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
@@ -176,9 +175,9 @@ the complex plane, shown in Figure \ref{fig:complex_plane}:
 		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
 		\draw[thick] (O) to ["$r = |z|=\sqrt{z\overline{z}}$"] (3.5,3);                 % label r
 		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
-				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};          % calculate the angle theta
-     \end{tikzpicture}                                                                          % end tikzpicture
-  }                                                                                             % end resizebox
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};          		% calculate the angle theta
+     \end{tikzpicture}																	% end tikzpicture
+  }																						% end resizebox
  \caption{The Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
@@ -539,7 +538,8 @@ all algebraic relations break down. The example he gives is that
 $a^c \times b^c = (ab)^c$ only when the sum of the principal
 arguments of $a$ and $b$ equals the principal argument of $ab$
 \cite{principal_argument}. Apparently a similar problem arises
-for conjugacy when $a$ is strictly negative.
+for conjugacy when $a$ is strictly negative. I must admit that
+I don't fully understand this comment.
 \end{remark}
 
 %
