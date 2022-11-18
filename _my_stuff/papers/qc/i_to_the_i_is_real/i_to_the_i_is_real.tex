@@ -130,38 +130,32 @@ $\mathbb{R}$ but not over $\mathbb{C}$. More specifically, for a
 complex number $z$ the the complex logarithm $\log(z)$ is defined
 as the inverse function to the exponential function. That is, it
 satisfies $e^{\log z} \equiv z$. Now since $re^{i\theta} =
-re^{i\theta + 2\pi ik}$ for all $k \in \mathbb{Z}$ we have that
-for any choice of $k$, $\log(re^{i\theta+2\pi ki})$ is a valid
+re^{i(\theta+2k\pi)}$ for all $k \in \mathbb{Z}$ we have that
+for any choice of $k$, $\log(re^{i(\theta+2k\pi)})$ is a valid
 inverse for $re^{i\theta}$. The logarithm is therefore a
 multivalued function and each value of $k$ defines what is called
 a different \emph{branch} of the logarithm. The principal branch
 usually corresponds to the choice $k=0$ \cite{wiki:principle_branch}.
-
-\bigskip
-\begin{remark}
-Antoine Chambert-Loir (@antoinechambertloir@mathstodon.xyz) tells
-me that restricting the logarithm to any particular branch causes
-all algebraic relations break down. The example he gives is that
-$a^c \times b^c = (ab)^c$ only when the sum of the principal 
-arguments of $a$ and $b$ equals the principal argument of $ab$ 
-\cite{principal_argument}. Apparently a similar problem arises for 
-conjugacy when $a$ is strictly negative.
-\end{remark}
+One note: here I will use log to refer to the the principal value,
+noting that some authors Log to distinguish the principal value 
+from other logarithms of $z$ \cite{wiki:complex_logarithm}. See
+Remark \ref{remark:complex_logarithm} for a bit more on this point.
 %
 %
 %
-\section{First: Why does a complex number $z$ equal $r\mathrm{e}^{i \theta}$?}
+\section{First: A Bit of Complex Number Review}
 \label{sec:why_is_z_equal_r}
-Our first question regards the nature of a complex number $z$,
+This section reviews the nature of a complex number $z$,
 where the length of the line from the origin to the point $z$,
-$|z|$, equals $r$.  In particular, why does a complex number
-$z = a + bi = r \mathrm{e}^{i \theta}$? Consider the complex plane, 
-which is shown in Figure \ref{fig:complex_plane}:
+$|z|$, equals $r$. In particular, why does a complex number
+$z = a + bi = r \mathrm{e}^{i \theta}$? To see why this is the
+case, consider the complex plane, shown in Figure 
+\ref{fig:complex_plane}:
 
 \medskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.31 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.40 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]		%
 		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
@@ -193,8 +187,8 @@ which is shown in Figure \ref{fig:complex_plane}:
 
 \smallskip
 \noindent
-Given Figures \ref{fig:complex_plane} and \ref{fig:eulers_formula} it is pretty easy to see 
-why $z = r \mathrm{e}^{i\theta}$:
+Figures \ref{fig:complex_plane} and \ref{fig:eulers_formula} give us a pretty 
+way to see why $z = r \mathrm{e}^{i\theta}$:
 \begin{equation*}
 \begin{array}{lllll}
 z
@@ -339,7 +333,7 @@ consider:
 [2pt]
 &=& (-i)^{-i}                           &\hspace{13em} \mathrel{\#} \text{since $i = 0+1i$ and $\overline{0+1i} = -1i = -i$} \\
 [2pt]
-&=& {(i^{-1})}^{-i}                     &\hspace{13em} \mathrel{\#} \text{since $-i = i^{-1}$ (see item \ref{item:minus_i}. above)} \\
+&=& {(i^{-1})}^{-i}                     &\hspace{13em} \mathrel{\#} \text{since $-i = i^{-1}$ (item \ref{item:minus_i}. above)} \\
 [2pt]
 &=& i^{(-1 \cdot -i)}                   &\hspace{13em} \mathrel{\#} \text{since ${(x^m)}^{n} = x^{mn}$} \\
 [2pt]
@@ -354,18 +348,15 @@ So we see that $\overline{i^i} = i^i$ and so $i^i \in
 
 \bigskip
 \noindent
-All ok, but why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
-To see why first notice that
+All good, but still, why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
+To see this first notice that
 
 \medskip
 \begin{equation*}
 \begin{array}{llll}
 \log (\overline{z})
-&=& \log(\overline{re^{i\theta}})
-		&\hspace{7em} \mathrel{\#} \text{since $z = re^{i\theta}$ (Figure \ref{fig:complex_plane})} \\
-[12pt]
 &=& \log(r \mathrm{e}^{-i\theta})
-		&\hspace{7em} \mathrel{\#} \text{by item \ref{item:overline_z}. above} \\
+		&\hspace{7em} \mathrel{\#} \text{since $\overline{z} = re^{-i\theta}$ (item \ref{item:overline_z}. above)} \\
 [8pt]
 &=& \log \left (\dfrac{r}{e^{i\theta}} \right) 	
 		&\hspace{7em} \mathrel{\#} \text{since $a^{-b} = \dfrac{1}{a^b}$} \\
@@ -386,9 +377,10 @@ So
 
 \bigskip
 \noindent
-Next, notice that
+The next result we need is that $\log (\overline{z}) = \overline{\log(z)}$,
+since
 
-\smallskip
+\medskip
 \begin{equation*}
 \begin{array}{llll}
 \overline{\log(z)}
@@ -448,38 +440,11 @@ and so we can see that
 
 \bigskip
 \noindent
-So now we know that
+So now we know that $\log(\overline{z^w}) = \log(\overline{z}^{\overline{w}})$.
+Exponentiating both sides of $\log(\overline{z^w}) = \log(\overline{z}^{\overline{w}})$ 
+gives us $\overline{z^w} = \overline{z}^{\overline{w}}$ and setting $z=w=i$ we 
+see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. $\blacksquare$
 
-\begin{equation}
-\log(\overline{z^w}) = \log(\overline{z}^{\overline{w}})
-\label{eqn:overlines}
-\end{equation}
-
-\bigskip
-\noindent
-Exponentiating both sides of Equation (\ref{eqn:overlines}) gives us
-
-\begin{equation}
-\overline{z^w} = \overline{z}^{\overline{w}}
-\label{overline_z_to_the_w}
-\end{equation}
-
-\smallskip
-\noindent
-So now if we set $z=w=i$ in Equation (\ref{overline_z_to_the_w})
-we see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$.
-$\blacksquare$
-
-\bigskip
-\noindent
-Note that this argument relies on the fact that complex
-conjugation is an automorphism of $\mathbb{C}$.  So one "problem"
-with this approach is that you would first need to know not only
-that conjugation is an automorphism of $\mathbb{C}$ but also that
-the automorphism is equipped with exponentiation. So one could
-argue that this is proof is incomplete since it may not be true 
-for branches (of the logarithm) other than the principal branch
-\cite{wiki:principle_branch}.
 
 
 \section{Power Series}
@@ -529,7 +494,7 @@ in Section \ref{sec:eulers_formula}. $\blacksquare$
 \label{sec:eulers_formula}
 
 \noindent
-Another approach to answering this question is to consider Euler's 
+Another approach is to consider Euler's 
 formula evaluated at $x =\frac{\pi}{2}$: 
 
 \smallskip
@@ -575,13 +540,24 @@ $i^i = e^{- \frac {\pi}{2}} \approx 0.20788$.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.35] {images/e_to_the_minus_pi_over_two.png}}
+\center{\includegraphics[frame,scale=0.45] {images/e_to_the_minus_pi_over_two.png}}
 \end{figure}
 %
 %
 %
 \section{Conclusions}
 \label{sec:conclusions}
+\begin{remark}
+\label{remark:complex_logarithm}
+Antoine Chambert-Loir (@antoinechambertloir@mathstodon.xyz) tells
+me that restricting the logarithm to any particular branch causes
+all algebraic relations break down. The example he gives is that
+$a^c \times b^c = (ab)^c$ only when the sum of the principal 
+arguments of $a$ and $b$ equals the principal argument of $ab$ 
+\cite{principal_argument}. Apparently a similar problem arises for 
+conjugacy when $a$ is strictly negative.
+\end{remark}
+
 %
 %
 %

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 NOV 2022 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 NOV 2022 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1415,67 +1415,42 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 153.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 153.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 153.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 153.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 153.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 153.
-
-[1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 267.
+(hyperref)                removing `math shift' on input line 261.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 267.
+(hyperref)                removing `math shift' on input line 261.
 
 [2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 571.
+(hyperref)                removing `math shift' on input line 536.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 571.
+(hyperref)                removing `superscript' on input line 536.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 571.
+(hyperref)                removing `\in' on input line 536.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 571.
+(hyperref)                removing `math shift' on input line 536.
 
-<images/e_to_the_minus_pi_over_two.png, id=148, 656.4525pt x 192.72pt>
+<images/e_to_the_minus_pi_over_two.png, id=141, 656.4525pt x 192.72pt>
 File: images/e_to_the_minus_pi_over_two.png Graphic file (type png)
 <use images/e_to_the_minus_pi_over_two.png>
 Package pdftex.def Info: images/e_to_the_minus_pi_over_two.png  used on input l
-ine 578.
+ine 543.
 (pdftex.def)             Requested size: 656.4509pt x 192.71951pt.
-[4]
-Overfull \hbox (24.38495pt too wide) in paragraph at lines 590--597
+[4 <./images/e_to_the_minus_pi_over_two.png>]
+Overfull \hbox (24.38495pt too wide) in paragraph at lines 566--573
 \OT1/cmr/m/n/10 Thanks to Dima Pasech-nik (@dim-pase@mathstodon.xyz), Andr^^Ses
  E. Caicedo (@An-dresCaicedo@mathstodon.xyz),
  []
@@ -1486,14 +1461,14 @@ Underfull \hbox (badness 1502) in paragraph at lines 38--43
 10 https : / / proofwiki . org / wiki / Sum _ of _ Complex _
  []
 
-) [5 <./images/e_to_the_minus_pi_over_two.png>] (./i_to_the_i_is_real.aux)
+) [5] (./i_to_the_i_is_real.aux)
 Package rerunfilecheck Info: File `i_to_the_i_is_real.out' has not changed.
-(rerunfilecheck)             Checksum: 74CDD784BEA4342919DC3741D7C43522;1086.
+(rerunfilecheck)             Checksum: 2CF0AFB0EDF0D7940B93E39115824D0D;1032.
  ) 
 Here is how much of TeX's memory you used:
- 52119 strings out of 478994
- 1316905 string characters out of 5858184
- 1947541 words of memory out of 5000000
+ 52118 strings out of 478994
+ 1316922 string characters out of 5858184
+ 1947496 words of memory out of 5000000
  68794 multiletter control sequences out of 15000+600000
  415062 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1516,10 +1491,10 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on i_to_the_i_is_real.pdf (5 pages, 238080 bytes).
+Output written on i_to_the_i_is_real.pdf (5 pages, 236913 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 
