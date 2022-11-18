@@ -121,8 +121,7 @@ Section \ref{sec:conclusions} offers a few conclusions.
 \noindent
 Before launching into all of this, note that we will make heavy
 use of the exponential function $\exp(z)$ (and therefore as you
-might expect, this means heavy use of $\log(z)$, where by
-$\log(z)$ we mean $\log_{e}(z)$ aka $\ln (z)$). The important
+might expect, this means heavy use of $\log(z)$. The important
 point for this discussion is that $\exp(z)$ is injective over
 $\mathbb{R}$ but not over $\mathbb{C}$. More specifically, for a
 complex number $z$ the the complex logarithm $\log(z)$ is defined
@@ -132,13 +131,17 @@ re^{i(\theta+2k\pi)}$ for all $k \in \mathbb{Z}$ we have that for
 any choice of $k$, $\log(re^{i(\theta+2k\pi)})$ is a valid
 inverse for $re^{i\theta}$. The logarithm is therefore a
 multivalued function and each value of $k$ defines what is called
-a different \emph{branch} of the logarithm. The principal branch
-usually corresponds to the choice $k=0$
-\cite{wiki:principle_branch}.  One note: here I will use log to
-refer to the the principal value, noting that some authors Log to
-distinguish the principal value from other logarithms of $z$
-\cite{wiki:complex_logarithm}. See Remark
-\ref{remark:complex_logarithm} for a bit more on this point.
+a different \emph{branch} of the logarithm. The \emph{principal branch}
+usually refers to the choice $k=0$ \cite{wiki:principle_branch}. 
+See Remark \ref{remark:complex_logarithm} for a bit more on this point.
+
+
+\bigskip
+\noindent
+One note here: I will use "log" to denote the natural log ($\log_{e}$) 
+of the principal value of the logarithm of $z$, noting that some 
+authors "Log" to distinguish the principal value from other logarithms 
+of $z$ \cite{wiki:complex_logarithm}. 
 %
 %
 %
@@ -146,14 +149,14 @@ distinguish the principal value from other logarithms of $z$
 \label{sec:why_is_z_equal_r}
 This section reviews the nature of a complex number $z$, where
 the length of the line from the origin to the point $z$, $|z|$,
-equals $r$. In particular, why does a complex number $z = a + bi
-= r \mathrm{e}^{i \theta}$? To see why this is the case consider
-the complex plane, shown in Figure \ref{fig:complex_plane}:
+equals $r$. In particular, why does a complex number $z = r 
+\mathrm{e}^{i \theta}$? To see why this is the case, first 
+consider the complex plane, shown in Figure \ref{fig:complex_plane}:
 
 \medskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.375 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.35 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]		%
 		\coordinate (O) at (0,0);                                                       % name a coordinate for the origin
 %
