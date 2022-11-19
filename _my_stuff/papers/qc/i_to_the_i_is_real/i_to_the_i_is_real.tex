@@ -145,7 +145,7 @@ of $z$ \cite{wiki:complex_logarithm}.
 %
 %
 %
-\section{First: A Bit of Complex Number Review}
+\section{First: A Bit of Review}
 \label{sec:why_is_z_equal_r}
 This section reviews the nature of a complex number $z$, where
 the length of the line from the origin to the point $z$, $|z|$,
@@ -296,12 +296,15 @@ To see \ref{item:minus_i}., notice that $-(i\cdot i) = -i^2 =
 
 \bigskip
 \noindent
-To see \ref{item:overline_z}., consider
+To see \ref{item:overline_z}., consider that for $r,\theta \in \mathbb{R}$ 
+we have
+
 \begin{equation*}
 \begin{array}{llll}
 \overline{z}
 &=& \overline{r \cdot (\cos \theta + i \sin \theta)} 
-		&\hspace{5em} \mathrel{\#} \text{since $z = r(\cos\theta+i\sin\theta)$ (Figure \ref{fig:complex_plane})}\\
+		&\hspace{5em} \mathrel{\#} \text{since $z = r(\cos\theta+i\sin\theta)$ 
+		(Figure \ref{fig:complex_plane})}\\
 [5pt]
 &=& \overline{r} \cdot \overline{(\cos \theta + i \sin \theta)} 
 		&\hspace{5em} \mathrel{\#} \text{since $\overline{z_1 \cdot z_2} = \overline{z_1}\cdot \overline{z_2}$ 
@@ -315,15 +318,16 @@ To see \ref{item:overline_z}., consider
 		&\hspace{5em} \mathrel{\#} \text{since $\overline{a+bi} = a-bi$} \\
 [5pt]
 &=& r \mathrm{e}^{-i\theta}
-		&\hspace{5em} \mathrel{\#} \text{since $e^{-i\theta} = \cos \theta - i \sin \theta$ (corollary to 
-		Euler's formula \cite{eulers_formula_corollary})}
+		&\hspace{5em} \mathrel{\#} \text{since $e^{-i\theta} = \cos \theta - i \sin \theta$ (
+		corollary to Euler's formula \cite{eulers_formula_corollary})}
 \end{array}
 \end{equation*}
 
 \noindent
-Now, we want to show that $\overline{i^i} = i^i$, which would
-show that $i^i \in \mathbb{R}$ by the above argument. So
-consider:
+Now we want to show that $\overline{i^i} = i^i$, which would
+show that $i^i \in \mathbb{R}$ by the above argument \footnote{See 
+Remark \ref{remark:complex_logarithm} for a bit on what is still
+open here.}. So consider:
 
 \begin{equation*}
 \begin{array}{llll}
@@ -340,14 +344,14 @@ consider:
 \end{array}
 \end{equation*}
 
-\smallskip
+\medskip
 \noindent
 So we see that $\overline{i^i} = i^i$, which implies that $i^i \in
 \mathbb{R}$. $\blacksquare$ 
 
 \bigskip
 \noindent
-This is all good, but still, why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
+This is all good, but why does $\overline{i^i} = {\overline{i}}^{\overline{i}}$?
 To see this first notice that
 
 \medskip
@@ -364,7 +368,7 @@ To see this first notice that
 		&\hspace{7em} \mathrel{\#} \text{by the quotient rule for logarithms \cite{properties_of_logarithms}} \\
 [12pt]
 &=& \log(r) - i\theta
-		&\hspace{7em} \mathrel{\#} \text{since $\log({e^{i\theta}}) = e^{i\theta}$} \\
+		&\hspace{7em} \mathrel{\#} \text{since $\log({e^{i\theta}}) = i\theta$} \\
 [12pt]
 &=& \log(r) + \overline{i\theta}
 		&\hspace{7em} \mathrel{\#} \text{since $-i\theta = \overline{0-i\theta} = \overline{i\theta} $} \\
@@ -416,11 +420,11 @@ To see this first notice that
 % \end{array}
 % \end{equation*}
 
-\medskip
+\smallskip
 \noindent
 Then 
 
-\bigskip
+\smallskip
 \begin{equation*}
 \begin{array}{llll}
 \log(\overline{z^w})
@@ -438,13 +442,14 @@ Then
 \end{equation*}
 
 \bigskip
+{\setstretch{1.5}
 \noindent
 Since $\log(\overline{z^w}) = \log(\overline{z}^{\overline{w})}$ we know that 
-$e^{\log(\overline{z^w})} = e^{\log(\overline{z}^{\overline{w}})} \Rightarrow
-\overline{z^w} = \overline{z}^{\overline{w}}$. Setting
-$z=w=i$ we see \\ that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. 
-$\blacksquare$
-
+$e^{\log(\overline{z^w})} = e^{\log(\overline{z}^{\overline{w}})}$ which in turn 
+implies that $\overline{z^w} = \overline{z}^{\overline{w}}$. Setting $z=w=i$ we 
+see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. $\blacksquare$
+\par}
+\bigskip
 
 
 \section{Power Series}
