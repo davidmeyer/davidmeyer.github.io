@@ -371,7 +371,7 @@ To see this first notice that
 		&\hspace{7em} \mathrel{\#} \text{since $\log({e^{i\theta}}) = i\theta$} \\
 [12pt]
 &=& \log(r) + \overline{i\theta}
-		&\hspace{7em} \mathrel{\#} \text{since $-i\theta = \overline{0-i\theta} = \overline{i\theta} $} \\
+		&\hspace{7em} \mathrel{\#} \text{since $\overline{i\theta} = \overline{0+i\theta} = -i\theta$} \\
 [12pt]
 &=& \log(r) + \overline{\log(e^{i\theta})}
 		&\hspace{7em} \mathrel{\#} \text{since $i\theta = \log(e^{i\theta})$} \\
@@ -430,11 +430,12 @@ Then
 \log(\overline{z^w})
 &=& \overline{\log(z^w)}                        &\hspace{9em} \mathrel{\#} \text{as shown above} \\
 [8pt]
-&=& \overline{w\log(z)}                         &\hspace{9em} \mathrel{\#} \text{by the power rule for logarithms} \\
+&=& \overline{w  \cdot \log(z)}					&\hspace{9em} \mathrel{\#} \text{by the power rule for logarithms} \\
 [8pt]
 &=& \overline{w} \cdot \overline{\log(z)}       &\hspace{9em} \mathrel{\#} \text{by the product rule for conjugation} \\
 [8pt]
-&=& \overline{w} \cdot \log(\overline{z})       &\hspace{9em} \mathrel{\#} \text{since $\log (\overline{z}) = \overline{\log(z)}$} \\
+&=& \overline{w} \cdot \log(\overline{z})       &\hspace{9em} \mathrel{\#} \text{since $\log (\overline{z}) 
+												= \overline{\log(z)}$} \\
 [8pt]
 &=& \log(\overline{z}^{\overline{w}})           &\hspace{9em} \mathrel{\#} \text{by the power rule for 
 												logarithms \cite{properties_of_logarithms}}
