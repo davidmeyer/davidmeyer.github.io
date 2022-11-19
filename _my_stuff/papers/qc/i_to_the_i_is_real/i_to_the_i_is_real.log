@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 NOV 2022 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  19 NOV 2022 12:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1429,28 +1429,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 522.
+(hyperref)                removing `math shift' on input line 536.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 522.
+(hyperref)                removing `superscript' on input line 536.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\in' on input line 522.
+(hyperref)                removing `\in' on input line 536.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 522.
+(hyperref)                removing `math shift' on input line 536.
 
-<images/e_to_the_minus_pi_over_two.png, id=128, 656.4525pt x 192.72pt>
+<images/e_to_the_minus_pi_over_two.png, id=136, 656.4525pt x 192.72pt>
 File: images/e_to_the_minus_pi_over_two.png Graphic file (type png)
 <use images/e_to_the_minus_pi_over_two.png>
 Package pdftex.def Info: images/e_to_the_minus_pi_over_two.png  used on input l
-ine 529.
+ine 543.
 (pdftex.def)             Requested size: 656.4509pt x 192.71951pt.
 [4 <./images/e_to_the_minus_pi_over_two.png>]
-Overfull \hbox (24.38495pt too wide) in paragraph at lines 553--560
+Overfull \hbox (24.38495pt too wide) in paragraph at lines 567--574
 \OT1/cmr/m/n/10 Thanks to Dima Pasech-nik (@dim-pase@mathstodon.xyz), Andr^^Ses
  E. Caicedo (@An-dresCaicedo@mathstodon.xyz),
  []
@@ -1491,10 +1491,10 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on i_to_the_i_is_real.pdf (5 pages, 238006 bytes).
+Output written on i_to_the_i_is_real.pdf (5 pages, 237905 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
  34 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -329,13 +329,13 @@ consider:
 \begin{array}{llll}
 \overline{i^i}
 &=& {\overline{i}}^{\overline{i}}       &\hspace{13em} \mathrel{\#} \text{see proof below} \\
-[2pt]
+[5pt]
 &=& (-i)^{-i}                           &\hspace{13em} \mathrel{\#} \text{since $i = 0+1i$ and $\overline{0+1i} = -1i = -i$} \\
-[2pt]
+[5pt]
 &=& {(i^{-1})}^{-i}                     &\hspace{13em} \mathrel{\#} \text{since $-i = i^{-1}$ (item \ref{item:minus_i}. above)} \\
-[2pt]
+[5pt]
 &=& i^{(-1 \cdot -i)}                   &\hspace{13em} \mathrel{\#} \text{since ${(x^m)}^{n} = x^{mn}$} \\
-[2pt]
+[5pt]
 &=& i^i                                 &\hspace{13em} \mathrel{\#} \text{since $-1 \cdot -i = i$}
 \end{array}
 \end{equation*}
@@ -356,57 +356,69 @@ To see this first notice that
 \log (\overline{z})
 &=& \log(r \mathrm{e}^{-i\theta})
 		&\hspace{7em} \mathrel{\#} \text{since $\overline{z} = re^{-i\theta}$ (item \ref{item:overline_z}. above)} \\
-[8pt]
+[5pt]
 &=& \log \left (\dfrac{r}{e^{i\theta}} \right) 	
 		&\hspace{7em} \mathrel{\#} \text{since $a^{-b} = \dfrac{1}{a^b}$} \\
 [12pt]
 &=& \log(r) - \log(e^{i\theta})
-		&\hspace{7em} \mathrel{\#} \text{by the quotient rule for logarithms \cite{properties_of_logarithms}}
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-So $\log (\overline{z}) = \log(r) - \log(e^{i\theta})$.
-
-\bigskip
-\noindent
-The next result we need is $\log (\overline{z}) = \overline{\log(z)}$.
-To see this consider that
-
-\bigskip
-\begin{equation*}
-\begin{array}{llll}
-\overline{\log(z)}
-&=& \overline{\log(re^{i\theta})}
-                &\hspace{6em} \mathrel{\#} \text{since $z = re^{i\theta}$} \\
-[6pt]
-&=& \overline{\log(r) + \log(e^{i\theta})}
-                &\hspace{6em} \mathrel{\#} \text{by the product rule for logarithms} \\
-[6pt]
-&=& \overline{\log(r)} + \overline{\log(e^{i\theta})}
-                &\hspace{6em} \mathrel{\#} \text{by the sum rule for conjugates \cite{sum_of_conjugates}} \\
-[6pt]
-&=& \log(r) + \overline{\log(e^{i\theta})}
-                &\hspace{6em} \mathrel{\#} \text{since $\log(r) \in\mathbb{R}$} \\
-[6pt]
-&=& \log(r) + \overline{i\theta}
-                &\hspace{6em} \mathrel{\#} \text{since $\log (e^{i\theta}) = i\theta$} \\
-[6pt]
+		&\hspace{7em} \mathrel{\#} \text{by the quotient rule for logarithms \cite{properties_of_logarithms}} \\
+[12pt]
 &=& \log(r) - i\theta
-                &\hspace{6em} \mathrel{\#} \text{since $\overline{i\theta} = \overline{0+i\theta} = -i\theta$} \\
-[6pt]
-&=& \log(r) - \log (e^{i\theta})
-                &\hspace{6em} \mathrel{\#} \text{since $i \theta = \log (e^{i\theta})$} \\
-[6pt]
-&=& \log (\overline{z})
-                &\hspace{6em} \mathrel{\#} \text{since $\log (\overline{z}) = \log(r) - \log(e^{i\theta})$}
+		&\hspace{7em} \mathrel{\#} \text{since $\log({e^{i\theta}}) = e^{i\theta}$} \\
+[12pt]
+&=& \log(r) + \overline{i\theta}
+		&\hspace{7em} \mathrel{\#} \text{since $-i\theta = \overline{0-i\theta} = \overline{i\theta} $} \\
+[12pt]
+&=& \log(r) + \overline{\log(e^{i\theta})}
+		&\hspace{7em} \mathrel{\#} \text{since $i\theta = \log(e^{i\theta})$} \\
+[12pt]
+&=& \overline{\log(r)} + \overline{\log(e^{i\theta})}
+		&\hspace{7em} \mathrel{\#} \text{since $x = \overline{x}$ for $x \in \mathbb{R}$ 
+		and $\log(r) \in \mathbb{R}$} \\
+[12pt]
+&=& \overline{\log(r) + \log(e^{i\theta})}
+		&\hspace{7em} \mathrel{\#} \text{by the sum rule for conjugates \cite{sum_of_conjugates}} \\
+[12pt]
+&=& \overline{\log(re^{i\theta})}
+		&\hspace{7em} \mathrel{\#} \text{by the product rule for logarithms \cite{properties_of_logarithms}} \\
+[12pt]
+&=& \overline{\log(z)} 
+		&\hspace{7em} \mathrel{\#} \text{since $z = re^{i\theta}$}	
 \end{array}
 \end{equation*}
 
-\bigskip
+% \begin{equation*}
+% \begin{array}{llll}
+% \overline{\log(z)}
+% &=& \overline{\log(re^{i\theta})}
+%                &\hspace{6em} \mathrel{\#} \text{since $z = re^{i\theta}$} \\
+% [6pt]
+% &=& \overline{\log(r) + \log(e^{i\theta})}
+%                 &\hspace{6em} \mathrel{\#} \text{by the product rule for logarithms} \\
+% [6pt]
+% &=& \overline{\log(r)} + \overline{\log(e^{i\theta})}
+%                 &\hspace{6em} \mathrel{\#} \text{by the sum rule for conjugates \cite{sum_of_conjugates}} \\
+% [6pt]
+% &=& \log(r) + \overline{\log(e^{i\theta})}
+%                 &\hspace{6em} \mathrel{\#} \text{since $\log(r) \in\mathbb{R}$} \\
+% [6pt]
+% &=& \log(r) + \overline{i\theta}
+%                 &\hspace{6em} \mathrel{\#} \text{since $\log (e^{i\theta}) = i\theta$} \\
+% [6pt]
+% &=& \log(r) - i\theta
+%                 &\hspace{6em} \mathrel{\#} \text{since $\overline{i\theta} = \overline{0+i\theta} = -i\theta$} \\
+% [6pt]
+% &=& \log(r) - \log (e^{i\theta})
+%                 &\hspace{6em} \mathrel{\#} \text{since $i \theta = \log (e^{i\theta})$} \\
+% [6pt]
+% &=& \log (\overline{z})
+%                 &\hspace{6em} \mathrel{\#} \text{since $\log (\overline{z}) = \log(r) - \log(e^{i\theta})$}
+% \end{array}
+% \end{equation*}
+
+\medskip
 \noindent
-Now we know that $\log (\overline{z}) = \overline{\log(z)}$ and so 
+Then 
 
 \bigskip
 \begin{equation*}
@@ -420,15 +432,17 @@ Now we know that $\log (\overline{z}) = \overline{\log(z)}$ and so
 [8pt]
 &=& \overline{w} \cdot \log(\overline{z})       &\hspace{9em} \mathrel{\#} \text{since $\log (\overline{z}) = \overline{\log(z)}$} \\
 [8pt]
-&=& \log(\overline{z}^{\overline{w}})           &\hspace{9em} \mathrel{\#} \text{by the power rule for logarithms}
+&=& \log(\overline{z}^{\overline{w}})           &\hspace{9em} \mathrel{\#} \text{by the power rule for 
+												logarithms \cite{properties_of_logarithms}}
 \end{array}
 \end{equation*}
 
 \bigskip
 \noindent
-Since $e^{\log(\overline{z^w})} = e^{\log(\overline{z}^{\overline{w}})}
-\Rightarrow \overline{z^w} = \overline{z}^{\overline{w}}$ if we set
-$z=w=i$ we see that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. 
+Since $\log(\overline{z^w}) = \log(\overline{z}^{\overline{w})}$ we know that 
+$e^{\log(\overline{z^w})} = e^{\log(\overline{z}^{\overline{w}})} \Rightarrow
+\overline{z^w} = \overline{z}^{\overline{w}}$. Setting
+$z=w=i$ we see \\ that $\overline{i^i} = {\overline{i}}^{\overline{i}}$. 
 $\blacksquare$
 
 
