@@ -97,15 +97,6 @@ A bit about Ramanujan and nested radicals
 </a>
 <br>
 
-<li><a href="./ith_root_of_i.pdf" target="_blank"
-    rel="noopener noreferrer">
-Is the ith root of i a real number?
-</a>
-<br>
-
-<li><a href="./i_to_the_i_is_real.pdf" target="_blank" 
-     rel="noopener noreferrer">Why is i^i a real number?</a>
-<br>
 
 <li><a href="./three.pdf" target="_blank"
     rel="noopener noreferrer">
