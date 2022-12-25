@@ -1,0 +1,321 @@
+\documentclass{article}
+%
+%
+%	christmastime_is_christmas_math_time.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	25 Dec 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{Christmastime is Christmas math time!}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+%\date{Last update: \today}
+\date{December 25, 2022}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{The Infinite Gift and Gabriel's Horn}
+Algebraic geometry is populated by all kinds of crazy
+objects. And being that it is Christmastime (and so Christmas
+math time!), please check out the crazy, paradoxical object,
+sometimes known as The Infinite Gift. The Infinite Gift is shown
+in Figure \ref{fig:infinite_gift}.
+
+\bigskip
+\begin{figure} [H]
+\center{\includegraphics[frame, scale=0.30] {images/infinite_gift.jpg}}
+\caption{The Infinite Gift}
+\label{fig:infinite_gift}
+\end{figure}
+
+\bigskip
+{\setstretch{1.50}
+\noindent
+In this object the length of the side of the nth box is
+$\frac{1}{\sqrt{n}}$ (so that the area of a side of the $n^{th}$
+box is ${\left ( \frac{1}{\sqrt{n}}\right ) }^2 = \frac{1}{n}$
+and so the surface area of the $n^{th}$ box is $6 *
+\frac{1}{n}$. Then what you find is that as $n \to \infty$ this
+object has infinite surface area and length but finite volume!
+Interesting aside: in the limit $n \to \infty$ the area of the 
+Infinite Gift equals 6 times the harmonic series \cite{wiki:harmonic}
+($= \infty$).
+\par}
+
+
+\bigskip
+\noindent
+The continuous version of this object is known as Gabriel's Horn
+(also known as Torricelli’s Trumpet), which is shown in Figure
+\ref{fig:gabriels_horn}.
+
+\bigskip
+\begin{figure} [H]
+\center{\includegraphics[frame, scale=0.165] {images/gabriels_horn.jpg}}
+\caption{Gabriel's Horn}
+\label{fig:gabriels_horn}
+\end{figure}
+
+\bigskip
+\noindent
+As shown in Figure \ref{fig:gabriels_horn}, Gabriel's Horn 
+has volume $\pi$ and area $\infty$ (in the limit as $n \to
+\infty$). These properties lead to an interesting paradox 
+known as the Painter's Paradox \cite{painters_paradox}.
+%
+%
+%
+\subsection{The Painter's Paradox}
+The Painter's Paradox: Somehow even though you can fill Gabriel's
+Horn with paint (its volume is finite), you still won't have
+enough paint to paint the surface of the inside of the horn (its
+area is infinite)!
+%
+%
+%
+\section{Fermat's Christmas Theorem}
+%
+%
+%
+\noindent
+Fermat's Christmas Theorem (aka Fermat's theorem on sums of two
+squares) \cite{wiki:christmas_theorem} is a beautiful and simple
+theorem which states that an odd prime number $p$ can be
+expressed as
+
+\bigskip
+\begin{center}
+\scalebox{1.25} {$p = r^{2} + s^{2}$}
+\end{center}
+\bigskip
+
+\noindent
+where $r,s \in \mathbb{N}$, if and only if $p \equiv 1 \textrm{
+(mod $4$)}$. That is, the theorem holds iff $p = 4n + 1$ for some
+$n \in \mathbb{N}$.
+
+\bigskip
+\noindent
+For example, the primes 5, 13, 17, 29, 37 and 41 are all
+congruent to 1 modulo 4 and can be expressed as sums of two
+squares in the following ways:
+
+\begin{equation*}
+\begin{array}{rcll} 
+5   &=& 1^{2} + 2^{2}   \\
+13  &=& 2^{2} + 3^{2}   \\
+17  &=& 1^{2} + 4^{2}   \\
+29  &=& 2^{2} + 5^{2}   \\
+37  &=& 1^{2} + 6^{2}   \\
+41  &=& 4^{2} + 5^{2}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+On the other hand, the primes 3, 7, 11, 19, 23 and 31 are all
+congruent to 3 modulo 4 and none of them can be expressed as the
+sum of two squares. This is the easier part of the theorem since
+it follows immediately from the observation that all squares are
+congruent to 0 or 1 modulo 4.
+
+
+\bigskip
+\noindent
+The prime numbers $p$ for which Fermat's Christmas Theorem is
+true are called Pythagorean primes.  See
+\cite{wiki:pythagorean_primes} for more on Pythagorean primes.
+
+\bigskip
+\noindent
+BTW, this theorem is called Fermat's Christmas Theorem because
+Fermat announced a proof of the theorem in a letter to Mersenne
+dated December 25, 1640. And of course, Fermat didn't include a
+proof in the letter.
+
+
+\bigskip
+\noindent
+A variety of proofs of Fermat's Christmas Theorem can be found in
+\cite{wiki:christmas_theorem_proofs}.
+%
+%
+%
+\section{The Christmas Stocking Theorem}
+
+"The Christmas stocking theorem, also known as the hockey stick
+theorem, states that the sum of a diagonal string of numbers in
+Pascal's triangle starting at the nth entry from the top (where
+the apex has n=0) on left edge and continuing down k rows is
+equal to the number to the left and below (the "toe") bottom of
+the diagonal (the "heel"; Butterworth 2002)."
+\cite{christmas_stocking_theorem}.
+
+\bigskip
+\noindent
+That is, Christmas stocking theorem states that
+
+\bigskip
+\begin{equation*}
+\sum\limits_{i=0}^{k-1} {n+i \choose i} = {k+n \choose k-1}
+\end{equation*}
+
+\bigskip
+\noindent
+where ${\displaystyle {n \choose k}}$ is a binomial coefficient (aka "$n$ choose $k$"). 
+This (and the Christmas stocking) is shown in Figure \ref{fig:christmas_stocking_theorem}. 
+
+
+\bigskip
+\begin{figure} [H]
+\center{\includegraphics[frame, scale=0.20] {images/christmas_stocking_theorem.jpg}}
+\caption{The Christmas Stocking Theorem}
+\label{fig:christmas_stocking_theorem}
+\end{figure}
+
+\section{Merry X-mas!}
+\bigskip
+\large {
+  \begin{equation*}
+   \begin{array}{rcll} 
+		y
+		&\coloneqq& {\displaystyle \frac{\ln \big (\frac{x}{m} -  sa  \big ) }{r^2}}                                            
+				&\qquad \qquad \mathrel{\#} \text{define $y$} \\
+[10pt]
+		&\Rightarrow& r^2 y = \ln \big (\frac{x}{m} -  sa  \big )    
+				&\qquad \qquad  \mathrel{\#} \text{multiply both sides on the left by $r^2$} \\
+[10pt]
+		&\Rightarrow& e^{r^2y} = e^{\ln \big ( \frac{x}{m} -  sa\big )}                           
+				&\qquad \qquad \mathrel{\#} \text{$x = y \Rightarrow b^x =b^y$ ; exponentiate with $b = e$} \\
+[10pt]
+		&\Rightarrow& e^{r^2y} = \frac{x}{m} -  sa                           
+				&\qquad \qquad \mathrel{\#} e^{\ln(x)} = x \\
+[10pt]
+		&\Rightarrow& e^{r^2y} = \frac{x}{m} -  as						
+				&\qquad \qquad \mathrel{\#} \text{assume multiplication is commutative $(sa = as)$} \\ 
+[10pt]
+		&\Rightarrow& m e^{r^2y} = x - mas                                        
+				&\qquad \qquad \mathrel{\#} \text{multiply both sides on the left by $m$} \\
+[10pt]
+		&\Rightarrow& \bf{\color{red}{m e^{rry} = x - mas}}                                     
+				&\qquad \qquad \mathrel{\#} \text{$r^2 = rr \Rightarrow$ \bf{Merry X-mas!}}
+    \end{array}
+   \end{equation*}
+}
+
+
+%
+%
+%
+% \section{Acknowledgements}
+% \label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/fwsfybtfmryr}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+
