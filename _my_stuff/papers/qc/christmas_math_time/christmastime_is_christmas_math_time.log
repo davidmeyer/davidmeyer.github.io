@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 DEC 2022 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 DEC 2022 11:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1446,16 +1446,16 @@ s/infinite_gift.jpg>] [2 <./images/gabriels_horn.jpg>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 259.
+(amsmath)                 on input line 260.
 
 <images/christmas_stocking_theorem.jpg, id=67, 1750.54pt x 1238.6275pt>
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package pdftex.def Info: images/christmas_stocking_theorem.jpg  used on input l
-ine 272.
+ine 273.
 (pdftex.def)             Requested size: 1750.53574pt x 1238.6245pt.
-[3] (./christmastime_is_christmas_math_time.bbl [4 <./images/christmas_stocking
-_theorem.jpg>]
+[3 <./images/christmas_stocking_theorem.jpg>]
+(./christmastime_is_christmas_math_time.bbl
 Underfull \hbox (badness 1348) in paragraph at lines 38--44
 []\OT1/cmr/m/n/12 Wikipedia Con-trib-u-tors.  Pythagorean prime --- Wikipedia, 
 the free en-cy-clo-pe-
@@ -1467,7 +1467,7 @@ Underfull \hbox (badness 1527) in paragraph at lines 38--44
 / index . php ? title = Pythagorean _ prime & oldid =
  []
 
-) [5] (./christmastime_is_christmas_math_time.aux)
+[4]) [5] (./christmastime_is_christmas_math_time.aux)
 Package rerunfilecheck Info: File `christmastime_is_christmas_math_time.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 781CF650AD1C34821FB857C624A2CBA1;893.
@@ -1475,7 +1475,7 @@ s not changed.
 Here is how much of TeX's memory you used:
  52375 strings out of 478994
  1324962 string characters out of 5858184
- 1946584 words of memory out of 5000000
+ 1952584 words of memory out of 5000000
  69038 multiletter control sequences out of 15000+600000
  418826 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1500,7 +1500,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (5 pages, 457983 byt
+Output written on christmastime_is_christmas_math_time.pdf (5 pages, 458008 byt
 es).
 PDF statistics:
  180 PDF objects out of 1000 (max. 8388607)
