@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 DEC 2022 05:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 DEC 2022 10:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1446,13 +1446,13 @@ s/infinite_gift.jpg>] [2 <./images/gabriels_horn.jpg>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 254.
+(amsmath)                 on input line 255.
 
 <images/christmas_stocking_theorem.jpg, id=65, 1750.54pt x 1238.6275pt>
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package pdftex.def Info: images/christmas_stocking_theorem.jpg  used on input l
-ine 267.
+ine 268.
 (pdftex.def)             Requested size: 1750.53574pt x 1238.6245pt.
 [3 <./images/christmas_stocking_theorem.jpg>]
 (./christmastime_is_christmas_math_time.bbl
@@ -1475,7 +1475,7 @@ s not changed.
 Here is how much of TeX's memory you used:
  52372 strings out of 478994
  1324913 string characters out of 5858184
- 1951543 words of memory out of 5000000
+ 1951544 words of memory out of 5000000
  69037 multiletter control sequences out of 15000+600000
  418826 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1500,7 +1500,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (4 pages, 456894 byt
+Output written on christmastime_is_christmas_math_time.pdf (4 pages, 456930 byt
 es).
 PDF statistics:
  172 PDF objects out of 1000 (max. 8388607)
