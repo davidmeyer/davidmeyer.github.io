@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 OCT 2022 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 FEB 2023 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1460,7 +1460,7 @@ Overfull \hbox (33.75621pt too wide) detected at line 448
 File: images/exponential_order.png Graphic file (type png)
 <use images/exponential_order.png>
 Package pdftex.def Info: images/exponential_order.png  used on input line 489.
-(pdftex.def)             Requested size: 177.33179pt x 126.05042pt.
+(pdftex.def)             Requested size: 204.61253pt x 145.44203pt.
 
 Overfull \hbox (39.24205pt too wide) detected at line 563
 []
@@ -1620,7 +1620,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
 onts/type1/public/cm-super/sfrm1000.pfb>
-Output written on dirac_delta.pdf (19 pages, 401235 bytes).
+Output written on dirac_delta.pdf (19 pages, 401290 bytes).
 PDF statistics:
  486 PDF objects out of 1000 (max. 8388607)
  329 compressed objects within 4 object streams
