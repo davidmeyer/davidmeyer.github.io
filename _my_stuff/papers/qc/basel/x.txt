@@ -1,0 +1,2 @@
+
+1/lim(prod^N x) = lim(1/prod^N x) = lim(prod^N 1/x)

@@ -221,14 +221,14 @@ Together these imply that
 1 
 &=&  A (x - \pi)(x + \pi) (x - 2\pi)(x+2\pi) \cdots
                 &\qquad \qquad \mathrel{\#} {\displaystyle 1 =  \lim_{x \to 0} \frac{\sin x}{x} = \lim_{x \to 0}  \frac{P(x)}{x}} \\
-[15pt]
+[13pt]
 &\Rightarrow& A = \dfrac{1}{(x - \pi)(x + \pi) (x - 2\pi)(x+2\pi)
 \cdots }
                 &\qquad \qquad \mathrel{\#} \text{solve for $A$} \\
-[15pt]
+[13pt]
 &\Rightarrow& A = \dfrac{1}{(-\pi^2)(-(2\pi)^2) (-(3\pi)^2) \cdots } 
                 &\qquad \qquad \mathrel{\#} \text{evaluate $A$ at the 0 root (set $x = 0)$} \\
-[15pt]
+[13pt]
 &\Rightarrow& A = \dfrac{1}{(-\pi^2) (- 2^2 \pi^2) (-3^2 \pi^2) \cdots}
                 &\qquad \qquad \mathrel{\#} \text{simplify}  
 \end{array}
@@ -242,21 +242,21 @@ So now we know that
 \begin{array}{lllll}
 \sin x 
 &=&  A x (x - \pi)(x + \pi) (x - 2\pi)(x + 2\pi) (x - 3\pi) (x + 3\pi) \cdots                                                                                                                    &\mathrel{\#} \sin x = P(x) \\   
-[15pt]                                                     
+[13pt]                                                     
 &=& \dfrac{x (x - \pi)(x+\pi)(x-2\pi)(x+2\pi)(x-3\pi)(x+3\pi) \cdots}{(-\pi^2)(-2^2\pi^2)(-3^2\pi^2) \cdots}                                                                &\mathrel{\#} A = ((-\pi^2) (- 2^2 \pi^2) (-3^2 \pi^2)  \cdots)^{-1}   \\
-[15pt]
+[13pt]
 &=& \dfrac{x (x^2 - \pi^2)(x^2-4\pi^2)(x^2 - 9\pi^2) \cdots}{(-\pi^2)(-2^2\pi^2)(-3^2\pi^2) \cdots}                                                                          &\mathrel{\#} \text{multiply like terms}  \\
-[15pt]
+[13pt]
 &=& x \cdot \Bigg [\dfrac{x^2 - \pi^2}{-\pi^2} \Bigg ] \cdot  \Bigg [\dfrac{x^2 - 4 \pi^2}{- 4 \pi^2} \Bigg ]  \cdot  \Bigg [\dfrac{x^2 - 9 \pi^2}{- 9 \pi^2} \Bigg ]  \cdots 
                                                                                                                                                                                                                               &\mathrel{\#} \text{collect terms, multiply squares} \\
-[15pt]
+[13pt]
 &=& x \cdot \Bigg [\dfrac{\pi^2 - x^2}{\pi^2} \Bigg ] \cdot  \Bigg [\dfrac{4 \pi^2 -  x^2}{4 \pi^2} \Bigg ]  \cdot  \Bigg [\dfrac{9 \pi^2 - x^2}{9 \pi^2} \Bigg ]  \cdots 
                                                                                                                                                                                                                               &\mathrel{\#} \text{get rid of $-$ in the denominators} \\
-[15pt]
+[13pt]
 &=& x \cdot  \Bigg [1 - \dfrac{x^2}{\pi^2} \Bigg ] \cdot \Bigg [1 - \dfrac{x^2}{4\pi^2} \Bigg ] \cdot  \Bigg [1 - \dfrac{x^2}{9\pi^2} \Bigg ] \cdots &\mathrel{\#} \text{simplify}   \\
-[15pt]
+[13pt]
 &=& x \cdot  \Bigg [1 - \dfrac{x^2}{(1 \pi)^2} \Bigg ] \cdot \Bigg [1 - \dfrac{x^2}{(2\pi)^2} \Bigg ] \cdot  \Bigg [1 - \dfrac{x^2}{(3\pi)^2} \Bigg ] \cdots &\mathrel{\#} \text{put into a convenient form}   \\
-[15pt]
+[13pt]
 &=& \mathlarger{ x \prod\limits_{n=1}^\infty \Bigg (1 - \frac{x^2}{(n\pi)^2} \Bigg ) }                                                                                              &\mathrel{\#} \text{Euler's polynomial for $\sin x$}
 \end{array}
 \end{equation*}
@@ -380,7 +380,7 @@ knowing that the zeros of $\sin x$ occur at $0, \pm \pi, \pm
                              \bigg (1 - \frac{x}{2\pi} \bigg ) \bigg (1 + \frac{x}{2 \pi} \bigg )
                              \bigg (1 - \frac{x}{3\pi} \bigg ) \bigg (1 + \frac{x}{3 \pi} \bigg )
                              \cdots} \\
-[15pt]
+[13pt]
 &=& \mathlarger{ \bigg (1 - \frac{x^2}{\pi^2} \bigg ) 
                             \bigg (1 - \frac{x^2}{4 \pi^2} \bigg ) 
                             \bigg (1 - \frac{x^2}{9 \pi^2} \bigg ) 
@@ -444,58 +444,50 @@ and with a bit of rearranging we see that
 \sin x
 &=&  \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (1 - \dfrac{x^2}{(n\pi)^2} \Bigg )}
 		&\qquad \mathrel{\#}  \text{$\sin x = P(x)$ (Equation \ref{eqn:sine})} \\
-[20pt]
+[13pt]
 &=& \mathlarger{x \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - x^2}{n^2\pi^2} \Bigg )}                                   
 		&\qquad \mathrel{\#}  \text{get a common denominator, multiply} \\
-[20pt]
+[13pt]
 &\Rightarrow& \mathlarger{\sin \frac{\pi}{2}= \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \Bigg (\dfrac{n^2\pi^2 - \frac{\pi^2}{4}}{n^2\pi^2} \Bigg )}                                                                                                                                                                              		&\qquad \mathrel{\#}  \text{set $\mathlarger{x = \frac{\pi}{2}}$} \\
-[20pt]
+[13pt]
 &\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \pi^2 \big ( n^2 - \frac{1}{4} \big )} {\pi^2 n^2} \Bigg )}                                                                                                                                                                        		&\qquad \mathrel{\#} \text{$\sin \frac{\pi}{2} = 1 $, factor out $\pi^2$} \\
-[20pt]
+[13pt]
 &\Rightarrow& \mathlarger{1 =  \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \big ( n^2 - \frac{1}{4} \big )} {n^2} \Bigg )}                                                                                                                                                                                 		&\qquad \mathrel{\#}  \text{cancel $\pi^2$} \\
-[20pt]
+[13pt]
 &\Rightarrow&  \mathlarger{1 = \dfrac{\pi}{2}  \prod\limits_{n=1}^\infty \Bigg ( \dfrac{ \big ( \frac{4n^2 - 1}{4}  \big )} {n^2} \Bigg )}
 		&\qquad \mathrel{\#}  \text{get a common denominator} \\
-[20pt]
+[13pt]
 &\Rightarrow& \mathlarger{1 = \dfrac{\pi}{2} \prod\limits_{n=1}^\infty \bigg ( \frac {4n^2 - 1} {4n^2} \bigg )} 
 		&\qquad \mathrel{\#}  \text{multiply right side by $\mathlarger{1= \frac{\frac{1}{n^2}}{\frac{1}{n^2}}}$} \\
-[20pt]
+[13pt]
 &\Rightarrow&  \mathlarger{\dfrac{2}{\pi} = \prod\limits_{n=1}^\infty \bigg (\frac {4n^2 - 1} {4n^2} \bigg )}            
 		&\qquad \mathrel{\#}  \text{multiply both sides by $\dfrac{2}{\pi}$} \\
-[20pt]
-&\Rightarrow& \bigg (\mathlarger{\frac{2}{\pi} \bigg)^{-1}  =  \Bigg ( \prod\limits_{n=1}^\infty \bigg (\frac {4n^2 - 1} {4n^2} \bigg ) \Bigg)^{-1}}           			&\qquad \mathrel{\#} \text{raise both sides to the -1} \\
-[20pt]
-&\Rightarrow& \mathlarger{\frac{\pi}{2}  =  \Bigg ( \prod\limits_{n=1}^\infty \bigg (\frac {4n^2 - 1} {4n^2} \bigg ) \Bigg)^{-1}}          
-		&\qquad \mathrel{\#} \left (\dfrac{2}{\pi} \right )^{-1} = \dfrac{\pi}{2} \\
-[20pt]
-&\Rightarrow& \mathlarger{\frac{\pi}{2}  =  \dfrac{1}{\prod\limits_{n=1}^\infty \bigg (\frac {4n^2 - 1} {4n^2} \bigg )}}          
-		&\qquad \mathrel{\#} \left (\dfrac{x}{y} \right )^{-1} = \dfrac{1}{\left (\dfrac{x}{y} \right )} \\
-[20pt]
-&\Rightarrow& \mathlarger{\frac{\pi}{2}  = \prod\limits_{n=1}^\infty \bigg (\frac{1}{\frac {4n^2 - 1} {4n^2}} \bigg)}         
-		&\qquad \mathrel{\#} \frac{1}{\prod\limits_{n=1}^\infty \frac{f(n)}{g(n)}} = \prod\limits_{n=1}^\infty \frac{1}{\left ( \frac{f(n)}{g(n)} \right )} \\
-[20pt]
-&\Rightarrow& \mathlarger{\frac{\pi}{2}  =  \prod\limits_{n=1}^\infty \bigg ( \frac  {4n^2} {4n^2 - 1} \bigg )}           
-		&\qquad \mathrel{\#} \dfrac{1}{\left (\dfrac{x}{y} \right )} = \dfrac{y}{x} \\
-\end{array}
-\end{equation*}
-
-\noindent
-Now we can see that 
-
-\begin{equation*}
-\begin{array}{lllll}
-\mathlarger{\frac{\pi}{2}}
-&=& \mathlarger{\prod\limits_{n=1}^\infty \bigg ( \frac  {4n^2} {4n^2 - 1} \bigg )}           
-		&\qquad \mathrel{\#} \text{see above derivation} \\
-[20pt]
-&=& \mathlarger {\prod\limits_{n =1}^\infty \Bigg  (\dfrac{(2n)(2n)}{(2n-1)(2n+1)}  \Bigg )}
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{2}{\pi} = \lim\limits_{a \to \infty} \prod\limits_{n=1}^a \bigg (\frac {4n^2 - 1} {4n^2} \bigg )}            
+		&\qquad \mathrel{\#}  \text{convert to limit} \\
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{\pi}{2} = \dfrac{1}{\lim\limits_{a \to \infty} \prod\limits_{n=1}^a \Big (\frac{4n^2 - 1}{4n^2}\Big )}}          
+		&\qquad \mathrel{\#}  \text{reciprocals} \\
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{\pi}{2} = \lim\limits_{a \to \infty} \dfrac{1}{\prod\limits_{n=1}^a \Big (\frac{4n^2 - 1}{4n^2}\Big )}}     
+		&\qquad \mathrel{\#} \text{quotient law for limits \cite{properties_of_limits}} \\
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{\pi}{2} = \lim\limits_{a \to \infty} \prod\limits_{n=1}^a \left (\dfrac{1}{\frac{4n^2 - 1}{4n^2}} \right )}
+		&\qquad \mathrel{\#} \lim\limits_{a \to \infty} \dfrac{1}{\prod\limits_{n=1}^a \Big (\frac{4n^2 - 1}{4n^2}\Big )} =
+		 			\lim\limits_{a \to \infty} \prod\limits_{n=1}^a \left (\dfrac{1}{\frac{4n^2 - 1}{4n^2}} \right )				 									\cite{properties_of_limits} \\
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{\pi}{2} = \lim\limits_{a \to \infty} \prod\limits_{n=1}^a \Bigg (\frac{4n^2}{4n^2 - 1}\Bigg )}   
+		&\qquad \mathrel{\#} \text{reciprocals again...} \\		 	
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{\pi}{2} = \prod\limits_{n=1}^\infty \Bigg (\frac {4n^2} {4n^2 - 1} \Bigg )}          
+		&\qquad \mathrel{\#}  \text{collapse limit} \\
+[13pt]
+&\Rightarrow&  \mathlarger{\dfrac{\pi}{2} = \prod\limits_{n=1}^\infty \bigg (\frac {(2n)(2n)} {(2n+1)(2n-1)} \bigg )}            
 		&\qquad \mathrel{\#} \text{factor numerator and denominator} \\
-[20pt]
-&=& \Big ( \dfrac {2}{1} \cdot \dfrac {2}{3} \Big ) \cdot \Big ( \dfrac {4}{3} \cdot \dfrac {4}{5} \Big ) \cdot \Big (\dfrac {6}{5} \cdot \dfrac {6}{7} \Big ) \cdots 
-		&\qquad \mathrel{\#} \text{expand product}
-
+		
 \end{array}
 \end{equation*}
+
 
 \bigskip
 \noindent
