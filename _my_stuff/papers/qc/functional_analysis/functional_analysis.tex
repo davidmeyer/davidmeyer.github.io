@@ -164,33 +164,33 @@ Figure \ref{fig:set}.
 \begin{figure}[H]
 \centering
   \resizebox{0.40 \textwidth}{!} {	
-    \tikzstyle{background rectangle}=[thin,draw=black]          % make the frame thinner (there must be an easier way) 
-    \begin{tikzpicture}[use Hobby shortcut, show background rectangle] % couldn't control thickness with \begin{tikzpicture} [framed]
+    \tikzstyle{background rectangle}=[thin,draw=black]                                  % make the frame thinner (there must be an easier way) 
+    \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                  % couldn't control thickness with \begin{tikzpicture} [framed]
 %
 %	\begin{tikzpicture}[use Hobby shortcut]
 %														
 %	coordinate system
 %
-		\coordinate (x)  at (1.50,-5.50);															% x endpoint of dashed line
-		\coordinate (xb) at (1.80,-5.15);															% x endpoint of the brace
-		\coordinate (y)  at (4.50,-6.00);															% y endpoint of the dashed line
-		\coordinate (yb) at (4.40,-5.58);															% y endpoint of the brace					
-		\coordinate (X)  at (5.75,-7.50);															% show X (the whole set) in lower right
+		\coordinate (x)  at (1.50,-5.50);                                       % x endpoint of dashed line
+		\coordinate (xb) at (1.80,-5.15);                                       % x endpoint of the brace
+		\coordinate (y)  at (4.50,-6.00);                                       % y endpoint of the dashed line
+		\coordinate (yb) at (4.40,-5.58);                                       % y endpoint of the brace					
+		\coordinate (X)  at (5.75,-7.50);                                       % show X (the whole set) in lower right
 %
 %	draw everything
 %
-		\draw [draw=blue, rotate=-90, scale=2] 														% draw the (blue) set boundary through these points
-		       (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0);								% make the boundary go through these points
-		\fill [fill=black] (x) circle (1pt);														% x dot										
-		\draw [] (x) node[below]{$x$}; 																% label x
-		\fill [fill=black] (y) circle (1pt);														% y dot												
-		\draw [] (y) node[below]{$y$}; 																% label y
-		\draw [densely dashed, draw=red] (x) -- (y);    											% draw the dashed line between x and y
-		\draw [decoration={brace,mirror,raise=0.5cm},decorate] (xb) -- (yb) 						% draw the underbrace
-			node [rotate=-8.00,pos=0.5,anchor=north,yshift=-0.60cm] {${\small \text{distance}}$};	% label it with "distance"	
-		\node [] at (X) {$X$};																		% draw X in the lower right corner
-  \end{tikzpicture} 																				% end tikzpicture
-  }                                                                   								% end resizebox
+		\draw [draw=blue, rotate=-90, scale=2]                                  % draw the (blue) set boundary through these points
+		       (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0);          % make the boundary go through these points
+		\fill [fill=black] (x) circle (1pt);                                    % x dot
+		\draw [] (x) node[below]{$x$};                                          % label x
+		\fill [fill=black] (y) circle (1pt);                                    % y dot
+		\draw [] (y) node[below]{$y$};                                          % label y
+		\draw [densely dashed, draw=red] (x) -- (y);                            % draw the dashed line between x and y
+		\draw [decoration={brace,mirror,raise=0.5cm},decorate] (xb) -- (yb)     % draw the underbrace
+			node [rotate=-8.00,pos=0.5,anchor=north,yshift=-0.60cm] {${\small \text{distance}}$};   % label it with "distance"	
+		\node [] at (X) {$X$};                                                  % draw X in the lower right corner
+  \end{tikzpicture}                                                                     % end tikzpicture
+  }                                                                                     % end resizebox
   \caption{The distance between $x$ and $y$ in $X$}
   \label{fig:set}
 \end{figure}
@@ -239,46 +239,46 @@ shown in Figure \ref{fig:triangle_inequality}.
 %
 \begin{figure}[t]
 \centering
-  \resizebox{0.45 \textwidth}{!} {	
-    \tikzstyle{background rectangle}=[thin,draw=black]												% make the frame thinner (there must be an easier way)
-    \begin{tikzpicture}[use Hobby shortcut, show background rectangle]								% couldn't control thickness with \begin{tikzpicture} [framed]
+  \resizebox{0.45 \textwidth}{!} {
+    \tikzstyle{background rectangle}=[thin,draw=black]                                                          % make the frame thinner (there must be an easier way)
+    \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                                          % couldn't control thickness with [framed]
 %
 %	\begin{tikzpicture}[use Hobby shortcut]
 %														
 %	coordinate system
 %
-		\coordinate (x)   at (1.50,-5.50);															% x endpoint of dashed line
-		\coordinate (xb)  at (1.80,-5.15);															% x endpoint of the brace
-		\coordinate (y)   at (4.50,-6.00);															% y endpoint of the dashed line
-		\coordinate (yb)  at (4.40,-5.58);															% y endpoint of the brace
-		\coordinate (z)   at (3.00,-7.25);															% need a point z for the triangle inequality
-		\coordinate (X)   at (5.75,-7.50);															% show X (the whole set) in lower right
-		\coordinate (TIL) at (2.25,-8.25);															% left side of triangle inequality
-		\coordinate (TIR) at (3.75,-8.25);															% right side of triangle inequality
+		\coordinate (x)   at (1.50,-5.50);                                                              % x endpoint of dashed line
+		\coordinate (xb)  at (1.80,-5.15);                                                              % x endpoint of the brace
+		\coordinate (y)   at (4.50,-6.00);                                                              % y endpoint of the dashed line
+		\coordinate (yb)  at (4.40,-5.58);                                                              % y endpoint of the brace
+		\coordinate (z)   at (3.00,-7.25);                                                              % need a point z for the triangle inequality
+		\coordinate (X)   at (5.75,-7.50);                                                              % show X (the whole set) in lower right
+		\coordinate (TIL) at (2.25,-8.25);                                                              % left side of triangle inequality
+		\coordinate (TIR) at (3.75,-8.25);                                                              % right side of triangle inequality
 
 %
 %	draw everything
 %
-		\draw [draw=blue, rotate=-90, scale=2] 														% draw the (blue) set boundary through these points
-		       (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0);								% make the boundary go through these points
-		\fill [fill=black] (x) circle (1.50pt);														% x dot										
-		\draw [] (x) node[left, above, , xshift=-2.00mm, yshift=-1.00mm]{$x$}; 						% label x
-		\fill [fill=black] (y) circle (1.50pt);														% y dot												
-		\draw [] (y) node[right, xshift=-0.05mm]{$y$}; 												% label y
-		\fill [fill=black] (z) circle (1.50pt);														% z dot
-		\draw [] (z) node[below, yshift=-0.05mm]{$z$}; 												% label z
-		\draw [densely dashed, thick, draw=red] (x) -- (y) 											% draw x -- y
-		       node[font=\scriptsize, rotate=-7.00, above, midway] {$d(x,y)$};	   					% draw d(x,y)
-		\draw [densely dashed, thick, draw=red] (x) -- (z) 											% draw x -- z
-		       node[font=\scriptsize, xshift=-4.75mm, yshift=1.00mm, below, midway] {$d(x,z)$};		% draw d(x,z)
-		\draw [densely dashed, thick, draw=red] (y) -- (z) 											% draw z -- y
-		       node[font=\scriptsize, xshift=-1.50mm, yshift=-2.75mm, right, midway] {$d(z,y)$}; 	% draw d(z,y)
-		\draw  [draw=none] (TIL) -- (TIR) 															% draw the definition of the triangle inequality
-				node[rectangle, draw, very thin, below, midway, yshift=-0.80cm]						% ...
-				{$d(x,y) \leq d(x,z) + d(z,y)$};													% definition of the triangle inequality
-		\node [] at (X) {$X$};																		% draw X in the lower right corner
-  \end{tikzpicture} 																				% end tikzpicture
-  }                                                                   								% end resizebox
+		\draw [draw=blue, rotate=-90, scale=2]                                                          % draw the (blue) set boundary through these points
+		       (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0);                                  % make the boundary go through these points
+		\fill [fill=black] (x) circle (1.50pt);                                                         % x dot
+		\draw [] (x) node[left, above, , xshift=-2.00mm, yshift=-1.00mm]{$x$};                          % label x
+		\fill [fill=black] (y) circle (1.50pt);                                                         % y dot
+		\draw [] (y) node[right, xshift=-0.05mm]{$y$};                                                  % label y
+		\fill [fill=black] (z) circle (1.50pt);                                                         % z dot
+		\draw [] (z) node[below, yshift=-0.05mm]{$z$};                                                  % label z
+		\draw [densely dashed, thick, draw=red] (x) -- (y)                                              % draw x -- y
+		       node[font=\scriptsize, rotate=-7.00, above, midway] {$d(x,y)$};                          % draw d(x,y)
+		\draw [densely dashed, thick, draw=red] (x) -- (z)                                              % draw x -- z
+		       node[font=\scriptsize, xshift=-4.75mm, yshift=1.00mm, below, midway] {$d(x,z)$};         % draw d(x,z)
+		\draw [densely dashed, thick, draw=red] (y) -- (z)                                              % draw z -- y
+		       node[font=\scriptsize, xshift=-1.50mm, yshift=-2.75mm, right, midway] {$d(z,y)$};        % draw d(z,y)
+		\draw  [draw=none] (TIL) -- (TIR)                                                               % draw the definition of the triangle inequality
+				node[rectangle, draw, very thin, below, midway, yshift=-0.80cm]                 % ...
+				{$d(x,y) \leq d(x,z) + d(z,y)$};                                                % definition of the triangle inequality
+		\node [] at (X) {$X$};                                                                          % draw X in the lower right corner
+  \end{tikzpicture}                                                                                             % end tikzpicture
+  }                                                                                                             % end resizebox
   \caption{The Triangle Inequality For Distances}
   \label{fig:triangle_inequality}
 \end{figure}
@@ -289,28 +289,28 @@ shown in Figure \ref{fig:triangle_inequality}.
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.37 \textwidth}{!} {														% resize the tikzpicture if you like
-  \tikzstyle{background rectangle}=[thin,draw=black]									% make the frame thinner (there must be an easier way to do this)
-     \begin{tikzpicture}[show background rectangle]										% couldn't control frame thickness with \begin{tikzpicture} [framed]
-       \coordinate (C)  at (0.00, 0.00);												% center
-       \coordinate (R)  at (2.00, 0.00);												% radius
-       \coordinate (A)  at (-2.00,0.00);												% arc (3D effect)
-       \coordinate (RC) at (2.00, 2.25);												% Right Corner (RC)
-       \coordinate (S)  at (-2.20,2.25);												% Spacing
-       \shade [ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);					% draw the ball
-       \draw  [densely dashed, draw=blue] (C) circle (2cm);								% draw the circle (use dashed because its an open ball)
-       \draw  [densely dashed, draw=blue] (A) arc (180:360:2 and 0.6);					% 3D effect
-       \draw  [densely dashed, draw=blue] (R) arc (0:180:2 and 0.6);					% draw the dashed line
-       \fill  [fill=black] (C) circle (1pt);											% draw a dot in the center
-       \draw  [draw=none]  (C) node[font=\scriptsize, below] {$x$};        				% label x
-       \draw  [thin] (C) -- (R) node[font=\scriptsize,midway,above]{$\epsilon$};		% draw the radius (epsilon)
-       \node  [] at  (RC) {$X$};														% show X in the lower right corner
-       \draw  [draw=none] (-2,-1.5) -- (2,-1.5) 										% draw the definition of the epsilon ball
+  \resizebox{0.37 \textwidth}{!} {                                                              % resize the tikzpicture if you like
+  \tikzstyle{background rectangle}=[thin,draw=black]                                            % make the frame thinner (there must be an easier way to do this)
+     \begin{tikzpicture}[show background rectangle]                                             % couldn't control frame thickness with \begin{tikzpicture} [framed]
+       \coordinate (C)  at (0.00, 0.00);                                                        % center
+       \coordinate (R)  at (2.00, 0.00);                                                        % radius
+       \coordinate (A)  at (-2.00,0.00);                                                        % arc (3D effect)
+       \coordinate (RC) at (2.00, 2.25);                                                        % Right Corner (RC)
+       \coordinate (S)  at (-2.20,2.25);                                                        % Spacing
+       \shade [ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);                         % draw the ball
+       \draw  [densely dashed, draw=blue] (C) circle (2cm);                                     % draw the circle (use dashed because its an open ball)
+       \draw  [densely dashed, draw=blue] (A) arc (180:360:2 and 0.6);                          % 3D effect
+       \draw  [densely dashed, draw=blue] (R) arc (0:180:2 and 0.6);                            % draw the dashed line
+       \fill  [fill=black] (C) circle (1pt);                                                    % draw a dot in the center
+       \draw  [draw=none]  (C) node[font=\scriptsize, below] {$x$};                             % label x
+       \draw  [thin] (C) -- (R) node[font=\scriptsize,midway,above]{$\epsilon$};                % draw the radius (epsilon)
+       \node  [] at  (RC) {$X$};                                                                % show X in the lower right corner
+       \draw  [draw=none] (-2,-1.5) -- (2,-1.5)                                                 % draw the definition of the epsilon ball
 				node[font=\fontsize{6.0}{1.0}\selectfont,rectangle, draw, very thin, below, midway, yshift=-0.85cm] 
-				{$B_{\epsilon}(x) =\{y \in X \mid d(x,y) < \epsilon\}$};				% defn of open epsilon ball
-       \node  [] at (S) {};																% stretch out the frame so the ball is centered (Spacing)
-     \end{tikzpicture}																	% end tikzpicture
-    }                                                                   				% end resizebox
+				{$B_{\epsilon}(x) =\{y \in X \mid d(x,y) < \epsilon\}$};        % defn of open epsilon ball
+       \node  [] at (S) {};                                                                     % stretch out the frame so the ball is centered (Spacing)
+     \end{tikzpicture}                                                                          % end tikzpicture
+    }                                                                                           % end resizebox
     \caption{$B_{\epsilon}(x)$ is an open epsilon ball centered at $x$ with radius $\epsilon$}
     \label{fig:open_epsilon_ball}
 \end{figure}
