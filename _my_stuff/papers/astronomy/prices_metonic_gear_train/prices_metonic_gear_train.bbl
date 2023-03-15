@@ -65,11 +65,6 @@ Tony Freeth, David Higgon, Aris Dacanalis, Lindsay MacDonald, Myrto
   2006.
 \newblock [Online; accessed 23-March-2021].
 
-\bibitem{Wright2005}
-M.T. Wight.
-\newblock {Epicyclic Gearing and the Antikythera Mechanism, parts 1 \& 2}.
-\newblock {\em Antiquarian Horology}, 29:54--60, Sep 2005.
-
 \bibitem{wiki:rehm}
 {Wikipedia contributors}.
 \newblock Albert rehm --- {Wikipedia}{,} the free encyclopedia.
@@ -116,5 +111,10 @@ M.T. Wright.
   Mechanism 1}.
 \newblock {\em Bulletin of the Scientific Instrument Society}, 87:8–13, Dec
   2005.
+
+\bibitem{Wright2005}
+M.T. Wright.
+\newblock {Epicyclic Gearing and the Antikythera Mechanism, parts 1 \& 2}.
+\newblock {\em Antiquarian Horology}, 29:54--60, Sep 2005.
 
 \end{thebibliography}
