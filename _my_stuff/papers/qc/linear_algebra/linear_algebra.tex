@@ -107,13 +107,29 @@
 \section{Introduction}
 \label{sec:introduction}
 
-
+\bigskip
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
 
 \begin{equation*}
 \begin{array}{llll}
-A^{m \times n}
+A^{n \times m} 
+&=& \left(
+		\begin{array}{ccc}
+		\horzbar & a_{1} & \horzbar \\
+		\horzbar & a_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & a_{n} & \horzbar
+	\end{array}
+	\right )
+\end{array}
+\end{equation*}
+
+\bigskip
+
+\begin{equation*}
+\begin{array}{llll}
+A^{T}_{m \times n}
 &=& \left(
 	\begin{array}{cccc}
 		\vertbar & \vertbar &        & \vertbar \\
@@ -124,10 +140,70 @@ A^{m \times n}
 \end{array}
 \end{equation*}
 
-\bigskip
+
 \bigskip
 \setlength{\extrarowheight}{1ex}
 
+
+\begin{equation*}
+\begin{array}{llll}
+B^{n \times k} 
+&=& \left(
+		\begin{array}{ccc}
+		\horzbar & b_{1} & \horzbar \\
+		\horzbar & b_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & b_{n} & \horzbar
+	\end{array}
+	\right )
+\end{array}
+\end{equation*}
+
+\begin{equation*}
+\begin{array}{llll}
+AB := A^{T}B
+&=&
+\left(
+	\begin{array}{cccc}
+		\vertbar & \vertbar &        & \vertbar \\
+		a_{1}    & a_{2}    & \ldots & a_{n}    \\
+		\vertbar & \vertbar &        & \vertbar 
+	\end{array}
+	\right )
+	\left(
+		\begin{array}{ccc}
+		\horzbar & b_{1} & \horzbar \\
+		\horzbar & b_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & b_{n} & \horzbar
+	\end{array}
+	\right ) \\
+
+&=&
+	\left(
+		\begin{array}{cccc}
+		a_{1}^{T} b_{1} & a_{1}^{T} b_{2} & \hdots & a_{1}^{T} b_{k} \\
+		a_{2}^{T} b_{1} & a_{2}^{T} b_{2} & \hdots & a_{2}^{T} b_{k} \\
+		\vdots          & \vdots          & \ddots & \vdots       										 \\
+		a_{m}^{T} b_{1} & a_{m}^{T} b_{2} & \hdots & a_{m}^{T} b_{k}
+	\end{array}
+	\right ) \\ \\
+
+&=&
+	\left(
+		\begin{array}{cccc}
+		\langle a_{1}, b_{1} \rangle & \langle  a_{1}, b_{2} \rangle & \hdots & \langle a_{1}, b_{k} \rangle \\
+		\langle a_{2}, b_{1} \rangle & \langle a_{2}, b_{2} \rangle  & \hdots & \langle a_{2}, b_{k} \rangle \\
+		\vdots                       & \vdots                        & \ddots & \vdots       										 \\
+		\langle a_{m}, b_{1} \rangle & \langle a_{m}, b_{2} \rangle  & \hdots & \langle a_{m}, b_{k} \rangle
+	\end{array}
+	\right ) \\
+ \end{array}
+\end{equation*}
+
+
+
+\newpage
 \begin{equation*}
 \begin{array}{llll}
 A^{T} 
