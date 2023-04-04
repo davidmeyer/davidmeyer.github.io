@@ -1,62 +1,103 @@
-\documentclass[11pt, oneside]{article}   				% use "amsart" instead of "article" for AMSLaTeX format
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
 %
 %   get various packages
 %
-\usepackage{geometry}                                   % See geometry.pdf to learn the layout options
-\geometry{margin=0.75in}
-\geometry{letterpaper}                                  % ... or a4paper or a5paper or ... 
-\usepackage{setspace}
-\usepackage{url}                                        % need this to use URLs in bibtex
-\usepackage{mathtools}                                  % \coloneqq
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
 \usepackage{graphicx}
-
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{5}
 % \SetWatermarkLightness {0.9} 
 % \SetWatermarkColor[rgb]{0.7,0,0}
-
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{subcaption}
-\usepackage{authblk}
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{fixltx2e}
-\usepackage{hyperref}
-\usepackage{alltt}
-\usepackage{color}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{float}
-\usepackage{bigints}
-\usepackage{braket}
-\usepackage{siunitx}
-
 %
-% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
 %
-
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
 \makeatletter
 \renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
   \let\@ifnextchar\new@ifnextchar
   \array{*\c@MaxMatrixCols #1}}
 \makeatother
-
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
-
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
 \title{A Few Notes on Bell States, Superdense Coding, and Quantum Teleportation}
 \author{David Meyer \\ dmm613@gmail.com}
-
 \date{Last update: \today}							% Activate to display a given date or no date
-
-
-
+%
+%
+%
 \begin{document}
 \maketitle
 
@@ -78,8 +119,8 @@ H = \frac{1}{\sqrt{2}}  \begin{bmatrix}[r] 1 & 1 \\ 1 &  -1 \end{bmatrix},
 
 \bigskip
 \noindent
-and results in two maximally entangled qubits\footnote{This state
-is sometimes called an \emph{EPR} state.}. How does this work?  
+and results in two maximally entangled qubits\footnote{This state 
+is sometimes called an \emph{EPR} state.}. How does this work?
 
 \bigskip
 \noindent
@@ -96,7 +137,7 @@ H \ket{1} = \frac{1}{\sqrt{2}} \big ( \ket{0} - \ket{1} \big )
 The Bell Circuit applies $H$ to $\ket{b_0}$ and then applies the
 CNOT gate to $H\ket{b_0}$ (control qubit) and $\ket{b_1}$ (target
 qubit). The inputs and evolution of the Bell Circuit are shown
-are Table \ref{tab:bell_state}. 
+are Table \ref{tab:bell_state}.
 
 \bigskip
 \begin{figure}
@@ -410,8 +451,9 @@ Bell Circuit to recover Alice's message:
 \noindent
 Now Bob can measure the two qubits and recover Alice's message
 ($b_0b_1 = 11)$. 
-
-% \newpage
+%
+%
+%
 \section{Quantum Teleportation}
 Quantum teleportation can be thought of as the dual task to super
 dense coding. Whereas super dense coding is concerned with
@@ -668,9 +710,11 @@ had to destroy her copy (by measuring it).
 Finally, an interesting point is that neither Alice or Bob ever
 "know" what $\ket{\psi}$ is (in terms of its actual amplitudes);
 all they know is that it was transferred (whatever it was).
-
+%
+%
+%
 \section{Bell and  CHSH}
-
+TBD
 %
 %
 %
@@ -681,7 +725,7 @@ Section \ref{subsec:quantum_teleportation_algorithm}.
 %	LaTeX source on overleaf.com
 %
 \section*{\LaTeX \hspace{0.10 mm} Source}
-% \url{}
+\url{https://www.overleaf.com/read/hmgrypdcxjhh}
 %
 %	get a bibliography
 %
