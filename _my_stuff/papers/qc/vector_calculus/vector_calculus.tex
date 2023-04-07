@@ -1637,8 +1637,10 @@ $\mathbf{R}$ in the $xy$-plane (a parallelogram,
 Figure \ref{fig:parallelogram_R}) into a square in the
 $uv$-plane and so $u$ and $v$ have constant bounds. This
 square is shown Figure \ref{fig:transformation_uv_plane}. 
-Note that this region is completely below the $u$ axis and 
-so the volume (the double integral) could be negative.
+The double-integral (whether written in $xy$-space or $uv$-space) 
+should be negative because the integrand is "more often" 
+negative over $\mathbf{R}$ and its transform into
+the $uv$-space.
 
 %
 %	draw the transformation: square in the uv-plane
@@ -2376,6 +2378,13 @@ was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
 0$ for all $\mathbf{x}$ and $\mathbf{y}$ by Equation
 (\ref{eqn:magnitude}), so the triangle inequality (or reverse
 triangle inequality) was not needed.
+
+\bigskip
+\noindent
+Thanks also to Ben Reiniger(@bmreiniger@mathstodon.xyz) for pointing
+out that in Figure 10 we care about whether the integrand is positive/negative 
+over the region, but the region itself is just an area in the plane.
+
 
 \section*{Appendix A}
 \subsection*{A Brief Review of Algebraic Structures}
