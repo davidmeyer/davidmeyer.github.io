@@ -48,6 +48,7 @@
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
 %
 %	watermarks
 %
@@ -107,7 +108,78 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\bigskip
+
+\section{Linear Maps}
+\label{sec:linear_maps}
+In linear algebra a linear map is a mapping $\mathbf{V}\to \mathbf{W}$ 
+between two vector spaces which preserves the operations of vector addition 
+and scalar multiplication. Interestingly, the same names and the same 
+definition are also used for the more general case of modules over a ring
+(need module homomorphism cite).
+
+
+\begin{definition}
+{\bf Linear Map}: A function $f:\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$
+is called \emph{linear} if for all $\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ 
+and $\lambda \in \mathbb{R}$:
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y})$		
+		\hspace{2.00em} \# vector addition is distributive
+\label{enumerate:distributive}
+
+\item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x})$				
+		\hspace{5.75em} \# scalar multiplication is compatible
+\label{enumerate:compatible}
+\end{enumerate}
+
+
+\noindent
+Note that in \ref{enumerate:distributive} the vector addition on
+the left-hand side is in $\mathbb{R}^{n}$ while on the right-hand
+side the vector addition is in $\mathbb{R}^{m}$. Similarly, in 
+\ref{enumerate:compatible} the scalar multiplication on the 
+left-hand side is in $\mathbb{R}^{n}$ while the scalar multiplication
+on the right-hand side is in $\mathbb{R}^{m}$.
+\end{definition}
+
+\subsection{Examples}
+
+\begin{enumerate}
+\item $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x$
+
+\medskip
+This is linear because 
+\begin{itemize}
+\item $f(x+y) = x + y = f(x) + f(y)$  
+\item $f(\lambda x) = \lambda x = \lambda f(x)$	
+\end{itemize}
+
+\medskip
+\item $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x^2$
+
+\medskip
+This is not linear because $f(3\cdot 1) = f(3) = 9$ and
+for $f$ a linear map we have $f(3 \cdot 1) = 3 \cdot 
+f(1) = 3 \cdot 1 = 3$. But $9 \neq 3$ so $f$ is not linear.
+
+\medskip
+\item $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x+1$
+
+\medskip
+This is not linear because $f(0 \cdot 1) = 1$ but 
+$0\cdot f(1) = 0$ and $1 \neq 0$.
+
+\smallskip
+\noindent
+Aside: $f(x) = x+1$ looks linear but under this definition
+(\ref{enumerate:distributive} and \ref{enumerate:compatible}
+above) $f$ is not linear.
+
+\end{enumerate}
+
+
+\newpage
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
 
