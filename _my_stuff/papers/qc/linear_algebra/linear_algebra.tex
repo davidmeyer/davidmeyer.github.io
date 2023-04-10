@@ -30,6 +30,7 @@
 %	more math stuff
 %
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
 \usepackage{mathtools}
 \usepackage{commath}                                                    % get \norm{x}
 \usepackage{fixmath}                                                    % get \mathbold
@@ -68,6 +69,12 @@
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+%
 %
 %	The following code allows you to do
 %
@@ -268,7 +275,6 @@ $\diamond = +$ (normal addition in $\mathbb{Z}$) and $\circ = +$
 
 
 
-
 \noindent
 Not surprisingly, there is a close relationship between linear
 maps and group homomorphisms because any linear map between two
@@ -308,16 +314,343 @@ associated with those groups.
 
 \bigskip
 \noindent
-Summary: A linear transformation is a homomorphism of vector spaces. However, 
+Summary: A linear map is a homomorphism of vector spaces. However, 
 if the vector spaces have additional structure, for example a ring, an algebra, 
 or a lie algebra, then a linear map is not always a homomorphism of those 
 additional structures.
 
+\section{Matrices induce linear maps}
+Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$.
+Now define $f_{\bm{A}}: \mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ with 
+$\mathbf{x} \mapsto \bm{A}\mathbf{x}$. 
+
+
+\begin{proposition}
+$f_{\bm{A}}$ is a linear map
+
+\bigskip
+\noindent
+Ok, but why?  Consider:
+\end{proposition}
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y}) \Rightarrow		
+		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
+		\hspace{1.25em} (distributive)
+
+\item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x}) \Rightarrow				
+		\bm{A}(\lambda \mathbf{x}) = \lambda \bm{A}\mathbf{x}$
+		\hspace{8.50em} (compatible)
+\label{enumerate:compatible}
+\end{enumerate}
+
+\smallskip
+\noindent
+Consider a matrix $\bm{A} \in \mathbb{R}^{2}$ with $\bm{A} = 
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )$ 
+and let $\bm{x} = \left ( 
+					\hspace{-0.50em}
+					\begin{array}{cccc}
+						x_1 \\
+						x_2
+					\end{array} 
+					\hspace{-0.50em}
+					\right )$
+and 
+$\bm{y} = \left ( 
+					\hspace{-0.50em}
+					\begin{array}{cccc}
+						y_1 \\
+						y_2
+					\end{array} 
+					\hspace{-0.50em}
+					\right )$.
+Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
+
+\smallskip
+\begin{equation*}
+\begin{array}{llll}
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+	\left (
+	\hspace{-0.25em}
+		\left (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				x_1 \\
+				x_2
+			\end{array}
+			\hspace{-0.50em}
+		\right ) 
+	+
+		\left (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				y_1 \\
+				y_2
+			\end{array}
+			\hspace{-0.50em}
+		\right )
+	\hspace{-0.25em}
+	\right ) 
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+	\Bigg (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			x_1 + y_1\\
+			x_2 + y_2
+		\end{array}
+		\hspace{-0.50em}
+	\Bigg ) 												&\hspace{1.25em}\mathrel{\#} \text{vector addition in $\mathbb{R}^{2}$} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	\Big (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			x_1 + y_1 
+		\end{array}
+		\hspace{-0.50em}
+	\Big ) 
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\Big ( 
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			x_2 + y_2
+		\end{array}
+		\hspace{-0.50em}
+	\Big ) 														&\hspace{1.25em}\mathrel{\#} \text{definition of matrix product (mp)} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_1
+	+
+\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_2
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_2 														&\hspace{1.25em}\mathrel{\#} \text{mp distributes over addition} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_2
+	+
+\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_2																&\hspace{1.25em}\mathrel{\#} \text{rearrange} \\
+[25pt]
+&=&
+\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+		\Bigg (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				x_1 \\
+				x_2
+			\end{array}
+			\hspace{-0.50em}
+		\Bigg )
+		+
+		\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+		\Bigg (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				y_1 \\
+				y_2
+			\end{array}
+			\hspace{-0.50em}
+		\Bigg )										&\hspace{1.25em}\mathrel{\#} \text{definition of the matrix product} \\
+[25pt]
+&=&
+\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+		\bm{x}		+
+		\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+		\bm{y}													&\hspace{1.25em}\mathrel{\#}\bm{x} = \Bigg (
+																							\hspace{-0.50em}
+																							\begin{array}{cccc}
+																								x_1 \\
+																								x_2
+																							\end{array}
+																							\hspace{-0.50em}
+																							\Bigg )
+																							\text{ and } 
+																							\bm{y} = \Bigg (
+																							\hspace{-0.50em}
+																							\begin{array}{cccc}
+																								y_1 \\
+																								y_2
+																							\end{array}
+																							\hspace{-0.50em}
+																							\Bigg ) \\
+[25pt]
+&=&
+\bm{A}\mathbf{x} + \bm{A}\mathbf{y}									&\hspace{1.25em}\mathrel{\#} \bm{A} = \left (
+																							\hspace{-0.50em}
+																							\begin{array}{cccc}
+																								\vertbar & \vertbar \\
+																								a_{1}    & a_{2}    \\
+																								\vertbar & \vertbar 
+																							\end{array}
+																							\hspace{-0.50em}
+																							\right ) \\
+[25pt]
+&\Rightarrow&
+\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+ \bm{A}\mathbf{y}		&\hspace{1.25em}\mathrel{\#} \text{condition \ref{enumerate:distributive} above}
+														
+\end{array}
+\end{equation*}
+
 
 
 \newpage
-\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
-\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
 
 \begin{equation*}
 \begin{array}{llll}
