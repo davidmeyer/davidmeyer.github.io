@@ -346,7 +346,7 @@ Ok, but why?  Consider:
 
 \smallskip
 \noindent
-Consider a matrix $\bm{A} \in \mathbb{R}^{2}$ with $\bm{A} = 
+Consider a matrix $\bm{A} \in \mathbb{R}^{m \times 2}$ with $\bm{A} = 
 	\left (
 		\hspace{-0.50em}
 		\begin{array}{cccc}
@@ -372,8 +372,13 @@ $\bm{y} = \left (
 						y_2
 					\end{array} 
 					\hspace{-0.50em}
-					\right )$.
-Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
+					\right )$
+be vectors in $\mathbb{R}^{2}$. 
+
+
+\smallskip
+\noindent
+Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 
 \smallskip
 \begin{equation*}
@@ -428,7 +433,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 		\end{array}
 		\hspace{-0.50em}
 	\Bigg ) 												&\hspace{1.25em}\mathrel{\#} \text{vector addition in $\mathbb{R}^{2}$} \\
-[25pt]
+[20pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -463,7 +468,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 		\end{array}
 		\hspace{-0.50em}
 	\Big ) 														&\hspace{1.25em}\mathrel{\#} \text{definition of matrix product (mp)} \\
-[25pt]
+[20pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -508,7 +513,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 		\hspace{-0.50em}
 	\right )
 	y_2 														&\hspace{1.25em}\mathrel{\#} \text{mp distributes over addition} \\
-[25pt]
+[20pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -553,7 +558,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 		\hspace{-0.50em}
 	\right )
 	y_2																&\hspace{1.25em}\mathrel{\#} \text{rearrange} \\
-[25pt]
+[20pt]
 &=&
 \left (
 		\hspace{-0.50em}
@@ -592,7 +597,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 			\end{array}
 			\hspace{-0.50em}
 		\Bigg )													&\hspace{1.25em}\mathrel{\#} \text{definition of the mp} \\
-[25pt]
+[20pt]
 &=&
 \left (
 		\hspace{-0.50em}
@@ -630,7 +635,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 																							\end{array}
 																							\hspace{-0.50em}
 																							\Bigg ) \\
-[25pt]
+[20pt]
 &=&
 \bm{A}\mathbf{x} + \bm{A}\mathbf{y}									&\hspace{1.25em}\mathrel{\#} \bm{A} = \left (
 																							\hspace{-0.50em}
@@ -641,7 +646,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ is
 																							\end{array}
 																							\hspace{-0.50em}
 																							\right ) \\
-[25pt]
+[20pt]
 &\Rightarrow&
 \bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+ \bm{A}\mathbf{y}		&\hspace{1.25em}\mathrel{\#} \text{condition \ref{enumerate:distributive} above}
 														
