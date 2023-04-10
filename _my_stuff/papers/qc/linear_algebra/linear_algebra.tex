@@ -107,21 +107,26 @@
 %
 \section{Introduction}
 \label{sec:introduction}
-
-
+%
+%
+%
 \section{Linear Maps}
 \label{sec:linear_maps}
-In linear algebra a linear map is a mapping $\mathbf{V}\to \mathbf{W}$ 
-between two vector spaces which preserves the operations of vector addition 
-and scalar multiplication. Interestingly, the same names and the same 
-definition are also used for the more general case of modules over a ring
-(need module homomorphism cite).
-
-
+In linear algebra a linear map is a mapping $\mathbf{V}\to
+\mathbf{W}$ between two vector spaces which preserves the
+operations of vector addition and scalar
+multiplication. Interestingly, the same names and the same
+definition are also used for the more general case of modules
+over a ring (need module homomorphism cite).
+%
+%
+%
 \begin{definition}
-{\bf Linear Map}: A function $f:\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$
-is called \emph{linear} if for all $\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ 
-and $\lambda \in \mathbb{R}$:
+\label{def:linear_map}
+{\bf Linear Map}: A function $f:\mathbb{R}^{n} \rightarrow
+\mathbb{R}^{m}$ is called \emph{linear} if for all
+$\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ and $\lambda \in
+\mathbb{R}$:
 
 \begin{enumerate}[label=(\alph*)]
 \item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y})$		
@@ -129,7 +134,8 @@ and $\lambda \in \mathbb{R}$:
 \label{enumerate:distributive}
 
 \item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x})$				
-		\hspace{5.75em} \# scalar multiplication is compatible
+		\hspace{5.75em} \# scalar multiplication is
+                compatible (aka homogeneity) 
 \label{enumerate:compatible}
 \end{enumerate}
 
@@ -137,10 +143,10 @@ and $\lambda \in \mathbb{R}$:
 \noindent
 Note that in \ref{enumerate:distributive} the vector addition on
 the left-hand side is in $\mathbb{R}^{n}$ while on the right-hand
-side the vector addition is in $\mathbb{R}^{m}$. Similarly, in 
-\ref{enumerate:compatible} the scalar multiplication on the 
-left-hand side is in $\mathbb{R}^{n}$ while the scalar multiplication
-on the right-hand side is in $\mathbb{R}^{m}$.
+side the vector addition is in $\mathbb{R}^{m}$. Similarly, in
+\ref{enumerate:compatible} the scalar multiplication on the
+left-hand side is in $\mathbb{R}^{n}$ while the scalar
+multiplication on the right-hand side is in $\mathbb{R}^{m}$.
 \end{definition}
 
 \subsection{Examples}
@@ -177,16 +183,16 @@ Aside: $f(x) = x+1$ looks linear but under this definition
 above) $f$ is not linear.
 \end{enumerate}
 
-\subsection{The relationship between linear maps and group homomorphism}
-As we saw above, in linear algebra, a linear map is a function between two vector
-spaces that preserves the vector space structure, i.e., it
-preserves addition and scalar multiplication. A group
-homomorphism, on the other hand, is a function between two groups
-that preserves the group structure, i.e., it preserves the group
-operation.
+\subsection{Relationship between linear maps and group homomorphism}
+As we saw above, in linear algebra, a linear map is a function
+between two vector spaces that preserves the vector space
+structure, i.e., it preserves addition and scalar
+multiplication. A group homomorphism, on the other hand, is a
+function between two groups that preserves the group structure,
+i.e., it preserves the group operation.
 
 
-\subsubsection{Aside: Group Homomorphism}
+\subsubsection{Group Homomorphism}
 Let $(G,\diamond)$ and $(H, \circ)$ be groups. Common usage is to
 use $G$ to refer to $(G,\diamond)$. Similarly, $H$ will refer to
 $(H, \circ)$. Then a mapping $\phi: G \rightarrow H$ is called a
@@ -201,13 +207,13 @@ homomorphism iff
 \noindent
 Essentially, a homomorphism $\phi: G \rightarrow H$ is a way of
 exploring the structure of $H$ by varying $G$ using structure
-preserving transformations. Specifically, $\phi$ preserves the group
-structure.
+preserving transformations. Specifically, $\phi$ preserves the
+group structure.
 
 
 \bigskip
 \noindent
-\textbf{Example:} Define a map
+\begin{example} Define a map 
 
 \begin{equation*}
 \phi : G \rightarrow H
@@ -229,8 +235,10 @@ define $\phi: \mathbb{Z} \rightarrow \mathbb{Z}_2$ by the rule
 
 \bigskip
 \noindent
-It is easy to check that $\phi$ is a homomorphism. Suppose that
-$x$ and $y$ are two integers. Then there are four cases:
+It is not too hard to check that $\phi$ is a homomorphism. 
+Suppose that $x$ and $y$ are two integers. Then there are 
+four cases:
+
 \begin{itemize}
  \item $x$ and $y$ are both even
  
@@ -256,44 +264,54 @@ $\phi(x+y) = \phi(x)+\phi(y)$.
 Thus $\phi$ is a homomorphism. Note that in this example
 $\diamond = +$ (normal addition in $\mathbb{Z}$) and $\circ = +$
 (addition mod 2 in $\mathbb{Z}_2$).
+\end{example}
 
 
 
+
+\noindent
+Not surprisingly, there is a close relationship between linear
+maps and group homomorphisms because any linear map between two
+vector spaces can be seen as a group homomorphism between the
+additive groups of those vector spaces. Specifically, if we have
+a linear map $f: \mathbf{V} \to \mathbf{W}$ between two vector
+spaces $\mathbf{V}$ and $\mathbf{W}$ over the same field
+$\mathbf{F}$, then we can define a group homomorphism from
+$\phi:(\mathbf{V},+) \to (\mathbf{W},+)$ by sending each vector
+$\mathbf{v} \in \mathbf{V}$ to $f(\mathbf{v}) \in \mathbf{W}$.
+This is a group homomorphism because $f$ preserves addition (its
+a linear map, Definition \ref{def:linear_map}
+\ref{enumerate:distributive} above) and hence it preserves the
+group structure.
 
 \bigskip
 \noindent
-Not surprisingly, there is a close relationship between linear maps and group
-homomorphisms because any linear map between two vector spaces
-can be seen as a group homomorphism between the additive groups
-of those vector spaces. Specifically, if we have a linear map $f: \mathbf{V}
-\to \mathbf{W}$ between two vector spaces $\mathbf{V}$ and $\mathbf{W}$ over the same field $\mathbf{F}$,
-then we can define a group homomorphism from $\phi:(\mathbf{V},+) \to (\mathbf{W},+)$ by
-sending each vector $\mathbf{v} \in \mathbf{V}$ to $f(\mathbf{v}) \in \mathbf{W}$. 
-This is a group
-homomorphism because $f$ preserves addition (its a linear map) and hence, it
-preserves the group structure.
+On the other hand, any group homomorphism between two additive
+groups of vector spaces can be seen as a linear map between those
+vector spaces. Specifically, if we have a group homomorphism
+$\phi: (\mathbf{V}, +) \to (\mathbf{W}, +)$ between two additive
+groups of vector spaces, then we can define a linear map from $f:
+\mathbf{V}$ to $\mathbf{W}$ by sending each vector $\mathbf{v}
+\in \mathbf{V}$ to $\phi(\mathbf{v}) \in \mathbf{W}$. This is a
+linear map because $\phi$ preserves vector addition and scalar
+multiplication and therefore it preserves the structure of the
+underlying vector spaces.
 
 \bigskip
 \noindent
-On the other hand, any group homomorphism between two additive groups of
-vector spaces can be seen as a linear map between those vector
-spaces. Specifically, if we have a group homomorphism $\phi: (\mathbf{V}, +) \to (\mathbf{W}, +)$
- between two additive groups of vector spaces, then we
-can define a linear map from $f: \mathbf{V}$ to $\mathbf{W}$ by sending each vector $\mathbf{v} \in \mathbf{V}$
-to $\phi(\mathbf{v}) \in \mathbf{W}$. This is a linear map because $\phi$ preserves vector addition
-and scalar multiplication and therefore it preserves the structure of the underlying vector
-spaces.
+So basically, every linear map $f$ between two vector spaces over
+the same field can be thought of as a group homomorphism $\phi$
+between the additive groups of those vector spaces, and every
+group homomorphism between two groups can be thought of as a
+linear map between the vector spaces over the same field that are
+associated with those groups.
 
 \bigskip
 \noindent
-So basically, every linear map $f$ between two vector spaces over the same field can be thought 
-of as a group homomorphism $\phi$ between the additive groups of those vector spaces, and every 
-group homomorphism between two groups can be thought of as a linear map between the vector 
-spaces over the same field that are associated with those groups.
-
-
-
-
+Summary: A linear transformation is a homomorphism of vector spaces. However, 
+if the vector spaces have additional structure, for example a ring, an algebra, 
+or a lie algebra, then a linear map is not always a homomorphism of those 
+additional structures.
 
 
 
