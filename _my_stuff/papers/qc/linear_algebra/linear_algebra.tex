@@ -49,7 +49,7 @@
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}							% use characters instead of numbers in enumerate
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
 %
 %	watermarks
 %
@@ -137,20 +137,22 @@ $\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ and $\lambda \in
 
 \begin{enumerate}[label=(\alph*)]
 \item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y})$		
-		\hspace{3.50em} \# vector addition is distributive
+		\hspace{3.50em} \# vector addition is \emph{distributive}
 \label{enumerate:distributive}
 
 \item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x})$				
 		\hspace{7.25em} \# scalar multiplication is
-                compatible (aka homogeneity) 
+                \emph{compatible} (aka homogeneity) 
 \label{enumerate:compatible}
 \end{enumerate}
 
 
 \noindent
-Note that in \ref{enumerate:distributive} the vector addition on
-the left-hand side is in $\mathbb{R}^{n}$ while on the right-hand
-side the vector addition is in $\mathbb{R}^{m}$. Similarly, in
+Note that in Definition \ref{def:linear_map}
+\ref{enumerate:distributive} the vector addition on
+the left-hand side is in $\mathbb{R}^{n}$ while on 
+the right-hand side the vector addition is in 
+$\mathbb{R}^{m}$. Similarly, in Definition \ref{def:linear_map} 
 \ref{enumerate:compatible} the scalar multiplication on the
 left-hand side is in $\mathbb{R}^{n}$ while the scalar
 multiplication on the right-hand side is in $\mathbb{R}^{m}$.
@@ -286,7 +288,7 @@ $\mathbf{F}$, then we can define a group homomorphism from
 $\phi:(\mathbf{V},+) \to (\mathbf{W},+)$ by sending each vector
 $\mathbf{v} \in \mathbf{V}$ to $f(\mathbf{v}) \in \mathbf{W}$.
 This is a group homomorphism because $f$ preserves addition (its
-a linear map, definition \ref{def:linear_map}
+a linear map, Definition \ref{def:linear_map}
 \ref{enumerate:distributive} above) and hence it preserves the
 group structure.
 
@@ -329,17 +331,18 @@ $f_{\bm{A}}$ is a linear map
 \bigskip
 \noindent
 Ok, but why?  Here is one way to look at it:
+$f_{\bm{A}}$ a linear map means
 
 \medskip
 \begin{enumerate}[label=(\alph*)]
 \item $f_{\bm{A}}(\mathbf{x}+\mathbf{y}) = f_{\bm{A}}(\mathbf{x})+f_{\bm{A}}(\mathbf{y}) \Rightarrow		
 		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
-		\hspace{1.70em} \# $f_{\bm{A}}$ is distributive (definition \ref{def:linear_map} 
+		\hspace{1.00em} \# $f_{\bm{A}}$ is distributive (Definition \ref{def:linear_map} 
 		\ref{enumerate:distributive} above)
 
 \item $f_{\bm{A}}(\lambda \mathbf{x}) = \lambda f_{\bm{A}}(\mathbf{x}) \Rightarrow				
 		\bm{A}(\lambda \mathbf{x}) = \lambda \bm{A}\mathbf{x}$
-		\hspace{8.55em} \# $f_{\bm{A}}$ is compatible (definition \ref{def:linear_map} 
+		\hspace{8.30em} \# $f_{\bm{A}}$ is compatible (Definition \ref{def:linear_map} 
 		\ref{enumerate:compatible} above)
 \label{enumerate:compatible}
 \end{enumerate}
