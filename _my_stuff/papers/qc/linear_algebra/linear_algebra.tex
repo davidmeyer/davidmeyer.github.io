@@ -323,7 +323,7 @@ additional structures.
 %
 \section{Matrices induce linear maps}
 Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$.
-Now define $f_{\bm{A}}: \mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ with 
+Now define $f_{\bm{A}}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ by 
 $\mathbf{x} \mapsto \bm{A}\mathbf{x}$. 
 
 \medskip
@@ -338,11 +338,13 @@ Ok, but why?  Here's one way to look at it:
 \begin{enumerate}[label=(\alph*)]
 \item $f_{\bm{A}}(\mathbf{x}+\mathbf{y}) = f_{\bm{A}}(\mathbf{x})+f_{\bm{A}}(\mathbf{y}) \Rightarrow		
 		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
-		\hspace{0.70em} (distributive)
+		\hspace{0.70em} ($f_{\bm{A}}$ is distributive; definition \ref{def:linear_map} 
+		\ref{enumerate:distributive} above)
 
 \item $f_{\bm{A}}(\lambda \mathbf{x}) = \lambda f_{\bm{A}}(\mathbf{x}) \Rightarrow				
 		\bm{A}(\lambda \mathbf{x}) = \lambda \bm{A}\mathbf{x}$
-		\hspace{8.50em} (compatible)
+		\hspace{8.50em} ($f_{\bm{A}}$ is compatible; definition \ref{def:linear_map} 
+		\ref{enumerate:compatible} above)
 \label{enumerate:compatible}
 \end{enumerate}
 
@@ -414,7 +416,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 			\hspace{-0.50em}
 		\right )
 	\hspace{-0.25em}
-	\right )                                                &\hspace{3.50em}\mathrel{\#} \text{definitions of $\bm{A}, \mathbf{x}$ and $\mathbf{y}$} \\
+	\right )                                                &\hspace{3.50em}\mathrel{\#} \text{definitions of $\bm{A}$, $\mathbf{x}$, and $\mathbf{y}$} \\
 [20pt]
 &=&
 	\left (
@@ -434,7 +436,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 			x_2 + y_2
 		\end{array}
 		\hspace{-0.50em}
-	\Bigg ) 											&\hspace{3.50em}\mathrel{\#} \text{vector addition in $\mathbb{R}^{2}$} \\
+	\Bigg ) 											&\hspace{3.50em}\mathrel{\#} \text{matrix (vector) addition in $\mathbb{R}^{2}$} \\
 [20pt]
 &=&
 	\left (
