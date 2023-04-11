@@ -137,7 +137,7 @@ $\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ and $\lambda \in
 
 \begin{enumerate}[label=(\alph*)]
 \item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y})$		
-		\hspace{2.00em} \# vector addition is distributive
+		\hspace{3.50em} \# vector addition is distributive
 \label{enumerate:distributive}
 
 \item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x})$				
@@ -324,15 +324,15 @@ Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \math
 Now define $f_{\bm{A}}: \mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ with 
 $\mathbf{x} \mapsto \bm{A}\mathbf{x}$. 
 
-
+\medskip
 \begin{proposition}
 $f_{\bm{A}}$ is a linear map
 
 \bigskip
 \noindent
-Ok, but why?  Consider:
-\end{proposition}
+Ok, but why?  Here's one way to look at it:
 
+\medskip
 \begin{enumerate}[label=(\alph*)]
 \item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y}) \Rightarrow		
 		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
@@ -373,16 +373,15 @@ $\bm{y} = \left (
 					\end{array} 
 					\hspace{-0.50em}
 					\right )$
-be vectors in $\mathbb{R}^{2}$. 
+be vectors in $\mathbb{R}^{2}$. Then
 
 
-\smallskip
-\noindent
-Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 
 \smallskip
 \begin{equation*}
 \begin{array}{llll}
+\bm{A}(\mathbf{x}+\mathbf{y})
+&=&
 	\left (
 		\hspace{-0.50em}
 		\begin{array}{cccc}
@@ -413,7 +412,8 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 			\hspace{-0.50em}
 		\right )
 	\hspace{-0.25em}
-	\right ) 
+	\right ) 											&\hspace{3.50em}\mathrel{\#} \text{definitions of $\bm{A}, \mathbf{x}$ and $\mathbf{y}$} \\
+[20pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -432,7 +432,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 			x_2 + y_2
 		\end{array}
 		\hspace{-0.50em}
-	\Bigg ) 												&\hspace{1.25em}\mathrel{\#} \text{vector addition in $\mathbb{R}^{2}$} \\
+	\Bigg ) 												&\hspace{3.50em}\mathrel{\#} \text{vector addition in $\mathbb{R}^{2}$} \\
 [20pt]
 &=&
 	\left (
@@ -467,7 +467,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 			x_2 + y_2
 		\end{array}
 		\hspace{-0.50em}
-	\Big ) 														&\hspace{1.25em}\mathrel{\#} \text{definition of matrix product (mp)} \\
+	\Big ) 														&\hspace{3.50em}\mathrel{\#} \text{definition of the matrix product} \\
 [20pt]
 &=&
 	\left (
@@ -512,7 +512,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 		\end{array}	
 		\hspace{-0.50em}
 	\right )
-	y_2 														&\hspace{1.25em}\mathrel{\#} \text{mp distributes over addition} \\
+	y_2 														&\hspace{3.50em}\mathrel{\#} \text{matrix product distributes over addition} \\
 [20pt]
 &=&
 	\left (
@@ -557,7 +557,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 		\end{array}	
 		\hspace{-0.50em}
 	\right )
-	y_2																&\hspace{1.25em}\mathrel{\#} \text{rearrange} \\
+	y_2																&\hspace{3.50em}\mathrel{\#} \text{rearrange} \\
 [20pt]
 &=&
 \left (
@@ -596,7 +596,7 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 				y_2
 			\end{array}
 			\hspace{-0.50em}
-		\Bigg )													&\hspace{1.25em}\mathrel{\#} \text{definition of the mp} \\
+		\Bigg )													&\hspace{3.50em}\mathrel{\#} \text{definition of the matrix product} \\
 [20pt]
 &=&
 \left (
@@ -617,8 +617,8 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 			\vertbar & \vertbar 
 		\end{array}
 		\hspace{-0.50em}
-	\right )
-		\bm{y}													&\hspace{1.25em}\mathrel{\#}\bm{x} = \Bigg (
+		\right )
+		\bm{y}													&\hspace{3.50em}\mathrel{\#}\bm{x} = \Bigg (
 																							\hspace{-0.50em}
 																							\begin{array}{cccc}
 																								x_1 \\
@@ -635,9 +635,9 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 																							\end{array}
 																							\hspace{-0.50em}
 																							\Bigg ) \\
-[20pt]
+[10pt]
 &=&
-\bm{A}\mathbf{x} + \bm{A}\mathbf{y}									&\hspace{1.25em}\mathrel{\#} \bm{A} = \left (
+\bm{A}\mathbf{x} + \bm{A}\mathbf{y}									&\hspace{3.50em}\mathrel{\#} \bm{A} = \left (
 																							\hspace{-0.50em}
 																							\begin{array}{cccc}
 																								\vertbar & \vertbar \\
@@ -646,12 +646,15 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 																							\end{array}
 																							\hspace{-0.50em}
 																							\right ) \\
-[20pt]
-&\Rightarrow&
-\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+ \bm{A}\mathbf{y}		&\hspace{1.25em}\mathrel{\#} \text{condition \ref{enumerate:distributive} above}
-														
 \end{array}
 \end{equation*}
+
+\medskip
+\noindent
+So we see that $\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+ \bm{A}\mathbf{y}$ 
+(Definition \ref{def:linear_map} \ref{enumerate:distributive}\label{enumerate:distributive} 
+above \cite{wiki:linear_map}).
+\end{proposition}
 
 
 
@@ -660,14 +663,14 @@ Then $\bm{A}(\mathbf{x}+\mathbf{y})$ equals
 \begin{equation*}
 \begin{array}{llll}
 A^{n \times m} 
-&=& \left [
+&=& \left (
 		\begin{array}{ccc}
 		\horzbar & a_{1} & \horzbar \\
 		\horzbar & a_{2} & \horzbar \\
 				 & \vdots    &          \\
 		\horzbar & a_{n} & \horzbar
 	\end{array}
-	\right ]
+	\right )
 \end{array}
 \end{equation*}
 
@@ -676,13 +679,13 @@ A^{n \times m}
 \begin{equation*}
 \begin{array}{llll}
 A^{T}
-&=& \left [
+&=& \left (
 	\begin{array}{cccc}
 		\vertbar & \vertbar &        & \vertbar \\
 		a_{1}    & a_{2}    & \ldots & a_{n}    \\
 		\vertbar & \vertbar &        & \vertbar 
 	\end{array}
-	\right ]
+	\right )
 \end{array}
 \end{equation*}
 
@@ -694,14 +697,14 @@ A^{T}
 \begin{equation*}
 \begin{array}{llll}
 B^{n \times k} 
-&=& \left [
+&=& \left (
 		\begin{array}{ccc}
 		\horzbar & b_{1} & \horzbar \\
 		\horzbar & b_{2} & \horzbar \\
 				 & \vdots    &          \\
 		\horzbar & b_{n} & \horzbar
 	\end{array}
-	\right ]
+	\right )
 \end{array}
 \end{equation*}
 
@@ -709,7 +712,7 @@ B^{n \times k}
 \begin{array}{llll}
 AB := A^{T}B
 &=&
-\left[
+\left(
 	\begin{array}{cccc}
 		\vertbar & \vertbar &        & \vertbar \\
 		a_{1}    & a_{2}    & \ldots & a_{n}    \\
@@ -723,27 +726,27 @@ AB := A^{T}B
 				 & \vdots    &          \\
 		\horzbar & b_{n} & \horzbar
 	\end{array}
-	\right ] \\
+	\right ) \\
 
 &=&
-	\left [
+	\left (
 		\begin{array}{cccc}
 		a_{1}^{T} b_{1} & a_{1}^{T} b_{2} & \hdots & a_{1}^{T} b_{k} \\
 		a_{2}^{T} b_{1} & a_{2}^{T} b_{2} & \hdots & a_{2}^{T} b_{k} \\
 		\vdots          & \vdots          & \ddots & \vdots       										 \\
 		a_{m}^{T} b_{1} & a_{m}^{T} b_{2} & \hdots & a_{m}^{T} b_{k}
 	\end{array}
-	\right ] \\ \\
+	\right ) \\ \\
 
 &=&
-	\left[
+	\left(
 		\begin{array}{cccc}
 		\langle a_{1}, b_{1} \rangle & \langle  a_{1}, b_{2} \rangle & \hdots & \langle a_{1}, b_{k} \rangle \\
 		\langle a_{2}, b_{1} \rangle & \langle a_{2}, b_{2} \rangle  & \hdots & \langle a_{2}, b_{k} \rangle \\
 		\vdots                       & \vdots                        & \ddots & \vdots       										 \\
 		\langle a_{m}, b_{1} \rangle & \langle a_{m}, b_{2} \rangle  & \hdots & \langle a_{m}, b_{k} \rangle
 	\end{array}
-	\right ] \\
+	\right ) \\
  \end{array}
 \end{equation*}
 
@@ -843,7 +846,7 @@ A^{T}
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
 \bibliographystyle{plain}
-\bibliography{qc,ml}
+\bibliography{qc}
 %
 %	done
 %
