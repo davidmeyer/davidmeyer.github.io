@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 APR 2023 06:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 APR 2023 07:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1453,12 +1453,13 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (48.28464pt too wide) detected at line 650
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+
+Overfull \hbox (33.89577pt too wide) detected at line 652
 []
  []
 
-[3] [4] (./linear_algebra.bbl) [5] (./linear_algebra.aux)
+[4] [5] (./linear_algebra.bbl) [6] (./linear_algebra.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1466,9 +1467,9 @@ Package rerunfilecheck Info: File `linear_algebra.out' has not changed.
 (rerunfilecheck)             Checksum: 3B2DD418D5A500379662004D34EE1F94;998.
  ) 
 Here is how much of TeX's memory you used:
- 52697 strings out of 478994
- 1329403 string characters out of 5858184
- 1977120 words of memory out of 5000000
+ 52698 strings out of 478994
+ 1329409 string characters out of 5858184
+ 1976120 words of memory out of 5000000
  69363 multiletter control sequences out of 15000+600000
  412235 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1491,10 +1492,10 @@ exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on linear_algebra.pdf (5 pages, 182840 bytes).
+Output written on linear_algebra.pdf (6 pages, 183037 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

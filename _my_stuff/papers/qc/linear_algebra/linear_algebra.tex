@@ -319,6 +319,8 @@ if the vector spaces have additional structure, for example a ring, an algebra,
 or a lie algebra, then a linear map is not always a homomorphism of those 
 additional structures.
 
+
+\newpage
 \section{Matrices induce linear maps}
 Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$.
 Now define $f_{\bm{A}}: \mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ with 
@@ -334,11 +336,11 @@ Ok, but why?  Here's one way to look at it:
 
 \medskip
 \begin{enumerate}[label=(\alph*)]
-\item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y}) \Rightarrow		
+\item $f_{\bm{A}}(\mathbf{x}+\mathbf{y}) = f_{\bm{A}}(\mathbf{x})+f_{\bm{A}}(\mathbf{y}) \Rightarrow		
 		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
-		\hspace{1.25em} (distributive)
+		\hspace{0.70em} (distributive)
 
-\item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x}) \Rightarrow				
+\item $f_{\bm{A}}(\lambda \mathbf{x}) = \lambda f_{\bm{A}}(\mathbf{x}) \Rightarrow				
 		\bm{A}(\lambda \mathbf{x}) = \lambda \bm{A}\mathbf{x}$
 		\hspace{8.50em} (compatible)
 \label{enumerate:compatible}
@@ -557,7 +559,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 		\end{array}	
 		\hspace{-0.50em}
 	\right )
-	y_2									&\hspace{3.50em}\mathrel{\#} \text{rearrange (vector addition is commutative) } \\
+	y_2									&\hspace{3.50em}\mathrel{\#} \text{vector addition is commutative} \\
 [20pt]
 &=&
 \left (
