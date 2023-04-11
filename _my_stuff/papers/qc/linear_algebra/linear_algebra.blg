@@ -2,45 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: linear_algebra.aux
 The style file: plain.bst
+I found no \citation commands---while reading file linear_algebra.aux
 Database file #1: qc.bib
-You've used 1 entry,
+You've used 0 entries,
             2118 wiz_defined-function locations,
-            503 strings with 4205 characters,
-and the built_in function-call counts, 237 in all, are:
-= -- 22
-> -- 7
+            497 strings with 4003 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 3
-- -- 2
-* -- 8
-:= -- 46
-add.period$ -- 4
-call.type$ -- 1
-change.case$ -- 4
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 23
-format.name$ -- 2
-if$ -- 49
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 9
-num.names$ -- 2
-pop$ -- 8
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 1
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 14
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)

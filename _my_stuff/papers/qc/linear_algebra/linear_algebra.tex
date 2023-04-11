@@ -236,7 +236,7 @@ define $\phi: \mathbb{Z} \rightarrow \mathbb{Z}_2$ by the rule
   \phi(x) =
     \begin{cases}
       0 & \text{if $x$ is even} \\
-      1 & \text{if $x$ is odd}\\
+      1 & \text{if $x$ is odd}  \\
     \end{cases}       
 \end{equation*}
 
@@ -255,7 +255,7 @@ four cases:
  
  \item $x$ and $y$ are both odd
   
-In this case $\phi(x+y) = 0$ (odd + odd = even).  Here $\phi(x) +
+In this case $\phi(x+y) = 0$ (odd + odd = even). Here $\phi(x) +
 \phi(y) = 1 + 1 = 2 \mod 2 = 0$, so $\phi(x+y) = \phi(x) +
 \phi(y) = 1 + 1 = 2 \mod 2 = 0$.
 
@@ -322,8 +322,8 @@ additional structures.
 %
 %
 \section{Matrices induce linear maps}
-Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$.
-Now define $f_{\bm{A}}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ by 
+Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$,
+and define $f_{\bm{A}}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ by 
 $\mathbf{x} \mapsto \bm{A}\mathbf{x}$. 
 
 \medskip
@@ -338,17 +338,16 @@ Ok, but why?  Here's one way to look at it:
 \begin{enumerate}[label=(\alph*)]
 \item $f_{\bm{A}}(\mathbf{x}+\mathbf{y}) = f_{\bm{A}}(\mathbf{x})+f_{\bm{A}}(\mathbf{y}) \Rightarrow		
 		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
-		\hspace{0.70em} \# $f_{\bm{A}}$ is distributive (definition \ref{def:linear_map} 
+		\hspace{1.70em} \# $f_{\bm{A}}$ is distributive (definition \ref{def:linear_map} 
 		\ref{enumerate:distributive} above)
 
 \item $f_{\bm{A}}(\lambda \mathbf{x}) = \lambda f_{\bm{A}}(\mathbf{x}) \Rightarrow				
 		\bm{A}(\lambda \mathbf{x}) = \lambda \bm{A}\mathbf{x}$
-		\hspace{8.50em} \# $f_{\bm{A}}$ is compatible (definition \ref{def:linear_map} 
+		\hspace{8.55em} \# $f_{\bm{A}}$ is compatible (definition \ref{def:linear_map} 
 		\ref{enumerate:compatible} above)
 \label{enumerate:compatible}
 \end{enumerate}
 
-\smallskip
 \noindent
 For example, let $\bm{A} \in \mathbb{R}^{m \times 2}$ with $\bm{A} = 
 	\left (
@@ -380,8 +379,6 @@ $\bm{y} = \left (
 be vectors in $\mathbb{R}^{2}$. Then
 
 
-
-\smallskip
 \begin{equation*}
 \begin{array}{llll}
 \bm{A}(\mathbf{x}+\mathbf{y})
@@ -653,15 +650,30 @@ be vectors in $\mathbb{R}^{2}$. Then
 \end{array}
 \end{equation*}
 
-
-\medskip
 \noindent
 So we see that $\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+\bm{A}\mathbf{y}$.
 \end{proposition}
 
 
 
-\newpage
+%
+%
+%
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/pmsddwthrchw}
+%
+%
+\section*{Appendix A}
 
 \begin{equation*}
 \begin{array}{llll}
@@ -770,78 +782,6 @@ A^{T}
 \end{array}
 \end{equation*}
 
-
-
-
-%
-%
-%	show a derivation/proof
-%
-% \begin{equation*}
-% \begin{array}{llll}
-% x
-% &=& y				&\qquad \mathrel{\#} \text{comment or} \\
-% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
-% [10pt]
-% \end{array}
-% \end{equation*}
-%
-%
-%
-%	include an image
-%
-% \begin{figure}
-% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
-% \caption{X}
-% \label{fig:X}
-% \end{figure}
-%
-%	How to put a box around a figure
-%
-% \begin{figure}[H]
-%  \centering
-%   \fbox{\begin{minipage}{34em}
-%    \begin{equation*}
-%     \begin{array}{rlrlrlr}
-%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
-%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
-%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
-%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
-%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
-%     \end{array}
-%    \end{equation*}
-%  \end{minipage}}
-%  \caption{A Few Example Kaprekar Numbers}
-%\end{figure}
-%
-%	
-%	How to wrap (and resize) your tikzpicture in a figure
-%
-% \begin{figure}[H]
-% \centering
-%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
-%    \begin{tikzpicture} 
-%     .....
-%    \end{tikzpicture}					% end tikzpicture
-%  }									% end resizebox
-% \caption{Some Figure}
-% \label{fig:some_figure}
-% \end{figure}
-%
-%
-%
-% \section{Conclusions}
-% \label{sec:conclusions}
-%
-%
-%
-% \section{Acknowledgements}
-% \label{sec:acknowledgements}
-%
-%	LaTeX source on overleaf.com
-%
-% \section*{\LaTeX \hspace{0.025 mm} Source}
-% \url{}
 %
 %	get a bibliography
 %
