@@ -310,11 +310,7 @@ the same field can be thought of as a group homomorphism $\phi$
 between the additive groups of those vector spaces, and every
 group homomorphism between two groups can be thought of as a
 linear map between the vector spaces over the same field that are
-associated with those groups.
-
-\bigskip
-\noindent
-Summary: A linear map is a homomorphism of vector spaces. However, 
+associated with those groups. So a linear map is a homomorphism of vector spaces. However, 
 if the vector spaces have additional structure, for example a ring, an algebra, 
 or a lie algebra, then a linear map is not always a homomorphism of those 
 additional structures.
@@ -323,7 +319,7 @@ additional structures.
 %
 \section{Matrices induce linear maps}
 Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$,
-and define $f_{\bm{A}}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ by 
+and define $f_{\bm{A}}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ such that 
 $\mathbf{x} \mapsto \bm{A}\mathbf{x}$. 
 
 \medskip
@@ -332,7 +328,7 @@ $f_{\bm{A}}$ is a linear map
 
 \bigskip
 \noindent
-Ok, but why?  Here's one way to look at it:
+Ok, but why?  Here is one way to look at it:
 
 \medskip
 \begin{enumerate}[label=(\alph*)]
@@ -414,7 +410,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 		\right )
 	\hspace{-0.25em}
 	\right )                                                &\hspace{3.50em}\mathrel{\#} \text{definitions of $\bm{A}$, $\mathbf{x}$, and $\mathbf{y}$} \\
-[20pt]
+[25pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -434,7 +430,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 		\end{array}
 		\hspace{-0.50em}
 	\Bigg ) 												&\hspace{3.50em}\mathrel{\#} \text{matrix (vector) addition in $\mathbb{R}^{2}$} \\
-[20pt]
+[25pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -469,7 +465,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 		\end{array}
 		\hspace{-0.50em}
 	\Big ) 												&\hspace{3.50em}\mathrel{\#} \text{definition of the matrix product} \\
-[20pt]
+[25pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -514,7 +510,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 		\hspace{-0.50em}
 	\right )
 	y_2 												&\hspace{3.50em}\mathrel{\#} \text{matrix product distributes over addition} \\
-[20pt]
+[25pt]
 &=&
 	\left (
 		\hspace{-0.50em}
@@ -559,7 +555,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 		\hspace{-0.50em}
 	\right )
 	y_2													&\hspace{3.50em}\mathrel{\#} \text{vector addition is commutative} \\
-[20pt]
+[25pt]
 &=&
 \left (
 		\hspace{-0.50em}
@@ -598,7 +594,7 @@ be vectors in $\mathbb{R}^{2}$. Then
 			\end{array}
 			\hspace{-0.50em}
 		\Bigg )											&\hspace{3.50em}\mathrel{\#} \text{definition of the matrix product} \\
-[20pt]
+[25pt]
 &=&
 \left (
 		\hspace{-0.50em}
@@ -650,8 +646,12 @@ be vectors in $\mathbb{R}^{2}$. Then
 \end{array}
 \end{equation*}
 
+\bigskip
 \noindent
-So we see that $\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+\bm{A}\mathbf{y}$.
+So $\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+\bm{A}\mathbf{y}$. Here 
+we see that the matrix $\bm{A}$, which is just a table of real (or complex) 
+numbers, induces the abstract linear map $f_{\bm{A}}$ (and vice versa) 
+\cite{wiki:linear_map}.
 \end{proposition}
 
 
@@ -673,8 +673,19 @@ So we see that $\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+\bm{A}\mathbf{y
 \url{https://www.overleaf.com/read/pmsddwthrchw}
 %
 %
-\section*{Appendix A}
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+\section*{Appendix A: Draw some matrices}
 
+\bigskip
 \begin{equation*}
 \begin{array}{llll}
 A^{n \times m} 
@@ -781,15 +792,6 @@ A^{T}
 	\right )
 \end{array}
 \end{equation*}
-
-%
-%	get a bibliography
-%
-%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
-%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
-%
-\bibliographystyle{plain}
-\bibliography{qc}
 %
 %	done
 %
