@@ -41,6 +41,8 @@
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{color}
+\usepackage{xcolor}
+\usepackage{ifthen}
 \usepackage{float}
 \usepackage{braket}
 \usepackage{siunitx}
@@ -266,12 +268,11 @@ terms a telescoping series has the following property:
 \smallskip
 \section{Triangular Numbers}
 The example I want to explore here is the infinite sum of the
-reciprocals of the triangular numbers
-\cite{wiki:triangle_numbers}.  So first, what is a triangular
-number? The first six triangular numbers are depicted as
-triangles in Figure \ref{fig:triangle_numbers}. We can see from
-the figure that a triangular number $T_n$ is the sum of the
-integers from 1 to $n$.
+reciprocals of the triangular numbers \cite{wiki:triangle_numbers}.  
+So first, what is a triangular number? The first six triangular 
+numbers are depicted as triangles in Figure \ref{fig:triangle_numbers}. 
+We can see from the figure that a triangular number $T_n$ is the sum 
+of the integers from 1 to $n$.
   
 \bigskip
 \begin{figure}[H]
@@ -307,17 +308,41 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 As an aside, there is an interesting relationship between the
 triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle}: 
 if you start with the number 1 on the right side of row 3 of Pascal's 
-Triangle the corresponding diagonal contains the triangular numbers. 
-This is shown in blue in Figure \ref{fig:pascals_triangle}.
+Triangle (row 2 if you count from 0) the corresponding diagonal 
+contains the triangular numbers. This is shown in blue in Figure 
+\ref{fig:pascals_triangle}.
 
 \bigskip
 \begin{figure}[H]
-\center{\includegraphics[frame,scale=0.40] {images/pascals_triangle.jpg}}
+\center{\includegraphics[frame,scale=0.45] {images/pascals_triangle.jpg}}
 \caption{Number patterns in Pascal's Triangle \cite{mathaletes_corner_pascals_triangle}}
 \label{fig:pascals_triangle}
 \end{figure}
 
+\bigskip
+\noindent
+Figure \ref{fig:pascals_triangle_binomial_coefficients} shows Pascal's Triangle
+with binomial coefficients (the triangular numbers are shown in {\color{blue}{blue}}):
+%
+%	Draw Pascal's Triangle with binomial coefficients
+%
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture} [framed,scale=0.90]											% put a frame on the tikzpicture 
+		\foreach \n in {0,...,8} {
+		  \foreach \k in {0,...,\n} {
+		    \node at (\k-\n/2,-\n) {
+		      \ifnum \k = 2	{\color{blue} $\binom{\n}{\k}$}
+		      \else 		{$\binom{\n}{\k}$}
+			  \fi};
+		  }
+		}
+\end{tikzpicture}
+\caption{Pascal's Triangle with Binomial Coefficients}
+\label{fig:pascals_triangle_binomial_coefficients}
+\end{figure}
 
+\bigskip
 \section{The Sum of the Reciprocals of the Triangular Numbers}
 \label{sec:reciprocals}
 All of this is good, but back to the question: what is the sum of
@@ -368,17 +393,17 @@ numbers is twice this limit. So we know that \par}
 1 =  2 
 \end{equation*}
 
-\smallskip
+
 \section{Conclusions}
 Equation (\ref{eqn:trick_1}) turns out to be very useful,
 especially when evaluating infinite telescoping series. We also
 saw in Section \ref{sec:reciprocals} that interestingly, the
 infinite sum of the reciprocals of the triangular numbers equals
-two, that is
-
+two, that is, 
 
 \begin{equation*}
-\sum \limits_{n=1}^{\infty} \frac{1}{T_n} =  2
+\displaystyle \sum \limits_{n=1}^{\infty} 
+\frac{1}{T_n} =  2
 \end{equation*}
 
 \bigskip
