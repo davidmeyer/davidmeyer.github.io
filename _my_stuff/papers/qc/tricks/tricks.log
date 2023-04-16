@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  16 APR 2023 08:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  16 APR 2023 08:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1770,7 +1770,7 @@ Package rerunfilecheck Info: File `tricks.out' has not changed.
 Here is how much of TeX's memory you used:
  51957 strings out of 478994
  1313290 string characters out of 5858184
- 1956415 words of memory out of 5000000
+ 1956416 words of memory out of 5000000
  68628 multiletter control sequences out of 15000+600000
  417898 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
