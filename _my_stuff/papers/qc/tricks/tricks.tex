@@ -305,23 +305,27 @@ T_{n} = \sum _{k=1}^{n} k=1+2+3+\dotsb +n = {\frac {n(n+1)}{2}} = {n+1 \choose 2
 \bigskip
 \noindent
 As an aside, there is an interesting relationship between the
-triangular numbers and Pascal's Triangle \cite{wiki:pascals_triangle}: 
-if you start with the number 1 on the right side of row 3 of Pascal's 
-Triangle (row 2 if you count from 0) the corresponding diagonal 
-contains the triangular numbers. This is shown in blue in Figure 
-\ref{fig:pascals_triangle}.
-
+triangular numbers and Pascal's Triangle
+\cite{wiki:pascals_triangle}: if you start at the second row
+(counting from zero) and second column (again counting from zero)
+of Pascal's Triangle the corresponding diagonal contains the
+triangular numbers. This is shown in Figure
+\ref{fig:pascals_triangle}. Figure
+\ref{fig:pascals_triangle_binomial_coefficients} shows Pascal's
+Triangle with binomial coefficients (the triangular numbers are
+shown in {\color{blue}{blue}}).
+%
+%
+%
+\medskip
 \bigskip
 \begin{figure}[H]
 \center{\includegraphics[frame,scale=0.45] {images/pascals_triangle.jpg}}
 \caption{Number patterns in Pascal's Triangle \cite{mathaletes_corner_pascals_triangle}}
 \label{fig:pascals_triangle}
 \end{figure}
-
-\bigskip
-\noindent
-Figure \ref{fig:pascals_triangle_binomial_coefficients} shows Pascal's Triangle
-with binomial coefficients (the triangular numbers are shown in {\color{blue}{blue}}):
+%
+\newpage
 %
 %	Draw Pascal's Triangle with binomial coefficients. The triangular numbers
 %	are shown in blue.
@@ -331,17 +335,17 @@ with binomial coefficients (the triangular numbers are shown in {\color{blue}{bl
 %	Draw the picture
 %
 \begin{figure}[H]
-\centering                                                              % center everything
-	\begin{tikzpicture} [framed,scale=0.90]                             % put a frame on the tikzpicture 
+\centering																% center everything
+	\begin{tikzpicture} [framed,scale=0.90]								% put a frame on the tikzpicture 
 		\foreach \n in {0,...,\rows} {                                  % iterate over rows
 		  \foreach \k in {0,...,\n} {                                   % iterate over columns
 		    \node at (\k-\n/2,-\n) {                                    % put the coefficient here
 		      \ifnum \k = 2 {\color{blue} $\mathbf{\binom{\n}{\k}}$}    % k = 2 => triangular number
 		      \else         {\color{black}$\mathbf{\binom{\n}{\k}}$}	% otherwise make it black
-                      \fi};                                             % end \ifnum
-		  }                                                             % end \foreach \k ...
-		}                                                               % end \foreach \n ...
-\end{tikzpicture}
+                      \fi};												% end \ifnum
+		  }																% end \foreach \k ...
+		}																% end \foreach \n ...
+	\end{tikzpicture}													% end tikzpicture
 \caption{Pascal's Triangle with Binomial Coefficients}
 \label{fig:pascals_triangle_binomial_coefficients}
 \end{figure}
