@@ -40,7 +40,6 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
-\usepackage{color}
 \usepackage{xcolor}
 \usepackage{ifthen}
 \usepackage{float}
@@ -327,19 +326,19 @@ with binomial coefficients (the triangular numbers are shown in {\color{blue}{bl
 %	Draw Pascal's Triangle with binomial coefficients. The triangular numbers
 %	are shown in blue.
 %
-\newcommand \rows {8}                                                           % number of rows
+\newcommand \rows {8}                                                   % number of rows
 %
 %	Draw the picture
 %
 \begin{figure}[H]
-\centering                                                                      % center everything
-	\begin{tikzpicture} [framed,scale=0.90]                                 % put a frame on the tikzpicture 
+\centering                                                              % center everything
+	\begin{tikzpicture} [framed,scale=0.90]                             % put a frame on the tikzpicture 
 		\foreach \n in {0,...,\rows} {                                  % iterate over rows
 		  \foreach \k in {0,...,\n} {                                   % iterate over columns
 		    \node at (\k-\n/2,-\n) {                                    % put the coefficient here
 		      \ifnum \k = 2 {\color{blue} $\mathbf{\binom{\n}{\k}}$}    % k = 2 => triangular number
 		      \else         {\color{black}$\mathbf{\binom{\n}{\k}}$}	% otherwise make it black
-                      \fi};                                                     % end \ifnum
+                      \fi};                                             % end \ifnum
 		  }                                                             % end \foreach \k ...
 		}                                                               % end \foreach \n ...
 \end{tikzpicture}
