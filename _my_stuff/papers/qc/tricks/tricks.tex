@@ -327,17 +327,21 @@ with binomial coefficients (the triangular numbers are shown in {\color{blue}{bl
 %	Draw Pascal's Triangle with binomial coefficients. The triangular numbers
 %	are shown in blue.
 %
+\newcommand \rows {8}													% number of rows
+%
+%	Draw the picture
+%
 \begin{figure}[H]
-\centering
-	\begin{tikzpicture} [framed,scale=0.90]											% put a frame on the tikzpicture 
-		\foreach \n in {0,...,8} {
-		  \foreach \k in {0,...,\n} {
-		    \node at (\k-\n/2,-\n) {
-		      \ifnum \k = 2	{\color{blue} $\binom{\n}{\k}$}
-		      \else 		{$\binom{\n}{\k}$}
-			  \fi};
-		  }
-		}
+\centering																% center everything
+	\begin{tikzpicture} [framed,scale=0.90]								% put a frame on the tikzpicture 
+		\foreach \n in {0,...,\rows} {									% iterate over rows
+		  \foreach \k in {0,...,\n} {									% iterate over columns
+		    \node at (\k-\n/2,-\n) {									% put the coefficient here
+		      \ifnum \k = 2	{\color{blue} $\mathbf{\binom{\n}{\k}}$}	% k = 2 => triangular number
+		      \else 		{\color{black}$\mathbf{\binom{\n}{\k}}$}	% otherwise make it black
+			  \fi};														% end \ifnum
+		  }																% end \foreach \k ...
+		}																% end \foreach \n ...
 \end{tikzpicture}
 \caption{Pascal's Triangle with Binomial Coefficients}
 \label{fig:pascals_triangle_binomial_coefficients}
