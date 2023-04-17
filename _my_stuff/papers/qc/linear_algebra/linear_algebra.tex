@@ -655,6 +655,110 @@ we see that the matrix $\bm{A}$, which is just a table of real (or complex)
 numbers, induces the abstract linear map $f_{\bm{A}}$ (and vice versa) 
 \cite{wiki:linear_map}.
 \end{proposition}
+
+\bigskip
+\noindent
+Suppose $f$ is a linear map and $\bm{x} = 
+\left (\begin{array}{cccc} x_1 \\ \vdots \\ x_n \end{array} \right)$. 
+Further, define the canonical basis vectors for $\mathbb{R}^{n}$ as
+follows:
+
+\begin{definition}
+\label{def:canonical_basis_vectors}
+{\bf Canonical Basis Vectors: } The canonical basis vectors for 
+$\mathbb{R}^{n}$ are to be the vectors $\mathbf {e} _{i}$ for
+
+
+\medskip
+\begin{equation*}
+\{\mathbf {e} _{i}: 1 \leq i \leq n\}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is,
+it has a one in the $i^\text{th}$ coordinate (position) and zeros
+everywhere else\footnote{The canonical basis vectors look surprisingly 
+like the one-hot encoding used in machine learning \cite{wiki:one-hot}.}. 
+The basis vectors $\mathbf{e}_i$ have column vector format
+
+\begin{flalign*}
+\mathbf{e}_{1} = 
+\left (
+\begin{array}{llll} 
+1 \\
+0 \\
+\vdots \\
+0 \\
+0
+\end{array}
+\right )
+\!\! , \hspace{0.25em}
+\mathbf{e}_{2} = 
+\left ( 
+\begin{array}{llll}
+0 \\
+1 \\
+\vdots \\
+0 \\
+0
+\end{array}
+\right )
+\!\! ,
+\hdots
+\!\! , \hspace{0.25em}
+\mathbf{e}_{n-1} =
+\left (
+\begin{array}{llll} 
+0 \\
+0 \\
+\vdots \\
+1 \\
+0
+\end{array} 
+\right )
+\!\! , \hspace{0.25em}
+\mathbf{e}_{n} =
+\left (
+\begin{array} {llll} 
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{array}
+\right )
+\end{flalign*}
+\end{definition}
+
+\bigskip
+\noindent
+Here's an interesting observation about linear maps:
+
+\begin{equation*}
+\begin{array}{llll}
+f(\bm{x})
+&=& f(x_1 \bm{e_1} + x_2 \bm{e_2} + \hdots + x_n \bm{e_n})				
+		&\hspace{1.25em} \mathrel{\#} \text{$\bm{x}$ is a linear combination 
+		of basis vectors} \\
+[5pt]
+&=& f(x_1 \bm{e_1}) + f(x_2 \bm{e_2}) + \hdots + f(x_n \bm{e_n})
+		&\hspace{1.25em} \mathrel{\#} \text{$f$ a linear map $\Rightarrow$ 
+		$f$ is distributive (Definition \ref{def:linear_map} 
+		\ref{enumerate:distributive})} \\
+[5pt]
+&=& x_1 f(\bm{e_1}) + x_2 f(\bm{e_2}) + \hdots + x_n f(\bm{e_n})
+		&\hspace{1.25em} \mathrel{\#} \text{$f$ a linear map $\Rightarrow$ 
+		$f$ is compatible (Definition \ref{def:linear_map} 
+		\ref{enumerate:compatible})} \\
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+Since $f(\bm{x}) = x_1 f(\bm{e_1}) + x_2 f(\bm{e_2}) + \hdots + x_n f(\bm{e_n})$
+apparently in order to understand $f$ you only have to know how $f$ maps the
+basis vectors.																						
 %
 %
 %
