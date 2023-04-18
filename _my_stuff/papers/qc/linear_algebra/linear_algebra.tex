@@ -662,26 +662,31 @@ numbers, induces the abstract linear map $f_{\bm{A}}$ (and vice versa)
 Suppose $f$ is a linear map and let $\bm{x} = 
 \left ( \hspace{-0.35em} \begin{array}{cccc} x_1, x_2,\hdots, 
 x_n \end{array} \hspace{-0.35em} \right)$ be a vector in 
-$\mathbb{R}^{n}$. Then define the canonical basis vectors in 
+$\mathbb{R}^{n}$. Then define the canonical unit vectors in 
 $\mathbb{R}^{n}$ as follows:
 
 \begin{definition}
-\label{def:canonical_basis_vectors}
-{\bf Canonical Basis Vectors:} The canonical basis vectors in 
+\label{def:canonical_unit_vectors}
+{\bf Canonical Unit Vectors:} The canonical unit vectors in 
 $\mathbb{R}^{n}$ are the vectors $\mathbf {e}_{i}$ 
 
 
 \medskip
 \begin{equation*}
-\{\mathbf {e} _{i}: 1 \leq i \leq n\}
+B = \{\mathbf {e} _{i}: 1 \leq i \leq n\}
 \end{equation*}
 
 \bigskip
 \noindent
-where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is,
+where $\mathbf{e}_i$ is the $i^\text{th}$ unit vector, that is,
 it has a one in the $i^\text{th}$ coordinate (position) and zeros
-everywhere else\footnote{The canonical basis vectors look surprisingly 
-like the one-hot encoding used in machine learning \cite{wiki:one-hot}.}. 
+everywhere else\footnote{The canonical unit vectors look surprisingly 
+like the one-hot encoding used in machine learning \cite{wiki:one-hot}.}.
+The set $B$ forms a basis, sometimes called the canonical basis, 
+for the vector space $\mathbb{R}^{n}$.
+
+\bigskip
+\noindent
 The basis vectors $\mathbf{e}_i$ have column vector format
 
 \begin{flalign*}
