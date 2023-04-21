@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  10 APR 2023 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 APR 2023 08:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1454,10 +1454,10 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: EF9DF79C9CB193DAB7CEC2E16A588F32;324.
  ) 
 Here is how much of TeX's memory you used:
- 52675 strings out of 478994
- 1329014 string characters out of 5858184
+ 52674 strings out of 478994
+ 1329002 string characters out of 5858184
  1946953 words of memory out of 5000000
- 69360 multiletter control sequences out of 15000+600000
+ 69359 multiletter control sequences out of 15000+600000
  413833 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,5n,131p,748b,723s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1467,7 +1467,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template.pdf (1 page, 61275 bytes).
+Output written on template.pdf (1 page, 61276 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
