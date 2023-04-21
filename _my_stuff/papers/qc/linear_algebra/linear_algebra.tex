@@ -42,14 +42,14 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{float}
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}													% use characters instead of numbers in enumerate
+\usepackage{enumitem}							% use characters instead of numbers in enumerate
 %
 %	watermarks
 %
@@ -117,6 +117,99 @@
 %
 %
 %
+\section{Linear Subspaces}
+\label{sec:linear_subspaces}
+
+\begin{definition} {\bf Linear Subspace:} Let $U \subseteq
+\mathbb{R}^{n}$ with $U \neq \emptyset$.  Then $U$ is called a
+\emph{linear subspace} of $\mathbb{R}^{n}$ if $U$ is closed under
+linear combination \cite{wiki:linear_subspace}.  That is, all 
+linear combinations of $U$ are in $U$. More specifically, let 
+$\mathbf{u}^{(1)},\mathbf{u}^{(2)},\hdots, \mathbf{u}^{(k)}$ be 
+vectors in $U$ and let $\lambda_{1},\lambda_{2},\hdots, \lambda_{k}$ 
+be scalars in $\mathbb{R}$. Then
+
+\begin{equation*}
+\sum\limits_{j=1}^{k} \lambda_{j} \mathbf{u}^{(j)} \in U
+\label{eqn:linear_subspace}
+\end{equation*}
+
+\medskip
+\noindent
+That is, all linear combinations of vectors in $U$ and scalars in
+$\mathbb{R}$ are also in $U$.
+\end{definition}
+
+
+\subsection{Characteristics of Linear Subspaces}
+A $U \subseteq \mathbb{R}^{n}$ is a (linear) subspace iff
+
+\begin{enumerate}[label=(\alph*)]
+\item $\mathbf{0} \in U$ 
+\item $\mathbf{u} \in U$ and $\lambda \in \mathbb{R} 
+	   \Rightarrow \lambda \mathbf{u} \in U$ 
+\item $\mathbf{u}, \mathbf{v} \in U \Rightarrow 
+       \mathbf{u}+\mathbf{v} \in U$
+\end{enumerate}
+
+\medskip
+\noindent
+As an example of a linear subspace, consider a line $U \subset
+\mathbb{R}^{2}$.  Then for vectors $\mathbf{u}, \mathbf{v} \in 
+U$ and $\lambda \in \mathbb{R}$ we have $\lambda \mathbf{u} 
+\in U$ and $\mathbf{u}+\mathbf{v} \in U$. Thus $U$ is a linear 
+subspace of $\mathbb{R}^{2}$. This is (hopefully) shown Figure 
+\ref{fig:linear_subspace}.
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \resizebox{0.45 \textwidth}{!} {              % resize figure here if you want
+    \begin{tikzpicture}[scale=0.5]              % can also scale here
+       \coordinate (O)          at (0,0);       % origin
+       \coordinate (Xstart)     at (-1,0);      % x-axis 
+       \coordinate (Xend)       at (10,0);      % x-axis
+       \coordinate (Ystart)     at (0,-1);      % y-axis
+       \coordinate (Yend)       at (0,7.5);     % y-axis
+       \coordinate (EP)         at (7,5);       % endpoint (U)
+       \coordinate (SP)         at (-2.8,-2);   % start point (U)
+       \coordinate (uEP)        at (1.4,1);     % end point (u)
+       \coordinate (vEP)        at (2.8,2);     % end point (v)
+       \coordinate (u+vEP)      at (4.2,3);     % end point (u+vEP)
+%	
+%	draw axes and linear subspace U
+%
+       \draw[thin,->,black] (Xstart) -- (Xend) node[right] {$x$};      % x axis
+       \draw[thin,->,black] (Ystart) -- (Yend) node[above] {$y$};      % y axis
+       \draw[thick,magenta] (SP) -- (EP) node [right,xshift=1.50mm,yshift=1.50mm] 
+                        {\color{black}${\color{magenta} U} \subset \mathbb{R}^{2}$}; 
+%
+%	draw vectors u, v and u+v
+%    
+		\draw[thick,green,->](O) -- (uEP) node
+                     [right,below,xshift=1.25mm,yshift=-0.50mm] 
+                     {$\color{green}\mathbf{u}$}; 
+		\draw[thick,red,->](uEP) -- (vEP) node
+                     [right,xshift=0.25mm,yshift=-0.50mm]
+                     {${\color{red}\mathbf{v}}
+                       {\color{black}=} 
+                       {\color{black} \lambda}
+                       {\color{green}\mathbf{u}}$};  
+		\draw[thick,blue,->](vEP) -- (u+vEP) node
+                     [right,xshift=0.25mm,yshift=-0.50mm]  
+                     {${\color{green}\mathbf{u}}
+                       {\color{black} +}
+                       {\color{red}\mathbf{v}}$}; 
+   \end{tikzpicture}
+ }
+\caption{The line $U$ is a linear subspace of $\mathbb{R}^{2}$}
+\label{fig:linear_subspace}
+\end{figure}
+
+
+%
+%
+%
 \section{Linear Maps}
 \label{sec:linear_maps}
 In linear algebra a linear map is a mapping $\mathbf{V}\to
@@ -149,13 +242,13 @@ $\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ and $\lambda \in
 
 \noindent
 Note that in Definition \ref{def:linear_map}
-\ref{enumerate:distributive} the vector addition on
-the left-hand side is in $\mathbb{R}^{n}$ while on 
-the right-hand side the vector addition is in 
-$\mathbb{R}^{m}$. Similarly, in Definition \ref{def:linear_map} 
-\ref{enumerate:compatible} the scalar multiplication on the
-left-hand side is in $\mathbb{R}^{n}$ while the scalar
-multiplication on the right-hand side is in $\mathbb{R}^{m}$.
+\ref{enumerate:distributive} the vector addition on the left-hand
+side is in $\mathbb{R}^{n}$ while on the right-hand side the
+vector addition is in $\mathbb{R}^{m}$. Similarly, in Definition
+\ref{def:linear_map} \ref{enumerate:compatible} the scalar
+multiplication on the left-hand side is in $\mathbb{R}^{n}$ while
+the scalar multiplication on the right-hand side is in
+$\mathbb{R}^{m}$.
 \end{definition}
 
 \subsection{Examples}
@@ -320,9 +413,10 @@ is not always a homomorphism of those additional structures.
 %
 %
 \section{Matrices Induce Linear Maps}
-Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and $\mathbf{x} \in \mathbb{R}^{n}$,
-and define $f_{\bm{A}}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ such that 
-$\mathbf{x} \mapsto \bm{A}\mathbf{x}$. 
+Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and
+$\mathbf{x} \in \mathbb{R}^{n}$, and define $f_{\bm{A}}:
+\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ such that $\mathbf{x}
+\mapsto \bm{A}\mathbf{x}$.
 
 \medskip
 \begin{proposition}
@@ -651,18 +745,19 @@ be vectors in $\mathbb{R}^{2}$. Then
 
 \bigskip
 \noindent
-So $\bm{A}(\mathbf{x}+\mathbf{y}) = \bm{A}\mathbf{x}+\bm{A}\mathbf{y}$. Here 
-we see that the matrix $\bm{A}$, which is just a table of real (or complex) 
-numbers, induces the abstract linear map $f_{\bm{A}}$ (and vice versa) 
+So $\bm{A}(\mathbf{x}+\mathbf{y}) =
+\bm{A}\mathbf{x}+\bm{A}\mathbf{y}$. Here we see that the matrix
+$\bm{A}$, which is just a table of real (or complex) numbers,
+induces the abstract linear map $f_{\bm{A}}$ (and vice versa)
 \cite{wiki:linear_map}.
 \end{proposition}
 
 \bigskip
 \noindent
-Suppose $f$ is a linear map and let $\bm{x} = 
-\left ( \hspace{-0.35em} \begin{array}{cccc} x_1, x_2,\hdots, 
-x_n \end{array} \hspace{-0.35em} \right)$ be a vector in 
-$\mathbb{R}^{n}$. Then define the canonical unit vectors in 
+Suppose $f$ is a linear map and let $\bm{x} = \left
+( \hspace{-0.35em} \begin{array}{cccc} x_1, x_2,\hdots,
+x_n \end{array} \hspace{-0.35em} \right)$ be a vector in
+$\mathbb{R}^{n}$. Then define the canonical unit vectors in
 $\mathbb{R}^{n}$ as follows:
 
 \begin{definition}
@@ -680,10 +775,11 @@ B = \{\mathbf {e} _{i}: 1 \leq i \leq n\}
 \noindent
 where $\mathbf{e}_i$ is the $i^\text{th}$ unit vector, that is,
 it has a one in the $i^\text{th}$ coordinate (position) and zeros
-everywhere else\footnote{The canonical unit vectors look surprisingly 
-like the one-hot encoding used in machine learning \cite{wiki:one-hot}.}.
-The set $B$ forms a basis, sometimes called the canonical basis, 
-for the vector space $\mathbb{R}^{n}$.
+everywhere else\footnote{The canonical unit vectors look
+surprisingly like the one-hot encoding used in machine learning
+\cite{wiki:one-hot}.}.  The set $B$ forms a basis, sometimes
+called the canonical basis, for the vector space
+$\mathbb{R}^{n}$.
 
 \bigskip
 \noindent

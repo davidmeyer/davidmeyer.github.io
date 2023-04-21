@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 APR 2023 07:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 APR 2023 11:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1446,28 +1446,29 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (28.89577pt too wide) detected at line 650
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+
+Overfull \hbox (28.89577pt too wide) detected at line 744
 []
  []
 
-[3]
-Overfull \hbox (13.02113pt too wide) detected at line 762
+[4]
+Overfull \hbox (13.02113pt too wide) detected at line 858
 []
  []
 
-(./linear_algebra.bbl) [4] [5] [6] (./linear_algebra.aux)
+(./linear_algebra.bbl) [5] [6] [7] (./linear_algebra.aux)
 Package rerunfilecheck Info: File `linear_algebra.out' has not changed.
-(rerunfilecheck)             Checksum: 49873082351E03BC4F6ABBD9F9B286C3;1219.
+(rerunfilecheck)             Checksum: 546E8CD1524C33F8794735B6F0126C0C;1587.
  ) 
 Here is how much of TeX's memory you used:
- 52764 strings out of 478994
- 1330200 string characters out of 5858184
- 1977223 words of memory out of 5000000
- 69406 multiletter control sequences out of 15000+600000
+ 52929 strings out of 478994
+ 1333206 string characters out of 5858184
+ 1977416 words of memory out of 5000000
+ 69562 multiletter control sequences out of 15000+600000
  421205 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,15n,131p,754b,799s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,15n,131p,754b,930s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1489,10 +1490,10 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on linear_algebra.pdf (6 pages, 220504 bytes).
+Output written on linear_algebra.pdf (7 pages, 226564 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
