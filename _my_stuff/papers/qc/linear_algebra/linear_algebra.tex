@@ -95,7 +95,7 @@
 %
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
 \DeclareMathOperator{\E}{\mathbb{E}}
-\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\DeclareMathOperator{\bda}{\Big \downarrow}								% big down arrow
 \newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
 %
 %	Title, author and date
@@ -154,14 +154,14 @@ $U \subseteq \mathbb{R}^{n}$ is a (linear) subspace iff
 
 \medskip
 \noindent
-For example, consider a line $U \subset
-\mathbb{R}^{2}$.  Then for vectors $\mathbf{u}, \mathbf{v} \in 
-U$ and $\lambda \in \mathbb{R}$ we have $\lambda \mathbf{u} 
-\in U$ and $\mathbf{u}+\mathbf{v} \in U$. Thus $U$ is a linear 
-subspace of $\mathbb{R}^{2}$. This is shown (hopefully) in Figure 
-\ref{fig:linear_subspace}.
+For example, consider a line $U \subseteq \mathbb{R}^{2}$.  
+Then for all $\mathbf{u}, \mathbf{v} \in U$ and 
+$\lambda \in \mathbb{R}$ we have $\lambda \mathbf{u} \in U$ 
+and $\mathbf{u}+\mathbf{v} \in U$. Thus $U$ is a linear 
+subspace of $\mathbb{R}^{2}$. This is shown (hopefully) in 
+Figure \ref{fig:linear_subspace}.
 %
-%
+%	draw the linear subspace U
 %
 \bigskip
 \begin{figure}[H]
@@ -197,8 +197,8 @@ subspace of $\mathbb{R}^{2}$. This is shown (hopefully) in Figure
 %
        \draw[thin,->,black] (Xstart) -- (Xend) node[right] {$x$};       % x axis
        \draw[thin,->,black] (Ystart) -- (Yend) node[above] {$y$};       % y axis
-       \draw[very thick,magenta] (SP)     -- (EP)   node [right,xshift=1.50mm,yshift=1.50mm] 
-                        {$\color{black} U \subset \mathbb{R}^{2}$}; 
+       \draw[thick,magenta] (SP)     -- (EP)   node [right,xshift=1.50mm,yshift=1.50mm] 
+					 {$\color{black} {\color{magenta} U} \subseteq \mathbb{R}^{2}$}; 
 %
 %	draw vectors u, v and u+v
 %    
