@@ -17,6 +17,7 @@
 \usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,hobby,lindenmayersystems}
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
 %
 %
 %
@@ -62,9 +63,67 @@
 
 
 \begin{document}
+\bigskip
 %
 %
 %
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.50 \textwidth}{!} {                      % resize figure here if you want
+    \begin{tikzpicture}[scale=0.60]                     % can also scale the tikzpicture here
+       \coordinate (O)          at (0,0);               % origin
+       \coordinate (Xstart)     at (-1,0);              % x-axis 
+       \coordinate (Xend)       at (10,0);              % x-axis
+       \coordinate (Ystart)     at (0,-1);              % y-axis
+       \coordinate (Yend)       at (0,8);               % y-axis
+       \coordinate (EP)         at (8,5);               % endpoint (U)
+%
+%
+%
+       \newcommand{\slope} {5/8};                       % the U line goes through the origin so y = mx = \slope*x
+%
+%
+%
+       \coordinate (SP)         at (-2,\slope*-2);      % start point (U)
+       \coordinate (uEP)        at (2,\slope*2);        % end point (u)
+       \coordinate (vEP)        at (3,\slope*3);        % end point (v)
+       \coordinate (u+vEP)      at (5,\slope*5);        % end point (u+vEP)
+%	
+%	draw axes and linear subspace U
+%
+       \draw[thin,->,black] (Xstart) -- (Xend) node[right] {$x$};       % x axis
+       \draw[thin,->,black] (Ystart) -- (Yend) node[above] {$y$};       % y axis
+       \draw[thick,magenta] (SP) -- (EP) node [right,xshift=1.50mm,yshift=1.50mm] 
+                        {$\color{black} U \subset \mathbb{R}^{2}$}; 
+%
+%	draw vectors u, v and u+v
+%    
+		\draw[thick,green,->](O) -- (uEP) node
+                     [right,below,xshift=2.00mm,yshift=0.50mm] 
+                     {$\color{green}\mathbf{u}$}; 
+		\draw[thick,red,->](uEP) -- (vEP) node
+                     [right,xshift=0.25mm,yshift=-1.0mm]
+                     {${\color{red}\mathbf{v}}
+                       {\color{black}=} 
+                       {\color{black} \lambda}
+                       {\color{green}\mathbf{u}}$};  
+		\draw[thick,blue,->](vEP) -- (u+vEP) node
+                     [right,xshift=0.25mm,yshift=-1.25mm]  
+                     {${\color{blue}\mathbf{w}}
+                       {\color{black}=}
+                       {\color{green}\mathbf{u}}
+                       {\color{black} +}
+                       {\color{red}\mathbf{v}}$}; 
+   \end{tikzpicture}
+ }
+\caption{The line $U$ is a linear subspace of $\mathbb{R}^{2}$}
+\label{fig:linear_subspace}
+\end{figure}
+
+
+
+
 %
 % bloch sphere
 %
