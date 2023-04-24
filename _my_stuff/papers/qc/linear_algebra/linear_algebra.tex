@@ -179,18 +179,25 @@ subspace of $\mathbb{R}^{2}$. This is shown (hopefully) in Figure
 %
        \newcommand{\slope} {5/8};                       % the U line goes through the origin so y = mx = \slope*x
 %
+%		Still looking for a reasonable way to get x and y out of a coordinate 
+%		(then I would only need to specify EP). Anyway...
 %
+%		Coordinates are of the form (x,\slope*x). Since the line U goes through
+%		the origin y = mx for some point on the line (I'm using EP = (8,5).
+%		All of this implies that m = y/x = 5/8. 
+%
+%		So coordinates on the line U are of the form (x,(5/8)*x).
 %
        \coordinate (SP)         at (-2,\slope*-2);      % start point (U)
        \coordinate (uEP)        at (2,\slope*2);        % end point (u)
        \coordinate (vEP)        at (3,\slope*3);        % end point (v)
-       \coordinate (u+vEP)      at (5,\slope*5);        % end point (u+vEP)
+       \coordinate (u+vEP)      at (6,\slope*6);        % end point (u+vEP)
 %	
 %	draw axes and linear subspace U
 %
        \draw[thin,->,black] (Xstart) -- (Xend) node[right] {$x$};       % x axis
        \draw[thin,->,black] (Ystart) -- (Yend) node[above] {$y$};       % y axis
-       \draw[thick,magenta] (SP) -- (EP) node [right,xshift=1.50mm,yshift=1.50mm] 
+       \draw[very thick,magenta] (SP)     -- (EP)   node [right,xshift=1.50mm,yshift=1.50mm] 
                         {$\color{black} U \subset \mathbb{R}^{2}$}; 
 %
 %	draw vectors u, v and u+v
