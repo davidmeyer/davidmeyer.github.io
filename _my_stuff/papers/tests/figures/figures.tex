@@ -61,8 +61,16 @@
 
 \usepackage{tikz-3dplot}
 
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
 
 \begin{document}
+
 \bigskip
 %
 %
@@ -78,6 +86,11 @@
        \coordinate (Ystart)     at (0,-1);              % y-axis
        \coordinate (Yend)       at (0,8);               % y-axis
        \coordinate (EP)         at (8,5);               % endpoint (U)
+       
+\gettikzxy{(EP)}{\slopex}{\slopey}
+
+\node [] {\slopey /\slopex};
+
 %
 %
 %
