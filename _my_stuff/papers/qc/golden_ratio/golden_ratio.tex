@@ -137,7 +137,7 @@ So \par}
 [8pt]
 &=&{\displaystyle \ln | \sec y + \tan y | \Big |_{0}^{\arctan \frac{1}{2}}}			
 		&\; \mathrel{\#} \text{integral of $\sec y \; dy$ \cite{wiki:integral_of_secant} 
-		                       and the FToC} \\
+		                       and the FToC \cite{ftoc}} \\
 [14pt]
 &=& \ln | \sec (\arctan \frac{1}{2}) + \tan (\arctan \frac{1}{2}) |  - \ln |\sec 0 + \tan 0 |
 		&\; \mathrel{\#} \text{expand previous line} \\
@@ -176,15 +176,42 @@ get the result is to recognize that the integral is the inverse hyperbolic
 sine and then use its logarithmic form \cite{inverse_hyperbolic_sine}:
 
 \medskip
-\begin{equation*}
+\begin{equation}
 \int \dfrac{1}{\sqrt{x^{2} + 1}} \; dx = \sinh^{-1} x = 
 \ln \left (x + \sqrt{x^{2} + 1} \right )
-\end{equation*}
+\label{eqn:ihs}
+\end{equation}
 
 \bigskip
 \noindent
-Then the golden ratio is just one particular choice of upper endpoint
-of the integral.
+Then the golden ratio is just a particular choice of the upper 
+endpoint of the integral, in particular, $\frac{1}{2}$. More 
+specifically:
+
+\begin{equation*}
+\begin{array}{llll} 
+{\displaystyle \int_{0}^{\frac{1}{2}} \dfrac{1}{\sqrt{x^{2} + 1}} \;  dx} 
+&=&	{\displaystyle \ln \left (x + \sqrt{x^{2} + 1} \right ) \bigg |_{0}^{\frac{1}{2}}}
+		&\hspace{3 em} \mathrel{\#} \text{Equation (\ref{eqn:ihs}) and the FToC} \\
+[12pt]
+&=& {\displaystyle \ln \left ( \frac{1}{2} + \sqrt{\left (\frac{1}{2} \right )^{2} + 1} \right )} -
+	{\displaystyle \ln \left ( 0 + \sqrt{0^{2} + 1} \right )}
+		&\hspace{3 em} \mathrel{\#} \text{difference of endpoints (FToC)}\\
+[12pt]
+&=& {\displaystyle \ln \left ( \frac{1}{2} + \sqrt{\frac{5}{4}} \right )} -
+	{\displaystyle \ln 1}
+		&\hspace{3 em} \mathrel{\#} \text{simplify}\\
+[12pt]
+&=& {\displaystyle \ln \left ( \frac{1}{2} + \sqrt{\frac{5}{4}} \right )}
+		&\hspace{3 em} \mathrel{\#} \ln 1 = 0\\
+[12pt]
+&=& {\displaystyle \ln \left ( \frac{1 + \sqrt{5}}{2} \right )}
+		&\hspace{3 em} \mathrel{\#} {\displaystyle \frac{1}{2} + \sqrt{\frac{5}{4}} = \frac{1 + \sqrt{5}}{2}} \\
+[12pt]
+&=& {\displaystyle \ln \phi}
+		&\hspace{3 em} \mathrel{\#} {\displaystyle \phi = \frac{1 + \sqrt{5}}{2}}
+\end{array}
+\end{equation*}
 %
 %	LaTeX source on overleaf.com
 %
