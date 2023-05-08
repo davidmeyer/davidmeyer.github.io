@@ -171,6 +171,20 @@ So \par}
 %
 %
 \section*{Acknowledgements}
+Paul Masson (@paulmasson@mathstodon.xyz) pointed out that a faster way to 
+get the result is to recognize that the integral is the inverse hyperbolic 
+sine and then use its logarithmic form \cite{inverse_hyperbolic_sine}:
+
+\medskip
+\begin{equation*}
+\int \dfrac{1}{\sqrt{x^{2} + 1}} \; dx = \sinh^{-1} x = 
+\ln \left (x + \sqrt{x^{2} + 1} \right )
+\end{equation*}
+
+\bigskip
+\noindent
+Then the golden ratio is just one particular choice of upper endpoint
+of the integral.
 %
 %	LaTeX source on overleaf.com
 %
