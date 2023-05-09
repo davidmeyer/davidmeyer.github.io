@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 MAY 2023 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 MAY 2023 05:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1448,7 +1448,7 @@ Package rerunfilecheck Info: File `golden_ratio.out' has not changed.
 Here is how much of TeX's memory you used:
  51773 strings out of 478994
  1309832 string characters out of 5858184
- 1947519 words of memory out of 5000000
+ 1947518 words of memory out of 5000000
  68477 multiletter control sequences out of 15000+600000
  414716 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1467,7 +1467,7 @@ xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on golden_ratio.pdf (2 pages, 153686 bytes).
+Output written on golden_ratio.pdf (2 pages, 153937 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
