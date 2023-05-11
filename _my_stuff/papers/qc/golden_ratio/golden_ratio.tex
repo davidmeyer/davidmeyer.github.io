@@ -237,43 +237,44 @@ Then we know that
 \bigskip
 \noindent
 Equation (\ref{eqn:integral_equals_ln_c}) holds for $c \in \mathbb{Z}, 
-\, \mathbb{R}, \, \mathbb{C}$, prime, $\hdots$ [@paulmasson@mathstodon.xyz].
+\, \mathbb{R}, \, \mathbb{C}$, $\hdots$ [@paulmasson@mathstodon.xyz].
 
 \bigskip
 \noindent
 If we take $x = \frac{1}{2}$ 
 then $c = x + \sqrt{x^2+1} = \frac{1}{2} + \sqrt{\frac{5}{4}} = \frac{1 + \sqrt{5}}{2} = \phi$.
-Alternatively, we see that $c = \phi$ since:
+Alternatively, we see that $c = \phi$ when the upper limit of integration in
+Equation (\ref{eqn:integral_equals_ln_c}) equals $\frac{1}{2}$, since
 
 
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{c^2 -1}{2c}
 &=& \dfrac{1}{2}			
-				&\hspace{1em} \mathrel{\#} \text{set $x = \frac{c^2 -1}{2c} = \frac{1}{2}$} \\
+				&\hspace{1em} \mathrel{\#} \text{set the upper limit of integration $\left ( \frac{c^2 -1}{2c} \right )$ to $\frac{1}{2}$} \\
 [8pt]
 &\Rightarrow& \dfrac{c^2 -1}{c}	= 1 		
 				&\hspace{1em} \mathrel{\#} \text{multiply both sides by 2} \\
-[12pt]
+[10pt]
 &\Rightarrow& c^2 -1 = c 		
 				&\hspace{1em} \mathrel{\#} \text{multiply both sides by $c$} \\
-[12pt]
+[10pt]
 &\Rightarrow& c^2 -c -1 = 0		
 				&\hspace{1em} \mathrel{\#} \text{$x^2-x-1$ is $\phi$'s 
 								minimal polynomial \cite{wiki:golden_ratio}} \\
-[8pt]
+[6pt]
 &\Rightarrow& c = \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4 (1) (-1)}}{2 \cdot 1}	
 				&\hspace{1em} \mathrel{\#} \text{solve for $c$ using the quadric 
 								formula \cite{wiki:quadradic_formula} } \\
-[8pt]
+[6pt]
 &\Rightarrow& c = \dfrac{1 \pm \sqrt{5}}{2}	
 				&\hspace{1em} \mathrel{\#} \text{simplify} \\
-[8pt]
+[6pt]
 &\Rightarrow& c = \dfrac{1 + \sqrt{5}}{2}	
 				&\hspace{1em} \mathrel{\#} \text{positive root} \\
-[12pt]
+[10pt]
 &\Rightarrow& c = \phi	
-				&\hspace{1em} \mathrel{\#} \text{definition of $\phi$} \\
+				&\hspace{1em} \mathrel{\#} \phi \coloneqq \frac{1 + \sqrt{5}}{2} \\
 
 \end{array}
 \end{equation*}
