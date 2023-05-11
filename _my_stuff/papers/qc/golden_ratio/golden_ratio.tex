@@ -175,12 +175,129 @@ Paul Masson (@paulmasson@mathstodon.xyz) pointed out that a faster way to
 get the result is to recognize that the integral is the inverse hyperbolic 
 sine and then use its logarithmic form \cite{inverse_hyperbolic_sine}:
 
-\medskip
+\bigskip
 \begin{equation}
 \int \dfrac{1}{\sqrt{x^{2} + 1}} \; dx = \sinh^{-1} x = 
 \ln \left (x + \sqrt{x^{2} + 1} \right )
 \label{eqn:ihs}
 \end{equation}
+
+\bigskip
+\noindent
+Then notice that 
+
+\bigskip
+\begin{equation}
+\ln \left (x + \sqrt{x^{2} + 1} \right ) = \ln c \Rightarrow x + \sqrt{x^{2} + 1} = c
+\label{eqn:c}
+\end{equation}
+
+
+\bigskip
+\noindent
+With this we can see that 
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+x + \sqrt{x^{2} + 1} 
+&=& c &\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:c})} \\
+[8pt]
+&\Rightarrow& x^2 + 2x\sqrt{1 + x^2} + 1 + x^2 = c^2 
+			&\hspace{1em} \mathrel{\#} \text{square both sides} \\
+[10pt]
+&\Rightarrow& 2x^2 + 2x\sqrt{1+x^2} + 1 = c^2 
+			&\hspace{1em} \mathrel{\#} \text{collect terms} \\
+[10pt]
+&\Rightarrow& 2x^2 + 2x\sqrt{1+x^2} = c^2 -1  
+			&\hspace{1em} \mathrel{\#} \text{subtract 1 from both sides} \\
+[10pt]
+&\Rightarrow& 2x (x + \sqrt{1+x^2}) = c^2 -1  
+			&\hspace{1em} \mathrel{\#} \text{factor out $2x$} \\
+[10pt]
+&\Rightarrow& 2xc = c^2 -1  
+			&\hspace{1em} \mathrel{\#} x + \sqrt{1+x^{2}} = c \\
+[5pt]
+&\Rightarrow& x = \dfrac{c^2 -1}{2c}  
+			&\hspace{1em} \mathrel{\#} \text{rearrange} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Then we know that
+
+\begin{equation*}
+\int_{0}^{\frac{c^2 -1}{2c}} \dfrac{1}{\sqrt{x^{2} + 1}} \; dx = \ln c
+\end{equation*}
+
+\bigskip
+\noindent
+This holds for $c$ an integer, prime, real, or complex 
+[@paulmasson@mathstodon.xyz].
+
+\bigskip
+\noindent
+Now, if we take $x = \frac{1}{2}$ (Equation (\ref{eqn:lnphi})) 
+and then solve for $c$
+we see that
+
+
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{c^2 -1}{2c}
+&=& \dfrac{1}{2}			
+				&\hspace{1em} \mathrel{\#} \text{set $x = \frac{c^2 -1}{2c} = \frac{1}{2}$} \\
+[8pt]
+&\Rightarrow& \dfrac{c^2 -1}{c}	= 1 		
+				&\hspace{1em} \mathrel{\#} \text{multiply both sides by 2} \\
+[12pt]
+&\Rightarrow& c^2 -1 = c 		
+				&\hspace{1em} \mathrel{\#} \text{multiply both sides by $c$} \\
+[12pt]
+&\Rightarrow& c^2 -c -1 = 0		
+				&\hspace{1em} \mathrel{\#} \text{note that $x^2-x-1$ is the golden ratio's minimal polynomial \cite{wiki:golden_ratio}} \\
+[8pt]
+&\Rightarrow& c = \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4 (1) (-1)}}{2 \cdot 1}	
+				&\hspace{1em} \mathrel{\#} \text{solve for $c$ using the quadric formula \cite{wiki:quadradic_formula} } \\
+[8pt]
+&\Rightarrow& c = \dfrac{1 \pm \sqrt{5}}{2}	
+				&\hspace{1em} \mathrel{\#} \text{simplify} \\
+[8pt]
+&\Rightarrow& c = \dfrac{1 + \sqrt{5}}{2}	
+				&\hspace{1em} \mathrel{\#} \text{since we're taking the log, use the positive root} \\
+[12pt]
+&\Rightarrow& c = \phi	
+				&\hspace{1em} \mathrel{\#} \text{definition of $\phi$} \\
+
+\end{array}
+\end{equation*}
+\noindent
+
+\bigskip
+\noindent 
+@deilann@tech.lgbt notes that $c^2-c-1$ is (or at least should be :-)) immediately 
+identifiable as the golden ratio's quadratic form and $\phi$'s minimal polynomial which 
+has $\phi$ and the negative inverse of $\phi$ as roots and so is "not sure solving it 
+in full is truly necessary once you've gotten there".
+
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/mkjdjwtmnzjd}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+
+
+\section*{Appendix A}
+This was my first attempt at proving Equation (\ref{eqn:ihs}):
 
 \bigskip
 \noindent
@@ -218,19 +335,7 @@ integral equals $\frac{1}{2}$. More specifically:
 		&\hspace{1em} \mathrel{\#} \phi \coloneqq \frac{1 + \sqrt{5}}{2}
 \end{array}
 \end{equation*}
-%
-%	LaTeX source on overleaf.com
-%
-\section*{\LaTeX \hspace{0.10 mm} Source}
-\url{https://www.overleaf.com/read/mkjdjwtmnzjd}
-%
-%	get a bibliography
-%
-%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
-%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
-%
-\bibliographystyle{plain}
-\bibliography{qc}
+$\blacksquare$
 %
 %	done
 %
