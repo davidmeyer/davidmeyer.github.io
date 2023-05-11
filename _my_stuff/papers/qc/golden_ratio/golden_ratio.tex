@@ -184,7 +184,7 @@ sine and then use its logarithmic form \cite{inverse_hyperbolic_sine}:
 
 \bigskip
 \noindent
-Then notice that 
+Next, notice that 
 
 
 \begin{equation}
@@ -195,7 +195,8 @@ Then notice that
 
 \bigskip
 \noindent
-With this we can see that 
+Then the upper limit of integration for the integral
+in Equation (\ref{eqn:ihs}) in terms of $c$ is
 
 \medskip
 \begin{equation*}
@@ -203,7 +204,7 @@ With this we can see that
 x + \sqrt{x^{2} + 1} 
 &=& c &\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:c})} \\
 [6pt]
-&\Rightarrow& x^2 + 2x\sqrt{x^2+1} + 1 + x^2 = c^2 
+&\Rightarrow& x^2 + 2x\sqrt{x^2+1} + x^2+1= c^2 
 			&\hspace{1em} \mathrel{\#} \text{square both sides} \\
 [8pt]
 &\Rightarrow& 2x^2 + 2x\sqrt{x^2+1} + 1 = c^2 
@@ -225,7 +226,7 @@ x + \sqrt{x^{2} + 1}
 
 \bigskip
 \noindent
-Then we know that
+So now we know that
 
 
 \begin{equation}
@@ -241,17 +242,20 @@ Equation (\ref{eqn:integral_equals_ln_c}) holds for $c \in \mathbb{Z},
 
 \bigskip
 \noindent
-If we take $x = \frac{1}{2}$ 
-then $c = x + \sqrt{x^2+1} = \frac{1}{2} + \sqrt{\frac{5}{4}} = \frac{1 + \sqrt{5}}{2} = \phi$.
-Alternatively, we see that $c = \phi$ when the upper limit of integration in
-Equation (\ref{eqn:integral_equals_ln_c}) equals $\frac{1}{2}$, since
+If we set $x = \frac{1}{2}$ in Equation (\ref{eqn:c})
+then $c = x + \sqrt{x^2+1} = \frac{1}{2} + \sqrt{\frac{5}{4}} = 
+\frac{1 + \sqrt{5}}{2} = \phi$. Alternatively, we can see that 
+$c = \phi$ when the upper limit of integration in
+Equation (\ref{eqn:ihs}) equals $\frac{1}{2}$, 
+since
 
 
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{c^2 -1}{2c}
 &=& \dfrac{1}{2}			
-				&\hspace{1em} \mathrel{\#} \text{set the upper limit of integration $\left ( \frac{c^2 -1}{2c} \right )$ to $\frac{1}{2}$} \\
+				&\hspace{1em} \mathrel{\#} \text{set the upper limit of integration 
+					$\left ( \frac{c^2 -1}{2c} \right )$ to $\frac{1}{2}$} \\
 [8pt]
 &\Rightarrow& \dfrac{c^2 -1}{c}	= 1 		
 				&\hspace{1em} \mathrel{\#} \text{multiply both sides by 2} \\
@@ -263,7 +267,7 @@ Equation (\ref{eqn:integral_equals_ln_c}) equals $\frac{1}{2}$, since
 				&\hspace{1em} \mathrel{\#} \text{$x^2-x-1$ is $\phi$'s 
 								minimal polynomial \cite{wiki:golden_ratio}} \\
 [6pt]
-&\Rightarrow& c = \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4 (1) (-1)}}{2 \cdot 1}	
+&\Rightarrow& c = \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4 (1) (-1)}}{2(1)}	
 				&\hspace{1em} \mathrel{\#} \text{solve for $c$ using the quadric 
 								formula \cite{wiki:quadradic_formula} } \\
 [6pt]
@@ -282,11 +286,10 @@ Equation (\ref{eqn:integral_equals_ln_c}) equals $\frac{1}{2}$, since
 
 \bigskip
 \noindent 
-@deilann@tech.lgbt notes that $c^2-c-1$ is (or at least should be :-)) immediately 
+@deilann@tech.lgbt also notes that $c^2-c-1$ is (or at least should be :-)) immediately 
 identifiable as the golden ratio's quadratic form and $\phi$'s minimal polynomial which 
 has $\phi$ and the negative inverse of $\phi$ as roots and so is "not sure solving it 
 in full is truly necessary once you've gotten there".
-
 %
 %	LaTeX source on overleaf.com
 %
@@ -300,8 +303,9 @@ in full is truly necessary once you've gotten there".
 %
 \bibliographystyle{plain}
 \bibliography{qc}
-
-
+%
+%
+%
 \section*{Appendix A}
 This was my first attempt at proving Equation (\ref{eqn:ihs}):
 
