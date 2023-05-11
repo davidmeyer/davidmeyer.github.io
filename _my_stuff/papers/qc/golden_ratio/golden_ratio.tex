@@ -186,7 +186,7 @@ sine and then use its logarithmic form \cite{inverse_hyperbolic_sine}:
 \noindent
 Then notice that 
 
-\bigskip
+
 \begin{equation}
 \ln \left (x + \sqrt{x^{2} + 1} \right ) = \ln c \Rightarrow x + \sqrt{x^{2} + 1} = c
 \label{eqn:c}
@@ -202,22 +202,22 @@ With this we can see that
 \begin{array}{llll}
 x + \sqrt{x^{2} + 1} 
 &=& c &\hspace{1em} \mathrel{\#} \text{Equation (\ref{eqn:c})} \\
-[8pt]
+[6pt]
 &\Rightarrow& x^2 + 2x\sqrt{1 + x^2} + 1 + x^2 = c^2 
 			&\hspace{1em} \mathrel{\#} \text{square both sides} \\
-[10pt]
+[8pt]
 &\Rightarrow& 2x^2 + 2x\sqrt{1+x^2} + 1 = c^2 
 			&\hspace{1em} \mathrel{\#} \text{collect terms} \\
-[10pt]
+[8pt]
 &\Rightarrow& 2x^2 + 2x\sqrt{1+x^2} = c^2 -1  
 			&\hspace{1em} \mathrel{\#} \text{subtract 1 from both sides} \\
-[10pt]
+[8pt]
 &\Rightarrow& 2x (x + \sqrt{1+x^2}) = c^2 -1  
 			&\hspace{1em} \mathrel{\#} \text{factor out $2x$} \\
-[10pt]
+[8pt]
 &\Rightarrow& 2xc = c^2 -1  
 			&\hspace{1em} \mathrel{\#} x + \sqrt{1+x^{2}} = c \\
-[5pt]
+[4pt]
 &\Rightarrow& x = \dfrac{c^2 -1}{2c}  
 			&\hspace{1em} \mathrel{\#} \text{rearrange} \\
 \end{array}
@@ -227,20 +227,22 @@ x + \sqrt{x^{2} + 1}
 \noindent
 Then we know that
 
-\begin{equation*}
+
+\begin{equation}
 \int_{0}^{\frac{c^2 -1}{2c}} \dfrac{1}{\sqrt{x^{2} + 1}} \; dx = \ln c
-\end{equation*}
+\label{eqn:integral_equals_ln_c}
+\end{equation}
+
+\bigskip
+\bigskip
+\noindent
+Equation (\ref{eqn:integral_equals_ln_c}) holds for $c \in \mathbb{Z}, 
+\, \mathbb{R}, \, \mathbb{C}$, prime, $\hdots$ [@paulmasson@mathstodon.xyz].
 
 \bigskip
 \noindent
-This holds for $c$ an integer, prime, real, or complex 
-[@paulmasson@mathstodon.xyz].
-
-\bigskip
-\noindent
-Now, if we take $x = \frac{1}{2}$ (Equation (\ref{eqn:lnphi})) 
-and then solve for $c$
-we see that
+Now, if we take $x = \frac{1}{2}$ (like in Equation (\ref{eqn:lnphi})) 
+we see that $c = \phi$, since:
 
 
 \begin{equation*}
@@ -256,23 +258,25 @@ we see that
 				&\hspace{1em} \mathrel{\#} \text{multiply both sides by $c$} \\
 [12pt]
 &\Rightarrow& c^2 -c -1 = 0		
-				&\hspace{1em} \mathrel{\#} \text{note that $x^2-x-1$ is the golden ratio's minimal polynomial \cite{wiki:golden_ratio}} \\
+				&\hspace{1em} \mathrel{\#} \text{$x^2-x-1$ is the golden 
+								ratio's minimal polynomial \cite{wiki:golden_ratio}} \\
 [8pt]
 &\Rightarrow& c = \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4 (1) (-1)}}{2 \cdot 1}	
-				&\hspace{1em} \mathrel{\#} \text{solve for $c$ using the quadric formula \cite{wiki:quadradic_formula} } \\
+				&\hspace{1em} \mathrel{\#} \text{solve for $c$ using the quadric 
+								formula \cite{wiki:quadradic_formula} } \\
 [8pt]
 &\Rightarrow& c = \dfrac{1 \pm \sqrt{5}}{2}	
 				&\hspace{1em} \mathrel{\#} \text{simplify} \\
 [8pt]
 &\Rightarrow& c = \dfrac{1 + \sqrt{5}}{2}	
-				&\hspace{1em} \mathrel{\#} \text{since we're taking the log, use the positive root} \\
+				&\hspace{1em} \mathrel{\#} \text{positive root} \\
 [12pt]
 &\Rightarrow& c = \phi	
 				&\hspace{1em} \mathrel{\#} \text{definition of $\phi$} \\
 
 \end{array}
 \end{equation*}
-\noindent
+
 
 \bigskip
 \noindent 
