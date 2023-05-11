@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 MAY 2023 10:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  11 MAY 2023 10:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1423,10 +1423,6 @@ Overfull \hbox (61.73607pt too wide) detected at line 169
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (15.39484pt too wide) detected at line 278
-[]
- []
-
 [2] (./golden_ratio.bbl
 Underfull \hbox (badness 1087) in paragraph at lines 4--11
 []\OT1/cmr/m/n/10 Wikipedia Con-trib-u-tors.  In-te-gral of the Se-cant Func-ti
@@ -1475,7 +1471,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on golden_ratio.pdf (3 pages, 183383 bytes).
+Output written on golden_ratio.pdf (3 pages, 183394 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
