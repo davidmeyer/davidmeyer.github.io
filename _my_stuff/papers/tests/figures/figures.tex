@@ -50,12 +50,6 @@
 \usepackage{braket}
 \usepackage{amsthm}
 
-\usepackage{expl3}
-\usepackage{siunitx}
-\sisetup{round-mode=places,round-precision=4}
-
-
-
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
@@ -66,6 +60,9 @@
 
 \usepackage{tikz-3dplot}
 
+%
+%	get the x and y coordinates out of a coordinate
+%
 \makeatletter
 \newcommand{\gettikzxy}[3]{%
   \tikz@scan@one@point\pgfutil@firstofone#1\relax
@@ -73,12 +70,9 @@
   \edef#3{\the\pgf@y}%
 }
 \makeatother
-
-\ExplSyntaxOn
-\cs_set_eq:NN \fpeval \fp_eval:n
-\ExplSyntaxOff
-
-
+%
+%
+%
 \begin{document}
 
 \bigskip

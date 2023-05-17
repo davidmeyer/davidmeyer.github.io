@@ -51,13 +51,7 @@
 \usepackage{esvect}
 \usepackage{enumitem}													% use characters instead of numbers in enumerate
 %
-%	floating point stuff
-%
-\usepackage{expl3}
-\usepackage{siunitx}
-\sisetup{round-mode=places,round-precision=4}
-%
-%	describe floating point parameters
+%	Describe floating point parameters, \fpeval
 %
 \ExplSyntaxOn
 \cs_set_eq:NN \fpeval \fp_eval:n
@@ -77,7 +71,7 @@
 \makeatother
 %
 %
-%	watermarks
+%	Watermarks
 %
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}

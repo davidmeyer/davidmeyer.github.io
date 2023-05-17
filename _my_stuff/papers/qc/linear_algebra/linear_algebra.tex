@@ -51,13 +51,7 @@
 \usepackage{esvect}
 \usepackage{enumitem}													% use characters instead of numbers in enumerate
 %
-%	floating point stuff
-%
-\usepackage{expl3}
-\usepackage{siunitx}
-\sisetup{round-mode=places,round-precision=4}
-%
-%	describe floating point parameters
+%	Describe floating point parameters, \fpeval
 %
 \ExplSyntaxOn
 \cs_set_eq:NN \fpeval \fp_eval:n
@@ -66,7 +60,9 @@
 %	Get the x and y components out of a coordinate, e.g.
 %
 %	\coordinate (EP) at (8,5);
-%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%	\gettikzxy{(EP)}{\x}{\y}
+%	\def \slope {\fpeval{\y/\x}};								% the U line goes through the origin so \slope = m = y/x
+%
 %
 \makeatletter
 \newcommand{\gettikzxy}[3]{%
@@ -76,7 +72,8 @@
 }
 \makeatother
 %
-%	watermarks
+%
+%	Watermarks
 %
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
@@ -202,11 +199,11 @@ Figure \ref{fig:linear_subspace}.
 %
 %
 %
-	   \gettikzxy{(EP)}{\slopex}{\slopey}				% get the x and y components of EP
+	   \gettikzxy{(EP)}{\x}{\y}							% get the x and y components of EP (in units of pt)
 %
 %
 %                     
-       \def \slope {\fpeval{\slopey/\slopex}};			% the U line goes through the origin so \slope = m = y/x
+       \def \slope {\fpeval{\y/\x}};					% the U line goes through the origin so \slope = m = y/x
 %
 %
 %		Coordinates are of the form (x,\slope*x). Since the line U goes through
