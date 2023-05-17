@@ -50,6 +50,11 @@
 \usepackage{braket}
 \usepackage{amsthm}
 
+\usepackage{expl3}
+\usepackage{siunitx}
+\sisetup{round-mode=places,round-precision=4}
+
+
 
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
@@ -69,6 +74,11 @@
 }
 \makeatother
 
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+
+
 \begin{document}
 
 \bigskip
@@ -87,14 +97,19 @@
        \coordinate (Yend)       at (0,8);               % y-axis
        \coordinate (EP)         at (8,5);               % endpoint (U)
        
-\gettikzxy{(EP)}{\slopex}{\slopey}
+	   \gettikzxy{(EP)}{\slopex}{\slopey}
+%
+%
+%
+%      \newcommand{\slope} {5/8};                       % the U line goes through the origin so y = mx = \slope*x
+       
+               
+       \def \slope {\fpeval{\slopey/\slopex}};			% the U line goes through the origin so y = mx = \slope*x
 
-\node [] {\slopey /\slopex};
-
 %
 %
 %
-       \newcommand{\slope} {5/8};                       % the U line goes through the origin so y = mx = \slope*x
+\node [] at (10,10) {\slope};
 %
 %
 %

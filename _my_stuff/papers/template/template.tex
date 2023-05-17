@@ -51,6 +51,32 @@
 \usepackage{esvect}
 \usepackage{enumitem}													% use characters instead of numbers in enumerate
 %
+%	floating point stuff
+%
+\usepackage{expl3}
+\usepackage{siunitx}
+\sisetup{round-mode=places,round-precision=4}
+%
+%	describe floating point parameters
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
 %	watermarks
 %
 % \usepackage{draftwatermark}

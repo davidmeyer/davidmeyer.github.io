@@ -24,7 +24,7 @@
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby}
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
-\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{circuitikz}                                                 % draw circuits
 \usepackage{pgfplots}
 %
 %	more math stuff
@@ -50,6 +50,31 @@
 \usepackage{multirow}
 \usepackage{esvect}
 \usepackage{enumitem}													% use characters instead of numbers in enumerate
+%
+%	floating point stuff
+%
+\usepackage{expl3}
+\usepackage{siunitx}
+\sisetup{round-mode=places,round-precision=4}
+%
+%	describe floating point parameters
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
 %
 %	watermarks
 %
@@ -177,16 +202,18 @@ Figure \ref{fig:linear_subspace}.
 %
 %
 %
-       \newcommand{\slope} {5/8};                       % the U line goes through the origin so y = mx = \slope*x
+	   \gettikzxy{(EP)}{\slopex}{\slopey}				% get the x and y components of EP
 %
-%		Still looking for a reasonable way to get x and y out of a coordinate 
-%		(then I would only need to specify EP). Anyway...
+%
+%                     
+       \def \slope {\fpeval{\slopey/\slopex}};			% the U line goes through the origin so \slope = m = y/x
+%
 %
 %		Coordinates are of the form (x,\slope*x). Since the line U goes through
 %		the origin y = mx for some point on the line (I'm using EP = (8,5)).
-%		All of this implies that m = y/x = 5/8. 
+%		All of this implies that m = y/x = 5/8 = \slope
 %
-%		So coordinates on the line U are of the form (x,(5/8)*x).
+%		So coordinates on the line U are of the form (x,(\slope*x)).
 %
        \coordinate (SP)         at (-2,\slope*-2);      % start point (U)
        \coordinate (uEP)        at (2,\slope*2);        % end point (u)
