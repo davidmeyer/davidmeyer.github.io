@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 MAR 2023 09:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 MAY 2023 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1462,12 +1462,12 @@ Overfull \hbox (17.2222pt too wide) in paragraph at lines 250--265
 <images/price_gear_train.png, id=106, 1284.8pt x 803.0pt>
 File: images/price_gear_train.png Graphic file (type png)
 <use images/price_gear_train.png>
-Package pdftex.def Info: images/price_gear_train.png  used on input line 316.
+Package pdftex.def Info: images/price_gear_train.png  used on input line 317.
 (pdftex.def)             Requested size: 256.95544pt x 160.59715pt.
 <images/fragmentA.jpg, id=112, 1039.885pt x 927.465pt>
 File: images/fragmentA.jpg Graphic file (type jpg)
 <use images/fragmentA.jpg>
-Package pdftex.def Info: images/fragmentA.jpg  used on input line 338.
+Package pdftex.def Info: images/fragmentA.jpg  used on input line 339.
 (pdftex.def)             Requested size: 207.97331pt x 185.48972pt.
 
 [4 <./images/price_gear_train.png>]
@@ -1475,28 +1475,28 @@ Package pdftex.def Info: images/fragmentA.jpg  used on input line 338.
 File: images/gearing_for_lunar_anomaly.png Graphic file (type png)
 <use images/gearing_for_lunar_anomaly.png>
 Package pdftex.def Info: images/gearing_for_lunar_anomaly.png  used on input li
-ne 375.
+ne 376.
 (pdftex.def)             Requested size: 321.19922pt x 200.74951pt.
  [5 <./images/fragmentA.jpg> <./images/gearing_for_lunar_anomaly.png>]
 <images/turning_the_metonic_pointer_wright.png, id=140, 1284.8pt x 803.0pt>
 File: images/turning_the_metonic_pointer_wright.png Graphic file (type png)
 <use images/turning_the_metonic_pointer_wright.png>
 Package pdftex.def Info: images/turning_the_metonic_pointer_wright.png  used on
- input line 411.
+ input line 412.
 (pdftex.def)             Requested size: 281.85587pt x 176.15817pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 412.
+(caption)                particular \caption on input line 413.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 411--412
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 412--413
 [][] 
  []
 
 
-Overfull \hbox (40.71138pt too wide) in paragraph at lines 399--414
+Overfull \hbox (40.71138pt too wide) in paragraph at lines 400--415
 []$[]$  $[]$ 
  []
 
@@ -1535,7 +1535,7 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on prices_metonic_gear_train.pdf (8 pages, 11119148 bytes).
+Output written on prices_metonic_gear_train.pdf (8 pages, 11118866 bytes).
 PDF statistics:
  247 PDF objects out of 1000 (max. 8388607)
  198 compressed objects within 2 object streams
