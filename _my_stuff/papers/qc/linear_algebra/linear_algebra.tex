@@ -57,11 +57,11 @@
 \cs_set_eq:NN \fpeval \fp_eval:n
 \ExplSyntaxOff
 %
-%	Get the x and y components out of a coordinate, e.g.
+%	Get the x and y components out of a (tikz) coordinate, e.g.
 %
 %	\coordinate (EP) at (8,5);
 %	\gettikzxy{(EP)}{\x}{\y}
-%	\def \slope {\fpeval{\y/\x}};								% the U line goes through the origin so \slope = m = y/x
+%	\def \slope {\fpeval{\y/\x}};										% the U line goes through the origin so \slope = m = y/x
 %
 %
 \makeatletter
@@ -117,7 +117,7 @@
 %
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
 \DeclareMathOperator{\E}{\mathbb{E}}
-\DeclareMathOperator{\bda}{\Big \downarrow}								% big down arrow
+\DeclareMathOperator{\bda}{\Big \downarrow}									% big down arrow
 \newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
 %
 %	Title, author and date
@@ -203,7 +203,7 @@ Figure \ref{fig:linear_subspace}.
 %
 %
 %                     
-       \def \slope {\fpeval{\y/\x}};					% the U line goes through the origin so \slope = m = y/x
+       \def \slope {\fpeval{\y/\x}};					% the line U goes through the origin so \slope = m = y/x
 %
 %
 %		Coordinates are of the form (x,\slope*x). Since the line U goes through
