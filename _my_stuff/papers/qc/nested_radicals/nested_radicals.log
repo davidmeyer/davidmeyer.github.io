@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 MAR 2023 09:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 MAY 2023 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1423,18 +1423,18 @@ Overfull \hbox (31.74095pt too wide) detected at line 208
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] (./nested_radicals.bbl) [3] (./nested_radicals.aux)
+(./nested_radicals.bbl [2]) [3] (./nested_radicals.aux)
 Package rerunfilecheck Info: File `nested_radicals.out' has not changed.
-(rerunfilecheck)             Checksum: 1C57CF86F9CA08AEF68C81C715AF86A8;551.
+(rerunfilecheck)             Checksum: E701AB2E4EA56D2FBAD14BACCF13AA59;249.
  ) 
 Here is how much of TeX's memory you used:
- 51760 strings out of 478994
- 1309652 string characters out of 5858184
+ 51759 strings out of 478994
+ 1309642 string characters out of 5858184
  1940528 words of memory out of 5000000
- 68463 multiletter control sequences out of 15000+600000
+ 68462 multiletter control sequences out of 15000+600000
  410771 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,13n,131p,733b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,13n,131p,733b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1447,10 +1447,10 @@ l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on nested_radicals.pdf (3 pages, 133099 bytes).
+Output written on nested_radicals.pdf (3 pages, 132808 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
