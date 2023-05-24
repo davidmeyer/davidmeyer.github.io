@@ -61,8 +61,6 @@
 %
 %	\coordinate (EP) at (8,5);
 %	\gettikzxy{(EP)}{\x}{\y}
-%	\def \slope {\fpeval{\y/\x}};										% the U line goes through the origin so \slope = m = y/x
-%
 %
 \makeatletter
 \newcommand{\gettikzxy}[3]{%
@@ -195,15 +193,19 @@ Figure \ref{fig:linear_subspace}.
        \coordinate (Xend)       at (10,0);              % x-axis
        \coordinate (Ystart)     at (0,-1);              % y-axis
        \coordinate (Yend)       at (0,8);               % y-axis
-       \coordinate (EP)         at (8,5);               % endpoint (U)
+       \coordinate (EP)         at (8,5);               % endpoint of U
 %
 %
 %
 	   \gettikzxy{(EP)}{\x}{\y}							% get the x and y components of EP (in units of pt)
 %
 %
+%		\x and \y (\the\pgf@x and \the\pgf@y) are in units of pt. 
+%		The pt units are Anglo-American printers' points, where 72.27pt is about 1in.
+%
 %                     
        \def \slope {\fpeval{\y/\x}};					% the line U goes through the origin so \slope = m = y/x
+%														% \y/\x divides out the factor of 72.27pt/in
 %
 %
 %		Coordinates are of the form (x,\slope*x). Since the line U goes through
