@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 JUN 2023 09:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 JUN 2023 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1481,11 +1481,11 @@ s not changed.
 Here is how much of TeX's memory you used:
  52381 strings out of 478994
  1325071 string characters out of 5858184
- 1951671 words of memory out of 5000000
+ 1950671 words of memory out of 5000000
  69041 multiletter control sequences out of 15000+600000
  418826 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,12n,131p,776b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,12n,131p,776b,851s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1506,7 +1506,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (5 pages, 460109 byt
+Output written on christmastime_is_christmas_math_time.pdf (5 pages, 460549 byt
 es).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
