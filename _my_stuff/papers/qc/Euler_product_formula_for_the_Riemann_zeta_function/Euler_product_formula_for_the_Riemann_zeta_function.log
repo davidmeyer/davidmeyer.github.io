@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 MAY 2022 07:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 JUN 2023 07:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -668,24 +668,30 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
 (./Euler_product_formula_for_the_Riemann_zeta_function.bbl
+Underfull \hbox (badness 6220) in paragraph at lines 10--16
+[]\OT1/cmr/m/n/10.95 Dan Nichols.  Rie-mann's Zeta Func-tion and the Prime Num-
+ber The-o-
+ []
+
+[4]
 Underfull \hbox (badness 1466) in paragraph at lines 47--53
 []\OT1/cmr/m/n/10.95 Wikipedia Con-trib-u-tors.  Dirich-let Se-ries --- Wikiped
 ia, The Free En-cy-clo-pe-
  []
 
-[4]) [5] (./Euler_product_formula_for_the_Riemann_zeta_function.aux)
+) [5] (./Euler_product_formula_for_the_Riemann_zeta_function.aux)
 Package rerunfilecheck Info: File `Euler_product_formula_for_the_Riemann_zeta_f
 unction.out' has not changed.
 (rerunfilecheck)             Checksum: 8E718A948B31963D1B753411CB55517D;439.
  ) 
 Here is how much of TeX's memory you used:
- 15915 strings out of 478994
- 276205 string characters out of 5858184
+ 15916 strings out of 478994
+ 276215 string characters out of 5858184
  586564 words of memory out of 5000000
  33093 multiletter control sequences out of 15000+600000
  419511 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,77p,345b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,8n,77p,345b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -711,10 +717,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 Output written on Euler_product_formula_for_the_Riemann_zeta_function.pdf (5 pa
-ges, 202134 bytes).
+ges, 203625 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
