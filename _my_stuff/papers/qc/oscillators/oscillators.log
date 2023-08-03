@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 APR 2023 11:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  3 AUG 2023 08:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1466,7 +1466,7 @@ Overfull \hbox (51.33952pt too wide) detected at line 1890
 []
  []
 
-[17] (./oscillators.bbl [18]
+[17] (./oscillators.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 10--16
 []\OT1/cmr/m/n/10 Arthur Mat-tuck.  RLC Cir-cuits.  []$\OT1/cmtt/m/n/10 https :
  / / ocw . mit . edu / courses / mathematics /
@@ -1490,7 +1490,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--62
 -[]law-[]of-[]thermal-[]radiation-[]definition$[]\OT1/cmr/m/n/10 ,
  []
 
-[19]) [20] (./oscillators.aux)
+[18] [19]) [20] (./oscillators.aux)
 Package rerunfilecheck Info: File `oscillators.out' has not changed.
 (rerunfilecheck)             Checksum: 84D855AEA5E072F9A628684E52B5FDD8;3469.
  ) 
@@ -1531,7 +1531,7 @@ s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (20 pages, 414391 bytes).
+Output written on oscillators.pdf (20 pages, 414351 bytes).
 PDF statistics:
  619 PDF objects out of 1000 (max. 8388607)
  510 compressed objects within 6 object streams
