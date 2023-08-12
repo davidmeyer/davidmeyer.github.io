@@ -459,12 +459,15 @@ is the amplitude squared, so,
 \begin{flalign*}
 P(\ket{+}) &=  \bigg | \frac{ \big (1 + \cos \theta + i \sin \theta \big )}{2} \bigg |^2 \\
 &= \frac{1}{4} \big ((1 + \cos \theta + i \sin \theta) (1 + \cos \theta - i \sin \theta) \big ) \\
-&= \frac{1}{4} \big (1 + \cos \theta - i \sin \theta + \cos \theta + \cos^2\theta - \cos \theta i \sin \theta + i \sin \theta + \cos \theta i \sin \theta - i^2 \sin^2 \theta \big ) \\
-&= \frac{1}{4} \big (1 + 2 \cos \theta + \cos^2\theta + \sin^2 \theta \big )  \;  \qquad\qquad \mathrel{\#}  \cos^2 \theta + \sin^2 \theta = 1\\
+&= \frac{1}{4} \big (1 + \cos \theta - i \sin \theta + \cos \theta + \cos^2\theta - \cos \theta i 
+				\sin \theta + i \sin \theta + \cos \theta i \sin \theta - i^2 \sin^2 \theta \big ) \\
+&= \frac{1}{4} \big (1 + 2 \cos \theta + \cos^2\theta + \sin^2 \theta \big )  \;  \qquad\qquad 
+				\mathrel{\#}  \cos^2 \theta + \sin^2 \theta = 1\\
 &= \frac{1}{4} \big (1 + 2 \cos \theta + 1 \big ) \\
 &= \frac{1}{4} \big (2 + 2 \cos \theta \big ) \\
 &= \frac{1}{2} \big (1 + \cos \theta \big ) 
-\; \qquad  \qquad \qquad \qquad \qquad\qquad \mathrel{\#} \cos \frac{\theta}{2} = \pm \sqrt{\frac{1 + \cos \theta}{2}}  \implies 1 + \cos \theta = 2 \cdot \cos^2 \frac{\theta}{2}\\
+\; \qquad  \qquad \qquad \qquad \qquad\qquad \mathrel{\#} \cos \frac{\theta}{2} = \pm \sqrt{\frac{1 + 
+				\cos \theta}{2}}  \implies 1 + \cos \theta = 2 \cdot \cos^2 \frac{\theta}{2}\\
 &= \frac{1}{2} \Big (2 \cdot \cos^2 \frac{\theta}{2} \Big ) \\
 &= \cos^2 \frac{\theta}{2}  
 \quad \qquad \qquad  \qquad \qquad \qquad \qquad\qquad \mathrel{\#} P(\ket{+}) =  \cos^2 \frac{\theta}{2}\\
@@ -534,19 +537,23 @@ vectors \textbf{u} and \textbf{v}, the inner product $\langle
 
 \begin{figure}
 \centering
-  \resizebox{0.50 \textwidth}{!} {                                                                                                                                         % resize figure if you want
-    \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
-       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);                                                          % draw axes, save real part (x) to calculate angle below
+  \resizebox{0.50 \textwidth}{!} {                                                              % resize figure if you want
+    \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]      
+       \draw[thick, ->] (-0.35,0) -- (5.5,0) coordinate[label=below: $\mathbb{R}$] (x);         % draw axes, save real part (x) to calculate angle below
        \draw[thick, ->] (0,-0.35) -- (0,5.5) 
             node[left] {$\mathbb{I}$}
-            node[draw, very thin,below right=5mm] {$\alpha = r  [\cos \phi + i \sin \phi] = r \mathrm{e}^{i\phi}$};
-       \coordinate[label=below left:$ O $] (O);                                                                                                                      % save origin (O) to calculate \theta below                                                
-       \fill (3.5,3) coordinate[label=above right:{$\alpha = a + bi $}] (z) circle(0.05);                                                            % draw phasor
-       \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
-       \draw[thick] (O) to ["$r = |\alpha|=\sqrt{\alpha \alpha^*}$"] (3.5,3);
-       \pic [draw, line width=0.60pt, ->, angle radius=11mm, angle eccentricity=1.25, "$\phi$"] {angle = x--O--z};             % draw and label the angle, making the arc a bit thicker
+            node[draw, very thin,below right=5mm] {$\alpha = 
+                r  [\cos \phi + i \sin \phi] = r \mathrm{e}^{i\phi}$};
+       \coordinate[label=below left:$ O $] (O);                                                 % save origin (O) to calculate \theta below
+       \fill (3.5,3) coordinate[label=above right:{$\alpha = a + bi $}] (z) circle(0.05);       % draw phasor
+       \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0)
+                node[below] {$a$}; \draw[thick] (O) to ["$r =
+               |\alpha|=\sqrt{\alpha \alpha^*}$"] (3.5,3); 
+       \pic [draw, line width=0.60pt, ->, angle radius=11mm,
+       angle eccentricity=1.25,
+       "$\phi$"] {angle = x--O--z};                                                             % draw and label the angle, making the arc a bit thicker
      \end{tikzpicture}
-  }                                                                                                                                                                                       % end resizebox
+  }                                                                                             % end resizebox
  \caption{$\alpha$ in the Complex Plane}
  \label{fig:complex_plane}
 \end{figure}
