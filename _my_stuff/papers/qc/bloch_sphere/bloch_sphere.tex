@@ -543,12 +543,12 @@ vectors \textbf{u} and \textbf{v}, the inner product $\langle
        \draw[thick, ->] (0,-0.35) -- (0,5.5) 
             node[left] {$\mathbb{I}$}
             node[draw, very thin,below right=5mm] {$\alpha = 
-                r  [\cos \phi + i \sin \phi] = r \mathrm{e}^{i\phi}$};
+            r [\cos \phi + i \sin \phi] = r \mathrm{e}^{i\phi}$};
        \coordinate[label=below left:$ O $] (O);                                                 % save origin (O) to calculate \theta below
        \fill (3.5,3) coordinate[label=above right:{$\alpha = a + bi $}] (z) circle(0.05);       % draw phasor
        \draw[dashed] (0,3) node[left] {$b$} -| (3.5,0)
-                node[below] {$a$}; \draw[thick] (O) to ["$r =
-               |\alpha|=\sqrt{\alpha \alpha^*}$"] (3.5,3); 
+            node[below] {$a$}; \draw[thick] (O) to ["$r =
+            |\alpha|=\sqrt{\alpha \alpha^*}$"] (3.5,3); 
        \pic [draw, line width=0.60pt, ->, angle radius=11mm,
        angle eccentricity=1.25,
        "$\phi$"] {angle = x--O--z};                                                             % draw and label the angle, making the arc a bit thicker
