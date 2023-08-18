@@ -117,13 +117,15 @@ it \cite{wiki:theodorus_of_cyrene}.
 
 \bigskip
 \noindent
-Theodorus used this spiral to prove that all non-square 
-integers from 3-17 are irrational and the original spiral stops at $\sqrt{17}$, apparently 
-because that is the last hypotenuse before overlapping the rest of the figure [1]. 
-Interestingly, in 1958 E. Teuffel showed that no two hypotenuses of the spiral of Theodorus 
-will ever coincide, regardless of how far the spiral is continued. Apparently this 
-was proven in "Eine Eigenschaft der Quadratwurzelschnecke", Math.-Phys. Semesterber. 
-6 (1958), pp. 148-152 (does anyone have access to a copy of this paper?).
+Theodorus used this spiral to prove that all non-square integers
+from 3-17 are irrational and the original spiral stops at
+$\sqrt{17}$, apparently because that is the last hypotenuse
+before overlapping the rest of the figure [1].  Interestingly, in
+1958 E. Teuffel showed that no two hypotenuses of the spiral of
+Theodorus will ever coincide, regardless of how far the spiral is
+continued. Apparently this was proven in "Eine Eigenschaft der
+Quadratwurzelschnecke", Math.-Phys. Semesterber.  6 (1958),
+pp. 148-152 (does anyone have access to a copy of this paper?).
 
 \bigskip
 \noindent
@@ -149,7 +151,7 @@ In any event, the spiral is an incredible object.
             }                                                                   %
             {                                                                   %
                 \def\currentcolor{black}                                        % otherwise make it black
-            }  																	% end \ifthenelse
+            }                                                                   % end \ifthenelse 
             \pgfmathtruncatemacro{\currentsqrt}{\n+1}                           % hypotenuse is of length root (n+1)
 %
 %	Draw everything
@@ -174,7 +176,7 @@ In any event, the spiral is an incredible object.
 \begin{figure}[H]
         \centering
         \resizebox{0.60 \textwidth}{!} {                                        % resize figure if you want
-                \sqrtspiral[scale=2]{\numberoftriangles}                                        % draw the Spiral of Theodorus with n = 14
+                \sqrtspiral[scale=2]{\numberoftriangles}                        % draw the Spiral of Theodorus with n = 14
         }                                                                       % end resizebox
 \caption{The Spiral of Theodorus}
 \label{fig:the_spiral_of_theodorus}
