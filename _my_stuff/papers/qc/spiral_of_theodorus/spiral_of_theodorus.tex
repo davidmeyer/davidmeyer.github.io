@@ -102,30 +102,33 @@
 %
 \section{Introduction}
 The Spiral of Theodorus \cite{wiki:spiral_of_theodorus} is the
-fantastic object shown in Figure \ref{fig:the_spiral_of_theodorus}.
-It is composed of right triangles placed edge-to-edge, where the
-sides of $n^{\text{th}}$ triangle are of length 1 and $\sqrt{n}$  
-and the hypotenuse is of length $\sqrt{n+1}$. Pretty cool.  
+fantastic object shown in Figure
+\ref{fig:the_spiral_of_theodorus}.  It is composed of right
+triangles placed edge-to-edge, where the sides of $n^{\text{th}}$
+triangle are of length 1 and $\sqrt{n}$ and the hypotenuse is of
+length $\sqrt{n+1}$.
 
 
 \bigskip
 \noindent
-The spiral is named after Theodorus of Cyrene, the ancient
-Greek mathematician who lived during the $5^{\text{th}}$ 
-century BC and who apparently discovered the 
-it \cite{wiki:theodorus_of_cyrene}.
+The spiral is named after Theodorus of Cyrene, the ancient Greek
+mathematician who lived during the $5^{\text{th}}$ century BC and
+who apparently discovered the it
+\cite{wiki:theodorus_of_cyrene}. Theodorus used the spiral to
+prove that all non-square integers from 3 to 17 are
+irrational. Theodorus' original spiral stops at $\sqrt{17}$,
+apparently because $\sqrt{17}$ is the hypotenuse of the last
+triangle in the spiral that doesn't overlap
+\cite{wiki:spiral_of_theodorus}.
 
 \bigskip
 \noindent
-Theodorus used this spiral to prove that all non-square integers
-from 3-17 are irrational and the original spiral stops at
-$\sqrt{17}$, apparently because that is the last hypotenuse
-before overlapping the rest of the figure [1].  Interestingly, in
-1958 E. Teuffel showed that no two hypotenuses of the spiral of
-Theodorus will ever coincide, regardless of how far the spiral is
-continued. Apparently this was proven in "Eine Eigenschaft der
-Quadratwurzelschnecke", Math.-Phys. Semesterber.  6 (1958),
-pp. 148-152 (does anyone have access to a copy of this paper?).
+Interestingly, in 1958 E. Teuffel showed that no two hypotenuses
+of the spiral of Theodorus will ever coincide, regardless of how
+far the spiral is continued. Apparently this was proven in "Eine
+Eigenschaft der Quadratwurzelschnecke", Math.-Phys. Semesterber.
+6 (1958), pp. 148-152 (does anyone have access to a copy of this
+paper?).
 
 \bigskip
 \noindent
@@ -171,11 +174,10 @@ In any event, the spiral is an incredible object.
 %
 %	draw the spiral wrapped in a figure
 %
-\bigskip
 \def \numberoftriangles {17} 
 \begin{figure}[H]
         \centering
-        \resizebox{0.60 \textwidth}{!} {                                        % resize figure if you want
+        \resizebox{0.65 \textwidth}{!} {                                        % resize figure if you want
                 \sqrtspiral[scale=2]{\numberoftriangles}                        % draw the Spiral of Theodorus with n = 14
         }                                                                       % end resizebox
 \caption{The Spiral of Theodorus}
