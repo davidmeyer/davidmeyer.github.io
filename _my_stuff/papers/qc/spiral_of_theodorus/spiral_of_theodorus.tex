@@ -146,7 +146,7 @@ In any event, the spiral is an incredible object.
         \coordinate (A) at (0,0);                                               % side adjacent
         \coordinate (B) at (1cm,0);                                             % side opposite
         \def\currentcolor{black}												% default to black
-        \draw[\currentcolor] (A) edge node[fill=white]{$\sqrt{1}$}(B);			% draw first hypotenuse (of length \sqrt{1})
+        \draw[\currentcolor] (A) edge node[fill=white]{$\sqrt{1}$} (B);			% draw first hypotenuse (of length \sqrt{1})
         \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
             \ifthenelse{\equal{\n}{\sqrtlast}}                                  % if it's the last one make it red
             {                                                                   %
