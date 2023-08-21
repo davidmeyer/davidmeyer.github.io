@@ -135,20 +135,21 @@ paper?).
 In any event, the spiral is an incredible object.
 
 
-\section{The Spiral of Theodorus}
+% \section{The Spiral of Theodorus}
 %
 %	build a command that draws a picture
 %	of the Spiral of Theodorus with parameter
 %	n = the number of triangles
 %
 \newcommand*{\sqrtspiral}[2][scale=3]{
-    \begin{tikzpicture}[#1]
-        \def\sqrtlast{#2}
+    \begin{tikzpicture}[#1]														% start the tikzpicture
+        \def\sqrtlast{#2}														% 
         \coordinate (A) at (0,0);                                               % side adjacent
         \coordinate (B) at (1cm,0);                                             % side opposite
-        \draw (A) edge node[auto, swap] {$\sqrt{1}$} (B);                       % draw sides for first triangle
+        \def\currentcolor{black}												% default to black
+        \draw[\currentcolor] (A) edge node[fill=white]{$\sqrt{1}$}(B);			% draw first hypotenuse (of length \sqrt{1})
         \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
-            \ifthenelse{\equal{\n}{\sqrtlast}}                                  %
+            \ifthenelse{\equal{\n}{\sqrtlast}}                                  % if it's the last one make it red
             {                                                                   %
                 \def\currentcolor{red}                                          % draw the last triangle in red (\sqrtlast)
             }                                                                   %
@@ -156,9 +157,9 @@ In any event, the spiral is an incredible object.
                 \def\currentcolor{black}                                        % otherwise make it black
             }                                                                   % end \ifthenelse 
             \pgfmathtruncatemacro{\currentsqrt}{\n+1}                           % hypotenuse is of length root (n+1)
-%
-%	Draw everything
-%                                                    %
+%																				%
+%	Draw everything																%
+%																				%
             \coordinate (C) at ($(B)!1cm!-90:(A)$);                             % calculate hypotenuse
             \draw[\currentcolor] (A) edge node[fill=white]                      % draw hypotenuse
             	{$\sqrt{\currentsqrt}$} (C);                                    % ...
@@ -174,11 +175,12 @@ In any event, the spiral is an incredible object.
 %
 %	draw the spiral wrapped in a figure
 %
-\def \numberoftriangles {17} 
-\begin{figure}[H]
-        \centering
-        \resizebox{0.65 \textwidth}{!} {                                        % resize figure if you want
-                \sqrtspiral[scale=2]{\numberoftriangles}                        % draw the Spiral of Theodorus with n = 14
+\bigskip
+\def \numberoftriangles {17}													% how many triangles (plus 1)
+\begin{figure}[H]																% wrap the spiral in a figure
+        \centering																% center the whole thing
+        \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
+                \sqrtspiral[scale=2.50]{\numberoftriangles}						% draw the spiral
         }                                                                       % end resizebox
 \caption{The Spiral of Theodorus}
 \label{fig:the_spiral_of_theodorus}
