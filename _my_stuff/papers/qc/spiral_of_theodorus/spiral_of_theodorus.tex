@@ -165,7 +165,7 @@ In any event, the spiral is an incredible object.
             \coordinate (w) at ($(B)!4pt!-90:(A)$);                             % build the coordinates for the right angle box
             \coordinate (z) at ($(B)!4pt!0:(A)$);                               % ...
             \coordinate (t) at ($(w)!4pt!-90:(B)$);                             % ...
-            \draw (w) -- (t) -- (z);                                            % draw the right angle box
+            \draw [\currentcolor] (w) -- (t) -- (z);                            % draw the right angle box
             \coordinate (B) at (C);                                             % update starting point
         }                                                                       % end \foreach
     \end{tikzpicture}                                                           % end tikzpicture
@@ -174,11 +174,11 @@ In any event, the spiral is an incredible object.
 %	draw the spiral wrapped in a figure
 %
 \bigskip
-\def \numberoftriangles {17}													% how many triangles (plus 1)
+\def \numberoftriangles {17}													% how many triangles
 \begin{figure}[H]																% wrap the spiral in a figure
         \centering																% center the whole thing
-        \resizebox{0.70 \textwidth}{!} {                                        % resize figure if you want
-                \sqrtspiral[scale=2.50]{\numberoftriangles}						% draw the spiral
+        \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
+                \sqrtspiral[scale=2.75]{\numberoftriangles}						% draw the spiral
         }                                                                       % end resizebox
 \caption{The Spiral of Theodorus}
 \label{fig:the_spiral_of_theodorus}
