@@ -132,7 +132,7 @@ Square roots and cube roots...
 Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 </a>
 <br>
-<li><a href="./can_you_spot_the_error.pdf" target="_blank" rel="noopener noreferrer">Can You Spot The Error?</a>
+<li><a href="./can_you_spot_the_error.pdf" target="_blank" rel="noopener noreferrer">Can you spot the error?</a>
 <br>
 <li><a href="./2022.pdf" target="_blank" rel="noopener noreferrer">Happy New Year 2022!</a>
 <br>
