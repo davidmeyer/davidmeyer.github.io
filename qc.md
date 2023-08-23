@@ -92,7 +92,7 @@ Christmastime is Christmas Math Time!
 
 <li><a href="./spiral_of_theodorus.pdf" target="_blank"
     rel="noopener noreferrer">
-A Bit About The Spiral of Theodorus
+A bit about the spiral of Theodorus
 </a>
 <br>
 
