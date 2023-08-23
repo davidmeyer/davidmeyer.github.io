@@ -92,7 +92,7 @@ Christmastime is Christmas Math Time!
 
 <li><a href="./spiral_of_theodorus.pdf" target="_blank"
     rel="noopener noreferrer">
-The Spiral of Theodorus
+A Bit About The Spiral of Theodorus
 </a>
 <br>
 
@@ -147,7 +147,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 04.10.2023 by
+<i>Last Update: 08.23.2023 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
