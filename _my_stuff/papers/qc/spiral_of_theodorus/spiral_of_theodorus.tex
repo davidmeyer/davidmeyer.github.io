@@ -186,14 +186,17 @@ In any event, the spiral is an incredible object.
 %
 %	draw the spiral wrapped in a figure
 %
+\def \numberoftriangles {17}													% how many triangles (i.e. n)
+%
+%
+%
 \bigskip
-\def \numberoftriangles {17}													% how many triangles
 \begin{figure}[H]																% wrap the spiral in a figure
         \centering																% center the whole thing
         \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
         	$\boldmath{\sqrtspiral[scale=2.75]{\numberoftriangles}}$			% draw the spiral
         }                                                                       % end resizebox
-\caption{The Spiral of Theodorus}
+\caption{The Spiral of Theodorus with $n = \numberoftriangles$}
 \label{fig:the_spiral_of_theodorus}
 \end{figure}
 %
