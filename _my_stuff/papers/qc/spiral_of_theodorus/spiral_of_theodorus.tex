@@ -160,17 +160,17 @@ In any event, the spiral is an incredible object.
         \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
             \ifthenelse{\equal{\n}{\sqrtlast}}                                  % if it's the last triangle then make it red
             {                                                                   %
-                \def\currentcolor{red}                                          % draw the last triangle in red (\sqrtlast)
+                \def \currentcolor {red}                                        % draw the last triangle in red (\sqrtlast)
             }                                                                   %
             {                                                                   %
-                \def\currentcolor{black}                                        % otherwise make it black
+                \def \currentcolor {black}                                      % otherwise make it black
             }                                                                   % end \ifthenelse 
             \pgfmathtruncatemacro{\currentsqrt}{\n+1}                           % hypotenuse is of length root (n+1)
 %																				%
 %	Draw everything																%
 %																				%
             \coordinate (C) at ($(B)!1cm!-90:(A)$);                             % calculate hypotenuse
-            \draw[line width=0.30mm,\currentcolor] (A) edge node[fill=white]	% draw hypotenuse
+            \draw[line width=\linewidth,\currentcolor] (A) edge node[fill=white]% draw hypotenuse
             	{$\boldmath \sqrt{\currentsqrt}$} (C);							% ...
             \draw[line width=\linewidth, \currentcolor] (C) edge node[auto]		% draw the side opposite (of length 1)
             	{$\boldmath 1$} (B);											%
@@ -185,7 +185,10 @@ In any event, the spiral is an incredible object.
 %
 %	draw the spiral wrapped in a figure
 %
-\def \numberoftriangles {17}													% how many triangles (i.e. n)
+%	Parameters:
+%		\numberoftriangles (aka n)
+%
+\def \numberoftriangles {17}													% number of triangles (aka n)
 %
 %
 %
@@ -195,12 +198,35 @@ In any event, the spiral is an incredible object.
         \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
         	$\boldmath{\sqrtspiral[scale=2.75]{\numberoftriangles}}$			% draw the spiral
         }                                                                       % end resizebox
-\caption{The Spiral of Theodorus with $n = \numberoftriangles$}
+\caption{The Spiral of Theodorus ($n = \numberoftriangles$)}
 \label{fig:the_spiral_of_theodorus}
+\end{figure}
+%
+%	Draw a bigger spiral
+%
+\def \numberoftriangles {128}													% 128 triangles
+%
+%
+%
+\section{A Spiral of Theodorus with $n = \numberoftriangles$}
+%
+%
+%
+\bigskip
+\begin{figure}[H]																% wrap the spiral in a figure
+        \centering																% center the whole thing
+        \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
+        	$\boldmath{\sqrtspiral[scale=2.75]{\numberoftriangles}}$			% draw the spiral
+        }                                                                       % end resizebox
+\caption{A spiral with $n = \numberoftriangles$}
 \end{figure}
 %
 %
 %
+%
+%
+%
+\bigskip
 \section*{Acknowledgements}
 %
 %	LaTeX source on overleaf.com
