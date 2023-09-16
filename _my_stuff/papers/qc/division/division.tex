@@ -346,9 +346,10 @@ suppose that $f \neq 0$ and $g \neq 0$. Write $f = a_n x^n +
 and $b_m \neq 0$.  Therefore, $\deg f = n$ and $\deg g = m$. The
 definition of polynomial multiplication yields
 
+\smallskip
 \begin{equation*}
 fg = (a_nb_m)x^{n+m} +(a_nb_{m-1} + a_{n-1} b_m)  x^{n+m-1} +
-\hdots +a_0b_0 
+\cdots +a_0b_0 
 \end{equation*}
 
 \bigskip
@@ -483,7 +484,7 @@ g
 &=& (q + r_m a_n^{-1} x^{m - n}) f + r^\prime   
 			&\quad \mathrel{\#} \text{factor out $f$} \\
 [5pt]
-&\implies& r^\prime \in \mathcal{S}             
+&\Rightarrow& r^\prime \in \mathcal{S}             
 			&\quad \mathrel{\#} r^\prime = g - (q + r_m a_n^{-1} x^{m - n}) f \in \mathcal{S}
 \end{array}
 \end{equation*}
@@ -570,22 +571,22 @@ polynomials $q$ and $r$ with $\deg r < \deg d$. Then
 \begin{array}{rcll}
 f
 &=& qd +  r                             
-			&\mathrel{\#} f \in \mathcal{S} \text{ by Equation \ref{eqn:f}}, 
+			&\mathrel{\#} f \in \mathcal{S} \text{ by Equation (\ref{eqn:f})}, 
 				\mathcal{S} \text{ has a division algorithm} \\
 [5pt]
-&\implies & r = f  - qd                 
+&\Rightarrow& r = f  - qd                 
 			&\mathrel{\#} \text{solvefor $r$} \\
 [5pt]
-&\implies& r = f - q(hf + kg)           
+&\Rightarrow& r = f - q(hf + kg)           
 			&\mathrel{\#} d = hf + kg \\
 [5pt]
-&\implies& r = f - qhf  - qkg           
+&\Rightarrow& r = f - qhf  - qkg           
 			&\mathrel{\#} \text{arithmetic} \\
 [5pt]
-&\implies& r = (1 - qh)f  + (-qk)g      
+&\Rightarrow& r = (1 - qh)f  + (-qk)g      
 			&\mathrel{\#} F[x] \text{ is closed under */+ so } r  \text{ is of the form } hf + kg \\
 [5pt]
-&\implies&  r \in \mathcal{S}           
+&\Rightarrow&  r \in \mathcal{S}           
 			&\mathrel{\#} r \text{ is of the form } hf + kg \text{ so } r \in \mathcal{S} 
 \end{array}
 \label{eqn:division}
@@ -622,7 +623,7 @@ bd^\prime = bad$. Taking degrees shows that $\deg(ba) = 0$, which
 means that $a$ and $b$ are both constants. However since $d$ and
 $d^\prime$ are monic, for $d^\prime = ad$ to be monic it must be
 that $a = 1$. Thus, $d^\prime = ad = d$.  This shows that the
-greatest common divisor is unique, completing the proof.
+greatest common divisor is unique, completing the proof. 
 
 
 \section{Conclusions}
