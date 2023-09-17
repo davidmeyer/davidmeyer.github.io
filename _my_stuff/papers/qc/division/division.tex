@@ -215,7 +215,7 @@ Every field $F$ is an integral domain.
 \textbf{Proof.} Recall that if $F$ is a field then each non-zero
 $r \in F$ has an inverse $r^{-1}$.  So suppose $r,s \in F$ and $r
 \neq 0$ such that $r \cdot s = 0$. Then the claim is that $s =
-0$.  Why? Consider
+0$.  Ok, but why? Consider
 
 
 \begin{equation*}
@@ -258,7 +258,7 @@ Every finite integral domain $R$ is a field.
 an integral domain it has a cancellation law (or equivalently,
 $R$ has no zero divisors).  Having a cancellation law means that
 
-\smallskip
+
 \begin{equation}
 ab = ac \Rightarrow b = c
 \label{eqn:cancellation_law}
@@ -266,35 +266,43 @@ ab = ac \Rightarrow b = c
 
 \smallskip
 \begin{lemma}
-$R$ has a cancellation law if and only if $R$ has no zero divisors.
+$R$ has a cancellation law if and only if $R$ is an integral domain.
 \label{lemma:zero_divisors}
 \end{lemma}
 
 
 \noindent
 \textbf{Proof.} Consider the case in which $R$ is an integral domain
-(has no zero divisors) with $a \in R$ and $a \neq 0$. Then
+(has no zero divisors) with $a \in R$ and $a \neq 0$. Then $R$
+an integral domain implies that
 
 \begin{equation*}
 \begin{array}{rcll} 
 ab
 &=& ac                                                  
-			&\hspace{1em} \mathrel{\#} \text{by assumption 
+			&\hspace{2em} \mathrel{\#} \text{by assumption 
 				(Equation (\ref{eqn:cancellation_law}))} \\
 [5pt]
 &\Rightarrow& ab-ac = 0
-			&\hspace{1em} \mathrel{\#} \text{subtract $ac$ from both sides} \\
+			&\hspace{2em} \mathrel{\#} \text{subtract $ac$ from both sides} \\
 [5pt]
 &\Rightarrow& a\cdot(b-c) = 0
-			&\hspace{1em} \mathrel{\#} \text{factor out $a$} \\
+			&\hspace{2em} \mathrel{\#} \text{factor out $a$} \\
 [5pt]
 &\Rightarrow& b-c = 0
-			&\hspace{1em} \mathrel{\#} \text{$R$ has no zero divisors and $a \neq 0$ so $b-c$ must equal zero} \\
+			&\hspace{2em} \mathrel{\#} \text{$R$ has no zero divisors and 
+				$a \neq 0$ so $b-c$ must equal zero} \\
 [5pt]
-&\Rightarrow& b = c \hspace{1em} \blacksquare
+&\Rightarrow& b = c 
+			&\hspace{2em} \mathrel{\#} \text{$R$ has a cancellation law}
 \end{array}
 \end{equation*}
 
+\bigskip
+\noindent
+Going the other way, if $R$ has a cancellation law with $a \in R$ and
+$a \neq 0$ then $a\cdot b=0=a\cdot 0 \Rightarrow b=0$ and so $a$ is 
+not a zero divisor. That is, $R$ is an integral domain. $\blacksquare$
 
 \bigskip
 \noindent
@@ -308,37 +316,37 @@ $k$ and $l$ such that $k > l$. Then
 \begin{array}{rlll} 
 r^k 
 &=& r^l                                                 
-			&\qquad \mathrel{\#} \text{$R$ is a finite integral domain} \\
+			&\hspace{2em} \mathrel{\#} \text{$R$ is a finite integral domain} \\
 [5pt]
 &\Rightarrow& r \cdot r^{k-1} = r \cdot r^{l -1}        
-			&\qquad \mathrel{\#} \text{factor out $r$} \\
+			&\hspace{2em} \mathrel{\#} \text{factor out $r$} \\
 [5pt]
 &\Rightarrow& r^{k-1} = r^{l -1}                        
-			&\qquad\mathrel{\#} \text{use cancellation law (cancel $r$, 
+			&\hspace{2em}\mathrel{\#} \text{use cancellation law (cancel $r$, 
 				Equation (\ref{eqn:cancellation_law})}) \\
 [5pt]
 &\Rightarrow& r \cdot r^{k-2} = r \cdot r^{l -2}        
-			&\qquad\mathrel{\#} \text{factor out $r$} \\
+			&\hspace{2em}\mathrel{\#} \text{factor out $r$} \\
 [5pt]
 &\Rightarrow& r^{k-2} = r^{l -2}                        
-			&\qquad\mathrel{\#} \text{use cancellation law (cancel $r$, 
+			&\hspace{2em}\mathrel{\#} \text{use cancellation law (cancel $r$, 
 				Equation (\ref{eqn:cancellation_law}))} \\
 [5pt]
 &\vdots                                                 
-			&&\qquad\mathrel{\#} \text{iterate $l - 1$ times} \\ 
+			&&\hspace{2em}\mathrel{\#} \text{iterate $l - 1$ times} \\ 
 [5pt]   
 &\Rightarrow& r^{k - l + 1} = r^1                       
-			&\qquad\mathrel{\#} \text{...} \\ 
+			&\hspace{2em}\mathrel{\#} \text{...} \\ 
 [5pt]      
 &\Rightarrow& r \cdot r^{k - l} = r \cdot r^0           
-			&\qquad\mathrel{\#} \text{factor out $r$} \\
+			&\hspace{2em}\mathrel{\#} \text{factor out $r$} \\
 [5pt] 
 &\Rightarrow& r^{k-l} = r^{0}                           
-			&\qquad\mathrel{\#} \text{use cancellation law (cancel $r$, 
+			&\hspace{2em}\mathrel{\#} \text{use cancellation law (cancel $r$, 
 				Equation (\ref{eqn:cancellation_law}))} \\
 [5pt]
 &\Rightarrow& r^{k-l} = 1                               
-			&\qquad\mathrel{\#} r^0 = 1
+			&\hspace{2em}\mathrel{\#} r^0 = 1
 \end{array}
 \end{equation*}
 
