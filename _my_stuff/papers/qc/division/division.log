@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 SEP 2023 08:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 SEP 2023 09:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1480,9 +1480,9 @@ Package rerunfilecheck Info: File `division.out' has not changed.
 (rerunfilecheck)             Checksum: 506C67E9BF02FE1C5BB97CA6C3D96899;544.
  ) 
 Here is how much of TeX's memory you used:
- 52768 strings out of 478994
- 1330369 string characters out of 5858184
- 1971284 words of memory out of 5000000
+ 52767 strings out of 478994
+ 1330357 string characters out of 5858184
+ 1972284 words of memory out of 5000000
  69418 multiletter control sequences out of 15000+600000
  414179 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1502,10 +1502,10 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on division.pdf (5 pages, 183114 bytes).
+Output written on division.pdf (5 pages, 183102 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
