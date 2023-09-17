@@ -264,11 +264,47 @@ ab = ac \Rightarrow b = c
 \label{eqn:cancellation_law}
 \end{equation}
 
+\smallskip
+\begin{lemma}
+If $R$ has no zero divisors then $R$ has a cancellation law.
+\label{lemma:zero_divisors}
+\end{lemma}
+
+
+\noindent
+\textbf{Proof.} Consider the case in which $a \in R$ and $a \neq 0$.
+Then $a^{-1} \in R$ and
+
+\begin{equation*}
+\begin{array}{rcll} 
+ab
+&=& ac                                                  
+			&\hspace{1em} \mathrel{\#} \text{by assumption} \\
+[5pt]
+&\Rightarrow& ab-ac = 0
+			&\hspace{1em} \mathrel{\#} \text{subtract $ac$ from both sides} \\
+[5pt]
+&\Rightarrow& a\cdot(b-c) = 0
+			&\hspace{1em} \mathrel{\#} \text{factor out $a$} \\
+[5pt]
+&\Rightarrow& a^{-1} \cdot \left (a\cdot(b-c) \right ) = 0
+			&\hspace{1em} \mathrel{\#} \text{multiply both sides by $a^{-1}$} \\
+[5pt]
+&\Rightarrow& (a^{-1} \cdot a) \cdot (b-c) = 0
+			&\hspace{1em} \mathrel{\#} \text{multiplication is associative} \\
+[5pt]
+&\Rightarrow& b-c = 0
+			&\hspace{1em} \mathrel{\#} a^{-1} \cdot a = 1 \\
+[5pt]
+&\Rightarrow& b = c \hspace{1em} \blacksquare
+\end{array}
+\end{equation*}
+
 
 \bigskip
 \noindent
-To see why any finite integral domain $R$ is a field, consider $R
-= \{r, r^2, r^3, \hdots, r^n\}$ where $r^k \neq 0$ for $1 \leq k
+Now, to see why any finite integral domain $R$ is a field, consider 
+$R = \{r, r^2, r^3, \hdots, r^n\}$ where $r^k \neq 0$ for $1 \leq k
 \leq n$.  Since $R$ is finite we will have $r^k = r^l$ for some
 $k$ and $l$ such that $k > l$. Then
 
