@@ -205,7 +205,6 @@ integral domains (where there are no zero divisors), and because
 every field is an integral domain and every finite integral
 domain is a field. But why is that?
 
-
 \begin{theorem}
 Every field $F$ is an integral domain.
 \label{thm:integral_domain}
@@ -272,14 +271,15 @@ $R$ has a cancellation law if and only if $R$ has no zero divisors.
 
 
 \noindent
-\textbf{Proof.} Consider the case in which $a \in R$ and $a \neq 0$.
-Then $a^{-1} \in R$ and
+\textbf{Proof.} Consider the case in which $R$ is an integral domain
+(has no zero divisors) with $a \in R$ and $a \neq 0$. Then
 
 \begin{equation*}
 \begin{array}{rcll} 
 ab
 &=& ac                                                  
-			&\hspace{1em} \mathrel{\#} \text{by assumption} \\
+			&\hspace{1em} \mathrel{\#} \text{by assumption 
+				(Equation (\ref{eqn:cancellation_law}))} \\
 [5pt]
 &\Rightarrow& ab-ac = 0
 			&\hspace{1em} \mathrel{\#} \text{subtract $ac$ from both sides} \\
@@ -287,14 +287,8 @@ ab
 &\Rightarrow& a\cdot(b-c) = 0
 			&\hspace{1em} \mathrel{\#} \text{factor out $a$} \\
 [5pt]
-&\Rightarrow& a^{-1} \cdot \left (a\cdot(b-c) \right ) = 0
-			&\hspace{1em} \mathrel{\#} \text{multiply both sides by $a^{-1}$} \\
-[5pt]
-&\Rightarrow& (a^{-1} \cdot a) \cdot (b-c) = 0
-			&\hspace{1em} \mathrel{\#} \text{multiplication is associative} \\
-[5pt]
 &\Rightarrow& b-c = 0
-			&\hspace{1em} \mathrel{\#} a^{-1} \cdot a = 1 \\
+			&\hspace{1em} \mathrel{\#} \text{$R$ has no zero divisors and $a \neq 0$ so $b-c$ must equal zero} \\
 [5pt]
 &\Rightarrow& b = c \hspace{1em} \blacksquare
 \end{array}
@@ -576,11 +570,14 @@ some $f^\prime \in \mathcal{S}$
 \begin{equation}
 \begin{array}{rcll}
 f^\prime
-&=& hf +  kg                    &\quad \mathrel{\#} \text{definition of elements of } \mathcal{S} \\
+&=& hf +  kg                    
+		&\quad \mathrel{\#} \text{definition of elements of } \mathcal{S} \\
 [5pt]
-&=& 1 \cdot f + 0 \cdot g       &\quad \mathrel{\#} \text{let $h = 1$ and $k = 0$}  \\
+&=& 1 \cdot f + 0 \cdot g       
+		&\quad \mathrel{\#} \text{let $h = 1$ and $k = 0$}  \\
 [5pt]
-&=& f                           &\quad \mathrel{\#} \text{so $f \in \mathcal{S}$}
+&=& f                           
+		&\quad \mathrel{\#} \text{so $f \in \mathcal{S}$}
 \end{array}
 \label{eqn:f}
 \end{equation}
@@ -669,6 +666,8 @@ greatest common divisor is unique, completing the proof.
 %
 \section{Acknowledgements}
 \label{sec:acknowledgements}
+Thanks to @binary\_operation@mathstodon.xyz for 
+the insightful comments on Lemma \ref{lemma:zero_divisors}.
 %
 %	LaTeX source on overleaf.com
 %
