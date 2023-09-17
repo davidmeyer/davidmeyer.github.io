@@ -81,7 +81,7 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 %
 %
-%	theorems, definitions, etc
+%	s, definitions, etc
 %
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -90,7 +90,7 @@
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{remark}{Remark}[section]
-%
+
 %	For drawing matrix products 
 %
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
@@ -208,7 +208,7 @@ domain is a field. But why is that?
 
 \begin{theorem}
 Every field $F$ is an integral domain.
-\label{thm:integral_domain}
+\label{theorem:integral_domain}
 \end{theorem}
 
 \noindent
@@ -250,7 +250,7 @@ divisors and is by definition an integral domain. $\blacksquare$
 \bigskip
 \begin{theorem}
 Every finite integral domain $R$ is a field.
-\label{thm:finite_id_is_a_field}
+\label{theorem:finite_id_is_a_field}
 \end{theorem}
 
 \noindent
@@ -258,7 +258,7 @@ Every finite integral domain $R$ is a field.
 an integral domain it has a cancellation law (or equivalently,
 $R$ has no zero divisors).  Having a cancellation law means that
 
-
+\smallskip
 \begin{equation}
 ab = ac \Rightarrow b = c
 \label{eqn:cancellation_law}
@@ -273,15 +273,14 @@ $R$ has a cancellation law if and only if $R$ is an integral domain.
 
 \noindent
 \textbf{Proof.} Consider the case in which $R$ is an integral domain
-(has no zero divisors) with $a \in R$ and $a \neq 0$. Then $R$
-an integral domain implies that
+(has no zero divisors) with $a,b,c \in R$ and $a \neq 0$, and assume
+that $ab = bc$. Then 
 
 \begin{equation*}
 \begin{array}{rcll} 
 ab
 &=& ac                                                  
-			&\hspace{2em} \mathrel{\#} \text{by assumption 
-				(Equation (\ref{eqn:cancellation_law}))} \\
+			&\hspace{2em} \mathrel{\#} \text{by assumption} \\
 [5pt]
 &\Rightarrow& ab-ac = 0
 			&\hspace{2em} \mathrel{\#} \text{subtract $ac$ from both sides} \\
@@ -300,9 +299,33 @@ ab
 
 \bigskip
 \noindent
-Going the other way, if $R$ has a cancellation law with $a \in R$ then 
-$a\cdot b = 0 = a\cdot 0 \Rightarrow b=0$ and so $a$ is 
-not a zero divisor. That is, $R$ is an integral domain. $\blacksquare$
+Thus $R$ an integral domain implies that $R$ has a cancellation law.
+
+\bigskip
+\noindent
+Going the other way, suppose $R$ has a cancellation law with $a,b \in R$ 
+and assume that $a\cdot b = 0$. Then
+
+\smallskip
+\begin{equation*}
+\begin{array}{rcll} 
+a \cdot b
+&=& 0 								
+			&\hspace{2em} \mathrel{\#} \text{by assumption} \\
+[5pt]
+&\Rightarrow& a \cdot b = a \cdot 0 
+			&\hspace{2em} \mathrel{\#} 0 = a \cdot 0 \\
+[5pt]
+&\Rightarrow& b = 0 				
+			&\hspace{2em} \mathrel{\#} \text{cancel $a$ 
+				($R$ has a cancellation law)}\\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $a$ is not a zero divisor. Thus $R$ having a cancellation law implies 
+that $R$ is an integral domain. $\blacksquare$
 
 \bigskip
 \noindent
@@ -463,8 +486,8 @@ $\{0,1,2,\hdots,,n-1\}$ of $F$ obey the rules for addition and
 multiplication modulo $n$. Therefore there is a copy of
 $\mathbb{Z}_n$ inside of $F$. Since $\mathbb{Z}_n$ has zero
 divisors when $n$ is not prime (and a field is an integral domain
-and so has no zero divisors, see Theorem
-\ref{thm:integral_domain}), it follows that the characteristic of
+and so has no zero divisors, see 
+\ref{theorem:integral_domain}), it follows that the characteristic of
 a field must be prime.
 
 Thus every finite field $F$ must have characteristic $p$ for some
