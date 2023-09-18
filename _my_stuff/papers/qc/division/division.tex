@@ -264,16 +264,50 @@ ab = ac \Rightarrow b = c
 \label{eqn:cancellation_law}
 \end{equation}
 
-\smallskip
+\medskip
+\noindent
+Ok, but why is $R$ having a cancellation law equivalent to $R$ 
+being an integral domain? Consider Lemma \ref{lemma:zero_divisors}:
+
+\bigskip
 \begin{lemma}
-$R$ has a cancellation law if and only if $R$ is an integral domain.
+$R$ has a cancellation law iff $R$ is an integral domain.
 \label{lemma:zero_divisors}
 \end{lemma}
 
 
 \noindent
-\textbf{Proof.} Suppose $R$ is an integral domain with $a,b,c \in R$, 
-$a \neq 0$, and assume that $ab = bc$. Then 
+\textbf{Proof.} Consider the $\Rightarrow$ and $\Leftarrow$ cases:
+
+\begin{itemize}
+\item [($\Rightarrow$)] Suppose $R$ has a cancellation law 
+with $a,b \in R$ and assume that $ab = 0$. Then
+
+\vspace{-0.25cm}								% why is there too much vertical space here?
+\begin{equation*}
+\begin{array}{rcll} 
+ab
+&=& 0 								
+			&\hspace{2em} \mathrel{\#} \text{by assumption} \\
+[5pt]
+&\Rightarrow& a \cdot b = a \cdot 0 
+			&\hspace{2em} \mathrel{\#} 0 = a \cdot 0 \\
+[5pt]
+&\Rightarrow& b = 0 				
+			&\hspace{2em} \mathrel{\#} \text{(cancel $a \Rightarrow a$ is 
+				not a zero divisor) $\Rightarrow R$ is an integral domain} \\
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+Thus $R$ has a cancellation law $\Rightarrow$ $R$ is an integral 
+domain.
+
+\medskip
+\noindent
+\item [($\Leftarrow$)] Suppose $R$ is an integral domain with $a,b,c \in R$, 
+$a \neq 0$ and assume that $ab = bc$. Then 
 
 \begin{equation*}
 \begin{array}{rcll} 
@@ -289,44 +323,22 @@ ab
 [5pt]
 &\Rightarrow& b-c = 0
 			&\hspace{2em} \mathrel{\#} \text{$R$ has no zero divisors and 
-				$a \neq 0$ so $b-c$ must equal zero} \\
+				$a \neq 0 \Rightarrow b-c$ must equal zero} \\
 [5pt]
 &\Rightarrow& b = c 
-			&\hspace{2em} \mathrel{\#} \text{$R$ has a cancellation law}
+			&\hspace{2em} \mathrel{\#} \text{$(ab=ac \Rightarrow b = c)
+			\Rightarrow R$ has a cancellation law}
 \end{array}
 \end{equation*}
 
-\bigskip
+\medskip
 \noindent
-Thus $R$ being an integral domain implies that $R$ has a cancellation law.
+Thus $R$ is an integral domain $\Rightarrow$ $R$ has a cancellation 
+law. $\blacksquare$
+\end{itemize}
 
-\bigskip
-\noindent
-Going the other way, suppose $R$ has a cancellation law with $a,b \in R$, 
-$a \neq 0$, and assume that $a\cdot b = 0$. Then
 
-\smallskip
-\begin{equation*}
-\begin{array}{rcll} 
-a \cdot b
-&=& 0 								
-			&\hspace{2em} \mathrel{\#} \text{by assumption} \\
-[5pt]
-&\Rightarrow& a \cdot b = a \cdot 0 
-			&\hspace{2em} \mathrel{\#} 0 = a \cdot 0 \\
-[5pt]
-&\Rightarrow& b = 0 				
-			&\hspace{2em} \mathrel{\#} \text{cancel $a \Rightarrow a$ is not a zero divisor and so 
-				$R$ is an integral domain} \\
-\end{array}
-\end{equation*}
-
-\bigskip
-\noindent
-Thus $R$ having a cancellation law implies that $R$ is an integral 
-domain. $\blacksquare$
-
-\bigskip
+\medskip
 \noindent
 Now, to see why any finite integral domain $R$ is a field, consider 
 $R = \{r, r^2, r^3, \hdots, r^n\}$ where $r^k \neq 0$ for $1 \leq k
