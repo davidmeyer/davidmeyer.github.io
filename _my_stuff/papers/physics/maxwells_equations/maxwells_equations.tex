@@ -169,7 +169,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \begin{array}{llll}
 \nabla \cdot \vE 
 &=& \dfrac{\rho}{\epsilon_0} 	
-			&\hspace{7em} \mathrel{\#} \text{a charge ($\rho$) 
+			&\hspace{8em} \mathrel{\#} \text{a charge ($\rho$) 
 				creates an electric field ($\vE$)$\hspace{7em}$} \\
 \end{array}
 \end{equation*}
@@ -217,69 +217,87 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 %	draw an electromagnetic wave
 %
 \bigskip
-\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),
-                    line cap=round, line join=round,
-                    axis/.style={black, thick,->},
-                    vector/.style={>=stealth,->}]
- %
- %	Definitions
- %
-  \large
-  \def \A{1.5}
-  \def \nNodes{5} 													% use even number
-  \def \nVectorsPerNode{8}
-  \def \N{\nNodes*40}
-  \def \xmax{\nNodes*pi/2*1.01}
-  \pgfmathsetmacro\nVectors{(\nVectorsPerNode+1)*\nNodes}
-   \def \vk{\mathbf{\hat{k}}}
+\begin{figure}[H]																% wrap the spiral in a figure
+       \centering																% center the whole thing
+        \resizebox{0.90 \textwidth}{!} {                                        % resize figure if you want
+%
+%	Draw the picture
+%
+		\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),				% set a few TikZ parameters
+								line cap=round, line join=round,
+								axis/.style={black, thick,->},
+                    			vector/.style={>=stealth,->}]
+%
+%	Definitions
+%
+%
+%	Coordinates
+%
+ 			\coordinate (O)          at (0,0,0);               					% origin
+%
+%	Constants
+%
+  			\large
+  			\def \A{1.5}
+  			\def \nNodes{5} 													% use even number
+  			\def \nVectorsPerNode{8}
+  			\def \N{\nNodes*40}
+  			\def \xmax{\nNodes*pi/2*1.01}
+  			\pgfmathsetmacro\nVectors{(\nVectorsPerNode+1)*\nNodes}
+   			\def \vk{\mathbf{\hat{k}}}
  %
  %	Draw the main axes
  %
-  \draw[axis] (0,0,0) -- ++(\xmax*1.1,0,0) node[right] {$x$};
-  \draw[axis] (0,-\A*1.4,0) -- (0,\A*1.4,0) node[above] {$y$};
-  \draw[axis] (0,0,-\A*1.4) -- (0,0,\A*1.4) node[left] {$z$};
+  			\draw[axis] (O)           -- ++(\xmax*1.1,0,0) node[right] {$x$};
+  			\draw[axis] (0,-\A*1.4,0) -- (0,\A*1.4,0) node[above]      {$y$};
+  			\draw[axis] (0,0,-\A*1.4) -- (0,0,\A*1.4) node[left]       {$z$};
  %
  %	Draw the small axes
  %
-  \def\xOffset{{(\nNodes-2)*pi/2}}
-  \def\yOffset{\A*1.2}
-  \def\zOffset{\A*1.2}
-  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(\A*0.6,0,0) node[right] {$\vk$};
-  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,\A*0.6,0) node[above] {$\vE$};
-  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,0,\A*0.6) node[left]  {$\vB$};
+ 			\def\xOffset{{(\nNodes-2)*pi/2}}
+			\def\yOffset{\A*1.2}
+			\def\zOffset{\A*1.2}
+			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(\A*0.6,0,0) node[right] {$\vk$};
+			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,\A*0.6,0) node[above] {$\vE$};
+			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,0,\A*0.6) node[left]  {$\vB$};
  %
  %	Draw the equations
  %
-  \node[above right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
-    {$\begin{aligned}
-      \vE &= \mathbf{E_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
-      \vB &= \mathbf{B_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
-      \end{aligned}$};
-  \node[below right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
-    {$\vE\cdot\vk = 0,\;\; \vB\cdot\vk = 0,\;\; \vB = \frac{1}{c_0}\vk\times\vE$};
+			\node[above right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
+				{$\begin{aligned}
+					\vE &= \mathbf{E_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+					\vB &= \mathbf{B_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+				\end{aligned}$};
+			\node[below right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
+				{$\vE\cdot\vk = 0,\;\; \vB\cdot\vk = 0,\;\; 
+					\vB = \frac{1}{c_0}\vk\times\vE$};
  %
  %	Now draw the waves
  %
-  \draw[very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
-    plot (\t,{\A*sin(\t*360/pi)},0);
-  \draw[very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
-    plot (\t,0,{\A*sin(\t*360/pi)});
+			\draw[very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
+    			plot (\t,{\A*sin(\t*360/pi)},0);
+			\draw[very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
+    			plot (\t,0,{\A*sin(\t*360/pi)});
 %
 %	Draw the vectors
 %
-  \foreach \k [evaluate={\t=\k*pi/2/(\nVectorsPerNode+1);
+			\foreach \k [evaluate={\t=\k*pi/2/(\nVectorsPerNode+1);
                          \angle=\k*90/(\nVectorsPerNode+1);
                          \c=(mod(\angle,90)!=0);}]
-              in {1,...,\nVectors}{
-    \if\c1
-      \draw[vector] (\t,0,0) -- ++(0,{\A*sin(2*\angle)},0);
-      \draw[vector] (\t,0,0) -- ++(0,0,{\A*sin(2*\angle)});
-    \fi
-  }
-\end{tikzpicture}
+					in {1,...,\nVectors}{
+						\if\c1
+							\draw[vector] (\t,0,0) -- ++(0,{\A*sin(2*\angle)},0);
+							\draw[vector] (\t,0,0) -- ++(0,0,{\A*sin(2*\angle)});
+						\fi
+					}
+		\end{tikzpicture}
+       }                                                                       % end resizebox
+\caption{Propagation of an electromagnetic wave}
+\end{figure}
 %
 %
 %
+\bigskip
 \bigskip
 \section{Conclusions}
 \label{sec:conclusions}
