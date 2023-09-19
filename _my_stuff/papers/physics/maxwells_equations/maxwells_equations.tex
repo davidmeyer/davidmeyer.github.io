@@ -1,0 +1,308 @@
+\documentclass{article}
+%
+%
+%	maxwells_equations.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	19 Sep 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
+\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Maxwell's Equations}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\def \vE{\mathbf{E}}
+\def \vB{\mathbf{B}}
+\def \vJ{\mathbf{J}}
+
+\section{Introduction}
+\label{sec:introduction}
+A few definitions (WIP...)
+
+\begin{equation*}
+\begin{array}{llll}
+\vE 		&&&	\hspace{6em} \mathrel{\#} \text{Electric field} \\
+\vB 		&&&	\hspace{6em} \mathrel{\#} \text{Magnetic field} \\
+\vJ 		&&& \hspace{6em} \mathrel{\#} \text{Current density} \\
+\epsilon_0	&&&	\hspace{6em} \mathrel{\#} \text{Permittivity} \\
+\mu_0 		&&&	\hspace{6em} \mathrel{\#} \text{Permeability} \\
+c_0 		&&&	\hspace{6em} \mathrel{\#} \text{Speed of light in a vacuum} \\
+\rho 		&&& \hspace{6em} \mathrel{\#} \text{Charge density} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+For some field $\mathbf{F}$, we call $\nabla \cdot \mathbf{F}$ the divergence,
+while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}.
+
+\bigskip
+\section{Maxwell's Equations (differential form)}
+\label{sec:maxwells_equations_differential_form}
+
+\begin{enumerate}
+\item Gauss' law for electricity
+\label{item:gauss_law_electricity}
+\begin{equation*}
+\begin{array}{llll}
+\nabla \cdot \vE 
+&=& \dfrac{\rho}{\epsilon_0} 	
+			&\hspace{7em} \mathrel{\#} \text{a charge ($\rho$) 
+				creates an electric field ($\vE$)$\hspace{7em}$} \\
+\end{array}
+\end{equation*}
+
+\item Gauss' law for magnetism
+\label{item:gauss_law_magnetism}	
+\begin{equation*}
+\begin{array}{rlll}
+\nabla \cdot \vB 
+&=& 0							
+			&\hspace{8em} \mathrel{\#} \text{magnetic monopoles 
+				do not exist $\hspace{10em}$}
+\end{array}
+\end{equation*}
+
+\item Faraday's law of induction
+\label{item:faradays_law_of_induction}
+\begin{equation*}
+\begin{array}{rlll}
+\nabla \times \vE 
+&=& -\dfrac{\partial \vB}{\partial t} 	&
+			\hspace{6em} \mathrel{\#} \text{moving a magnetic 
+				field ($\vB$) creates an electric field ($\vE$)}
+\end{array}
+\end{equation*}
+
+
+\item  Ampere's law	(with Maxwell's modification)
+\label{item:ampers_law}
+\begin{equation*}
+\begin{array}{rlll}
+\nabla \times \vB 
+&=& \mu_0 \vJ + \mu_0 \epsilon_0 \dfrac{\partial \vE}{\partial t}					
+			&\hspace{2em} \mathrel{\#} \text{an electric field ($\vE$)
+				creates a magnetic field ($\vB$) $\hspace{3em}$}
+\end{array}
+\end{equation*}
+\end{enumerate}
+
+
+
+\section{Electromagnetic Waves}
+\label{sec:emwaves}
+%
+%	draw an electromagnetic wave
+%
+\bigskip
+\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),
+                    line cap=round, line join=round,
+                    axis/.style={black, thick,->},
+                    vector/.style={>=stealth,->}]
+ %
+ %	Definitions
+ %
+  \large
+  \def \A{1.5}
+  \def \nNodes{5} 													% use even number
+  \def \nVectorsPerNode{8}
+  \def \N{\nNodes*40}
+  \def \xmax{\nNodes*pi/2*1.01}
+  \pgfmathsetmacro\nVectors{(\nVectorsPerNode+1)*\nNodes}
+   \def \vk{\mathbf{\hat{k}}}
+ %
+ %	Draw the main axes
+ %
+  \draw[axis] (0,0,0) -- ++(\xmax*1.1,0,0) node[right] {$x$};
+  \draw[axis] (0,-\A*1.4,0) -- (0,\A*1.4,0) node[above] {$y$};
+  \draw[axis] (0,0,-\A*1.4) -- (0,0,\A*1.4) node[left] {$z$};
+ %
+ %	Draw the small axes
+ %
+  \def\xOffset{{(\nNodes-2)*pi/2}}
+  \def\yOffset{\A*1.2}
+  \def\zOffset{\A*1.2}
+  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(\A*0.6,0,0) node[right] {$\vk$};
+  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,\A*0.6,0) node[above] {$\vE$};
+  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,0,\A*0.6) node[left]  {$\vB$};
+ %
+ %	Draw the equations
+ %
+  \node[above right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
+    {$\begin{aligned}
+      \vE &= \mathbf{E_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+      \vB &= \mathbf{B_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+      \end{aligned}$};
+  \node[below right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
+    {$\vE\cdot\vk = 0,\;\; \vB\cdot\vk = 0,\;\; \vB = \frac{1}{c_0}\vk\times\vE$};
+ %
+ %	Now draw the waves
+ %
+  \draw[very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
+    plot (\t,{\A*sin(\t*360/pi)},0);
+  \draw[very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
+    plot (\t,0,{\A*sin(\t*360/pi)});
+%
+%	Draw the vectors
+%
+  \foreach \k [evaluate={\t=\k*pi/2/(\nVectorsPerNode+1);
+                         \angle=\k*90/(\nVectorsPerNode+1);
+                         \c=(mod(\angle,90)!=0);}]
+              in {1,...,\nVectors}{
+    \if\c1
+      \draw[vector] (\t,0,0) -- ++(0,{\A*sin(2*\angle)},0);
+      \draw[vector] (\t,0,0) -- ++(0,0,{\A*sin(2*\angle)});
+    \fi
+  }
+\end{tikzpicture}
+%
+%
+%
+\bigskip
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+%\url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+
