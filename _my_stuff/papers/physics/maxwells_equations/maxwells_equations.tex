@@ -131,11 +131,12 @@
 \begin{document}
 \maketitle
 %
-%
+%	Global constants
 %
 \def \vE{\mathbf{E}}
 \def \vB{\mathbf{B}}
 \def \vJ{\mathbf{J}}
+\def \vk{\mathbf{\hat{k}}}
 
 \section{Introduction}
 \label{sec:introduction}
@@ -152,8 +153,8 @@ A few definitions (WIP...)
 \vJ 		&&& \hspace{6em} \mathrel{\#} \text{Current density} \\
 \epsilon_0	&&&	\hspace{6em} \mathrel{\#} \text{Permittivity} \\
 \mu_0 		&&&	\hspace{6em} \mathrel{\#} \text{Permeability} \\
-c_0 		&&&	\hspace{6em} \mathrel{\#} \text{Speed of light in a vacuum} \\
-\rho 		&&& \hspace{6em} \mathrel{\#} \text{Charge density} 
+\rho 		&&& \hspace{6em} \mathrel{\#} \text{Charge density} \\
+c_0 		&&&	\hspace{6em} \mathrel{\#} \text{Speed of light in a vacuum}
 \end{array}
 \end{equation*}
 
@@ -221,7 +222,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 %	draw an electromagnetic wave
 %
 \bigskip
-\begin{figure}[H]																% wrap the spiral in a figure
+\begin{figure}[H]																% wrap the wave in a figure
     \fbox{																		% put a box around the figure
        \centering																% center the whole thing
         \resizebox{0.90 \textwidth}{!} {                                        % resize figure if you want
@@ -249,7 +250,6 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
   			\def \N{\nNodes*40}
   			\def \xmax{\nNodes*pi/2*1.01}
   			\pgfmathsetmacro\nVectors{(\nVectorsPerNode+1)*\nNodes}
-   			\def \vk{\mathbf{\hat{k}}}
  %
  %	Draw the main axes
  %
@@ -298,7 +298,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 		\end{tikzpicture}
        }																		% end resizebox
     }																			% end fbox
-\caption{Propagation of an electromagnetic wave}
+\caption{Propagation of an electromagnetic wave in the $\vk$ direction}
 \end{figure}
 %
 %
