@@ -136,7 +136,7 @@
 \def \vE{\mathbf{E}}
 \def \vB{\mathbf{B}}
 \def \vJ{\mathbf{J}}
-\def \vk{\mathbf{\hat{k}}}
+\def \vi{\mathbf{\hat{i}}}
 
 \section{Introduction}
 \label{sec:introduction}
@@ -167,6 +167,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \section{Maxwell's Equations (differential form)}
 \label{sec:maxwells_equations_differential_form}
 
+\medskip
 \begin{enumerate}
 \item Gauss' law for electricity
 \label{item:gauss_law_electricity}
@@ -196,7 +197,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \begin{array}{rlll}
 \nabla \times \vE 
 &=& -\dfrac{\partial \vB}{\partial t} 	&
-			\hspace{6em} \mathrel{\#} \text{moving a magnetic 
+			\hspace{6em} \mathrel{\#} \text{a moving magnetic 
 				field ($\vB$) creates an electric field ($\vE$)}
 \end{array}
 \end{equation*}
@@ -262,7 +263,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
  			\def\xOffset{{(\nNodes-2)*pi/2}}
 			\def\yOffset{\A*1.2}
 			\def\zOffset{\A*1.2}
-			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(\A*0.6,0,0) node[right] {$\vk$};
+			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(\A*0.6,0,0) node[right] {$\vi$};
 			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,\A*0.6,0) node[above] {$\vE$};
 			\draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,0,\A*0.6) node[left]  {$\vB$};
  %
@@ -270,12 +271,12 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
  %
 			\node[above right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
 				{$\begin{aligned}
-					\vE &= \mathbf{E_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
-					\vB &= \mathbf{B_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+					\vE &= \mathbf{E_0}\sin(\vi\cdot\mathbf{x}-c_0t)\\
+					\vB &= \mathbf{B_0}\sin(\vi\cdot\mathbf{x}-c_0t)\\
 				\end{aligned}$};
 			\node[below right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
-				{$\vE\cdot\vk = 0,\;\; \vB\cdot\vk = 0,\;\; 
-					\vB = \frac{1}{c_0}\vk\times\vE$};
+				{$\vE\cdot\vi = 0,\;\; \vB\cdot\vi = 0,\;\; 
+					\vB = \frac{1}{c_0}\vi\times\vE$};
  %
  %	Now draw the waves
  %
@@ -298,7 +299,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 		\end{tikzpicture}
        }																		% end resizebox
     }																			% end fbox
-\caption{Propagation of an electromagnetic wave in the $\vk$ direction}
+\caption{Propagation of an electromagnetic wave in the $\vi$ direction}
 \end{figure}
 %
 %
