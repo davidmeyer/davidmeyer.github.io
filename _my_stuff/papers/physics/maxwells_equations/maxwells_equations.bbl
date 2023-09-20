@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{faraday_and_the_em_theory_of_light}
 {Augusto Bel{\'e}ndez}.
@@ -27,14 +27,14 @@
 \newblock
   \url{https://em.geosci.xyz/content/maxwell1_fundamentals/formative_laws/gauss_magnetic.html},
   2012.
-\newblock [Online; accessed 2-September-2023].
+\newblock [Online; accessed 20-September-2023].
 
 \bibitem{faradays_law}
 {HyperPhysics}.
 \newblock {Faraday's Law}.
 \newblock
   \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/farlaw.html}, 2010.
-\newblock [Online; accessed 2-September-2023].
+\newblock [Online; accessed 20-September-2023].
 
 \bibitem{the_role_of_grad}
 {J D Gibbon}.
@@ -47,7 +47,7 @@
 \newblock {Gauss' Law}.
 \newblock
   \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/gaulaw.html}, 2005.
-\newblock [Online; accessed 2-September-2023].
+\newblock [Online; accessed 20-September-2023].
 
 \bibitem{amperes_law}
 {Stephen Teitel}.
@@ -55,21 +55,13 @@
   of Units}.
 \newblock
   \url{https://www.pas.rochester.edu/~stte/phy415F20/units/unit_1-3.pdf}, 2020.
-\newblock [Online; accessed 2-September-2023].
+\newblock [Online; accessed 20-September-2023].
 
 \bibitem{wikipedia:maxwells_equations}
 {Wikipedia Contributors}.
 \newblock {Maxwell's Equations --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Maxwell%27s_equations&oldid=1173397101},
-  2023.
-\newblock [Online; accessed 20-September-2023].
-
-\bibitem{wikipedia:speed_of_light}
-{Wikipedia Contributors}.
-\newblock {Speed of Light --- {Wikipedia}{,} The Free Encyclopedia}.
-\newblock
-  \url{https://en.wikipedia.org/w/index.php?title=Speed_of_light&oldid=1175742254},
   2023.
 \newblock [Online; accessed 20-September-2023].
 
