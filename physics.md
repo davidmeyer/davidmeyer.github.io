@@ -8,7 +8,7 @@
 #	
 #
 -->
-<h2>Notes on various astronomy topics</h2>
+<h2>Notes on various physics topics</h2>
 
 <li><a href="./maxwells_equations.pdf" 
        target="_blank" 
