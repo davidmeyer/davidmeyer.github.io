@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{faraday_and_the_em_theory_of_light}
 {Augusto Bel{\'e}ndez}.
@@ -59,9 +59,17 @@
 
 \bibitem{wikipedia:maxwells_equations}
 {Wikipedia Contributors}.
-\newblock Maxwell's equations --- {Wikipedia}{,} the free encyclopedia.
+\newblock {Maxwell's Equations --- {Wikipedia}{,} The Free Encyclopedia}.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Maxwell%27s_equations&oldid=1173397101},
+  2023.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{wikipedia:speed_of_light}
+{Wikipedia Contributors}.
+\newblock {Speed of Light --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Speed_of_light&oldid=1175742254},
   2023.
 \newblock [Online; accessed 20-September-2023].
 
