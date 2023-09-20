@@ -38,7 +38,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -49,8 +49,8 @@
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}													% use characters instead of numbers in enumerate
-\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 %
 %	Describe floating point parameters, \fpeval
 %
@@ -137,40 +137,129 @@
 \def \vB{\mathbf{B}}
 \def \vJ{\mathbf{J}}
 \def \vi{\mathbf{\hat{i}}}
-
+\def \vj{\mathbf{\hat{j}}}
+\def \vk{\mathbf{\hat{k}}}
+%
+%
+%
 \section{Introduction}
 \label{sec:introduction}
-TBD
-
-\section{Definitions}
-\label{sec:definitions}
-A few definitions (WIP...)
-
-\begin{equation*}
-\begin{array}{llll}
-\vE 		&&&	\hspace{6em} \mathrel{\#} \text{Electric field} \\
-\vB 		&&&	\hspace{6em} \mathrel{\#} \text{Magnetic field} \\
-\vJ 		&&& \hspace{6em} \mathrel{\#} \text{Current density} \\
-\epsilon_0	&&&	\hspace{6em} \mathrel{\#} \text{Permittivity} \\
-\mu_0 		&&&	\hspace{6em} \mathrel{\#} \text{Permeability} \\
-\rho 		&&& \hspace{6em} \mathrel{\#} \text{Charge density} \\
-c_0 		&&&	\hspace{6em} \mathrel{\#} \text{Speed of light in a vacuum}
-\end{array}
-\end{equation*}
+Maxwell's equations are a set of four fundamental equations that
+describe the behavior of electric and magnetic fields in
+classical electromagnetism. They were formulated by the Scottish
+physicist James Clerk Maxwell in the 19th century and are crucial
+in understanding the behavior of electromagnetic waves, such as
+light (an idea previously articulated by Faraday
+\cite{faraday_and_the_em_theory_of_light}). Maxwell's equations
+are typically written in differential and integral forms
+\cite{wikipedia:maxwells_equations}.
 
 \bigskip
 \noindent
-For some field $\mathbf{F}$, we call $\nabla \cdot \mathbf{F}$ the divergence,
-while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}.
+Maxwell's equations are fundamental to classical electromagnetism
+and have played a crucial role in the development of modern
+physics and technology, including the understanding of
+electromagnetic waves, the design of electrical circuits, and the
+development of technologies such as radio, television, and
+wireless communication, to name a few.
 
 \bigskip
+\noindent
+The rest of this note is organized as follows: Section
+\ref{sec:definitions} provides a few definitions needed to
+discuss Maxwell's equations. Section
+\ref{sec:maxwells_equations_differential_form} discusses the
+differential form of Maxwell's equations, and Section
+\ref{sec:maxwells_equations_integral_form} discusses the integral
+form of Maxwell's equations. Finally, Section
+\ref{sec:conclusions} outlines some conclusions and final
+thoughts.
+%
+%
+%
+\section{Definitions}
+\label{sec:definitions}
+
+\bigskip
+\begin{table} [H]
+  \centering
+  \renewcommand{\arraystretch}{2.0}
+     \resizebox{0.75 \textwidth}{!} {                                                   % resize figure if you want
+     \begin{tabular} {| c | c  | c | c |}
+      \hline
+      {\Large \bf Symbol}  & {\Large \bf What} & {\Large \bf SI Units} & {\Large \bf Notes} \\
+      \hline \hline
+      $\vE$        & Electric Field & N/C             & Newtons/Coulomb \\
+      \hline
+      $\vB$        & Magnetic Field & N/m/A           & Newton/Meter/Ampere \\
+      \hline
+      $\vJ$        & Current Density & A/$\text{m}^2$ & Ampere/$\text{Meter}^2$\\
+      \hline
+      $\rho$       & Charge density & C/$\text{m}^3$  & Coulomb/$\text{Meter}^3$ \\
+      \hline
+      $\epsilon_0$ & Permittivity & F/m               & Farad/Meter \\
+      \hline
+      $\mu_0$      & Permeability & H/m               & Henry/Meter \\
+      \hline
+      $c_0$        & Speed of light in a vacuum & m/s & Meter/Second \\
+      \hline
+    \end{tabular}
+   }
+  \caption{A Few Definitions}
+  \label{tab:definitions}
+\end{table}
+
+\bigskip
+\noindent
+For some field $\mathbf{F}$, we call $\nabla \cdot \mathbf{F}$
+the divergence, while $\nabla \times \mathbf{F}$ is the cross
+product \cite{dmm:vector_calculus,the_role_of_grad}.It is worth
+noting here that using the dot notation for the divergence is
+sort of a "puesdo dot product", since the divergence commute
+(whereas the standard dot product does commute).
+
+\bigskip
+\noindent
+Specifically
+
+\begin{equation}
+\nabla \cdot \mathbf{F} \neq \mathbf{F} \cdot \nabla
+\label{eqn:dot_does_not_commute}
+\end{equation}
+
+\bigskip
+\noindent
+One way to see this is to notice that the LHS of Equation
+(\ref{eqn:dot_does_not_commute}) is a scalar function while the
+RHS is a differential operator.
+
+\bigskip
+\noindent
+One other set of definitions we will need concerns the unit
+vectors in $\mathbb{R}^3$. Specifically, $\vi$, $\vj$, and $\vk$
+are defined to be the unit vectors in $\mathbb{R}^3$ in the $x$,
+$y$, and $z$ directions respectively. Note that $\vi$, $\vj$, and
+$\vk$ are the canonical basis vectors for $\mathbb{R}^3$
+\cite{notes:basis} and have column vector format
+
+\bigskip
+\begin{equation*}
+{\displaystyle \mathbf {\hat {i}} 
+= {\begin{bmatrix}1\\0\\0\end{bmatrix}},\,\,
+\mathbf {\hat {j}} = {\begin{bmatrix}0\\1\\0\end{bmatrix}},\,\,
+\mathbf {\hat {k}} = {\begin{bmatrix}0\\0\\1\end{bmatrix}}}
+\end{equation*}
+
+
+\medskip
 \section{Maxwell's Equations (differential form)}
 \label{sec:maxwells_equations_differential_form}
 
-\medskip
+\bigskip
 \begin{enumerate}
-\item Gauss' law for electricity
+\item Gauss' law for electricity \cite{gauss_law_for_electricity}
 \label{item:gauss_law_electricity}
+
 \begin{equation*}
 \begin{array}{llll}
 \nabla \cdot \vE 
@@ -180,8 +269,10 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \end{array}
 \end{equation*}
 
-\item Gauss' law for magnetism
-\label{item:gauss_law_magnetism}	
+\bigskip
+\item Gauss' law for magnetism \cite{gauss_law_for_magnetic_fields}
+\label{item:gauss_law_magnetism}
+
 \begin{equation*}
 \begin{array}{rlll}
 \nabla \cdot \vB 
@@ -191,8 +282,10 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \end{array}
 \end{equation*}
 
-\item Faraday's law of induction
+\bigskip
+\item Faraday's law of induction \cite{faradays_law}
 \label{item:faradays_law_of_induction}
+
 \begin{equation*}
 \begin{array}{rlll}
 \nabla \times \vE 
@@ -202,11 +295,12 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \end{array}
 \end{equation*}
 
-
-\item  Ampere's law	(with Maxwell's modification)
+\bigskip
+\item  Ampere's law	(with Maxwell's modification) \cite{amperes_law}
 \label{item:ampers_law}
+
 \begin{equation*}
-\begin{array}{rlll}
+\begin{array}{llll}
 \nabla \times \vB 
 &=& \mu_0 \vJ + \mu_0 \epsilon_0 \dfrac{\partial \vE}{\partial t}					
 			&\hspace{2em} \mathrel{\#} \text{an electric field ($\vE$)
@@ -216,6 +310,12 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 \end{enumerate}
 
 
+\bigskip
+\section{Maxwell's Equations (integral form)}
+\label{sec:maxwells_equations_integral_form}
+TBD
+
+
 
 \section{Electromagnetic Waves}
 \label{sec:emwaves}
@@ -223,14 +323,14 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 %	draw an electromagnetic wave
 %
 \bigskip
-\begin{figure}[H]																% wrap the wave in a figure
-    \fbox{																		% put a box around the figure
-       \centering																% center the whole thing
+\begin{figure}[H]                                                               % wrap the wave in a figure
+    \fbox{                                                                      % put a box around the figure
+       \centering                                                               % center the whole thing
         \resizebox{0.90 \textwidth}{!} {                                        % resize figure if you want
 %
 %	Draw the picture
 %
-		\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),				% set a few TikZ parameters
+		\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),      % set a few TikZ parameters
 								line cap=round, line join=round,
 								axis/.style={black, thick,->},
                     			vector/.style={>=stealth,->}]
@@ -240,13 +340,13 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 %
 %	Coordinates
 %
- 			\coordinate (O)          at (0,0,0);               					% origin
+ 			\coordinate (O) at (0,0,0);                             % origin
 %
 %	Constants
 %
   			\large
   			\def \A{1.5}
-  			\def \nNodes{5} 													% use even number
+  			\def \nNodes{5}                                         % use even number
   			\def \nVectorsPerNode{8}
   			\def \N{\nNodes*40}
   			\def \xmax{\nNodes*pi/2*1.01}
@@ -297,8 +397,8 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 						\fi
 					}
 		\end{tikzpicture}
-       }																		% end resizebox
-    }																			% end fbox
+       }                                                                                % end resizebox
+    }                                                                                   % end fbox
 \caption{Propagation of an electromagnetic wave in the $\vi$ direction}
 \end{figure}
 %
@@ -317,7 +417,7 @@ while $\nabla \times \mathbf{F}$ is the cross product \cite{dmm:vector_calculus}
 %	LaTeX source on overleaf.com
 %
 \section*{\LaTeX \hspace{0.025 mm} Source}
-%\url{}
+\url{https://www.overleaf.com/read/fdtbdjmvtryx}
 %
 %	get a bibliography
 %

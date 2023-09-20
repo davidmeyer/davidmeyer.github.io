@@ -1,9 +1,68 @@
 \begin{thebibliography}{1}
 
+\bibitem{faraday_and_the_em_theory_of_light}
+{Augusto Bel{\'e}ndez}.
+\newblock {Faraday and the Electromagnetic Theory of Light}.
+\newblock
+  \url{https://www.bbvaopenmind.com/en/science/leading-figures/faraday-electromagnetic-theory-light},
+  2015.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{notes:basis}
+{David Meyer}.
+\newblock {Notes on Change of Basis}.
+\newblock \url{https://davidmeyer.github.io/qc/change_of_basis.pdf}, January
+  2019.
+\newblock [Online; accessed 14-March-2022].
+
 \bibitem{dmm:vector_calculus}
 {David Meyer}.
 \newblock {A Few Notes on Vector Calculus}.
 \newblock \url{https://davidmeyer.github.io/qc/vector_calculus.pdf}, 2022.
 \newblock [Online; accessed 23-September-2022].
+
+\bibitem{gauss_law_for_magnetic_fields}
+{GeoSci Developers}.
+\newblock {Gauss’s Law for Magnetic Fields}.
+\newblock
+  \url{https://em.geosci.xyz/content/maxwell1_fundamentals/formative_laws/gauss_magnetic.html},
+  2012.
+\newblock [Online; accessed 2-September-2023].
+
+\bibitem{faradays_law}
+{HyperPhysics}.
+\newblock {Faraday's Law}.
+\newblock
+  \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/farlaw.html}, 2010.
+\newblock [Online; accessed 2-September-2023].
+
+\bibitem{the_role_of_grad}
+{J D Gibbon}.
+\newblock {The role of grad, div and curl in vector calculus}.
+\newblock \url{https://www.ma.imperial.ac.uk/~jdg/eeveccal.pdf}, 2017.
+\newblock [Online; accessed 15-October-2022].
+
+\bibitem{gauss_law_for_electricity}
+{R Nave}.
+\newblock {Gauss' Law}.
+\newblock
+  \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/gaulaw.html}, 2005.
+\newblock [Online; accessed 2-September-2023].
+
+\bibitem{amperes_law}
+{Stephen Teitel}.
+\newblock { Faraday’s Law, Maxwell’s Correction to Ampere’s Law, Systems
+  of Units}.
+\newblock
+  \url{https://www.pas.rochester.edu/~stte/phy415F20/units/unit_1-3.pdf}, 2020.
+\newblock [Online; accessed 2-September-2023].
+
+\bibitem{wikipedia:maxwells_equations}
+{Wikipedia Contributors}.
+\newblock Maxwell's equations --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Maxwell%27s_equations&oldid=1173397101},
+  2023.
+\newblock [Online; accessed 20-September-2023].
 
 \end{thebibliography}
