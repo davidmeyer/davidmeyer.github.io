@@ -210,15 +210,73 @@ and final thoughts.
   \label{tab:definitions}
 \end{table}
 
+\subsection{A Bit about Electric and Magnetic Constants}
+\label{subsec:electric_and_magnetic_constants}
+Maxwell's equations describe electric and magnetic fields and
+their propagation. Three constants are normally used in Maxwell's
+equations. These are the speed of light ($c$), the electric
+permittivity of free space ($\epsilon_0$), and the magnetic
+permeability of free space ($\mu_0$).
+
 \bigskip
 \noindent
-For some field $\mathbf{F}$, we 
-call $\nabla \cdot \mathbf{F}$ the divergence, while 
-$\nabla \times \mathbf{F}$ is the cross product. It is worth 
-noting here that using the dot notation for the divergence 
-represents a sort of a "psuedo dot product", since the divergence 
-doesn't commute (whereas the standard dot product does commute) 
-\cite{dmm:vector_calculus,the_role_of_grad}. More specifically
+To calculate the value of these constants, first note that the
+magnetic permeability of free space is taken to have the exact
+value $\mu_0 = 4\pi \times 10^{-7} N/A^2$. So $\mu_0$ is
+given. We also know that the speed of light $c$ is equal to
+$2.99792458 \times 10^{8} \; m/s$. So we can consider $c$ as
+given.
+
+\bigskip
+\noindent
+Next, notice that the speed of light is related to the
+$\epsilon_0$ and $\mu_0$ by the equation 
+
+\medskip
+\begin{equation}
+c = \dfrac{1}{\sqrt{\mu_0\epsilon_0}}
+\label{eqn:c}
+\end{equation}
+
+\bigskip
+\noindent
+Since we know the values of $\mu_0$ and $c$, we can find the
+value of $\epsilon_0$ by solving for it in Equation
+(\ref{eqn:c}):
+
+\bigskip
+\begin{equation}
+\epsilon_0 = \dfrac{1}{\mu_0 c^2}
+\label{eqn:epsilon_0}
+\end{equation}
+
+\bigskip
+\noindent
+Substituting the values of $\mu_0$ and $c$ into Equation
+(\ref{eqn:epsilon_0}) we get that $\epsilon_0 = 8.8541878128
+\times 10^{-12} \; F/m$.  Note that $\epsilon_0$ has a relative
+uncertainty of $1.5 \times 10^{-10}$.
+
+\bigskip
+\noindent
+Finally, note that in the presence of polarizable or magnetic
+media, the effective constants will have different values. In the
+case of a polarizable medium, called a dielectric, the comparison
+is stated as a relative permittivity or a dielectric constant. In
+the case of magnetic media, the relative permeability may be
+stated.
+
+
+\bigskip
+\noindent
+Back to definitions. For some field $\mathbf{F}$, we call $\nabla
+\cdot \mathbf{F}$ the divergence of $\mathbf{F}$, while $\nabla
+\times \mathbf{F}$ is called the curl of $\mathbf{F}$
+\cite{dmm:vector_calculus}. It is worth noting here that using
+the dot notation for the divergence represents a sort of a
+"psuedo dot product", since the divergence doesn't commute
+(whereas the standard dot product does commute)
+\cite{the_role_of_grad}. More specifically
 
 
 \begin{equation}
@@ -235,11 +293,11 @@ RHS is a differential operator.
 \bigskip
 \noindent
 One other set of definitions we will need concerns the unit
-vectors in $\mathbb{R}^3$. Specifically, $\vi$, $\vj$, and 
-$\vk$ are defined to be the unit vectors in $\mathbb{R}^3$ 
-in the $x$, $y$, and $z$ directions respectively \cite{notes:basis}. 
-Note that $\vi$, $\vj$, and $\vk$ are the canonical basis 
-vectors for $\mathbb{R}^3$ and have column vector format
+vectors in $\mathbb{R}^3$. Specifically, $\vi$, $\vj$, and $\vk$
+are defined to be the unit vectors in $\mathbb{R}^3$ in the $x$,
+$y$, and $z$ directions respectively \cite{notes:basis}.  Note
+that $\vi$, $\vj$, and $\vk$ are the canonical basis vectors for
+$\mathbb{R}^3$ and have column vector format
 
 \bigskip
 \begin{equation*}
@@ -318,20 +376,81 @@ equations is:
 \bigskip
 \section{Maxwell's Equations (integral form)}
 \label{sec:maxwells_equations_integral_form}
-TBD
+
+\begin{itemize}
+\item Gauss' law for electricity
+
+\begin{equation*}
+\oint_{C} \vE \;  d\mathbf{A}= \dfrac{Q_{\text{enclosed}}}{\epsilon_0}
+\end{equation*}
+
+\medskip
+\noindent
+where $Q_{\text{enclosed}}$ is the enclosed charge. This equation
+implies that the electric field lines do not form a continuous
+closed path. Said another way: isolated positive or negative 
+charges can exist.
 
 
 
+\bigskip
+\item Gauss' law for magnetism
+
+\begin{equation*}
+\oint_{C} \vB \;  d\mathbf{A} = 0
+\end{equation*}
+
+\medskip
+\noindent
+This equation says that magnetic lines of force form a
+continuous closed path. In other words, it means that 
+no isolated magnetic monopole can exist.
+
+
+\bigskip
+\item Faraday's law of induction
+
+\begin{equation*}
+\oint_{C} \vE \;  d\mathbf{l}= -\dfrac{d}{dt} \Phi_{\vB}
+\end{equation*}
+
+\medskip
+\noindent
+where $\Phi_{\vB}$ is the magnetic flux through a closed path. 
+This equation says that the line integral of the electric 
+field around any closed path is equal to the rate of change 
+of magnetic flux through the closed path bounded by the surface.
+
+\bigskip
+\item  Ampere's law (with Maxwell's modification)
+
+
+\begin{equation*}
+\oint_{C} \vB \;  d\mathbf{l}= \mu_0 I_{\text{enclosed}} + 
+\mu_0\epsilon_0 \dfrac{d}{dt} \int_{S} \vE \;  d\mathbf{A}
+\end{equation*}
+
+
+\medskip
+\noindent
+where $I_{\text{enclosed}}$ is the enclosed current.  This
+equation says that both conduction and displacement
+current can produce a magnetic field.
+\end{itemize}
+
+\smallskip
 \section{Electromagnetic Waves}
-\label{sec:emwaves}
+In this section we look briefly at electromagnetic
+waves and how they propagate, as depicted in Figure
+\ref{fig:electromagnetic_wave_propagation}.
 %
 %	draw an electromagnetic wave
 %
-\bigskip
+\vspace{1cm}
 \begin{figure}[H]                                                               % wrap the wave in a figure
     \fbox{                                                                      % put a box around the figure
        \centering                                                               % center the whole thing
-        \resizebox{0.90 \textwidth}{!} {                                        % resize figure if you want
+        \resizebox{0.85 \textwidth}{!} {                                        % resize figure if you want
 %
 %	Draw the picture
 %
@@ -405,6 +524,7 @@ TBD
        }                                                                                % end resizebox
     }                                                                                   % end fbox
 \caption{Propagation of an electromagnetic wave in the $\vi$ direction}
+\label{fig:electromagnetic_wave_propagation}
 \end{figure}
 %
 %
