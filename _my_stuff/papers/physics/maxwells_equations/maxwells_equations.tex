@@ -185,7 +185,7 @@ thoughts.
 \begin{table} [H]
   \centering                                                                                    % center the figure
   \renewcommand{\arraystretch}{2.0}                                                             % get some space in the table cells
-  \resizebox{0.75 \textwidth}{!} {                                                              % resize figure if you want
+  \resizebox{0.90 \textwidth}{!} {                                                              % resize figure if you want
      \begin{tabular} {| c | c  | c | c |}
       \hline
       {\Large \bf Symbol} & {\Large \bf What} & {\Large \bf SI Units} & {\Large \bf Notes} \\
@@ -210,9 +210,7 @@ thoughts.
   \label{tab:definitions}
 \end{table}
 
-\bigskip
-\noindent
-Note that 1 Henry/m $= 1$ Newton/$\text{Ampere}^2$. 
+
 \subsection{A Bit about Electric and Magnetic Constants}
 \label{subsec:electric_and_magnetic_constants}
 Maxwell's equations describe electric and magnetic fields and
@@ -266,11 +264,11 @@ Substituting the values of $\mu_0$ and $c$ into Equation
 \bigskip
 \noindent
 Finally, note that in the presence of polarizable or magnetic
-media, the effective constants will have different values. In the
-case of a polarizable medium, called a dielectric, the comparison
-is stated as a relative permittivity or a dielectric constant. In
-the case of magnetic media, the relative permeability may be
-stated.
+media \cite{wikipedia:polarization}, the effective constants 
+will have different values. In the case of a polarizable medium, 
+called a dielectric, the comparison is stated as a relative 
+permittivity or a dielectric constant. In the case of magnetic 
+media, the relative permeability may be stated.
 
 
 \bigskip
@@ -496,7 +494,7 @@ including light, without considering the quantum mechanical
 nature of light (as described by quantum electrodynamics). These
 waves are described by classical electromagnetism, primarily
 through the equations developed by James Clerk Maxwell in the
-19th century \cite{wikipedia:maxwells_equations}.
+$19^{\text{th}}$ century \cite{wikipedia:maxwells_equations}.
 
 \bigskip
 \noindent
@@ -571,7 +569,7 @@ classical wave optics.
 %
 %	Draw the picture
 %
-		\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),      % set a few TikZ parameters
+                \begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),      % set a few TikZ parameters
                                         line cap=round, line join=round,
                                         axis/.style={black, thick,->},
                                         vector/.style={>=stealth,->}]
@@ -581,13 +579,13 @@ classical wave optics.
 %
 %	Coordinates
 %
- 			\coordinate (O) at (0,0,0);                             % origin
+                        \coordinate (O) at (0,0,0);                             % origin
 %
 %	Constants
 %
   			\large
   			\def \A{1.5}
-  			\def \nNodes{5}                                         % use even number
+                        \def \nNodes{5}
   			\def \nVectorsPerNode{8}
   			\def \N{\nNodes*40}
   			\def \xmax{\nNodes*pi/2*1.01}
