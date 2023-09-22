@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 SEP 2023 08:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 SEP 2023 08:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1461,12 +1461,12 @@ LaTeX Warning: Reference `sec:emwaves' on page 1 undefined on input line 174.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (8.1766pt too wide) detected at line 400
+Overfull \hbox (8.1766pt too wide) detected at line 402
 []
  []
 
 
-Overfull \hbox (12.10588pt too wide) detected at line 415
+Overfull \hbox (12.10588pt too wide) detected at line 417
 []
  []
 
@@ -1480,7 +1480,7 @@ Package rerunfilecheck Info: File `maxwells_equations.out' has not changed.
 Here is how much of TeX's memory you used:
  53426 strings out of 478994
  1343476 string characters out of 5858184
- 1974878 words of memory out of 5000000
+ 1975878 words of memory out of 5000000
  70059 multiletter control sequences out of 15000+600000
  423445 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1505,10 +1505,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on maxwells_equations.pdf (5 pages, 215416 bytes).
+Output written on maxwells_equations.pdf (5 pages, 215504 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
+ 208 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  36 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
