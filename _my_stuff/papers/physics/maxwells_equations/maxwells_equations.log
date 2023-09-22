@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 SEP 2023 07:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 SEP 2023 07:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1461,12 +1461,12 @@ LaTeX Warning: Reference `sec:emwaves' on page 1 undefined on input line 174.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (8.1766pt too wide) detected at line 358
+Overfull \hbox (8.1766pt too wide) detected at line 357
 []
  []
 
 
-Overfull \hbox (12.10588pt too wide) detected at line 373
+Overfull \hbox (12.10588pt too wide) detected at line 372
 []
  []
 
@@ -1505,7 +1505,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on maxwells_equations.pdf (5 pages, 209724 bytes).
+Output written on maxwells_equations.pdf (5 pages, 209609 bytes).
 PDF statistics:
  205 PDF objects out of 1000 (max. 8388607)
  177 compressed objects within 2 object streams
