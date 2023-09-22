@@ -214,9 +214,9 @@ and final thoughts.
 \label{subsec:electric_and_magnetic_constants}
 Maxwell's equations describe electric and magnetic fields and
 their propagation. Three constants are normally used in Maxwell's
-equations. These are the speed of light ($c$), the electric
-permittivity of free space ($\epsilon_0$), and the magnetic
-permeability of free space ($\mu_0$).
+equations: the speed of light ($c$), the electric permittivity 
+of free space ($\epsilon_0$), and the magnetic permeability of 
+free space ($\mu_0$).
 
 \bigskip
 \noindent
@@ -272,13 +272,56 @@ stated.
 Back to definitions. For some field $\mathbf{F}$, we call $\nabla
 \cdot \mathbf{F}$ the divergence of $\mathbf{F}$, while $\nabla
 \times \mathbf{F}$ is called the curl of $\mathbf{F}$
-\cite{dmm:vector_calculus}. It is worth noting here that using
-the dot notation for the divergence is a sort of a
-"psuedo dot product", since the standard dot product commutes but 
-the divergence does not
-\cite{the_role_of_grad}. More specifically
+\cite{dmm:vector_calculus}. It is worth noting that the standard 
+dot (or inner) product is defined as follows:
 
 
+\bigskip
+\begin{definition}
+{\bf Standard Inner Product:} $\langle \mathbf{a}, \mathbf{b} \rangle$
+
+\bigskip
+\noindent
+The inner product (aka dot product 
+or scalar product) of two $n$-dimensional vectors 
+$\mathbf{a} = (a_1,a_2,\hdots, a_n)$ and 
+$\mathbf{b} = (b_1,b_2,\hdots, b_n)$, usually 
+denoted by either $\langle \mathbf{a}, \mathbf{b} 
+\rangle$ or $\mathbf{a} \cdot \mathbf{b}$,
+is defined to be the scalar value
+
+\medskip
+\begin{equation*}
+\langle \mathbf{a}, \mathbf{b} \rangle := 
+	\sum\limits_{j = 1}^{n} a_j b_j
+\label{eqn:inner}
+\end{equation*}
+\end{definition}
+
+\smallskip
+\noindent
+Since $a_j$ and $b_j$ are scalars (and scalar multiplication 
+commutes) the inner product commutes:
+
+\bigskip
+\begin{equation}
+  \langle \mathbf{a}, \mathbf{b} \rangle
+  = \sum\limits_{j = 1}^{n} a_j b_j
+  = \sum\limits_{j = 1}^{n} b_j a_j
+  = \langle \mathbf{b}, \mathbf{a} \rangle 
+\label{eqn:dot_reverse}
+\end{equation}
+
+
+
+\bigskip
+\noindent
+This is all good, but here we are using the dot notation for the divergence 
+and the divergence is missing a property that the standard dot product has, 
+namely, commutivity (Equation (\ref{eqn:dot_reverse})). Specifically, the 
+standard dot product commutes but the divergence does not:
+
+\medskip
 \begin{equation}
 \nabla \cdot \mathbf{F} \neq \mathbf{F} \cdot \nabla
 \label{eqn:dot_does_not_commute}
