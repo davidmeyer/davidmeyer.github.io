@@ -181,32 +181,36 @@ thoughts.
 \section{Definitions}
 \label{sec:definitions}
 
-\bigskip
 \begin{table} [H]
   \centering                                                                                    % center the figure
-  \renewcommand{\arraystretch}{2.0}                                                             % get some space in the table cells
-  \resizebox{0.90 \textwidth}{!} {                                                              % resize figure if you want
+  \renewcommand{\arraystretch}{2.5}                                                             % get some space in the table cells
+  \resizebox{0.85 \textwidth}{!} {                                                              % resize figure if you want
      \begin{tabular} {| c | c  | c | c |}
       \hline
       {\Large \bf Symbol} & {\Large \bf What} & {\Large \bf SI Units} & {\Large \bf Notes} \\
       \hline \hline
-      $\vE$        & Electric field             & N/C                   & Newton/Coulomb \\
+      $\vB$        & Magnetic field             & Newton/m/Ampere       & $1 \; \text{N} = 1 \; \text{kg} \cdot \text{m}
+                                                                                \cdot \text{s}^{-2}$ \\ 
       \hline
-      $\vB$        & Magnetic field             & N/m/A                 & Newton/Meter/Ampere \\
+      $\vE$        & Electric field             & Newton/Coulomb        & $1 \; \text{C} = 1 \; \text{A} \cdot \text{s}$ \\ 
       \hline
-      $\vJ$        & Current density            & A/$\text{m}^2$        & Ampere/$\text{m}^2$ \\
+      $\vJ$        & Current density            & Ampere/$\text{m}^2$   & $1 \; \text{A} = 6.241509074 \times 10^{18} \; 
+      																			\text{e}/\text{s}$ \\
       \hline
-      $\rho$       & Charge density             & C/$\text{m}^3$        & Coulomb/$\text{m}^3$ \\
+      $\rho$       & Charge density             & Coulomb/$\text{m}^3$  & $1 \; \text{C} = 6.241509074 \times 10^{18} \; 
+      																			\text{e}$ \\ 
       \hline
       $c$          & Speed of light in a vacuum & m/s                   & $c = 2.99792458 \times 10^{8} \; \text{m/s}$ \\
       \hline
-      $\mu_0$      & Permeability of free space & H/m                   & $\mu_0 = 4\pi \times 10^{-7} \; \text{H/m}$ \\
+      $\epsilon_0$ & Permittivity of free space & Farad/m               & $1 \; \text{F} = 1 \; \text{kg}^{-1} 
+                                                                                \cdot \text{m}^{-2} \cdot \text{s}^{4} 
+                                                                                \cdot \text{A}^{2}$ \\
       \hline
-      $\epsilon_0$ & Permittivity of free space & F/m                   & Farad/meter \\
+      $\mu_0$      & Permeability of free space & Henry/m               & $\mu_0 = 4\pi \times 10^{-7} \; \text{H/m}$ \\
       \hline
     \end{tabular}
    }                                                                                            % end resizebox
-  \caption{A Few Definitions}
+  \caption{A Few Useful Definitions}
   \label{tab:definitions}
 \end{table}
 
@@ -226,16 +230,16 @@ magnetic permeability of free space $\mu_0$ is taken to have the
 exact value $\mu_0 = 4\pi \times 10^{-7} \; \text{H}/\text{m}$,
 where $1 \; \text{Henry/m} = 1 \; \text{Newton}/\text{Ampere}^2
 \Rightarrow 4\pi \times 10^{-7} \; \text{H}/\text{m} =
-1.25663706143 \hdots \times 10^{-6} \; \text{N}/\text{A}^2$.  So
-$\mu_0$ is given. We also know that the speed of light $c$ is
-equal to $2.99792458 \times 10^{8} \; \text{m/s}$. So we can
-consider $c$ as given.
+1.25663706143 \hdots \times 10^{-6} \; \text{N}/\text{A}^2$ (see 
+Table \ref{tab:definitions}).  So $\mu_0$ is given. We also know 
+that the speed of light $c$ is equal to $2.99792458 \times 10^{8} 
+\; \text{m/s}$. So we can consider $c$ as given.
 
 \bigskip
 \noindent
 Next, notice $\epsilon_0$ and $\mu_0$ are not independent but
-rather are related by the speed of light
-\cite{wikipedia:maxwells_equations}:
+rather are related to the speed of light by the following 
+equation \cite{wikipedia:maxwells_equations}:
 
 \medskip
 \begin{equation}
@@ -544,7 +548,7 @@ the electric field vector.
 \item {\bf Superposition}: Like other waves, classical
 electromagnetic waves obey the principle of superposition, which
 means that multiple waves can combine to form a new wave through
-constructive or destructive interference.
+constructive or destructive interference \cite{dmm:bloch_sphere}.
 
 \item {\bf Energy Transport}: Electromagnetic waves carry energy
 as they propagate through space. The intensity of the wave, which

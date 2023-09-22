@@ -21,6 +21,12 @@
 \newblock \url{https://davidmeyer.github.io/qc/vector_calculus.pdf}, 2022.
 \newblock [Online; accessed 23-September-2022].
 
+\bibitem{dmm:bloch_sphere}
+{David Meyer}.
+\newblock {A Few Notes on the Bloch Sphere}.
+\newblock \url{https://davidmeyer.github.io/qc/bloch_sphere.pdf}, 2023.
+\newblock [Online; accessed 22-September-2023].
+
 \bibitem{gauss_law_for_magnetic_fields}
 {GeoSci Developers}.
 \newblock {Gauss’s Law for Magnetic Fields}.
