@@ -116,7 +116,7 @@
 %
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
 \DeclareMathOperator{\E}{\mathbb{E}}
-\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\DeclareMathOperator{\bda}{\Big \downarrow}										% big down arrow
 \newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
 %
 %	Title, author and date
@@ -194,15 +194,15 @@ thoughts.
       \hline
       $\vB$        & Magnetic field             & N/m/A                 & Newton/Meter/Ampere \\
       \hline
-      $\vJ$        & Current density            & A/$\text{m}^2$        & Ampere/$\text{Meter}^2$ \\
+      $\vJ$        & Current density            & A/$\text{m}^2$        & Ampere/$\text{m}^2$ \\
       \hline
-      $\rho$       & Charge density             & C/$\text{m}^3$        & Coulomb/$\text{Meter}^3$ \\
+      $\rho$       & Charge density             & C/$\text{m}^3$        & Coulomb/$\text{m}^3$ \\
       \hline
-      $c$          & Speed of light in a vacuum & m/s                   & Meter/Second \\
+      $c$          & Speed of light in a vacuum & m/s                   & $c = 2.99792458 \times 10^{8} \; \text{m/s}$ \\
       \hline
-      $\epsilon_0$ & Permittivity of free space & F/m                   & Farad/Meter \\
+      $\mu_0$      & Permeability of free space & H/m                   & $\mu_0 = 4\pi \times 10^{-7} \; \text{H/m}$ \\
       \hline
-      $\mu_0$      & Permeability of free space & H/m                   & Henry/Meter \\
+      $\epsilon_0$ & Permittivity of free space & F/m                   & Farad/meter \\
       \hline
     \end{tabular}
    }                                                                                            % end resizebox
@@ -210,6 +210,9 @@ thoughts.
   \label{tab:definitions}
 \end{table}
 
+\bigskip
+\noindent
+Note that 1 Henry/m $= 1$ Newton/$\text{Ampere}^2$. 
 \subsection{A Bit about Electric and Magnetic Constants}
 \label{subsec:electric_and_magnetic_constants}
 Maxwell's equations describe electric and magnetic fields and
@@ -221,16 +224,19 @@ free space ($\mu_0$).
 \bigskip
 \noindent
 To calculate the value of these constants, first note that the
-magnetic permeability of free space is taken to have the exact
-value $\mu_0 = 4\pi \times 10^{-7} N/A^2$. So $\mu_0$ is
-given. We also know that the speed of light $c$ is equal to
-$2.99792458 \times 10^{8} \; m/s$. So we can consider $c$ as
-given.
+magnetic permeability of free space $\mu_0$ is taken to have the
+exact value $\mu_0 = 4\pi \times 10^{-7} \; \text{H}/\text{m}$,
+where $1 \; \text{Henry/m} = 1 \; \text{Newton}/\text{Ampere}^2
+\Rightarrow 4\pi \times 10^{-7} \; \text{H}/\text{m} =
+1.25663706143 \hdots \times 10^{-6} \; \text{N}/\text{A}^2$.  So
+$\mu_0$ is given. We also know that the speed of light $c$ is
+equal to $2.99792458 \times 10^{8} \; \text{m/s}$. So we can
+consider $c$ as given.
 
 \bigskip
 \noindent
 Next, notice $\epsilon_0$ and $\mu_0$ are not independent but
-rather are related to the speed of light 
+rather are related by the speed of light
 \cite{wikipedia:maxwells_equations}:
 
 \medskip
@@ -255,7 +261,7 @@ value of $\epsilon_0$ by solving for it in Equation
 \noindent
 Substituting the values of $\mu_0$ and $c$ into Equation
 (\ref{eqn:epsilon_0}) we get that $\epsilon_0 = 8.8541878128
-\times 10^{-12} \; F/m$. 
+\times 10^{-12} \; \text{F/m}$. 
 
 \bigskip
 \noindent
@@ -388,7 +394,7 @@ form of Maxwell's equations is:
 \end{equation*}
 
 \bigskip
-\item Faraday's law of induction \cite{faradays_law}
+\item Faraday's law of electromagnetic induction \cite{faradays_law}
 \label{item:faradays_law_of_induction}
 
 \begin{equation*}
@@ -401,7 +407,7 @@ form of Maxwell's equations is:
 \end{equation*}
 
 \bigskip
-\item  Ampere's law	(with Maxwell's modification) \cite{amperes_law}
+\item  Ampere's law	with Maxwell's addition \cite{amperes_law}
 \label{item:ampers_law}
 
 \begin{equation*}
@@ -436,7 +442,6 @@ closed path. Said another way: isolated positive or negative
 charges can exist.
 
 
-
 \bigskip
 \item Gauss' law for magnetism
 
@@ -452,25 +457,24 @@ no isolated magnetic monopole can exist.
 
 
 \bigskip
-\item Faraday's law of induction
+\item Faraday's law of electromagnetic induction
 
 \begin{equation*}
-\oint_{C} \vE \;  d\mathbf{l}= -\dfrac{d}{dt} \Phi_{\vB}
+\oint_{C} \vE \; d\mathbf{l} = -\dfrac{d}{dt} \Phi_{\vB}
 \end{equation*}
 
 \medskip
 \noindent
-where $\Phi_{\vB}$ is the magnetic flux through a closed path. 
-This equation says that the line integral of the electric 
-field around any closed path is equal to the rate of change 
-of magnetic flux through the closed path bounded by the surface.
+where $\Phi_{\vB}$ is the magnetic flux through a closed path.
+This equation says that the line integral of the electric field
+around any closed path is equal to the rate of change of magnetic
+flux through the closed path bounded by the surface.
 
 \bigskip
-\item  Ampere's law (with Maxwell's modification)
-
+\item  Ampere's law with Maxwell's addition
 
 \begin{equation*}
-\oint_{C} \vB \;  d\mathbf{l}= \mu_0 I_{\text{enclosed}} + 
+\oint_{C} \vB \; d\mathbf{l} = \mu_0 I_{\text{enclosed}} + 
 \mu_0\epsilon_0 \dfrac{d}{dt} \int_{S} \vE \;  d\mathbf{A}
 \end{equation*}
 
@@ -485,24 +489,92 @@ current can produce a magnetic field.
 \smallskip
 \section{Electromagnetic Waves}
 \label{sec:emwaves}
-In this section we look briefly at electromagnetic
-waves and how they propagate, as depicted in Figure
-\ref{fig:electromagnetic_wave_propagation}.
+Classical electromagnetic waves, often referred to simply as
+electromagnetic waves, are a fundamental concept in classical
+physics that describes the behavior of electromagnetic radiation,
+including light, without considering the quantum mechanical
+nature of light (as described by quantum electrodynamics). These
+waves are described by classical electromagnetism, primarily
+through the equations developed by James Clerk Maxwell in the
+19th century \cite{wikipedia:maxwells_equations}.
+
+\bigskip
+\noindent
+The key characteristics and features of classical electromagnetic 
+waves include: 
+
+\begin{itemize}
+\item {\bf Wave Equation}: The behavior of classical
+electromagnetic waves is described by Maxwell's equations, which
+consist of four fundamental equations (see Sections 
+\ref{sec:maxwells_equations_differential_form} and 
+\ref{sec:maxwells_equations_integral_form}):
+
+\begin{enumerate}
+\item Gauss's Law for Electricity 
+\item Gauss's Law for Magnetism
+\item Faraday's Law of Electromagnetic Induction
+\item Ampère's Law with Maxwell's addition
+\end{enumerate}
+
+\item {\bf Wave Propagation}: Classical electromagnetic waves are
+solutions to Maxwell's equations and can propagate through space
+as self-sustaining waves of electric and magnetic fields. These
+waves travel at the speed of light in a vacuum, $c$, which is
+approximately $3.0 \times 10^8 \; \text{m/s}$.
+
+\item {\bf Transverse Waves}: Electromagnetic waves are
+transverse waves, which means that the oscillations of the
+electric and magnetic fields are perpendicular to the direction
+of wave propagation. This is depicted in Figure
+\ref{fig:electromagnetic_wave_propagation}. Contrast with
+longitudinal waves, where the oscillations are along the 
+direction of propagation.
+
+\item {\bf Continuous Spectrum}: Classical electromagnetic waves
+encompass a continuous spectrum of frequencies and wavelengths,
+from extremely low-frequency radio waves to extremely
+high-frequency gamma rays. Each portion of the spectrum
+corresponds to different types of electromagnetic radiation.
+
+\item {\bf Wave Polarization}: Electromagnetic waves can be
+polarized, meaning that the electric field oscillates in a
+specific plane as the wave propagates. Polarization can be
+linear, circular, or elliptical, depending on the orientation of
+the electric field vector.
+
+\item {\bf Superposition}: Like other waves, classical
+electromagnetic waves obey the principle of superposition, which
+means that multiple waves can combine to form a new wave through
+constructive or destructive interference.
+
+\item {\bf Energy Transport}: Electromagnetic waves carry energy
+as they propagate through space. The intensity of the wave, which
+represents the energy per unit area per unit time, is related to
+the amplitude of the electric and magnetic fields.
+
+\item {\bf Wave Reflection, Refraction, and Diffraction}:
+Classical electromagnetic waves exhibit behaviors such as
+reflection when they encounter boundaries, refraction when
+passing from one medium to another, and diffraction when
+encountering obstacles. These phenomena can be described by
+classical wave optics.
+\end{itemize}
 %
 %	draw an electromagnetic wave
 %
-\vspace{1cm}
+\bigskip
 \begin{figure}[H]                                                               % wrap the wave in a figure
+    \centering                                                                  % center the figure
     \fbox{                                                                      % put a box around the figure
-       \centering                                                               % center the whole thing
         \resizebox{0.85 \textwidth}{!} {                                        % resize figure if you want
 %
 %	Draw the picture
 %
 		\begin{tikzpicture}[x=(-15:1.2), y=(90:1.0), z=(-150:1.0),      % set a few TikZ parameters
-								line cap=round, line join=round,
-								axis/.style={black, thick,->},
-                    			vector/.style={>=stealth,->}]
+                                        line cap=round, line join=round,
+                                        axis/.style={black, thick,->},
+                                        vector/.style={>=stealth,->}]
 %
 %	Definitions
 %
@@ -575,7 +647,19 @@ waves and how they propagate, as depicted in Figure
 %
 %
 \bigskip
-\bigskip
+\noindent
+It's important to note that while classical electromagnetic wave
+theory provides an accurate description of many electromagnetic
+phenomena, it does not account for the quantum nature of light,
+which is described by quantum electrodynamics (QED)
+\cite{wikipedia:quantum_electrodynamics}. In certain situations,
+particularly at very small scales or in the presence of intense
+electromagnetic fields, the quantum nature of light becomes
+significant, and classical wave theory may not fully explain the
+observed behavior.
+%
+%
+%
 \section{Conclusions}
 \label{sec:conclusions}
 %
