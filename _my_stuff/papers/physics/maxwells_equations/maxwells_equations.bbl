@@ -27,6 +27,12 @@
 \newblock \url{https://davidmeyer.github.io/qc/bloch_sphere.pdf}, 2023.
 \newblock [Online; accessed 22-September-2023].
 
+\bibitem{quaternion}
+{Eric W. Weisstein}.
+\newblock {Quaternion}.
+\newblock \url{https://mathworld.wolfram.com/Quaternion.html}, 2023.
+\newblock [Online; accessed 24-September-2023].
+
 \bibitem{gauss_law_for_magnetic_fields}
 {GeoSci Developers}.
 \newblock {Gauss’s Law for Magnetic Fields}.
@@ -42,6 +48,20 @@
   \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/farlaw.html}, 2010.
 \newblock [Online; accessed 20-September-2023].
 
+\bibitem{impedance}
+{HyperPhysics}.
+\newblock {Impedance}.
+\newblock \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/imped.html},
+  2023.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{the_long_road_to_maxwells_equations}
+{James C. Rautio}.
+\newblock {The Long Road To Maxwell’s Equations}.
+\newblock \url{https://spectrum.ieee.org/the-long-road-to-maxwells-equations},
+  2014.
+\newblock [Online; accessed 24-September-2023].
+
 \bibitem{gauss_law_for_electricity}
 {R Nave}.
 \newblock {Gauss' Law}.
@@ -56,6 +76,23 @@
 \newblock
   \url{https://www.pas.rochester.edu/~stte/phy415F20/units/unit_1-3.pdf}, 2020.
 \newblock [Online; accessed 20-September-2023].
+
+\bibitem{wikipedia:displacement_current}
+{Wikipedia Contributors}.
+\newblock {Displacement Current --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Displacement_current&oldid=1171867371},
+  2023.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{wikipedia:history_of_maxwells_equations}
+{Wikipedia Contributors}.
+\newblock {History of Maxwell's Equations --- {Wikipedia}{,} The Free
+  Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=History_of_Maxwell\%27s_equations&oldid=1176699558},
+  2023.
+\newblock [Online; accessed 24-September-2023].
 
 \bibitem{wikipedia:maxwells_equations}
 {Wikipedia Contributors}.
@@ -80,5 +117,13 @@
   \url{https://en.wikipedia.org/w/index.php?title=Quantum_electrodynamics&oldid=1170977985},
   2023.
 \newblock [Online; accessed 22-September-2023].
+
+\bibitem{wikipedia:telegraphers_equations}
+{Wikipedia Contributors}.
+\newblock {Telegrapher's Equations --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Telegrapher\%27s_equations&oldid=1162692161},
+  2023.
+\newblock [Online; accessed 24-September-2023].
 
 \end{thebibliography}
