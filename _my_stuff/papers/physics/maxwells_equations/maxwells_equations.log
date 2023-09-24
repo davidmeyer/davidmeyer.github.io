@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 SEP 2023 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 SEP 2023 07:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1455,24 +1455,16 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (8.1766pt too wide) detected at line 409
-[]
- []
-
-
-Overfull \hbox (12.10588pt too wide) detected at line 424
-[]
- []
-
-[3] [4] [5] (./maxwells_equations.bbl) [6] (./maxwells_equations.aux)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4]
+[5] (./maxwells_equations.bbl) [6] (./maxwells_equations.aux)
 Package rerunfilecheck Info: File `maxwells_equations.out' has not changed.
 (rerunfilecheck)             Checksum: 36EAD2E21BEBDFD83CD11BDCF680F5AC;1349.
  ) 
 Here is how much of TeX's memory you used:
  53436 strings out of 478994
  1343638 string characters out of 5858184
- 1978971 words of memory out of 5000000
+ 1978970 words of memory out of 5000000
  70062 multiletter control sequences out of 15000+600000
  423445 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1497,7 +1489,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on maxwells_equations.pdf (6 pages, 224373 bytes).
+Output written on maxwells_equations.pdf (6 pages, 224323 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  205 compressed objects within 3 object streams

@@ -151,7 +151,7 @@ physicist James Clerk Maxwell in the 19th century and are crucial
 in understanding the behavior of electromagnetic waves, such as
 light (an idea previously articulated by Faraday
 \cite{faraday_and_the_em_theory_of_light}). Maxwell's equations
-are typically written in differential and integral forms
+are typically written in both differential and integral forms
 \cite{wikipedia:maxwells_equations}.
 
 \bigskip
@@ -370,60 +370,65 @@ form of Maxwell's equations is:
 
 \bigskip
 \begin{enumerate}
-\item Gauss' law for electricity \cite{gauss_law_for_electricity}
+\item Gauss' law for electricity 
 \label{item:gauss_law_electricity}
 
 \begin{equation*}
-\begin{array}{llll}
-\nabla \cdot \vE 
-&=& \dfrac{\rho}{\epsilon_0} 	
-			&\hspace{8em} \mathrel{\#} \text{A stationary charge ($\rho$) 
-				creates an electric field ($\vE$)$\hspace{3em}$} \\
-\end{array}
+\nabla \cdot \vE = \dfrac{\rho}{\epsilon_0} 	
 \end{equation*}
 
 \bigskip
-\item Gauss' law for magnetism \cite{gauss_law_for_magnetic_fields}
+\noindent
+Gauss' law for electricity states that a stationary charge
+($\rho$) creates an electric field ($\vE$)
+\cite{gauss_law_for_electricity}.
+
+
+\bigskip
+\item Gauss' law for magnetism
 \label{item:gauss_law_magnetism}
 
 \begin{equation*}
-\begin{array}{rlll}
-\nabla \cdot \vB 
-&=& 0							
-			&\hspace{8em} \mathrel{\#} \text{Magnetic monopoles 
-				do not exist \hspace{10em}}
-\end{array}
+\nabla \cdot \vB = 0							
 \end{equation*}
 
 \bigskip
-\item Faraday's law of electromagnetic induction \cite{faradays_law}
+\noindent
+Gauss' law for electricity states that magnetic monopoles can not
+exist \cite{gauss_law_for_magnetic_fields}.
+
+
+
+\bigskip
+\item Faraday's law of electromagnetic induction 
 \label{item:faradays_law_of_induction}
 
 \begin{equation*}
-\begin{array}{rlll}
-\hspace{1em} \nabla \times \vE 
-&=& -\dfrac{\partial \vB}{\partial t}
-			&\hspace{6em} \mathrel{\#} \text{A time-varying magnetic 
-				field ($\vB$) creates an electric field ($\vE$)}
-\end{array}
+\nabla \times \vE = -\dfrac{\partial \vB}{\partial t}
 \end{equation*}
 
 \bigskip
-\item  Ampere's law	with Maxwell's addition \cite{amperes_law}
+\noindent
+Faraday's law of electromagnetic induction states that a
+time-varying magnetic field ($\vB$) creates an electric field
+($\vE$) \cite{faradays_law}.
+
+
+
+\bigskip
+\item  Ampere's law	with Maxwell's addition
 \label{item:ampers_law}
 
 \begin{equation*}
-\begin{array}{llll}
-\hspace{1em} \nabla \times \vB 
-&=& \mu_0 \vJ + \mu_0 \epsilon_0 \dfrac{\partial \vE}{\partial t}					
-			&\hspace{2em} \mathrel{\#} \text{A flowing electric current
-				($\vJ$) creates a magnetic field ($\vB$), and} \\
-&&			&\hspace{2em} \mathrel{\#} \text{a time-varying electric 
-				field ($\vE$) creates a magnetic field ($\vB$)}			
-\end{array}
+\nabla \times \vB = \mu_0 \vJ + \mu_0 \epsilon_0 \dfrac{\partial \vE}{\partial t}					
 \end{equation*}
-\end{enumerate}
 
+\bigskip
+\noindent
+Ampere's law with Maxwell's addition states that flowing electric
+current ($\vJ$) or a time-varying electric field ($\vE$) creates
+a magnetic field ($\vB$) \cite{amperes_law}.
+\end{enumerate}
 
 \bigskip
 \section{Maxwell's Equations (integral form)}
