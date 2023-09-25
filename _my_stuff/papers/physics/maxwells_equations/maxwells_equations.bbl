@@ -27,6 +27,12 @@
 \newblock \url{https://davidmeyer.github.io/qc/bloch_sphere.pdf}, 2023.
 \newblock [Online; accessed 22-September-2023].
 
+\bibitem{dmm:dirac_delta_and_laplace_transform}
+{David Meyer}.
+\newblock {A Few Notes On The Dirac Delta Function And The Laplace Transform}.
+\newblock \url{https://davidmeyer.github.io/qc/dirac_delta.pdf}, 2023.
+\newblock [Online; accessed 25-September-2023].
+
 \bibitem{quaternion}
 {Eric W. Weisstein}.
 \newblock {Quaternion}.
@@ -76,6 +82,14 @@
 \newblock
   \url{https://www.pas.rochester.edu/~stte/phy415F20/units/unit_1-3.pdf}, 2020.
 \newblock [Online; accessed 20-September-2023].
+
+\bibitem{wikipedia:differential_operator}
+{Wikipedia Contributors}.
+\newblock {Differential operator --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Differential_operator&oldid=1170970755},
+  2023.
+\newblock [Online; accessed 25-September-2023].
 
 \bibitem{wikipedia:displacement_current}
 {Wikipedia Contributors}.
