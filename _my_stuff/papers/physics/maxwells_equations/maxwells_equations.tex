@@ -370,7 +370,7 @@ form of Maxwell's equations is:
 
 \bigskip
 \begin{enumerate}
-\item {\bf Gauss' Law for Electricity}
+\item {\bf Gauss's Law for Electricity}
 \label{item:gauss_law_electricity}
 
 \begin{equation*}
@@ -379,13 +379,13 @@ form of Maxwell's equations is:
 
 \bigskip
 \noindent
-Gauss' law for electricity states that a stationary charge
+Gauss's law for electricity states that a stationary charge
 ($\rho$) creates an electric field ($\vE$)
 \cite{gauss_law_for_electricity}.
 
 
 \bigskip
-\item {\bf Gauss' Law for Magnetism}
+\item {\bf Gauss's Law for Magnetism}
 \label{item:gauss_law_magnetism}
 
 \begin{equation*}
@@ -394,7 +394,7 @@ Gauss' law for electricity states that a stationary charge
 
 \bigskip
 \noindent
-Gauss' law for electricity states that magnetic monopoles can not
+Gauss's law for electricity states that magnetic monopoles can not
 exist \cite{gauss_law_for_magnetic_fields}.
 
 
@@ -435,7 +435,7 @@ a magnetic field ($\vB$) \cite{amperes_law}.
 \label{sec:maxwells_equations_integral_form}
 
 \begin{enumerate}
-\item {\bf Gauss' Law for Electricity}
+\item {\bf Gauss's Law for Electricity}
 
 \begin{equation*}
 \oint_{C} \vE \;  d\mathbf{A}= \dfrac{Q_{\text{enclosed}}}{\epsilon_0}
@@ -450,7 +450,7 @@ charges can exist.
 
 
 \bigskip
-\item {\bf Gauss' Law for Magnetism}
+\item {\bf Gauss's Law for Magnetism}
 
 \begin{equation*}
 \oint_{C} \vB \;  d\mathbf{A} = 0
@@ -502,8 +502,8 @@ physics that describes the behavior of electromagnetic radiation,
 including light, without considering the quantum mechanical
 nature of light (as described by quantum electrodynamics). These
 waves are described by classical electromagnetism, primarily
-through the equations developed by James Clerk Maxwell in the
-$19^{\text{th}}$ century \cite{wikipedia:maxwells_equations}.
+through the equations developed by Maxwell in the $19^{\text{th}}$ 
+century \cite{wikipedia:maxwells_equations}.
 
 \bigskip
 \noindent
@@ -518,8 +518,8 @@ consist of four fundamental equations (see Sections
 \ref{sec:maxwells_equations_integral_form}):
 
 \begin{enumerate}
-\item Gauss' Law for Electricity 
-\item Gauss' Law for Magnetism
+\item Gauss's Law for Electricity 
+\item Gauss's Law for Magnetism
 \item Faraday's Law of Electromagnetic Induction
 \item Ampère's Law with Maxwell's addition
 \end{enumerate}
@@ -677,7 +677,7 @@ Heaviside's important contributions to Maxwell's equations
 include \cite{the_long_road_to_maxwells_equations,
 wikipedia:history_of_maxwells_equations}:
 
-\bigskip
+\medskip
 \begin{itemize}
 \item {\bf Vector Notation}: Heaviside introduced the modern
 vector notation for Maxwell's equations, which greatly simplified
@@ -748,17 +748,16 @@ process \cite{dmm:dirac_delta_and_laplace_transform}.
 \item {\bf Differential Operators}: Heaviside introduced the
 notion of differential operators, such as the D-operator, 
 $D= \frac{d}{dt}$, which allows us to manipulate differential 
-equations more effectively 
+equations more efficiently 
 \cite{d-operator,wikipedia:differential_operator}.
 
 \medskip
 \item {\bf Heaviside Step Function}: Heaviside introduced the
 unit step function (also known as the Heaviside step function) 
 as a way to represent and model sudden changes in electrical
-circuits. The Heaviside step function is shown in 
-Definition \ref{def:heaviside_function} and Figures 
-\ref{fig:u(t)}, \ref{fig:u(t-a)} and \ref{fig:u(a-t)}.
-
+circuits. The Heaviside step function is shown in Definition 
+\ref{def:heaviside_function} and Figures \ref{fig:u(t)}, 
+\ref{fig:u(t-a)} and \ref{fig:u(a-t)}.
 
 \bigskip
 \begin{definition} {\bf Heaviside Step Function:}
@@ -808,8 +807,8 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
 
 \bigskip
 \noindent
-More frequently we are interested in $u(t-a)$, which is sometimes 
-written as $u_a(t)$ and is shown in Figure \ref{fig:u(t-a)}.
+Frequently we are interested in $u(t-a)$, which is sometimes 
+written as $u_{a}(t)$ and is shown in Figure \ref{fig:u(t-a)}.
 
 
 \bigskip
@@ -846,8 +845,8 @@ written as $u_a(t)$ and is shown in Figure \ref{fig:u(t-a)}.
 
 \bigskip
 \noindent
-Another useful version of the Heaviside step function is 
-shown in Figure \ref{fig:u(a-t)}.
+Another useful version of the Heaviside step function, $u(a - t)$,
+is shown in Figure \ref{fig:u(a-t)}.
 
 \bigskip
 \begin{figure}[H]
@@ -872,7 +871,7 @@ shown in Figure \ref{fig:u(a-t)}.
      \draw [->,thick,red] (1,0) -- (3,0);
      \coordinate (xy) at (1,1); \fill [red] (xy) circle (1pt);                          % draw a dot on the y axis 
      \coordinate (y) at (0,1); \fill [black] (y) circle (1pt);                          % draw a dot on the y axis 
-     \draw (0,1) node[left] {1};
+     \draw (0,1) node[left,above,xshift=-2.0mm] {1};
      \end{tikzpicture}
   }																						% end resizebox
   \caption{$u(a - t)$}
