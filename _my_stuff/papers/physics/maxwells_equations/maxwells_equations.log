@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  25 SEP 2023 07:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  25 SEP 2023 08:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,8 +1470,17 @@ Underfull \hbox (badness 3291) in paragraph at lines 103--110
  []
 
 ) [9] (./maxwells_equations.aux)
-Package rerunfilecheck Info: File `maxwells_equations.out' has not changed.
-(rerunfilecheck)             Checksum: 55796548842270E62E4D73BAD781621B;1608.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `maxwells_equations.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `maxwells_equations.out':
+(rerunfilecheck)             Before: 55796548842270E62E4D73BAD781621B;1608
+(rerunfilecheck)             After:  9E33C65CEE20E0ACD6D1349B191275CA;1613.
  ) 
 Here is how much of TeX's memory you used:
  53530 strings out of 478994
@@ -1504,7 +1513,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on maxwells_equations.pdf (9 pages, 268484 bytes).
+Output written on maxwells_equations.pdf (9 pages, 268479 bytes).
 PDF statistics:
  318 PDF objects out of 1000 (max. 8388607)
  282 compressed objects within 3 object streams
