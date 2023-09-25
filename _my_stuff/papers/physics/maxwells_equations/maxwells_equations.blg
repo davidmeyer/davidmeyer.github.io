@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: maxwells_equations.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 20 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            581 strings with 7355 characters,
-and the built_in function-call counts, 4364 in all, are:
-= -- 440
-> -- 140
+            585 strings with 7476 characters,
+and the built_in function-call counts, 4581 in all, are:
+= -- 462
+> -- 147
 < -- 0
-+ -- 60
-- -- 40
-* -- 124
-:= -- 751
-add.period$ -- 80
-call.type$ -- 20
-change.case$ -- 80
++ -- 63
+- -- 42
+* -- 130
+:= -- 788
+add.period$ -- 84
+call.type$ -- 21
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 140
-empty$ -- 441
-format.name$ -- 40
-if$ -- 961
+cite$ -- 21
+duplicate$ -- 147
+empty$ -- 463
+format.name$ -- 42
+if$ -- 1009
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 21
 missing$ -- 0
-newline$ -- 123
-num.names$ -- 40
-pop$ -- 160
+newline$ -- 129
+num.names$ -- 42
+pop$ -- 168
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 63
 quote$ -- 0
-skip$ -- 119
+skip$ -- 125
 stack$ -- 0
-substring$ -- 100
-swap$ -- 20
+substring$ -- 105
+swap$ -- 21
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
+type$ -- 84
 warning$ -- 0
-while$ -- 40
-width$ -- 22
-write$ -- 242
+while$ -- 42
+width$ -- 23
+write$ -- 254
