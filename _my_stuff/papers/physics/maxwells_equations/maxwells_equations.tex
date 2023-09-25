@@ -288,7 +288,7 @@ dot (or inner) product is defined as follows:
 
 \bigskip
 \begin{definition}
-{\bf Standard Inner Product:} $\langle \mathbf{a}, \mathbf{b} \rangle$
+{\bf Standard Inner Product:} $\mathbf{a} \cdot \mathbf{b}$
 
 \bigskip
 \noindent
@@ -302,7 +302,7 @@ is defined to be the scalar value
 
 \medskip
 \begin{equation*}
-\langle \mathbf{a}, \mathbf{b} \rangle := 
+\mathbf{a} \cdot \mathbf{b} := 
 	\sum\limits_{j = 1}^{n} a_j b_j
 \label{eqn:inner}
 \end{equation*}
@@ -315,10 +315,10 @@ commutes) the inner product commutes:
 
 \bigskip
 \begin{equation}
-  \langle \mathbf{a}, \mathbf{b} \rangle
+  \mathbf{a} \cdot \mathbf{b}
   = \sum\limits_{j = 1}^{n} a_j b_j
   = \sum\limits_{j = 1}^{n} b_j a_j
-  = \langle \mathbf{b}, \mathbf{a} \rangle 
+  = \mathbf{b} \cdot \mathbf{a} 
 \label{eqn:dot_reverse}
 \end{equation}
 
@@ -326,7 +326,7 @@ commutes) the inner product commutes:
 \bigskip
 \noindent
 This is all good, but here we are using the dot notation for the
-divergence and the divergence is missing a property that the
+divergence and the divergence is missing a key property that the
 standard dot product has, namely, commutivity (Equation
 (\ref{eqn:dot_reverse})). Specifically, the standard dot product
 commutes but the divergence does not:
@@ -720,7 +720,8 @@ significant contributions to the field of electrical engineering
 and the development of operational calculus. Operational calculus
 is a mathematical technique used to solve differential equations,
 especially those that arise in the study of electrical circuits
-and systems. It's also known as the Heaviside calculus in honor
+and systems \cite{wikipedia:operational_calculus}. The operational
+calculus is also known as the Heaviside calculus in honor
 of his pioneering work in this area.
 
 Operational calculus is primarily concerned with transforming
