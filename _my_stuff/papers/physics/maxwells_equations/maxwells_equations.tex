@@ -574,7 +574,7 @@ classical wave optics.
 \begin{figure}[H]                                                               % wrap the wave in a figure
     \centering                                                                  % center the figure
     \fbox{                                                                      % put a box around the figure
-        \resizebox{0.85 \textwidth}{!} {                                        % resize figure if you want
+        \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
 %
 %	Draw the picture
 %
@@ -715,7 +715,7 @@ fields. Heaviside's work helped physicists better understand this
 concept and its role in the equations
 \cite{wikipedia:displacement_current}.
 
-\item {\bf Operational Calculus} Heaviside is also known for his
+\item {\bf Operational Calculus}: Heaviside is also known for his
 significant contributions to the field of electrical engineering
 and the development of operational calculus. Operational calculus
 is a mathematical technique used to solve differential equations,
@@ -751,7 +751,7 @@ unit step function (also known as the Heaviside step function)
 as a way to represent and model sudden changes in electrical
 circuits. The Heaviside step function is shown in 
 Definition \ref{def:heaviside_function} and Figures 
-\ref{fig:u(t)} and \ref{fig:u(t-a)}.
+\ref{fig:u(t)}, \ref{fig:u(t-a)} and \ref{fig:u(a-t)}.
 
 
 \bigskip
@@ -773,7 +773,8 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
 
 \bigskip
 \begin{figure}[H]
-  \centering
+  \centering																			% center the figure
+  \resizebox{0.60 \textwidth}{!} {														% resize figure if you want
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->,dashed] (0,0) -- (0,2);                                            % draw axes
      \draw [thick,->,dashed] (0,0) -- (3,0);                                            % draw axes
@@ -790,9 +791,10 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
      \draw [->,thick,red] (0,1) -- (3,1);
      \coordinate (y) at (0,1); \fill [red] (y) circle (1pt);                            % draw a dot on the y axis
      \draw (0,1) node[left] {1};
-     \draw [thick,red] (0,0) circle [radius =0.03cm];                                   % draw an open red circle on the x axis at (0,0)
+     \draw [thick,red] (0,0) circle [radius =0.03cm];									% draw an open red circle on the x axis
      \draw (0,0) node[below] {$0$};
   \end{tikzpicture}
+  }																						% end resizebox
   \caption{The Heaviside Function $u(t)$}
   \label{fig:u(t)}
 \end{figure}
@@ -801,12 +803,13 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
 \bigskip
 \noindent
 More frequently we are interested in $u(t-a)$, which is sometimes 
-written as $u_a(t)$, is shown in Figure \ref{fig:u(t-a)}.
+written as $u_a(t)$ and is shown in Figure \ref{fig:u(t-a)}.
 
 
 \bigskip
 \begin{figure}[H]
-  \centering
+  \centering																			% center the figure
+  \resizebox{0.60 \textwidth}{!} {														% resize figure if you want
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->] (0,0) -- (0,2);                                                   % draw axes
      \draw [thick,<->] (-2,0) -- (3,0);                                                 % draw axes
@@ -830,18 +833,20 @@ written as $u_a(t)$, is shown in Figure \ref{fig:u(t-a)}.
      \coordinate (y) at (0,1); \fill [black] (y) circle (1pt);                          % draw a dot on the y axis
      \draw (0,1) node[left] {1};
   \end{tikzpicture}
+  }																						% end resizebox
   \caption{$u(t-a)$}
   \label{fig:u(t-a)}
 \end{figure}
 
 \bigskip
 \noindent
-Another useful version of the Heaviside step function, $u(a-t)$, 
-is shown in Figure \ref{fig:u(a-t)}.
+Another useful version of the Heaviside step function is 
+shown in Figure \ref{fig:u(a-t)}.
 
 \bigskip
 \begin{figure}[H]
-  \centering
+  \centering																			% center the figure
+  \resizebox{0.60 \textwidth}{!} {														% resize figure if you want
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->] (0,0) -- (0,2);                                                   % draw axes
      \draw [thick,<->] (-2,0) -- (3,0);                                                 % draw axes
@@ -863,6 +868,7 @@ is shown in Figure \ref{fig:u(a-t)}.
      \coordinate (y) at (0,1); \fill [black] (y) circle (1pt);                          % draw a dot on the y axis 
      \draw (0,1) node[left] {1};
      \end{tikzpicture}
+  }																						% end resizebox
   \caption{$u(a - t)$}
   \label{fig:u(a-t)}
 \end{figure}
