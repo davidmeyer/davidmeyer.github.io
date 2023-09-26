@@ -215,7 +215,85 @@ Examples of important fields include
 \vspace{2cm}
 \end{definition}
 
+\bigskip
+\noindent
+Aside: Interestingly, every field is an integral domain, and
+integral domains have cancellation laws. 
 
+\bigskip
+\noindent
+Ok, but why? Well, consider Lemma \ref{lemma:zero_divisors}:
+
+\smallskip
+\begin{lemma}
+$R$ has a cancellation law iff $R$ is an integral domain.
+\label{lemma:zero_divisors}
+\end{lemma}
+
+
+\noindent
+\textbf{Proof.} Consider the $\Rightarrow$ and $\Leftarrow$ cases:
+
+\begin{itemize}
+\item [($\Rightarrow$)] Suppose $R$ has a cancellation law 
+with $a,b \in R$, $a \neq 0$ and assume that $ab = 0$. Then
+
+\vspace{-0.25cm}															% why is there too much vertical space here?
+\begin{equation*}
+\begin{array}{rcll} 
+ab
+&=& 0 								
+			&\hspace{2em} \mathrel{\#} \text{by assumption} \\
+[5pt]
+&\Rightarrow& a \cdot b = a \cdot 0 
+			&\hspace{2em} \mathrel{\#} 0 = a \cdot 0 \\
+[5pt]
+&\Rightarrow& b = 0 				
+			&\hspace{2em} \mathrel{\#} \text{(cancel 
+			$a \Rightarrow a$ is not a zero divisor) 
+			$\Rightarrow R$ is an integral domain} \\
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+Thus $R$ has a cancellation law $\Rightarrow$ $R$ is an integral 
+domain.
+
+\medskip
+\noindent
+\item [($\Leftarrow$)] Suppose $R$ is an integral domain with $a,b,c \in R$, 
+$a \neq 0$ and assume that $ab = ac$. Then 
+
+\begin{equation*}
+\begin{array}{rcll} 
+ab
+&=& ac                                                  
+			&\hspace{2em} \mathrel{\#} \text{by assumption} \\
+[5pt]
+&\Rightarrow& ab-ac = 0
+			&\hspace{2em} \mathrel{\#} \text{subtract $ac$ from both sides} \\
+[5pt]
+&\Rightarrow& a\cdot(b-c) = 0
+			&\hspace{2em} \mathrel{\#} \text{factor out $a$} \\
+[5pt]
+&\Rightarrow& b-c = 0
+			&\hspace{2em} \mathrel{\#} \text{$R$ has no zero divisors and 
+				$a \neq 0 \Rightarrow b-c$ must equal zero} \\
+[5pt]
+&\Rightarrow& b = c 
+			&\hspace{2em} \mathrel{\#} \text{$(ab=ac \Rightarrow b = c)
+			\Rightarrow R$ has a cancellation law}
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+Thus $R$ is an integral domain $\Rightarrow$ $R$ has a cancellation 
+law. $\blacksquare$
+\end{itemize}
+
+\bigskip
 \begin{definition}
 A vector space $V$ over a field $\mathbb{K}$ is an algebraic
 structure consisting of a non-empty \\ set $V$ equipped with a
