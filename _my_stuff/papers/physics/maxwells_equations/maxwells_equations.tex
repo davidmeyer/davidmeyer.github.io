@@ -205,16 +205,17 @@ fields.}:
 \noindent
 Examples of important fields include
 
-\medskip
+\smallskip
 \begin{itemize}
 \item $\mathbb{Q}$,     the field of rational numbers
 \item $\mathbb{R}$,     the field of real numbers
 \item $\mathbb{C}$,     the field of complex numbers
 \item $\mathbb{Z}_{p}$, the field of integers mod $p$ for prime $p$ 
 \end{itemize}
+\vspace{2cm}
 \end{definition}
 
-\smallskip
+
 \begin{definition}
 A vector space $V$ over a field $\mathbb{K}$ is an algebraic
 structure consisting of a non-empty \\ set $V$ equipped with a
@@ -284,8 +285,7 @@ a_n
 
 \medskip
 \noindent
-Alternatively, if $\mathbf{a}$ is a row vector then
-in matrix format
+If $\mathbf{a}$ is a row vector then in matrix format
 
 \begin{flalign*}
 \mathbf{a} = 
@@ -354,23 +354,22 @@ is a vector of unit length in the $\mathbf{u}$ direction.
 The Euclidean norm of a vector $\mathbf{x} = (x_1,x_2,\ldots,
 x_n) \in \mathbb{R}^{n}$ is defined to be
 
-\smallskip
-\begin{equation}
-\|\mathbf{x}\| := \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
+\bigskip
+\begin{equation*}
+\|\mathbf{x}\| := \sqrt{\mathbf{x} \cdot \mathbf{x}} =
 \sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
 \label{eqn:magnitude}
-\end{equation}
+\end{equation*}
 \end{definition}
 
 
-\bigskip
-\noindent
-Similarly, $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and
-$\mathbf{\hat{k}}$ are unit vectors in $\mathbb{R}^3$ in the $x$,
-$y$, and $z$ directions respectively. Note that
-$\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{k}}$
-are the canonical basis vectors for $\mathbb{R}^3$
-\cite{notes:basis} and have column vector format
+\subsubsection{Canonical Unit/Basis Vectors}
+$\vi$, $\vj$, and $\vk$ 
+are defined to be the unit vectors in $\mathbb{R}^3$ in the $x$,
+$y$, and $z$ directions respectively. Note that $\vi$, 
+$\vj$, and $\vk$ are also the canonical 
+basis vectors for $\mathbb{R}^3$ and have column vector format 
+\cite{notes:basis}:
 
 \bigskip
 \begin{equation*}
@@ -387,8 +386,8 @@ I have also seen $\mathbf{e}_i$ used to represent the $i^{th}$
 basis vector in $\mathbb{R}^n$. So $\mathbf{e}_i$ is a vector
 with a one in the $i^{th}$ position and a zero in each of the
 other $n - 1$ positions.  In $\mathbb{R}^3$ this means that
-$\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 =
-\mathbf{\hat{j}}$, and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
+$\mathbf{e}_1 = \vi$, $\mathbf{e}_2 =
+\vj$, and $\mathbf{e}_3 = \vk$.
 
 
 \bigskip
@@ -410,6 +409,7 @@ everywhere else\footnote{This is called a "one-hot" encoding in
 machine learning, where the $i$'s might be the classes in a
 classification problem.}. The $\mathbf{e}_i$ have column vector
 format
+
 
 \begin{flalign*}
 \mathbf{e}_{1} = 
