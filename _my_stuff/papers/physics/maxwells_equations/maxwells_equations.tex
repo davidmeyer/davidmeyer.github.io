@@ -183,6 +183,302 @@ thoughts.
 \section{Definitions}
 \label{sec:definitions}
 
+
+\begin{definition}A \emph{field} is an algebraic
+structure\footnote{See Appendix A for a brief review of a few
+important algebraic structures.}  consisting of a non-empty set
+$\mathbb{K}$ equipped with two binary operations, $+$ (addition)
+and $\cdot$ (multiplication), satisfying the
+conditions\footnote{See Appendix B for more on groups and
+fields.}:
+
+\medskip
+\begin{itemize}
+\item [] (A) $(\mathbb{K},+)$ is an Abelian group with identity element $0$ 
+             (called zero).
+\item [] (M) $(\mathbb{K} \backslash \{0\}, \cdot)$ is an Abelian group with 
+             identity element 1.
+\item [] (D) The distributive law $a(b+c)=ab+ac$ holds for all $a,b,c \in \mathbb{K}$.
+\end{itemize}
+
+\medskip
+\noindent
+Examples of important fields include
+
+\medskip
+\begin{itemize}
+\item $\mathbb{Q}$,     the field of rational numbers
+\item $\mathbb{R}$,     the field of real numbers
+\item $\mathbb{C}$,     the field of complex numbers
+\item $\mathbb{Z}_{p}$, the field of integers mod $p$ for prime $p$ 
+\end{itemize}
+\end{definition}
+
+\smallskip
+\begin{definition}
+A vector space $V$ over a field $\mathbb{K}$ is an algebraic
+structure consisting of a non-empty \\ set $V$ equipped with a
+binary operation $+$ (vector addition) and a scalar
+multiplication operation \\ $(a,v) \in \mathbb{K} \times V
+\mapsto av \in V$ such that the following rules hold:
+
+
+\bigskip
+\noindent
+(VA) $(V,+)$ is an Abelian group with identity element
+$\mathbf{0}$ (the zero vector).  
+
+\bigskip
+\noindent
+(VM) Rules for scalar multiplication:
+
+\medskip
+\begin{itemize}
+\item [] (VM0) Closure: For any $a   \in \mathbb{K}$ and $v \in V$ there is a unique element $av \in V$.
+\item [] (VM1) $\text{Distributivity}_{1}$: For any $a \in \mathbb{K}$ and $u,v \in V$ we have $a(u+v)=au+av$.
+\item [] (VM2) $\text{Distributivity}_{2}$: For any $a,b \in \mathbb{K}$ and $v \in V$ we have $(a+b)v=av+bv$.
+\item [] (VM3) Associativity: For any $a,b \in \mathbb{K}$ and $v \in V$ we have $(ab)v=a(bv)$.
+\item [] (VM4) Identity: For any $v \in V$ we have $1v = v$ (where $1$ is the identity element of $\mathbb{K}$).
+\end{itemize}
+\end{definition}
+
+\medskip
+\noindent
+Since vector spaces have two kinds of elements, namely elements
+of $\mathbb{K}$ and elements of $V$, we distinguish them by
+calling the elements of $\mathbb{K}$ scalars and the elements of
+$V$ vectors.
+
+\bigskip
+\noindent
+A vector space over the field $\mathbb{R}$ is often called a real
+vector space while a vector space over $\mathbb{C}$ is called a
+complex vector space.
+
+\subsection{Vectors}
+In this section we'll define the vector notation that we will use
+in these notes as well as a few important vector operations.
+
+\smallskip
+\subsubsection{Notation} 
+
+\medskip
+\noindent
+In these notes we will use boldface to represent a vector.
+Specifically, we will use $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ to
+represent a column or row vector in some $n$-dimensional space
+(usually $\mathbb{R}$ or $\mathbb{C}$). If $\mathbf{a}$ is a
+column vector then in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace {
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}}_{n \times 1}
+\end{flalign*}
+
+
+\medskip
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace{
+\begin{bmatrix} 
+a_1 \; a_2 \; \hdots \; a_n
+\end{bmatrix}}_{1 \times n}
+\end{flalign*}
+
+\bigskip
+\noindent
+The \emph{transpose} of a vector $\mathbf{a}$,
+$\mathbf{a}^{\intercal}$, is defined as follows: 
+If $\mathbf{a}$ is a column vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1 \; a_2 \; \hdots \; a_n
+\end{bmatrix}
+\end{flalign*}
+
+\smallskip
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}
+\end{flalign*}
+
+
+\bigskip
+\noindent
+Adding a "hat" to a vector denotes the unit vector. That is, for
+a vector $\mathbf{u}$, $\hat{\mathbf{u}}$ is defined to be
+
+\medskip
+\begin{equation}
+\hat{\mathbf{u}} := \dfrac{\mathbf{u}}{\| \mathbf{u} \|}
+\label{eqn:hat}
+\end{equation}
+
+\bigskip
+\noindent
+where $\norm{\mathbf{u}}$ is the Euclidean Norm
+of the vector $\mathbf{u}$ (Definition
+\ref{def:euclidean_norm}). In words: $\hat{\mathbf{u}}$ 
+is a vector of unit length in the $\mathbf{u}$ direction. 
+
+
+
+\bigskip
+\begin{definition}
+\label{def:euclidean_norm}
+{\bf Euclidean Norm:} $\|\mathbf{x}\|$
+
+
+\bigskip
+\noindent
+The Euclidean norm of a vector $\mathbf{x} = (x_1,x_2,\ldots,
+x_n) \in \mathbb{R}^{n}$ is defined to be
+
+\smallskip
+\begin{equation}
+\|\mathbf{x}\| := \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
+\sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
+\label{eqn:magnitude}
+\end{equation}
+\end{definition}
+
+
+\bigskip
+\noindent
+Similarly, $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and
+$\mathbf{\hat{k}}$ are unit vectors in $\mathbb{R}^3$ in the $x$,
+$y$, and $z$ directions respectively. Note that
+$\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{k}}$
+are the canonical basis vectors for $\mathbb{R}^3$
+\cite{notes:basis} and have column vector format
+
+\bigskip
+\begin{equation*}
+{\displaystyle \mathbf {\hat {i}} 
+= {\begin{bmatrix}1\\0\\0\end{bmatrix}},\,\,
+\mathbf {\hat {j}} = {\begin{bmatrix}0\\1\\0\end{bmatrix}},\,\,
+\mathbf {\hat {k}} = {\begin{bmatrix}0\\0\\1\end{bmatrix}}}
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+I have also seen $\mathbf{e}_i$ used to represent the $i^{th}$
+basis vector in $\mathbb{R}^n$. So $\mathbf{e}_i$ is a vector
+with a one in the $i^{th}$ position and a zero in each of the
+other $n - 1$ positions.  In $\mathbb{R}^3$ this means that
+$\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 =
+\mathbf{\hat{j}}$, and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
+
+
+\bigskip
+\noindent
+In general, the standard basis (which is sometimes called the
+computational basis) for the $n$-dimensional Euclidean space
+consists of the ordered set of $n$ distinct vectors
+
+\medskip
+\begin{equation*}
+\{\mathbf {e} _{i}: 1 \leq i \leq n\}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is,
+it has a one in the $i^\text{th}$ coordinate (position) and zeros
+everywhere else\footnote{This is called a "one-hot" encoding in
+machine learning, where the $i$'s might be the classes in a
+classification problem.}. The $\mathbf{e}_i$ have column vector
+format
+
+\begin{flalign*}
+\mathbf{e}_{1} = 
+\begin{bmatrix} 
+1 \\
+0 \\
+\vdots \\
+0 \\
+0
+\end{bmatrix} \!\! , \;
+\mathbf{e}_{2} = 
+\begin{bmatrix} 
+0 \\
+1 \\
+\vdots \\
+0 \\
+0
+\end{bmatrix} \!\! , 
+\hdots  , \; 
+\mathbf{e}_{n-1} =
+\begin{bmatrix} 
+0 \\
+0 \\
+\vdots \\
+1 \\
+0
+\end{bmatrix} \!\! , \;
+\mathbf{e}_{n} =
+\begin{bmatrix} 
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{bmatrix}
+\end{flalign*}
+
+
+\bigskip
+\noindent
+Using these definitions we can define the parametric form of some
+curve $C$ in $\mathbb{R}^3$, $\mathbf{r}(t)$, as follows:
+
+\medskip
+\begin{equation*}
+\mathbf{r}(t) = g(t) \, \vi + h(t) \, \vj + k(t) \, \vk.
+\end{equation*}
+
+\bigskip
+\noindent
+where $t \in [a,b]$ and $g(t)$, $h(t)$, and $k(t)$ are scalar
+functions\footnote{A scalar function is a function $f$ such that
+$f: \mathbb{R}^n \to \mathbb{R}$.}.
+
+
+\bigskip
+\noindent
+Another common notation for vectors is $\vec{r}(t)$, where
+$\vec{r}(t)$ might be defined as follows:
+
+
+\bigskip
+\begin{equation*}
+\vec{r}(t) = g(t) \, \vi +h(t) \, \vj + k(t) \, \vk 
+\end{equation*}
+
+\subsection{A Few Definitions}
+\label{subsec:a_few_definitions}
+
 \begin{table} [H]
   \centering                                                                                    % center the figure
   \renewcommand{\arraystretch}{2.5}                                                             % get some space in the table cells
@@ -216,13 +512,13 @@ thoughts.
   \label{tab:definitions}
 \end{table}
 
-
-\subsection{Electric and Magnetic Constants in Maxwell's Equations}
-\label{subsec:electric_and_magnetic_constants}
+\bigskip
+\subsubsection{Electric and Magnetic Constants in Maxwell's Equations}
+\label{subsubsec:electric_and_magnetic_constants}
 Maxwell's equations are usually defined using three constants:
 the speed of light ($c$), the electric permittivity of free space
 ($\epsilon_0$), and the magnetic permeability of free space
-($\mu_0$).
+($\mu_0$). See Table \ref{tab:definitions}.
 
 \bigskip
 \noindent
@@ -270,23 +566,27 @@ Substituting the values of $\mu_0$ and $c$ into Equation
 \bigskip
 \noindent
 Finally, note that in the presence of polarizable or magnetic
-media \cite{wikipedia:polarization}, the effective constants 
-will have different values. In the case of a polarizable medium, 
-called a dielectric, the comparison is stated as a relative 
-permittivity or a dielectric constant. In the case of magnetic 
+media \cite{wikipedia:polarization}, the effective constants will
+have different values. In the case of a polarizable medium,
+called a dielectric, the comparison is stated as a relative
+permittivity or a dielectric constant. In the case of magnetic
 media, the relative permeability may also be stated.
 
 
+\subsection{Divergence and Curl}
+\label{subsec:divergence_and_curl}
+For some vector field $\mathbf{F}$, we call $\nabla \cdot
+\mathbf{F}$ the divergence of $\mathbf{F}$, while $\nabla \times
+\mathbf{F}$ is called the curl of $\mathbf{F}$
+\cite{dmm:vector_calculus}. 
+
 \bigskip
 \noindent
-Back to definitions. For some field $\mathbf{F}$, we call $\nabla
-\cdot \mathbf{F}$ the divergence of $\mathbf{F}$, while $\nabla
-\times \mathbf{F}$ is called the curl of $\mathbf{F}$
-\cite{dmm:vector_calculus}. It is worth noting that the standard 
+It is worth noting that the standard
 dot (or inner) product is defined as follows:
 
 
-\bigskip
+\medskip
 \begin{definition}
 {\bf Standard Inner Product:} $\mathbf{a} \cdot \mathbf{b}$
 
@@ -310,7 +610,7 @@ is defined to be the scalar value
 
 \smallskip
 \noindent
-Since $a_j$ and $b_j$ are scalars (and scalar multiplication 
+Since $a_j$ and $b_j$ are scalars (and scalar multiplication
 commutes) the inner product commutes:
 
 \bigskip
@@ -343,29 +643,14 @@ One way to see this is to notice that the LHS of Equation
 (\ref{eqn:dot_does_not_commute}) is a scalar function while the
 RHS is a differential operator.
 
-\bigskip
-\noindent
-One other set of definitions we will need concerns the unit
-vectors in $\mathbb{R}^3$. Specifically, $\vi$, $\vj$, and $\vk$
-are defined to be the unit vectors in $\mathbb{R}^3$ in the $x$,
-$y$, and $z$ directions respectively \cite{notes:basis}.  Note
-that $\vi$, $\vj$, and $\vk$ are the canonical basis vectors for
-$\mathbb{R}^3$ and have column vector format
 
 \bigskip
-\begin{equation*}
-{\displaystyle \mathbf {\hat {i}} 
-= {\begin{bmatrix}1\\0\\0\end{bmatrix}},\,\,
-\mathbf {\hat {j}} = {\begin{bmatrix}0\\1\\0\end{bmatrix}},\,\,
-\mathbf {\hat {k}} = {\begin{bmatrix}0\\0\\1\end{bmatrix}}}
-\end{equation*}
-\medskip
 \section{Maxwell's Equations (differential form)}
 \label{sec:maxwells_equations_differential_form}
 The differential form of Maxwell's equations assumes the absence
 of magnetic or polarizable media since these media can change the
 values of the permittivity and the permeability (see Section
-(\ref{subsec:electric_and_magnetic_constants})). The differential
+(\ref{subsubsec:electric_and_magnetic_constants})). The differential
 form of Maxwell's equations is:
 
 \bigskip
@@ -398,7 +683,6 @@ Gauss's law for electricity states that magnetic monopoles can not
 exist \cite{gauss_law_for_magnetic_fields}.
 
 
-
 \bigskip
 \item {\bf Faraday's Law of Electromagnetic Induction} 
 \label{item:faradays_law_of_induction}
@@ -414,23 +698,28 @@ time-varying magnetic field ($\vB$) creates an electric field
 ($\vE$) \cite{faradays_law}.
 
 
-
 \bigskip
 \item  {\bf Ampere's Law with Maxwell's addition}
 \label{item:ampers_law}
 
 \begin{equation*}
-\nabla \times \vB = \mu_0 \vJ + \mu_0 \epsilon_0 \dfrac{\partial \vE}{\partial t}					
+\nabla \times \vB = \mu_0 \vJ + \mu_0 \epsilon_0 
+\dfrac{\partial \vE}{\partial t}					
 \end{equation*}
 
 \bigskip
+{\setstretch{1.60}
 \noindent
 Ampere's law with Maxwell's addition states that flowing electric
 current ($\vJ$) or a time-varying electric field ($\vE$) creates
-a magnetic field ($\vB$) \cite{amperes_law}.
+a magnetic field ($\vB$) \cite{amperes_law}. Maxwell's addition 
+to Ampere's law is the term $\mu_0 \epsilon_0 \dfrac{\partial 
+\vE} {\partial t}$ (time-varying electric fields produce magnetic
+fields).	
+\par}
 \end{enumerate}
 
-\bigskip
+\smallskip
 \section{Maxwell's Equations (integral form)}
 \label{sec:maxwells_equations_integral_form}
 
@@ -672,9 +961,12 @@ observed behavior.
 Oliver Heaviside made significant contributions to the
 understanding and reformulation of Maxwell's equations. His work
 helped simplify and clarify these equations, making them more
-accessible and useful for engineers and physicists. A few of
-Heaviside's important contributions to Maxwell's equations
-include \cite{the_long_road_to_maxwells_equations,
+accessible and useful for engineers and physicists. 
+
+\bigskip
+\noindent
+A few of Heaviside's important contributions to Maxwell's 
+equations include \cite{the_long_road_to_maxwells_equations,
 wikipedia:history_of_maxwells_equations}:
 
 \medskip
@@ -796,7 +1088,7 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
      \draw [->,thick,red] (0,1) -- (3,1);
      \coordinate (y) at (0,1); \fill [red] (y) circle (1pt);                            % draw a dot on the y axis
      \draw (0,1) node[left] {1};
-     \draw [thick,red] (0,0) circle [radius =0.03cm];									% draw an open red circle on the x axis
+     \draw [thick,red] (0,0) circle [radius =0.03cm];                                   % draw an open red circle on the x axis
      \draw (0,0) node[below] {$0$};
   \end{tikzpicture}
   }																						% end resizebox
@@ -813,8 +1105,8 @@ written as $u_{a}(t)$ and is shown in Figure \ref{fig:u(t-a)}.
 
 \bigskip
 \begin{figure}[H]
-  \centering																			% center the figure
-  \resizebox{0.60 \textwidth}{!} {														% resize figure if you want
+  \centering                                                                            % center the figure
+  \resizebox{0.60 \textwidth}{!} {                                                      % resize figure if you want
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->] (0,0) -- (0,2);                                                   % draw axes
      \draw [thick,<->] (-2,0) -- (3,0);                                                 % draw axes
@@ -850,8 +1142,8 @@ is shown in Figure \ref{fig:u(a-t)}.
 
 \bigskip
 \begin{figure}[H]
-  \centering																			% center the figure
-  \resizebox{0.60 \textwidth}{!} {														% resize figure if you want
+  \centering                                                                            % center the figure
+  \resizebox{0.60 \textwidth}{!} {                                                      % resize figure if you want
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->] (0,0) -- (0,2);                                                   % draw axes
      \draw [thick,<->] (-2,0) -- (3,0);                                                 % draw axes
@@ -933,6 +1225,247 @@ contributions to the development of operational calculus.
 %
 \bibliographystyle{plain}
 \bibliography{qc}
+%
+%	Appendices 
+%
+\section*{Appendix A}
+\subsection*{A Brief Review of Algebraic Structures}
+
+\begin{center}
+\begin{table}[H]
+\scalebox{0.80}{
+\begin{tabular}{l | c | c | c | c |  c | c}
+{{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
+                                & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
+                                & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
+\hline\hline                                                                                            % separate column names from rows
+Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup plus identity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid plus inverse $\in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
+                                             & Abelian group under $+$ and $*$  \\
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Field \\
+Module		                & \checkmark & \checkmark $(+,*)$          & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Ring
+
+\end{tabular}}
+\caption{A Few Algebraic Structures and Their Features}
+\label{tab:algebraic_structures}
+\end{table}
+\end{center}
+
+\vspace{-10.0mm}
+\noindent
+\subsection*{\underline{Abbreviations}}
+
+\medskip
+\begin{enumerate}
+\item \textbf{ABO:} Associative Binary Operation 
+\begin{itemize}
+\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
+      for all $x, y, z \in S$
+\item $x \circ y \in S$ for all $x, y \in S$
+      ($S$ is closed under $\circ$)
+\end{itemize}
+
+\item \textbf{Distributive:} Distributive Property 
+\begin{itemize}
+\item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
+                                   all $x, y, z \in S$
+\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
+                                   for all $x, y, z \in S$
+\item $*$ is \emph{distributive}   over $+$ if $*$ is left and 
+                                   right distributive
+\end{itemize}
+
+\item \textbf{Commutative:} Commutative Property
+\begin{itemize}
+\item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
+\end{itemize}
+\end{enumerate}
+
+
+\noindent
+\subsection*{Notes}
+\begin{itemize}
+\item Table \ref{tab:algebraic_structures} implies that $\text{F}
+\subset \text{R} \subset \text{G} \subset \text{M} \subset \text{SG}$.
+\item Whether or not a ring has a multiplicative identity 
+      seems to depend on the field of study. 
+
+\smallskip
+\noindent
+      In general the definition of a ring $R$ doesn't require a
+      multiplicative inverse in $R$ ($a^{-1} \notin R$ for all $a
+      \in R$) or that multiplication be commutative in
+      $R$. Specifically: $R$ is an Abelian group under $+$ but we
+      don't require that multiplication be commutative (while
+      $a+b = b+a$ for all $a,b \in R$, we don't require that $ab
+      = ba$ for all $a,b \in R$). These are perhaps the main ways
+      in which a ring differs from a field. In addition, as
+      mentioned above in some cases $R$ need not include a
+      multiplicative identity $(1 \notin R)$.
+
+\item $\text{F} \subset \text{VS}$ since the field axioms require
+      a multiplicative inverse ($a^{-1}$) while vector spaces do
+      not. Fields are also commutative under $*$ and vector
+      spaces are not.
+
+\item $\text{VS} \subset \text{Module}$ since the scalars in a
+      module come from a ring as opposed to a field like we find
+      in vector spaces and $\text{F} \subset \text{R}$
+\cite{module_theory_blyth}.
+\end{itemize}
+
+\section*{Appendix B}
+\subsection*{{\Large Fields and Vector Spaces}}
+
+\smallskip
+\subsubsection*{\large \underline {Fields}}
+A \emph{field} is an algebraic structure $\mathbb{K}$ in which we can 
+add and multiply elements such that the following laws hold:
+
+\bigskip
+\noindent
+{\bf Addition Laws}
+\smallskip
+\begin{itemize}
+\item [] (FA0) Closure: For any $a,b \in \mathbb{K}$ there is a 
+               unique element $a+b \in \mathbb{K}$.
+\item [] (FA1) Associativity: For all $a,b,c \in \mathbb{K}$ we have 
+               $a+(b+c) = (a+b)+c$.
+\item [] (FA2) Identity: There is an element $0 \in \mathbb{K}$ 
+               such that $a+0= 0+a = a$ for all  $a \in \mathbb{K}$.
+\item [] (FA3) Inverse: For any $a \in \mathbb{K}$ there exists 
+               $-a \in \mathbb{K}$ such that $a+(-a) = (-a)+a = 0$.
+\item [] (FA4) Commutativity: For any $a,b \in \mathbb{K}$ we have $a+b = b+a$.
+\end{itemize}
+
+
+
+\medskip
+\noindent
+{\bf Multiplication laws}
+\smallskip
+\begin{itemize}
+\item [] (FM0) Closure: For any $a, b \in \mathbb{K}$, there is a unique element 
+               $ab \in \mathbb{K}$.
+\item [] (FM1) Associativity: For all $a,b,c \in \mathbb{K}$ we have $a(bc)=(ab)c$.
+\item [] (FM2) Identity: There is an element $1 \in \mathbb{K}$, $1 \ne 0$,
+               such that $a1 = 1a = a$ for all $a \in \mathbb{K}$.
+\item [] (FM3) Inverse: For any $a \in \mathbb{K}$ with $a \ne 0$, there exists 
+               $a^{-1} \in \mathbb{K}$ such that $aa^{-1} = a^{-1}a = 1$.
+\item [] (FM4) Commutativity: For any $a,b \in \mathbb{K}$ we have $ab=ba$.
+\end{itemize}
+
+\medskip
+\noindent
+{\bf Distributive law}
+\smallskip
+\begin{itemize}
+\item [] (D) Distributivity: For all $a,b,c \in \mathbb{K}$, we
+have $a(b+c) = ab+ac$. 
+\end{itemize}
+
+\bigskip
+\noindent
+Note the similarity of the addition and multiplication laws. We
+say that $(\mathbb{K},+)$ is an \emph{Abelian} group if
+(FA0)-(FA4) hold.  (FM0)-(FM4) say that $(\mathbb{K} \backslash
+\{0\}, \cdot)$ is also an Abelian group (we have to leave out $0$
+because as (FM3) says, $0$ does not have a multiplicative
+inverse).
+
+\bigskip
+\noindent
+Examples of fields include $\mathbb{Q}$ (the rational numbers),
+$\mathbb{R}$ (the real numbers), $\mathbb{C}$ (the complex
+numbers), and $\mathbb{Z}_{p}$ (the integers mod $p$, for $p$ a
+prime number).
+
+\bigskip
+\noindent
+Associated with any field $\mathbb{K}$ is a non-negative integer
+called its characteristic, which is defined as follows: the
+characteristic of a field $\mathbb{K}$, often denoted
+$\text{char} (\mathbb{K})$, is the smallest number of times one
+must use the field's (or ring's) multiplicative identity (1) in a
+sum to get the additive identity (0). If this sum never reaches
+the additive identity the field is said to have characteristic
+zero. That is,
+
+\bigskip
+\begin{equation*}
+\text{char}(\mathbb{K}) = 
+    \begin{cases}
+        n & \text{$n$ is the smallest positive number such that } 
+              \underbrace{1+1+ \cdots + 1}_{n} = 0 \\
+        0 & \text{if the sum of ones never reaches 0}
+    \end{cases}
+\end{equation*}
+
+\bigskip
+\noindent
+Important examples such as $\mathbb{Q}$, $\mathbb{R}$ and
+$\mathbb{C}$ have characteristic zero, while $\mathbb{Z}_{p}$ has
+characteristic $p$ (for prime $p$).
+
+
+\subsubsection*{\large \underline{Vector Spaces}}
+Let $\mathbb{K}$ be a field. A vector space $V$ over $\mathbb{K}$
+is an algebraic structure in which we can add two elements of $V$
+and multiply an element of $V$ by an element of $\mathbb{K}$
+(this is called \emph{scalar multiplication}) such that the
+following rules hold:
+
+\bigskip
+{\bf Addition Laws}
+\smallskip
+\begin{itemize}
+\item [] (VA0) Closure: For any $u,v \in V$ there is a unique element $u+v \in V$.
+\item [] (VA1) Associativity: For all $u,v \in V$ we have $u+(v+w)=(u+v)+w$.
+\item [] (VA2) Identity: There is an element $0 \in V$ such that $v+0=0+v=v$ for all $v \in V$. 
+\item [] (VA3) Inverse: For any $v \in V$, there exists $-v \in V$ such that $v+(-v)=(-v)+v=0$.
+\item [] (VA4) Commutativity: For any $u,v \in V$ we have $u+v=v+u$.
+\end{itemize}
+
+\bigskip
+{\bf Scalar multiplication laws}
+\smallskip
+\begin{itemize}
+\item [] (VM0) Closure: For any $a \in \mathbb{K}$, $v \in V$ there is a unique element $av \in V$. 
+\item [] (VM1) $\text{Distributivity}_1$: For any $a \in \mathbb{K}$, $u,v \in V$ we have $a(u+v)=au+av$. 
+\item [] (VM2) $\text{Distributivity}_2$: For any $a,b \in \mathbb{K}$, $v \in V$ we have $(a+b)v=av+bv$. 
+\item [] (VM3) Associativity: For any $a,b \in \mathbb{K}$, $v \in V$ we have $(ab)v=a(bv)$.
+\item [] (VM4) Identity: For any $v \in V$ we have $1v=v$ (where 1 is the element given by (FM2)).
+\end{itemize}
+
+\bigskip
+\noindent
+Again, we can summarize (VA0)–(VA4) by saying that $(V,+)$ is an
+Abelian group. 
+
+\bigskip
+\noindent
+One of the most important examples of a vector space over a field
+$\mathbb{K}$ is the set $\mathbb{K}^{n}$ of all $n$-tuples with
+elements from $\mathbb{K}$ (should prove that $\mathbb{K}^{n}$ is
+a vector space). Addition and scalar multiplication in
+${\mathbb{K}}^{n}$ are defined by the following rules:
+
+\begin{flalign*}
+(u_1,u_2,\hdots,u_n)+(v_1,v_2,\hdots,v_n) &= (u_1+v_1,u_2+v_2,\hdots,u_n+v_n) \\
+a(v_1,v_2,\hdots,v_n)                     &= (av_1,av_2,\hdots,av_n)
+\end{flalign*}
+
+\bigskip
+\noindent
+Note that one of the key features of a vector space is closure
+under \emph{componentwise} addition, as shown above.
 %
 %	done
 %
