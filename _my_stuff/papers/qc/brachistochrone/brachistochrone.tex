@@ -23,7 +23,7 @@
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby}
-\tikzset{>=latex}														% default to LaTeX arrow head
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %
@@ -161,7 +161,7 @@ The scenario Bernoulli envisioned is depicted in Figure
         \draw[-stealth, thin] (A) -- (Ay) coordinate [label={[font=\scriptsize, left] $y$}];		% draw y axis
         \draw[-stealth, thick] (Gy0) -- (Gy1) coordinate [label={[font=\footnotesize, midway, right] $\vv{F_{g}}$}];	% draw the gravity vector (g)
       \end{tikzpicture}													% end \tikzipcture
-    }																	% end \resizebox
+    }                                                                                                   % end \resizebox
   \caption{The Brachistochrone Problem Setup}
   \label{fig:brachistochrone}
 \end{figure}
@@ -174,7 +174,7 @@ Brachistochrone\footnote{The word brachistochrone comes from the
 Ancient Greek: \emph{brachis} (shortest) + \emph{chronos} (time)
 \cite{enwikisource:6202943}.} problem, or the path of fastest
 descent. Bernoulli issued his challenge in \emph{Acta Eruditorum}
-\cite{1696acta}, writing 
+\cite{1696acta}, writing
 
 \bigskip
 \begin{addmargin}[2em]{7em}
@@ -196,9 +196,9 @@ Bernoulli wrote the problem statement as:
 
 \bigskip
 \begin{addmargin}[2em]{7em}
-Given two points A and B in a vertical plane, what is the curve traced 
-out by a point acted on only by gravity, which starts at A and reaches 
-B in the shortest time.
+Given two points A and B in a vertical plane, what is the curve
+traced out by a point acted on only by gravity, which starts at A
+and reaches B in the shortest time.
 \end{addmargin}
 
 \bigskip
@@ -251,12 +251,16 @@ The cycloid is shown in Figure \ref{fig:cycloid}.
 \bigskip
 \begin{figure}[H]
   \centering
-  \resizebox{0.63 \textwidth}{!} {										% resize the figure if you want
-    \begin{tikzpicture} [framed]										% draw the picture inside a black frame (requires \usetikzlibrary{backgrounds})
+  \resizebox{0.63 \textwidth}{!} {                                                                      % resize the figure if you want draw the picture
+    \begin{tikzpicture} [framed]                                                                        %  inside a black frame (requires
+                                                                                                        %  \usetikzlibrary{backgrounds})
+%
+%       Define a few coordinates
+%
      \coordinate (O) at (0,0);
      \coordinate (A) at (0,3);
-     \def\r{1}															% r is the radius
-     \def\c{1.4}														% c is the center
+     \def\r{1}  i                                                                                       % r is the radius
+     \def\c{1.4}                                                                                        % c is the center
      \coordinate (C) at (\c, \r);
 
      \draw[-latex] (O) -- (A) node[anchor=south] {$y$};
@@ -267,18 +271,18 @@ The cycloid is shown in Figure \ref{fig:cycloid}.
 %
 %       set up some variables and coordinates
 %
-     \def\x{0.4}														% x
-     \def\y{0.83}														% y
-     \def\xa{0.3} 														% coordinate x for arc left
-     \def\ya{1.2}														% coordinate y for arc left
+     \def\x{0.4}                                                                                        % x
+     \def\y{0.83}                                                                                       % y
+     \def\xa{0.3}                                                                                       % coordinate x for arc left
+     \def\ya{1.2}                                                                                       % coordinate y for arc left
      \coordinate (X)     at (\x, 0 );
      \coordinate (Y)     at (0, \y );
      \coordinate (XY)    at (\x, \y );
      \node[anchor=north] at (X) {$x$};
-     \draw[fill=black] (O) circle (1pt);								% draw a dot at the origin
-     \draw[fill=blue]  (C) circle (1pt);   								% draw center of circle
-     \draw[] (C) -- node[anchor=south] {\; $a$} (XY);					% draw radius of the circle
-     \coordinate (B) at (\c, 0);    									% bottom of circle, radius to the bottom
+     \draw[fill=black] (O) circle (1pt);                                                                % draw a dot at the origin
+     \draw[fill=blue]  (C) circle (1pt);                                                                % draw center of circle
+     \draw[] (C) -- node[anchor=south] {\; $a$} (XY);                                                   % draw radius of the circle
+     \coordinate (B) at (\c, 0);                                                                        % bottom of circle, radius to the bottom
      \draw[] (C) -- (B) node[anchor=north] {$a \, \theta$};
 %
 %       projections of point XY
@@ -300,11 +304,11 @@ The cycloid is shown in Figure \ref{fig:cycloid}.
 %
 %       arc below
 %
-     \def\xb{2.5}														% coordinate x for arc bottom
-     \def\yb{0.8}														% coordinate y for arc bottom
+     \def\xb{2.5}											% coordinate x for arc bottom
+     \def\yb{0.8}											% coordinate y for arc bottom
      \coordinate (AB) at (\xb, \yb);
-     \draw[-latex, rotate=-10] (AB) arc (-5:-45:1.3);
-     \draw[fill=black] (XY) circle (1pt);								% draw XY dot
+     \draw[-latex, rotate=-10] (AB) arc (-5:-45:1.3);   
+     \draw[fill=black] (XY) circle (1pt);                                                               % draw XY dot
 %
 %       top label
 %
@@ -380,7 +384,7 @@ x
 \hspace{-2em} \text{and} \\
 [10pt]
 y
-&=& \text{CT - CB}   					&\qquad \qquad \qquad \mathrel{\#} \text{Figure \ref{fig:cycloid_coordinates}} \\
+&=& \text{CT - CB}                      &\qquad \qquad \qquad \mathrel{\#} \text{Figure \ref{fig:cycloid_coordinates}} \\
 [5pt]
 &=& a \; – \; a \cos \theta             &\qquad \qquad \qquad \mathrel{\#} \text{CT = $a$ and CB $= a \cos \theta$} \\
 [5pt]
@@ -445,19 +449,24 @@ I[y(x)] = \int_a^b F(y(x), y^{\prime}(x)) \; dx
 
 \bigskip
 \noindent
-A typical problem in the Calculus of Variations involves finding a particular function $y(x)$ that 
-maximizes or minimizes the integral $I[y(x)]$ (Equation \ref{eqn:I[y]}), subject to the boundary conditions 
-$y(a) = A$ and $y(b) = B$. The integral $I[y(x)]$ is an example of a \emph{functional}, which (more generally) 
-is a mapping from a set of allowable functions to the reals. We say that $I[y(x)]$ has an \emph{extremum}
-when $I[y(x)]$ takes its maximum or minimum value. Note that we use square brackets to indicate that $I$
-is a functional (rather than a function) and we frequently see $y(t)$ abbreviated as $y$ and $I[y(x)]$ 
-as $I[y]$ (or just $I$). 
+A typical problem in the Calculus of Variations involves finding
+a particular function $y(x)$ that maximizes or minimizes the
+integral $I[y(x)]$ (Equation \ref{eqn:I[y]}), subject to the
+boundary conditions $y(a) = A$ and $y(b) = B$. The integral
+$I[y(x)]$ is an example of a \emph{functional}, which (more
+generally) is a mapping from a set of allowable functions to the
+reals. We say that $I[y(x)]$ has an \emph{extremum} when
+$I[y(x)]$ takes its maximum or minimum value. Note that we use
+square brackets to indicate that $I$ is a functional (rather than
+a function) and we frequently see $y(t)$ abbreviated as $y$ and
+$I[y(x)]$ as $I[y]$ (or just $I$).
 
 \subsection{The Euler-Lagrange Equation}
 \label{subsec:euler-lagrange}
-Let $C^k [a,b]$ denote the set of continuous functions defined on the interval $a \leq x \leq b$ whose 
-first $k$-derivatives are also continuous on $a \leq x \leq b$. Now, suppose that $I[Y(x)]$ is an 
-extremum of the functional
+Let $C^k [a,b]$ denote the set of continuous functions defined on
+the interval $a \leq x \leq b$ whose first $k$-derivatives are
+also continuous on $a \leq x \leq b$. Now, suppose that $I[Y(x)]$
+is an extremum of the functional
 
 \medskip
 \begin{equation*}
@@ -466,29 +475,34 @@ I[y(x)] = \int_a^b L(y(x), y^{\prime}(x)) \; dx
 
 \bigskip
 \noindent
-that is defined defined on all functions $y(x) \in C^2 [a,b]$ such that $y(a) = A$ and $y(b) = B$.
-Then its solution $Y(x)$ satisfies the second order ordinary differential equation
+that is defined defined on all functions $y(x) \in C^2 [a,b]$
+such that $y(a) = A$ and $y(b) = B$.  Then its solution $Y(x)$
+satisfies the second order ordinary differential equation
 
 
 \bigskip
 \begin{equation}
-\dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial y^{\prime}} \right ) -  \dfrac{\partial L}{\partial y} = 0
+\dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial y^{\prime}}
+\right ) -  \dfrac{\partial L}{\partial y} = 0 
 \label{eqn:euler-lagrange}
 \end{equation}
 
 \bigskip
 \noindent
-Equation \ref{eqn:euler-lagrange} is known as the Euler-Lagrange equation (see \cite{notes:pola} for a proof of
-the Equation \ref{eqn:euler-lagrange}). It is the constraint imposed by the Euler-Lagrange equation
-that allows us to find the extremum of the functional.
+Equation \ref{eqn:euler-lagrange} is known as the Euler-Lagrange
+equation (see \cite{notes:pola} for a proof of the Equation
+\ref{eqn:euler-lagrange}). It is the constraint imposed by the
+Euler-Lagrange equation that allows us to find the extremum of
+the functional.
 
 
 
 \bigskip
 \noindent
-Recall the Brachistochrone problem setup shown in Figure \ref{fig:brachistochrone}. 
-Here we are trying to find the path that takes the \emph{shortest time} from point 
-$A$ to $B$. In the language of the calculus of variations \cite{wiki:cov} the 
+Recall the Brachistochrone problem setup shown in Figure
+\ref{fig:brachistochrone}.  Here we are trying to find the path
+that takes the \emph{shortest time} from point $A$ to $B$. In the
+language of the calculus of variations \cite{wiki:cov} the
 Brachistochrone problem is to minimize the functional
 
 \begin{equation*}
@@ -497,9 +511,9 @@ I[y] = \int_{0}^{t} dt
 
 \bigskip
 \noindent
-Consider a curve over in which we call an differential segment of the path $ds$. Then
-we know that the velocity of the ball (or bead, in Bernoulli's original problem statement) 
-is
+Consider a curve over in which we call an differential segment of
+the path $ds$. Then we know that the velocity of the ball (or
+bead, in Bernoulli's original problem statement) is
 
 \begin{equation}
 V = \dfrac{ds}{dt}
@@ -508,8 +522,9 @@ V = \dfrac{ds}{dt}
 
 \bigskip
 \noindent
-Now, treating $\dfrac{ds}{dt}$ as a fraction\footnote{Care needs to be taken when 
-treating a derivative as a fraction.} we can see from Equation \ref{eqn:v} that
+Now, treating $\dfrac{ds}{dt}$ as a fraction\footnote{Care needs
+to be taken when treating a derivative as a fraction.} we can see
+from Equation \ref{eqn:v} that
 
 \bigskip
 \begin{equation*}
@@ -529,15 +544,14 @@ I[y] = \int_{0}^{t} dt = \int_A^B \dfrac{ds}{V}
 \bigskip
 {\setstretch{1.85} 
 \noindent
-Can we say more about $ds$? Well, if some function
-$f(x)$ is differentiable in the neighborhood of $ds$ 
-and if $ds$ is of differential length ($ds \to 0$) 
-then we can build a right triangle on $f(x)$ with 
-$ds$ as the hypotenuse. Then from Pythagoras we 
-know that $ds^2 = dx^2 + dy^2$ and so 
-$ds = \sqrt{dx^2 + dy^2} = \sqrt{1 + \left ( \dfrac{dy}{dx} \right )^2} \; dx$. 
-This scenario is depicted in Figure \ref{fig:pythagorean_theorem}.
-\par}
+Can we say more about $ds$? Well, if some function $f(x)$ is
+differentiable in the neighborhood of $ds$ and if $ds$ is of
+differential length ($ds \to 0$) then we can build a right
+triangle on $f(x)$ with $ds$ as the hypotenuse. Then from
+Pythagoras we know that $ds^2 = dx^2 + dy^2$ and so $ds =
+\sqrt{dx^2 + dy^2} = \sqrt{1 + \left ( \dfrac{dy}{dx} \right )^2}
+\; dx$.  This scenario is depicted in Figure
+\ref{fig:pythagorean_theorem}.  \par}
 
 \bigskip
 %
@@ -716,10 +730,12 @@ I[y] = \dfrac{1}{\sqrt{2g}} \mathlarger{\mathlarger{\int_A^B}}  \sqrt{\dfrac{1 +
 \medskip
 \bigskip
 \noindent
-The Calculus of Variations is about finding a function (rather than a point) that minimizes or
-maximizes some other function. The other function, which takes a function as an argument, 
-is called a functional. Here $I[y]$ is the functional and we want to find a function
-$L(y,y^{\prime})$ that minimizes $I[y]$. $L(y,y^{\prime})$ looks like
+The Calculus of Variations is about finding a function (rather
+than a point) that minimizes or maximizes some other
+function. The other function, which takes a function as an
+argument, is called a functional. Here $I[y]$ is the functional
+and we want to find a function $L(y,y^{\prime})$ that minimizes
+$I[y]$. $L(y,y^{\prime})$ looks like
 
 \medskip
 \begin{equation}
@@ -729,10 +745,10 @@ L(y,y^{\prime}) = \sqrt{\dfrac{1 + (y^{\prime})^2}{y}}
 
 \bigskip
 \noindent
-The last piece of machinery we need is the Beltrami Identity \cite{wiki:beltrami_identity},
-which is a special case of the Euler–Lagrange equation where 
-$\dfrac{\partial L}{\partial y} = 0$. In this case the Euler-Lagrange equation reduces
-to
+The last piece of machinery we need is the Beltrami Identity
+\cite{wiki:beltrami_identity}, which is a special case of the
+Euler–Lagrange equation where $\dfrac{\partial L}{\partial y} =
+0$. In this case the Euler-Lagrange equation reduces to
 
 \bigskip
 \begin{equation}
@@ -742,8 +758,9 @@ L - y^{\prime} \dfrac{\partial L}{\partial y^{\prime}} = C
 
 \bigskip
 \noindent
-where $C$ is some constant (see \cite{wiki:beltrami_identity} for a derivation). Plugging
-Equation \ref{eqn:L} into Equation \ref{eqn:beltrami} we get
+where $C$ is some constant (see \cite{wiki:beltrami_identity} for
+a derivation). Plugging Equation \ref{eqn:L} into Equation
+\ref{eqn:beltrami} we get
 
 \bigskip
 \begin{equation}
@@ -970,25 +987,24 @@ y
 
 \bigskip
 \noindent
-So we see that Equations \ref{eqn:cycloid_x} and \ref{eqn:cycloid_y} 
-turn out to be the equations for a cycloid (as we saw in Figures
-\ref{fig:cycloid} and \ref{fig:cycloid1}) and hence the "shortest
-time curve", that is, the solution to the Brachistochrone
-problem, is a cycloid. 
+So we see that Equations \ref{eqn:cycloid_x} and
+\ref{eqn:cycloid_y} turn out to be the equations for a cycloid
+(as we saw in Figures \ref{fig:cycloid} and \ref{fig:cycloid1})
+and hence the "shortest time curve", that is, the solution to the
+Brachistochrone problem, is a cycloid.
 
 \section{Other Path Minimization Problems}
-There are many path minimization problems we can solve with the 
+There are many path minimization problems we can solve with the
 Calculus of Variations. Here are a few examples (WIP).
 
 \subsection{Minimize the Distance (Pythagoras)}
-{\setstretch{1.5}
-In Section \ref{subsec:euler-lagrange} we saw that we can 
-solve for a differential distance $ds$ on some curve using 
-the Pythagorean Theorem; this is shown in Figure 
-\ref{fig:pythagorean_theorem}. Note that this approach 
-requires that we treat $\dfrac{dy}{dx}$ as a fraction 
-and as mentioned above, care needs to be taken when doing 
-this. That said, as we saw above \par}
+{\setstretch{1.5} In Section \ref{subsec:euler-lagrange} we saw
+that we can solve for a differential distance $ds$ on some curve
+using the Pythagorean Theorem; this is shown in Figure
+\ref{fig:pythagorean_theorem}. Note that this approach requires
+that we treat $\dfrac{dy}{dx}$ as a fraction and as mentioned
+above, care needs to be taken when doing this. That said, as we
+saw above \par}
 
 
 
@@ -1035,24 +1051,23 @@ I[y]
 
 \medskip
 \subsection{Minimize the Energy (Catenary Problem)}
-The Catenary Problem \cite{wiki:catenary} (also known as
-the hanging chain problem) considers the shape of a 
-chain hanging from two stationary points where the only force
-acting on the chain is gravity. In the problem setup $\rho$ 
-is the density of the chain, $g$ is the acceleration of gravity, 
-and $A$ is the constant cross sectional area of the chain. 
-Note that since the units of 
-$\rho$ are $\frac{\text{mass}}{\text{volume}}$ and  
+The Catenary Problem \cite{wiki:catenary} (also known as the
+hanging chain problem) considers the shape of a chain hanging
+from two stationary points where the only force acting on the
+chain is gravity. In the problem setup $\rho$ is the density of
+the chain, $g$ is the acceleration of gravity, and $A$ is the
+constant cross sectional area of the chain.  Note that since the
+units of $\rho$ are $\frac{\text{mass}}{\text{volume}}$ and
 ${\displaystyle \lim_{ds \to 0} \text{Volume} = \text{Area}}$,
-$\rho A = m$  for a differential piece of the chain of 
-length $ds$.
+$\rho A = m$ for a differential piece of the chain of length
+$ds$.
 
 
 \bigskip
 \noindent
-In the Catenary Problem the chain is assumed to be
-stationary so the kinetic energy is zero. So the total energy is
-the just potential energy $mgy$. So here $I[y]$ is
+In the Catenary Problem the chain is assumed to be stationary so
+the kinetic energy is zero. So the total energy is the just
+potential energy $mgy$. So here $I[y]$ is
 
 
 \bigskip
@@ -1090,10 +1105,13 @@ L \equiv T - V
 \noindent
 where $T$ is an object's kinetic energy and $V$ 
 is its potential energy. 
-
-
+%
+%
+%
 \section{Conclusions}
-
+%
+%
+%
 \section*{Acknowledgements}
 %
 %	LaTeX source on overleaf.com
