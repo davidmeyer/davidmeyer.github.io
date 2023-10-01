@@ -814,7 +814,7 @@ chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 		&\hspace{0em} \mathrel{\#} \text{let $u = x(t)$; this implies that
 		                                 $\dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$
 		                                 \& 
-		                                 $\dfrac{du}{dx} = 1$} \\
+		                                 $\dfrac{du}{dx} = \dfrac{dx}{du} = 1$} \\
 [10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
 		&\hspace{0em} \mathrel{\#} \text{by the chain rule: 
@@ -826,12 +826,12 @@ chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 							             \dfrac{dV}{dt} = \left [ \dfrac{dV}{du} \right ] \dot{x}$} \\
 [10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
-		&\hspace{0em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{dx} = 
-									     \dfrac{dV}{du} \dfrac{du}{dx}$ 
+		&\hspace{0em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{du} = 
+									     \dfrac{dV}{dx} \dfrac{dx}{du}$ 
 										 \& 
-										 $\dfrac{du}{dx} = 1
+										 $\dfrac{dx}{du} = 1
 										 \, \Rightarrow
-										 \dfrac{dV}{dx} = \dfrac{dV}{du}$}\\
+										 \dfrac{dV}{du} = \dfrac{dV}{dx}$}\\
 [10pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
 		&\hspace{0em} \mathrel{\#} \text{since $u = x(t)$} \\
