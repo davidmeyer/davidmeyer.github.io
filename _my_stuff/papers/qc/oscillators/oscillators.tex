@@ -2,7 +2,7 @@
 %
 %   get various packages
 %
-\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\usepackage[margin=0.75in]{geometry}                                     % adjust margins
 \geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{setspace}                                                   % need this for \setstrech{...}
@@ -786,9 +786,10 @@ energy of the particle is conserved.
 \noindent
 {\bf Proof.} To show that the total energy of the particle is
 conserved we want to show that a particle's total energy does 
-not change with time, that is, we want to show that $\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$.
-Computing this derivative requires some machinery from both the 
-chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
+not change with time, that is, we want to show that 
+$\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$. Computing this derivative 
+requires some machinery from the chain, power, and product 
+rules \cite{wiki:chain_rule,wiki:power_rule}:
 \par}
 \smallskip
 %
@@ -798,20 +799,20 @@ chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 \begin{array}{llll}
 \dfrac{d}{dt} E(x(t),\dot{x}(t))
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
-		&\hspace{0em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
+		&\hspace{1em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
 		                                 (Equation (\ref{eqn:E(x,v)}))} \\	
 [15pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
-		&\hspace{0em} \mathrel{\#} \text{since derivative is a linear 
+		&\hspace{1em} \mathrel{\#} \text{since derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
-		&\hspace{0em} \mathrel{\#} \text{by the chain and product rules: $\dfrac{d}{dt} 
+		&\hspace{1em} \mathrel{\#} \text{by the power and product rules: $\dfrac{d}{dt} 
 										\left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
 										 m\dot{x}(t)\ddot{x}(t)$}\\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)
-		&\hspace{0em} \mathrel{\#} \text{$\underbrace{\dfrac{dV}{dt} = 
+		&\hspace{1em} \mathrel{\#} \text{$\underbrace{\dfrac{dV}{dt} = 
 									     \dfrac{dV}{dx} \dfrac{dx}{dt} 
 										 \; \& \;
 										 \dfrac{dx}{dt} = \dot{x}}_{\text{chain and product rules}}
@@ -820,19 +821,19 @@ chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 										 \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)$} \\
 [15pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
-		&\hspace{0em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
 [15pt]
 &=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
-		&\hspace{0em} \mathrel{\#} \text{since $\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		&\hspace{1em} \mathrel{\#} \text{since $\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
 [15pt]
 &=& \dot{x}(t) \cdot 0
-		&\hspace{0em} \mathrel{\#} \text{by Newton's $2^{\text{nd}}$ Law: 
+		&\hspace{1em} \mathrel{\#} \text{by Newton's $2^{\text{nd}}$ Law: 
 		                                 $F(x(t)) = m\ddot{x} \Rightarrow m 
 		                                 \ddot{x}(t) - F(x(t)) = 0$} \\
 [15pt]
 &=& 0
-		&\hspace{0em} \mathrel{\#} \dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0 
+		&\hspace{1em} \mathrel{\#} \dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0 
 \end{array}
 \end{equation*}
 
