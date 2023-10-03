@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  1 OCT 2023 12:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  3 OCT 2023 06:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1439,34 +1439,33 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
 [5]
-Overfull \hbox (49.90318pt too wide) detected at line 850
+Overfull \hbox (53.17531pt too wide) detected at line 837
 []
  []
 
 [6] [7] [8] [9]
-Overfull \hbox (44.57487pt too wide) detected at line 1273
+Overfull \hbox (44.57487pt too wide) detected at line 1260
 []
  []
 
 
-Overfull \hbox (16.58653pt too wide) detected at line 1305
+Overfull \hbox (16.58653pt too wide) detected at line 1292
 []
  []
 
 [10] [11] [12] [13]
-<images/damped_harmonic_oscillator.png, id=371, 501.875pt x 430.60875pt>
+<images/damped_harmonic_oscillator.png, id=372, 501.875pt x 430.60875pt>
 File: images/damped_harmonic_oscillator.png Graphic file (type png)
 <use images/damped_harmonic_oscillator.png>
 Package pdftex.def Info: images/damped_harmonic_oscillator.png  used on input l
-ine 1680.
+ine 1667.
 (pdftex.def)             Requested size: 225.84166pt x 193.77214pt.
- [14] [15 <./images/damped_harmonic_oscillator.png>]
-[16]
-Overfull \hbox (51.33952pt too wide) detected at line 1891
+ [14 <./images/damped_harmonic_oscillator.png>] [15]
+Overfull \hbox (51.33952pt too wide) detected at line 1878
 []
  []
 
-[17] (./oscillators.bbl
+[16] (./oscillators.bbl [17]
 Underfull \hbox (badness 10000) in paragraph at lines 10--16
 []\OT1/cmr/m/n/10 Arthur Mat-tuck.  RLC Cir-cuits.  []$\OT1/cmtt/m/n/10 https :
  / / ocw . mit . edu / courses / mathematics /
@@ -1490,18 +1489,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--62
 -[]law-[]of-[]thermal-[]radiation-[]definition$[]\OT1/cmr/m/n/10 ,
  []
 
-[18] [19]) [20] (./oscillators.aux)
+[18]) [19] (./oscillators.aux)
 Package rerunfilecheck Info: File `oscillators.out' has not changed.
 (rerunfilecheck)             Checksum: 84D855AEA5E072F9A628684E52B5FDD8;3469.
  ) 
 Here is how much of TeX's memory you used:
- 54275 strings out of 478994
- 1363664 string characters out of 5858184
- 2065101 words of memory out of 5000000
+ 54274 strings out of 478994
+ 1363657 string characters out of 5858184
+ 2064100 words of memory out of 5000000
  70836 multiletter control sequences out of 15000+600000
  421010 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,15n,131p,729b,2252s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,18n,131p,729b,2252s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></
@@ -1531,10 +1530,10 @@ s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on oscillators.pdf (20 pages, 414545 bytes).
+Output written on oscillators.pdf (19 pages, 414509 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 510 compressed objects within 6 object streams
- 117 named destinations out of 1000 (max. 500000)
+ 615 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 116 named destinations out of 1000 (max. 500000)
  150 words of extra memory for PDF output out of 10000 (max. 10000000)
 

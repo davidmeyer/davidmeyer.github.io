@@ -239,7 +239,7 @@ in Figure \ref{fig:spring_and_mass_system}.
                  pre length=3mm,
                  post length=3mm},
              decorate] (0,0.40) -- (5.75,0.40);
-        \fill (0.00,0.40) circle(0.05);                                 % draw a dot connecting the spring to the vertical support
+        \fill (0.00,0.40) circle(0.05);                                 						% draw a dot connecting the spring to the vertical support
  %      
  %      draw the first mass
  %
@@ -800,52 +800,39 @@ chain and power rules \cite{wiki:chain_rule,wiki:power_rule}:
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
 		&\hspace{0em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
 		                                 (Equation (\ref{eqn:E(x,v)}))} \\	
-[10pt]
+[15pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
 		&\hspace{0em} \mathrel{\#} \text{since derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
-[10pt]
+[15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
-		&\hspace{0em} \mathrel{\#} \text{by the chain \& power rules:
-										 $\dfrac{d}{dt} \left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
-										 m\dot{x}(t)\ddot{x}(t)$} \\
-[10pt]
-&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
-		&\hspace{0em} \mathrel{\#} \text{let $u = x(t)$; this implies that
-		                                 $\dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$
-		                                 \& 
-		                                 $\dfrac{du}{dx} = \dfrac{dx}{du} = 1$} \\
-[10pt]
-&=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
-		&\hspace{0em} \mathrel{\#} \text{by the chain rule: 
-								         $\dfrac{dV}{dt} = 
-					                     \dfrac{dV}{du} \dfrac{du}{dt}$
-					                     \&
-							             $\dfrac{du}{dt} = \dot{x} 
-							             \Rightarrow 
-							             \dfrac{dV}{dt} = \left [ \dfrac{dV}{du} \right ] \dot{x}$} \\
-[10pt]
-&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
-		&\hspace{0em} \mathrel{\#} \text{by the chain rule: $\dfrac{dV}{du} = 
-									     \dfrac{dV}{dx} \dfrac{dx}{du}$ 
-										 \& 
-										 $\dfrac{dx}{du} = 1
+		&\hspace{0em} \mathrel{\#} \text{by the chain and product rules: $\dfrac{d}{dt} 
+										\left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
+										 m\dot{x}(t)\ddot{x}(t)$}\\
+[15pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)
+		&\hspace{0em} \mathrel{\#} \text{$\underbrace{\dfrac{dV}{dt} = 
+									     \dfrac{dV}{dx} \dfrac{dx}{dt} 
+										 \; \& \;
+										 \dfrac{dx}{dt} = \dot{x}}_{\text{chain and product rules}}
 										 \, \Rightarrow
-										 \dfrac{dV}{du} = \dfrac{dV}{dx}$}\\
-[10pt]
-&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
-		&\hspace{0em} \mathrel{\#} \text{since $u = x(t)$} \\
-[10pt]
+										 \dfrac{d}{dt} V (x(t)) = 
+										 \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)$} \\
+[15pt]
 &=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
 		&\hspace{0em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
-[10pt]
+[15pt]
 &=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
 		&\hspace{0em} \mathrel{\#} \text{since $\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
-[14.5pt]
+[15pt]
+&=& \dot{x}(t) \cdot 0
+		&\hspace{0em} \mathrel{\#} \text{by Newton's $2^{\text{nd}}$ Law: 
+		                                 $F(x(t)) = m\ddot{x} \Rightarrow m 
+		                                 \ddot{x}(t) - F(x(t)) = 0$} \\
+[15pt]
 &=& 0
-		&\hspace{0em} \mathrel{\#} \text{by Newton's Second Law: 
-		                                 $m \ddot{x}(t) - F(x(t)) = 0$}
+		&\hspace{0em} \mathrel{\#} \dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0 
 \end{array}
 \end{equation*}
 
