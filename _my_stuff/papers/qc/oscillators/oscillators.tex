@@ -800,20 +800,20 @@ power rules \cite{wiki:chain_rule,wiki:power_rule}:
 \begin{array}{llll}
 \dfrac{d}{dt} E(x(t),\dot{x}(t))
 &=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m{(\dot{x}(t))}^{2} + V(x(t)) \bigg ]	
-		&\hspace{2em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
+		&\hspace{0em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
 		                                 (Equation (\ref{eqn:E(x,v)}))} \\	
 [15pt]
 &=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m{(\dot{x}(t))}^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
-		&\hspace{2em} \mathrel{\#} \text{since derivative is a linear 
+		&\hspace{0em} \mathrel{\#} \text{since derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
-		&\hspace{2em} \mathrel{\#} \text{by the power and chain rules: $\dfrac{d}{dt} 
+		&\hspace{0em} \mathrel{\#} \text{by the power and chain rules: $\dfrac{d}{dt} 
 										\left [  \dfrac{1}{2}m{(\dot{x}(t))}^{2} \right ] = 
 										 m\dot{x}(t)\ddot{x}(t)$}\\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)
-		&\hspace{2em} \mathrel{\#} \text{$\underbrace{\dfrac{dV}{dt} = 
+		&\hspace{0em} \mathrel{\#} \text{$\underbrace{\dfrac{dV}{dt} = 
 									     \dfrac{dV}{dx} \dfrac{dx}{dt} 
 										 \; \& \;
 										 \dfrac{dx}{dt} = \dot{x}}_{\text{chain rule}}
@@ -822,18 +822,18 @@ power rules \cite{wiki:chain_rule,wiki:power_rule}:
 										 \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)$} \\
 [15pt]
 &=& \dot{x}(t) \cdot \left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
-		&\hspace{2em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+		&\hspace{0em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
 [15pt]
 &=& \dot{x}(t) \cdot \Big [m \ddot{x}(t) - F(x(t)) \Big ]
-		&\hspace{2em} \mathrel{\#} \text{since $\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		&\hspace{0em} \mathrel{\#} \text{since $\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
 [15pt]
 &=& \dot{x}(t) \cdot 0
-		&\hspace{2em} \mathrel{\#} \text{by Newton's $2^{\text{nd}}$ Law: 
+		&\hspace{0em} \mathrel{\#} \text{by Newton's $2^{\text{nd}}$ Law: 
 		                                 $F = m\ddot{x} \Rightarrow m\ddot{x} - F = 0$} \\
 [15pt]
 &=& 0
-		&\hspace{2em} \mathrel{\#} \dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0 
+		&\hspace{0em} \mathrel{\#} \dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0 
 \end{array}
 \end{equation*}
 
