@@ -782,7 +782,7 @@ in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E(x,v)}). Then the total
 energy of the particle is conserved.
 
 \medskip
-{\setstretch{1.35}
+{\setstretch{1.55}
 \noindent
 {\bf Proof.} To show that the total energy of the particle is
 conserved we want to show that a particle's total energy does 
@@ -798,17 +798,17 @@ rules \cite{wiki:chain_rule,wiki:power_rule}:
 \begin{equation*}
 \begin{array}{llll}
 \dfrac{d}{dt} E(x(t),\dot{x}(t))
-&=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]	
+&=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m{(\dot{x}(t))}^{2} + V(x(t)) \bigg ]	
 		&\hspace{1em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
 		                                 (Equation (\ref{eqn:E(x,v)}))} \\	
 [15pt]
-&=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
+&=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m{(\dot{x}(t))}^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
 		&\hspace{1em} \mathrel{\#} \text{since derivative is a linear 
 		                                 operator \cite{wiki:linearity_of_differentiation}} \\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
 		&\hspace{1em} \mathrel{\#} \text{by the power and chain rules: $\dfrac{d}{dt} 
-										\left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
+										\left [  \dfrac{1}{2}m{(\dot{x}(t))}^{2} \right ] = 
 										 m\dot{x}(t)\ddot{x}(t)$}\\
 [15pt]
 &=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)
@@ -820,17 +820,16 @@ rules \cite{wiki:chain_rule,wiki:power_rule}:
 										 \dfrac{d}{dt} V (x(t)) = 
 										 \left [ \dfrac{d}{dx} V(x(t)) \right ] \dot{x}(t)$} \\
 [15pt]
-&=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
+&=& \dot{x}(t) \cdot \left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
 		&\hspace{1em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
 [15pt]
-&=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
+&=& \dot{x}(t) \cdot \Big [m \ddot{x}(t) - F(x(t)) \Big ]
 		&\hspace{1em} \mathrel{\#} \text{since $\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
 		                                 (Equation (\ref{eqn:F}))} \\
 [15pt]
 &=& \dot{x}(t) \cdot 0
 		&\hspace{1em} \mathrel{\#} \text{by Newton's $2^{\text{nd}}$ Law: 
-		                                 $F(x(t)) = m\ddot{x} \Rightarrow m 
-		                                 \ddot{x}(t) - F(x(t)) = 0$} \\
+		                                 $F = m\ddot{x} \Rightarrow m\ddot{x} - F = 0$} \\
 [15pt]
 &=& 0
 		&\hspace{1em} \mathrel{\#} \dfrac{d}{dt} E(x(t),\dot{x}(t)) = 0 
