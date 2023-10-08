@@ -1,7 +1,7 @@
 \documentclass{article}
 %
 %
-%	LaTeX template
+%	pt.tex -- draw Pascal's triangle
 %
 %	David Meyer
 %	dmm613@gmail.com
@@ -135,6 +135,34 @@
 %
 \section{Introduction}
 \label{sec:introduction}
+
+%
+%
+%	Parameters
+%
+%
+\def \nrows{7}																			% number of rows in the triangle
+\pgfmathtruncatemacro{\rows}{\nrows + 1}												% we count from zero
+%																						%
+%	Draw the picture, wrapped in a figure												% draw the picture, wrapped in a figure
+%																						%
+\begin{figure}[H]																		% build the figure
+  \centering																			% center everything
+  \resizebox{0.50 \textwidth}{!} {														% resize figure if you want
+    \fbox {																				% put a box around the figure
+       \begin{tikzpicture}[rotate=-90]                          						% draw the triangle
+         \foreach \x in {0,1,...,\nrows} {												% loop over the rows
+            \foreach \y in {0,...,\x} {													% loop over the columns
+               \pgfmathsetmacro \binom{factorial(\x)/(factorial(\y)*factorial(\x-\y))}  % calculate the value
+               \pgfmathsetmacro \shift{\x/2}                                            %
+               \node[xshift=-\shift cm] at (\x,\y) {\pgfmathprintnumber \binom};        % draw the node here
+            }                                                                           % \end \foreach \x
+         }																				% \end \foreach \y
+       \end{tikzpicture}																%
+    }																					% end \fbox
+  }																						% end \resizebox
+\caption{Pascal's triangle with $\rows$ rows}											% \caption
+\end{figure}																			% \end \figure
 %
 %
 %	show a derivation/proof
@@ -142,7 +170,7 @@
 % \begin{equation*}
 % \begin{array}{llll}
 % x
-% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
+% &=& y				&\qquad \mathrel{\#} \text{comment or} \\
 % &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
 % [10pt]
 % \end{array}
@@ -199,11 +227,25 @@
 %
 \section{Acknowledgements}
 \label{sec:acknowledgements}
+
+\begin{verbatim}
+From @psu_13@mathstodon.xyz: @dmm you are probably overflowing LaTeX's 
+poor macro engine...which was never built to do this kind of heavy lifting.
+
+if you make a small file with just this in it
+
+\tikzmath{
+    \x1 = factorial(8)/(factorial(7)*factorial(8-7));
+}
+
+you get an arithmetic overflow error when you run TeX.
+\end{verbatim}
+
 %
 %	LaTeX source on overleaf.com
 %
 \section*{\LaTeX \hspace{0.025 mm} Source}
-\url{https://www.overleaf.com/read/jyppzhgdtrvg}
+% \url{}
 %
 %	get a bibliography
 %
@@ -211,11 +253,7 @@
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
 \bibliographystyle{plain}
-\bibliography{qc,ml}
-%
-%
-%
-% \section*{Appendix A}
+\bibliography{qc}
 %
 %	done
 %

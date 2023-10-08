@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 JUL 2023 12:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 OCT 2023 13:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1476,7 +1476,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template.pdf (1 page, 61344 bytes).
+Output written on template.pdf (1 page, 61516 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
