@@ -13,7 +13,6 @@
     rel="noopener noreferrer">
 A Few Notes on Linear Algebra</a>
 <br>
-
 <li><a href="./vector_calculus.pdf" target="_blank" 
     rel="noopener noreferrer">
 A Few Notes on Vector Calculus</a>
@@ -75,9 +74,9 @@ the Laplace Transform</a>
 <li><a href="./density.pdf" target="_blank" rel="noopener noreferrer">Some notes on Density Operators, Expectation Values, and Matrix Shapes </a>
 <br>
 <li><a href="./bell.pdf" target="_blank" rel="noopener noreferrer">A Few Notes on Bell States, Superdense Coding, and
-Quantum Teleportation
+Quantum Teleportation</a>
 <br>
-<li><a href="./bloch_sphere.pdf" target="_blank" rel="noopener noreferrer">Notes on the Bloch Sphere
+<li><a href="./bloch_sphere.pdf" target="_blank" rel="noopener noreferrer">Notes on the Bloch Sphere</a>
 <br>
 <li><a href="./dual_beam_experiment.pdf" target="_blank" rel="noopener noreferrer">Notes on the Dual Beam Splitter Experiment </a>
 
