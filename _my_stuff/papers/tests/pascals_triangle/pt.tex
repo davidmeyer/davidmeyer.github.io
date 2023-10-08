@@ -135,14 +135,13 @@
 %
 \section{Introduction}
 \label{sec:introduction}
-
 %
 %
 %	Parameters
 %
 %
 \def \nrows{7}																			% number of rows in the triangle
-\pgfmathtruncatemacro{\rows}{\nrows + 1}												% we count from zero
+\pgfmathtruncatemacro \rows {\nrows + 1}												% we count from zero
 %																						%
 %	Draw the picture, wrapped in a figure												% draw the picture, wrapped in a figure
 %																						%
@@ -162,6 +161,7 @@
     }																					% end \fbox
   }																						% end \resizebox
 \caption{Pascal's triangle with $\rows$ rows}											% \caption
+\label{fig:pascals_triangle}															% \label{}
 \end{figure}																			% \end \figure
 %
 %
@@ -229,8 +229,10 @@
 \label{sec:acknowledgements}
 
 \begin{verbatim}
-From @psu_13@mathstodon.xyz: @dmm you are probably overflowing LaTeX's 
-poor macro engine...which was never built to do this kind of heavy lifting.
+From @psu_13@mathstodon.xyz: 
+
+@dmm you are probably overflowing LaTeX's poor macro engine... 
+which was never built to do this kind of heavy lifting.
 
 if you make a small file with just this in it
 
