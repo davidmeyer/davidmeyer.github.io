@@ -13,7 +13,7 @@
 <li><a href="./maxwells_equations.pdf" 
        target="_blank" 
        rel="noopener noreferrer">
-	A Few Notes on Maxwell's Equations<\a>
+	A Few Notes on Maxwell's Equations</a>
 <br>
 <li><a href="../qc//oscillators.pdf"
        target="_blank"
@@ -40,13 +40,13 @@
 	target="_blank"
 	rel="noopener noreferrer">
 	Some notes on Density Operators, Expectation Values, and
-       Matrix Shapes </a> 
+       Matrix Shapes</a> 
 <br>
 <li><a href="../qc/bell.pdf"
 	target="_blank"
 	rel="noopener noreferrer">
 	A Few Notes on Bell States, Superdense Coding, and Quantum
-       Teleportation<\a> 
+       Teleportation</a> 
 <br>
 <li><a href="../qc/bloch_sphere.pdf"
        target="_blank"
