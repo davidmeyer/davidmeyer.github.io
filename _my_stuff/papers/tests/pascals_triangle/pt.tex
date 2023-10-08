@@ -140,10 +140,10 @@
 %	Parameters
 %
 %	I started looking at this because the below code
-%	blows up when \nrows = 8.
+%	blows up when \nrows > 7.
 %
 %
-\def \nrows{7}																			% number of rows; this blows up at \nrows = 8
+\def \nrows{7}																			% number of rows; this blows up at \nrows > 7
 \pgfmathtruncatemacro \rows {\nrows + 1}												% we count from zero
 %																						%
 %	Draw the picture, wrapped in a figure												% draw the picture, wrapped in a figure
