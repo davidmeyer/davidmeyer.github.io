@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  8 OCT 2023 14:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 OCT 2023 06:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1465,7 +1465,7 @@ Package rerunfilecheck Info: File `pt.out' has not changed.
 Here is how much of TeX's memory you used:
  52843 strings out of 478994
  1332458 string characters out of 5858184
- 1960738 words of memory out of 5000000
+ 1960737 words of memory out of 5000000
  69529 multiletter control sequences out of 15000+600000
  411247 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1475,7 +1475,7 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pt.pdf (1 page, 67722 bytes).
+Output written on pt.pdf (1 page, 67731 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

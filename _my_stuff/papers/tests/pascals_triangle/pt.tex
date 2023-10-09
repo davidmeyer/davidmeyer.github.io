@@ -143,7 +143,7 @@
 %	blows up when \nrows > 7.
 %
 %
-\def \nrows{7}																			% number of rows; this blows up at \nrows > 7
+\def \nrows {7}																			% number of rows; this blows up at \nrows > 7
 \pgfmathtruncatemacro \rows {\nrows + 1}												% we count from zero
 %																						%
 %	Draw the picture, wrapped in a figure												% draw the picture, wrapped in a figure
@@ -155,8 +155,8 @@
        \begin{tikzpicture}[rotate=-90]                          						% draw the triangle
          \foreach \x in {0,1,...,\nrows} {												% loop over the rows
             \foreach \y in {0,...,\x} {													% loop over the columns
-               \pgfmathsetmacro \binom{factorial(\x)/(factorial(\y)*factorial(\x-\y))}  % calculate the value
-               \pgfmathsetmacro \shift{\x/2}                                            %
+               \pgfmathsetmacro \binom {factorial(\x)/(factorial(\y)*factorial(\x-\y))}	% calculate the value
+               \pgfmathsetmacro \shift {\x/2}                                          	%
                \node[xshift=-\shift cm] at (\x,\y) {\pgfmathprintnumber \binom};        % draw the node here
             }                                                                           % \end \foreach \x
          }																				% \end \foreach \y
