@@ -121,7 +121,7 @@
 %
 %	Title, author and date
 %
-\title{Pascal's Triangle Tests (this blows up when nrows = 8)}
+\title{Pascal's Triangle Tests: This blows up when $\backslash\text{nrows} > 7$}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -143,14 +143,14 @@
 %	blows up when \nrows > 7.
 %
 %
-\def \nrows {7}																			% number of rows; this blows up at \nrows > 7
+\def \nrows {7}																			% number of rows; this blows up when \nrows > 7
 \pgfmathtruncatemacro \rows {\nrows + 1}												% we count from zero
 %																						%
 %	Draw the picture, wrapped in a figure												% draw the picture, wrapped in a figure
 %																						%
 \begin{figure}[H]																		% build the figure
   \centering																			% center everything
-  \resizebox{0.55 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.50 \textwidth}{!} {														% resize figure if you want
     \fbox {																				% put a box around the figure
        \begin{tikzpicture}[rotate=-90]                          						% draw the triangle
          \foreach \x in {0,1,...,\nrows} {												% loop over the rows
@@ -228,6 +228,9 @@
 % \section{Conclusions}
 % \label{sec:conclusions}
 %
+%
+%
+\vspace{0.50 cm}
 %
 %
 \section{Acknowledgements}

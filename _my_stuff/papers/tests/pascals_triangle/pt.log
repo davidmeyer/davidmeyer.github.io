@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 OCT 2023 06:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  9 OCT 2023 08:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1463,22 +1463,24 @@ Package rerunfilecheck Info: File `pt.out' has not changed.
 (rerunfilecheck)             Checksum: DBA752A6E7BCED21528F40E124EF799D;226.
  ) 
 Here is how much of TeX's memory you used:
- 52843 strings out of 478994
- 1332458 string characters out of 5858184
- 1960737 words of memory out of 5000000
- 69529 multiletter control sequences out of 15000+600000
- 411247 words of font info for 60 fonts, out of 8000000 for 9000
+ 52871 strings out of 478994
+ 1332862 string characters out of 5858184
+ 1960743 words of memory out of 5000000
+ 69553 multiletter control sequences out of 15000+600000
+ 417032 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,11n,131p,742b,879s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pt.pdf (1 page, 67731 bytes).
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pt.pdf (1 page, 81703 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
