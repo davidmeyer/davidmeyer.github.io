@@ -251,11 +251,11 @@ you get an arithmetic overflow error when you run TeX.
 
 \bigskip
 \noindent
-Expanding on @psu\_13@mathstodon.xyz's example, 
+Expanding a bit on @psu\_13@mathstodon.xyz's example, 
 note that 
 
 \begin{verbatim}
-    \tikzmath {\x = factorial(8);} 
+    \tikzmath {factorial(8);} 
 \end{verbatim}
 
 \noindent
@@ -263,7 +263,7 @@ is enough to get LaTeX to throw an arithmetic overflow error,
 while 
 
 \begin{verbatim}
-    \tikzmath {\x = factorial(7);} 
+    \tikzmath {factorial(7);} 
 \end{verbatim}
 
 \noindent
