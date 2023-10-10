@@ -1,11 +1,15 @@
 \documentclass{article}
 %
 %
-%	pt.tex -- draw Pascal's triangle
+%	lua_pascals_triangle.tex
+%
+%	To process:
+%
+%	/Users/dmm/Library/TeXShop/Engines/Inactive/LuaTeX/LuaLaTeX.engine lua_pascals_triangle.tex
 %
 %	David Meyer
 %	dmm613@gmail.com
-%	08 Oct 2023
+%	10 Oct 2023
 %
 %
 %   get various packages
@@ -38,7 +42,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -51,6 +55,9 @@
 \usepackage{esvect}
 \usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
 \usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{luatex85,luamplib}
+\mplibnumbersystem{double}
+\mplibtextextlabel{enable}
 %
 %	Describe floating point parameters, \fpeval
 %
@@ -95,7 +102,6 @@
 %
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
-
 %
 %	The following code allows you to do
 %
@@ -121,7 +127,7 @@
 %
 %	Title, author and date
 %
-\title{Pascal's Triangle Tests: This blows up when $\backslash\text{nrows} > 7$}
+\title{Pascal's Triangle rendered with lualatex}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -136,38 +142,79 @@
 \section{Introduction}
 \label{sec:introduction}
 %
+%       Parameters
 %
-%	Parameters
+\def \nrows {14}
 %
-%	I started looking at this because the below code
-%	blows up when \nrows > 7.
+%       Build the figure
+%
+\begin{figure}[H]
+  \centering
+  \fbox {                                                                       % put a box around the figure
+  \resizebox{0.75 \textwidth}{!} {                                              % resize the figure if you want
+  \begin{mplibcode}                                                             % build Pascals_triangle
+     vardef Pascals_triangle(expr n, u, v) =                                    % define the function
+       save b, mid; numeric b[][], mid; clearxy;                                % variables
+       b[0][0] = b[1][0] = b[1][1] = 1;                                         % binomial that equal 1
+       label("1", origin); label("1", (-.5u, -v)); label("1", (.5u, -v));       % build the top of the triangle
+       for i = 2 upto n:                                                        % start at row 2
+          mid := i div 2;                                                       % calculate midpoint
+          x := -u*i/2; y := -i*v;                                               % calculate (x,y)
+          b[i][0] = 1; label("1", z); label("1", (-x, y));                      %             
+          for k = 1 upto mid:                                                   %
+              x := x + u;                                                       %
+              if (k < mid) or (odd i):                                          %
+                  b[i][k] = b[i-1][k-1] + b[i-1][k];                            %
+                  label(decimal b[i][k], z); label(decimal b[i][k], (-x, y));	%
+              else:                                                             %
+                  b[i][k] = 2b[i-1][k-1];                                       %
+                  label(decimal b[i][k], z);                                    %
+              fi                                                                %
+          endfor                                                                %
+       endfor                                                                   %
+     enddef;                                                                    %
+%                                                                               %
+%       Draw the triangle                                                       %
+%                                                                               %
+   beginfig(1);                                                                 % draw the triangle
+      Pascals_triangle(\nrows, 1.4cm, 1cm);                                     %
+   endfig;                                                                      %
+  \end{mplibcode}                                                               % end mplibcode
+  }                                                                             % end resizebox
+ }                                                                              % end fbox
+ \caption{Pascal's triangle renedered with lualatex (nrows = \nrows)}           % caption
+ \label{fig:pascals_triangle}                                                   % label
+\end{figure}                                                                    % end figure
 %
 %
-\def \nrows {7}                                                                         % number of rows; this blows up when \nrows > 7
-\pgfmathtruncatemacro \rows {\nrows + 1}                                                % we count from zero
-%                                                                                       %
-%       Draw the picture, wrapped in a figure                                           % draw the picture, wrapped in a figure
-%                                                                                       %
-\begin{figure}[H]                                                                       % build the figure
-  \centering                                                                            % center everything
-  \resizebox{0.50 \textwidth}{!} {                                                      % resize figure if you want
-    \fbox {                                                                             % put a box around the figure
-       \begin{tikzpicture}[rotate=-90]                                                  % draw the triangle
-         \foreach \x in {0,1,...,\nrows} {                                              % loop over the rows
-            \foreach \y in {0,...,\x} {                                                 % loop over the columns
-               \pgfmathsetmacro \binom {factorial(\x)/(factorial(\y)*factorial(\x-\y))}	% calculate the value
-               \pgfmathsetmacro \shift {\x/2}                                          	%
-               \node[xshift=-\shift cm] at (\x,\y) {\pgfmathprintnumber \binom};        % draw the node here
-            }                                                                           % \end \foreach \x
-         }                                                                              % \end \foreach \y
-       \end{tikzpicture}                                                                %
-    }                                                                                   % end \fbox
-  }                                                                                     % end \resizebox
-  \caption{Pascal's triangle with $\rows$ rows}                                         % \caption
-  \label{fig:pascals_triangle}                                                          % \label{}
-\end{figure}																			% \end \figure
-
-
+%
+% \begin{figure}[H]
+%   \centering
+%   \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
+%   \fbox {
+%     \begin{mplibcode}
+%       vardef Pascal_triangle(expr n, u, v) =
+%       save b; numeric b[][]; clearxy;
+%       b[0][0] = 1; b[0][1] = 0; label("1", origin);
+%       for i = 1 upto n:
+%         x := -u*i/2; y := -i*v;
+%         b[i][0] = 1; label("1", z);
+%         for k = 1 upto i:
+%             x := x + u;
+%             b[i][k] = b[i-1][k-1] + b[i-1][k]; label(decimal(b[i][k]), z);
+%         endfor b[i][i+1]=0;
+%       endfor
+%      enddef;
+% 
+% beginfig(1);
+%     Pascal_triangle(\nrows, 1.4cm, 1cm);
+% endfig;
+% \end{mplibcode}
+% }
+% }
+% \caption{Pascal's Triangle with nrows = \nrows}
+% \label{fig:pascals_triangle}
+% \end{figure}
 %
 %
 %	show a derivation/proof
@@ -175,7 +222,7 @@
 % \begin{equation*}
 % \begin{array}{llll}
 % x
-% &=& y				&\qquad \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
 % &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
 % [10pt]
 % \end{array}
@@ -225,64 +272,30 @@
 %
 %
 %
-% \section{Conclusions}
-% \label{sec:conclusions}
+\section{Conclusions}
+\label{sec:conclusions}
 %
-%
-%
-\vspace{0.50 cm}
 %
 %
 \section{Acknowledgements}
 \label{sec:acknowledgements}
-
-\begin{verbatim}
-From @psu_13@mathstodon.xyz: 
-
-@dmm you are probably overflowing LaTeX's poor macro engine... 
-which was never built to do this kind of heavy lifting.
-
-if you make a small file with just this in it
-
-\tikzmath{
-    \x1 = factorial(8)/(factorial(7)*factorial(8-7));
-}
-
-you get an arithmetic overflow error when you run TeX.
-\end{verbatim}
-
-\bigskip
-\noindent
-Expanding a bit on @psu\_13@mathstodon.xyz's example, 
-note that 
-
-\begin{verbatim}
-    \tikzmath {factorial(8);} 
-\end{verbatim}
-
-\noindent
-is enough to get LaTeX to throw an arithmetic overflow error,
-while 
-
-\begin{verbatim}
-    \tikzmath {factorial(7);} 
-\end{verbatim}
-
-\noindent
-does not throw an error.
 %
 %	LaTeX source on overleaf.com
 %
 \section*{\LaTeX \hspace{0.025 mm} Source}
-\url{https://www.overleaf.com/read/tgkjgjnjhfjm}
+% \url{}
 %
 %	get a bibliography
 %
 %	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
-% \bibliographystyle{plain}
-% \bibliography{qc,ml}
+\bibliographystyle{plain}
+\bibliography{qc,ml}
+%
+%
+%
+% \section*{Appendix A}
 %
 %	done
 %
