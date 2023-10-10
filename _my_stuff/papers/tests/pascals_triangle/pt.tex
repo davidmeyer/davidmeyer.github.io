@@ -248,6 +248,26 @@ if you make a small file with just this in it
 
 you get an arithmetic overflow error when you run TeX.
 \end{verbatim}
+
+\bigskip
+\noindent
+Expanding on @psu\_13@mathstodon.xyz's example, 
+note that 
+
+\begin{verbatim}
+    \tikzmath {\x = factorial(8);} 
+\end{verbatim}
+
+\noindent
+is enough to get LaTeX to throw an arithmetic overflow error,
+while 
+
+\begin{verbatim}
+    \tikzmath {\x = factorial(7);} 
+\end{verbatim}
+
+\noindent
+does not throw an error.
 %
 %	LaTeX source on overleaf.com
 %
