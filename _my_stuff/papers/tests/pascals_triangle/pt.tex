@@ -38,7 +38,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -49,8 +49,8 @@
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}													% use characters instead of numbers in enumerate
-\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 %
 %	Describe floating point parameters, \fpeval
 %
@@ -143,31 +143,29 @@
 %	blows up when \nrows > 7.
 %
 %
-\def \nrows {7}																			% number of rows; this blows up when \nrows > 7
-\pgfmathtruncatemacro \rows {\nrows + 1}												% we count from zero
-%																						%
-%	Draw the picture, wrapped in a figure												% draw the picture, wrapped in a figure
-%																						%
-\begin{figure}[H]																		% build the figure
-  \centering																			% center everything
-  \resizebox{0.50 \textwidth}{!} {														% resize figure if you want
-    \fbox {																				% put a box around the figure
-       \begin{tikzpicture}[rotate=-90]                          						% draw the triangle
-         \foreach \x in {0,1,...,\nrows} {												% loop over the rows
-            \foreach \y in {0,...,\x} {													% loop over the columns
+\def \nrows {7}                                                                         % number of rows; this blows up when \nrows > 7
+\pgfmathtruncatemacro \rows {\nrows + 1}                                                % we count from zero
+%                                                                                       %
+%       Draw the picture, wrapped in a figure                                           % draw the picture, wrapped in a figure
+%                                                                                       %
+\begin{figure}[H]                                                                       % build the figure
+  \centering                                                                            % center everything
+  \resizebox{0.50 \textwidth}{!} {                                                      % resize figure if you want
+    \fbox {                                                                             % put a box around the figure
+       \begin{tikzpicture}[rotate=-90]                                                  % draw the triangle
+         \foreach \x in {0,1,...,\nrows} {                                              % loop over the rows
+            \foreach \y in {0,...,\x} {                                                 % loop over the columns
                \pgfmathsetmacro \binom {factorial(\x)/(factorial(\y)*factorial(\x-\y))}	% calculate the value
                \pgfmathsetmacro \shift {\x/2}                                          	%
                \node[xshift=-\shift cm] at (\x,\y) {\pgfmathprintnumber \binom};        % draw the node here
             }                                                                           % \end \foreach \x
-         }																				% \end \foreach \y
-       \end{tikzpicture}																%
-    }																					% end \fbox
-  }																						% end \resizebox
-  \caption{Pascal's triangle with $\rows$ rows}											% \caption
-  \label{fig:pascals_triangle}															% \label{}
-\end{figure}																			% \end \figure
-
-
+         }                                                                              % \end \foreach \y
+       \end{tikzpicture}                                                                %
+    }                                                                                   % end \fbox
+  }                                                                                     % end \resizebox
+  \caption{Pascal's triangle with $\rows$ rows}                                         % \caption
+  \label{fig:pascals_triangle}                                                          % \label{}
+\end{figure}                                                                            % \end \figure
 %
 %
 %	show a derivation/proof
@@ -250,12 +248,11 @@ if you make a small file with just this in it
 
 you get an arithmetic overflow error when you run TeX.
 \end{verbatim}
-
 %
 %	LaTeX source on overleaf.com
 %
-% \section*{\LaTeX \hspace{0.025 mm} Source}
-% \url{}
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/tgkjgjnjhfjm}
 %
 %	get a bibliography
 %
