@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  10 OCT 2023 13:07
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 OCT 2023 07:00
  restricted system commands enabled.
  file:line:error style messages enabled.
 **lua_pascals_triangle.tex
@@ -1365,32 +1365,32 @@ eX's MPLib.
 (./lua_pascals_triangle.aux)
 \openout1 = lua_pascals_triangle.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 151.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-37.
+51.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1452,20 +1452,20 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 137.
+ on input line 151.
 
-LaTeX Info: Redefining \celsius on input line 137.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 137
+LaTeX Info: Redefining \celsius on input line 151.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 151
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 137.
-Package gensymb Info: Using \upOmega for \ohm on input line 137.
+LaTeX Info: Redefining \ohm on input line 151.
+Package gensymb Info: Using \upOmega for \ohm on input line 151.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 137.
+Package hyperref Info: Link coloring OFF on input line 151.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1478,9 +1478,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count365
 )
-LaTeX Info: Redefining \ref on input line 137.
-LaTeX Info: Redefining \pageref on input line 137.
-LaTeX Info: Redefining \nameref on input line 137.
+LaTeX Info: Redefining \ref on input line 151.
+LaTeX Info: Redefining \pageref on input line 151.
+LaTeX Info: Redefining \nameref on input line 151.
  (./lua_pascals_triangle.out) (./lua_pascals_triangle.out)
 \@outlinefile=\write4
 
@@ -1499,31 +1499,31 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137
+LaTeX Font Info:    Trying to load font information for U+msa on input line 151
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137
+LaTeX Font Info:    Trying to load font information for U+msb on input line 151
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
-7.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
+1.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-137.
+151.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Module luamplib Info: flushing figure 1 on input line 184
+Module luamplib Info: flushing figure 1 on input line 201
 
 No file lua_pascals_triangle.bbl.
 [1
@@ -1535,25 +1535,26 @@ Package rerunfilecheck Info: File `lua_pascals_triangle.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54437 strings out of 478531
+ 54441 strings out of 478531
  100000,2373549 words of node,token memory allocated
- 555 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 64 glue_spec,
- 8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:747,3:1089,4:26,5:96,6:25,7:1720,8:17,9:876,10:8,11:48
- 72569 multiletter control sequences out of 65536+600000
- 80 fonts using 6409823 bytes
- 131i,9n,128p,759b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
-</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
-tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.o
-tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
-r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-reg
-ular.otf>
-Output written on lua_pascals_triangle.pdf (1 page, 22245 bytes).
+ 551 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 64 glue_spec,
+ 7 attribute_list, 2 write nodes
+   avail lists: 1:1,2:771,3:1115,4:26,5:108,6:31,7:2028,8:51,9:880,10:8,11:65
+ 72573 multiletter control sequences out of 65536+600000
+ 81 fonts using 6535911 bytes
+ 131i,10n,128p,759b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
+f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
+f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
+.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold
+.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regu
+lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-r
+egular.otf>
+Output written on lua_pascals_triangle.pdf (1 page, 26117 bytes).
 
-PDF statistics: 68 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 131072)
  40 words of extra memory for PDF output out of 10000 (max. 100000000)
 
