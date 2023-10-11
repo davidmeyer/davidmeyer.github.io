@@ -52,7 +52,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -175,26 +175,26 @@ Triangle drawn with lualatex.
        b[0][0] = b[1][0] = b[1][1] = 1;                                         % binomial that equal 1
        label("1", origin); label("1", (-.5u, -v)); label("1", (.5u, -v));       % build the top of the triangle
        for i = 2 upto n:                                                        % start at row 2
-          mid := i div 2;                                                       % calculate midpoint
-          x := -u*i/2; y := -i*v;                                               % calculate (x,y)
-          b[i][0] = 1; label("1", z); label("1", (-x, y));                      %             
-          for k = 1 upto mid:                                                   % iterate over columns
-              x := x + u;                                                       %
-              if (k < mid) or (odd i):                                          %
+           mid := i div 2;                                                      % calculate midpoint
+           x := -u*i/2; y := -i*v;                                              % calculate (x,y)
+           b[i][0] = 1; label("1", z); label("1", (-x, y));                     %             
+           for k = 1 upto mid:                                                  % iterate over columns
+               x := x + u;                                                      %
+               if (k < mid) or (odd i):                                         %
                   b[i][k] = b[i-1][k-1] + b[i-1][k];                            %
-                  label(decimal b[i][k], z); label(decimal b[i][k], (-x, y));	%
-              else:                                                             %
+                  label(decimal b[i][k], z); label(decimal b[i][k], (-x, y));   %
+               else:                                                            %
                   b[i][k] = 2b[i-1][k-1];                                       %
                   label(decimal b[i][k], z);                                    %
-              fi                                                                %
-          endfor                                                                %
+               fi                                                               %
+           endfor                                                               %
        endfor                                                                   %
      enddef;                                                                    %
 %                                                                               %
 %       Draw the triangle                                                       %
 %                                                                               %
    beginfig(1);                                                                 % draw the triangle
-      Pascals_triangle(\nrows, 1.4cm, 1cm);                                     %
+      Pascals_triangle(\nrows, 1.5cm, 1.0cm);                                   %
    endfig;                                                                      %
   \end{mplibcode}                                                               % end mplibcode
   }                                                                             % end resizebox
@@ -202,36 +202,6 @@ Triangle drawn with lualatex.
  \caption{Pascal's Triangle renedered with lualatex (nrows = \nrows)}           % caption
  \label{fig:pascals_triangle}                                                   % label
 \end{figure}                                                                    % end figure
-%
-%
-%
-% \begin{figure}[H]
-%   \centering
-%   \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
-%   \fbox {
-%     \begin{mplibcode}
-%       vardef Pascal_triangle(expr n, u, v) =
-%       save b; numeric b[][]; clearxy;
-%       b[0][0] = 1; b[0][1] = 0; label("1", origin);
-%       for i = 1 upto n:
-%         x := -u*i/2; y := -i*v;
-%         b[i][0] = 1; label("1", z);
-%         for k = 1 upto i:
-%             x := x + u;
-%             b[i][k] = b[i-1][k-1] + b[i-1][k]; label(decimal(b[i][k]), z);
-%         endfor b[i][i+1]=0;
-%       endfor
-%      enddef;
-% 
-% beginfig(1);
-%     Pascal_triangle(\nrows, 1.4cm, 1cm);
-% endfig;
-% \end{mplibcode}
-% }
-% }
-% \caption{Pascal's Triangle with nrows = \nrows}
-% \label{fig:pascals_triangle}
-% \end{figure}
 %
 %
 %	show a derivation/proof
