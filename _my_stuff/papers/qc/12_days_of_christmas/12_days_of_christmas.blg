@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 12_days_of_christmas.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 5 entries,
+You've used 6 entries,
             2118 wiz_defined-function locations,
-            518 strings with 5022 characters,
-and the built_in function-call counts, 1105 in all, are:
-= -- 110
-> -- 35
+            523 strings with 5207 characters,
+and the built_in function-call counts, 1318 in all, are:
+= -- 131
+> -- 42
 < -- 0
-+ -- 15
-- -- 10
-* -- 32
-:= -- 194
-add.period$ -- 20
-call.type$ -- 5
-change.case$ -- 20
++ -- 18
+- -- 12
+* -- 37
+:= -- 230
+add.period$ -- 24
+call.type$ -- 6
+change.case$ -- 24
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 35
-empty$ -- 111
-format.name$ -- 10
-if$ -- 241
+cite$ -- 6
+duplicate$ -- 42
+empty$ -- 133
+format.name$ -- 12
+if$ -- 288
 int.to.chr$ -- 0
-int.to.str$ -- 5
+int.to.str$ -- 6
 missing$ -- 0
-newline$ -- 33
-num.names$ -- 10
-pop$ -- 40
+newline$ -- 39
+num.names$ -- 12
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 18
 quote$ -- 0
-skip$ -- 30
+skip$ -- 35
 stack$ -- 0
-substring$ -- 25
-swap$ -- 5
+substring$ -- 30
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 24
 warning$ -- 0
-while$ -- 10
-width$ -- 6
-write$ -- 62
+while$ -- 12
+width$ -- 7
+write$ -- 73

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 OCT 2023 12:15
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 OCT 2023 12:30
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1531,55 +1531,63 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 287.
 
 [2]
-<images/first_six_triangular_numbers.png, id=69, 441.65pt x 370.38374pt>
+<images/first_six_triangular_numbers.png, id=76, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
- line 321.
+ line 324.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=73, 691.58376pt x 558.085pt>
+<images/tetrahedral_numbers.png, id=80, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
-Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 337
+Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 340
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
-Module luamplib Info: flushing figure 1 on input line 382
+Module luamplib Info: flushing figure 1 on input line 385
  [3<./images/first_six_triangular_numbers.png><./images/tetrahedral_numbers.png>
-] (./12_days_of_christmas.bbl) [4] (./12_days_of_christmas.aux)
+] (./12_days_of_christmas.bbl
+Underfull \hbox (badness 4048) in paragraph at lines 4--9
+[]\TU/lmr/m/n/10 Math-lete’s Cor-ner.  Adding num-bers from 1 to 100.  []$\TU
+/lmtt/m/n/10 https://sites.google.com/site/
+ []
+
+[4]) [5] (./12_days_of_christmas.aux)
 Package rerunfilecheck Info: File `12_days_of_christmas.out' has not changed.
 (rerunfilecheck)             Checksum: AD4057B7AC49776F05ACF9DC027DCC6D;495.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54541 strings out of 478531
+ 54547 strings out of 478531
  100000,2373549 words of node,token memory allocated
- 681 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 32 attribute, 64 glue_spec
-, 32 attribute_list, 2 write, 5 pdf_action nodes
-   avail lists: 1:1,2:832,3:1264,4:76,5:318,6:42,7:4549,8:110,9:908,10:9,11:208
- 72641 multiletter control sequences out of 65536+600000
- 124 fonts using 9390191 bytes
- 131i,12n,128p,759b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 702 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 34 attribute, 64 glue_spec
+, 34 attribute_list, 2 write, 6 pdf_action nodes
+   avail lists: 1:1,2:867,3:1257,4:80,5:318,6:41,7:4737,8:112,9:923,10:9,11:234
+ 72644 multiletter control sequences out of 65536+600000
+ 126 fonts using 9653567 bytes
+ 131i,12n,128p,759b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
-f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.
-otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.
-otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-itali
-c.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-reg
-ular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-
-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-
-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman
-17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 12_days_of_christmas.pdf (4 pages, 195308 bytes).
+f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
+otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
+r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
+lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-b
+old.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-i
+talic.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10
+-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
+n12-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
+n12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
+oman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on 12_days_of_christmas.pdf (5 pages, 202619 bytes).
 
-PDF statistics: 180 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 131072)
+PDF statistics: 206 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
