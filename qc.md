@@ -83,6 +83,13 @@ Quantum Teleportation</a>
 
 <h2>Just for fun</h2>
 
+<li><a href="./12_days_of_christmas.pdf" target="_blank"
+    rel="noopener noreferrer">
+Cool math is hiding in the "12 Days of Christmas"
+</a>
+<br>
+
+
 <li><a href="./christmastime_is_christmas_math_time.pdf" target="_blank"
     rel="noopener noreferrer">
 Christmastime is Christmas Math Time!
@@ -146,7 +153,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 08.23.2023 by
+<i>Last Update: 10.11.2023 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
