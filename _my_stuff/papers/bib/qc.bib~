@@ -1,22 +1,4 @@
 
-@misc{wikipedia:roud_folk_song_index,
-    author		= "{Wikipedia Contributors}",
-    title		= "{Roud Folk Song Index --- {Wikipedia}{,} The Free Encyclopedia}",
-    year		= "2023",
-    howpublished	= "\url{https://en.wikipedia.org/w/index.php?title=Roud_Folk_Song_Index&oldid=1144309931}",
-    note		= "[Online; accessed 11-October-2023]"
-}
-
-
-@misc{wikipedia:frederic_austin,
-    author		= "{Wikipedia Contributors}",
-    title		= "{Frederic Austin --- {Wikipedia}{,} The Free Encyclopedia}",
-    year		= "2023",
-    howpublished	= "\url{https://en.wikipedia.org/w/index.php?title=Frederic_Austin&oldid=1172092956}",
-    note		= "[Online; accessed 11-October-2023]"
-  }
-
-
 @misc{wikipedia:twelve_days_of_christmas,
     author		= "{Wikipedia contributors}",
     title		= "{The Twelve Days of Christmas (song) --- {Wikipedia}{,} The Free Encyclopedia}",

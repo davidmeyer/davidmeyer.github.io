@@ -141,7 +141,7 @@
 %
 %	Title, author and date
 %
-\title{12 Days of Christmas}
+\title{Cool math hiding in ``The 12 Days of Christmas''}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -156,17 +156,19 @@
 \section{Introduction}
 \label{sec:introduction}
 The "The Twelve Days of Christmas" is an English Christmas
-carol. It is s classic example of a cumulative song, in which
-the lyrics detail
-a series of increasingly numerous gifts given to the speaker by
-their "true love" on each of the twelve days of Christmas (the
-twelve days that make up the Christmas season, starting with
-Christmas Day). The carol, whose words were first published in
-England in the late eighteenth century, has a Roud Folk Song
-Index number of 68. A large number of different melodies have
-been associated with the song, of which the best known is derived
-from a 1909 arrangement of a traditional folk melody by English
-composer Frederic Austin.
+carol. It is s classic example of a cumulative song, in which the
+lyrics detail a series of increasingly numerous gifts given to
+the speaker by their "true love" on each of the twelve days of
+Christmas (the twelve days that make up the Christmas season,
+starting with Christmas Day)
+\cite{wikipedia:cumulative_song}. The carol, whose words were
+first published in England in the late eighteenth century, has a
+Roud Folk Song Index number of 68
+\cite{wikipedia:roud_folk_song_index}. A large number of
+different melodies have been associated with the song, of which
+the best known is derived from a 1909 arrangement of a
+traditional folk melody by English composer Frederic Austin
+\cite{wikipedia:twelve_days_of_christmas}.
 
 \bigskip
 \noindent
@@ -175,7 +177,11 @@ each verse is built on top of the previous verses. There are
 twelve verses, each describing a gift given by "my true love" on
 one of the twelve days of Christmas. There are many variations in
 the lyrics. The lyrics given here are from Frederic Austin's 1909
-publication that established the current form of the carol.[3]
+publication that established the current form of the carol
+\cite{wikipedia:frederic_austin}.
+
+\bigskip
+\noindent
 The first three verses run, in full, as follows:
 
 \bigskip
@@ -221,7 +227,7 @@ Putting this all together we get
 
 \begin{center}
   \begin{table}[H]
-  \scalebox{0.95}{
+  \scalebox{1.00}{
     \begin{tabular}{|c|c|c|} 
       \hline
       {\large \bf Day} & {\large \bf Gifts received on day $\mathbf n$} 
@@ -260,31 +266,78 @@ Putting this all together we get
 
 
 \noindent
-Interestingly, the numbers in bold red in Table \ref{tab:12_days_of_christmas}, 
-the total number of gifts on day $n$, are known as the tetrahedral numbers. The 
-$n^{\text{th}}$ tetrahedral number, $T_{e_n}$, and is computed as follows:
+Interestingly, the numbers in bold red in Table
+\ref{tab:12_days_of_christmas}, the total number of gifts on day
+$n$, are known as the tetrahedral numbers. The $n^{\text{th}}$
+tetrahedral number, $T_{e_n}$, and is computed as follows:
 
 \bigskip
 \begin{equation}
-T_{e_n} = \sum\limits_{k=1}^{n} T_k = \dfrac{1}{6} n(n+1)(n+2) = \binom{n+2}{3}
+T_{e_n} = \sum\limits_{k=1}^{n} T_k = \frac{1}{6} n(n+1)(n+2) = \binom{n+2}{3}
 \label{eqn:tetrahedral_number}
 \end{equation}
 
 \bigskip
 \noindent
-where $T_{k}$ is the $k^{\text{th}}$ triangular number and ${\displaystyle \binom{n}{k}}$ 
-is a binomial coefficient.
+where $T_{k}$ is the $k^{\text{th}}$ triangular number 
+(see Equation (\ref{eqn:triangular_number})):
+
+\bigskip
+\begin{equation}
+T_{n}=\sum _{k=1}^{n}k=1+2+3+\dotsb + n = \frac {n(n+1)}{2} = {n+1 \choose 2}
+\label{eqn:triangular_number}
+\end{equation}
 
 \bigskip
 \noindent
-Also interestingly, the $4^{\text{th}}$ diagonal row of Pascal's triangle contains
-these tetrahedral numbers (Equation \ref{eqn:tetrahedral_number}, the total number 
-of gifts received on the $n^{\text{th}}$ day). This is 
-shown in Figure \ref{fig:lua_pascals_triangle}. The $3^{\text{rd}}$ diagonal
-row of Pascal's triangle contains the numbers we see in "Gifts received 
-on day $n$" column of Table \ref{tab:12_days_of_christmas}. Interesting...
+and ${\displaystyle \binom{n}{m}}$ 
+is the familiar binomial coefficient.
 
 
+\bigskip
+\noindent
+Also interestingly, the $4^{\text{th}}$ diagonal row of Pascal's
+triangle contains the tetrahedral numbers, $T_{e_n}$, that is,
+the $4^{\text{th}}$ diagonal row of Pascal's triangle contains
+the {\bf Running total at end of day n}. This is shown in Figure
+\ref{fig:lua_pascals_triangle}. The $3^{\text{rd}}$ diagonal row
+of Pascal's triangle contains the numbers we see in {\bf Gifts
+received on day n} column of Table
+\ref{tab:12_days_of_christmas}. These are the triangular numbers
+$T_n$ (Figure \ref{fig:lua_pascals_triangle}).
+
+\section{Geometric Interpretations}
+There are an interesting geometric interpretation of both
+triangular numbers and tetrahedral numbers. So first, what
+exactly is a triangular number?  The first six triangular numbers
+are depicted as triangles in Figure
+\ref{fig:triangular_numbers}. We can see from the figure that a
+triangular number $T_n$ is the sum of the integers from 1 to
+$n$. This is the number of gifts received on the $n^{\text{th}}$
+day of Christmas.
+  
+\bigskip
+\begin{figure}[H]
+  \center{\includegraphics[frame,scale=0.55] {images/first_six_triangular_numbers.png}}
+  \caption{The First Six Triangular Numbers \cite{wiki:triangle_numbers}}
+  \label{fig:triangular_numbers}
+\end{figure}
+
+
+\vspace{2.5em}
+\noindent
+Next, what are the tetrahedral numbers? As we saw in Equation
+(\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
+number is the sum of the first $n$ triangular numbers. The 
+$n^{\text{th}}$ tetrahedral is the number of gifts received up 
+to and including day $n^{\text{th}}$ day of Christmas.
+
+\vspace{2.5em}
+\begin{figure}[H]
+  \center{\includegraphics[frame,scale=0.35] {images/tetrahedral_numbers.png}}
+  \caption{The Tetrahedral Numbers}
+  \label{fig:tetrahedral_numbers}
+\end{figure}
 
 %
 %       Parameters
@@ -406,7 +459,7 @@ on day $n$" column of Table \ref{tab:12_days_of_christmas}. Interesting...
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
 \bibliographystyle{plain}
-\bibliography{qc,ml}
+\bibliography{qc}
 %
 %
 %
