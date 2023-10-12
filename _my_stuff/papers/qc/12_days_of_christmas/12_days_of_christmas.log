@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 OCT 2023 11:27
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 OCT 2023 12:10
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1553,14 +1553,13 @@ File: images/tetrahedral_numbers.png Graphic file (type png)
 Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 440
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
- (./12_days_of_christmas.bbl [4<./images/first_six_triangular_numbers.png><./ima
-ges/tetrahedral_numbers.png>]
+ (./12_days_of_christmas.bbl
 Underfull \hbox (badness 4048) in paragraph at lines 10--15
 []\TU/lmr/m/n/10 Math-lete’s Cor-ner.  Adding num-bers from 1 to 100.  []$\TU
 /lmtt/m/n/10 https://sites.google.com/site/
  []
 
-) [5] (./12_days_of_christmas.aux)
+[4<./images/first_six_triangular_numbers.png><./images/tetrahedral_numbers.png>]) [5] (./12_days_of_christmas.aux)
 Package rerunfilecheck Info: File `12_days_of_christmas.out' has not changed.
 (rerunfilecheck)             Checksum: 42FF71E314D80CA4BFF8A0FC87EF1F86;866.
 )
@@ -1571,11 +1570,11 @@ Here is how much of LuaTeX's memory you used:
  820 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 62 attribute, 64 glue_spec
 , 62 attribute_list, 2 write, 7 pdf_action nodes
-   avail lists: 1:1,2:900,3:1077,4:130,5:348,6:42,7:4905,8:114,9:1095,10:10,11:2
-61
+   avail lists: 1:1,2:900,3:1077,4:130,5:348,6:42,7:4905,8:111,9:1094,10:10,11:2
+63
  72649 multiletter control sequences out of 65536+600000
  126 fonts using 9653567 bytes
- 131i,12n,128p,759b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 131i,12n,128p,759b,872s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
@@ -1597,7 +1596,7 @@ b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 12_days_of_christmas.pdf (5 pages, 234857 bytes).
+Output written on 12_days_of_christmas.pdf (5 pages, 234988 bytes).
 
 PDF statistics: 234 PDF objects out of 1000 (max. 8388607)
  180 compressed objects within 2 object streams
