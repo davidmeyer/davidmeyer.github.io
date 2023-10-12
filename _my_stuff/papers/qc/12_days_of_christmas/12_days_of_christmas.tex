@@ -169,10 +169,10 @@ are.
 \bigskip
 \noindent
 The carol, whose words were apparently first published in England
-in the late eighteenth century, has a Roud Folk Song Index number
-of 68 \cite{wikipedia:roud_folk_song_index}. A large number of
-different melodies have been associated with the song, of which
-the best known is derived from a 1909 arrangement of a
+in the late $18^{\text{th}}$ century have a Roud Folk Song Index
+number of 68 \cite{wikipedia:roud_folk_song_index}. A large
+number of different melodies have been associated with the song,
+of which the best known is derived from a 1909 arrangement of a
 traditional folk melody by English composer Frederic Austin
 \cite{wikipedia:twelve_days_of_christmas}. There are twelve
 verses, each describing a gift given by "my true love" on one of
@@ -288,15 +288,15 @@ where ${\displaystyle \binom{n}{m}}$ is the familiar binomial
 coefficient\footnote{The great mathematician Carl Friedrich Gauss
 is said to have discovered the consecutive integer formula
 (Equation (\ref{eqn:triangular_number})) while still at primary
-school \cite{add_1_to_100}.}. For example, $T_{12} = 
-\sum\limits_{k=1}^{12} k = \frac{12 \cdot 13}{2} = {13 \choose 2} = 
-\mathbf{\color{blue} 78}$.
+school \cite{add_1_to_100}.}. For example, $T_{12} =
+\sum\limits_{k=1}^{12} k = \frac{12 \cdot 13}{2} = {13 \choose 2}
+= \mathbf{\color{blue} 78}$.
 
 \bigskip
 \noindent
 So how many total gifts have been received by day {\bf n}? These
-numbers are shown in red in Table
-\ref{tab:12_days_of_christmas}. These numbers are known as
+numbers are shown in red in
+Table \ref{tab:12_days_of_christmas}. These numbers are known as
 tetrahedral numbers. The $n^{\text{th}}$ tetrahedral number,
 $T_{e_n}$, is defined as follows:
 
@@ -318,6 +318,36 @@ It turns out that the total number of gifts received is
 $T_{e_{12}} = \sum\limits_{k=1}^{12} T_k = \frac{12 \cdot 13 
 \cdot 14}{6} = \binom{14}{3} = \mathbf{\color{red}{364}}$.
 
+\noindent
+A number can be both triangular and tetrahedral. 
+These numbers satisfy the following equation:
+
+
+\bigskip
+\begin{equation}
+T_{n} = \binom{n+1}{2} = \binom{m+2}{3} = T_{e_m}
+\label{eqn:triangular_and_tetrahedral}
+\end{equation}
+
+\bigskip
+\noindent
+The only numbers that satisfy Equation 
+(\ref{eqn:triangular_and_tetrahedral})
+are \cite{A027568}:
+
+\medskip
+\begin{equation*}
+\begin{array}{llllll}
+T_{e_1}    \; = T_{1}   \;\; = \; 1 \\
+T_{e_3}    \; = T_{4}   \;\; = \; 10 \\
+T_{e_8}    \; = T_{15}    \; = \; 120 \\
+T_{e_{20}}    = T_{55}    \; = \; 1540 \\
+T_{e_{34}}    = T_{119}      = \; 7140 
+\end{array}
+\end{equation*}
+
+
+\bigskip
 \noindent
 Also interesting is the connection to Pascal's triangle
 \cite{wiki:pascals_triangle}.  Specifically, the $4^{\text{th}}$
@@ -390,7 +420,7 @@ This is also the number of gifts received on the $n^{\text{th}}$
 day of Christmas according to the "12 Days of Christmas".
   
 \vspace{1.0em}
-\begin{figure}[H]
+\begin{figure}[t]
   \center{\includegraphics[frame,scale=0.40] {images/first_six_triangular_numbers.png}}
   \caption{The First Six Triangular Numbers}
   \label{fig:triangular_numbers}

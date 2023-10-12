@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{wolfram:tetrahedral_numbers}
+{Eric W. Weisstein}.
+\newblock {Tetrahedral Number}.
+\newblock \url{https://mathworld.wolfram.com/TetrahedralNumber.html}, 2023.
+\newblock [Online; accessed 12-October-2023].
+
 \bibitem{add_1_to_100}
 {Mathlete's Corner}.
 \newblock {Adding numbers from 1 to 100}.
@@ -7,10 +13,10 @@
   \url{https://sites.google.com/site/funproblemsolving/topics-1/adding-numbers-from-1-to-100}.
 \newblock [Online; accessed 20-August-2021].
 
-\bibitem{wolfram:tetrahedral_numbers}
-{Tetrahedral Number}.
-\newblock {Eric W. Weisstein}.
-\newblock \url{https://mathworld.wolfram.com/TetrahedralNumber.html}, 2023.
+\bibitem{A027568}
+{OEIS}.
+\newblock {Numbers that are both triangular and tetrahedral}.
+\newblock \url{https://oeis.org/A027568}, 2023.
 \newblock [Online; accessed 12-October-2023].
 
 \bibitem{wiki:pascals_triangle}
