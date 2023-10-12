@@ -155,28 +155,30 @@
 %
 \section{Introduction}
 \label{sec:introduction}
-The "The Twelve Days of Christmas" is a classic English Christmas
-carol. It is an example of a cumulative song, in which the
-lyrics detail a series of increasingly numerous gifts given to
-the speaker by their "true love" on each of the twelve days of
-Christmas (the twelve days that make up the Christmas season,
-starting with Christmas Day) \cite{wikipedia:cumulative_song}. 
-The carol, whose words were first published in England in the 
-late eighteenth century, has a Roud Folk Song Index number of 
-68 \cite{wikipedia:roud_folk_song_index}. A large number of
-different melodies have been associated with the song, of which
-the best known is derived from a 1909 arrangement of a
-traditional folk melody by English composer Frederic Austin
-\cite{wikipedia:twelve_days_of_christmas}.
+The classic English Christmas carol "The Twelve Days of
+Christmas" has all kinds of interesting mathematical
+features. First, it is an example of a \emph{cumulative song}, in
+which the lyrics detail a series of increasingly numerous gifts
+given to the speaker by their "true love" on each of the twelve
+days of Christmas (the twelve days that make up the Christmas
+season, starting with Christmas Day)
+\cite{wikipedia:cumulative_song}.  So we might want to know how
+many gifts are given each day and what the total number of gifts
+are.
 
 \bigskip
 \noindent
-"The Twelve Days of Christmas" is a cumulative song, meaning that
-each verse is built on top of the previous verses. There are
-twelve verses, each describing a gift given by "my true love" on
-one of the twelve days of Christmas. There are many variations in
-the lyrics. The lyrics given here are from Frederic Austin's 1909
-publication that established the current form of the carol
+The carol, whose words were apparently first published in England
+in the late eighteenth century, has a Roud Folk Song Index number
+of 68 \cite{wikipedia:roud_folk_song_index}. A large number of
+different melodies have been associated with the song, of which
+the best known is derived from a 1909 arrangement of a
+traditional folk melody by English composer Frederic Austin
+\cite{wikipedia:twelve_days_of_christmas}. There are twelve
+verses, each describing a gift given by "my true love" on one of
+the twelve days of Christmas. There are many variations in the
+lyrics, however, the lyrics given here are from Frederic Austin's
+1909 publication that established the current form of the carol
 \cite{wikipedia:frederic_austin}.
 
 \bigskip
@@ -201,7 +203,7 @@ a pear tree}.
 The subsequent verses follow the same pattern. Each verse deals
 with the next day of Christmastide, adding one new gift and then
 repeating all the earlier gifts, so that each verse is one line
-longer than its predecessor. 
+longer than its predecessor.
 
 \begin{itemize}
 \item 4 calling birds
@@ -215,47 +217,49 @@ longer than its predecessor.
 \item 12 drummers drumming
 \end{itemize}
 
-
+\section{How many gifts are received each day and what is the total?}
 \bigskip
 \noindent
-Putting this all together we get 
-(Table \ref{tab:12_days_of_christmas}):
+The number of gifts received on day {\bf n} and the total number
+of gifts received by day {\bf n} are shown in the following table
+$(1 \leq {\mathbf n} \leq 12)$:
+
 
 \medskip
 \renewcommand*{\arraystretch}{1.5}					% get some extra space in the table
 
 \begin{center}
   \begin{table}[H]
-  \scalebox{1.00}{
+  \scalebox{0.90}{
     \begin{tabular}{|c|c|c|} 
       \hline
       {\large \bf Day} & {\large \bf Gifts received on day $\mathbf n$} 
-      				   & {\large \bf Running total at end of day n} \\
+                       & {\large \bf Total number of gifts received by day $\mathbf n$} \\
       \hline
       \hline
-      1  & 1 & {\bf \color{red}{1}} \\
+      1  & {\bf \color{blue}{1}} & {\bf \color{red}{1}} \\
       \hline
-      2  & 1+2=3 & 1+3={\bf \color{red}{4}} \\
+      2  & 1+2={\bf \color{blue}{3}} & 1+3={\bf \color{red}{4}} \\
       \hline
-      3  & 1+2+3=6 & 1+3+6={\bf \color{red}{10}} \\
+      3  & 1+2+3={\bf \color{blue}{6}} & 1+3+6={\bf \color{red}{10}} \\
       \hline
-      4  & 1+2+3+4=10 & 1+3+6+10={\bf \color{red}{20}} \\
+      4  & 1+2+3+4={\bf \color{blue}{10}} & 1+3+6+10={\bf \color{red}{20}} \\
       \hline
-      5  & 1+2+3+4+5=15 & 1+3+6+10+15={\bf \color{red}{35}} \\
+      5  & 1+2+3+4+5={\bf \color{blue}{15}} & 1+3+6+10+15={\bf \color{red}{35}} \\
       \hline
-      6  & 1+2+3+4+5+6=21 & 1+3+6+10+15+21={\bf \color{red}{56}} \\
+      6  & 1+2+3+4+5+6={\bf \color{blue}{21}} & 1+3+6+10+15+21={\bf \color{red}{56}} \\
       \hline
-      7  & 1+2+3+4+5+6+7=28 & 1+3+6+10+15+21+28={\bf \color{red}{84}} \\
+      7  & 1+2+3+4+5+6+7={\bf \color{blue}{28}} & 1+3+6+10+15+21+28={\bf \color{red}{84}} \\
       \hline
-      8  & 1+2+3+4+5+6+7+8=36 & 1+3+6+10+15+21+28+36={\bf \color{red}{120}} \\
+      8  & 1+2+3+4+5+6+7+8={\bf \color{blue}{36}} & 1+3+6+10+15+21+28+36={\bf \color{red}{120}} \\
      \hline 
-      9  & 1+2+3+4+5+6+7+8+9=45 & 1+3+6+10+15+21+28+36+45={\bf \color{red}{165}} \\
+      9  & 1+2+3+4+5+6+7+8+9={\bf \color{blue}{45}} & 1+3+6+10+15+21+28+36+45={\bf \color{red}{165}} \\
      \hline
-      10 & 1+2+3+4+5+6+7+8+9+10=55 & 1+3+6+10+15+21+28+36+45+55={\bf \color{red}{220}} \\
+      10 & 1+2+3+4+5+6+7+8+9+10={\bf \color{blue}{55}} & 1+3+6+10+15+21+28+36+45+55={\bf \color{red}{220}} \\
      \hline
-      11 & 1+2+3+4+5+6+7+8+9+10+11=66 & 1+3+6+10+15+21+28+36+45+55+66={\bf \color{red}{286}} \\
+      11 & 1+2+3+4+5+6+7+8+9+10+11={\bf \color{blue}{66}} & 1+3+6+10+15+21+28+36+45+55+66={\bf \color{red}{286}} \\
      \hline
-      12 & 1+2+3+4+5+6+7+8+9+10+11+12=78 & 1+3+6+10+15+21+28+36+45+55+66+78={\bf \color{red}{364}} \\
+      12 & 1+2+3+4+5+6+7+8+9+10+11+12={\bf \color{blue}{78}} & 1+3+6+10+15+21+28+36+45+55+66+78={\bf \color{red}{364}} \\
      \hline
     \end{tabular}}
     \caption{Gift count for the 12 days of Christmas}
@@ -265,21 +269,12 @@ Putting this all together we get
 
 
 \noindent
-Interestingly, the numbers in bold red in Table
-\ref{tab:12_days_of_christmas}, the total number of gifts on day
-$n$, are known as the tetrahedral numbers. The $n^{\text{th}}$
-tetrahedral number, $T_{e_n}$, and is computed as follows:
+Interestingly, the numbers in blue in Table
+\ref{tab:12_days_of_christmas}, the number of gifts received on
+day {\bf n}, are known as the triangular numbers. The
+$n^{\text{th}}$ triangular number, $T_{n}$, is defined as
+follows:
 
-\bigskip
-\begin{equation}
-T_{e_n} = \sum\limits_{k=1}^{n} T_k = \frac{n(n+1)(n+2)}{6} = \binom{n+2}{3}
-\label{eqn:tetrahedral_number}
-\end{equation}
-
-\bigskip
-\noindent
-where $T_{k}$ is the $k^{\text{th}}$ triangular number 
-(see Equation (\ref{eqn:triangular_number})):
 
 \bigskip
 \begin{equation}
@@ -289,63 +284,54 @@ T_{n}=\sum _{k=1}^{n}k = \frac {n(n+1)}{2} = {n+1 \choose 2}
 
 \bigskip
 \noindent
-and ${\displaystyle \binom{n}{m}}$ is the familiar binomial 
-coefficient\footnote{The great mathematician Carl Friedrich 
-Gauss is said to have discovered the consecutive integer
-formula (Equation (\ref{eqn:triangular_number})) while still 
-at primary school \cite{add_1_to_100}.}.
+where ${\displaystyle \binom{n}{m}}$ is the familiar binomial
+coefficient\footnote{The great mathematician Carl Friedrich Gauss
+is said to have discovered the consecutive integer formula
+(Equation (\ref{eqn:triangular_number})) while still at primary
+school \cite{add_1_to_100}.}. For example, $T_{12} = 
+\sum\limits_{k=1}^{12} k = \frac{12 \cdot 13}{2} = {13 \choose 2} = 
+\mathbf{\color{blue} 78}$.
+
+\bigskip
+\noindent
+So how many total gifts have been received by day {\bf n}? These
+numbers are shown in red in Table
+\ref{tab:12_days_of_christmas}. These numbers are known as
+tetrahedral numbers. The $n^{\text{th}}$ tetrahedral number,
+$T_{e_n}$, is defined as follows:
+
+\bigskip
+\begin{equation}
+T_{e_n} = \sum\limits_{k=1}^{n} T_k = \frac{n(n+1)(n+2)}{6} = 
+          \binom{n+2}{3}
+\label{eqn:tetrahedral_number}
+\end{equation}
+
+\bigskip
+\noindent
+where $T_{k}$ is the $k^{\text{th}}$ triangular number 
+(see Equation (\ref{eqn:triangular_number})).
 
 \bigskip
 \noindent
 It turns out that the total number of gifts received is
-$T_{e_{12}} = \sum\limits_{k=1}^{12} T_k = \frac{12(12+1)(12+2)}{6} = \binom{14}{3} = 364$.
+$T_{e_{12}} = \sum\limits_{k=1}^{12} T_k = \frac{12 \cdot 13 
+\cdot 14}{6} = \binom{14}{3} = \mathbf{\color{red}{364}}$.
 
-
-\bigskip
 \noindent
-Also interestingly, the $4^{\text{th}}$ diagonal row of Pascal's
-triangle contains the tetrahedral numbers, $T_{e_n}$, that is,
-the $4^{\text{th}}$ diagonal row of Pascal's triangle contains
-the {\bf Running total at end of day n}. This is shown in Figure
-\ref{fig:lua_pascals_triangle}. The $3^{\text{rd}}$ diagonal row
-of Pascal's triangle contains the numbers we see in {\bf Gifts
-received on day n} column of Table
+Also interesting is the connection to Pascal's triangle
+\cite{wiki:pascals_triangle}.  Specifically, the $4^{\text{th}}$
+diagonal row of Pascal's triangle (starting from the right side)
+contains the tetrahedral numbers, $T_{e_n}$, that is, the
+$4^{\text{th}}$ diagonal row of Pascal's triangle contains the
+{\bf Running total at end of day n}. This is shown in Figure
+\ref{fig:lua_pascals_triangle}.  Similarly, the $3^{\text{rd}}$
+diagonal row of Pascal's triangle contains the numbers we see in
+{\bf Gifts received on day n} column of Table
 \ref{tab:12_days_of_christmas}. These are the triangular numbers
-$T_n$ (Figure \ref{fig:lua_pascals_triangle}).
-
-\section{Geometric Interpretations}
-There are an interesting geometric interpretation of both
-triangular numbers and tetrahedral numbers. So first, what
-exactly is a triangular number?  The first six triangular numbers
-are depicted as triangles in Figure
-\ref{fig:triangular_numbers}. We can see from the figure that a
-triangular number $T_n$ is the sum of the integers from 1 to
-$n$. This is the number of gifts received on the $n^{\text{th}}$
-day of Christmas.
-  
-\bigskip
-\begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.55] {images/first_six_triangular_numbers.png}}
-  \caption{The First Six Triangular Numbers \cite{wiki:triangle_numbers}}
-  \label{fig:triangular_numbers}
-\end{figure}
-
+$T_n$.
 
 \vspace{2.5em}
-\noindent
-Next, what are the tetrahedral numbers? As we saw in Equation
-(\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
-number is the sum of the first $n$ triangular numbers. The 
-$n^{\text{th}}$ tetrahedral is the number of gifts received up 
-to and including day $n^{\text{th}}$ day of Christmas.
-
-\vspace{2.5em}
-\begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.35] {images/tetrahedral_numbers.png}}
-  \caption{The Tetrahedral Numbers}
-  \label{fig:tetrahedral_numbers}
-\end{figure}
-
 %
 %       Parameters
 %
@@ -356,7 +342,7 @@ to and including day $n^{\text{th}}$ day of Christmas.
 \begin{figure}[H]
   \centering
   \fbox {                                                                       % put a box around the figure
-  \resizebox{0.90 \textwidth}{!} {                                              % resize the figure if you want
+  \resizebox{0.65 \textwidth}{!} {                                              % resize the figure if you want
   \begin{mplibcode}                                                             % build Pascals_triangle
      vardef Pascals_triangle(expr n, u, v) =                                    % define the function
        save b, mid; numeric b[][], mid; clearxy;                                % variables
@@ -387,10 +373,45 @@ to and including day $n^{\text{th}}$ day of Christmas.
   \end{mplibcode}                                                               % end mplibcode
   }                                                                             % end resizebox
  }                                                                              % end fbox
- \caption{Pascal's Triangle renedered with lualatex (nrows = \nrows)}           % caption
+ \caption{Pascal's Triangle}           											% caption
  \label{fig:lua_pascals_triangle}                                               % label
 \end{figure}                                                                    % end figure 
-%
+
+
+\bigskip
+\section{Geometric Interpretations}
+There are an interesting geometric interpretation of both
+triangular numbers and tetrahedral numbers. So first, what
+exactly is a triangular number?  The first six triangular numbers
+are depicted as triangles in Figure \ref{fig:triangular_numbers}.
+We can see from the figure that a triangular number $T_n$ is the
+sum of the integers from 1 to $n$ \cite{wiki:triangle_numbers}.
+This is also the number of gifts received on the $n^{\text{th}}$
+day of Christmas according to the "12 Days of Christmas".
+  
+\vspace{1.0em}
+\begin{figure}[H]
+  \center{\includegraphics[frame,scale=0.40] {images/first_six_triangular_numbers.png}}
+  \caption{The First Six Triangular Numbers}
+  \label{fig:triangular_numbers}
+\end{figure}
+
+\noindent
+Next, what are the tetrahedral numbers? As we saw in Equation
+(\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
+number is the sum of the first $n$ triangular numbers
+\cite{wolfram:tetrahedral_numbers}. The $n^{\text{th}}$
+tetrahedral is the number of gifts received up to and including
+day $n^{\text{th}}$ of the 12 Days of Christmas. These numbers
+are depicted in Figure \ref{fig:tetrahedral_numbers}.
+
+\vspace{2.5em}
+\begin{figure}[H]
+  \center{\includegraphics[frame,scale=0.30] {images/tetrahedral_numbers.png}}
+  \caption{The Tetrahedral Numbers}
+  \label{fig:tetrahedral_numbers}
+\end{figure}
+
 %
 %	show a derivation/proof
 %

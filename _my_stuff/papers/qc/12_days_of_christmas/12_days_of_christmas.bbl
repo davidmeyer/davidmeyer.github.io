@@ -7,6 +7,20 @@
   \url{https://sites.google.com/site/funproblemsolving/topics-1/adding-numbers-from-1-to-100}.
 \newblock [Online; accessed 20-August-2021].
 
+\bibitem{wolfram:tetrahedral_numbers}
+{Tetrahedral Number}.
+\newblock {Eric W. Weisstein}.
+\newblock \url{https://mathworld.wolfram.com/TetrahedralNumber.html}, 2023.
+\newblock [Online; accessed 12-October-2023].
+
+\bibitem{wiki:pascals_triangle}
+{Wikipedia Contributors}.
+\newblock {Pascal's Triangle --- {Wikipedia}{,} The Free Encyclopedi}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Pascal%27s_triangle&oldid=1036356492},
+  2021.
+\newblock [Online; accessed 18-August-2021].
+
 \bibitem{wiki:triangle_numbers}
 {Wikipedia Contributors}.
 \newblock {Triangular Number --- {Wikipedia}{,} The Free Encyclopedia}.
