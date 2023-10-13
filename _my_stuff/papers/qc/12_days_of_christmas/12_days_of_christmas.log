@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  13 OCT 2023 13:53
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  13 OCT 2023 14:37
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1598,7 +1598,7 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 12_days_of_christmas.pdf (5 pages, 238298 bytes).
+Output written on 12_days_of_christmas.pdf (5 pages, 238347 bytes).
 
 PDF statistics: 244 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams
