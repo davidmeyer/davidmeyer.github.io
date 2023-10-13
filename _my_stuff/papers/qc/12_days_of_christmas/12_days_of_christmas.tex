@@ -52,7 +52,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -329,9 +329,10 @@ T_{n} = \binom{n+1}{2} = \binom{m+2}{3} = T_{e_m}
 \label{eqn:triangular_and_tetrahedral}
 \end{equation}
 
-\bigskip
+
+\vspace{1.5em}
 \noindent
-The only numbers that satisfy Equation 
+The only numbers that do satisfy Equation 
 (\ref{eqn:triangular_and_tetrahedral})
 are \cite{A027568}:
 
@@ -347,65 +348,72 @@ T_{e_{34}}    = T_{119}      = \; 7140
 \end{equation*}
 
 
-\bigskip
+\vspace{1.5em}
 \noindent
 Also interesting is the connection to Pascal's triangle
-\cite{wiki:pascals_triangle}.  Specifically, the $4^{\text{th}}$
-diagonal row of Pascal's triangle (starting from the right side)
-contains the tetrahedral numbers, $T_{e_n}$, that is, the
-$4^{\text{th}}$ diagonal row of Pascal's triangle contains the
-{\bf Total number of gifts received by day n}. This is shown in 
-Figure \ref{fig:lua_pascals_triangle}.  Similarly, the $3^{\text{rd}}$
-diagonal row of Pascal's triangle contains the numbers we see in
+\cite{wiki:pascals_triangle}. Specifically, the $3^{\text{rd}}$
+diagonal row of Pascal's triangle, shown in blue in Figure 
+\ref{fig:pascals_triangle}, contains the numbers we see in 
 {\bf Gifts received on day n} column of Table 
-\ref{tab:12_days_of_christmas}. These are the triangular numbers.
-
-
-\vspace{2.5em}
+\ref{tab:12_days_of_christmas}. These are the triangular numbers
+(Equation (\ref{eqn:triangular_number})).  Similarly, the
+$4^{\text{th}}$ diagonal row of Pascal's triangle, shown in red
+in Figure \ref{fig:pascals_triangle}, contains the {\bf Total
+number of gifts received by day n} column of Table
+\ref{tab:12_days_of_christmas}. These are the tetrahedral numbers
+(Equation (\ref{eqn:tetrahedral_number})).
+%
+%
+%
+\vspace{2.0em}
 %
 %       Parameters
 %
 \def \nrows {14}
 %
-%       Build the figure
+%	Build the figure
 %
 \begin{figure}[H]
   \centering
   \fbox {                                                                       % put a box around the figure
-  \resizebox{0.65 \textwidth}{!} {                                              % resize the figure if you want
-  \begin{mplibcode}                                                             % build Pascals_triangle
-     vardef Pascals_triangle(expr n, u, v) =                                    % define the function
-       save b, mid; numeric b[][], mid; clearxy;                                % variables
-       b[0][0] = b[1][0] = b[1][1] = 1;                                         % binomial that equal 1
-       label("1", origin); label("1", (-.5u, -v)); label("1", (.5u, -v));       % build the top of the triangle
-       for i = 2 upto n:                                                        % start at row 2
-           mid := i div 2;                                                      % calculate midpoint
-           x := -u*i/2; y := -i*v;                                              % calculate (x,y)
-           b[i][0] = 1; label("1", z); label("1", (-x, y));                     %             
-           for k = 1 upto mid:                                                  % iterate over columns
-               x := x + u;                                                      %
-               if (k < mid) or (odd i):                                         %
-                  b[i][k] = b[i-1][k-1] + b[i-1][k];                            %
-                  label(decimal b[i][k], z); label(decimal b[i][k], (-x, y));   %
-               else:                                                            %
-                  b[i][k] = 2b[i-1][k-1];                                       %
-                  label(decimal b[i][k], z);                                    %
-               fi                                                               %
-           endfor                                                               %
-       endfor                                                                   %
-     enddef;                                                                    %
-%                                                                               %
-%       Draw the triangle                                                       %
-%                                                                               %
-   beginfig(1);                                                                 % draw the triangle
-      Pascals_triangle(\nrows, 1.5cm, 1.0cm);                                   %
-   endfig;                                                                      %
-  \end{mplibcode}                                                               % end mplibcode
-  }                                                                             % end resizebox
+    \resizebox{0.96 \textwidth}{!} {                                            % resize the figure if you want
+    \begin{mplibcode}                                                           %
+        vardef Pascal_triangle(expr n, u, v) =                                  % define the function
+        save b; numeric b[][]; clearxy;                                         %
+        b[0][0] = 1; b[0][1] = 0; label("1", origin);                           % special case the "ones"
+        for i = 1 upto n:                                                       % loop over the rows
+          x := -u*i/2; y := -i*v;                                               % draw the result at (x,y)
+          b[i][0] = 1; label("1", z);                                           % need one more "one"
+          for k = 1 upto i:                                                     % loop over the columnss
+              x := x + u;                                                       % coordinates
+              b[i][k] = b[i-1][k-1] + b[i-1][k];                                % compute thte value
+              if k = 2:                                                         % triangular numbers 
+              	label(decimal(b[i][k]),z) withcolor blue;                       % triangular numbers in blue
+              else:                                                             % 
+              	if k = 3:                                                       % tetrahedral numbers
+                   label(decimal(b[i][k]),z) withcolor red;                  	% tetrahedral numbers in red
+                   else:                                                        % default
+                     label(decimal(b[i][k]),z) withcolor black;                	% default to black
+               fi
+             fi
+           endfor 
+           b[i][i+1]=0;
+         endfor
+       enddef;
+%
+%	Draw the triangle
+%
+    beginfig(1);
+      Pascal_triangle(\nrows, 1.4cm, 1cm);
+    endfig;
+   \end{mplibcode}
+   }                                                                            % end resizebox
  }                                                                              % end fbox
- \caption{Pascal's Triangle}           											% caption
- \label{fig:lua_pascals_triangle}                                               % label
-\end{figure}                                                                    % end figure 
+ \caption{Pascal's Triangle with the triangular numbers in						% caption the figure
+   {\bf \color{blue} blue} and the tetrahedral numbers in 						% ...
+   {\bf \color{red} red}}														% caption the figure
+ \label{fig:pascals_triangle}                                                   % label the figure
+\end{figure}                                                                    % end figure
 
 
 \bigskip
@@ -420,7 +428,7 @@ This is also the number of gifts received on the $n^{\text{th}}$
 day of Christmas according to the "12 Days of Christmas".
   
 \vspace{1.0em}
-\begin{figure}[t]
+\begin{figure}[H]
   \center{\includegraphics[frame,scale=0.400] {images/first_six_triangular_numbers.png}}
   \caption{The First Six Triangular Numbers}
   \label{fig:triangular_numbers}
@@ -441,60 +449,6 @@ to and including day {\bf n} in "The 12 Days of Christmas".
   \caption{The Tetrahedral Numbers}
   \label{fig:tetrahedral_numbers}
 \end{figure}
-
-%
-%	show a derivation/proof
-%
-% \begin{equation*}
-% \begin{array}{llll}
-% x
-% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
-% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
-% [10pt]
-% \end{array}
-% \end{equation*}
-%
-%
-%
-%	include an image
-%
-% \begin{figure}
-% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
-% \caption{X}
-% \label{fig:X}
-% \end{figure}
-%
-%	How to put a box around a figure
-%
-% \begin{figure}[H]
-%  \centering
-%   \fbox{\begin{minipage}{34em}
-%    \begin{equation*}
-%     \begin{array}{rlrlrlr}
-%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
-%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
-%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
-%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
-%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
-%     \end{array}
-%    \end{equation*}
-%  \end{minipage}}
-%  \caption{A Few Example Kaprekar Numbers}
-%\end{figure}
-%
-%	
-%	How to wrap (and resize) your tikzpicture in a figure
-%
-% \begin{figure}[H]
-% \centering
-%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
-%    \begin{tikzpicture} 
-%     .....
-%    \end{tikzpicture}					% end tikzpicture
-%  }									% end resizebox
-% \caption{Some Figure}
-% \label{fig:some_figure}
-% \end{figure}
 %
 %
 %
