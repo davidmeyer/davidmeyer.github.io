@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  13 OCT 2023 12:51
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  13 OCT 2023 13:15
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1571,8 +1571,8 @@ Here is how much of LuaTeX's memory you used:
  820 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 62 attribute, 64 glue_spec
 , 62 attribute_list, 2 write, 7 pdf_action nodes
-   avail lists: 1:1,2:807,3:1059,4:128,5:372,6:42,7:5084,8:114,9:1113,10:14,11:2
-16
+   avail lists: 1:1,2:807,3:1059,4:128,5:376,6:42,7:5121,8:114,9:1113,10:14,11:2
+24
  72650 multiletter control sequences out of 65536+600000
  126 fonts using 9653567 bytes
  131i,12n,128p,759b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1598,7 +1598,7 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 12_days_of_christmas.pdf (5 pages, 238543 bytes).
+Output written on 12_days_of_christmas.pdf (5 pages, 238397 bytes).
 
 PDF statistics: 244 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams

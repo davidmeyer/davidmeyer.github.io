@@ -52,7 +52,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -299,15 +299,15 @@ school \cite{add_1_to_100}.}. For example, $T_{12} =
 
 \bigskip
 \noindent
-So how many total gifts have been received by day {\bf n}? 
-If we look at the the {\bf Total number of gifts received 
-by day n} in Table \ref{tab:12_days_of_christmas} 
-we can see a pattern. The number of gifts received by (including) day {\bf n}
-is the sum of the gifts received days on previous days (that is, on days $1 \leq \mathbf{n} \leq \mathbf{n} -1$). 
-These
-numbers are shown in red in Table \ref{tab:12_days_of_christmas} 
-and are known as the tetrahedral numbers. The $n^{\text{th}}$ 
-tetrahedral number is defined as follows:
+So how many total gifts have been received by day {\bf n}?  If we
+look at the {\bf Total number of gifts received by day n} column of
+Table \ref{tab:12_days_of_christmas} we can see a pattern. In 
+particular, the number of gifts received by (including) day 
+{\bf n} is the sum of the gifts received on the previous days 
+plus the gift received on day {\bf n}.  The number of gifts 
+received by day {\bf n} is shown in red in Table \ref{tab:12_days_of_christmas}. 
+These numbers are called the tetrahedral numbers and are defined as
+follows:
 
 \bigskip
 \begin{equation}
@@ -364,9 +364,9 @@ T_{e_{34}}    = T_{119}      = \; 7140
 \noindent
 Also interesting is the connection to Pascal's triangle
 \cite{wiki:pascals_triangle}. Specifically, the $3^{\text{rd}}$
-diagonal row of Pascal's triangle, shown in blue in Figure 
-\ref{fig:pascals_triangle}, contains the numbers we see in 
-{\bf Gifts received on day n} column of Table 
+diagonal row of Pascal's triangle, shown in blue in Figure
+\ref{fig:pascals_triangle}, contains the numbers we see in {\bf
+Gifts received on day n} column of Table
 \ref{tab:12_days_of_christmas}. These are the triangular numbers
 (Equation (\ref{eqn:triangular_number})).  Similarly, the
 $4^{\text{th}}$ diagonal row of Pascal's triangle, shown in red
@@ -431,8 +431,8 @@ number of gifts received by day n} column of Table
 \bigskip
 \section{Geometric Interpretations}
 \label{sec:geometric_interpretation}
-There are an interesting geometric interpretation of both
-triangular numbers and tetrahedral numbers. So first, what
+There are interesting geometric interpretations of both the
+triangular numbers and the tetrahedral numbers. So first, what
 exactly is a triangular number?  The first six triangular numbers
 are depicted as triangles in Figure \ref{fig:triangular_numbers}.
 We can see from the figure that a triangular number $T_n$ is the
