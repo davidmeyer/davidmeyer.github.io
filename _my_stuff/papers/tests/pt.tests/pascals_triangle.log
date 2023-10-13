@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  13 OCT 2023 11:55
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  13 OCT 2023 10:33
  restricted system commands enabled.
  file:line:error style messages enabled.
-**12_days_of_christmas.tex
-(./12_days_of_christmas.tex
+**pascals_triangle.tex
+(./pascals_triangle.tex
 LaTeX2e <2020-10-01> patch level 4
 Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
 Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
@@ -1362,35 +1362,38 @@ eX's MPLib.
 \c@example=\count357
 \c@remark=\count358
 
-(./12_days_of_christmas.aux)
-\openout1 = 12_days_of_christmas.aux
+(./pascals_triangle.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 151.
+LaTeX Warning: Label `fig:pascals_triangle' multiply defined.
+
+)
+\openout1 = pascals_triangle.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-51.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+47.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1452,20 +1455,20 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 151.
+ on input line 147.
 
-LaTeX Info: Redefining \celsius on input line 151.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 151
+LaTeX Info: Redefining \celsius on input line 147.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 147
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 151.
-Package gensymb Info: Using \upOmega for \ohm on input line 151.
+LaTeX Info: Redefining \ohm on input line 147.
+Package gensymb Info: Using \upOmega for \ohm on input line 147.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 151.
+Package hyperref Info: Link coloring OFF on input line 147.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1478,13 +1481,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count365
 )
-LaTeX Info: Redefining \ref on input line 151.
-LaTeX Info: Redefining \pageref on input line 151.
-LaTeX Info: Redefining \nameref on input line 151.
- (./12_days_of_christmas.out) (./12_days_of_christmas.out)
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
+ (./pascals_triangle.out) (./pascals_triangle.out)
 \@outlinefile=\write4
 
-\openout4 = 12_days_of_christmas.out
+\openout4 = pascals_triangle.out
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
 \caption@adjustwidth@hsize=\dimen356
@@ -1499,108 +1502,961 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
-1.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
+7.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-151.
+147.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-) [1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 281.
-
-[2]
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Missing character: There is no   (U+2007) in font cmr10!
-Module luamplib Info: flushing figure 1 on input line 411
- [3]
-<images/first_six_triangular_numbers.png, id=98, 441.65pt x 370.38374pt>
-File: images/first_six_triangular_numbers.png Graphic file (type png)
-<use images/first_six_triangular_numbers.png>
-Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
- line 432.
-(luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=102, 691.58376pt x 558.085pt>
-File: images/tetrahedral_numbers.png Graphic file (type png)
-<use images/tetrahedral_numbers.png>
-Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 448
-.
-(luatex.def)             Requested size: 691.58206pt x 558.08365pt.
- (./12_days_of_christmas.bbl [4<./images/first_six_triangular_numbers.png><./ima
-ges/tetrahedral_numbers.png>]
-Underfull \hbox (badness 4048) in paragraph at lines 10--15
-[]\TU/lmr/m/n/10 Math-lete’s Cor-ner.  Adding num-bers from 1 to 100.  []$\TU
-/lmtt/m/n/10 https://sites.google.com/site/
- []
-
-) [5] (./12_days_of_christmas.aux)
-Package rerunfilecheck Info: File `12_days_of_christmas.out' has not changed.
-(rerunfilecheck)             Checksum: 42FF71E314D80CA4BFF8A0FC87EF1F86;866.
 )
+Module luamplib Warning: 
+(luamplib)               >> (59.527544999999996,-85.039349999999999)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(3)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(3)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (4.9813200000000002labxf.bold-1.0643213876595749e-16
+,6.635122labyf.bold-1.41
+(luamplib)               76768917336314e-16)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(3)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(3)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (4.9813200000000002labxf.bold-1.0643213876595749e-16
+,6.635122labyf.bold-1.41
+(luamplib)               76768917336314e-16,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(3)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(3)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (39.685029999999998,-113.3858)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(4)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(4)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (4.9813200000000002labxf.bold-1.0643213876595749e-16
+,6.7447119999999998labyf
+(luamplib)               .bold-1.4410921673781618e-16)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(4)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(4)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (4.9813200000000002labxf.bold-1.0643213876595749e-16
+,6.7447119999999998labyf
+(luamplib)               .bold-1.4410921673781618e-16,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(4)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(4)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (19.842515000000006,-141.73224999999999)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(5)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(5)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(5)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(5)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(5)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(5)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (0,-170.0787)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(6)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(6)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(6)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(6)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(6)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(6)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-19.842515000000006,-198.42515)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(7)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(7)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(7)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(7)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(7)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(7)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-39.685029999999998,-226.77160000000001)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(8)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(8)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(8)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(8)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.8543010000000013labyf
+(luamplib)               .bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(8)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(8)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-59.527545000000003,-255.11805000000001)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...label.bold(decimal(b[(9)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(9)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.9638910000000003labyf
+(luamplib)               .bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(9)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(9)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (9.9626400000000004labxf.bold-2.1286427753191499e-16
+,6.9638910000000003labyf
+(luamplib)               .bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...label.bold(decimal(b[(9)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(9)> ...0)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-79.370059999999995,-283.46449999999999)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(10)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(10)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(10)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(10)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(10)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(10)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-99.212575000000001,-311.81094999999999)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(11)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(11)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(11)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(11)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(11)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(11)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-119.05508999999999,-340.1574)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(12)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(12)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(12)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(12)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(12)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(12)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-138.89760500000006,-368.50385)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(13)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(13)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(13)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(13)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.8543010000000013labyf.
+(luamplib)               bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(13)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(13)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               >> (-158.74012000000005,-396.8503)
+(luamplib)               >> 3laboff.bold
+(luamplib)               ! Not implemented: (pair)+(unknown numeric).
+(luamplib)               <to be read again> 
+(luamplib)                                  -
+(luamplib)               thelabel->...((EXPR4)+labeloffset*laboff(SUFFIX2)-
+(luamplib)                                                                 (labx
+f(SUFFIX2)*lrcorner.p...
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(14)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(14)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> 3laboff.bold
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.9638910000000003labyf.
+(luamplib)               bold-0.21917900000000015)
+(luamplib)               ! Not implemented: (unknown numeric)-(unknown pair).
+(luamplib)               <to be read again> 
+(luamplib)                                  )
+(luamplib)               thelabel->...SUFFIX2)-labyf(SUFFIX2))*llcorner.p))
+(luamplib)                                                                 endgr
+oup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(14)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(14)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm afraid I don't know how to apply that operation to 
+that
+(luamplib)               combination of types. Continue, and I'll return the sec
+ond
+(luamplib)               argument (see above) as the result of the operation.
+(luamplib)               >> (14.943960000000001labxf.bold-3.192964162978725e-16,
+6.9638910000000003labyf.
+(luamplib)               bold-0.21917900000000015,1,0,0,1)
+(luamplib)               ! Transform components aren't all known.
+(luamplib)               <to be read again> 
+(luamplib)                                  endgroup
+(luamplib)               <for(3)> ...abel.bold(decimal(b[(14)][(EXPR0)]),z)
+(luamplib)                                                                 withc
+olor.red;else:label(d...
+(luamplib)               <for(14)> ...)][k]),z)withcolor.black;fi.fi.endfor
+(luamplib)                                                                 .b[(E
+XPR0)][(EXPR0)+1]=0; ...
+(luamplib)               Pascal_triangle->...i.fi.endfor.b[i][i+1]=0;endfor
+(luamplib)                                                                 .endg
+roup
+(luamplib)               <*> ...eginfig(1); Pascal_triangle(14, 1.4cm, 1cm)
+(luamplib)                                                                 ; end
+fig; 
+(luamplib)               I'm unable to apply a partially specified transformatio
+n
+(luamplib)               except to a fully known pair or transform.
+(luamplib)               Proceed, and I'll omit the transformation.
+(luamplib)               [1]
+(luamplib)               on input line 196
+...ocal/texlive/2021/texmf-dist/tex/latex/base/ltluatex.lua:109: 
+Module luamplib Error: see above messages on input line 196
+
+stack traceback:
+	[C]: in function 'error'
+	...ocal/texlive/2021/texmf-dist/tex/latex/base/ltluatex.lua:109: in function <.
+..ocal/texlive/2021/texmf-dist/tex/latex/base/ltluatex.lua:108>
+	(...tail calls...)
+	...texlive/2021/texmf-dist/tex/luatex/luamplib/luamplib.lua:259: in upvalue 're
+porterror'
+	...texlive/2021/texmf-dist/tex/luatex/luamplib/luamplib.lua:313: in function <.
+..texlive/2021/texmf-dist/tex/luatex/luamplib/luamplib.lua:309>
+	(...tail calls...)
+	...texlive/2021/texmf-dist/tex/luatex/luamplib/luamplib.lua:656: in field 'proc
+ess_mplibcode'
+	[\directlua]:1: in main chunk.
+<inserted text> BAD
+   
+l.196  }
+                                                                            ...
+? 
+./pascals_triangle.tex:196: Emergency stop.
+<inserted text> BAD
+   
+l.196  }
+                                                                            ...
+End of file on the terminal!
+
+
 
 Here is how much of LuaTeX's memory you used:
- 54557 strings out of 478531
- 100000,2373549 words of node,token memory allocated
- 820 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 62 attribute, 64 glue_spec
-, 62 attribute_list, 2 write, 7 pdf_action nodes
-   avail lists: 1:1,2:802,3:1047,4:130,5:348,6:42,7:4905,8:114,9:1027,10:14,11:2
-16
- 72649 multiletter control sequences out of 65536+600000
- 126 fonts using 9653567 bytes
- 131i,12n,128p,759b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
-f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
-otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
-r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bol
-d.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
-lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-i
-talic.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10
--regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
-n12-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
-n12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
-oman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 12_days_of_christmas.pdf (5 pages, 234888 bytes).
-
-PDF statistics: 238 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 131072)
- 56 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+ 54408 strings out of 478531
+ 100000,2373549 words of node,token memory allocated 5576 words of node memory still in use:
+   140 hlist, 2 vlist, 5 rule, 7 disc, 6 local_par, 5 dir, 68 glue, 11 kern, 19 
+penalty, 327 glyph, 175 attribute, 76 glue_spec, 175 attribute_list, 5 temp, 1 i
+f_stack, 5 write, 1 pdf_start_link, 1 pdf_end_link, 3 pdf_dest, 1 pdf_action, 6 
+pdf_colorstack nodes
+   avail lists: 1:1,2:3,4:4,5:3,10:4
+ 72551 multiletter control sequences out of 65536+600000
+ 66 fonts using 5502271 bytes
+ 130i,5n,128p,755b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
+./pascals_triangle.tex:196:  ==> Fatal error occurred, no output PDF file produc
+ed!
