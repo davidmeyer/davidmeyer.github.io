@@ -389,39 +389,39 @@ number of gifts received by day n} column of Table
     \resizebox{0.80 \textwidth}{!} {                            % resize the figure if you want
      \begin{mplibcode}                                          % MetaPost...
         vardef Pascal_triangle(expr n, u, v) =                  % define the function
-        save b; numeric b[][]; clearxy;                         % declare variables
-        defaultscale := 16pt/fontsize defaultfont;              % set the font the way I want
-        b[0][0] = 1; b[0][1] = 0; label("1", origin);           % special case the "ones"
-        for i = 1 upto n:                                       % loop over the rows
-          x := -u*i/2; y := -i*v;                               % draw the result at (x,y)
-          b[i][0] = 1; label("1", z);                           % need one more "one"
-          for k = 1 upto i:                                     % loop over the columns
+          save b; numeric b[][]; clearxy;                       % declare some variables
+          defaultscale := 16pt/fontsize defaultfont;            % set the font the way I want
+          b[0][0] = 1; b[0][1] = 0; label("1", origin);         % special case the "ones"
+          for i = 1 upto n:                                     % loop over the rows
+            x := -u*i/2; y := -i*v;                             % draw the result at (x,y)
+            b[i][0] = 1; label("1", z);                         % need one more "one"
+            for k = 1 upto i:                                   % loop over the columns
               x := x + u;                                       % compute the coordinates
               b[i][k] = b[i-1][k-1] + b[i-1][k];                % compute the value of the binomial
-              if k = 2:                                         % triangular numberss
-              	label(decimal(b[i][k]),z) withcolor blue;       % triangular numbers in blue
-              elseif k = 3:                                     % tetrahedral numbers
-                label(decimal(b[i][k]),z) withcolor red;        % tetrahedral numbers in red
-              else:                                             % default
-                label(decimal(b[i][k]),z) withcolor black;      % default to black
-              fi                                                % end else
-           endfor                                               % end for
-           b[i][i+1] = 0;                                       % 
-         endfor                                                 %
-       enddef;                                                  %
+              if k = 2:                                         % triangular numbers
+            	label(decimal(b[i][k]),z) withcolor blue;       % triangular numbers in blue
+               elseif k = 3:                                    % tetrahedral numbers
+                 label(decimal(b[i][k]),z) withcolor red;       % tetrahedral numbers in red
+               else:                                            % default
+                 label(decimal(b[i][k]),z) withcolor black;     % default to black
+               fi                                               % end else
+            endfor                                              % end for
+            b[i][i+1] = 0;                                      % 
+          endfor                                                %
+        enddef;                                                 %
 %                                                               %
 %       Draw the triangle                                       %
 %                                                               %
-       beginfig(1);                                             % draw the triangle
+        beginfig(1);                                            % draw the triangle
           Pascal_triangle(\nrows, 1.4cm, 1cm);                  % draw \nrows
-       endfig;                                                  %
+        endfig;                                                 %
      \end{mplibcode}                                            %
-    }                                                           % end resizebox
+     }                                                          % end resizebox
   }                                                             % end fbox
- \caption{Pascal's Triangle with the triangular numbers in      % caption the figure
-    {\bf \color{blue} blue} and the tetrahedral numbers in      % ...
-    {\bf \color{red} red}}                                      % caption the figure
- \label{fig:pascals_triangle}                                   % label the figure
+  \caption{Pascal's Triangle with the triangular numbers in     % caption the figure
+     {\bf \color{blue} blue} and the tetrahedral numbers in     % ...
+     {\bf \color{red} red}}                                     % caption the figure
+  \label{fig:pascals_triangle}                                  % label the figure
 \end{figure}                                                    % end figure
 
 \bigskip
