@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  14 OCT 2023 08:05
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  15 OCT 2023 10:12
  restricted system commands enabled.
  file:line:error style messages enabled.
 **pascals_triangle.tex
@@ -1526,7 +1526,7 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Module luamplib Info: flushing figure 1 on input line 194
+Module luamplib Info: flushing figure 1 on input line 196
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -1548,7 +1548,7 @@ Here is how much of LuaTeX's memory you used:
    avail lists: 1:1,2:1044,3:1056,4:116,5:88,6:22,7:2037,8:53,9:976,10:4,11:26
  72573 multiletter control sequences out of 65536+600000
  81 fonts using 6535911 bytes
- 131i,12n,128p,755b,732s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,12n,128p,755b,732s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
@@ -1558,7 +1558,7 @@ lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-r
 egular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb>
-Output written on pascals_triangle.pdf (2 pages, 44159 bytes).
+Output written on pascals_triangle.pdf (2 pages, 44310 bytes).
 
 PDF statistics: 90 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  14 OCT 2023 08:52
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  15 OCT 2023 11:05
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1528,7 +1528,7 @@ File: uesvect.fd
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 289.
+(amsmath)                 on input line 287.
 
 [2]
 Missing character: There is no   (U+2007) in font cmr10!
@@ -1571,11 +1571,11 @@ Here is how much of LuaTeX's memory you used:
  820 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 62 attribute, 64 glue_spec
 , 62 attribute_list, 2 write, 7 pdf_action nodes
-   avail lists: 1:1,2:802,3:1048,4:138,5:401,6:45,7:5878,8:114,9:1031,10:14,11:2
+   avail lists: 1:1,2:767,3:1048,4:138,5:392,6:45,7:5876,8:114,9:1031,10:14,11:2
 31
  72652 multiletter control sequences out of 65536+600000
  126 fonts using 9653567 bytes
- 131i,13n,128p,759b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,13n,128p,759b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
@@ -1598,7 +1598,7 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 12_days_of_christmas.pdf (5 pages, 238643 bytes).
+Output written on 12_days_of_christmas.pdf (5 pages, 238762 bytes).
 
 PDF statistics: 249 PDF objects out of 1000 (max. 8388607)
  194 compressed objects within 2 object streams

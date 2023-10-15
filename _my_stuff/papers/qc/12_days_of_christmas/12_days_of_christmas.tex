@@ -52,7 +52,7 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{})
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
@@ -218,15 +218,13 @@ longer than its predecessor.
 \end{itemize}
 
 \section{How many gifts are received each day and what is the total?}
-\bigskip
-\noindent
 The number of gifts received on day {\bf n} and the total number
 of gifts received by (including) day {\bf n} are shown in the 
 following table $(1 \leq {\mathbf n} \leq 12)$:
 %
 %
 %
-\medskip
+\bigskip
 %
 \renewcommand*{\arraystretch}{1.90}                                             % get some extra space in the table
 %
@@ -234,7 +232,7 @@ following table $(1 \leq {\mathbf n} \leq 12)$:
 %
 \begin{table}[H]
  \centering
- \scalebox{0.625}{
+ \scalebox{0.71}{
    \begin{tabular}{|c|c|c|} 
       \hline
        {\large \bf Day} & {\large \bf Gifts received on day $\mathbf n$} 
@@ -270,7 +268,7 @@ following table $(1 \leq {\mathbf n} \leq 12)$:
   \label{tab:12_days_of_christmas}
 \end{table}
 
-
+\bigskip
 \noindent
 Interestingly, the numbers in blue in Table
 \ref{tab:12_days_of_christmas}, the number of gifts received on
@@ -300,7 +298,7 @@ school \cite{add_1_to_100}.}. For example, $T_{12} =
 \sum\limits_{k=1}^{12} k = \frac{12 \cdot 13}{2} = {13 \choose 2}
 = \mathbf{\color{blue} 78}$.
 
-\bigskip
+\medskip
 \noindent
 So how many total gifts have been received by day {\bf n}?  If we
 look at the {\bf Total number of gifts received by day n} column
@@ -377,52 +375,54 @@ number of gifts received by day n} column of Table
 (Equation (\ref{eqn:tetrahedral_number})).
 
 \vspace{2.0em}
-%
-%       Parameters
-%
-\def \nrows {14}
-%
-%	Build the figure
-%
-\begin{figure}[H]                                                               % build the figure
-  \centering                                                                    % center everything
-  \fbox {                                                                       % put a box around the figure
-    \resizebox{0.85 \textwidth}{!} {                                            % resize the figure if you want
-     \begin{mplibcode}                                                          %
-        vardef Pascal_triangle(expr n, u, v) =                                  % define the function
-        save b; numeric b[][]; clearxy;                                         %
-        b[0][0] = 1; b[0][1] = 0; label("1", origin);                           % special case the "ones"
-        for i = 1 upto n:                                                       % loop over the rows
-          x := -u*i/2; y := -i*v;                                               % draw the result at (x,y)
-          b[i][0] = 1; label("1", z);                                           % need one more "one"
-          for k = 1 upto i:                                                     % loop over the columnss
-              x := x + u;                                                       % coordinates
-              b[i][k] = b[i-1][k-1] + b[i-1][k];                                % compute thte value
-              if k = 2:                                                         % triangular numbers 
-              	label(decimal(b[i][k]),z) withcolor blue;                       % triangular numbers in blue
-              elseif k = 3:                                                     % tetrahedral number
-                label(decimal(b[i][k]),z) withcolor red;                        % tetrahedral numbers in red
-              else:                                                             % default
-                label(decimal(b[i][k]),z) withcolor black;                      % default to black
-              fi                                                                % end else:
-           endfor                                                               % end for
-           b[i][i+1] = 0;                                                       % 
-         endfor                                                                 %
-       enddef;                                                                  %
-%                                                                               %
-%       Draw the triangle                                                       %
-%                                                                               %
-       beginfig(1);                                                             % draw the triangle
-          Pascal_triangle(\nrows, 1.4cm, 1cm);                                  % draw it with \nrows
-       endfig;                                                                  %
-     \end{mplibcode}                                                            %
-    }                                                                           % end resizebox
-  }                                                                             % end fbox
- \caption{Pascal's Triangle with the triangular numbers in                      % caption the figure
-    {\bf \color{blue} blue} and the tetrahedral numbers in                      % ...
-    {\bf \color{red} red}}                                                      % caption the figure
- \label{fig:pascals_triangle}                                                   % label the figure
-\end{figure}                                                                    % end figure
+%                                                               % start building pascal's triangle
+%       Parameters and settings                                 % start with the parameters and settings
+%                                                               %
+\def \nrows {14}                                                % number of rows in the triangle
+\setlength {\fboxsep}{1em}                                      % get some more space around the \fbox	
+%                                                               %
+%       Build the figure                                        % build the figure
+%                                                               %
+\begin{figure}[H]                                               % begin the figure
+  \centering                                                    % center everything
+  \fbox {                                                       % put a box around the figure
+    \resizebox{0.80 \textwidth}{!} {                            % resize the figure if you want
+     \begin{mplibcode}                                          % meta post...
+        vardef Pascal_triangle(expr n, u, v) =                  % define the function
+        save b; numeric b[][]; clearxy;                         % declare variables
+        defaultscale := 16pt/fontsize defaultfont;              % set the font the way I want
+        b[0][0] = 1; b[0][1] = 0; label("1", origin);           % special case the "ones"
+        for i = 1 upto n:                                       % loop over the rows
+          x := -u*i/2; y := -i*v;                               % draw the result at (x,y)
+          b[i][0] = 1; label("1", z);                           % need one more "one"
+          for k = 1 upto i:                                     % loop over the columns
+              x := x + u;                                       % compute the coordinates
+              b[i][k] = b[i-1][k-1] + b[i-1][k];                % compute the value of the binomial
+              if k = 2:                                         % triangular numberss
+              	label(decimal(b[i][k]),z) withcolor blue;       % triangular numbers in blue
+              elseif k = 3:                                     % tetrahedral numbers
+                label(decimal(b[i][k]),z) withcolor red;        % tetrahedral numbers in red
+              else:                                             % default
+                label(decimal(b[i][k]),z) withcolor black;      % default to black
+              fi                                                % end else
+           endfor                                               % end for
+           b[i][i+1] = 0;                                       % 
+         endfor                                                 %
+       enddef;                                                  %
+%                                                               %
+%       Draw the triangle                                       %
+%                                                               %
+       beginfig(1);                                             % draw the triangle
+          Pascal_triangle(\nrows, 1.4cm, 1cm);                  % draw \nrows
+       endfig;                                                  %
+     \end{mplibcode}                                            %
+    }                                                           % end resizebox
+  }                                                             % end fbox
+ \caption{Pascal's Triangle with the triangular numbers in      % caption the figure
+    {\bf \color{blue} blue} and the tetrahedral numbers in      % ...
+    {\bf \color{red} red}}                                      % caption the figure
+ \label{fig:pascals_triangle}                                   % label the figure
+\end{figure}                                                    % end figure
 
 \bigskip
 \section{Geometric Interpretations}

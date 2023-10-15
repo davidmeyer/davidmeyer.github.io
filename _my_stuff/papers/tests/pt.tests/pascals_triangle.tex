@@ -164,20 +164,22 @@
     \resizebox{0.75 \textwidth}{!} {                                            % resize the figure if you want
     \begin{mplibcode}                                                           %
         vardef Pascal_triangle(expr n, u, v) =                                  % define the function
-        save b; numeric b[][]; clearxy;                                         %
+        save b; numeric b[][]; clearxy;
+        % defaultscale := 1.60;
+        defaultscale := 16pt/fontsize bold;
         b[0][0] = 1; b[0][1] = 0; label("1", origin);                           % special case the "ones"
         for i = 1 upto n:                                                       % loop over the rows
           x := -u*i/2; y := -i*v;                                               % draw the result at (x,y)
           b[i][0] = 1; label("1", z);                                           % need one more "one"
           for k = 1 upto i:                                                     % loop over the columnss
               x := x + u;                                                       % coordinates
-              b[i][k] = b[i-1][k-1] + b[i-1][k];                                % compute thte value
-              if k = 2:                                                         % triangular numbers 
-              	label(decimal(b[i][k]),z) withcolor blue;                       % triangular numbers in blue
-              elseif k=3:                                                             % 
-                label(decimal(b[i][k]),z) withcolor red;                  % tetrahedral numbers in red
-  		      else:                                                           		% default
-  		        label(decimal(b[i][k]),z) withcolor black;                  		% default to black
+              b[i][k] = b[i-1][k-1] + b[i-1][k]; 
+              if k = 2:    
+                label(decimal(b[i][k]),z) withcolor blue;                       % triangular numbers 
+              elseif k=3:                                                       % 
+                label(decimal(b[i][k]),z) withcolor red;                  		% tetrahedral numbers in red
+  		      else:                                                           	% default
+  		        label(decimal(b[i][k]),z) withcolor black;                  	% default to black
               fi
            endfor 
            b[i][i+1]=0;
