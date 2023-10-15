@@ -157,33 +157,35 @@
 \label{sec:introduction}
 The classic English Christmas carol "The Twelve Days of
 Christmas" has all kinds of interesting mathematical
-features. First, it is an example of a \emph{cumulative song}, in
-which the lyrics detail a series of increasingly numerous gifts
-given to the speaker by their "true love" on each of the twelve
-days of Christmas (the twelve days that make up the Christmas
-season, starting with Christmas Day)
-\cite{wikipedia:cumulative_song}.  So we might want to know how
-many gifts are given each day and what the total number of gifts
-are.
+features. For example, it is an example of a \emph{cumulative
+song}, in which the lyrics detail a series of increasingly
+numerous gifts given to the speaker by their "true love" on each
+of the twelve days of Christmas (the twelve days that make up the
+Christmas season, starting with Christmas Day)
+\cite{wikipedia:cumulative_song}. This cumulative property leads
+to a bunch of interesting questions including "How many gifts are
+given each day?" and "What is the total number of gifts given
+during the 12 Days of Christmas?".
 
 \bigskip
 \noindent
-The carol, whose words were apparently first published in England
-in the late $18^{\text{th}}$ century has a Roud Folk Song Index
-number of 68 \cite{wikipedia:roud_folk_song_index} (if you happen
-to be interested in that kind of thing). A large number of different 
-melodies have been associated with the song, of which the best 
-known is derived from a 1909 arrangement of a traditional folk melody 
-by English composer Frederic Austin \cite{wikipedia:twelve_days_of_christmas}. 
-There are twelve verses, each describing a gift given by "my true 
-love" on one of the twelve days of Christmas. There are many variations 
-in the lyrics, however, the lyrics given here are from Frederic Austin's
-1909 publication that established the current form of the carol
-\cite{wikipedia:frederic_austin}.
+In any event the carol's words were apparently first published in
+England in the late $18^{\text{th}}$ century (and has a Roud Folk
+Song Index number of 68 if you happen to be interested in that
+kind of thing \cite{wikipedia:roud_folk_song_index}). A large
+number of different melodies have been associated with the song,
+of which the best known is derived from a 1909 arrangement of a
+traditional folk melody by English composer Frederic Austin
+\cite{wikipedia:twelve_days_of_christmas}.  There are twelve
+verses, each describing a gift given by "my true love" on one of
+the twelve days of Christmas. Suffice it to say that are many
+variations in the lyrics. That said, the lyrics I'm using here
+are from Frederic Austin's 1909 publication that established the
+current form of the carol \cite{wikipedia:frederic_austin}.
 
-\bigskip
+\vspace{0.25em}
 \noindent
-The first three verses run, in full, as follows:
+The first three verses are:
 
 \bigskip
 \begin{enumerate}
@@ -198,28 +200,30 @@ The first three verses run, in full, as follows:
 a pear tree}.
 \end{enumerate}
 
-\bigskip
+\smallskip
 \noindent
-The subsequent verses follow the same pattern. Each verse deals
-with the next day of Christmastide, adding one new gift and then
-repeating all the earlier gifts, so that each verse is one line
-longer than its predecessor.
+The subsequent verses follow the same pattern. The verses deal
+with the next day where it adds one new gift and then repeats all the
+earlier gifts. So each verse is one line longer than the previous
+verse. The subsequent verses add
 
-\begin{itemize}
-\item 4 calling birds
-\item 5 gold rings
-\item 6 geese a-laying
-\item 7 swans a-swimming
-\item 8 maids a-milking
-\item 9 ladies dancing
-\item 10 lords a-leaping
-\item 11 pipers piping
-\item 12 drummers drumming
-\end{itemize}
+\vspace{0.375em}
+\begin{enumerate}
+  \addtocounter{enumi}{3}														% set counter so next item is 4
+  \item 4 calling birds
+  \item 5 gold rings
+  \item 6 geese a-laying
+  \item 7 swans a-swimming
+  \item 8 maids a-milking
+  \item 9 ladies dancing
+  \item 10 lords a-leaping
+  \item 11 pipers piping
+  \item 12 drummers drumming
+\end{enumerate}
 
 \section{How many gifts are received each day and what is the total?}
 The number of gifts received on day {\bf n} and the total number
-of gifts received by (including) day {\bf n} are shown in the 
+of gifts received by (including) day {\bf n} are shown in the
 following table $(1 \leq {\mathbf n} \leq 12)$:
 %
 %
@@ -291,7 +295,7 @@ T_{n}=\sum _{k=1}^{n}k = \frac {n(n+1)}{2} = {n+1 \choose 2}
 
 \noindent
 where ${\displaystyle \binom{n}{m}}$ is the familiar binomial
-coefficient\footnote{The great mathematician Carl Friedrich Gauss
+coefficient\footnote{Aside: The great mathematician Carl Friedrich Gauss
 is said to have discovered the consecutive integer formula
 (Equation (\ref{eqn:triangular_number})) while still at primary
 school \cite{add_1_to_100}.}. For example, $T_{12} =
@@ -425,7 +429,7 @@ number of gifts received by day n} column of Table
 \end{figure}                                                    % end figure
 
 \bigskip
-\section{Geometric Interpretations}
+\section{Geometric interpretations}
 \label{sec:geometric_interpretation}
 There are interesting geometric interpretations of both the
 triangular numbers and the tetrahedral numbers. So first, what
@@ -438,26 +442,28 @@ day of Christmas according to the "12 Days of Christmas".
   
 \vspace{1.0em}
 \begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.400]
+  \center{\includegraphics[frame,scale=0.425]
          {images/first_six_triangular_numbers.png}} 
   \caption{The First Six Triangular Numbers}
   \label{fig:triangular_numbers}
 \end{figure}
 
 
+\medskip
 \noindent
 Next, what are the tetrahedral numbers? As we saw in Equation
 (\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
 number is the sum of the first $n$ triangular numbers
-\cite{wolfram:tetrahedral_numbers}. For example, $T_{e_{4}}$ is
-depicted in Figure \ref{fig:tetrahedral_numbers}. The
-$n^{\text{th}}$ tetrahedral number turns out to be the number of
-gifts received up to and including day {\bf n} in "The 12 Days of
-Christmas".
+\cite{wolfram:tetrahedral_numbers}. If we stack up these
+triangular numbers we get a tetrahedron (hence the name). For
+example, $T_{e_{4}}$ is depicted in Figure
+\ref{fig:tetrahedral_numbers}. The $n^{\text{th}}$ tetrahedral
+number turns out to be the number of gifts received up to and
+including day {\bf n} in "The 12 Days of Christmas".
 
 \vspace{2.5em}
 \begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.255]
+  \center{\includegraphics[frame,scale=0.30]
                           {images/tetrahedral_numbers.png}} 
   \caption{The Tetrahedral Numbers}
   \label{fig:tetrahedral_numbers}
@@ -465,16 +471,17 @@ Christmas".
 %
 %
 %
-\section{Conclusions}
-\label{sec:conclusions}
+% \section{Conclusions}
+% \label{sec:conclusions}
 %
 %
 %
-\section{Acknowledgements}
-\label{sec:acknowledgements}
+% \section{Acknowledgements}
+% \label{sec:acknowledgements}
 %
 %	LaTeX source on overleaf.com
 %
+\vspace{1.0em}
 \section*{\LaTeX \hspace{0.025 mm} Source}
 \url{https://www.overleaf.com/read/ssswxrxftqvn}
 %
