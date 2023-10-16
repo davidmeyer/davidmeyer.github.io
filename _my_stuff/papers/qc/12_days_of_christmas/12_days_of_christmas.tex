@@ -363,22 +363,23 @@ T_{e_{34}}    = T_{119}      = \; 7140
 \end{array}
 \end{equation*}
 
-\vspace{1.5em}
-\noindent
-Also interesting is the connection to Pascal's triangle
+\section{Pascal's triangle}
+\label{sec:pascals_triangle}
+"The 12 Days of Christmas" also has interesting
+connections to Pascal's triangle
 \cite{wiki:pascals_triangle}. Specifically, the $3^{\text{rd}}$
-diagonal row of Pascal's triangle, shown in blue in Figure
+diagonal of Pascal's triangle, shown in blue in Figure
 \ref{fig:pascals_triangle}, contains the numbers we see in {\bf
 Gifts received on day n} column of Table
 \ref{tab:12_days_of_christmas}. These are the triangular numbers
 (Equation (\ref{eqn:triangular_number})).  Similarly, the
-$4^{\text{th}}$ diagonal row of Pascal's triangle, shown in red
+$4^{\text{th}}$ diagonal of Pascal's triangle, shown in red
 in Figure \ref{fig:pascals_triangle}, contains the {\bf Total
 number of gifts received by day n} column of Table
 \ref{tab:12_days_of_christmas}. These are the tetrahedral numbers
 (Equation (\ref{eqn:tetrahedral_number})).
 
-\vspace{2.0em}
+\vspace{1.5em}
 %                                                               % start building pascal's triangle
 %       Parameters and settings                                 % start with the parameters and settings
 %                                                               %
@@ -390,7 +391,7 @@ number of gifts received by day n} column of Table
 \begin{figure}[H]                                               % begin the figure
   \centering                                                    % center everything
   \fbox {                                                       % put a box around the figure
-    \resizebox{0.80 \textwidth}{!} {                            % resize the figure if you want
+    \resizebox{0.75 \textwidth}{!} {                            % resize the figure if you want
      \begin{mplibcode}                                          % MetaPost...
         vardef Pascal_triangle(expr n, u, v) =                  % define the function
           save b; numeric b[][]; clearxy;                       % declare some variables
@@ -428,7 +429,7 @@ number of gifts received by day n} column of Table
   \label{fig:pascals_triangle}                                  % label the figure
 \end{figure}                                                    % end figure
 
-\bigskip
+%\bigskip
 \section{Geometric interpretations}
 \label{sec:geometric_interpretation}
 There are interesting geometric interpretations of both the
@@ -440,7 +441,7 @@ sum of the integers from 1 to $n$ \cite{wiki:triangle_numbers}.
 This is also the number of gifts received on the $n^{\text{th}}$
 day of Christmas according to the "12 Days of Christmas".
   
-\vspace{1.0em}
+\vspace{1.25em}
 \begin{figure}[H]
   \center{\includegraphics[frame,scale=0.425]
          {images/first_six_triangular_numbers.png}} 
@@ -449,19 +450,19 @@ day of Christmas according to the "12 Days of Christmas".
 \end{figure}
 
 
-\medskip
+\vspace{1.0em}
 \noindent
-Next, what are the tetrahedral numbers? As we saw in Equation
+Ok, then what are the tetrahedral numbers? As we saw in Equation
 (\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
 number is the sum of the first $n$ triangular numbers
 \cite{wolfram:tetrahedral_numbers}. If we stack up these
-triangular numbers we get a tetrahedron (hence the name). For
+triangular numbers we get a tetrahedron (hence the name "tetrahedral number"). For
 example, $T_{e_{4}}$ is depicted in Figure
 \ref{fig:tetrahedral_numbers}. The $n^{\text{th}}$ tetrahedral
 number turns out to be the number of gifts received up to and
 including day {\bf n} in "The 12 Days of Christmas".
 
-\vspace{2.5em}
+\vspace{2.0em}
 \begin{figure}[H]
   \center{\includegraphics[frame,scale=0.30]
                           {images/tetrahedral_numbers.png}} 
@@ -481,7 +482,7 @@ including day {\bf n} in "The 12 Days of Christmas".
 %
 %	LaTeX source on overleaf.com
 %
-\vspace{1.0em}
+\vspace{0.75em}
 \section*{\LaTeX \hspace{0.025 mm} Source}
 \url{https://www.overleaf.com/read/ssswxrxftqvn}
 %

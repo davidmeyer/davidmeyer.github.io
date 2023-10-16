@@ -203,6 +203,30 @@
 % \label{fig:some_figure}
 % \end{figure}
 %
+%	Build a figure that is resizable and framed with \fbox
+% 
+%                                                               % start building pascal's triangle
+%       Parameters and settings                                 % start with the parameters and settings
+%                                                               %
+% \def \nrows {14}                                              % number of rows in the triangle
+% \setlength {\fboxsep}{1em}                                    % get some more space around the \fbox	
+%                                                               %
+%       Build the figure                                        % build the figure
+%                                                               %
+% \begin{figure}[H]                                             % begin the figure
+%   \centering                                                  % center everything
+%   \fbox {                                                     % put a box around the figure
+%     \resizebox{0.75 \textwidth}{!} {                          % resize the figure if you want
+%     															%
+%     <whatever>												% whatever goes in the figure
+%																%
+%      }                                                        % end resizebox
+%   }                                                           % end fbox
+%  \caption{X}                                     		   		% caption the figure
+%   \label{fig:X}                                  			    % label the figure
+% \end{figure}                                                  % end figure
+% 
+%
 %
 %
 \section{Conclusions}

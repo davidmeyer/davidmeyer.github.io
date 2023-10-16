@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  15 OCT 2023 14:12
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  16 OCT 2023 05:51
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1539,18 +1539,18 @@ Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
-Module luamplib Info: flushing figure 1 on input line 424
+Module luamplib Info: flushing figure 1 on input line 425
  [3]
-<images/first_six_triangular_numbers.png, id=105, 441.65pt x 370.38374pt>
+<images/first_six_triangular_numbers.png, id=109, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
- line 446.
+ line 447.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=109, 691.58376pt x 558.085pt>
+<images/tetrahedral_numbers.png, id=113, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
-Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 467
+Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 468
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
  (./12_days_of_christmas.bbl [4<./images/first_six_triangular_numbers.png><./ima
@@ -1562,18 +1562,18 @@ Underfull \hbox (badness 4048) in paragraph at lines 10--15
 
 ) [5] (./12_days_of_christmas.aux)
 Package rerunfilecheck Info: File `12_days_of_christmas.out' has not changed.
-(rerunfilecheck)             Checksum: 6005649BF4FAE868055F259A930B1D5C;645.
+(rerunfilecheck)             Checksum: D1BF6220A1E023E1B1165B58CFCD983C;776.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54565 strings out of 478531
+ 54568 strings out of 478531
  100000,2373549 words of node,token memory allocated
  820 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 62 attribute, 64 glue_spec
 , 62 attribute_list, 2 write, 7 pdf_action nodes
-   avail lists: 1:1,2:767,3:1048,4:138,5:392,6:45,7:6230,8:114,9:1031,10:14,11:2
+   avail lists: 1:1,2:818,3:1079,4:138,5:392,6:45,7:6230,8:114,9:1045,10:14,11:2
 54
- 72647 multiletter control sequences out of 65536+600000
+ 72649 multiletter control sequences out of 65536+600000
  126 fonts using 9653567 bytes
  132i,13n,128p,759b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
@@ -1598,10 +1598,10 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 12_days_of_christmas.pdf (5 pages, 238536 bytes).
+Output written on 12_days_of_christmas.pdf (5 pages, 238691 bytes).
 
-PDF statistics: 250 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 131072)
- 40 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 254 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 131072)
+ 48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
