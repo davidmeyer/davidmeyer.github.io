@@ -288,7 +288,7 @@ follows:
 
 
 \begin{equation}
-T_{n}=\sum _{k=1}^{n}k = \frac {n(n+1)}{2} = {n+1 \choose 2}
+T_{n}= \sum _{k=1}^{n} k = \frac {n(n+1)}{2} = {n+1 \choose 2}
 \label{eqn:triangular_number}
 \end{equation}
 
@@ -312,7 +312,7 @@ n} is the sum of the gifts received on the previous days plus the
 gift received on day {\bf n}.  The number of gifts received by
 day {\bf n} is shown in red in Table
 \ref{tab:12_days_of_christmas}.  These numbers are called the
-tetrahedral numbers and are defined as follows:
+tetrahedral numbers and are defined as follows \cite{A000292}:
 
 
 \begin{equation}
@@ -329,7 +329,7 @@ where $T_{k}$ is the $k^{\text{th}}$ triangular number
 \bigskip
 \noindent
 It turns out that the total number of gifts received by day 
-12, $T_{e_{12}}$, is $\sum\limits_{k=1}^{12} T_k = \frac{12 
+12, $T_{e_{12}}$, is $\sum\limits_{k=1}^{12} T_k =\frac{12 
 \cdot 13 \cdot 14}{6} = \binom{14}{3} = \mathbf{\color{red}
 {364}}$.
 
@@ -363,6 +363,7 @@ T_{e_{34}}    = T_{119}      = \; 7140
 \end{array}
 \end{equation*}
 
+\vspace{0.25em}
 \section{Pascal's triangle}
 \label{sec:pascals_triangle}
 "The 12 Days of Christmas" also has interesting
@@ -429,11 +430,10 @@ number of gifts received by day n} column of Table
   \label{fig:pascals_triangle}                                  % label the figure
 \end{figure}                                                    % end figure
 
-%\bigskip
 \section{Geometric interpretations}
 \label{sec:geometric_interpretation}
 There are interesting geometric interpretations of both the
-triangular numbers and the tetrahedral numbers. So first, what
+triangular and tetrahedral numbers. So first, what
 exactly is a triangular number?  The first six triangular numbers
 are depicted as triangles in Figure \ref{fig:triangular_numbers}.
 We can see from the figure that a triangular number $T_n$ is the
@@ -456,17 +456,17 @@ Ok, then what are the tetrahedral numbers? As we saw in Equation
 (\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
 number is the sum of the first $n$ triangular numbers
 \cite{wolfram:tetrahedral_numbers}. If we stack up these
-triangular numbers we get a tetrahedron (hence the name "tetrahedral number"). For
-example, $T_{e_{4}}$ is depicted in Figure
-\ref{fig:tetrahedral_numbers}. The $n^{\text{th}}$ tetrahedral
-number turns out to be the number of gifts received up to and
-including day {\bf n} in "The 12 Days of Christmas".
+triangular numbers we get a tetrahedron (hence the name 
+"tetrahedral number"). For example, $T_{e_{4}}$ is depicted 
+in Figure \ref{fig:tetrahedral_numbers}. The $n^{\text{th}}$ 
+tetrahedral number turns out to be the number of gifts received 
+up to and including day {\bf n} in "The 12 Days of Christmas".
 
-\vspace{2.0em}
+\vspace{1.75em}
 \begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.30]
+  \center{\includegraphics[frame,scale=0.270]
                           {images/tetrahedral_numbers.png}} 
-  \caption{The Tetrahedral Numbers}
+  \caption{The $4^{\text{th}}$ tetrahedral number $T_{e_{4}} = 20$}
   \label{fig:tetrahedral_numbers}
 \end{figure}
 %
