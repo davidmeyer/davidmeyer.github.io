@@ -183,11 +183,11 @@ variations in the lyrics. That said, the lyrics I'm using here
 are from Frederic Austin's 1909 publication that established the
 current form of the carol \cite{wikipedia:frederic_austin}.
 
-\vspace{0.25em}
+\bigskip
 \noindent
 The first three verses are:
 
-\bigskip
+\smallskip
 \begin{enumerate}
 \item On the first day of Christmas my true love sent to me:
 \emph{A partridge in a pear tree}.
@@ -276,7 +276,7 @@ following table $(1 \leq {\mathbf n} \leq 12)$:
 \vspace{1.25em}
 %
 %
-\renewcommand*{\arraystretch}{1.90}                                             % get some extra space in the table
+\renewcommand*{\arraystretch}{1.95}                                             % get some extra space in the table
 %
 %
 %
@@ -285,8 +285,8 @@ following table $(1 \leq {\mathbf n} \leq 12)$:
  \scalebox{0.70}{
    \begin{tabular}{|c|c|c|} 
       \hline
-       {\large \bf Day} & {\large \bf Gifts received on day $\mathbf n$} 
-                       & {\large \bf Total number of gifts received by day $\mathbf n$} \\
+       {\large \bf Day} & {\large \bf Gifts received on day n} 
+                       & {\large \bf Total number of gifts received by day n} \\
        \hline
        \hline
        1  & {\bf \color{blue}{1}} & {\bf \color{red}{1}} \\
@@ -372,7 +372,7 @@ T_{e_n} = \sum\limits_{k=1}^{n} T_k = \frac{n(n+1)(n+2)}{6} =
 where $T_{k}$ is the $k^{\text{th}}$ triangular number 
 (Equation (\ref{eqn:triangular_number})).
 
-\bigskip
+\vspace{0.74em}
 \noindent
 It turns out that the total number of gifts received by day 
 12, $T_{e_{12}}$, is $\sum\limits_{k=1}^{12} T_k =\frac{12 
@@ -438,7 +438,7 @@ number of gifts received by day n} column of Table
 \begin{figure}[H]                                               % begin the figure
   \centering                                                    % center everything
   \fbox {                                                       % put a box around the figure
-    \resizebox{0.75 \textwidth}{!} {                            % resize the figure if you want
+    \resizebox{0.725 \textwidth}{!} {                           % resize the figure if you want
      \begin{mplibcode}                                          % MetaPost...
         vardef Pascal_triangle(expr n, u, v) =                  % define the function
           save b; numeric b[][]; clearxy;                       % declare some variables
