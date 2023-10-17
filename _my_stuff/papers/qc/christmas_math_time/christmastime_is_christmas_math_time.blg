@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: christmastime_is_christmas_math_time.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 18 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            577 strings with 7376 characters,
-and the built_in function-call counts, 3928 in all, are:
-= -- 395
-> -- 126
+            581 strings with 7500 characters,
+and the built_in function-call counts, 4145 in all, are:
+= -- 417
+> -- 133
 < -- 0
-+ -- 54
-- -- 36
-* -- 113
-:= -- 676
-add.period$ -- 72
-call.type$ -- 18
-change.case$ -- 72
++ -- 57
+- -- 38
+* -- 119
+:= -- 713
+add.period$ -- 76
+call.type$ -- 19
+change.case$ -- 76
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 126
-empty$ -- 397
-format.name$ -- 36
-if$ -- 864
+cite$ -- 19
+duplicate$ -- 133
+empty$ -- 419
+format.name$ -- 38
+if$ -- 912
 int.to.chr$ -- 0
-int.to.str$ -- 18
+int.to.str$ -- 19
 missing$ -- 0
-newline$ -- 111
-num.names$ -- 36
-pop$ -- 146
+newline$ -- 117
+num.names$ -- 38
+pop$ -- 154
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 57
 quote$ -- 0
-skip$ -- 106
+skip$ -- 112
 stack$ -- 0
-substring$ -- 90
-swap$ -- 18
+substring$ -- 95
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 76
 warning$ -- 0
-while$ -- 36
-width$ -- 20
-write$ -- 217
+while$ -- 38
+width$ -- 21
+write$ -- 229

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  17 OCT 2023 09:20
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  17 OCT 2023 10:18
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -1503,7 +1503,7 @@ File: images/infinite_gift.jpg Graphic file (type jpg)
 <use images/infinite_gift.jpg>
 Package luatex.def Info: images/infinite_gift.jpg  used on input line 141.
 (luatex.def)             Requested size: 1204.49707pt x 680.54083pt.
-<images/gabriels_horn.jpg, id=52, 2033.5975pt x 1521.685pt>
+<images/gabriels_horn.jpg, id=53, 2033.5975pt x 1521.685pt>
 File: images/gabriels_horn.jpg Graphic file (type jpg)
 <use images/gabriels_horn.jpg>
 Package luatex.def Info: images/gabriels_horn.jpg  used on input line 173.
@@ -1528,13 +1528,13 @@ Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Module luamplib Info: flushing figure 1 on input line 534
  [5]
-<images/first_six_triangular_numbers.png, id=164, 441.65pt x 370.38374pt>
+<images/first_six_triangular_numbers.png, id=166, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
  line 555.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=168, 691.58376pt x 558.085pt>
+<images/tetrahedral_numbers.png, id=170, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
 Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 576
@@ -1542,7 +1542,7 @@ Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 576
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
  [6<./images/first_six_triangular_numbers.png><./images/tetrahedral_numbers.png>
 ]
-<images/christmas_stocking_theorem.jpg, id=184, 1750.54pt x 1238.6275pt>
+<images/christmas_stocking_theorem.jpg, id=186, 1750.54pt x 1238.6275pt>
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package luatex.def Info: images/christmas_stocking_theorem.jpg  used on input l
@@ -1550,37 +1550,37 @@ ine 614.
 (luatex.def)             Requested size: 1750.53574pt x 1238.6245pt.
  [7<./images/christmas_stocking_theorem.jpg>]
 (./christmastime_is_christmas_math_time.bbl
-Underfull \hbox (badness 1789) in paragraph at lines 4--8
+Underfull \hbox (badness 1789) in paragraph at lines 10--14
 []\TU/lmr/m/n/12 Eric W. Weis-stein.  Tetra-he-dral Num-ber.  []$\TU/lmtt/m/n/1
 2 https://mathworld.wolfram.com/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--61
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
 \TU/lmtt/m/n/12 Proofs_of_Fermat%27s_theorem_on_sums_of_two_squares&oldid=989540
 767$[]\TU/lmr/m/n/12 ,
  []
 
 [8]
-Underfull \hbox (badness 4303) in paragraph at lines 80--86
+Underfull \hbox (badness 4303) in paragraph at lines 86--92
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Pas-cal’s Tri-an-gle --- Wikipedi
 a, The Free En-cy-
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 96--102
+Underfull \hbox (badness 1533) in paragraph at lines 102--108
 \TU/lmr/m/n/12 pe-dia.  []$\TU/lmtt/m/n/12 https://en.wikipedia.org/w/index.php?
 title=Binomial_coefficient&
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 104--110
+Underfull \hbox (badness 2012) in paragraph at lines 110--116
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Cu-mu-la-tive Song --- Wikipedia, 
 The Free En-cy-clo-
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 112--118
+Underfull \hbox (badness 3128) in paragraph at lines 118--124
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Fred-eric Austin --- Wikipedia, The
  Free En-cy-clo-
  []
@@ -1592,16 +1592,16 @@ s not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54186 strings out of 478531
+ 54188 strings out of 478531
  100000,2373549 words of node,token memory allocated
- 956 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 81 attribute, 64 glue_spec
-, 81 attribute_list, 2 write, 17 pdf_action nodes
-   avail lists: 1:1,2:784,3:1079,4:133,5:412,6:36,7:7536,8:130,9:1044,10:18,11:3
+ 966 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 82 attribute, 64 glue_spec
+, 82 attribute_list, 2 write, 18 pdf_action nodes
+   avail lists: 1:1,2:782,3:1079,4:133,5:412,6:35,7:7538,8:132,9:1044,10:18,11:3
 32
- 72253 multiletter control sequences out of 65536+600000
+ 72254 multiletter control sequences out of 65536+600000
  114 fonts using 9046863 bytes
- 132i,13n,128p,775b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,13n,128p,775b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
@@ -1632,11 +1632,11 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (9 pages, 582089 byte
+Output written on christmastime_is_christmas_math_time.pdf (9 pages, 582472 byte
 s).
 
-PDF statistics: 380 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
- 64 named destinations out of 1000 (max. 131072)
+PDF statistics: 385 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 

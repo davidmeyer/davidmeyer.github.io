@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{wolfram:gabriels_horn}
+{Eric W. Weisstein}.
+\newblock {Gabriel's Horn}.
+\newblock \url{https://mathworld.wolfram.com/GabrielsHorn.html}, 2023.
+\newblock [Online; accessed 17-October-2023].
+
 \bibitem{wolfram:tetrahedral_numbers}
 {Eric W. Weisstein}.
 \newblock {Tetrahedral Number}.
