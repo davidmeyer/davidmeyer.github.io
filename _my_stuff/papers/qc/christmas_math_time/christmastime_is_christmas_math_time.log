@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  17 OCT 2023 10:18
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  17 OCT 2023 11:50
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -1550,37 +1550,37 @@ ine 614.
 (luatex.def)             Requested size: 1750.53574pt x 1238.6245pt.
  [7<./images/christmas_stocking_theorem.jpg>]
 (./christmastime_is_christmas_math_time.bbl
-Underfull \hbox (badness 1789) in paragraph at lines 10--14
+Underfull \hbox (badness 1789) in paragraph at lines 24--28
 []\TU/lmr/m/n/12 Eric W. Weis-stein.  Tetra-he-dral Num-ber.  []$\TU/lmtt/m/n/1
 2 https://mathworld.wolfram.com/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--67
+Underfull \hbox (badness 10000) in paragraph at lines 67--74
 \TU/lmtt/m/n/12 Proofs_of_Fermat%27s_theorem_on_sums_of_two_squares&oldid=989540
 767$[]\TU/lmr/m/n/12 ,
  []
 
 [8]
-Underfull \hbox (badness 4303) in paragraph at lines 86--92
+Underfull \hbox (badness 4303) in paragraph at lines 93--99
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Pas-cal’s Tri-an-gle --- Wikipedi
 a, The Free En-cy-
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 102--108
+Underfull \hbox (badness 1533) in paragraph at lines 109--115
 \TU/lmr/m/n/12 pe-dia.  []$\TU/lmtt/m/n/12 https://en.wikipedia.org/w/index.php?
 title=Binomial_coefficient&
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 110--116
+Underfull \hbox (badness 2012) in paragraph at lines 117--123
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Cu-mu-la-tive Song --- Wikipedia, 
 The Free En-cy-clo-
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 118--124
+Underfull \hbox (badness 3128) in paragraph at lines 125--131
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Fred-eric Austin --- Wikipedia, The
  Free En-cy-clo-
  []
@@ -1597,11 +1597,11 @@ Here is how much of LuaTeX's memory you used:
  966 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 82 attribute, 64 glue_spec
 , 82 attribute_list, 2 write, 18 pdf_action nodes
-   avail lists: 1:1,2:782,3:1079,4:133,5:412,6:35,7:7538,8:132,9:1044,10:18,11:3
+   avail lists: 1:1,2:782,3:1079,4:133,5:412,6:35,7:7540,8:134,9:1044,10:18,11:3
 32
  72254 multiletter control sequences out of 65536+600000
  114 fonts using 9046863 bytes
- 132i,13n,128p,775b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,13n,128p,775b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
@@ -1632,7 +1632,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (9 pages, 582472 byte
+Output written on christmastime_is_christmas_math_time.pdf (9 pages, 582221 byte
 s).
 
 PDF statistics: 385 PDF objects out of 1000 (max. 8388607)

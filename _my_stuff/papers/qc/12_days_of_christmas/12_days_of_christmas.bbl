@@ -1,17 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{gauss_day_of_reckoning}
+{Brian Hayes}.
+\newblock {Gauss's Day of Reckoning}.
+\newblock
+  \url{https://www.americanscientist.org/article/gausss-day-of-reckoning}.
+\newblock [Online; accessed 17-October-2023].
+
 \bibitem{wolfram:tetrahedral_numbers}
 {Eric W. Weisstein}.
 \newblock {Tetrahedral Number}.
 \newblock \url{https://mathworld.wolfram.com/TetrahedralNumber.html}, 2023.
 \newblock [Online; accessed 12-October-2023].
-
-\bibitem{add_1_to_100}
-{Mathlete's Corner}.
-\newblock {Adding numbers from 1 to 100}.
-\newblock
-  \url{https://sites.google.com/site/funproblemsolving/topics-1/adding-numbers-from-1-to-100}.
-\newblock [Online; accessed 20-August-2021].
 
 \bibitem{A000292}
 {N. J. A. Sloane}.
@@ -66,7 +66,7 @@
 \newblock [Online; accessed 11-October-2023].
 
 \bibitem{wikipedia:twelve_days_of_christmas}
-{Wikipedia contributors}.
+{Wikipedia Contributors}.
 \newblock {The Twelve Days of Christmas (song) --- {Wikipedia}{,} The Free
   Encyclopedia}.
 \newblock

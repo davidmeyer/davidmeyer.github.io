@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{gauss_day_of_reckoning}
+{Brian Hayes}.
+\newblock {Gauss's Day of Reckoning}.
+\newblock
+  \url{https://www.americanscientist.org/article/gausss-day-of-reckoning}.
+\newblock [Online; accessed 17-October-2023].
+
+\bibitem{christmas_stocking_theorem}
+{Eric W. Weisstein}.
+\newblock {Christmas Stocking Theorem}.
+\newblock \url{https://mathworld.wolfram.com/ChristmasStockingTheorem.html},
+  2017.
+\newblock [Online; accessed 25-December-2022].
+
 \bibitem{wolfram:gabriels_horn}
 {Eric W. Weisstein}.
 \newblock {Gabriel's Horn}.
@@ -11,13 +25,6 @@
 \newblock {Tetrahedral Number}.
 \newblock \url{https://mathworld.wolfram.com/TetrahedralNumber.html}, 2023.
 \newblock [Online; accessed 12-October-2023].
-
-\bibitem{add_1_to_100}
-{Mathlete's Corner}.
-\newblock {Adding numbers from 1 to 100}.
-\newblock
-  \url{https://sites.google.com/site/funproblemsolving/topics-1/adding-numbers-from-1-to-100}.
-\newblock [Online; accessed 20-August-2021].
 
 \bibitem{A000292}
 {N. J. A. Sloane}.
@@ -138,12 +145,5 @@
   \url{https://en.wikipedia.org/w/index.php?title=The_Twelve_Days_of_Christmas_(song)&oldid=1176191708},
   2023.
 \newblock [Online; accessed 11-October-2023].
-
-\bibitem{christmas_stocking_theorem}
-{Wolfram MathWorld}.
-\newblock {Christmas Stocking Theorem}.
-\newblock \url{https://mathworld.wolfram.com/ChristmasStockingTheorem.html},
-  2017.
-\newblock [Online; accessed 25-December-2022].
 
 \end{thebibliography}
