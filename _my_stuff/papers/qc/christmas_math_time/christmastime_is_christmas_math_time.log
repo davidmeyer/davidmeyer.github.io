@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  19 OCT 2023 07:15
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  19 OCT 2023 07:41
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -1597,7 +1597,7 @@ Here is how much of LuaTeX's memory you used:
  4806 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1042 attribute, 64 glue_sp
 ec, 1042 attribute_list, 2 write, 18 pdf_action nodes
-   avail lists: 1:1,2:7604,3:2321,4:526,5:923,6:35,7:8612,8:121,9:7191,10:18,11:
+   avail lists: 1:2,2:7592,3:2319,4:526,5:921,6:35,7:8611,8:121,9:7190,10:18,11:
 332
  72378 multiletter control sequences out of 65536+600000
  114 fonts using 9046863 bytes
@@ -1632,7 +1632,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (9 pages, 588322 byte
+Output written on christmastime_is_christmas_math_time.pdf (9 pages, 588194 byte
 s).
 
 PDF statistics: 387 PDF objects out of 1000 (max. 8388607)
