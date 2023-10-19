@@ -539,12 +539,12 @@ of gifts received by day n} column of Table
 \end{figure}                                                            % end figure
 
 
-\bigskip
 \noindent
 Pascal's triangle can also be drawn with binomial coefficients.
-This is shown is Figure \ref{fig:pascals_triangle_with_binomial_coefficients}.
+This is shown is Figure \ref{fig:pascals_triangle_with_binomial_coefficients}
+with the triangular numbers in blue and the tetrahedral numbers in red.
 
-\vspace{1em}
+\vspace{1.25em}
 %
 %       Parameters
 %
@@ -555,7 +555,7 @@ This is shown is Figure \ref{fig:pascals_triangle_with_binomial_coefficients}.
 %
 \begin{figure}[H]                                                       % build the triangle
   \centering                                                            % center everything
-   \resizebox{0.65 \textwidth}{!} {                                     % resize the figure if you want
+   \resizebox{0.55 \textwidth}{!} {                                     % resize the figure if you want
     \begin{tikzpicture} [framed,scale=0.90]                             % put a frame on the tikzpicture 
        \foreach \n in {0,...,\nrows} {                                  % iterate over rows
           \foreach \k in {0,...,\n} {                                   % iterate over columns
@@ -574,29 +574,27 @@ This is shown is Figure \ref{fig:pascals_triangle_with_binomial_coefficients}.
   \label{fig:pascals_triangle_with_binomial_coefficients}
 \end{figure}
 
-
-\vspace{0.25em}
+\smallskip
 \subsection{Geometric interpretations}
 \label{subsec:geometric_interpretation}
 There are interesting geometric interpretations of both the
 triangular and tetrahedral numbers. So first, what exactly is a
 triangular number?  The first six triangular numbers are depicted
 as triangles in Figure \ref{fig:triangular_numbers}.  We can see
-from the figure that a triangular number $T_n$ is the sum of the
-integers from 1 to $n$ \cite{wiki:triangle_numbers}.  This is
-also the number of gifts received on the $n^{\text{th}}$ day of
-Christmas according to the "12 Days of Christmas".
+from the figure that the $n^{\text{th}}$ triangular number, $T_n$,
+is the sum of the integers from 1 to $n$ \cite{wiki:triangle_numbers}.  
+This is the number of gifts received on the $n^{\text{th}}$ day of
+Christmas according to "The 12 Days of Christmas".
   
-\vspace{1.180em}
+\vspace{1.05em}
 \begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.425]
+  \center{\includegraphics[frame,scale=0.35]
          {images/first_six_triangular_numbers.png}} 
   \caption{The First Six Triangular Numbers}
   \label{fig:triangular_numbers}
 \end{figure}
 
 
-\vspace{1.0em}
 \noindent
 Ok, then what are the tetrahedral numbers? As we saw in Equation
 (\ref{eqn:tetrahedral_number}), the $n^{\text{th}}$ tetrahedral
@@ -607,10 +605,12 @@ triangular numbers we get a tetrahedron (hence the name
 Figure \ref{fig:tetrahedral_numbers}. The $n^{\text{th}}$
 tetrahedral number turns out to be the number of gifts received
 up to and including day {\bf n} in "The 12 Days of Christmas".
-
-\vspace{1.75em}
+%
+%
+%
+\vspace{1.0em}
 \begin{figure}[H]
-  \center{\includegraphics[frame,scale=0.270]
+  \center{\includegraphics[frame,scale=0.25]
                           {images/tetrahedral_numbers.png}} 
   \caption{The $4^{\text{th}}$ tetrahedral number $T_{e_{4}} = 20$}
   \label{fig:tetrahedral_numbers}
@@ -618,7 +618,6 @@ up to and including day {\bf n} in "The 12 Days of Christmas".
 %
 %
 %
-\vspace{0.50em}
 \section{The Christmas Stocking Theorem}
 "The Christmas stocking theorem, also known as the hockey stick
 theorem, states that the sum of a diagonal string of numbers in
@@ -628,28 +627,28 @@ equal to the number to the left and below (the "toe") bottom of
 the diagonal (the "heel"; Butterworth 2002)."
 \cite{christmas_stocking_theorem}.
 
-% \bigskip
+\bigskip
 \noindent
 That is, Christmas Stocking Theorem states that for all $n \in
 \mathbb{N}$ we have
 
-\bigskip
+\medskip
 \begin{equation*}
 \sum\limits_{i=0}^{k-1} {n+i \choose i} = {k+n \choose k-1}
 \end{equation*}
 
-\bigskip
-{\setstretch{2.0}
+\smallskip
+{\setstretch{1.75}
 \noindent
 where ${\displaystyle {n \choose k}}$ is a binomial coefficient
 (aka "$n$ choose $k$") \cite{wiki:binomial_coefficient}. This
-(and the Christmas stocking) is shown in Figure
+is shown in Figure
 \ref{fig:christmas_stocking_theorem}.  \par}
 
 
-\bigskip
+\vspace{1.25em}
 \begin{figure} [H]
-\center{\includegraphics[frame, scale=0.185] {images/christmas_stocking_theorem.jpg}}
+\center{\includegraphics[frame, scale=0.195] {images/christmas_stocking_theorem.jpg}}
 \caption{The Christmas Stocking Theorem}
 \label{fig:christmas_stocking_theorem}
 \end{figure}
