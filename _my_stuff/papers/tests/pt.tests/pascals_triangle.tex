@@ -151,6 +151,42 @@
 %
 \section{Introduction}
 \label{sec:introduction}
+
+%
+%	Draw Pascal's Triangle with binomial coefficients. The triangular numbers
+%	are shown in blue.
+%
+
+%
+%       Parameters
+%
+\newcommand \nrows {14}                                                 % number of rows
+%
+%
+%	Draw the picture
+%
+\begin{figure}[H]                                                       % build the triangle
+  \centering                                                            % center everything
+   \resizebox{0.75 \textwidth}{!} {                                     % resize the figure if you want
+    \begin{tikzpicture} [framed,scale=0.90]                             % put a frame on the tikzpicture 
+       \foreach \n in {0,...,\nrows} {                                  % iterate over rows
+          \foreach \k in {0,...,\n} {                                   % iterate over columns
+             \node at (\k-\n/2,-\n) {                                   % put the coefficient here
+             \ifnum \k = 2 {\color{blue} ${\binom{\n}{\k}}$}            % k = 2 => triangular number
+                \else                                                   % else
+                  \ifnum \k = 3 {\color{red}${\binom{\n}{\k}}$}         % k =3 => tetrahedral number
+                    \else {\color{black}${\binom{\n}{\k}}$}             % default to black
+                   \fi                                                  % end \ifnum \k = 3
+              \fi};                                                     % end \ifnum \k = 2
+          }                                                             % end \foreach \k ...
+        }                                                               % end \foreach \n ...
+    \end{tikzpicture}                                                   % end tikzpicture
+   }                                                                    % end resizebox
+  \caption{Pascal's Triangle with Binomial Coefficients}
+  \label{fig:pascals_triangle_with_binomial_coefficients}
+\end{figure}
+
+
 %
 %       Parameters
 %

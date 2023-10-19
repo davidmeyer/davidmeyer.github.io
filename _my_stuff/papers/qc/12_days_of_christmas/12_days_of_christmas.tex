@@ -474,6 +474,43 @@ of gifts received by day n} column of Table
   \label{fig:pascals_triangle}                                          % label the figure
 \end{figure}                                                            % end figure
 
+
+\bigskip
+\noindent
+Pascal's triangle can also be drawn with binomial coefficients.
+This is shown is Figure \ref{fig:pascals_triangle_with_binomial_coefficients}.
+
+\vspace{1em}
+%
+%       Parameters
+%
+\def \nrows {14}                                                 		% number of rows
+%
+%
+%	Draw the picture
+%
+\begin{figure}[H]                                                       % build the triangle
+  \centering                                                            % center everything
+   \resizebox{0.65 \textwidth}{!} {                                     % resize the figure if you want
+    \begin{tikzpicture} [framed,scale=0.90]                             % put a frame on the tikzpicture 
+       \foreach \n in {0,...,\nrows} {                                  % iterate over rows
+          \foreach \k in {0,...,\n} {                                   % iterate over columns
+             \node at (\k-\n/2,-\n) {                                   % put the coefficient here
+             \ifnum \k = 2 {\color{blue} ${\binom{\n}{\k}}$}            % k = 2 => triangular number
+                \else                                                   % else
+                  \ifnum \k = 3 {\color{red}${\binom{\n}{\k}}$}         % k =3 => tetrahedral number
+                    \else {\color{black}${\binom{\n}{\k}}$}             % default to black
+                   \fi                                                  % end \ifnum \k = 3
+              \fi};                                                     % end \ifnum \k = 2
+          }                                                             % end \foreach \k ...
+        }                                                               % end \foreach \n ...
+    \end{tikzpicture}                                                   % end tikzpicture
+   }                                                                    % end resizebox
+  \caption{Pascal's Triangle with Binomial Coefficients}
+  \label{fig:pascals_triangle_with_binomial_coefficients}
+\end{figure}
+
+
 \section{Geometric interpretations}
 \label{sec:geometric_interpretation}
 There are interesting geometric interpretations of both the
@@ -485,7 +522,8 @@ integers from 1 to $n$ \cite{wiki:triangle_numbers}.  This is
 also the number of gifts received on the $n^{\text{th}}$ day of
 Christmas according to the "12 Days of Christmas".
   
-\vspace{1.25em}
+  
+\vspace{1.0em}
 \begin{figure}[H]
   \center{\includegraphics[frame,scale=0.425]
          {images/first_six_triangular_numbers.png}} 
