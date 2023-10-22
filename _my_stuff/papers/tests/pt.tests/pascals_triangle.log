@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  19 OCT 2023 09:52
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  21 OCT 2023 10:27
  restricted system commands enabled.
  file:line:error style messages enabled.
 **pascals_triangle.tex
@@ -1561,7 +1561,7 @@ bx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
 pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 
-Output written on pascals_triangle.pdf (2 pages, 66633 bytes).
+Output written on pascals_triangle.pdf (2 pages, 66486 bytes).
 
 PDF statistics: 99 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
