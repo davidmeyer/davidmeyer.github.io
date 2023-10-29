@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 OCT 2023 10:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 OCT 2023 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1586,26 +1586,27 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
  [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 399.
+(Font)              <20.74> on input line 425.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 399.
+(Font)              <14.4> on input line 425.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 399.
- [2] [3]
+(Font)              <12> on input line 425.
+ [3] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [4]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [5]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 792.
+[6]
 
-[6] [7] [8] [9] (./figures.aux)
+LaTeX Font Warning: Command \small invalid in math mode on input line 818.
+
+[7] [8] [9] [10] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1613,13 +1614,13 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47319 strings out of 478994
- 1093996 string characters out of 5858184
- 1533907 words of memory out of 5000000
- 63799 multiletter control sequences out of 15000+600000
+ 47327 strings out of 478994
+ 1094077 string characters out of 5858184
+ 1534021 words of memory out of 5000000
+ 63805 multiletter control sequences out of 15000+600000
  526510 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,15n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,16n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
@@ -1641,10 +1642,10 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.pdf (9 pages, 230493 bytes).
+Output written on figures.pdf (10 pages, 234331 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
