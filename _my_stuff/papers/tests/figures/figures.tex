@@ -77,22 +77,36 @@
 %
 \begin{document}
 
-\setlength {\fboxsep}{0.75em}
+%	
+%	\usepackage{halloweenmath}
+%
+%
+%	Set space and frame thickness
+%
+\setlength {\fboxsep} {1.00em}					% get more space between fcolorbox and content
+\setlength {\fboxrule}{1.25pt}					% change the fcolorbox line thickness
+%												%
+%												%
+%												%
+\begin{figure}[H]								% build the figure
+  \centering									% center everything
+  \fcolorbox{orange}{white}{					% make the frame orange					
+    \resizebox{0.750 \textwidth}{!} {			% resize the figure if you like
+      \hspace{-0.75em}							% get rid of some space of the left
+      \begin{math}								% enter math mode
+        G (\mathbat) \!							% do some halloween math (minus some space)						
+        \xrightswishingghost{n = \langle \bigskull,\mathghost \rangle} \!
+        {\boldsymbol {\color{orange}\bigpumpkin}}_{i = 1}^{n} 
+        H_{i}(\mathwitch*) 						%
+      \end{math}								% exit math mode
+      \hspace{-0.75em}							% get rid of some space on the right				
+    }											% end resizebox
+  }												% end fcolorbox
+  \caption{Happy Halloween!}					% caption the figure
+  \label{figure:happy_halloween}				% get a label if needed
+\end{figure}									% done
 
-\begin{figure}[H]
-  \centering
-  \fcolorbox{black}{white}{
-    \resizebox{0.750 \textwidth}{!} {                      % resize figure here if you want
-      \begin{math}
-        G [\mathbat] \xrightswishingghost{n = \langle \bigskull, \mathghost \rangle} 
-        \! \bigpumpkin_{t=1}^{n} S_{t}(\mathwitch){ }
-      \end{math}
-     }
-  }
-  \caption{Happy Halloween!}
-\end{figure}
-
-\bigskip
+\vspace{3em}
 
 
 \begin{figure}[H]
