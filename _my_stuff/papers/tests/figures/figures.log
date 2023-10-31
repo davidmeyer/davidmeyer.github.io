@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 OCT 2023 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 OCT 2023 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1370,6 +1370,14 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2021/texmf-dist/tex/latex/halloweenmath/halloweenmath.sty
 Package: halloweenmath 2019/11/01 v0.11 (development)
 
+
+     _-==-_      /\/\/\
+    |      |    < BOO! >            October 31, 2023...
+    |(.)(.)|    /\/\/\/
+    +--/\--+   /                ****************************
+     [::::] __/                  ... This is HALLOWEENMATH!
+      ----                      ****************************
+
 (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
 Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
 
@@ -1588,11 +1596,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 440.
+(Font)              <20.74> on input line 443.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 440.
+(Font)              <14.4> on input line 443.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 440.
+(Font)              <12> on input line 443.
  [3] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
@@ -1604,7 +1612,7 @@ Missing character: There is no ; in font nullfont!
 
 [6]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 833.
+LaTeX Font Warning: Command \small invalid in math mode on input line 836.
 
 [7] [8] [9] [10] (./figures.aux)
 
@@ -1620,7 +1628,7 @@ Here is how much of TeX's memory you used:
  63812 multiletter control sequences out of 15000+600000
  528484 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,16n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,17n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
@@ -1642,7 +1650,7 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.pdf (10 pages, 235723 bytes).
+Output written on figures.pdf (10 pages, 235832 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams
