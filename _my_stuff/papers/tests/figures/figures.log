@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  31 OCT 2023 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  1 NOV 2023 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1370,14 +1370,6 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/local/texlive/2021/texmf-dist/tex/latex/halloweenmath/halloweenmath.sty
 Package: halloweenmath 2019/11/01 v0.11 (development)
 
-
-     _-==-_      /\/\/\
-    |      |    < BOO! >            October 31, 2023...
-    |(.)(.)|    /\/\/\/
-    +--/\--+   /                ****************************
-     [::::] __/                  ... This is HALLOWEENMATH!
-      ----                      ****************************
-
 (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
 Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
 
@@ -1650,7 +1642,7 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.pdf (10 pages, 235832 bytes).
+Output written on figures.pdf (10 pages, 235874 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams
