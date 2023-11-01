@@ -80,8 +80,15 @@
 %	
 %	\usepackage{halloweenmath}
 %
+%	Note: Here the \resizebox is inside the \fcolorbox{orange}{white}. You could also put 
+%	the \resizebox outside the \fcolorbox (either one). I like inside better because you
+%	can control \fboxsep (roughly the amount of space inside the box), \fboxrule (the 
+%	thickness of the frame around the box) and whatever is inside the box separately.
+%		  
 %
-%	Set space and frame thickness
+%
+%	Start by setting space and frame thickness of the \fcolorbox(es)
+%
 %
 \setlength {\fboxsep} {1.00em}					% get more space between fcolorbox and content
 \setlength {\fboxrule}{1.25pt}					% set the outside fcolorbox line thickness
@@ -93,7 +100,7 @@
   \fcolorbox{black}{white} {					% make the outside frame black
     \setlength {\fboxrule}{1.00pt}				% set the inside fcolorbox line thickness
     \fcolorbox{orange}{white}{					% make the inside frame orange					
-      \resizebox{0.75 \textwidth}{!} {			% resize the figure if you like
+      \resizebox{0.75 \textwidth}{!} {			% resize the inside of the fcolorbox{orange}{white}
         \hspace{-0.75em}						% get rid of some space of the left
         \begin{math}							% enter math mode
           G (\mathbat) \!						% do some halloween math (minus some space)						
