@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  1 NOV 2023 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  1 NOV 2023 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1588,11 +1588,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 450.
+(Font)              <20.74> on input line 447.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 450.
+(Font)              <14.4> on input line 447.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 450.
+(Font)              <12> on input line 447.
  [3] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
@@ -1604,7 +1604,7 @@ Missing character: There is no ; in font nullfont!
 
 [6]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 843.
+LaTeX Font Warning: Command \small invalid in math mode on input line 840.
 
 [7] [8] [9] [10] (./figures.aux)
 
