@@ -159,11 +159,11 @@ look at two points $x,y \in X$. What we would like to do is
 measure the distance between $x$ and $y$ in $X$ as shown in
 Figure \ref{fig:set}.
 
-\smallskip
-\medskip
+
+\bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.40 \textwidth}{!} {	
+  \resizebox{0.38 \textwidth}{!} {	
     \tikzstyle{background rectangle}=[thin,draw=black]                                  % make the frame thinner (there must be an easier way) 
     \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                  % couldn't control thickness with \begin{tikzpicture} [framed]
 %
@@ -187,15 +187,14 @@ Figure \ref{fig:set}.
 		\draw [decoration={brace,mirror,raise=0.5cm},decorate] (xb) -- (yb)     % draw the underbrace
 			node [rotate=-8.00,pos=0.5,anchor=north,yshift=-0.60cm] {${\small \text{distance}}$};   % label it with "distance"	
 		\node [] at (X) {$X$};                                                  % draw X in the lower right corner
-		\fill [fill=black] (x) circle (1.0pt);                                    % x dot
-		\fill [fill=black] (y) circle (1.0pt);                                    % y dot
-
-
+		\fill [fill=black] (x) circle (1.0pt);                                  % x dot
+		\fill [fill=black] (y) circle (1.0pt);                                  % y dot
   \end{tikzpicture}                                                             % end tikzpicture
   }                                                                             % end resizebox
   \caption{The distance between $x$ and $y$ in $X$}
   \label{fig:set}
 \end{figure}
+
 
 \bigskip
 \noindent
