@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  14 NOV 2023 12:01
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  21 NOV 2023 06:42
  restricted system commands enabled.
  file:line:error style messages enabled.
 **12_days_of_christmas.tex
@@ -1365,32 +1365,32 @@ eX's MPLib.
 (./12_days_of_christmas.aux)
 \openout1 = 12_days_of_christmas.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 150.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-52.
+50.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1452,20 +1452,20 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 152.
+ on input line 150.
 
-LaTeX Info: Redefining \celsius on input line 152.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 152
+LaTeX Info: Redefining \celsius on input line 150.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 150
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 152.
-Package gensymb Info: Using \upOmega for \ohm on input line 152.
+LaTeX Info: Redefining \ohm on input line 150.
+Package gensymb Info: Using \upOmega for \ohm on input line 150.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 152.
+Package hyperref Info: Link coloring OFF on input line 150.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1478,9 +1478,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count365
 )
-LaTeX Info: Redefining \ref on input line 152.
-LaTeX Info: Redefining \pageref on input line 152.
-LaTeX Info: Redefining \nameref on input line 152.
+LaTeX Info: Redefining \ref on input line 150.
+LaTeX Info: Redefining \pageref on input line 150.
+LaTeX Info: Redefining \nameref on input line 150.
  (./12_days_of_christmas.out) (./12_days_of_christmas.out)
 \@outlinefile=\write4
 
@@ -1499,26 +1499,26 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 152
+LaTeX Font Info:    Trying to load font information for U+msa on input line 150
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 152
+LaTeX Font Info:    Trying to load font information for U+msb on input line 150
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
-2.
+0.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-152.
+150.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1528,7 +1528,7 @@ File: uesvect.fd
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 338.
+(amsmath)                 on input line 336.
 
 [2]
 Missing character: There is no   (U+2007) in font cmr10!
@@ -1539,19 +1539,19 @@ Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
-Module luamplib Info: flushing figure 1 on input line 471
+Module luamplib Info: flushing figure 1 on input line 469
  [3]
 <images/first_six_triangular_numbers.png, id=111, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
- line 529.
+ line 527.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
  [4<./images/first_six_triangular_numbers.png>]
 <images/tetrahedral_numbers.png, id=124, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
-Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 550
+Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 548
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
 
@@ -1598,7 +1598,7 @@ pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 12_days_of_christmas.pdf (6 pages, 239260 bytes).
+Output written on 12_days_of_christmas.pdf (6 pages, 239171 bytes).
 
 PDF statistics: 262 PDF objects out of 1000 (max. 8388607)
  206 compressed objects within 3 object streams
