@@ -134,13 +134,13 @@ H \ket{1} = \frac{1}{\sqrt{2}} \big ( \ket{0} - \ket{1} \big )
 
 \bigskip
 \noindent
-The Bell Circuit applies $H$ to $\ket{b_0}$ and then applies the
-CNOT gate to $H\ket{b_0}$ (control qubit) and $\ket{b_1}$ (target
-qubit). The inputs and evolution of the Bell Circuit are shown
-are Table \ref{tab:bell_state}.
+The Bell Circuit, shown in Figure \ref{fig:bell_circuit}, applies 
+$H$ to $\ket{b_0}$ and then applies the CNOT gate to $H\ket{b_0}$ 
+(control qubit) and $\ket{b_1}$ (target qubit). The inputs and 
+evolution of the Bell Circuit are shown are Table \ref{tab:bell_state}.
 
 \bigskip
-\begin{figure}
+\begin{figure} [H]
 \center{\includegraphics[scale=0.45, frame] {images/bell_forward_circuit.png}}
 \caption{Bell Circuit}
 \label{fig:bell_circuit}
@@ -174,11 +174,13 @@ orthonormal states, the \emph{Bell basis}, we can encode two bits
 \bigskip
 \noindent
 Now, if Alice wants to send two classical bits to Bob
-using one qubit, she need only transform her qubit\footnote{Her 
-half of the EPR pair, the two entangled qubits.} into the 
-Bell State corresponding to the two bits she wants to send, 
-then send her half to Bob (this requiresa \emph{quantum} channel). 
-Bob can then recover Alice's two bit message.
+using one qubit (superdense coding), she need only 
+transform her qubit\footnote{Her half of the EPR pair, 
+the two entangled qubits.} into the Bell State 
+corresponding to the two bits she wants to send, 
+then send her half to Bob (this requires a 
+\emph{quantum} channel). Bob can then recover 
+Alice's two bit message.
 
 
 \bigskip
