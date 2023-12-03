@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  19 NOV 2023 08:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  3 DEC 2023 12:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1219,10 +1219,15 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks45
+\minrowclearance=\skip65
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2021/03/24 3.56 The Babel package
@@ -1250,9 +1255,9 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count353
-\float@exts=\toks47
+\float@exts=\toks48
 \float@box=\box91
-\@float@everytoks=\toks48
+\@float@everytoks=\toks49
 \@floatcapt=\box92
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/bigints/bigints.sty
@@ -1289,8 +1294,8 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_unit_prefix_base_int=\count368
 \l__siunitx_unit_prefix_gram_int=\count369
 \l__siunitx_number_product_int=\count370
-\c__siunitx_one_fill_skip=\skip65
-\l__siunitx_table_unit_align_skip=\skip66
+\c__siunitx_one_fill_skip=\skip66
+\l__siunitx_table_unit_align_skip=\skip67
 \l__siunitx_table_exponent_dim=\dimen346
 \l__siunitx_table_integer_dim=\dimen347
 \l__siunitx_table_mantissa_dim=\dimen348
@@ -1304,8 +1309,8 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_post_box=\box97
 \l__siunitx_table_mantissa_box=\box98
 \l__siunitx_table_result_box=\box99
-\l__siunitx_table_number_align_skip=\skip67
-\l__siunitx_table_text_align_skip=\skip68
+\l__siunitx_table_number_align_skip=\skip68
+\l__siunitx_table_text_align_skip=\skip69
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
@@ -1314,15 +1319,15 @@ Package: relsize 2013/03/29 ver 4.1
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks49
-\thm@bodyfont=\toks50
-\thm@headfont=\toks51
-\thm@notefont=\toks52
-\thm@headpunct=\toks53
-\thm@preskip=\skip69
-\thm@postskip=\skip70
-\thm@headsep=\skip71
-\dth@everypar=\toks54
+\thm@style=\toks50
+\thm@bodyfont=\toks51
+\thm@headfont=\toks52
+\thm@notefont=\toks53
+\thm@headpunct=\toks54
+\thm@preskip=\skip70
+\thm@postskip=\skip71
+\thm@headsep=\skip72
+\dth@everypar=\toks55
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
@@ -1382,7 +1387,7 @@ Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks55
+\pIIe@GRAPH=\toks56
 \@arclen=\dimen355
 \@arcrad=\dimen356
 \pIIe@tempdima=\dimen357
@@ -1392,7 +1397,7 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \pIIe@tempdime=\dimen361
 \pIIe@tempdimf=\dimen362
 )
-\@HwM@arrowfill@skip=\skip72
+\@HwM@arrowfill@skip=\skip73
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tikz-3dplot/tikz-3dplot.sty
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
@@ -1411,24 +1416,24 @@ LaTeX Warning: Label `fig:pythagorean_theorem' multiply defined.
 )
 \openout1 = `figures.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count371
@@ -1436,12 +1441,12 @@ LaTeX Font Info:    ... okay on input line 79.
 \scratchbox=\box100
 \nofMPsegments=\count372
 \nofMParguments=\count373
-\everyMPshowfont=\toks56
+\everyMPshowfont=\toks57
 \MPscratchCnt=\count374
 \MPscratchDim=\dimen364
 \MPnumerator=\count375
 \makeMPintoPDFobject=\count376
-\everyMPtoPDFconversion=\toks57
+\everyMPtoPDFconversion=\toks58
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1488,7 +1493,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 79.
+Package hyperref Info: Link coloring OFF on input line 80.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1501,9 +1506,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count377
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
  (./figures.out) (./figures.out)
 \@outlinefile=\write4
 \openout4 = `figures.out'.
@@ -1519,100 +1524,109 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+0.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+0.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-79.
+80.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-79.
+80.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 79.
+(Font)              <10.95> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 79.
+(Font)              <8> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 79.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+(Font)              <6> on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 79
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 80
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-79.
+80.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-79.
+80.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<images/schrodingers_cat_cartoon.png, id=31, 822.07124pt x 165.61874pt>
+Overfull \hbox (14.7945pt too wide) in paragraph at lines 110--111
+ [][][][] 
+ []
+
+
+Overfull \hbox (14.79593pt too wide) in paragraph at lines 131--132
+ [][][][] 
+ []
+
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<images/schrodingers_cat_cartoon.png, id=48, 822.07124pt x 165.61874pt>
 File: images/schrodingers_cat_cartoon.png Graphic file (type png)
 <use images/schrodingers_cat_cartoon.png>
 Package pdftex.def Info: images/schrodingers_cat_cartoon.png  used on input lin
-e 83.
+e 139.
 (pdftex.def)             Requested size: 822.06923pt x 165.61833pt.
 Missing character: There is no ; in font nullfont!
- [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./images/schrodingers_cat_cartoon.png>]
+[2 <./images/schrodingers_cat_cartoon.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 1.
+ [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1.
- [2]
+(Font)              <20.74> on input line 513.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 457.
+(Font)              <14.4> on input line 513.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 457.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 457.
- [3] [4]
+(Font)              <12> on input line 513.
+ [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [5]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [6]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [7]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 850.
+LaTeX Font Warning: Command \small invalid in math mode on input line 906.
 
-[7] [8] [9] [10] (./figures.aux)
+[8] [9] [10] [11] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1620,38 +1634,39 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47347 strings out of 478994
- 1094469 string characters out of 5858184
- 1534155 words of memory out of 5000000
- 63817 multiletter control sequences out of 15000+600000
- 528484 words of font info for 132 fonts, out of 8000000 for 9000
+ 47419 strings out of 478994
+ 1095447 string characters out of 5858184
+ 1536054 words of memory out of 5000000
+ 63877 multiletter control sequences out of 15000+600000
+ 538118 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,17n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,18n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
 e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/
-enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fo
-nts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lm
-mi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
-msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on figures.pdf (10 pages, 387375 bytes).
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/
+dvips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
+m/lmbsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/lm/lmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/
+lmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on figures.pdf (11 pages, 400995 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
