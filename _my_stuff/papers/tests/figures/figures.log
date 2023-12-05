@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 DEC 2023 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 DEC 2023 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1587,7 +1587,7 @@ Overfull \hbox (30.69449pt too wide) in paragraph at lines 134--135
  []
 
 
-Overfull \hbox (30.69592pt too wide) in paragraph at lines 155--156
+Overfull \hbox (30.71057pt too wide) in paragraph at lines 155--156
  [][][][] 
  []
 
@@ -1663,7 +1663,7 @@ lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.pdf (11 pages, 401076 bytes).
+Output written on figures.pdf (11 pages, 400879 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams
