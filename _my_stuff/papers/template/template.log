@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 NOV 2023 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  5 DEC 2023 09:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,13 +1470,13 @@ No file template.bbl.
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./template.aux)
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: EF9DF79C9CB193DAB7CEC2E16A588F32;324.
+(rerunfilecheck)             Checksum: B6CF35FE23C3344EEE12E1A8BA1F6AEB;201.
  ) 
 Here is how much of TeX's memory you used:
- 52854 strings out of 478994
- 1331857 string characters out of 5858184
- 1950977 words of memory out of 5000000
- 69527 multiletter control sequences out of 15000+600000
+ 52853 strings out of 478994
+ 1331847 string characters out of 5858184
+ 1950978 words of memory out of 5000000
+ 69526 multiletter control sequences out of 15000+600000
  413833 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,5n,131p,748b,723s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1486,10 +1486,10 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template.pdf (1 page, 61578 bytes).
+Output written on template.pdf (1 page, 61161 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
