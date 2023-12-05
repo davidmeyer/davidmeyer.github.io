@@ -124,10 +124,10 @@
 %	Topological spaces
 %  
 			\draw (16.5,0.0) ellipse (1cm and 2cm) node [midway,below,xshift=16.5cm,yshift=-2.5cm]{$\text{\bf TS $\{(X,{\boldsymbol \tau_{d}})\}$}$};	
-			\draw [->] (10.50,0.75) -- (16.5,0.75) node [midway,above,yshift=0.50cm] {$\color{red}{\text{\bf Induced topology}}$};
+			\draw [->] (10.50,0.75) -- (16.5,0.85) node [midway,above,yshift=0.50cm] {$\color{red}{\text{\bf Induced topology}}$};
 			\draw [draw=none] (10,0.5) -- (16.5,0.75) node [midway,above,xshift=0.50cm,yshift=-3.750cm] {$\boldsymbol{\subseteq}$};
-			\draw [->] (5,-0.75) -- (16.5,-0.75);
-			\draw[fill=gray!15] (16.5,0) circle (0.750) node [] {};   
+			\draw [->] (5,-0.75) -- (16.5,-0.85);
+			\draw[fill=gray!15] (16.5,0) circle (0.85) node [] {};   
 			\draw[draw=none] (10.50,0.50) -- (16.5,0.75) node [midway,above,yshift=-1.0cm] {${\boldsymbol \tau_d} = \{B_{d,\epsilon}(x)\}$};
 		\end{tikzpicture}
 		}
@@ -135,20 +135,21 @@
 	\caption{Induced Norm, Metric, and Topology}
 \end{figure}
 
-\smallskip
-\setlength {\fboxrule}{0.75pt}					% set the outside \fcolorbox line thickness
-\begin{figure}[H]								% build the figure
-  \centering									% center everything
-  \fcolorbox{black}{gray!10} {					% make the outside frame black
+\setlength {\fboxsep} {0.50em}							% get more space between \fcolorbox and content
+\setlength {\fboxrule}{0.75pt}							% set the outside \fcolorbox line thickness
+\begin{figure}[H]										% build the figure
+  \centering											% center everything
+  \fcolorbox{black}{gray!5} {							% make the outside frame black
 	 \resizebox{1.00\textwidth}{!} {
 	    \begin{math}
           \begin{array}{llllll}
             && {\bf IPS} &--& \text{Inner Product Spaces} & (X,\langle {\bf x},{\bf y} \rangle)\\
             && {\bf NVS} &--& \text{Normed Vector Spaces} & (X,\norm{\bf x}) = (X,\sqrt{\langle \bf {x}, \bf{x}} \rangle) \\
             && {\bf MS}  &--& \text{Metric Spaces} 		  & (X,d({\bf x},{\bf y})) = (X, \norm{{\bf x} - {\bf y}}) = 
-                                                (X,\sqrt{\langle {\bf x} - {\bf y},{\bf x} - {\bf y}}\rangle)\\
-            && {\bf TS}  &--& \text{Topological Spaces}	  & (X, {\boldsymbol \tau_d)} = (X,\{B_{d,\epsilon}({\bf u}) \mid 
-                                                			\forall \epsilon > 0, \forall {\bf u} \in U, U \subseteq X \})
+                                                			(X,\sqrt{\langle {\bf x} - {\bf y},{\bf x} - {\bf y}}\rangle)\\
+            && {\bf TS}  &--& \text{Topological Spaces}	  & (X, {\boldsymbol \tau_d)} = (X,\{B_{d,\epsilon}({\bf u}) \}) 
+            												\text{, where }U \subseteq X \text{ and } (\forall {\bf u} \in U, 
+															\; \exists \epsilon > 0) \text{ : } B_{d,\epsilon}({\bf u}) \subseteq U
           \end{array}
         \end{math}
      }
