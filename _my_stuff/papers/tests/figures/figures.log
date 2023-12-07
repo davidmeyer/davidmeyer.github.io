@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 DEC 2023 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  7 DEC 2023 12:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1403,17 +1403,7 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrary3d.code.tex
 File: tikzlibrary3d.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)) (./figures.aux
-
-LaTeX Warning: Label `fig:wave_functions' multiply defined.
-
-
-LaTeX Warning: Label `fig:pythagorean_theorem' multiply defined.
-
-
-LaTeX Warning: Label `fig:pythagorean_theorem' multiply defined.
-
-)
+)) (./figures.aux)
 \openout1 = `figures.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
@@ -1434,7 +1424,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
 LaTeX Font Info:    ... okay on input line 80.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
 LaTeX Font Info:    ... okay on input line 80.
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count371
 \scratchdimen=\dimen363
@@ -1628,7 +1619,7 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 944.
 
 [8] [9] [10] [11] (./figures.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1636,7 +1627,7 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 Here is how much of TeX's memory you used:
  47434 strings out of 478994
  1095673 string characters out of 5858184
- 1536274 words of memory out of 5000000
+ 1535306 words of memory out of 5000000
  63892 multiletter control sequences out of 15000+600000
  538118 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1663,7 +1654,7 @@ lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.pdf (11 pages, 401001 bytes).
+Output written on figures.pdf (11 pages, 400998 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams
