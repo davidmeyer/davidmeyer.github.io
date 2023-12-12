@@ -424,6 +424,7 @@ of gifts received by day n} column of Table
 (Equation (\ref{eqn:tetrahedral_number})).
 
 \vspace{1.5em}
+
 %                                                                       % start building pascal's triangle
 %       Parameters and settings                                         % start with the parameters and settings
 %                                                                       %
@@ -449,9 +450,9 @@ of gifts received by day n} column of Table
               b[i][k] = b[i-1][k-1] + b[i-1][k];                        % compute the value of the binomial
               if k = 2:                                                 % triangular numbers
                 label(decimal(b[i][k]),z) withcolor blue;               % triangular numbers in blue
-               elseif k = 3:                                            % tetrahedral numbers
+              elseif k = 3:                                             % tetrahedral numbers
                 label(decimal(b[i][k]),z) withcolor red;                % tetrahedral numbers in red
-               else:                                                    % default
+              else:                                                     % default
                 label(decimal(b[i][k]),z) withcolor black;              % default to black
               fi                                                        % end else
             endfor                                                      % end for
