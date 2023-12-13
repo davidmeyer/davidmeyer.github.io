@@ -50,6 +50,8 @@
 \usepackage{relsize}
 \usepackage{braket}
 \usepackage{amsthm}
+\usepackage{multirow}
+
 
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
@@ -78,6 +80,52 @@
 %
 %
 \begin{document}
+
+
+\vspace{2.0cm}
+
+\begin{table}[H]
+\Large
+\setlength{\tabcolsep}{20pt}
+\renewcommand{\arraystretch}{3.00}
+ \centering
+ \resizebox{1.00\textwidth}{!} {
+  \begin{tabular}{|l|c|c|} 
+     \hline
+     {\huge \bf What} & {\huge \bf Linear Algebra} & {\huge \bf Fourier Series} \\
+     \hline
+     \hline
+     {\Large {\bf Vector Space}} & {\Large $\boldsymbol{\mathbb{R}}^{n}$} 
+                                 & {\Large Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$} \\
+     \hline
+     {\Large \bf Inner Product} & $\langle {\bf u}, {\bf v} \rangle = u_{1}v_{1} + u_{2}v_{2} + \dots + u_{n}v_{n}$  
+   						  	    & $\langle f(t),g(t) \rangle = \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(t)g(t) dt$ \\
+     \hline
+     {\Large \bf Orthonormal Basis $\left ( \mathbb{R}^3 \right )$} & $\{(1,0,0), (0,1,0), (0,0,1)\}$ & $\{1, \cos nt, \sin nt\}$ \\
+     \hline
+     {\Large \bf A Vector in the Basis} & ${\mathbf x} = a_{1}\mathbf{e}_{1} + a_{2}\mathbf{e}_{2} + 
+                                                         \dots + a_{n}\mathbf{e}_{n}$ 
+      								      & $f(x) = \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} a_{n} \cos nt + 
+								                          \sum\limits_{n=1}^{\infty} b_{n} \sin nt$  \\
+     \hline
+     {\Large \bf Coefficients are Projections} & $a_{i} =  \langle \mathbf{x},\mathbf{e}_{i} \rangle$
+   										    & \begin{tabular}{lll}
+											    \multirow{3}{*}{}
+											            & $a_{0} = \langle f(t), 1 \rangle$        \vspace{-1.00cm}\\
+											            & $a_{m} = \langle f(t), \cos mt \rangle$ \vspace{-1.00cm} \\
+											            & $b_{m} = \langle f(t), \sin mt \rangle$ 
+											   \end{tabular} \\
+     \hline
+    \end{tabular}
+    }
+  \caption{Vector Spaces: Linear Algebra vs. Fourier Series}
+  \label{table:vector_spaces}
+\end{table}
+ 
+ 
+\vspace{2.0cm}
+
+
 
 
 \setlength {\fboxrule}{0.75pt}							% set the outside \fcolorbox line thickness
