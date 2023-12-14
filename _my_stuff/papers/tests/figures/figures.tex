@@ -87,38 +87,38 @@
 
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
-\setlength{\tabcolsep}{20pt}
-\renewcommand{\arraystretch}{3.00}
+\setlength{\tabcolsep}{30pt}
+\renewcommand{\arraystretch}{3.75}
 
 \begin{table}[H]
-\Large
+ \Large
  \centering
- \resizebox{1.00 \textwidth}{!} {
+ \resizebox{1.10 \textwidth}{!} {
   \begin{tabular}{|l|c|c|} 
      \hline
      {\huge \bf What} 					& {\huge \bf Linear Algebra} 
      									& {\huge \bf Fourier Series} \\
      \hline
      \hline
-     {\Large {\bf Vector Space}} 		& {\Large $\boldsymbol{\mathbb{R}}^{n}$} 
+     {\bf Vector Space} 				& {\Large $\boldsymbol{\mathbb{R}}^{n}$} 
                                  		& {\Large Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$} \\
      \hline
-     {\Large \bf Inner Product} 		& $\langle {\bf u}, {\bf v} \rangle = \sum\limits_{i=1}^{n} u_{i}v_{i}$
+     {\bf Inner Product} 				& $\langle {\bf u}, {\bf v} \rangle = \sum\limits_{i=1}^{n} u_{i}v_{i}$
    						  	    		& $\langle f(t),g(t) \rangle = \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(t)g(t) dt$ \\
      \hline
-     {\Large \bf Orthonormal Basis $\left ( \mathbb{R}^3 \right )$} 
+     {\bf Orthonormal Basis $\left ( \mathbb{R}^3 \right )$} 
      									& $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
 										& $\{1, \cos nt, \sin nt\}$ \\
      \hline
-     {\Large \bf A Vector in the Basis} & ${\mathbf x} = \sum\limits_{i=1}^{n} a_{i}\mathbf{e}_{i}$ 
+     {\bf A Vector in the Basis} 		& ${\mathbf x} = \sum\limits_{i=1}^{n} a_{i}\mathbf{e}_{i}$ 
       								    & $f(x) = \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} a_{n} \cos nt + 
 								                         \sum\limits_{n=1}^{\infty} b_{n} \sin nt$  \\
      \hline
-     {\Large \bf Coefficients are Projections} & $a_{i} =  \langle \mathbf{x},\mathbf{e}_{i} \rangle$
+     {\bf Coefficients are Projections} & $a_{i} =  \langle \mathbf{x},\mathbf{e}_{i} \rangle$
    										& \begin{tabular}{lll}
 								 	         \multirow{4}{*}{}
-										        & $a_{0} = \langle f(t), 1 \rangle$       \vspace{-1.00cm} \\
-											    & $a_{m} = \langle f(t), \cos mt \rangle$ \vspace{-1.00cm} \\
+										        & $a_{0} = \langle f(t), 1 \rangle$       \vspace{-1.50cm} \\
+											    & $a_{m} = \langle f(t), \cos mt \rangle$ \vspace{-1.50cm} \\
 									            & $b_{m} = \langle f(t), \sin mt \rangle$ 
 										  \end{tabular} \\
      \hline
