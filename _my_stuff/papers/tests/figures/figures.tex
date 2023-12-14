@@ -53,7 +53,6 @@
 \usepackage{multirow}
 
 
-
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
@@ -85,42 +84,49 @@
 
 \vspace{2.0cm}
 
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
-\setlength{\tabcolsep}{30pt}
-\renewcommand{\arraystretch}{3.75}
+\setlength{\tabcolsep}{15pt}
+\renewcommand{\arraystretch}{3.00}
+
 
 \begin{table}[H]
  \Large
  \centering
- \resizebox{1.10 \textwidth}{!} {
-  \begin{tabular}{|l|c|c|} 
+ \resizebox{1.10\textwidth}{!} {
+   \begin{tabular}{|l|c|c|} 
      \hline
-     {\huge \bf What} 					& {\huge \bf Linear Algebra} 
-     									& {\huge \bf Fourier Series} \\
+     {\Huge \bf What} & {\Huge \bf Linear Algebra} & {\Huge \bf Fourier Series} \\ 
      \hline
      \hline
-     {\bf Vector Space} 				& {\Large $\boldsymbol{\mathbb{R}}^{n}$} 
-                                 		& {\Large Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$} \\
+     {\LARGE \bf Vector Space} 			& $\boldsymbol{\mathbb{R}}^{n}$ 
+                                 		& Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$ \\
+     [10pt]
      \hline
-     {\bf Inner Product} 				& $\langle {\bf u}, {\bf v} \rangle = \sum\limits_{i=1}^{n} u_{i}v_{i}$
-   						  	    		& $\langle f(t),g(t) \rangle = \frac{1}{\pi} \int\limits_{-\pi}^{\pi} f(t)g(t) dt$ \\
+     {\LARGE \bf Inner Product} 		& $\langle {\bf u},{\bf v} \rangle = {\displaystyle 
+     									   \sum\limits_{i=1}^{n} u_{i}v_{i}}$
+   						  	    		& $\langle f(t),g(t) \rangle = {\displaystyle \frac{1}{\pi} 
+										   \int\limits_{-\pi}^{\pi} f(t)g(t) dt}$ \\
+	 [10pt]
      \hline
-     {\bf Orthonormal Basis $\left ( \mathbb{R}^3 \right )$} 
+     {\LARGE \bf Orthonormal Basis $\left (\mathbb{R}^3 \right )$} 
      									& $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
 										& $\{1, \cos nt, \sin nt\}$ \\
+	 [10pt]
      \hline
-     {\bf A Vector in the Basis} 		& ${\mathbf x} = \sum\limits_{i=1}^{n} a_{i}\mathbf{e}_{i}$ 
-      								    & $f(x) = \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} a_{n} \cos nt + 
-								                         \sum\limits_{n=1}^{\infty} b_{n} \sin nt$  \\
+     {\LARGE \bf Representation of a Vector in the Basis} 		
+     									& ${\displaystyle {\mathbf x} = \sum\limits_{i=1}^{n} a_{i}\mathbf{e}_{i}}$ 
+      								    & $f(x) = {\displaystyle \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} 
+								    			  a_{n} \cos nt + \sum\limits_{n=1}^{\infty} b_{n} \sin nt}$  \\
+	 [10pt]
      \hline
-     {\bf Coefficients are Projections} & $a_{i} =  \langle \mathbf{x},\mathbf{e}_{i} \rangle$
+     {\LARGE \bf Coefficients are Projections} 
+     									& $a_{i} = \langle \mathbf{x},\mathbf{e}_{i} \rangle$
    										& \begin{tabular}{lll}
-								 	         \multirow{4}{*}{}
-										        & $a_{0} = \langle f(t), 1 \rangle$       \vspace{-1.50cm} \\
-											    & $a_{m} = \langle f(t), \cos mt \rangle$ \vspace{-1.50cm} \\
-									            & $b_{m} = \langle f(t), \sin mt \rangle$ 
-										  \end{tabular} \\
+								 	         \multirow{3}{*} {}
+										        & $a_{0} = \langle f(t), 1 \rangle$       \vspace{-1.10cm} \\
+											    & $a_{m} = \langle f(t), \cos mt \rangle$ \vspace{-1.10cm} \\
+									            & $b_{m} = \langle f(t), \sin mt \rangle$
+ 									      \end{tabular} \\
      \hline
   \end{tabular}
  }
