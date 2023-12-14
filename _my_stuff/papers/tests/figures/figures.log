@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 DEC 2023 13:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 DEC 2023 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1608,7 +1608,7 @@ Overfull \hbox (42.99174pt too wide) in paragraph at lines 96--134
  []
 
 
-Overfull \hbox (11.91179pt too wide) in paragraph at lines 141--148
+Overfull \hbox (23.00359pt too wide) in paragraph at lines 141--148
 \OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] [] nt; [] [] 
 nt\OMS/lmsy/m/n/10.95 g$\T1/lmr/m/n/10.95 , since $[] \OT1/lmr/m/n/10.95 = 2$\T
 1/lmr/m/n/10.95 . OTOH,
@@ -1691,7 +1691,7 @@ lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.pdf (16 pages, 426208 bytes).
+Output written on figures.pdf (16 pages, 426210 bytes).
 PDF statistics:
  237 PDF objects out of 1000 (max. 8388607)
  177 compressed objects within 2 object streams
