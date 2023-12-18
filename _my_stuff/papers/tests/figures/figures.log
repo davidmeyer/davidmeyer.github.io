@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 DEC 2023 07:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 DEC 2023 11:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1603,18 +1603,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 133.
 
-Overfull \hbox (42.99174pt too wide) in paragraph at lines 96--134
+Overfull \hbox (64.48785pt too wide) in paragraph at lines 96--134
  [][] 
  []
 
 
-Overfull \hbox (22.79074pt too wide) in paragraph at lines 141--149
+Overfull \hbox (22.79074pt too wide) in paragraph at lines 140--149
 \OMS/lmsy/m/n/10.95 f\OT1/lmr/bx/n/10.95 1\OML/lmm/m/it/10.95 ; [] [] nt; [] []
  nt\OMS/lmsy/m/n/10.95 g$\T1/lmr/m/n/10.95 , since $[] \OT1/lmr/m/n/10.95 =
  []
 
 
-Overfull \hbox (1.0952pt too wide) in paragraph at lines 151--155
+Overfull \hbox (1.0952pt too wide) in paragraph at lines 152--156
 \T1/lmr/m/n/10.95 Note also that here $\OMS/lmsy/m/n/10.95 h\OT1/lmr/bx/n/10.95
  1\OML/lmm/m/it/10.95 ; [] nt\OMS/lmsy/m/n/10.95 i \OT1/lmr/m/n/10.95 = [] = []
  = 0$\T1/lmr/m/n/10.95 . Sim-i-larly, $\OMS/lmsy/m/n/10.95 h\OT1/lmr/bx/n/10.95
@@ -1629,39 +1629,34 @@ Overfull \hbox (30.69449pt too wide) in paragraph at lines 226--227
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (19.75696pt too wide) in paragraph at lines 247--248
+Overfull \hbox (19.75696pt too wide) in paragraph at lines 248--249
  [][][][] 
  []
 
-[2] [3]
-<images/schrodingers_cat_cartoon.png, id=65, 822.07124pt x 165.61874pt>
+[2]
+<images/schrodingers_cat_cartoon.png, id=61, 822.07124pt x 165.61874pt>
 File: images/schrodingers_cat_cartoon.png Graphic file (type png)
 <use images/schrodingers_cat_cartoon.png>
 Package pdftex.def Info: images/schrodingers_cat_cartoon.png  used on input lin
-e 255.
+e 256.
 (pdftex.def)             Requested size: 822.06923pt x 165.61833pt.
 Missing character: There is no ; in font nullfont!
- [4 <./images/schrodingers_cat_cartoon.png>] [5]
+ [3 <./images/schrodingers_cat_cartoon.png>] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 629.
- [6] [7] [8]
+(Font)              <20.74> on input line 630.
+ [5] [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [9]
+ [7]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
+ [8]
 
-[10] [11]
-Overfull \vbox (2.52342pt too high) has occurred while \output is active []
+LaTeX Font Warning: Command \small invalid in math mode on input line 1023.
 
-
-[12]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 1022.
-
-[13] [14] [15] [16] (./figures.aux)
+[9] [10] [11] [12] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1669,9 +1664,9 @@ Package rerunfilecheck Info: File `figures.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47552 strings out of 478994
- 1097618 string characters out of 5858184
- 1537179 words of memory out of 5000000
+ 47548 strings out of 478994
+ 1097590 string characters out of 5858184
+ 1537170 words of memory out of 5000000
  63995 multiletter control sequences out of 15000+600000
  562307 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1698,10 +1693,10 @@ lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.pdf (16 pages, 426636 bytes).
+Output written on figures.pdf (12 pages, 426872 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

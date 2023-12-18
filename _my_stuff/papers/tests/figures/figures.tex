@@ -93,7 +93,7 @@
 \begin{table}[H]
  \Large
  \centering
- \resizebox{1.10\textwidth}{!} {
+ \resizebox{1.15 \textwidth}{!} {
    \begin{tabular}{|l|c|c|} 
      \hline
      {\Huge \bf What} & {\Huge \bf Linear Algebra} & {\Huge \bf Fourier Series} \\ 
@@ -111,7 +111,7 @@
      \hline
      {\LARGE \bf Orthonormal Basis $\left (\mathbb{R}^3 \right )$} 
      									& $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
-										& $\{1, \cos nt, \sin nt\}$ \\
+										& $\{1, \cos nt, \sin mt\}, \, n,m \in \mathbb{N}\backslash\{0\}$ \\
 	 [10pt]
      \hline
      {\LARGE \bf Representation of a Vector in the Basis} 		
@@ -136,28 +136,28 @@
 \end{table}
  
  \bigskip
- \setstretch{2.50}
-
+ {\setstretch{3.00}
  \noindent
  Note: Some people think that the orthonormal basis for the Fourier series should be
  $\{{\bf 1}, \sqrt{2} \cos nt,\sqrt{2} \sin nt\}$, since ${\displaystyle \langle {\bf 1},{\bf 1} \rangle 
  = \frac{1}{\pi}\int\limits_{-\pi}^{\pi} {\bf 1}^2 \, dt = \frac{1}{\pi}\int\limits_{-\pi}^{\pi} 
  dt = \frac{1}{\pi}  \, t \, \big |^{\pi}_{-\pi} = \frac{1}{\pi} \left (\pi - (-\pi) 
- \right ) = \frac{1}{\pi} 2\pi} = 2$. OTOH, $\langle \cos nt, \cos nt \rangle = 
+ \right ) = \frac{1}{\pi} 2\pi} = 2$. 
+ OTOH, $\langle \cos nt, \cos nt \rangle = 
  {\displaystyle \dfrac{1}{\pi} \int\limits_{-\pi}^{\pi} \cos^2 nt \,dt = \dfrac{1}{\pi} 
  \pi = 1}$. 
+ \par}
  
  \bigskip
  \noindent
  Note also that here $\langle {\bf 1},\sin nt \rangle = {\displaystyle \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi}
   {\bf 1} \sin nt \, dt} = {\displaystyle \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi}
-  \sin nt \, dt}  = 0$. Similarly, $\langle {\bf 1},\cos nt \rangle = \langle \cos nt,\sin mt \rangle = 0$.
+  \sin nt \, dt}  = 0$. Similarly, $\langle {\bf 1},\cos nt \rangle = \langle \cos nt,\sin mt \rangle = 0$. 
+
   
 \vspace{2.0cm}
 
-
-
-
+\renewcommand{\arraystretch}{1.00}
 \setlength {\fboxrule}{0.75pt}							% set the outside \fcolorbox line thickness
 \setlength {\fboxsep} {1.00em}							% get more space between \fcolorbox and content
 %
@@ -226,6 +226,7 @@
 	}
 	\caption{Induced Norm, Metric, and Topology}
 \end{figure}
+
 
 \setlength {\fboxsep} {0.50em}							% get more space between \fcolorbox and content
 \setlength {\fboxrule}{0.75pt}							% set the outside \fcolorbox line thickness
