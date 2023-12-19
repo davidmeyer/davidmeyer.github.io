@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  19 DEC 2023 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  19 DEC 2023 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1608,7 +1608,7 @@ Overfull \hbox (64.48785pt too wide) in paragraph at lines 96--134
  []
 
 
-Overfull \hbox (1.0952pt too wide) in paragraph at lines 168--172
+Overfull \hbox (1.0952pt too wide) in paragraph at lines 169--173
 \T1/lmr/m/n/10.95 Note also that here $\OMS/lmsy/m/n/10.95 h\OT1/lmr/bx/n/10.95
  1\OML/lmm/m/it/10.95 ; [] nt\OMS/lmsy/m/n/10.95 i \OT1/lmr/m/n/10.95 = [] = []
  = 0$\T1/lmr/m/n/10.95 . Sim-i-larly, $\OMS/lmsy/m/n/10.95 h\OT1/lmr/bx/n/10.95
@@ -1616,14 +1616,14 @@ Overfull \hbox (1.0952pt too wide) in paragraph at lines 168--172
  []
 
 
-Overfull \hbox (30.69449pt too wide) in paragraph at lines 242--243
+Overfull \hbox (30.69449pt too wide) in paragraph at lines 243--244
  [][][][] 
  []
 
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (19.75696pt too wide) in paragraph at lines 264--265
+Overfull \hbox (19.75696pt too wide) in paragraph at lines 265--266
  [][][][] 
  []
 
@@ -1632,12 +1632,12 @@ Overfull \hbox (19.75696pt too wide) in paragraph at lines 264--265
 File: images/schrodingers_cat_cartoon.png Graphic file (type png)
 <use images/schrodingers_cat_cartoon.png>
 Package pdftex.def Info: images/schrodingers_cat_cartoon.png  used on input lin
-e 272.
+e 273.
 (pdftex.def)             Requested size: 822.06923pt x 165.61833pt.
 Missing character: There is no ; in font nullfont!
  [3 <./images/schrodingers_cat_cartoon.png>] [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 646.
+(Font)              <20.74> on input line 647.
  [5] [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
@@ -1648,7 +1648,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [8]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1039.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1040.
 
 [9] [10] [11] [12] (./figures.aux)
 
@@ -1687,7 +1687,7 @@ lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.pdf (12 pages, 427359 bytes).
+Output written on figures.pdf (12 pages, 427382 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams
