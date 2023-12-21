@@ -10,7 +10,7 @@
 
 <li><a href="./fourier_series.pdf" target="_blank" 
     rel="noopener noreferrer">
-A Few Notes on Fourier Series</a>
+A Few Notes on the Fourier Series</a>
 <br>
 <li><a href="./linear_algebra.pdf" target="_blank" 
     rel="noopener noreferrer">
