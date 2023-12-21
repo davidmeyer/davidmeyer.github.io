@@ -151,43 +151,48 @@
 %
 \section{Introduction}
 \label{sec:introduction}
-TBD
 
 \section{Vector Spaces: Linear Algebra vs. the Fourier Series}
 \label{section:vector_spaces}
+Define the constant function $1(t) = 1$ for all $t$. I'm not sure
+if there is standard notation for this but here I'll use 1 as
+shorthand for $1(t)$.  In any event, now we can see some of the
+similarities between linear algebra and Fourier series, a few of
+which are summarized in Table \ref{table:vector_spaces}.
 
 \setlength{\tabcolsep}{15pt}
 \renewcommand{\arraystretch}{3.00}
 
 
 \smallskip
+\bigskip
 \begin{table}[H]
  \Large
  \centering
- \resizebox{1.00 \textwidth}{!} {
+ \resizebox{0.95 \textwidth}{!} {
    \begin{tabular}{|l|c|c|} 
      \hline
      {\Huge \bf What} & {\Huge \bf Linear Algebra} & {\Huge \bf Fourier Series} \\ 
      \hline
      \hline
-     {\LARGE \bf Vector Space} 			& $\boldsymbol{\mathbb{R}}^{n}$ 
-                                 		& Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$ \\
+     {\LARGE \bf Vector Space}                  & $\boldsymbol{\mathbb{R}}^{n}$ 
+                                                & Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$ \\
 [10pt]
      \hline
-     {\LARGE \bf Inner Product} 		& $\langle {\bf u},{\bf v} \rangle =
+     {\LARGE \bf Inner Product}                 & $\langle {\bf u},{\bf v} \rangle =
                                                         {\displaystyle \sum\limits_{i=1}^{n} u_{i}v_{i}}$
-   			  	    					& $\langle f(t),g(t) \rangle = {\displaystyle \frac{1}{\pi} 
+                                                & $\langle f(t),g(t) \rangle = {\displaystyle \frac{1}{\pi} 
                                                         \int\limits_{-\pi}^{\pi} f(t)g(t) \, dt}$ \\
 [10pt]
      \hline
      {\LARGE \bf Orthonormal Basis $\left (\mathbb{R}^3 \right )$} 
                                                 & $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
-                                                & $\{1, \cos mt, \sin nt\}, \, n,m \in \mathbb{N}\backslash\{0\}$ \\
+                                                & $\{1, \cos mt, \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ \\
 [10pt]
      \hline
      {\LARGE \bf Representation of a Vector in the Basis} 		
                                                 & ${\displaystyle {\mathbf x} = \sum\limits_{i=1}^{n} a_{i}\mathbf{e}_{i}}$ 
-                                                & $f(x) = {\displaystyle \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} 
+                                                & $f(t) = {\displaystyle \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} 
                                                         a_{n} \cos nt + \sum\limits_{n=1}^{\infty} b_{n} \sin nt}$  \\
 [10pt]
      \hline
@@ -206,23 +211,17 @@ TBD
  \label{table:vector_spaces}
 \end{table}
  
-\bigskip
+\smallskip
 \subsection{Orthonormal Bases and the Fourier Series}
-Some people (specifically Rahul Narain (@narain@mathstodon.xyz)) 
-feel that the orthonormal basis for the Fourier series should be 
+Some people (specifically Rahul Narain (@narain@mathstodon.xyz))
+feel that the orthonormal basis for the Fourier series should be
 $\{1,\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
-\backslash \{0\}$ (where 1 is the constant function returning 1). 
-Ok, but why?
- 
-\medskip
-\noindent
-Well, notice that $\langle \hat{\mathbf{u}},\hat{\mathbf{u}} 
-\rangle = 1$ for all unit vectors $\hat{\mathbf{u}}$, so what 
-about $\langle 1,1 \rangle$? The issue is that $\langle 1,1 
-\rangle = 2$:
+\backslash \{0\}$. Ok, but why? Well, notice that $\langle
+\hat{\mathbf{u}},\hat{\mathbf{u}} \rangle = 1$ for all unit
+vectors $\hat{\mathbf{u}}$. However, $\langle 1,1 \rangle = 2$:
 
  
-\bigskip
+\medskip
 \begin{equation*}
   \langle 1,1 \rangle = 
      \frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1^2 dt	= 
@@ -234,23 +233,17 @@ about $\langle 1,1 \rangle$? The issue is that $\langle 1,1
 \end{equation*}
  
 \noindent
-On the other hand, $\langle \cos nt, \cos nt \rangle = {\displaystyle
-\dfrac{1}{\pi} \int\limits_{-\pi}^{\pi} \cos^2 nt \,dt =
-\dfrac{1}{\pi} \pi = 1}$. In the same way, $\langle \sin nt,
-\sin nt \rangle = 1$.
- 
-\medskip
-\noindent
-One of the points here (or perhaps, the point here) is that
-$\langle \hat{\mathbf{u}},\hat{\mathbf{u}} \rangle = 1$ for all
-unit vectors $\hat{\mathbf{u}}$, so what about $\langle 1,1 \rangle$ 
-if the constant function 1 is part of an orthonormal basis
-(again, since $\langle 1,1 \rangle = 2$)?
- 
+On the other hand, $\langle \cos nt, \cos nt \rangle =
+{\displaystyle \dfrac{1}{\pi} \int\limits_{-\pi}^{\pi} \cos^2 nt
+\,dt = \dfrac{1}{\pi} \pi = 1}$. In the same way, $\langle \sin
+nt, \sin nt \rangle = 1$.
+  
  
 \bigskip
 \noindent
- Note also that here
+ We can also see that the vectors in the basis $\{1, \cos mt,
+ \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ are pairwise
+ orthogonal:
  
 \begin{equation*}
   \langle 1,\sin nt \rangle = {\displaystyle
@@ -259,10 +252,10 @@ if the constant function 1 is part of an orthonormal basis
   \, dt}  = 0
 \end{equation*} 
   
-\bigskip
+\smallskip
 \noindent
-Similarly, $\langle 1,\cos nt \rangle = \langle \cos
-mt,\sin nt \rangle = 0$. 
+Similarly, $\langle 1,\cos nt \rangle = \langle \cos mt,\sin nt
+\rangle = 0$.
 
 
   
