@@ -8,7 +8,10 @@
 
 <h2>Notes on various mathematical topics</h2>
 
-
+<li><a href="./fourier_series.pdf" target="_blank" 
+    rel="noopener noreferrer">
+A Few Notes on Fourier Series</a>
+<br>
 <li><a href="./linear_algebra.pdf" target="_blank" 
     rel="noopener noreferrer">
 A Few Notes on Linear Algebra</a>
@@ -153,7 +156,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 10.11.2023 by
+<i>Last Update: 12.21.2023 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
