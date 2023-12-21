@@ -155,11 +155,11 @@
 \section{Vector Spaces: Linear Algebra vs. the Fourier Series}
 \label{section:vector_spaces}
 Define the constant function $\phi_{1}(x) = 1$. I'm not sure
-if there is standard notation for this but here I'll use {\bf 1} as
-shorthand for $\phi_{1}(x)$ (I still have my concerns about the definition
-of 1). In any event, now we can see some of the similarities between 
-linear algebra and Fourier series, a few of which are summarized 
-in Table \ref{table:vector_spaces}.
+if there is standard notation for this but here I'll use 1 to 
+mean either the scalar 1 or $\phi_{1}(x)$ (I still have my 
+concerns about the definitionof 1). In any event, now we can 
+see some of the similarities between linear algebra and Fourier 
+series, a few of which are summarized in Table \ref{table:vector_spaces}.
 
 \setlength{\tabcolsep}{15pt}
 \renewcommand{\arraystretch}{3.00}
@@ -188,7 +188,7 @@ in Table \ref{table:vector_spaces}.
      \hline
      {\LARGE \bf Orthonormal Basis $\left (\mathbb{R}^3 \right )$} 
                                                 & $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
-                                                & $\{{\bf 1}, \cos mt, \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ \\
+                                                & $\{1, \cos mt, \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ \\
 [10pt]
      \hline
      {\LARGE \bf Representation of a Vector in the Basis} 		
@@ -216,16 +216,15 @@ in Table \ref{table:vector_spaces}.
 \subsection{Orthonormal Bases and the Fourier Series}
 Some people (specifically Rahul Narain (@narain@mathstodon.xyz))
 feel that the orthonormal basis for the Fourier series should be
-$\{{\bf 1},\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
+$\{1,\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
 \backslash \{0\}$. Ok, but why? Well, notice that $\langle
 \hat{\mathbf{u}},\hat{\mathbf{u}} \rangle = 1$ for all unit
-vectors $\hat{\mathbf{u}}$. However, $\langle {\bf 1},{\bf 1}
-\rangle = 2$:
+vectors $\hat{\mathbf{u}}$. However, $\langle 1,1 \rangle = 2$:
 
  
 \medskip
 \begin{equation*}
-	\langle {\bf 1},{\bf 1} \rangle													= 
+	\langle 1,1 \rangle													= 
 	\langle \phi_{1}(t), \phi_{1}(t) \rangle										= 
 		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} \phi_{1}(t) \cdot \phi_{1}(t) \, dt	= 
 		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt						= 
@@ -245,12 +244,12 @@ nt, \sin nt \rangle = 1$.
  
 \bigskip
 \noindent
- We can also see that the vectors in the basis $\{{\bf 1}, \cos mt,
+ We can also see that the vectors in the basis $\{1, \cos mt,
  \sin nt\}, m,n \in \mathbb{N}\backslash\{0\}$ are 
  orthogonal:
  
 \begin{equation*}
-  \langle {\bf 1},\sin nt \rangle = {\displaystyle
+  \langle 1,\sin nt \rangle = {\displaystyle
   \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \sin nt \, dt} =
   {\displaystyle \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi} \sin nt
   \, dt}  = 0
@@ -258,7 +257,7 @@ nt, \sin nt \rangle = 1$.
   
 \smallskip
 \noindent
-Similarly, $\langle {\bf 1},\cos nt \rangle = \langle \cos mt,\sin nt
+Similarly, $\langle 1,\cos nt \rangle = \langle \cos mt,\sin nt
 \rangle = 0$.
 
 
