@@ -154,12 +154,14 @@
 
 \section{Vector Spaces: Linear Algebra vs. the Fourier Series}
 \label{section:vector_spaces}
-Define the constant function $\phi_{1}(x) = 1$. I'm not sure
-if there is standard notation for this but here I'll use 1 to 
-mean either the scalar 1 or $\phi_{1}(x)$ (I still have my 
-concerns about the definitionof 1). In any event, now we can 
-see some of the similarities between linear algebra and Fourier 
-series, a few of which are summarized in Table \ref{table:vector_spaces}.
+Here we are using the convention of using the constant $c$ to
+denote the constant function $f(x) = c$, for all $x$. So we'll
+use 1 to represent $f(x) = 1$ and use context to disambiguate the
+function $f(x)$ from the scalar value $1$. For example, in
+Equation (\ref{eqn:1}) $\langle 1,1 \rangle = \langle f(x),f(x)
+\rangle$ (1 represents the constant function $f(x) = 1$), while
+the notation $1 \cdot 1$ represents the scalar multiplication of
+the scalar value 1 with itself.
 
 \setlength{\tabcolsep}{15pt}
 \renewcommand{\arraystretch}{3.00}
@@ -223,17 +225,16 @@ vectors $\hat{\mathbf{u}}$. However, $\langle 1,1 \rangle = 2$:
 
  
 \medskip
-\begin{equation*}
-	\langle 1,1 \rangle													= 
-	\langle \phi_{1}(t), \phi_{1}(t) \rangle										= 
-		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} \phi_{1}(t) \cdot \phi_{1}(t) \, dt	= 
-		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt						= 
-		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt									= 
-		\frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}									= 
-		\frac{1}{\pi} \left (\pi - (-\pi) \right )									= 
-		\frac{1}{\pi} 2\pi															= 
+\begin{equation}
+	\langle 1,1 \rangle											= 
+		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt	= 
+		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt				= 
+		\frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}				= 
+		\frac{1}{\pi} \left (\pi - (-\pi) \right )				= 
+		\frac{1}{\pi} 2\pi										= 
 		2
-\end{equation*}
+\label{eqn:1}
+\end{equation}
  
 \noindent
 On the other hand, $\langle \cos nt, \cos nt \rangle =
@@ -352,6 +353,10 @@ Similarly, $\langle 1,\cos nt \rangle = \langle \cos mt,\sin nt
 %
 \section*{Acknowledgements}
 \label{sec:acknowledgements}
+Thanks to Dave Neary (@dneary@mathstodon.xyz), Grégoire 
+Locqueville (@glocq@mathstodon.xyz) and Alex (@alexmath@tech.lgbt) 
+for their insightful comments on the meaning of the symbol 1 in 
+the Fourier series basis.
 %
 %	LaTeX source on overleaf.com
 %
