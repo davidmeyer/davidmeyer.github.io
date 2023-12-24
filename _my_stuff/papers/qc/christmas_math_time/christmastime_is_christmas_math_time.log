@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 DEC 2023 10:23
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  24 DEC 2023 07:50
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -1528,20 +1528,20 @@ Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Module luamplib Info: flushing figure 1 on input line 534
  [5]
-<images/first_six_triangular_numbers.png, id=167, 441.65pt x 370.38374pt>
+<images/first_six_triangular_numbers.png, id=169, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
  line 591.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=171, 691.58376pt x 558.085pt>
+<images/tetrahedral_numbers.png, id=173, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
 Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 613
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
  [6<./images/first_six_triangular_numbers.png>]
-<images/christmas_stocking_theorem.jpg, id=186, 1750.54pt x 1238.6275pt>
+<images/christmas_stocking_theorem.jpg, id=188, 1750.54pt x 1238.6275pt>
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package luatex.def Info: images/christmas_stocking_theorem.jpg  used on input l
@@ -1550,56 +1550,56 @@ ine 650.
  [7<./images/tetrahedral_numbers.png><./images/christmas_stocking_theorem.jpg>]
 
 (./christmastime_is_christmas_math_time.bbl
-Underfull \hbox (badness 1789) in paragraph at lines 24--28
+Underfull \hbox (badness 1789) in paragraph at lines 32--36
 []\TU/lmr/m/n/12 Eric W. Weis-stein.  Tetra-he-dral Num-ber.  []$\TU/lmtt/m/n/1
 2 https://mathworld.wolfram.com/
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 67--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--82
 \TU/lmtt/m/n/12 Proofs_of_Fermat%27s_theorem_on_sums_of_two_squares&oldid=989540
 767$[]\TU/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 93--99
+Underfull \hbox (badness 4303) in paragraph at lines 101--107
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Pas-cal’s Tri-an-gle --- Wikipedi
 a, The Free En-cy-
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 109--115
+Underfull \hbox (badness 1533) in paragraph at lines 117--123
 \TU/lmr/m/n/12 pe-dia.  []$\TU/lmtt/m/n/12 https://en.wikipedia.org/w/index.php?
 title=Binomial_coefficient&
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 117--123
+Underfull \hbox (badness 2012) in paragraph at lines 125--131
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Cu-mu-la-tive Song --- Wikipedia, 
 The Free En-cy-clo-
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 125--131
+Underfull \hbox (badness 3128) in paragraph at lines 133--139
 []\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Fred-eric Austin --- Wikipedia, The
  Free En-cy-clo-
  []
 
-) [9] (./christmastime_is_christmas_math_time.aux)
+[9]) [10] (./christmastime_is_christmas_math_time.aux)
 Package rerunfilecheck Info: File `christmastime_is_christmas_math_time.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 27D986D13EC4889412CF6953281207C7;1887.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54313 strings out of 478531
+ 54316 strings out of 478531
  195344,2373549 words of node,token memory allocated
- 4806 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1042 attribute, 64 glue_sp
-ec, 1042 attribute_list, 2 write, 18 pdf_action nodes
-   avail lists: 1:2,2:7592,3:2319,4:526,5:921,6:35,7:8611,8:121,9:7190,10:18,11:
-332
- 72378 multiletter control sequences out of 65536+600000
+ 4816 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1043 attribute, 64 glue_sp
+ec, 1043 attribute_list, 2 write, 19 pdf_action nodes
+   avail lists: 1:2,2:7590,3:2319,4:526,5:921,6:34,7:8611,8:123,9:7190,10:18,11:
+334
+ 72379 multiletter control sequences out of 65536+600000
  114 fonts using 9046863 bytes
  132i,15n,128p,775b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
@@ -1632,11 +1632,11 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (9 pages, 587781 byte
-s).
+Output written on christmastime_is_christmas_math_time.pdf (10 pages, 588991 byt
+es).
 
-PDF statistics: 387 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 131072)
+PDF statistics: 396 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 
