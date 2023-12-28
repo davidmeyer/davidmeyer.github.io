@@ -645,51 +645,62 @@ is shown in Figure
 \ref{fig:christmas_stocking_theorem}.  \par}
 
 
+\vspace{1.25em}
 \begin{figure} [H]
-\center{\includegraphics[frame, scale=0.195] {images/christmas_stocking_theorem.jpg}}
-\caption{The Christmas Stocking Theorem}
-\label{fig:christmas_stocking_theorem}
+  \center{\includegraphics[frame, scale=0.20] {images/christmas_stocking_theorem.jpg}}
+  \caption{The Christmas Stocking Theorem}
+  \label{fig:christmas_stocking_theorem}
 \end{figure}
 
 \section{Christmas Tree Coordinate Systems}
 \vspace{1.25em}
 \begin{figure} [H]
-   \center{\includegraphics[frame, scale=0.40] {images/xmas-tree.jpeg}}
-   \caption{Christmas Tree Coordinates Systems}
-   \label{fig:christmas_tree_coordinates_systems}
+  \center{\includegraphics[frame, scale=0.40] {images/xmas-tree.jpeg}}
+  \caption{Christmas Tree Coordinates Systems}
+  \label{fig:christmas_tree_coordinates_systems}
 \end{figure}
 
 
 \vspace{3.0em}
 \section{Merry X-mas!}
-\vspace{2.0em}
-\large {
-  \begin{equation*}
-   \begin{array}{rcll} 
-		y
-		&\coloneqq& {\displaystyle \frac{\ln \big (\frac{x}{m} -  sa  \big ) }{r^2}}                                            
-				&\qquad \qquad \mathrel{\#} \text{define $y$} \\
+
+\setlength {\fboxsep} {0.85em}											% get more space between fcolorbox and content
+\setlength {\fboxrule}{0.75pt}											% change fcolorbox line thickness
+
+\begin{figure} [H]
+  \centering                                                            % center everything
+  \fcolorbox{red}{white} {                                            	% put a color box around the figure
+    \resizebox{1.0 \textwidth}{!} {                                     % resize the figure if you want
+       \begin{math}
+          \begin{array}{rcll} 
+             y
+             &\coloneqq& {\displaystyle \frac{\ln \big (\frac{x}{m} -  sa  \big ) }{r^2}}
+                         &\qquad \qquad \mathrel{\#} \text{define $y$} \\
 [1pt]
-		&\Rightarrow& r^2 y = \ln \big (\frac{x}{m} -  sa  \big )    
-				&\qquad \qquad  \mathrel{\#} \text{multiply both sides on the left by $r^2$} \\
+             &\Rightarrow& r^2 y = \ln \big (\frac{x}{m} -  sa  \big )    
+                         &\qquad \qquad  \mathrel{\#} \text{multiply both sides on the left by $r^2$} \\
 [1pt]
-		&\Rightarrow& e^{r^2y} = e^{\ln \big ( \frac{x}{m} -  sa\big )}                           
-				&\qquad \qquad \mathrel{\#} \text{$x = y \Rightarrow b^x =b^y$ ; exponentiate with $b = e$} \\
+             &\Rightarrow& e^{r^2y} = e^{\ln \big ( \frac{x}{m} -  sa\big )}                           
+                         &\qquad \qquad \mathrel{\#} \text{$x = y \Rightarrow b^x =b^y$ ; exponentiate with $b = e$} \\
 [1pt]
-		&\Rightarrow& e^{r^2y} = \frac{x}{m} -  sa                           
-				&\qquad \qquad \mathrel{\#} e^{\ln(x)} = x \\
+             &\Rightarrow& e^{r^2y} = \frac{x}{m} -  sa                           
+                         &\qquad \qquad \mathrel{\#} e^{\ln(x)} = x \\
 [1pt]
-		&\Rightarrow& e^{r^2y} = \frac{x}{m} -  as						
-				&\qquad \qquad \mathrel{\#} \text{assume multiplication is commutative $(sa = as)$} \\ 
+             &\Rightarrow& e^{r^2y} = \frac{x}{m} -  as						
+                         &\qquad \qquad \mathrel{\#} \text{assume multiplication is commutative $(sa = as)$} \\ 
 [1pt]
-		&\Rightarrow& m e^{r^2y} = x - mas                                        
-				&\qquad \qquad \mathrel{\#} \text{multiply both sides on the left by $m$} \\
+             &\Rightarrow& m e^{r^2y} = x - mas                                        
+                         &\qquad \qquad \mathrel{\#} \text{multiply both sides on the left by $m$} \\
 [1pt]
-		&\Rightarrow& \bf{\color{red}{m e^{rry} = x - mas}}                                     
-				&\qquad \qquad \mathrel{\#} \text{$r^2 = rr \Rightarrow$ \bf{Merry X-mas!}}
-    \end{array}
-   \end{equation*}
-}
+             &\Rightarrow& \bf{\color{red}{m e^{rry} = x - mas}}                                     
+                         &\qquad \qquad \mathrel{\#} \text{$r^2 = rr \Rightarrow$ \bf{Merry X-mas!}}
+         \end{array}
+       \end{math}
+        }                                                               % end resizebox
+     }                                                                  % end fcolorbox
+  \caption{Merry Christmas Everyone!}
+  \label{fig:merry_christmas_everyone}
+\end{figure}
 %
 %
 %

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 DEC 2023 09:26
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 DEC 2023 10:01
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -1545,68 +1545,60 @@ Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 613
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package luatex.def Info: images/christmas_stocking_theorem.jpg  used on input l
-ine 649.
+ine 650.
 (luatex.def)             Requested size: 1750.53574pt x 1238.6245pt.
 <images/xmas-tree.jpeg, id=193, 803.0pt x 596.2275pt>
 File: images/xmas-tree.jpeg Graphic file (type jpg)
 <use images/xmas-tree.jpeg>
-Package luatex.def Info: images/xmas-tree.jpeg  used on input line 657.
+Package luatex.def Info: images/xmas-tree.jpeg  used on input line 658.
 (luatex.def)             Requested size: 802.99805pt x 596.22604pt.
  [7<./images/tetrahedral_numbers.png><./images/christmas_stocking_theorem.jpg>]
- [8<./images/xmas-tree.jpeg>] (./christmastime_is_christmas_math_time.bbl
-Underfull \hbox (badness 1789) in paragraph at lines 32--36
-[]\TU/lmr/m/n/12 Eric W. Weis-stein.  Tetra-he-dral Num-ber.  []$\TU/lmtt/m/n/1
-2 https://mathworld.wolfram.com/
+
+Overfull \hbox (25.18285pt too wide) in paragraph at lines 700--701
+ [][][][] 
+ []
+
+[8<./images/xmas-tree.jpeg>] (./christmastime_is_christmas_math_time.bbl
+Underfull \hbox (badness 2334) in paragraph at lines 4--9
+[]\TU/lmr/m/n/10 Brian Hayes.  Gauss’s Day of Reck-on-ing.  []$\TU/lmtt/m/n/1
+0 https://www.americanscientist.org/article/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--82
-\TU/lmtt/m/n/12 Proofs_of_Fermat%27s_theorem_on_sums_of_two_squares&oldid=989540
-767$[]\TU/lmr/m/n/12 ,
- []
-
-[9]
-Underfull \hbox (badness 4303) in paragraph at lines 101--107
-[]\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Pas-cal’s Tri-an-gle --- Wikipedi
-a, The Free En-cy-
+Underfull \hbox (badness 7740) in paragraph at lines 19--24
+[]\TU/lmr/m/n/10 Eric W. Weis-stein.  Christ-mas Stock-ing The-o-rem.  []$\TU/l
+mtt/m/n/10 https://mathworld.wolfram.com/
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 117--123
-\TU/lmr/m/n/12 pe-dia.  []$\TU/lmtt/m/n/12 https://en.wikipedia.org/w/index.php?
-title=Binomial_coefficient&
+Underfull \hbox (badness 10000) in paragraph at lines 58--64
+[]\TU/lmr/m/n/10 Vishnu Vusirikala.  The Painter’s Para-dox.  []$\TU/lmtt/m/n
+/10 https://medium.com/nerd-[]for-[]tech/
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 125--131
-[]\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Cu-mu-la-tive Song --- Wikipedia, 
-The Free En-cy-clo-
+Underfull \hbox (badness 2245) in paragraph at lines 92--99
+[]\TU/lmr/m/n/10 Wikipedia Con-trib-u-tors.  Har-monic Se-ries (math-e-mat-ics) --- Wikipedia, The Free En-cy-clo-
  []
 
-
-Underfull \hbox (badness 3128) in paragraph at lines 133--139
-[]\TU/lmr/m/n/12 Wikipedia Con-trib-u-tors.  Fred-eric Austin --- Wikipedia, The
- Free En-cy-clo-
- []
-
-) [10] (./christmastime_is_christmas_math_time.aux)
+[9]) [10] (./christmastime_is_christmas_math_time.aux)
 Package rerunfilecheck Info: File `christmastime_is_christmas_math_time.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: D533434244EAD27A4FC394A4B9ACBDEB;2105.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54331 strings out of 478531
+ 54322 strings out of 478531
  195344,2373549 words of node,token memory allocated
- 4816 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1043 attribute, 64 glue_sp
-ec, 1043 attribute_list, 2 write, 19 pdf_action nodes
-   avail lists: 1:2,2:7590,3:2319,4:526,5:921,6:34,7:8611,8:136,9:7190,10:18,11:
-332
- 72386 multiletter control sequences out of 65536+600000
- 114 fonts using 9046863 bytes
- 132i,15n,128p,775b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
+ 4782 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1039 attribute, 64 glue_sp
+ec, 1039 attribute_list, 2 write, 16 pdf_action nodes
+   avail lists: 1:2,2:7598,3:2319,4:526,5:921,6:39,7:8611,8:136,9:7190,10:14,11:
+341
+ 72376 multiletter control sequences out of 65536+600000
+ 103 fonts using 8395287 bytes
+ 132i,18n,128p,775b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
 r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bol
@@ -1618,29 +1610,21 @@ n12-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
 n12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
 oman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (10 pages, 635233 byt
+/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on christmastime_is_christmas_math_time.pdf (10 pages, 574750 byt
 es).
 
-PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 70 named destinations out of 1000 (max. 131072)
+PDF statistics: 367 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 131072)
  104 words of extra memory for PDF output out of 10000 (max. 100000000)
 
