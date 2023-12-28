@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 DEC 2023 10:01
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 DEC 2023 10:31
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -1498,12 +1498,12 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-<images/infinite_gift.jpg, id=53, 1204.5pt x 680.5425pt>
+<images/infinite_gift.jpg, id=49, 1204.5pt x 680.5425pt>
 File: images/infinite_gift.jpg Graphic file (type jpg)
 <use images/infinite_gift.jpg>
 Package luatex.def Info: images/infinite_gift.jpg  used on input line 141.
 (luatex.def)             Requested size: 1204.49707pt x 680.54083pt.
-<images/gabriels_horn.jpg, id=57, 2033.5975pt x 1521.685pt>
+<images/gabriels_horn.jpg, id=53, 2033.5975pt x 1521.685pt>
 File: images/gabriels_horn.jpg Graphic file (type jpg)
 <use images/gabriels_horn.jpg>
 Package luatex.def Info: images/gabriels_horn.jpg  used on input line 173.
@@ -1528,37 +1528,32 @@ Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Module luamplib Info: flushing figure 1 on input line 534
  [5]
-<images/first_six_triangular_numbers.png, id=173, 441.65pt x 370.38374pt>
+<images/first_six_triangular_numbers.png, id=169, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
  line 591.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=177, 691.58376pt x 558.085pt>
+<images/tetrahedral_numbers.png, id=173, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
 Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 613
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
  [6<./images/first_six_triangular_numbers.png>]
-<images/christmas_stocking_theorem.jpg, id=192, 1750.54pt x 1238.6275pt>
+<images/christmas_stocking_theorem.jpg, id=188, 1750.54pt x 1238.6275pt>
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package luatex.def Info: images/christmas_stocking_theorem.jpg  used on input l
 ine 650.
 (luatex.def)             Requested size: 1750.53574pt x 1238.6245pt.
-<images/xmas-tree.jpeg, id=193, 803.0pt x 596.2275pt>
-File: images/xmas-tree.jpeg Graphic file (type jpg)
-<use images/xmas-tree.jpeg>
-Package luatex.def Info: images/xmas-tree.jpeg  used on input line 658.
-(luatex.def)             Requested size: 802.99805pt x 596.22604pt.
- [7<./images/tetrahedral_numbers.png><./images/christmas_stocking_theorem.jpg>]
 
-Overfull \hbox (25.18285pt too wide) in paragraph at lines 700--701
+Overfull \hbox (25.18285pt too wide) in paragraph at lines 691--692
  [][][][] 
  []
 
-[8<./images/xmas-tree.jpeg>] (./christmastime_is_christmas_math_time.bbl
+[7<./images/tetrahedral_numbers.png><./images/christmas_stocking_theorem.jpg>]
+(./christmastime_is_christmas_math_time.bbl
 Underfull \hbox (badness 2334) in paragraph at lines 4--9
 []\TU/lmr/m/n/10 Brian Hayes.  Gauss’s Day of Reck-on-ing.  []$\TU/lmtt/m/n/1
 0 https://www.americanscientist.org/article/
@@ -1570,7 +1565,7 @@ Underfull \hbox (badness 7740) in paragraph at lines 19--24
 mtt/m/n/10 https://mathworld.wolfram.com/
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 58--64
 []\TU/lmr/m/n/10 Vishnu Vusirikala.  The Painter’s Para-dox.  []$\TU/lmtt/m/n
 /10 https://medium.com/nerd-[]for-[]tech/
@@ -1581,21 +1576,21 @@ Underfull \hbox (badness 2245) in paragraph at lines 92--99
 []\TU/lmr/m/n/10 Wikipedia Con-trib-u-tors.  Har-monic Se-ries (math-e-mat-ics) --- Wikipedia, The Free En-cy-clo-
  []
 
-[9]) [10] (./christmastime_is_christmas_math_time.aux)
+) [9] (./christmastime_is_christmas_math_time.aux)
 Package rerunfilecheck Info: File `christmastime_is_christmas_math_time.out' ha
 s not changed.
-(rerunfilecheck)             Checksum: D533434244EAD27A4FC394A4B9ACBDEB;2105.
+(rerunfilecheck)             Checksum: 1067593A3B4970C13383811EF1638D76;1934.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54322 strings out of 478531
+ 54306 strings out of 478531
  195344,2373549 words of node,token memory allocated
  4782 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1039 attribute, 64 glue_sp
 ec, 1039 attribute_list, 2 write, 16 pdf_action nodes
-   avail lists: 1:2,2:7598,3:2319,4:526,5:921,6:39,7:8611,8:136,9:7190,10:14,11:
-341
- 72376 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:7598,3:2319,4:526,5:921,6:37,7:8611,8:123,9:7190,10:14,11:
+346
+ 72369 multiletter control sequences out of 65536+600000
  103 fonts using 8395287 bytes
  132i,18n,128p,775b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
@@ -1620,11 +1615,11 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (10 pages, 574750 byt
-es).
+Output written on christmastime_is_christmas_math_time.pdf (9 pages, 528051 byte
+s).
 
-PDF statistics: 367 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 131072)
- 104 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 356 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 131072)
+ 96 words of extra memory for PDF output out of 10000 (max. 100000000)
 
