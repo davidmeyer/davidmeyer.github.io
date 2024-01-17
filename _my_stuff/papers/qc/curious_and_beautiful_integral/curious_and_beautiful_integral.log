@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 JAN 2024 09:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 JAN 2024 10:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1465,7 +1465,7 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Overfull \hbox (46.97081pt too wide) in paragraph at lines 168--212
+Overfull \hbox (46.97664pt too wide) in paragraph at lines 168--213
  [][] 
  []
 
@@ -1475,15 +1475,16 @@ Underfull \hbox (badness 1655) in paragraph at lines 4--11
 epresentations _ of _ e & oldid = 1194093427$[]\OT1/cmr/m/n/10 , 2024.
  []
 
-[1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 2302) in paragraph at lines 13--18
 []\OT1/cmr/m/n/10 Wolfram Math-World.  Fun-da-men-tal The-ory of Cal-cu-lus.  [
 ]$\OT1/cmtt/m/n/10 https : / / mathworld . wolfram . com /
  []
 
-) [2] (./curious_and_beautiful_integral.aux)
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+[2] (./curious_and_beautiful_integral.aux)
 Package rerunfilecheck Info: File `curious_and_beautiful_integral.out' has not 
 changed.
 (rerunfilecheck)             Checksum: B6CF35FE23C3344EEE12E1A8BA1F6AEB;201.
@@ -1491,7 +1492,7 @@ changed.
 Here is how much of TeX's memory you used:
  52870 strings out of 478994
  1332525 string characters out of 5858184
- 1967249 words of memory out of 5000000
+ 1968249 words of memory out of 5000000
  69536 multiletter control sequences out of 15000+600000
  413833 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1512,7 +1513,7 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on curious_and_beautiful_integral.pdf (2 pages, 158289 bytes).
+Output written on curious_and_beautiful_integral.pdf (2 pages, 158395 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream
