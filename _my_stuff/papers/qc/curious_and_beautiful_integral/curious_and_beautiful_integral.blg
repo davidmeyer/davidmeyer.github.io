@@ -3,10 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: curious_and_beautiful_integral.aux
 The style file: plain.bst
 Database file #1: qc.bib
-Database file #2: ml.bib
 You've used 1 entry,
             2118 wiz_defined-function locations,
-            504 strings with 4195 characters,
+            503 strings with 4193 characters,
 and the built_in function-call counts, 237 in all, are:
 = -- 22
 > -- 7
