@@ -192,9 +192,15 @@
 			\Rightarrow e - 1 = 1 + \sum\limits_{n=1}^{\infty} \frac{1}{n!} - 1
 			= \sum\limits_{n=1}^{\infty} \frac{1}{n!} \; \cite{wikipedia:representations_of_e} \\
 [18pt]
-		&=& \dfrac{x^{e}}{e} \bigg |_{0}^{1}
+		&=& {\displaystyle \int\limits_{0}^{1} x^{r}} \; dx
+			&\hspace{0.250em} \mathrel{\#} \text{let $r = e -1$} \\
+[18pt]
+		&=& \dfrac{x^{r+1}}{r+1} \bigg |_{0}^{1} 
 			&\hspace{0.25em} \mathrel{\#} \text{by the power rule for integration \cite{wiki:power_rule}
 												and the FToC \cite{ftoc}} \\
+[18pt]
+		&=& \dfrac{x^{e}}{e} \bigg |_{0}^{1}
+			&\hspace{0.25em} \mathrel{\#} r = e - 1 \text{ and so } r+1 = e-1+1 = e \\
 [18pt]
 		&=& \dfrac{1^{e}}{e} - \dfrac{0^{e}}{e}
 			&\hspace{0.25em} \mathrel{\#} \text{evaluate at the endpoints} \\
