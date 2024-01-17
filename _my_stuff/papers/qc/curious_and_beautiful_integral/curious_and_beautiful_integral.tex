@@ -165,38 +165,43 @@
 %												%
 \begin{figure}[H]								% build the figure
   \centering									% center everything
-  \resizebox{1.00 \textwidth}{!} {				% resize the figure if you like
+  \resizebox{1.10 \textwidth}{!} {				% resize the figure if you like
     \fcolorbox{blue}{white} {					% make the outside frame black
       \begin{math}								% turn on math mode
 	   \begin{array}{llll}						% make it an array
 	   {\displaystyle \int\limits_{0}^{1} x \cdot 
 	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdot \sqrt[5]{x \cdots}}}}} \; dx
-	   &=& {\displaystyle \int\limits_{0}^{1} x \cdot x^{\frac{1}{2}} \cdot 
-	   		x^\frac{1}{2 \cdot 3} \cdot x^{\frac{1}{2 \cdot 3 \cdot 4}} \cdot 
-			x^{\frac{1}{2\cdot3\cdot4\cdot5}}} \cdots \; dx
-			&\hspace{1em} \mathrel{\#} \text{convert from radical to exponent notation} \\
+	   &=& {\displaystyle \int\limits_{0}^{1} x^{\frac{1}{1}} \cdot x^{\frac{1}{1 \cdot 2}} \cdot 
+	   		x^{\frac{1}{1 \cdot 2 \cdot 3}} \cdot x^{\frac{1}{1 \cdot 2 \cdot 3 \cdot 4}} \cdot 
+			x^{\frac{1}{1 \cdot 2\cdot 3 \cdot 4 \cdot5}}} \cdots \; dx
+			&\hspace{0.25em} \mathrel{\#} \text{convert from radical to exponent notation} \\
+[18pt]
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\frac{1}{1} + \frac{1}{1 \cdot 2} + 
+	   		\frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{1 \cdot 2 \cdot 3 \cdot 4} + 
+			\frac{1}{1 \cdot 2\cdot 3 \cdot 4 \cdot5} + \cdots}\; dx}
+			&\hspace{0.25em} \mathrel{\#} x^a \cdot x^b = x^{a+b} \\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{\sum_{n=1}^{\infty} \frac{1}{n!}} dx}
-			&\hspace{1em} \mathrel{\#} 1 +\frac{1}{2} + \frac{1}{2\cdot 3} + 
-			\frac{1}{2\cdot3\cdot 4} + \frac{1}{2 \cdot 3\cdot 4 \cdot 5} + \cdots = 
+			&\hspace{0.25em} \mathrel{\#} \frac{1}{1} +\frac{1}{1\cdot 2} + \frac{1}{1\cdot 2 \cdot 3} + 
+			\frac{1}{1 \cdot 2\cdot3\cdot 4} + \frac{1}{1 \cdot 2 \cdot 3\cdot 4 \cdot 5} + \cdots = 
 			\sum\limits_{n=1}^{\infty} \frac{1}{n!} \\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{e-1}} \; dx
-			&\hspace{1em} \mathrel{\#} e = \sum\limits_{n=0}^{\infty} \frac{1}{n!} 
+			&\hspace{0.250em} \mathrel{\#} e = \sum\limits_{n=0}^{\infty} \frac{1}{n!} 
 			\Rightarrow e - 1 = \sum\limits_{n=0}^{\infty} \frac{1}{n!} - 1
-			= \sum\limits_{n=1}^{\infty} \frac{1}{n!} \\
+			= \sum\limits_{n=1}^{\infty} \frac{1}{n!} \; \cite{wikipedia:representations_of_e} \\
 [18pt]
 		&=& \dfrac{x^{e}}{e} \bigg |_{0}^{1}
-			&\hspace{1em} \mathrel{\#} \text{FToC \cite{ftoc}} \\
+			&\hspace{0.25em} \mathrel{\#} \text{FToC \cite{ftoc}} \\
 [18pt]
 		&=& \dfrac{1^{e}}{e} - \dfrac{0^{e}}{e}
-			&\hspace{1em} \mathrel{\#} \text{evaluate at the endpoints} \\
+			&\hspace{0.25em} \mathrel{\#} \text{evaluate at the endpoints} \\
 [18pt]
 		&=& \dfrac{1}{e} - 0
-			&\hspace{1em} \mathrel{\#} 1^e = 1, 0^e = 0 \\
+			&\hspace{0.25em} \mathrel{\#} 1^e = 1 \text{ and } 0^e = 0 \\
 [12pt]
 		&=& \dfrac{1}{e}
-			&\hspace{1em} \mathrel{\#} {\displaystyle \int\limits_{0}^{1} x \cdot 
+			&\hspace{0.25em} \mathrel{\#} {\displaystyle \int\limits_{0}^{1} x \cdot 
 	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdot \sqrt[5]{x \cdots}}}}} 
 			\; dx = \dfrac{1}{e} 
 
