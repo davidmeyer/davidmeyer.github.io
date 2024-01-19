@@ -138,8 +138,7 @@
 %	Title, author and date
 %
 \title{A Curious Integral: ${\displaystyle \int\limits_{0}^{1} x \cdot 
-	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx = 
-			\dfrac{1}{e}$}
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx = \dfrac{1}{e}$}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -153,25 +152,38 @@
 %
 \section{Ok, but why?}
 \label{sec:introduction}
-\bigskip
-\noindent
-{\Large Consider:}
+Consider:
 
-\begin{center}
-  \begin{math}								% turn on math mode
-     \fontsize{11}{11}
-	 \begin{array}{llll}						% make it an array
+\vspace{5.0mm}
+
+%
+%	abandon the figure...
+%
+%	Set space and frame thickness
+%
+% \setlength {\fboxsep} {0.95em}					% get more space between fcolorbox and content
+% \setlength {\fboxrule}{0.50pt}					% set the outside fcolorbox line thickness
+%												%
+%												%
+%												%
+% \begin{figure}[H]								% build the figure
+%  \centering									% center everything
+%  \resizebox{1.00 \textwidth}{!} {				% resize the figure if you like
+%    \fcolorbox{blue}{white} {					% make the outside frame black
+      \begin{math}								% turn on math mode
+      \fontsize{10.465}{10}
+	   \begin{array}{llll}						% make it an array
 	       {\displaystyle \int\limits_{0}^{1} x \cdot 
 	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx
 	   &=& {\displaystyle \int\limits_{0}^{1} x^{\frac{1}{1}} \cdot x^{\frac{1}{1 \cdot 2}} \cdot 
 	   		x^{\frac{1}{1 \cdot 2 \cdot 3}} \cdot x^{\frac{1}{1 \cdot 2 \cdot 3 \cdot 4}}}
 			\cdots \; dx
-			&\hspace{0em} \mathrel{\#} \text{radical $\rightarrow$ exponent notation} \\
+			&\hspace{0.25em} \mathrel{\#} \text{convert from radical to exponent notation} \\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [ \frac{1}{1} + \frac{1}{1 \cdot 2} + 
 	   		\frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{1 \cdot 2 \cdot 3 \cdot 4} + 
 			\cdots \right ]}} \; dx
-			&\hspace{0em} \mathrel{\#} x^a \cdot x^b = x^{a+b} \\
+			&\hspace{0.25em} \mathrel{\#} x^a \cdot x^b = x^{a+b} \\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [\sum\limits_{n=1}^{\infty} \frac{1}{n!} \right ]} \; dx}
 			&\hspace{0.25em} \mathrel{\#} \frac{1}{1} +\frac{1}{1\cdot 2} + \frac{1}{1\cdot 2 \cdot 3} + 
@@ -180,35 +192,45 @@
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [ \left ( \sum\limits_{n=0}^{\infty} \frac{1}{n!} \right ) 
 											\, - \, 1 \right ]} \; dx}
-			&\hspace{0em} \mathrel{\#} \sum\limits_{n=1}^{\infty} \frac{1}{n!} = 
+			&\hspace{0.25em} \mathrel{\#} \sum\limits_{n=1}^{\infty} \frac{1}{n!} = 
 											\left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - \dfrac{1}{0!} =
 											\left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - 1\\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{e-1}} \; dx
-			&\hspace{0em} \mathrel{\#}  \sum\limits _{n=0}^{\infty} \frac{1}{n!} = e  
-											\Rightarrow \left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right )-1 
+			&\hspace{0.25em} \mathrel{\#}  \sum\limits _{n=0}^{\infty} \frac{1}{n!} = e  
+											\Rightarrow \left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - 1 
 											= e - 1 \; \cite{wikipedia:representations_of_e} \\
 [18pt]
-		&=& \dfrac{x^{(e-1)+1}}{(e-1)+1} \bigg |_{0}^{1} 
+		&=& {\displaystyle \int\limits_{0}^{1} x^{r}} \; dx
+			&\hspace{0.25em} \mathrel{\#} \text{let $r = e -1$} \\
+[18pt]
+		&=& \dfrac{x^{r+1}}{r+1} \bigg |_{0}^{1} 
 			&\hspace{0em} \mathrel{\#} \text{by the power rule \cite{wiki:power_rule}
 												and the FToC \cite{ftoc}} \\
 [18pt]
 		&=& \dfrac{x^{e}}{e} \bigg |_{0}^{1}
-			&\hspace{0em} \mathrel{\#} (e - 1) + 1 = e \\
+			&\hspace{0.25em} \mathrel{\#} r + 1 = e \\
 [18pt]
 		&=& \dfrac{1^{e}}{e} - \dfrac{0^{e}}{e}
-			&\hspace{0em} \mathrel{\#} \text{evaluate at the endpoints} \\
+			&\hspace{0.25em} \mathrel{\#} \text{evaluate at the endpoints} \\
 [18pt]
 		&=& \dfrac{1}{e} - \dfrac{0}{e}
-			&\hspace{0em} \mathrel{\#} 1^e = 1 \text{ and } 0^e = 0 \\
+			&\hspace{0.25em} \mathrel{\#} 1^e = 1 \text{ and } 0^e = 0 \\
 [12pt]
 		&=& \dfrac{1}{e}
-			&\hspace{0em} \mathrel{\#} {\displaystyle \int\limits_{0}^{1} x \cdot 
-	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} 
+			&\hspace{0.25em} \mathrel{\#} {\displaystyle \int\limits_{0}^{1} x \cdot 
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdot \sqrt[5]{x \cdots}}}}} 
 			\; dx = \dfrac{1}{e} 
-	 \end{array}
-   \end{math}
-\end{center}
+
+	   \end{array}
+	  \end{math}
+%	  }											% end fcolorbox
+%    }   										% end resizebox
+%  \caption{A curious and beautiful integral}
+%  \label{eqn:curious_integral}	
+%\end{figure}
+	 
+
 
 
 \section{Conclusions}
