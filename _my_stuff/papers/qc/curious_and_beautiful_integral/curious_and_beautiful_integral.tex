@@ -138,7 +138,8 @@
 %	Title, author and date
 %
 \title{A Curious Integral: ${\displaystyle \int\limits_{0}^{1} x \cdot 
-	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx = \dfrac{1}{e}$}
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx = 
+			\dfrac{1}{e}$}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last update: \today}
@@ -153,11 +154,12 @@
 \section{Ok, but why?}
 \label{sec:introduction}
 
+\bigskip
 {\Large Consider:}
 
 \begin{center}
       \begin{math}								% turn on math mode
-      \fontsize{11.25}{8}
+      \fontsize{11.40}{8}
 	   \begin{array}{llll}						% make it an array
 	       {\displaystyle \int\limits_{0}^{1} x \cdot 
 	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx
@@ -166,9 +168,9 @@
 			\cdots \; dx
 			&\hspace{0.25em} \mathrel{\#} \text{radical $\rightarrow$ exponent notation} \\
 [18pt]
-		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [ \frac{1}{1} + \frac{1}{1 \cdot 2} + 
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\big [ \frac{1}{1} + \frac{1}{1 \cdot 2} + 
 	   		\frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{1 \cdot 2 \cdot 3 \cdot 4} + 
-			\cdots \right ]}} \; dx
+			\cdots \big ]}} \; dx
 			&\hspace{0.25em} \mathrel{\#} x^a \cdot x^b = x^{a+b} \\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [\sum\limits_{n=1}^{\infty} \frac{1}{n!} \right ]} \; dx}
@@ -202,7 +204,7 @@
 [12pt]
 		&=& \dfrac{1}{e}
 			&\hspace{0.25em} \mathrel{\#} {\displaystyle \int\limits_{0}^{1} x \cdot 
-	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdot \sqrt[5]{x \cdots}}}}} 
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}}
 			\; dx = \dfrac{1}{e} 
 
 	   \end{array}
