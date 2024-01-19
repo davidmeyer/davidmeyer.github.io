@@ -165,7 +165,7 @@
 %												%
 \begin{figure}[H]								% build the figure
   \centering									% center everything
-  \resizebox{1.10 \textwidth}{!} {				% resize the figure if you like
+  \resizebox{1.00 \textwidth}{!} {				% resize the figure if you like
     \fcolorbox{blue}{white} {					% make the outside frame black
       \begin{math}								% turn on math mode
 	   \begin{array}{llll}						% make it an array
@@ -176,21 +176,26 @@
 			x^{\frac{1}{1 \cdot 2\cdot 3 \cdot 4 \cdot5}}} \cdots \; dx
 			&\hspace{0.25em} \mathrel{\#} \text{convert from radical to exponent notation} \\
 [18pt]
-		&=& {\displaystyle \int\limits_{0}^{1} x^{\frac{1}{1} + \frac{1}{1 \cdot 2} + 
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [ \frac{1}{1} + \frac{1}{1 \cdot 2} + 
 	   		\frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{1 \cdot 2 \cdot 3 \cdot 4} + 
-			\frac{1}{1 \cdot 2\cdot 3 \cdot 4 \cdot5} + \cdots}\; dx}
+			\frac{1}{1 \cdot 2\cdot 3 \cdot 4 \cdot5} + \cdots \right ]}} \; dx
 			&\hspace{0.25em} \mathrel{\#} x^a \cdot x^b = x^{a+b} \\
 [18pt]
-		&=& {\displaystyle \int\limits_{0}^{1} x^{\sum_{n=1}^{\infty} \frac{1}{n!}} dx}
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [\sum\limits_{n=1}^{\infty} \frac{1}{n!} \right ]} \; dx}
 			&\hspace{0.25em} \mathrel{\#} \frac{1}{1} +\frac{1}{1\cdot 2} + \frac{1}{1\cdot 2 \cdot 3} + 
 			\frac{1}{1 \cdot 2\cdot3\cdot 4} + \frac{1}{1 \cdot 2 \cdot 3\cdot 4 \cdot 5} + \cdots = 
 			\sum\limits_{n=1}^{\infty} \frac{1}{n!} \\
 [18pt]
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [ \left ( \sum\limits_{n=0}^{\infty} \frac{1}{n!} \right ) 
+											\, - \, 1 \right ]} \; dx}
+			&\hspace{0.25em} \mathrel{\#} \sum\limits_{n=1}^{\infty} \frac{1}{n!} = 
+											\left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - \dfrac{1}{0!} =
+											\left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - 1\\
+[18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{e-1}} \; dx
-			&\hspace{0.250em} \mathrel{\#} e = \sum\limits_{n=0}^{\infty} \frac{1}{n!} 
-			= \frac{1}{0!} + \sum\limits_{n=1}^{\infty} \frac{1}{n!} 
-			\Rightarrow e - 1 = 1 + \sum\limits_{n=1}^{\infty} \frac{1}{n!} - 1
-			= \sum\limits_{n=1}^{\infty} \frac{1}{n!} \; \cite{wikipedia:representations_of_e} \\
+			&\hspace{0.250em} \mathrel{\#}  \sum\limits _{n=0}^{\infty} \frac{1}{n!} = e  
+											\Rightarrow \left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - 1 
+											= e - 1 \; \cite{wikipedia:representations_of_e} \\
 [18pt]
 		&=& {\displaystyle \int\limits_{0}^{1} x^{r}} \; dx
 			&\hspace{0.250em} \mathrel{\#} \text{let $r = e -1$} \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  18 JAN 2024 10:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  19 JAN 2024 06:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1465,10 +1465,6 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Overfull \hbox (46.97664pt too wide) in paragraph at lines 168--220
- [][] 
- []
-
 (./curious_and_beautiful_integral.bbl [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -1491,7 +1487,7 @@ changed.
 Here is how much of TeX's memory you used:
  52872 strings out of 478994
  1332562 string characters out of 5858184
- 1969286 words of memory out of 5000000
+ 1971285 words of memory out of 5000000
  69537 multiletter control sequences out of 15000+600000
  413833 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1512,7 +1508,7 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on curious_and_beautiful_integral.pdf (2 pages, 161081 bytes).
+Output written on curious_and_beautiful_integral.pdf (2 pages, 162976 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
