@@ -857,7 +857,7 @@ So here's a theorem:
 
 \medskip
 \begin{theorem}
-	Let $\phi: G \rightarrow G$ be a  group
+	Let $\phi: G \rightarrow H$ be a  group
 	homomorphism. Then $\ker \phi  \lhd  G$.
 \label{theorem:kernel_is_a_normal_subgroup}
 \end{theorem} 
@@ -869,7 +869,7 @@ So here's a theorem:
 and let $g \in G$. Then we want to show\footnote{Recall that for 
 normal subgroups $xN = Nx$ which implies that $xnx^{-1} \in N$.}  
 that $gkg^{-1} \in \ker \phi$ (or equivalently that 
-$g \ker \phi g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
+$g \ker \phi \, g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
 
 \begin{equation*}
 \begin{array}{rcll}
@@ -880,27 +880,27 @@ $g \ker \phi g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
 &=& \phi(g)\phi(k)(\phi(g))^{-1}
                 &\hspace{8em} \mathrel{\#} \text{Equation (\ref{eqn:inverse}): }\phi(g^{-1}) = (\phi(g))^{-1} \\
 [5pt]
-&=& \phi(g) e (\phi(g))^{-1}
-                &\hspace{8em} \mathrel{\#} k \in \ker \phi \Rightarrow \phi(k) = e  
-                				\text{ ($e$ is the identity in $G$)} \\
+&=& \phi(g) e_H (\phi(g))^{-1}
+                &\hspace{8em} \mathrel{\#} k \in \ker \phi \Rightarrow \phi(k) = e_H  
+                				\text{ ($e_H$ is the identity in $H$)} \\
 [5pt]
 &=& \phi(g) (\phi(g))^{-1}
-                &\hspace{8em} \mathrel{\#} \phi(g) e = \phi(g) \text{ and } 
-                				e \phi(g)^{-1} = \phi(g)^{-1} \\
+                &\hspace{8em} \mathrel{\#} \phi(g) e_H = \phi(g) \text{ and } 
+                				e_H \phi(g)^{-1} = \phi(g)^{-1} \\
 [5pt]
-&=& e
-                &\hspace{8em} \mathrel{\#} xx^{-1} = x^{-1} x = e 
-                				\text{ (where $x \neq 0$)} \\
+&=& e_H
+                &\hspace{8em} \mathrel{\#} xx^{-1} = x^{-1} x = e_H 
+                				\text{ (where $x \in H$ and $x \neq 0$)} \\
 [5pt]
-&=& e
-                &\hspace{8em} \mathrel{\#} \phi(gkg^{-1}) = e \Rightarrow 
+&=& e_H
+                &\hspace{8em} \mathrel{\#} \phi(gkg^{-1}) = e_H \Rightarrow 
                 				gkg^{-1} \in \ker \phi
 \end{array}
 \end{equation*}
 
 
 \noindent
-So $gkg^{-1} \in \ker \phi \Rightarrow g \ker \phi g^{-1} = \ker
+So $gkg^{-1} \in \ker \phi \Rightarrow g \ker \phi \, g^{-1} = \ker
 \phi \Rightarrow \ker \phi \lhd G$. $\blacksquare$
 
 
