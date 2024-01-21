@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 JAN 2024 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  21 JAN 2024 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1444,9 +1444,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--10
  []
 
 ) [13] (./groups.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `groups.out' has not changed.
 (rerunfilecheck)             Checksum: 9C829BDAB2A93CB320F5460C95FC447D;1905.
  ) 
@@ -1481,7 +1478,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on groups.pdf (13 pages, 290647 bytes).
+Output written on groups.pdf (13 pages, 290713 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  256 compressed objects within 3 object streams

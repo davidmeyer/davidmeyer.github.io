@@ -855,7 +855,6 @@ recall the following:
 \noindent
 So here's a theorem:
 
-
 \medskip
 \begin{theorem}
 	Let $\phi: G \rightarrow H$ be a  group
@@ -901,8 +900,8 @@ $g \ker \phi \, g^{-1} = \ker \phi$). Now consider $\phi(gkg^{-1})$:
 
 
 \noindent
-So $gkg^{-1} \in \ker \phi \Rightarrow g \ker \phi \, g^{-1} = \ker
-\phi \Rightarrow \ker \phi \lhd G$. $\blacksquare$
+So $gkg^{-1} \in \ker \phi \Rightarrow g \ker \phi \, g^{-1} =
+\ker \phi \Rightarrow \ker \phi \lhd G$. $\blacksquare$
 
 
 \medskip
@@ -915,10 +914,11 @@ $\phi(x) = 3x$.
 
 \medskip
 \noindent
-To show that $\ker \phi \lhd (\mathbb{Z}_{12},+)$, we first need to show that $\phi$ 
-is a homomorphism. But this is an easy one: $\phi(x+y) = 3 (x + y) 
-= 3x + 3y = \phi(x) + \phi(y)$.  So $\phi$ is a homomorphism. Next 
-consider the mapping $\phi$ on $\mathbb{Z}_{12}$:
+To show that $\ker \phi \lhd (\mathbb{Z}_{12},+)$, we first need
+to show that $\phi$ is a homomorphism. But this is an easy one:
+$\phi(x+y) = 3 (x + y) = 3x + 3y = \phi(x) + \phi(y)$.  So $\phi$
+is a homomorphism. Next consider the mapping $\phi$ on
+$\mathbb{Z}_{12}$:
 
 
 \begin{equation*}
@@ -937,7 +937,7 @@ $\phi(\mathbb{Z}_{12}) = \{0,3,6,9\}$ and that $\ker \phi =
 
 \bigskip
 \noindent
-Grouping the  elements of $\mathbb{Z}_{12}$ with their images we
+Grouping the  elements of $\mathbb{Z}_{12}$ with their images we 
 see that 
 
 
@@ -957,12 +957,13 @@ see that
 
 \bigskip
 \noindent
-This is a nice example of the property that $\phi(a) = x
-\Rightarrow \phi^{-1}(x) = a + \ker \phi$. To see this, choose, for
-example, $a = 5$. Then $\phi(5) = 3\cdot 5 = 15$ and $15 \operatorname{mod} 
-12 = 3$, so $x = 3$. This implies that $\phi(3)^{-1} = 5 + \ker \phi
-= \{5+0, 5+4, 5+8\} = \{5, 9, 13\} \equiv \{1,5,9\}$, noting that 
-$13 \operatorname{mod} 12 = 1$.
+This is a nice example of the group property that $\phi(a) = x
+\Rightarrow \phi^{-1}(x) = a \circ \ker \phi$. In this case the
+group operation $\circ$ is $+$. To see this how this works,
+choose, for example, $a = 5$. Then $\phi(5) = 3\cdot 5 = 15$ and
+$15 \operatorname{mod} 12 = 3$, so $x = 3$. This implies that
+$\phi(3)^{-1} = 5 + \ker \phi = \{5+0, 5+4, 5+8\} = \{5, 9, 13\}
+\equiv \{1,5,9\}$, noting that $13 \operatorname{mod} 12 = 1$.
 
 \bigskip
 \noindent
