@@ -111,21 +111,23 @@ real and complex analysis \cite{fa_mit}. The connection is the
 norm $\norm{\mathbf{x}}$ of a vector space $V$. As we shall see,
 if $(V,\norm{\cdot})$ is a \emph{normed space} then $(V,d)$ is a
 \emph{metric space} with metric $d(\mathbf{x},\mathbf{y})
-\coloneqq \norm{\mathbf{y}-\mathbf{x}} = \norm{\mathbf{x}-\mathbf{y}}$. Moreover, if
-$(V,\langle\cdot,\cdot\rangle)$ is an \emph{inner product space}\footnote{That is, 
-$V$ is a vector space and $\langle\cdot,\cdot\rangle: V \times V \rightarrow \mathbb{R}$ is an inner product on the
-vector space $V$.} then $(V,\norm{\cdot})$ is a normed space with
-norm $\norm{\mathbf{x}} \coloneqq \sqrt{\langle
-\mathbf{x},\mathbf{x}\rangle}$ and consequently $(V,d)$ is a
-metric space with metric $d(\mathbf{x},\mathbf{y}) =
-\sqrt{\langle
+\coloneqq \norm{\mathbf{y}-\mathbf{x}} =
+\norm{\mathbf{x}-\mathbf{y}}$. Moreover, if
+$(V,\langle\cdot,\cdot\rangle)$ is an \emph{inner product
+space}\footnote{That is, $V$ is a vector space and
+$\langle\cdot,\cdot\rangle: V \times V \rightarrow \mathbb{R}$ is
+an inner product on the vector space $V$.} then
+$(V,\norm{\cdot})$ is a normed space with norm $\norm{\mathbf{x}}
+\coloneqq \sqrt{\langle \mathbf{x},\mathbf{x}\rangle}$ and
+consequently $(V,d)$ is a metric space with metric
+$d(\mathbf{x},\mathbf{y}) = \sqrt{\langle
 \mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.
 
 \bigskip
 \noindent
 One quick thing is to notice is that as we go from metric to norm
-to inner product we are adding structure to a set or vector space.
-More specifically
+to inner product we are adding structure to a set or vector
+space.  More specifically
 
 \begin{equation*}
 \begin{array}{rclll}
@@ -184,7 +186,7 @@ following three properties:
 
 \begin{figure}[H]
 \centering
-  \resizebox{0.45 \textwidth}{!} {	
+  \resizebox{0.55 \textwidth}{!} {	
     \tikzstyle{background rectangle}=[thin,draw=black]                                  % make the frame thinner (there must be an easier way) 
     \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                  % couldn't control thickness with \begin{tikzpicture} [framed]
 %
@@ -237,13 +239,13 @@ as measured by a norm $\norm{\mathbf{x}}$, but for now we'll
 consider the "distance version" of the triangle inequality as
 shown in Figure \ref{fig:triangle_inequality}.
 
-\bigskip
+\vspace{1.00cm}
 %
 %	triangle inequality
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.45 \textwidth}{!} {
+  \resizebox{0.55 \textwidth}{!} {
     \tikzstyle{background rectangle}=[thin,draw=black]                                                          % make the frame thinner (there must be an easier way)
     \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                                          % couldn't control thickness with [framed]
 %
@@ -268,32 +270,32 @@ shown in Figure \ref{fig:triangle_inequality}.
 		\draw [] (x) node[left, above, , xshift=-2.00mm, yshift=-1.00mm]{$x$};                          % label x
 		\draw [] (y) node[right, xshift=-0.05mm]{$y$};                                                  % label y
 		\draw [] (z) node[below, yshift=-0.05mm]{$z$};                                                  % label z
-		\draw [thin, draw=black] (x) -- (y)                                              				% draw x -- y
+		\draw [thin, draw=black] (x) -- (y)                                                             % draw x -- y
 		       node[font=\scriptsize, rotate=-6.00, above, midway] {$d(x,y)$};                          % draw d(x,y)
-		\draw [densely dashed, draw=red] (x) -- (z)														% draw x -- z
+		\draw [densely dashed, draw=red] (x) -- (z)                                                     % draw x -- z
 		       node[font=\scriptsize, xshift=-4.75mm, yshift=1.00mm, below, midway] {$d(x,z)$};         % draw d(x,z)
-		\draw [densely dashed, draw=red] (y) -- (z)														% draw z -- y
+		\draw [densely dashed, draw=red] (y) -- (z)                                                     % draw z -- y
 		       node[font=\scriptsize, xshift=-1.50mm, yshift=-2.75mm, right, midway] {$d(z,y)$};        % draw d(z,y)
 		\draw  [draw=none] (TIL) -- (TIR)                                                               % draw the definition of the triangle inequality
-				node[rectangle, draw, very thin, below, midway, yshift=-0.80cm]                 		% ...
-				{$d(x,y) \leq d(x,z) + d(z,y)$};                                                		% definition of the triangle inequality
-		\fill [fill=black] (x) circle (1.0pt);															% x dot		
-		\fill [fill=black] (y) circle (1.0pt);															% y dot
-		\fill [fill=black] (z) circle (1.0pt);															% z dot
+				node[rectangle, draw, very thin, below, midway, yshift=-0.80cm]                 % ...
+				{$d(x,y) \leq d(x,z) + d(z,y)$};                                                % definition of the triangle inequality
+		\fill [fill=black] (x) circle (1.0pt);                                                          % x dot		
+		\fill [fill=black] (y) circle (1.0pt);                                                          % y dot
+		\fill [fill=black] (z) circle (1.0pt);                                                          % z dot
 		\node [] at (X) {$X$};                                                                          % draw X in the lower right corner
-  \end{tikzpicture}                                                                                     % end tikzpicture
-  }                                                                                                     % end resizebox
+  \end{tikzpicture}                                                                                             % end tikzpicture
+  }                                                                                                             % end resizebox
   \caption{The triangle inequality for distances}
   \label{fig:triangle_inequality}
 \end{figure}
 
-\bigskip
+
 %
 %	open epsilon ball
 %
 \begin{figure}[H]
 \centering
-  \resizebox{0.37 \textwidth}{!} {                                                              % resize the tikzpicture if you like
+  \resizebox{0.45 \textwidth}{!} {                                                              % resize the tikzpicture if you like
   \tikzstyle{background rectangle}=[thin,draw=black]                                            % make the frame thinner (there must be an easier way to do this)
      \begin{tikzpicture}[show background rectangle]                                             % couldn't control frame thickness with \begin{tikzpicture} [framed]
        \coordinate (C)  at (0.00, 0.00);                                                        % center
