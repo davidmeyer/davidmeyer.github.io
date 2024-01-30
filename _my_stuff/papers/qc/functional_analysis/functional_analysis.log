@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 NOV 2023 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 JAN 2024 11:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1429,12 +1429,12 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 )
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 193.
+LaTeX Font Warning: Command \small invalid in math mode on input line 214.
 
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./functional_analysis.bbl [2]) [3] (./functional_analysis.aux)
+[2] (./functional_analysis.bbl) [3] (./functional_analysis.aux)
 Package rerunfilecheck Info: File `functional_analysis.out' has not changed.
 (rerunfilecheck)             Checksum: FA03EB964AE53964F43399EC3F9F1738;312.
  ) 
@@ -1445,7 +1445,7 @@ Here is how much of TeX's memory you used:
  69254 multiletter control sequences out of 15000+600000
  419468 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,11n,131p,759b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,11n,131p,759b,858s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1467,7 +1467,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on functional_analysis.pdf (3 pages, 211215 bytes).
+Output written on functional_analysis.pdf (3 pages, 211033 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  122 compressed objects within 2 object streams

@@ -124,8 +124,8 @@ metric space with metric $d(\mathbf{x},\mathbf{y}) =
 \bigskip
 \noindent
 One quick thing is to notice is that as we go from metric to norm
-to inner product we are adding structure to a vector space.
-Specifically
+to inner product we are adding structure to a set or vector space.
+More specifically
 
 \begin{equation*}
 \begin{array}{rclll}
@@ -159,11 +159,32 @@ look at two points $x,y \in X$. What we would like to do is
 measure the distance between $x$ and $y$ in $X$ as shown in
 Figure \ref{fig:set}.
 
-
 \bigskip
+\noindent
+To measure this distance we define a map $d: X \times X
+\rightarrow [0,\infty)$, which we call a metric and which has the
+following three properties:
+
+
+\begin{equation*}
+\begin{array}{llll}
+1. & d(x,y) \geq 0 \text{ and } d(x,y) = 0 \Leftrightarrow x = y
+                && \qquad \qquad \mathrel{\#} \text{this property is called "positive definiteness"} \\
+[8pt]
+2. & d(x,y) = d(y,x)
+                && \qquad \qquad \mathrel{\#} \text{this property is called "symmetry"} \\
+[8pt]
+3. & d(x,y) \leq d(x,z) + d(z,y)
+                && \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"} 
+\end{array}
+\vspace{0.75cm}
+\end{equation*}
+
+
+
 \begin{figure}[H]
 \centering
-  \resizebox{0.38 \textwidth}{!} {	
+  \resizebox{0.45 \textwidth}{!} {	
     \tikzstyle{background rectangle}=[thin,draw=black]                                  % make the frame thinner (there must be an easier way) 
     \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                  % couldn't control thickness with \begin{tikzpicture} [framed]
 %
@@ -196,25 +217,6 @@ Figure \ref{fig:set}.
 \end{figure}
 
 
-\bigskip
-\noindent
-To measure this distance we define a map $d: X \times X
-\rightarrow [0,\infty)$, which we call a metric and which has the
-following three properties:
-
-
-\begin{equation*}
-\begin{array}{llll}
-1. & d(x,y) \geq 0 \text{ and } d(x,y) = 0 \Leftrightarrow x = y
-                && \qquad \qquad \mathrel{\#} \text{this property is called "positive definiteness"} \\
-[8pt]
-2. & d(x,y) = d(y,x)
-                && \qquad \qquad \mathrel{\#} \text{this property is called "symmetry"} \\
-[8pt]
-3. & d(x,y) \leq d(x,z) + d(z,y)
-                && \qquad \qquad \mathrel{\#} \text{this is called the "triangle inequality"} 
-\end{array}
-\end{equation*}
 
 \bigskip
 \noindent
@@ -235,10 +237,11 @@ as measured by a norm $\norm{\mathbf{x}}$, but for now we'll
 consider the "distance version" of the triangle inequality as
 shown in Figure \ref{fig:triangle_inequality}.
 
+\bigskip
 %
 %	triangle inequality
 %
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
   \resizebox{0.45 \textwidth}{!} {
     \tikzstyle{background rectangle}=[thin,draw=black]                                                          % make the frame thinner (there must be an easier way)
