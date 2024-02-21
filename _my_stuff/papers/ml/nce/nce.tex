@@ -12,7 +12,7 @@
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{mathrsfs}
@@ -64,26 +64,26 @@ Since  $p_d$ is unknown,  we model $p(.|C=1) = p_m(.;\theta)$. Note that we're m
 \noindent
 Given these definitions,  the likelihoods are 
 
-\begin{flalign}
+\begin{flalign*}
 p(\mathbf{u}|C=1) &= p_m(\mathbf{u};\theta)  \quad \qquad  \mathbin{\#} \text{data} \\
 p(\mathbf{u}|C=0) &= p_n(\mathbf{u})              \qquad \qquad  \mathbin{\#} \text{noise} 
-\end{flalign}
+\end{flalign*}
 
 \noindent
 The priors are
-\begin{flalign}
+\begin{flalign*}
 P(C=1) &= \frac{T_d}{T_d + T_n} \\
 P(C=0) &= \frac{T_n}{T_d + T_n}
-\end{flalign}
+\end{flalign*}
 
 \bigskip
 \noindent
 The probability of any given $\mathbf{u}$,  $P(\mathbf{u})$, is thus
 
-\begin{flalign}
+\begin{flalign*}
 P(\mathbf{u}) &= (P(C = 1) * p(\mathbf{u}|C = 1)) + (P(C = 0) * p(\mathbf{u}|C = 0)) \\
 &= \Big(\frac{T_d}{T_d + T_n}  * p_m(\mathbf{u};\theta) \Big) + \Big(\frac{T_n}{T_d + T_n} * p_n(\mathbf{u}) \Big)
-\end{flalign}
+\end{flalign*}
 
 \bigskip
 \noindent
@@ -95,10 +95,10 @@ P(\Theta | \mathcal{X}) &= \frac{P(\mathcal{X}|\Theta) P(\Theta)}{P(\mathcal{X})
 \end{flalign*}
 
 \bigskip
-\noindentå
+\noindentÃ¥
 we get the posterior probabilities 
 
-\begin{flalign}
+\begin{flalign*}
 P(C=1| \mathbf{u};\theta) &= \frac{P(\mathbf{u}| C=1;\theta) * P(C=1)}{P(\mathbf{u})} \\
 &= \frac{p_m(\mathbf{u};\theta) *  \frac{T_d}{T_d + T_n}} {\Big(\frac{T_d}{T_d + T_n}  * p_m(\mathbf{u};\theta) \Big) + \Big(\frac{T_n}{T_d + T_n} * p_n(\mathbf{u}) \Big)} \\
 &= \frac{p_m(\mathbf{u};\theta)}{\Big(\Big(\frac{T_d}{T_d + T_n}  * p_m(\mathbf{u};\theta) \Big) + \Big(\frac{T_n}{T_d + T_n} * p_n(\mathbf{u}) \Big)\Big) * \frac{T_d + T_n}{T_d}} \\
@@ -107,35 +107,35 @@ P(C=1| \mathbf{u};\theta) & = \frac{p_m(\mathbf{u};\theta)} {p_m(\mathbf{u};\the
 \qquad \qquad  \mathbin{\#} v = \frac{T_n}{T_d} =  \frac{P(C=0)}{P(C=1)} 
 \\
 P(C=0|\mathbf{u};\theta) &= \frac{v p_n(\mathbf{u})}{p_m(\mathbf{u};\theta) + v p_n(\mathbf{u})}  \qquad \qquad  \mathbin{\#} \text{same analysis} 
-\end{flalign}
+\end{flalign*}
 
 \noindent
 Now we have 
 
-\begin{flalign}
+\begin{flalign*}
 P(C=1| \mathbf{u};\theta) & = \frac{p_m(\mathbf{u};\theta)} {p_m(\mathbf{u};\theta) + v p_n(\mathbf{u})} \\
 & = \frac{p_m(\mathbf{u};\theta) * \frac{1}{p_m(\mathbf{u};\theta)}} {(p_m(\mathbf{u};\theta) + v p_n(\mathbf{u})) * \frac{1}{p_m(\mathbf{u};\theta)}} \\
 &= \frac{1}{1 + v \frac{p_n(\mathbf{u)}}{p_m(\mathbf{u};\theta)}} \\
 &= \Big (1 + v\frac{p_n(\mathbf{u)}}{p_m(\mathbf{u};\theta)}\Big)^{-1}
-\end{flalign}
+\end{flalign*}
 
 \noindent
 This is the first time we see an estimate of ratio we are looking for, namely $\frac{p_n(\mathbf{u)}}{p_m(\mathbf{u};\theta)}$. Now, define $G(\mathbf{u};\theta)$
-\begin{flalign}
+\begin{flalign*}
 G(\mathbf{u};\theta)  &= \ln \frac{p_m(\mathbf{u};\theta)}{p_n(\mathbf{u)}} \\
 &=  \ln p_m(\mathbf{u};\theta) - \ln p_n(\mathbf{u)}
-\end{flalign}
+\end{flalign*}
 \noindent
 $G(\mathbf{u};\theta)$ is called the \emph{log-ratio} between $p_m(\mathbf{u};\theta)$ and $p_n(\mathbf{u)}$. If we let  $P(C=1| \mathbf{u};\theta) = h(\mathbf{u};\theta)$ then $h(\mathbf{u};\theta)$ can be written as
-\begin{flalign}
+\begin{flalign*}
 h(\mathbf{u};\theta) &= r_v(G(\mathbf{u};\theta)) 
 \label{eqn:h}
-\end{flalign}
+\end{flalign*}
 \noindent
 where 
-\begin{flalign}
+\begin{flalign*}
 r_v(u) = \frac{1}{1 + v \exp(-u)}
-\end{flalign}
+\end{flalign*}
 \noindent
 that is,  $r_v(.)$ is the sigmoid/logistic function parameterized by $v$.
 
@@ -154,7 +154,7 @@ Note that the class labels $C_t$ are assumed to be Bernoulli and iid. The \emph{
 \bigskip
 \noindent
 Of the many interesting things here: optimizing $\ell(\boldsymbol{{\theta}})$ with respect to $\boldsymbol{{\theta}}$
-leads to an estimate $G(.;\hat{\boldsymbol{\theta}})$ of the log-ratio $\ln (p_d/p_n)$. Said another way, an approximate description of $X$ relative to $Y$ can be obtained by optimizing Equation \ref{eqn:cll}. Note also that $-\ell(\boldsymbol{\theta})$ is the cross-entropy function.
+leads to an estimate $G(.;\hat{\boldsymbol{\theta}})$ of the log-ratio $\ln (p_d/p_n)$. Said another way, an approximate description of $X$ relative to $Y$ can be obtained by optimizing Equation (\ref{eqn:cll}). Note also that $-\ell(\boldsymbol{\theta})$ is the cross-entropy function.
 
 \bigskip
 \noindent
