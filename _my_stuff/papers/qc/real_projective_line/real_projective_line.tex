@@ -160,38 +160,40 @@
 \maketitle
 %
 %
-%
 %	A few parameters
 %
-\setlength {\fboxsep} {0.75em}								% get more space between fcolorbox and content
-\setlength {\fboxrule}{0.50pt}								% change fcolorbox line thickness
+\setlength			{\fboxsep} {0.75em}						% space between fcolorbox and content
+\setlength			{\fboxrule}{0.50pt}						% fcolorbox line thickness
+\def \scalefactor	{0.50}									% resizebox scale factor
+\def \twidth		{\textwidth}							% resizebox height = \scalefactor * \w
 %
 %
 %
 \section{The Real Projective Line}
 \label{section:real_projective_line}
+\vspace{1.75em}
 %
 %
 %
 \begin{figure}[H]											% wrap the MetaPost figure in a LaTeX figure
   \centering												% center the whole thing
     \fcolorbox{black}{white} {								% make the frame black
-       \resizebox{0.60 \textwidth}{!} {						% resize the figure if you want
-          \begin{mplibcode}									% build the figure in MetaPost
-             u=100;											% set diameter
+       \resizebox{\scalefactor \twidth}{!} {				% resize the figure if you want (change \scalefactor)
+          \begin{mplibcode}									% build the figure in MetaPost 
+             u = 100;										% set diameter
              if u <= 0:										% diameter must be > 0
-               message "u <= 0";							% supposedly this gets written on the console and LaTeX exits
+               message "u <= 0";							% supposedly this gets written on the console and then LaTeX exits
  			 else:											% u > 0
                beginfig(1)									% begin MetaPost figure
                  draw fullcircle scaled u withcolor blue;	% draw a blue circle with diameter u
                  pickup pencircle scaled 1.50;				% set the pen to circular shape (pencircle) with width scaled to 1.50 units
-%
-%	Draw dots and annotations at 0, pi/2, pi and 3pi/2
-%
+%															%
+%	Draw dots and annotations at 0, pi/2, pi and 3pi/2		%
+%															%
                  draw (u/2,0); draw(0,u/2); draw(-u/2,0); draw(0,-u/2);
                  label.rt(textext("$\;\theta = 0$") scaled .75, (u/2,0));
                  label.top(textext("$\theta = \displaystyle{\frac{\pi}{2}}$") scaled .75, (0,u/2));
-                 label.lft(textext("$\theta = \pi\;$") scaled .75, (-u/2,0));
+                 label.lft(textext("$\theta = \pi\;$") scaled .75, (-u/2,0));				
                  label.bot(textext("$\theta =\displaystyle{\frac{3\pi}{2}}$") scaled .75, (0,-u/2));
                endfig;										% end MetaPost figure
              fi;											% end if u <= 0: 
@@ -204,6 +206,7 @@
 %
 %
 %
+\vspace{1.50em}
 \section*{Acknowledgements}
 \label{section:acknowledgements}
 %
