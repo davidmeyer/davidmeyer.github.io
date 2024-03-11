@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 OCT 2023 07:58
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 MAR 2024 10:41
  restricted system commands enabled.
  file:line:error style messages enabled.
 **lua_pascals_triangle.tex
@@ -1540,7 +1540,7 @@ Here is how much of LuaTeX's memory you used:
  551 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 64 glue_spec,
  7 attribute_list, 2 write nodes
-   avail lists: 1:1,2:771,3:1115,4:26,5:108,6:31,7:2028,8:51,9:880,10:8,11:65
+   avail lists: 1:1,2:771,3:1115,4:26,5:108,6:31,7:2020,8:51,9:880,10:8,11:61
  72573 multiletter control sequences out of 65536+600000
  81 fonts using 6535911 bytes
  131i,10n,128p,759b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1551,7 +1551,7 @@ f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
 .otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regu
 lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-r
 egular.otf>
-Output written on lua_pascals_triangle.pdf (1 page, 26171 bytes).
+Output written on lua_pascals_triangle.pdf (1 page, 26112 bytes).
 
 PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream

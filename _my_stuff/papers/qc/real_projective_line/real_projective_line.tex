@@ -171,6 +171,19 @@
 %
 \section{The Real Projective Line}
 \label{section:real_projective_line}
+
+%
+%	Experiments with \directlua{.}
+%
+%	Pass variable defined in LaTeX (\num) to the Lua interpreter
+%
+\def \num {36}												% the parameter \num is defined in LaTeX
+\directlua{													% call the Lua interpreter 
+  local result = math.sqrt(\num)							% result is defined in the Lua interpreter
+  tex.sprint("The square root of ", \num, " is: ", result)	% pass \num to the Lua interpreter
+}
+%$\pi = \directlua{tex.sprint(math.pi)}$
+
 \vspace{1.75em}
 %
 %

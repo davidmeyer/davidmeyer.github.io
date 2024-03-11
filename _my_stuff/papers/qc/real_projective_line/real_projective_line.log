@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  10 MAR 2024 13:59
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 MAR 2024 10:43
  restricted system commands enabled.
  file:line:error style messages enabled.
 **real_projective_line.tex
@@ -1533,13 +1533,16 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Module luamplib Info: flushing figure 1 on input line 202
+Module luamplib Info: flushing figure 1 on input line 215
 
 No file real_projective_line.bbl.
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./real_projective_line.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `real_projective_line.out' has not changed.
 (rerunfilecheck)             Checksum: 0CE2AB9D566FF52212C90EF409B7B54E;172.
 )
@@ -1550,7 +1553,7 @@ Here is how much of LuaTeX's memory you used:
  560 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 65 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:285,3:209,4:42,5:118,6:23,7:720,8:15,9:220,10:7,11:24
+   avail lists: 1:1,2:289,3:213,4:42,5:120,6:25,7:788,8:15,9:222,10:7,11:24
  72695 multiletter control sequences out of 65536+600000
  80 fonts using 6409823 bytes
  111i,9n,128p,759b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1562,7 +1565,7 @@ r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-reg
 ular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
 10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
 pfb>
-Output written on real_projective_line.pdf (1 page, 34537 bytes).
+Output written on real_projective_line.pdf (1 page, 35535 bytes).
 
 PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
