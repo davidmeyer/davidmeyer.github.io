@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 14:00
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 14:23
  restricted system commands enabled.
  file:line:error style messages enabled.
 **real_projective_line.tex
@@ -1554,13 +1554,10 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Module luamplib Info: flushing figure 1 on input line 311
+Module luamplib Info: flushing figure 1 on input line 312
  [2]
 No file real_projective_line.bbl.
 [3] (./real_projective_line.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `real_projective_line.out' has not changed.
 (rerunfilecheck)             Checksum: 0CE2AB9D566FF52212C90EF409B7B54E;172.
 )
