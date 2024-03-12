@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  11 MAR 2024 10:55
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 13:27
  restricted system commands enabled.
  file:line:error style messages enabled.
 **real_projective_line.tex
@@ -1353,6 +1353,25 @@ LaTeX Info: Redefining \checkoddpage on input line 59.
 Package: bigints 2010/02/15 Writing big integrals
 Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
+(/usr/local/texlive/2021/texmf-dist/tex/lualatex/luacode/luacode.sty
+Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
+
+(/usr/local/texlive/2021/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
+Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
+\@catcodetablestackcnt=\count353
+)
+\CatcodeTableOther=\catcodetable13
+\CatcodeTableExpl=\catcodetable14
+)
+\luacode@lines=\toks53
+\luacode@table@soft=\catcodetable15
+)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
 )
@@ -1360,47 +1379,47 @@ Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
 Package: luamplib 2021/03/11 v2.20.7 mplib package for LuaTeX
 Lua module: luamplib 2021/03/11 2.20.7 Lua package to typeset Metapost with LuaT
 eX's MPLib.
-\mplibtmptoks=\toks53
-\everymplibtoks=\toks54
-\everyendmplibtoks=\toks55
+\mplibtmptoks=\toks54
+\everymplibtoks=\toks55
+\everyendmplibtoks=\toks56
 \mplibscratchbox=\box99
 )
-\c@theorem=\count353
-\c@definition=\count354
-\c@proposition=\count355
-\c@lemma=\count356
-\c@example=\count357
-\c@remark=\count358
+\c@theorem=\count354
+\c@definition=\count355
+\c@proposition=\count356
+\c@lemma=\count357
+\c@example=\count358
+\c@remark=\count359
 
 (./real_projective_line.aux)
 \openout1 = real_projective_line.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 160.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-59.
+60.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1438,17 +1457,17 @@ LaTeX Font Info:    ... okay on input line 159.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count359
+\scratchcounter=\count360
 \scratchdimen=\dimen354
 \scratchbox=\box100
-\nofMPsegments=\count360
-\nofMParguments=\count361
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count362
+\nofMPsegments=\count361
+\nofMParguments=\count362
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count363
 \MPscratchDim=\dimen355
-\MPnumerator=\count363
-\makeMPintoPDFobject=\count364
-\everyMPtoPDFconversion=\toks57
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
+\everyMPtoPDFconversion=\toks58
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1462,20 +1481,20 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 159.
+ on input line 160.
 
-LaTeX Info: Redefining \celsius on input line 159.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 159
+LaTeX Info: Redefining \celsius on input line 160.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 160
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 159.
-Package gensymb Info: Using \upOmega for \ohm on input line 159.
+LaTeX Info: Redefining \ohm on input line 160.
+Package gensymb Info: Using \upOmega for \ohm on input line 160.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 159.
+Package hyperref Info: Link coloring OFF on input line 160.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1486,11 +1505,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count365
+\c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 159.
-LaTeX Info: Redefining \pageref on input line 159.
-LaTeX Info: Redefining \nameref on input line 159.
+LaTeX Info: Redefining \ref on input line 160.
+LaTeX Info: Redefining \pageref on input line 160.
+LaTeX Info: Redefining \nameref on input line 160.
  (./real_projective_line.out) (./real_projective_line.out)
 \@outlinefile=\write4
 
@@ -1509,63 +1528,66 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 159
+LaTeX Font Info:    Trying to load font information for U+msa on input line 160
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 159
+LaTeX Font Info:    Trying to load font information for U+msb on input line 160
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+0.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-159.
+160.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-Module luamplib Info: flushing figure 1 on input line 217
-
-No file real_projective_line.bbl.
-[1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./real_projective_line.aux)
+Module luamplib Info: flushing figure 1 on input line 311
+ [2]
+No file real_projective_line.bbl.
+[3] (./real_projective_line.aux)
 Package rerunfilecheck Info: File `real_projective_line.out' has not changed.
 (rerunfilecheck)             Checksum: 0CE2AB9D566FF52212C90EF409B7B54E;172.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54580 strings out of 478531
+ 54829 strings out of 478531
  100000,2373549 words of node,token memory allocated
  560 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 65 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:291,3:217,4:42,5:122,6:27,7:838,8:20,9:226,10:7,11:24
- 72695 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:1200,3:552,4:54,5:100,6:20,7:1196,8:25,9:349,10:7,11:20
+ 72904 multiletter control sequences out of 65536+600000
  80 fonts using 6409823 bytes
- 111i,9n,128p,759b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,10n,128p,759b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
 tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.o
 tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
 r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-reg
 ular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb>
-Output written on real_projective_line.pdf (1 page, 37076 bytes).
+10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on real_projective_line.pdf (3 pages, 79814 bytes).
 
-PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 131072)
+PDF statistics: 99 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 131072)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 

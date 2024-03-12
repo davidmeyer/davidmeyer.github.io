@@ -66,6 +66,7 @@
 \usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
 \usepackage{multirow}                                                   % \multirow and \multicolumn
+\usepackage{luacode}
 %
 %	lualatex
 %
@@ -172,18 +173,111 @@
 \section{The Real Projective Line}
 \label{section:real_projective_line}
 
+\vspace{2em}
+%
+%	Scale image if you like
+%
+\def \scalefactor {0.75}
+%
+%	Draw the picture
+%
+\begin{figure}[H]
+ \centering
+ \resizebox{\scalefactor \textwidth}{!} {
+    \begin{tikzpicture}[scale=3]
+%
+%	Draw the axes
+%
+       \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm] {$x$};
+       \draw[]  (1.50,0)              node[above] {$\lambda[1,0]$};
+       \draw[-] (0,-0.25) -- (0,1.50) node[right,xshift=0.20cm,yshift=-0.20cm] {$y$};
+       \draw[]  (0,1.50)              node[above] {$\lambda[0,1]$};
+%
+%	Draw the y = 1 line
+%
+       \draw [-] (-1.75,1) -- (1.75,1);
+%
+%	Draw the y = x line
+%
+       \draw [-] (-1.00,-1.00) -- (1.25,1.25) node[above] {$\lambda[x,1] = \lambda [\cos \theta, \sin \theta]$};
+%
+%	Intersection of y = 1 and y = x
+%
+       \fill [black] (1,1) circle (0.75pt);
+       \node [below,yshift=-0.1cm,xshift=0.25cm] at (1,1) {$1,\frac{\pi}{4}$};
+%
+%	Draw theta
+%
+       \draw [->] (0.3,0.3) arc (45:90:0.42);
+       \node[] at (0.10,0.25) {$\theta$};
+% 
+%	Draw upper half of unit circle in blue
+%
+      \draw [blue,thin](1,0) arc (0:180:1);
+      \draw [dashed,thin](-1,0) arc (180:360:1);
+
+%
+%	Put some black points on the unit circle
+%
+      \fill [black] (1,0) circle (0.75pt); 
+      \fill [black] (-1,0) circle (0.75pt); 
+      \fill [black] (0,1) circle (0.75pt);
+%
+%	Draw a dot at the origin
+%
+      \fill [black] (0,0) circle (0.75pt);
+%
+%	Draw a few coordinates of interest
+% 
+      \draw (1,0)  node[below] {$(1,0)$};
+      \draw (-1,0) node[below] {$(-1,0)$};
+      \draw (0,1)  node [below,yshift=-0.10cm] {$(0,1)$};
+    \end{tikzpicture}														% end tikzpicture
+   }																		% end resizebox
+  \caption{Real Projective Line Setup}
+  \label{table:real_projective_line_setup}
+\end{figure}
+ 
+ 
+\vspace{0.75cm}
+
+
+\def \scalefactor {0.60}
+
+\begin{figure}[H]
+ \Large
+ \centering
+ \resizebox{\scalefactor \textwidth}{!} {
+   \begin{tikzpicture}[scale=3]
+     \draw (0,0) circle (1);												% draw unit circle
+     \node[right] at (1,1) {$x,\theta$};									% annotiations
+     \node[right] at (1,0) {$1,\frac{\pi}{4}$};
+     \node[above] at (0,1) {$0,0$};
+     \node[left] at (-1,0) {$-1,-\frac{\pi}{4}$};
+     \node[below,yshift=-0.20cm] at (0,-1) {$-\infty,\frac{\pi}{2}; \infty,\frac{\pi}{2}$};
+   \end{tikzpicture}
+  }
+ \caption{The Real Projective Line is a Circle}
+ \label{table:real_projective_line_is_a_circle}
+\end{figure}
+
+\vspace{2.0cm}
+
 %
 %	Experiments with \directlua{.}
 %
 %	Pass variable defined in LaTeX (\num) to the Lua interpreter
 %
 \def \num {36}												% the parameter \num is defined in LaTeX
+
+% \luaexec{tex.sprint(string.format('\%.3f', math.pi))}
+
 \directlua{													% call the Lua interpreter 
   local result = math.sqrt(\num)							% result is defined in the Lua interpreter
-  tex.print("The square root of ", \num, " is: ", result)	% pass \num to the Lua interpreter
+  tex.sprint("The square root of ", \num, " is: ", result)	% pass \num to the Lua interpreter
 }
 
-$\pi = \directlua{tex.sprint(math.pi)}$
+% $\pi = \directlua{tex.sprint(math.pi)}$
 
 
 \vspace{1.75em}
