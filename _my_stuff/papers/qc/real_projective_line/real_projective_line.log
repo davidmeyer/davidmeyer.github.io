@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 14:23
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 15:01
  restricted system commands enabled.
  file:line:error style messages enabled.
 **real_projective_line.tex
@@ -1551,43 +1551,41 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-) [1
+)
+Module luamplib Info: flushing figure 1 on input line 311
+ [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Module luamplib Info: flushing figure 1 on input line 312
- [2]
 No file real_projective_line.bbl.
-[3] (./real_projective_line.aux)
+[2] (./real_projective_line.aux)
 Package rerunfilecheck Info: File `real_projective_line.out' has not changed.
 (rerunfilecheck)             Checksum: 0CE2AB9D566FF52212C90EF409B7B54E;172.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54829 strings out of 478531
+ 54828 strings out of 478531
  100000,2373549 words of node,token memory allocated
  560 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 65 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1160,3:543,4:54,5:100,6:20,7:1185,8:25,9:342,10:8,11:20
+   avail lists: 1:1,2:1276,3:686,4:70,5:119,6:32,7:1523,8:25,9:506,10:8,11:28
  72904 multiletter control sequences out of 65536+600000
  80 fonts using 6409823 bytes
- 111i,10n,128p,759b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,12n,128p,759b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
 tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.o
 tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
 r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17-reg
 ular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on real_projective_line.pdf (3 pages, 79434 bytes).
+10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on real_projective_line.pdf (2 pages, 64509 bytes).
 
-PDF statistics: 99 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 131072)
+PDF statistics: 87 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 131072)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 

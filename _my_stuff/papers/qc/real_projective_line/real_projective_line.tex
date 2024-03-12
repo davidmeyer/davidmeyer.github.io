@@ -178,10 +178,11 @@
 %
 %	Scale image if you like
 %
-\def \scalefactor {0.75}
+\def \scalefactor {1.00}
 %
 %	Draw the picture
 %
+\begin{minipage}[c]{0.50\textwidth}
 \begin{figure}[H]
  \centering
  \resizebox{\scalefactor \textwidth}{!} {
@@ -189,10 +190,10 @@
 %
 %	Draw the axes
 %
-       \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm] {$x$};
-       \draw[]  (1.50,0)              node[above,xshift=0.25cm] {$\lambda[1,0]$};
+       \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm]               {$x$};
+       \draw[]  (1.50,0)              node[above,xshift=0.25cm]                {$\lambda[1,0]$};
        \draw[-] (0,-0.25) -- (0,1.50) node[right,xshift=0.20cm,yshift=-0.20cm] {$y$};
-       \draw[]  (0,1.50)              node[above] {$\lambda[0,1]$};
+       \draw[]  (0,1.50)              node[above]                              {$\lambda[0,1]$};
 %
 %	Draw the y = 1 line
 %
@@ -238,15 +239,12 @@
   \caption{Real Projective Line Setup}
   \label{table:real_projective_line_setup}
 \end{figure}
- 
- 
-\vspace{0.75cm}
+\end{minipage}
 
+\def \scalefactor {0.75}
 
-\def \scalefactor {0.70}
-
+\begin{minipage}[c]{0.50\textwidth}
 \begin{figure}[H]
- \Large
  \centering
  \resizebox{\scalefactor \textwidth}{!} {
    \begin{tikzpicture}[scale=3]
@@ -261,6 +259,7 @@
  \caption{The Real Projective Line is a Circle: $(x,\theta)$}
  \label{table:real_projective_line_is_a_circle}
 \end{figure}
+\end{minipage}
 
 \vspace{2.0cm}
 
