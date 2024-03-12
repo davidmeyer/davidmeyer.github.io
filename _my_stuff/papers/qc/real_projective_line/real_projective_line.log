@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 13:27
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  12 MAR 2024 13:47
  restricted system commands enabled.
  file:line:error style messages enabled.
 **real_projective_line.tex
@@ -1568,7 +1568,7 @@ Here is how much of LuaTeX's memory you used:
  560 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 65 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1200,3:552,4:54,5:100,6:20,7:1196,8:25,9:349,10:7,11:20
+   avail lists: 1:1,2:1196,3:552,4:54,5:100,6:20,7:1192,8:25,9:349,10:7,11:20
  72904 multiletter control sequences out of 65536+600000
  80 fonts using 6409823 bytes
  111i,10n,128p,759b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1584,7 +1584,7 @@ b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on real_projective_line.pdf (3 pages, 79814 bytes).
+Output written on real_projective_line.pdf (3 pages, 79822 bytes).
 
 PDF statistics: 99 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
