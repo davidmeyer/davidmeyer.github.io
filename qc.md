@@ -166,7 +166,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 01.17.2024 by
+<i>Last Update: 03.13.2024 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
