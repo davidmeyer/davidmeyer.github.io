@@ -82,24 +82,26 @@
 %
 \begin{document}
 
+
+% ----
 %
-%	Scale image if you like
+%	Scale image if you like 
 %
 \def \scalefactor {0.75}
 %
 %	Draw the picture
 %
-\begin{figure}[H]
+\begin{figure}[t]
  \centering
  \resizebox{\scalefactor \textwidth}{!} {
-    \begin{tikzpicture}[scale=3]
+  \begin{tikzpicture}[scale=3]
 %
 %	Draw the axes
 %
-       \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm] {$x$};
-       \draw[]  (1.50,0)              node[above] {$\lambda[1,0]$};
+       \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm]               {$x$};
+       \draw[]  (1.50,0)              node[above,xshift=0.25cm]                {$\lambda[1,0]$};
        \draw[-] (0,-0.25) -- (0,1.50) node[right,xshift=0.20cm,yshift=-0.20cm] {$y$};
-       \draw[]  (0,1.50)              node[above] {$\lambda[0,1]$};
+       \draw[]  (0,1.50)              node[above]                              {$\lambda[0,1]$};
 %
 %	Draw the y = 1 line
 %
@@ -107,65 +109,59 @@
 %
 %	Draw the y = x line
 %
-       \draw [-] (-1.00,-1.00) -- (1.25,1.25) node[above] {$\lambda[x,1] = \lambda [\cos \theta, \sin \theta]$};
+       \draw [-] (-1.00,-1.00) -- (1.25,1.25) node[above,xshift=-0.25cm] {$\lambda[x,1] = \lambda [\cos \theta, \sin \theta]$};
 %
 %	Intersection of y = 1 and y = x
 %
-       \fill [black] (1,1) circle (0.75pt);
+       \fill [red] (1,1) circle (0.75pt);
        \node [below,yshift=-0.1cm,xshift=0.25cm] at (1,1) {$1,\frac{\pi}{4}$};
 %
 %	Draw theta
 %
-       \draw [->] (0.3,0.3) arc (45:90:0.42);
+       \draw [<-] (0.3,0.3) arc (45:90:0.42);
        \node[] at (0.10,0.25) {$\theta$};
 % 
 %	Draw upper half of unit circle in blue
 %
-      \draw [blue,thin](1,0) arc (0:180:1);
+      \draw [blue,thin]  (1,0)  arc (0:180:1);
       \draw [dashed,thin](-1,0) arc (180:360:1);
-
 %
 %	Put some black points on the unit circle
 %
-      \fill [black] (1,0) circle (0.75pt); 
+      \fill [black] (1,0)  circle (0.75pt); 
       \fill [black] (-1,0) circle (0.75pt); 
-      \fill [black] (0,1) circle (0.75pt);
+      \fill [black] (0,1)  circle (0.75pt);
 %
 %	Draw a dot at the origin
 %
-      \fill [black] (0,0) circle (0.75pt);
+      \fill [red] (0,0) circle (0.75pt);
 %
 %	Draw a few coordinates of interest
 % 
       \draw (1,0)  node[below] {$(1,0)$};
       \draw (-1,0) node[below] {$(-1,0)$};
-      \draw (0,1)  node [below,yshift=-0.20cm] {$(0,1)$};
+      \draw (0,1)  node[below,yshift=-0.10cm] {$(0,1)$};
     \end{tikzpicture}														% end tikzpicture
    }																		% end resizebox
   \caption{Real Projective Line Setup}
   \label{table:real_projective_line_setup}
 \end{figure}
- 
- 
-\vspace{0.75cm}
 
-
-\def \scalefactor {0.60}
+\def \scalefactor {0.65}
 
 \begin{figure}[H]
- \Large
- \centering
+  \centering
  \resizebox{\scalefactor \textwidth}{!} {
    \begin{tikzpicture}[scale=3]
      \draw (0,0) circle (1);												% draw unit circle
-     \node[right] at (1,1) {$x,\theta$};									% annotiations
+     %\node[right] at (1,1) {$x,\theta$};									% annotiations
      \node[right] at (1,0) {$1,\frac{\pi}{4}$};
      \node[above] at (0,1) {$0,0$};
-     \node[left] at (-1,0) {$-1,\frac{\pi}{4}$};
-     \node[below,yshift=-0.20cm] at (0,-1) {$-\infty,\frac{\pi}{2}; \infty,\frac{\pi}{2}$};
+     \node[left] at (-1,0) {$-1,-\frac{\pi}{4}$};
+     \node[below,yshift=-0.15cm] at (0,-1) {$-\infty,-\frac{\pi}{2}; \infty,\frac{\pi}{2}$};
    \end{tikzpicture}
   }
- \caption{The Real Projective Line is a Circle}
+ \caption{The Real Projective Line is a Circle: $(x,\theta)$}
  \label{table:real_projective_line_is_a_circle}
 \end{figure}
 

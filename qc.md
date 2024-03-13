@@ -8,6 +8,10 @@
 
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./vector_spaces_and_quantum_mechains.pdf" target="_blank" 
+    rel="noopener noreferrer">
+Some ideas on vector spaces and quantum mechanics (WIP)
+<br>
 
 <li><a href="./curious_and_beautiful_integral.pdf" target="_blank" 
     rel="noopener noreferrer">
