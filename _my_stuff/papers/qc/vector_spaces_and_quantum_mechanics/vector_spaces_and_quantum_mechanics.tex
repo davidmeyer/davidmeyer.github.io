@@ -190,13 +190,14 @@ right in Figure \ref{figure:real_projective_line_setup}.
 %
 \setlength			{\fboxsep} {0.50em}						% space between fcolorbox and content
 \setlength			{\fboxrule}{0.50pt}						% fcolorbox line thickness
-\def \scalefactor	{1.10}									% resizebox scale factor
+\def \scalefactor	{1.15}									% resizebox scale factor
 \def \minipagescale	{0.50}									% minipage scale factor
-\def \twidth		{\textwidth}							% resizebox height = \scalefactor * \w
+\def \twidth		{\textwidth}							% point size of points drawn on the cirle
+\def \pointsize		{0.60pt}
 %
 %
 %
-\vspace{2.5em}
+\vspace{1.00em}
 %
 %	Draw the picture
 %
@@ -229,10 +230,10 @@ right in Figure \ref{figure:real_projective_line_setup}.
         % Draw bottom half of unit circle in dashed black
         \draw [dashed,thick](-1,0) arc (180:360:1);
         % Put some black points on the unit circle
-        \fill [black] (1,0)  circle (0.75pt); 
-        \fill [black] (-1,0) circle (0.75pt); 
-        \fill [black] (0,1)  circle (0.75pt);
-        \fill [black] (0,-1) circle (0.75pt);
+        \fill [black] (1,0)  circle (\pointsize); 
+        \fill [black] (-1,0) circle (\pointsize); 
+        \fill [black] (0,1)  circle (\pointsize);
+        \fill [black] (0,-1) circle (\pointsize);
         % Draw a dot at the origin
         \fill [red] (0,0) circle (0.75pt);
         % Draw a few coordinates of interest
@@ -251,7 +252,9 @@ right in Figure \ref{figure:real_projective_line_setup}.
 %
 %	Scale the second image
 %  
-\def \scalefactor {0.84}
+\def \scalefactor {0.875}
+\def \minipagescale	{0.50}									% minipage scale factor
+
 %
 %	Draw the second figure
 %
@@ -259,16 +262,16 @@ right in Figure \ref{figure:real_projective_line_setup}.
      \centering
      \resizebox{\scalefactor \textwidth}{!}{
         \begin{tikzpicture}[scale=3]
-           \draw [black,thick] (0,0) circle (1); 
+           \draw [black,thick,dashed] (0,0) circle (1); 
            \node[right,xshift=0.20cm] at (1,0) {$(1,\frac{\pi}{4})$};
            \node[above] at (0,1) {$(0,0)$};
            \node[left,xshift=-0.20cm] at (-1,0) {$(-1,-\frac{\pi}{4})$};
            \node[below,yshift=-0.15cm] at (0,-1) {$(-\infty,-\frac{\pi}{2};\infty,\frac{\pi}{2})$};
            \node[] at (1,1) {$\mathbf{(x},\boldsymbol{\theta}\mathbf{)}$};
-           \fill [black] (1,0)  circle (0.75pt); 
-           \fill [black] (0,1)  circle (0.75pt); 
-           \fill [black] (-1,0) circle (0.75pt);
-           \fill [black] (0,-1) circle (0.75pt); 
+           \fill [black] (1,0)  circle (\pointsize); 
+           \fill [black] (0,1)  circle (\pointsize); 
+           \fill [black] (-1,0) circle (\pointsize);
+           \fill [black] (0,-1) circle (\pointsize); 
        \end{tikzpicture}
      }
    \end{minipage}
