@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 MAR 2024 06:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 MAR 2024 07:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,7 +1470,7 @@ Overfull \hbox (23.50134pt too wide) in paragraph at lines 275--275
  []
 
 
-Overfull \hbox (18.8333pt too wide) in paragraph at lines 275--276
+Overfull \hbox (23.8333pt too wide) in paragraph at lines 275--276
  [][][][] 
  []
 
@@ -1506,7 +1506,7 @@ al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on vector_spaces_and_quantum_mechanics.pdf (2 pages, 131730 byte
+Output written on vector_spaces_and_quantum_mechanics.pdf (2 pages, 131737 byte
 s).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
