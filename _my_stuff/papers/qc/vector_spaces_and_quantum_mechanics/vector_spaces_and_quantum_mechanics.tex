@@ -293,6 +293,25 @@ right in Figure \ref{figure:real_projective_line_setup}.
 %
 \section{The Real Projective Plane}
 \label{section:the_real_projective_plane}
+
+\begin{tikzpicture}[scale=2]
+    % Draw axes
+    \draw[-] (-1,0,0) -- (2,0,0) node[right] {$x$};
+    \draw[-] (0,0,-5) -- (0,0,2) ; % node[below left] {$y$};
+    \draw[-] (0,-1,0) -- (0,2,0) node[above] {$z$};
+    
+    \draw[] (1,1,-2.60) node[right] {$y$};
+    
+   \fill [black] (0,1,0) circle (0.75pt); % z axis
+   \fill [black] (1,0,0) circle (0.75pt); % x axis
+   \fill [black] (0,0,-2.55) circle (0.75pt); % y axis
+
+    
+    % Draw plane in x-y direction
+    \fill[blue!30,opacity=0.5] (0,0,0) -- (1,0,0) -- (1,1,0) -- (0,1,0) -- cycle;
+\end{tikzpicture}
+
+
 %
 %
 %

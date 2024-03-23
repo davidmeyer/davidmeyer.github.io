@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 SEP 2023 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  23 MAR 2024 10:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,132 +1451,132 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 242.
 
 [2] [3]
-Overfull \hbox (33.75621pt too wide) detected at line 448
+Overfull \hbox (33.75621pt too wide) detected at line 454
 []
  []
 
 [4]
-<images/exponential_order.png, id=162, 454.69875pt x 323.2075pt>
+<images/exponential_order.png, id=163, 454.69875pt x 323.2075pt>
 File: images/exponential_order.png Graphic file (type png)
 <use images/exponential_order.png>
-Package pdftex.def Info: images/exponential_order.png  used on input line 489.
-(pdftex.def)             Requested size: 204.61253pt x 145.44203pt.
+Package pdftex.def Info: images/exponential_order.png  used on input line 495.
+(pdftex.def)             Requested size: 227.34882pt x 161.60335pt.
  [5 <./images/exponential_order.png>] [6] [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 669.
+(hyperref)                removing `math shift' on input line 675.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 669.
+(hyperref)                removing `superscript' on input line 675.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\prime' on input line 669.
+(hyperref)                removing `\prime' on input line 675.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 669.
+(hyperref)                removing `math shift' on input line 675.
 
 
-Overfull \hbox (45.87851pt too wide) detected at line 714
+Overfull \hbox (45.87851pt too wide) detected at line 720
 []
  []
 
 [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 727.
+(hyperref)                removing `math shift' on input line 733.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 727.
+(hyperref)                removing `superscript' on input line 733.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\prime' on input line 727.
+(hyperref)                removing `\prime' on input line 733.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\prime' on input line 727.
+(hyperref)                removing `\prime' on input line 733.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 727.
+(hyperref)                removing `math shift' on input line 733.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 770.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 764.
+(hyperref)                removing `superscript' on input line 770.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 770.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 806.
+(hyperref)                removing `math shift' on input line 812.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 806.
+(hyperref)                removing `math shift' on input line 812.
 
 [9]
-Overfull \hbox (41.64697pt too wide) detected at line 886
+Overfull \hbox (41.64697pt too wide) detected at line 892
 []
  []
 
 [10] [11]
-Overfull \hbox (40.71396pt too wide) detected at line 970
+Overfull \hbox (40.71396pt too wide) detected at line 976
 []
  []
 
 [12] [13] [14]
-Overfull \hbox (32.07634pt too wide) detected at line 1176
+Overfull \hbox (32.07634pt too wide) detected at line 1182
 []
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1179.
+(hyperref)                removing `math shift' on input line 1185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1179.
+(hyperref)                removing `math shift' on input line 1185.
 
 [15]
-Overfull \hbox (32.77008pt too wide) detected at line 1233
+Overfull \hbox (32.77008pt too wide) detected at line 1239
 []
  []
 
 [16]
-Overfull \hbox (14.46042pt too wide) detected at line 1292
+Overfull \hbox (14.46042pt too wide) detected at line 1298
 []
  []
 
 [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1295.
+(hyperref)                removing `math shift' on input line 1301.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 1295.
+(hyperref)                removing `\ast' on input line 1301.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1295.
+(hyperref)                removing `math shift' on input line 1301.
 
 
-Overfull \hbox (43.22621pt too wide) detected at line 1327
+Overfull \hbox (43.22621pt too wide) detected at line 1333
 []
  []
 
 
-Overfull \hbox (1.73656pt too wide) detected at line 1349
+Overfull \hbox (1.73656pt too wide) detected at line 1355
 []
  []
 
@@ -1620,11 +1620,12 @@ dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/cm-super/sfrm1000.pfb>
-Output written on dirac_delta.pdf (19 pages, 401842 bytes).
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on dirac_delta.pdf (19 pages, 405410 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
+ 497 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
  70 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
