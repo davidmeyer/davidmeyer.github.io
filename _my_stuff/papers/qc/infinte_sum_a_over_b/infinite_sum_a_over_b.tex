@@ -218,21 +218,81 @@ S
 
 \bigskip
 \noindent
-So $S = \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^n  =  \frac{a}{b
-\:-\: a}$, where $a,b \in \mathbb{N}$ and $a < b$.   
+So $S = \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right
+)}^n = \frac{a}{b \:-\: a}$, where $a,b \in \mathbb{N}$ and $a <
+b$.
 
 \bigskip
 \noindent
 For example, if we let $a =1$ and $b =2$ then $\sum\limits_{n =
-1}^\infty {\left (\frac{1}{2} \right )}^n = \frac{1}{2 \:-\: 1} = 1$. Similarly,
-if $a =1$ and $b = 3$ then $\sum\limits_{n = 1}^\infty
-{\left (\frac{1}{3} \right )}^n = \frac{1}{3 \:-\: 1} = \frac{1}{2}$.
+1}^\infty {\left (\frac{1}{2} \right )}^n = \frac{1}{2 \:-\: 1} =
+1$. Similarly, if $a =1$ and $b = 3$ then $\sum\limits_{n =
+1}^\infty {\left (\frac{1}{3} \right )}^n = \frac{1}{3 \:-\: 1} =
+\frac{1}{2}$.
+
+
+\newpage
+\section{$S$ is a Geometric Series}
+As pointed out by John Carlos Baez
+(@johncarlosbaez@mathstodon.xyz), $S$ does not depend on $a$ or
+$b$, but rather only on $x$.
+
+\bigskip
+\noindent
+More specifically, we can see that $S = \sum\limits_{n=1}^{\infty} x^n$
+is a geometric series with a first term of $x$ and a 
+common ratio of $x$. The general form of a geometric series is given by
+\cite{wiki:geometric_series}:
+
+\begin{equation*}
+S = a + ar + ar^2 + ar^3 + \ldots 
+\end{equation*}
+
+\medskip
+\noindent
+In this case, $a = x$ is the first term of the series, and $r =
+x$ is the common ratio.
+
+\bigskip
+\noindent
+The sum of an infinite geometric series is well known and can be
+calculated using the formula:
+
+\begin{equation}
+S = \frac{a}{1 - r}
+\label{equation:geometric_series_closed_form}
+\end{equation}
+
+\smallskip
+\noindent
+for $|r| < 1$. If we then substitute $a = x$ and $r = x$ into Equation (\ref{equation:geometric_series_closed_form}) we get:
+
+\begin{equation*}
+S = \frac{x}{1 - x}
+\end{equation*}
+
+
+\noindent
+So we can see that for $S$ to converge, we need $|x| <
+1$. If $|x| \geq 1$ the series diverges and does not have a
+finite sum.
+
+\bigskip
+\noindent
+Summary: $S = \sum\limits_{n=1}^{\infty} x^n = \frac{x}{1 - x}$
+for $|x| < 1$. Otherwise, as we saw above, the series does not
+converge.
+
 %
 %
 % \section{Conclusions}
 %
 %
 \section*{Acknowledgements}
+Thanks again to ohn Carlos Baez (@johncarlosbaez@mathstodon.xyz)
+for pointing out that the sum really doesn't depend on the
+fraction $\frac{a}{b}$ but rather depends on the value of the
+variable $x$.
 %
 %	LaTeX source on overleaf.com
 %
