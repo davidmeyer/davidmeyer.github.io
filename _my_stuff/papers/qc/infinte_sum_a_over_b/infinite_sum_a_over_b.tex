@@ -169,6 +169,7 @@ of the ratio test we know that $S$ converges absolutely.
 
 
 \section{Ok, $S$ converges. What does it converge to?}
+\label{section:what_does_S_converge_to}
 
 \bigskip
 \noindent
@@ -231,7 +232,6 @@ For example, if we let $a =1$ and $b =2$ then $\sum\limits_{n =
 \frac{1}{2}$.
 
 
-
 \section{$S$ is a Geometric Series}
 As pointed out by John Carlos Baez
 (@johncarlosbaez@mathstodon.xyz), $S$ does not depend on $a$ or
@@ -265,11 +265,13 @@ S = \frac{a}{1 - r}
 
 \smallskip
 \noindent
-for $|r| < 1$. If we then substitute $a = x$ and $r = x$ into Equation (\ref{equation:geometric_series_closed_form}) we get:
+for $|r| < 1$. If we then substitute $a = x$ and $r = x$ into Equation 
+(\ref{equation:geometric_series_closed_form}) we get:
 
-\begin{equation*}
+\begin{equation}
 S = \frac{x}{1 - x}
-\end{equation*}
+\label{equation:s}
+\end{equation}
 
 
 \noindent
@@ -282,6 +284,29 @@ finite sum.
 Summary: $S = \sum\limits_{n=1}^{\infty} x^n = \frac{x}{1 - x}$
 for $|x| < 1$. Otherwise, as we saw above, the series does not
 converge.
+
+\bigskip
+\noindent
+Finally, if $x = \frac{a}{b}$ then for $|x| < 1$
+
+\begin{equation*}
+\begin{array}{lllll}
+S 
+&=& \dfrac{x}{1 - x} 						&\hspace{5em} \mathrel{\#} \text{Equation (\ref{equation:s})} \\ 
+[12pt]
+&=& \dfrac{\frac{a}{b}}{1 - \frac{a}{b}}	&\hspace{5em} \mathrel{\#} \text{set $x = \frac{a}{b}$} \\ 
+[12pt]
+&=& \dfrac{\frac{a}{b}}{\frac{b -a}{b}} 	&\hspace{5em} \mathrel{\#} \text{get a common denominator} \\ 
+[12pt]
+&=& \dfrac{a}{b-a} 							&\hspace{5em} \mathrel{\#} \text{cancel $b$} \\ 
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+So we see that if $x = \frac{a}{b}$ then $S = \dfrac{a}{b-a}$, for $a < b$. This
+is the result that we saw in Section \ref{section:what_does_S_converge_to}.
+
 
 %
 %

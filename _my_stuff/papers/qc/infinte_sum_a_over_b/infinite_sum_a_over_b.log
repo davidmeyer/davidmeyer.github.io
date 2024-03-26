@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 MAR 2024 08:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 MAR 2024 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1436,14 +1436,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 235.
 
 [2] (./infinite_sum_a_over_b.bbl) [3] (./infinite_sum_a_over_b.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `infinite_sum_a_over_b.out' has not changed.
 (rerunfilecheck)             Checksum: 0CDCD85E667E8B3EC43B73515646EED5;682.
  ) 
 Here is how much of TeX's memory you used:
- 51787 strings out of 478994
- 1310079 string characters out of 5858184
- 1944665 words of memory out of 5000000
- 68486 multiletter control sequences out of 15000+600000
+ 51790 strings out of 478994
+ 1310136 string characters out of 5858184
+ 1944783 words of memory out of 5000000
+ 68488 multiletter control sequences out of 15000+600000
  414716 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,14n,131p,739b,733s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1463,10 +1466,10 @@ ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on infinite_sum_a_over_b.pdf (3 pages, 163808 bytes).
+Output written on infinite_sum_a_over_b.pdf (3 pages, 164653 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
