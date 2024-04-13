@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{gauss_on_arithmetic_sequences}
+{ Donna Roberts}.
+\newblock {Gauss on Arithmetic Sequences}.
+\newblock \url{https://mathbitsnotebook.com/Algebra2/Sequences/SSGauss.html}.
+\newblock [Online; accessed 13-Apr-2024].
+
 \bibitem{properties_of_limits}
 {Alex Svirin}.
 \newblock {Properties of Limits}.
@@ -17,13 +23,6 @@
 \newblock {A Few Notes on the Basel Problem}.
 \newblock \url{https://davidmeyer.github.io/qc/basel.pdf}, 2021.
 \newblock [See \url{https://davidmeyer.github.io/qc/}].
-
-\bibitem{add_1_to_100}
-{Mathlete's Corner}.
-\newblock {Adding numbers from 1 to 100}.
-\newblock
-  \url{https://sites.google.com/site/funproblemsolving/topics-1/adding-numbers-from-1-to-100}.
-\newblock [Online; accessed 20-August-2021].
 
 \bibitem{mathaletes_corner_pascals_triangle}
 {Mathlete's Corner}.
