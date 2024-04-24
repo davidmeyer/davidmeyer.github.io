@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  12 JUL 2022 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 APR 2024 07:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -779,7 +779,7 @@ b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathfrak.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on dags_causality_and_bias.pdf (6 pages, 245419 bytes).
+Output written on dags_causality_and_bias.pdf (6 pages, 245415 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams
