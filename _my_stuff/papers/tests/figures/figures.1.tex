@@ -14,7 +14,8 @@
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
-\usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,hobby,lindenmayersystems}
+\usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,hobby,lindenmayersystems,matrix}
+\usepackage{tikz-cd}
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
@@ -72,10 +73,47 @@
   \edef#3{\the\pgf@y}%
 }
 \makeatother
-%
-%
-%
+
 \begin{document}
+
+%
+%	Set a few parameters
+%
+\setlength {\fboxsep} {6.00pt}					% get more space between fcolorbox and content
+\setlength {\fboxrule}{0.35pt}					% set the outside fcolorbox line thickness
+%
+%	Draw the picture
+%
+\begin{figure}[H]
+ \centering
+  %\fcolorbox{blue}{white}{
+     %\resizebox{0.8\textwidth}{!}{%
+        \begin{tikzpicture}
+           \matrix[matrix of math nodes,
+                   column sep={100pt,between origins},
+                   row sep={60pt,between origins}] (s)
+           {
+              &|[name=FA]|F(A) & |[name=FB]|F(B) \\
+              &|[name=GA]|G(A) & |[name=GB]|G(B) \\
+           };
+           \draw[->] (FA) edge (FB)							% draw the horizontal edges
+                     (GA) edge (GB); 
+           \draw[]   (FA) -- (FB) node [midway,above,scale=0.75] {$F(f)$};
+           \draw[]   (GA) -- (GB) node [midway,below,scale=0.75] {$G(f)$};
+
+           \draw[->] (FA) edge (GA)							% draw the vertical edges
+                     (FB) edge (GB);
+           \draw[]   (FA) -- (GA) node [midway,left,scale=0.75]  {$\eta_{A}$};
+           \draw[]   (FB) -- (GB) node [midway,right,scale=0.75] {$\eta_{B}$};
+        \end{tikzpicture}
+  %  }													    % end resizebox
+ %  }														% end fcolorbox
+ \label{figure:natural_transformation}
+ \caption{This would be better if you could put a box around it and resize it}
+\end{figure}
+
+
+
 
 
 %
