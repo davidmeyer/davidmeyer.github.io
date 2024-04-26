@@ -1,0 +1,292 @@
+\documentclass{article}
+%
+%
+%	category_theory.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	26 Apr 2024
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}							% \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}							% use characters instead of numbers in enumerate
+\usepackage{changepage}							% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}							% \multirow and \multicolumn
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+% \usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Category Theory}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{section:introduction}
+
+\subsection{What is a Category?}
+\label{subsection:what_is_a_category}
+\cite{intro_category_theory_notes}
+
+\subsection{Morphisms}
+\label{subsection:morphisms}
+
+\subsubsection{Monomorphisms}
+\label{subsubsection:monomorphisms}
+
+\subsubsection{Epimorphisms}
+\label{subsubsection:epimorphisms}
+
+\subsubsection{Isomorphisms}
+\label{subsubsection:isomorphisms}
+
+
+\subsubsection{Functors}
+\label{subsubsection:functors}
+
+
+\subsection{Natural Transformations}
+\label{subsection:naturl_transformations}
+
+
+Let $F,G: \mathcal{C} \to \mathcal{D}$ be functors from category
+$\mathcal{C}$ to category $\mathcal{D}$. A {\bf natural transformation}
+$\eta$ from $F$ to $G$ is a family of morphisms in $D$, one for
+each object $A$ in $\mathcal{C}$, such that
+
+\begin{equation*}
+\eta_{A}:F(A)\to G(A)
+\end{equation*}
+
+\medskip
+\noindent
+The morphism $\eta_{A}$ is called the component of $\eta$ at
+object $A$.  In addition, for any morphism $f:A \to B$ in
+$\mathcal{C}$, Figure \ref{figure:natural_transformation} must
+commute.
+%
+%	Set a few parameters
+%
+\setlength  {\fboxsep} {6.00pt}					% get more space between fcolorbox and content
+\setlength  {\fboxrule}{0.50pt}					% set the outside fcolorbox line thickness
+\def \scale {0.80}								% scale arrow labels
+%
+%
+%
+\bigskip
+%
+%	Draw the picture
+%
+\begin{figure}[H]
+  \centering
+  \fcolorbox{red}{white}{
+    \resizebox{0.50 \textwidth}{!} {
+       \begin{tikzpicture}
+         \coordinate (GA) at (0.00,0.00);
+         \coordinate (GB) at (4.00,0.00);
+         \coordinate (FA) at (0.00,2.00);
+         \coordinate (FB) at (4.00,2.00);
+%
+%	F(f)
+%
+         \coordinate (Ffl) at (0.60,2.35);
+         \coordinate (Ffr) at (3.50,2.35);
+%
+%	G(f)
+%
+         \coordinate (Gfl) at (0.60, -0.30);
+         \coordinate (Gfr) at (3.50, -0.30);
+%
+%	Draw it all
+%   
+         \draw[->] (FA)  -- (GA) node[below] {$G(A)$};
+         \draw[]   (GA)  -- (FA) node[above] {$F(A)$};
+         \draw[]   (FA)  -- (GA) node[midway,left,scale=\scale] {$\eta_{A}$};
+
+         \draw[->] (Ffl) -- (Ffr) node [right] {$F(B)$};
+         \draw[]   (Ffl) -- (Ffr) node [midway,above,scale=\scale] {$F(f)$};
+     
+         \draw[->] (FB)  -- (GB) node [midway, right,scale=\scale] {$\eta_{B}$};
+         \draw[]   (FB)  -- (GB) node [below,xshift=0.5mm] {$G(B)$};
+          
+         \draw[->] (Gfl) -- (Gfr) node [midway,below,scale=\scale] {$G(f)$};   
+       \end{tikzpicture}
+    }														% end resizebox
+   }														% end fcolorbox
+\caption{Natural Transformation: $\eta: F \to G$}
+\label{figure:natural_transformation}
+\end{figure}
+
+\bigskip
+\noindent
+Here $F(f)$ and $G(f)$ are the mappings of the morphism $f$ under
+the functors $F$ and $G$ (respectively), with $\eta_{A} \in 
+\mathcal{D}(F(A),G(A))$ and $\eta_{B} \in \mathcal{D}(F(B),G(B))$.
+
+\bigskip
+\noindent
+Commutativity of Figure \ref{figure:natural_transformation} means 
+that going from $F(A)$ to $G(B)$ via $F(f)$ and $\eta_{B}$ is the 
+same as going from $F(A)$ to $G(B)$ via $\eta_{A}$ and $G(f)$.  
+More specifically, commutativity requires that $G(f) \circ \eta_{A} 
+= \eta_{B} \circ F(f)$.
+%
+%
+%
+\section{Conclusions}
+\label{section:conclusions}
+%
+%
+%
+\section*{Acknowledgements}
+\label{section:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/wnptmrwwfjgv#a36a79}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

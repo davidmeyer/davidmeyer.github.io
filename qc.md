@@ -8,6 +8,12 @@
 
 <h2>Notes on various mathematical topics</h2>
 
+<li><a href="./category_theorys.pdf" target="_blank" 
+    rel="noopener noreferrer">
+A Few Notes on Category Theory)
+<br>
+
+
 <li><a href="./vector_spaces_and_quantum_mechanics.pdf" target="_blank" 
     rel="noopener noreferrer">
 Some ideas on vector spaces and quantum mechanics (WIP)
@@ -166,7 +172,7 @@ Is there a closed form for \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}?
 <br>
 <br>
 <hr>
-<i>Last Update: 03.13.2024 by
+<i>Last Update: 04.26.2024 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 

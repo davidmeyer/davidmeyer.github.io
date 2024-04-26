@@ -78,6 +78,56 @@
 \begin{document}
 
 
+%
+%	Set a few parameters
+%
+\setlength {\fboxsep} {6.00pt}					% get more space between fcolorbox and content
+\setlength {\fboxrule}{0.35pt}					% set the outside fcolorbox line thickness
+%
+%	Draw the picture
+%
+\begin{figure}[H]
+  \centering
+  \fcolorbox{blue}{white}{
+    \resizebox{0.50 \textwidth}{!} {
+       \begin{tikzpicture}
+         \coordinate (GA) at (0.00,0.00);
+         \coordinate (GB) at (4.00,0.00);
+         \coordinate (FA) at (0.00,2.00);
+         \coordinate (FB) at (4.00,2.00);
+%
+%	F(f)
+%
+         \coordinate (Ffl) at (0.60,2.35);
+         \coordinate (Ffr) at (3.50,2.35);
+%
+%	G(f)
+%
+         \coordinate (Gfl) at (0.60, -0.30);
+         \coordinate (Gfr) at (3.50, -0.30);
+%
+%	Draw it all
+%   
+         \draw[->] (FA) -- (GA) node[below] {$G(A)$};
+         \draw[]   (GA) -- (FA) node[above] {$F(A)$};
+         \draw[]   (FA) -- (GA) node[midway,left,scale=0.75] {$\eta_{A}$};
+
+         \draw[->] (Ffl) -- (Ffr) node [right] {$F(B)$};
+         \draw[]   (Ffl) -- (Ffr) node [midway,above,scale=0.75] {$F(f)$};
+     
+         \draw[->] (FB) -- (GB) node [midway, right,scale=0.75] {$\eta_{B}$};
+         \draw[]   (FB) -- (GB) node [below,xshift=0.5mm] {$G(B)$};
+          
+         \draw[->] (Gfl) -- (Gfr) node [midway,below,scale=0.75] {$G(f)$};   
+       \end{tikzpicture}
+    }														% end resizebox
+   }														% end fcolorbox
+\label{figure:natural_transformation}
+\caption{Natural Transformation: $\eta: F \to G$}
+\end{figure}
+
+
+
 %	
 %	\usepackage{halloweenmath}
 %
