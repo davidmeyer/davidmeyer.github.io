@@ -8,9 +8,9 @@
 
 <h2>Notes on various mathematical topics</h2>
 
-<li><a href="./category_theorys.pdf" target="_blank" 
+<li><a href="./category_theory.pdf" target="_blank" 
     rel="noopener noreferrer">
-A Few Notes on Category Theory)
+A Few Notes on Category Theory
 <br>
 
 
