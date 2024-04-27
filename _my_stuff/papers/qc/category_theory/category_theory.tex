@@ -194,12 +194,11 @@ $\mathcal{C}$, the following diagram must commute:
 %
 %	Set a few parameters
 %
-\def \scale {0.80}                                                                      % scale arrow labels
+\def \scale {0.85}                                                                      % scale arrow labels
 %
 %
 %
 \medskip
-
 %
 %	Draw the picture
 %
@@ -218,14 +217,14 @@ $\mathcal{C}$, the following diagram must commute:
    \begin{tikzpicture}
       \matrix[matrix of math nodes,                                                     % use a TikZ matrix for the vertices
               column sep={100pt,between origins},
-              row    sep={60pt,between origins}] (s)
+              row    sep={60pt,between origins}] (m)
               {
                 &|[name=FA]|F(A) & |[name=FB]|F(B) \\
                 &|[name=GA]|G(A) & |[name=GB]|G(B) \\
               };
               \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)        % F(A) -> F(B)
-                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB);       % G(A) -> G(B)
-              \draw[->] (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A)
+                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB)        % G(A) -> G(B)
+                        (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A)
                         (FB) edge node [midway,right,scale=\scale] {$\eta_{B}$} (GB);   % F(B) -> G(B)
    \end{tikzpicture}
 \end{center}
