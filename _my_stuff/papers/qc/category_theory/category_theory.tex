@@ -195,11 +195,12 @@ commute:
 %
 %	Set a few parameters
 %
-\def \scale {0.75}												% scale arrow labels
+\def \scale {0.80}																			% scale arrow labels
 %
 %
 %
 \medskip
+
 %
 %	Draw the picture
 %
@@ -213,25 +214,20 @@ commute:
 %                G(f)
 %
 %
-\begin{center}													% try to center the tikzpicture
-   \hspace{-3.00cm}												% center doesn't exactly center
+\begin{center}																					% try to center the tikzpicture
+   \hspace{-3.00cm}																				% center doesn't exactly center
    \begin{tikzpicture}
-      \matrix[matrix of math nodes,								% use a TikZ matrix for the vertices
+      \matrix[matrix of math nodes,																% use a TikZ matrix for the vertices
               column sep={100pt,between origins},
               row    sep={60pt,between origins}] (s)
               {
                 &|[name=FA]|F(A) & |[name=FB]|F(B) \\
                 &|[name=GA]|G(A) & |[name=GB]|G(B) \\
               };
-              \draw[->] (FA) edge (FB)							% draw and label the horizontal edges
-                        (GA) edge (GB); 
-              \draw[]   (FA) -- (FB) node [midway,above,scale=\scale] {$F(f)$};
-              \draw[]   (GA) -- (GB) node [midway,below,scale=\scale] {$G(f)$};
-
-              \draw[->] (FA) edge (GA)							% draw and label the vertical edges
-                        (FB) edge (GB);
-              \draw[]   (FA) -- (GA) node [midway,left,scale=\scale]  {$\eta_{A}$};
-              \draw[]   (FB) -- (GB) node [midway,right,scale=\scale] {$\eta_{B}$};
+              \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)				% F(A) -> F(B)
+                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB); 				% G(A) -> G(B)
+              \draw[->] (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)			% F(A) -> G(A)
+                        (FB) edge node [midway,right,scale=\scale] {$\eta_{B}$} (GB);			% F(B) -> G(B)
    \end{tikzpicture}
 \end{center}
 
