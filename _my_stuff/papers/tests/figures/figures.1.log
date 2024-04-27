@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 APR 2024 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 APR 2024 07:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1406,7 +1406,17 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrary3d.code.tex
 File: tikzlibrary3d.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)) (./figures.1.aux)
+)) (./figures.1.aux
+
+LaTeX Warning: Label `fig:wave_functions' multiply defined.
+
+
+LaTeX Warning: Label `fig:pythagorean_theorem' multiply defined.
+
+
+LaTeX Warning: Label `fig:pythagorean_theorem' multiply defined.
+
+)
 \openout1 = `figures.1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
@@ -1427,8 +1437,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
 LaTeX Font Info:    ... okay on input line 77.
-
-(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count371
 \scratchdimen=\dimen363
@@ -1587,11 +1596,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
  [2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 531.
+(Font)              <20.74> on input line 519.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 531.
+(Font)              <14.4> on input line 519.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 531.
+(Font)              <12> on input line 519.
  [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
@@ -1603,19 +1612,19 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [7]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 924.
+LaTeX Font Warning: Command \small invalid in math mode on input line 912.
 
 [8] [9] [10] [11] (./figures.1.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `figures.1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47933 strings out of 478994
- 1113538 string characters out of 5858184
- 1550305 words of memory out of 5000000
+ 47932 strings out of 478994
+ 1113521 string characters out of 5858184
+ 1551351 words of memory out of 5000000
  64393 multiletter control sequences out of 15000+600000
  528484 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1641,10 +1650,10 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.1.pdf (11 pages, 239117 bytes).
+Output written on figures.1.pdf (11 pages, 238854 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

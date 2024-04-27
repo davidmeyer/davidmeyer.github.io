@@ -22,7 +22,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
-                hobby}
+                hobby,matrix}
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
@@ -190,63 +190,52 @@ each object $A$ in $\mathcal{C}$, such that
 \noindent
 The morphism $\eta_{A}$ is called the component of $\eta$ at
 object $A$.  In addition, for any morphism $f:A \to B$ in
-$\mathcal{C}$, Figure \ref{figure:natural_transformation} must
-commute.
+$\mathcal{C}$, the following diagram must
+commute:
 %
 %	Set a few parameters
 %
-\setlength  {\fboxsep} {6.00pt}					% get more space between fcolorbox and content
-\setlength  {\fboxrule}{0.50pt}					% set the outside fcolorbox line thickness
-\def \scale {0.80}								% scale arrow labels
+\def \scale {0.75}												% scale arrow labels
 %
 %
 %
-\bigskip
+\medskip
 %
 %	Draw the picture
 %
-\begin{figure}[H]
-  \centering
-  \fcolorbox{red}{white}{
-    \resizebox{0.50 \textwidth}{!} {
-       \begin{tikzpicture}
-         \coordinate (GA) at (0.00,0.00);
-         \coordinate (GB) at (4.00,0.00);
-         \coordinate (FA) at (0.00,2.00);
-         \coordinate (FB) at (4.00,2.00);
 %
-%	F(f)
+%          		 F(f)
+%		   F(A) ------> F(B)
+%	  		|            |
+%	  η_{A} |            |  η_{B}
+%	        v            v
+%	       G(A) ------> G(B)
+%                G(f)
 %
-         \coordinate (Ffl) at (0.60,2.30);
-         \coordinate (Ffr) at (3.50,2.30);
 %
-%	G(f)
-%
-         \coordinate (Gfl) at (0.60, -0.30);
-         \coordinate (Gfr) at (3.50, -0.30);
-%
-%	Draw it all
-%   
-         \draw[->] (FA)  -- (GA) node[below] {$G(A)$};
-         \draw[]   (GA)  -- (FA) node[above] {$F(A)$};
-         \draw[]   (FA)  -- (GA) node[midway,left,scale=\scale] {$\eta_{A}$};
+\begin{center}													% try to center the tikzpicture
+   \hspace{-4.0cm}												% center doesn't exactly center
+   \begin{tikzpicture}
+      \matrix[matrix of math nodes,								% use a TikZ matrix for the verticies
+              column sep={100pt,between origins},
+              row    sep={60pt,between origins}] (s)
+              {
+                &|[name=FA]|F(A) & |[name=FB]|F(B) \\
+                &|[name=GA]|G(A) & |[name=GB]|G(B) \\
+              };
+              \draw[->] (FA) edge (FB)							% draw and label the horizontal edges
+                        (GA) edge (GB); 
+              \draw[]   (FA) -- (FB) node [midway,above,scale=\scale] {$F(f)$};
+              \draw[]   (GA) -- (GB) node [midway,below,scale=\scale] {$G(f)$};
 
-         \draw[->] (Ffl) -- (Ffr) node [right] {$F(B)$};
-         \draw[]   (Ffl) -- (Ffr) node [midway,above,scale=\scale] {$F(f)$};
-     
-         \draw[->] (FB)  -- (GB) node [midway, right,scale=\scale] {$\eta_{B}$};
-         \draw[]   (FB)  -- (GB) node [below,xshift=0.5mm] {$G(B)$};
-          
-         \draw[->] (Gfl) -- (Gfr) node [midway,below,scale=\scale] {$G(f)$};   
-       \end{tikzpicture}
-    }														% end resizebox
-   }														% end fcolorbox
-\caption{Natural Transformation: $\eta: F \to G$}
-\label{figure:natural_transformation}
-\end{figure}
+              \draw[->] (FA) edge (GA)							% draw and label the vertical edges
+                        (FB) edge (GB);
+              \draw[]   (FA) -- (GA) node [midway,left,scale=\scale]  {$\eta_{A}$};
+              \draw[]   (FB) -- (GB) node [midway,right,scale=\scale] {$\eta_{B}$};
+   \end{tikzpicture}
+\end{center}
 
-
-\bigskip
+\smallskip
 \noindent
 Here $F(f)$ and $G(f)$ are the mappings of the morphism $f$ under
 the functors $F$ and $G$ (respectively), with $\eta_{A} \in 
@@ -254,7 +243,7 @@ the functors $F$ and $G$ (respectively), with $\eta_{A} \in
 
 \bigskip
 \noindent
-Commutativity of Figure \ref{figure:natural_transformation} means 
+Commutativity here means 
 that going from $F(A)$ to $G(B)$ via $F(f)$ and $\eta_{B}$ is the 
 same as going from $F(A)$ to $G(B)$ via $\eta_{A}$ and $G(f)$.  
 More specifically, commutativity requires that $G(f) \circ \eta_{A} 
