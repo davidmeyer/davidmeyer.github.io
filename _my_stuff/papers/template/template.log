@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  13 DEC 2023 12:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 APR 2024 09:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -692,6 +692,10 @@ tex))) (/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/pml3array.sty
 \l_hobby_npoints_int=\count289
 \l_hobby_draw_int=\count290
 )))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2021/03/14{} The CircuiTikz circuit drawing package version
  1.3.2
@@ -1473,10 +1477,10 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: B6CF35FE23C3344EEE12E1A8BA1F6AEB;201.
  ) 
 Here is how much of TeX's memory you used:
- 52853 strings out of 478994
- 1331847 string characters out of 5858184
- 1950978 words of memory out of 5000000
- 69526 multiletter control sequences out of 15000+600000
+ 52903 strings out of 478994
+ 1333557 string characters out of 5858184
+ 1952864 words of memory out of 5000000
+ 69573 multiletter control sequences out of 15000+600000
  413833 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,5n,131p,748b,723s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1486,7 +1490,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template.pdf (1 page, 60940 bytes).
+Output written on template.pdf (1 page, 61294 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
