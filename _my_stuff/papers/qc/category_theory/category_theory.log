@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 APR 2024 08:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 APR 2024 08:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1468,17 +1468,22 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-(./category_theory.bbl [1
+Overfull \hbox (32.60722pt too wide) in paragraph at lines 261--267
+\OT1/cmr/m/n/10 Thanks to John Car-los Baez (@john-car-los-baez@mathstodon.xyz)
+ and An-drew Stacey (@loopspace@mathstodon.xyz)
+ []
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (.
-/category_theory.aux)
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./category_theory.bbl) [2] (./category_theory.aux)
 Package rerunfilecheck Info: File `category_theory.out' has not changed.
 (rerunfilecheck)             Checksum: 27373196F2B19C7A42A1A2A65AFB0468;1132.
  ) 
 Here is how much of TeX's memory you used:
  53041 strings out of 478994
  1336464 string characters out of 5858184
- 1962306 words of memory out of 5000000
+ 1962307 words of memory out of 5000000
  69699 multiletter control sequences out of 15000+600000
  414140 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1492,7 +1497,7 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on category_theory.pdf (2 pages, 112389 bytes).
+Output written on category_theory.pdf (2 pages, 113983 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
