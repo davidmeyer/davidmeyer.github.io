@@ -212,20 +212,19 @@ $\mathcal{C}$, the following diagram must commute:
 %                G(f)
 %
 %
-\begin{center}                                                                          % try to center the tikzpicture
-   \hspace{-3.00cm}                                                                     % center doesn't exactly center
+\begin{center}                                                                          % center the tikzpicture
    \begin{tikzpicture}
       \matrix[matrix of math nodes,                                                     % use a TikZ matrix for the vertices
               column sep={100pt,between origins},
               row    sep={60pt,between origins}] (m)
               {
-                &|[name=FA]|F(A) & |[name=FB]|F(B) \\
-                &|[name=GA]|G(A) & |[name=GB]|G(B) \\
+                |[name=FA]|F(A) & |[name=FB]|F(B) \\                                    % F(A) F(B)
+                |[name=GA]|G(A) & |[name=GB]|G(B) \\                                    % G(A) G(B) 
               };
-              \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)        % F(A) -> F(B)
-                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB)        % G(A) -> G(B)
-                        (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A)
-                        (FB) edge node [midway,right,scale=\scale] {$\eta_{B}$} (GB);   % F(B) -> G(B)
+              \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)        % F(A) -> F(B) by F(f)
+                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB)        % G(A) -> G(B) by G(f)
+                        (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A) by \eta_{A}
+                        (FB) edge node [midway,right,scale=\scale] {$\eta_{B}$} (GB);   % F(B) -> G(B) by \eta_{B}
    \end{tikzpicture}
 \end{center}
 
