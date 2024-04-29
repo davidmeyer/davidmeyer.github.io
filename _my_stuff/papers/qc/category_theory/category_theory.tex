@@ -179,10 +179,10 @@
 \begin{definition} 
 \label{definition:natural_transformation}
 {\bf Natural Transformation}: Let $F,G: \mathcal{C} \to
-\mathcal{D}$ be functors from category $\mathcal{C}$ to category
-$\mathcal{D}$. A natural transformation $\eta$ from $F$ to $G$ is
-a family of morphisms in $D$, one for each object $A$ in
-$\mathcal{C}$, such that
+\mathcal{D}$ be functors from a category $\mathcal{C}$ to 
+a category $\mathcal{D}$. A natural transformation $\eta$ 
+from $F$ to $G$ is a family of morphisms in $D$, one for 
+each object $A$ in $\mathcal{C}$, such that
 
 \begin{equation*}
 \eta_{A}:F(A)\to G(A)
@@ -191,9 +191,10 @@ $\mathcal{C}$, such that
 
 \bigskip
 \noindent
-The morphism $\eta_{A}$ is called the component of $\eta$ at
-object $A$.  In addition, for any morphism $f:A \to B$ in
-$\mathcal{C}$, the following diagram must commute:
+The morphism $\eta_{A}$ is called the component of 
+$\eta$ at object $A$.  In addition, for any morphism 
+$f \in \mathcal{C}(A,B)$ the following diagram 
+must commute:
 %
 %	Set a few parameters
 %
@@ -233,9 +234,9 @@ $\mathcal{C}$, the following diagram must commute:
 
 \smallskip
 \noindent
-Here $F(f)$ and $G(f)$ are the mappings of the morphism $f$ under
-the functors $F$ and $G$ (respectively), with $\eta_{A} \in
-\mathcal{D}(F(A),G(A))$ and $\eta_{B} \in
+Here $F(f)$ and $G(f)$ are the mappings of the morphism $f$ 
+under the functors $F$ and $G$ (respectively), with 
+$\eta_{A} \in \mathcal{D}(F(A),G(A))$ and $\eta_{B} \in
 \mathcal{D}(F(B),G(B))$.
 
 \bigskip
@@ -243,7 +244,17 @@ the functors $F$ and $G$ (respectively), with $\eta_{A} \in
 Commutativity here means that going from $F(A)$ to $G(B)$ via
 $F(f)$ and $\eta_{B}$ is the same as going from $F(A)$ to $G(B)$
 via $\eta_{A}$ and $G(f)$.  More specifically, commutativity
-requires that $G(f) \circ \eta_{A} = \eta_{B} \circ F(f)$.  
+requires that for any $f \in \mathcal{C}(A,B)$ we have 
+
+\begin{equation}
+G(f) \circ \eta_{A} = \eta_{B} \circ F(f)
+\label{equation:commutivity}
+\end{equation}
+
+\bigskip
+\noindent
+Note: I have seen Equation (\ref{equation:commutivity}) 
+abbreviated as $G \eta = \eta F$.
 %
 %
 %
