@@ -38,22 +38,22 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{xcolor}
-\usepackage{colortbl}							% \rowcolor{yellow!75} etc
+\usepackage{colortbl}                                                   % \rowcolor{yellow!75} etc
 \usepackage{float}
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}							% use characters instead of numbers in enumerate
-\usepackage{changepage}							% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
-\usepackage{multirow}							% \multirow and \multicolumn
+\usepackage{multirow}                                                   % \multirow and \multicolumn
 %
 %	lualatex
 %
@@ -132,7 +132,7 @@
 %
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
 \DeclareMathOperator{\E}{\mathbb{E}}
-\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\DeclareMathOperator{\bda}{\Big \downarrow}									% big down arrow
 \newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
 %
 %	Title, author and date
@@ -176,17 +176,20 @@
 \subsection{Natural Transformations}
 \label{subsection:naturl_transformations}
 
-
-Let $F,G: \mathcal{C} \to \mathcal{D}$ be functors from category
-$\mathcal{C}$ to category $\mathcal{D}$. A {\bf natural
-transformation} $\eta$ from $F$ to $G$ is a family of morphisms
-in $D$, one for each object $A$ in $\mathcal{C}$, such that
+\begin{definition} 
+\label{definition:natural_transformation}
+{\bf Natural Transformation}: Let $F,G: \mathcal{C} \to
+\mathcal{D}$ be functors from category $\mathcal{C}$ to category
+$\mathcal{D}$. A natural transformation $\eta$ from $F$ to $G$ is
+a family of morphisms in $D$, one for each object $A$ in
+$\mathcal{C}$, such that
 
 \begin{equation*}
 \eta_{A}:F(A)\to G(A)
 \end{equation*}
+\end{definition}
 
-\medskip
+\bigskip
 \noindent
 The morphism $\eta_{A}$ is called the component of $\eta$ at
 object $A$.  In addition, for any morphism $f:A \to B$ in
@@ -217,10 +220,10 @@ $\mathcal{C}$, the following diagram must commute:
       \matrix[matrix of math nodes,                                                     % use a TikZ matrix for the vertices
               column sep={100pt,between origins},
               row    sep={60pt,between origins}] (m)
-              {																			% matrix looks like:
+              {                                                                         % matrix looks like:
                 |[name=FA]|F(A) & |[name=FB]|F(B) \\                                    % F(A) F(B)
-                |[name=GA]|G(A) & |[name=GB]|G(B) \\                                    % G(A) G(B) 
-              };																		% 
+                |[name=GA]|G(A) & |[name=GB]|G(B) \\                                    % G(A) G(B)
+              }; 
               \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)        % F(A) -> F(B) by F(f)
                         (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB)        % G(A) -> G(B) by G(f)
                         (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A) by \eta_{A}
@@ -240,7 +243,7 @@ the functors $F$ and $G$ (respectively), with $\eta_{A} \in
 Commutativity here means that going from $F(A)$ to $G(B)$ via
 $F(f)$ and $\eta_{B}$ is the same as going from $F(A)$ to $G(B)$
 via $\eta_{A}$ and $G(f)$.  More specifically, commutativity
-requires that $G(f) \circ \eta_{A} = \eta_{B} \circ F(f)$.
+requires that $G(f) \circ \eta_{A} = \eta_{B} \circ F(f)$.  
 %
 %
 %
