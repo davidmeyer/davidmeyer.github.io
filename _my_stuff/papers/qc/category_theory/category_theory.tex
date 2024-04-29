@@ -156,8 +156,23 @@
 \label{subsection:what_is_a_category}
 \cite{intro_category_theory_notes}
 
+
 \subsection{Morphisms}
 \label{subsection:morphisms}
+
+\subsubsection{Notation}
+\label{subsubsection:notation}
+
+\begin{definition} 
+\label{definition:morphism}
+{\bf Morphism}: A morphism in a category $\mathcal{C}$ is a
+mathematical structure that connects two objects $A,B \in
+\mathcal{C}$.  The notation is that for $A,B \in \mathcal{C}$, a
+morphism $f$ from $A$ to $B$ is denoted as either $f: A \to B$ or
+$f \in \mathcal{C}(A,B)$.
+\end{definition}
+
+
 
 \subsubsection{Monomorphisms}
 \label{subsubsection:monomorphisms}
@@ -234,10 +249,12 @@ must commute:
 
 \smallskip
 \noindent
-Here $F(f)$ and $G(f)$ are the mappings of the morphism $f$ 
-under the functors $F$ and $G$ (respectively), with 
-$\eta_{A} \in \mathcal{D}(F(A),G(A))$ and $\eta_{B} \in
-\mathcal{D}(F(B),G(B))$.
+Here $F(f)$ and $G(f)$ are the mappings of the morphism $f \in
+\mathcal{C}(A,B)$ under the functors $F$ and $G$ (respectively),
+where $F(f) \in \mathcal{D}(F(A),F(B))$ and $G(f) \in
+\mathcal{D}(G(A),G(B))$. $\eta_{A}$ and $\eta_{B}$ are natural
+transformations with $\eta_{A} \in \mathcal{D}(F(A),G(A))$ and
+$\eta_{B} \in \mathcal{D}(F(B),G(B))$.
 
 \bigskip
 \noindent

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 APR 2024 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  29 APR 2024 12:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1467,24 +1467,23 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-Overfull \hbox (32.60722pt too wide) in paragraph at lines 268--274
+) [1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (32.60722pt too wide) in paragraph at lines 285--291
 \OT1/cmr/m/n/10 Thanks to John Car-los Baez (@john-car-los-baez@mathstodon.xyz)
  and An-drew Stacey (@loopspace@mathstodon.xyz)
  []
 
-[1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./category_theory.bbl) [2] (./category_theory.aux)
 Package rerunfilecheck Info: File `category_theory.out' has not changed.
-(rerunfilecheck)             Checksum: 27373196F2B19C7A42A1A2A65AFB0468;1132.
+(rerunfilecheck)             Checksum: 9EBFB4BA9E2C863273B335B9AADB052B;1240.
  ) 
 Here is how much of TeX's memory you used:
- 53041 strings out of 478994
- 1336466 string characters out of 5858184
- 1962386 words of memory out of 5000000
- 69697 multiletter control sequences out of 15000+600000
+ 53046 strings out of 478994
+ 1336565 string characters out of 5858184
+ 1962461 words of memory out of 5000000
+ 69700 multiletter control sequences out of 15000+600000
  414140 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,14n,131p,755b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1497,10 +1496,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on category_theory.pdf (2 pages, 115300 bytes).
+Output written on category_theory.pdf (2 pages, 116214 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
