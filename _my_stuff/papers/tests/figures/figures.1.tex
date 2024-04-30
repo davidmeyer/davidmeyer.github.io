@@ -79,78 +79,63 @@
 %
 %	Draw the picture
 %
-\begin{center}
-   \hspace{-4.0cm}
-   \begin{tikzpicture}
-      \matrix[matrix of math nodes,
-              column sep={100pt,between origins},
-              row sep={60pt,between origins}] (s)
-              {
-                &|[name=FA]|F(A) & |[name=FB]|F(B) \\
-                &|[name=GA]|G(A) & |[name=GB]|G(B) \\
-              };
-              \draw[->] (FA) edge (FB)							% draw the horizontal edges
-                        (GA) edge (GB); 
-              \draw[]   (FA) -- (FB) node [midway,above,scale=0.75] {$F(f)$};
-              \draw[]   (GA) -- (GB) node [midway,below,scale=0.75] {$G(f)$};
-
-              \draw[->] (FA) edge (GA)							% draw the vertical edges
-                        (FB) edge (GB);
-              \draw[]   (FA) -- (GA) node [midway,left,scale=0.75]  {$\eta_{A}$};
-              \draw[]   (FB) -- (GB) node [midway,right,scale=0.75] {$\eta_{B}$};
-  \end{tikzpicture}
-\end{center}
-
-
+%
+%          		 F(f)
+%		   F(A) ------> F(B)
+%	  		|            |
+%	  η_{A} |            |  η_{B}
+%	        v            v
+%	       G(A) ------> G(B)
+%                G(f)
+%
+%
+\begin{equation*}
+\begin{tikzcd} [column sep={75pt},
+                row    sep={50pt}]
+    F(A) \arrow[r, "F(f)"] \arrow[d, "\eta_{A}"'] & F(B) \arrow[d, "\eta_{B}"] \\
+    G(A) \arrow[r, "G(f)"']                       & G(B)
+\end{tikzcd}
+\end{equation*}
 
 
 %
 %	Set a few parameters
 %
-\setlength {\fboxsep} {6.00pt}					% get more space between fcolorbox and content
-\setlength {\fboxrule}{0.35pt}					% set the outside fcolorbox line thickness
+\def \scale {0.85}                                                                      % scale arrow labels
+%
+%
+%
+\medskip
 %
 %	Draw the picture
 %
-\begin{figure}[H]
-  \centering
-  \fcolorbox{blue}{white}{
-    \resizebox{0.50 \textwidth}{!} {
-       \begin{tikzpicture}
-         \coordinate (GA) at (0.00,0.00);
-         \coordinate (GB) at (4.00,0.00);
-         \coordinate (FA) at (0.00,2.00);
-         \coordinate (FB) at (4.00,2.00);
 %
-%	F(f)
+%          		 F(f)
+%		   F(A) ------> F(B)
+%	  		|            |
+%	  η_{A} |            |  η_{B}
+%	        v            v
+%	       G(A) ------> G(B)
+%                G(f)
 %
-         \coordinate (Ffl) at (0.60,2.30);
-         \coordinate (Ffr) at (3.50,2.30);
 %
-%	G(f)
-%
-         \coordinate (Gfl) at (0.60, -0.30);
-         \coordinate (Gfr) at (3.50, -0.30);
-%
-%	Draw it all
-%   
-         \draw[->] (FA) -- (GA) node[below] {$G(A)$};
-         \draw[]   (GA) -- (FA) node[above] {$F(A)$};
-         \draw[]   (FA) -- (GA) node[midway,left,scale=0.75] {$\eta_{A}$};
+\begin{center}                                                                          % center the tikzpicture
+   \begin{tikzpicture}
+      \matrix[matrix of math nodes,                                                     % use a TikZ matrix for the vertices
+              column sep={100pt,between origins},
+              row    sep={60pt,between origins}] (m)
+              {                                                                         % matrix looks like:
+                |[name=FA]|F(A) & |[name=FB]|F(B) \\                                    % F(A) F(B)
+                |[name=GA]|G(A) & |[name=GB]|G(B) \\                                    % G(A) G(B)
+              }; 
+              \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)        % F(A) -> F(B) by F(f)
+                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB)        % G(A) -> G(B) by G(f)
+                        (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A) by \eta_{A}
+                        (FB) edge node [midway,right,scale=\scale] {$\eta_{B}$} (GB);   % F(B) -> G(B) by \eta_{B}
+   \end{tikzpicture}
+\end{center}
 
-         \draw[->] (Ffl) -- (Ffr) node [right] {$F(B)$};
-         \draw[]   (Ffl) -- (Ffr) node [midway,above,scale=0.75] {$F(f)$};
-     
-         \draw[->] (FB) -- (GB) node [midway, right,scale=0.75] {$\eta_{B}$};
-         \draw[]   (FB) -- (GB) node [below,xshift=0.5mm] {$G(B)$};
-          
-         \draw[->] (Gfl) -- (Gfr) node [midway,below,scale=0.75] {$G(f)$};   
-       \end{tikzpicture}
-    }														% end resizebox
-   }														% end fcolorbox
-\label{figure:natural_transformation}
-\caption{Natural Transformation: $\eta: F \to G$}
-\end{figure}
+
 
 
 

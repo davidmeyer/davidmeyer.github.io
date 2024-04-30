@@ -23,6 +23,7 @@
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
+\usepackage{tikz-cd}
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
@@ -169,7 +170,8 @@
 mathematical structure that connects two objects $A,B \in
 \mathcal{C}$.  The notation is that for $A,B \in \mathcal{C}$, a
 morphism $f$ from $A$ to $B$ is denoted as either $f: A \to B$ or
-$f \in \mathcal{C}(A,B)$.
+$f \in \mathcal{C}(A,B)$. Morphisms are also frequently called
+"arrows".
 \end{definition}
 
 
@@ -211,10 +213,6 @@ $\eta$ at object $A$.  In addition, for any morphism
 $f \in \mathcal{C}(A,B)$ the following diagram 
 must commute:
 %
-%	Set a few parameters
-%
-\def \scale {0.85}                                                                      % scale arrow labels
-%
 %
 %
 \medskip
@@ -231,21 +229,14 @@ must commute:
 %                G(f)
 %
 %
-\begin{center}                                                                          % center the tikzpicture
-   \begin{tikzpicture}
-      \matrix[matrix of math nodes,                                                     % use a TikZ matrix for the vertices
-              column sep={100pt,between origins},
-              row    sep={60pt,between origins}] (m)
-              {                                                                         % matrix looks like:
-                |[name=FA]|F(A) & |[name=FB]|F(B) \\                                    % F(A) F(B)
-                |[name=GA]|G(A) & |[name=GB]|G(B) \\                                    % G(A) G(B)
-              }; 
-              \draw[->] (FA) edge node [midway,above,scale=\scale] {$F(f)$} (FB)        % F(A) -> F(B) by F(f)
-                        (GA) edge node [midway,below,scale=\scale] {$G(f)$} (GB)        % G(A) -> G(B) by G(f)
-                        (FA) edge node [midway,left,scale=\scale]  {$\eta_{A}$} (GA)    % F(A) -> G(A) by \eta_{A}
-                        (FB) edge node [midway,right,scale=\scale] {$\eta_{B}$} (GB);   % F(B) -> G(B) by \eta_{B}
-   \end{tikzpicture}
-\end{center}
+\begin{equation*}
+\begin{tikzcd} [column sep={70pt},
+                row    sep={45pt}]
+    F(A) \arrow[r, "F(f)"] \arrow[d, "\eta_{A}"'] & F(B) \arrow[d, "\eta_{B}"] \\
+    G(A) \arrow[r, "G(f)"']                       & G(B)
+\end{tikzcd}
+\end{equation*}
+
 
 \smallskip
 \noindent
