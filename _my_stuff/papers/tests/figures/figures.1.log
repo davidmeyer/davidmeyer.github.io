@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 06:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 09:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1584,38 +1584,37 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Missing character: There is no ; in font nullfont!
- [1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Missing character: There is no ; in font nullfont!
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
- [2]
+ [2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 491.
+(Font)              <20.74> on input line 515.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 491.
+(Font)              <14.4> on input line 515.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 491.
- [3] [4]
+(Font)              <12> on input line 515.
+ [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [5]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 
 [6]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [7]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 884.
+LaTeX Font Warning: Command \small invalid in math mode on input line 908.
 
-[7] [8] [9] [10] (./figures.1.aux)
+[8] [9] [10] [11] (./figures.1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1623,10 +1622,10 @@ Package rerunfilecheck Info: File `figures.1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47957 strings out of 478994
- 1114612 string characters out of 5858184
- 1557362 words of memory out of 5000000
- 64420 multiletter control sequences out of 15000+600000
+ 47992 strings out of 478994
+ 1115426 string characters out of 5858184
+ 1554963 words of memory out of 5000000
+ 64454 multiletter control sequences out of 15000+600000
  528484 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,17n,117p,806b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1651,10 +1650,10 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.1.pdf (10 pages, 239138 bytes).
+Output written on figures.1.pdf (11 pages, 240913 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

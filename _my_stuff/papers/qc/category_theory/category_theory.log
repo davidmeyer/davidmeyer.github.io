@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 07:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 09:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1474,7 +1474,7 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (32.60722pt too wide) in paragraph at lines 273--279
+Overfull \hbox (32.60722pt too wide) in paragraph at lines 282--288
 \OT1/cmr/m/n/10 Thanks to John Car-los Baez (@john-car-los-baez@mathstodon.xyz)
  and An-drew Stacey (@loopspace@mathstodon.xyz)
  []
@@ -1484,13 +1484,13 @@ Package rerunfilecheck Info: File `category_theory.out' has not changed.
 (rerunfilecheck)             Checksum: 9EBFB4BA9E2C863273B335B9AADB052B;1240.
  ) 
 Here is how much of TeX's memory you used:
- 53506 strings out of 478994
- 1353436 string characters out of 5858184
- 1977507 words of memory out of 5000000
- 70152 multiletter control sequences out of 15000+600000
+ 53540 strings out of 478994
+ 1354237 string characters out of 5858184
+ 1977508 words of memory out of 5000000
+ 70186 multiletter control sequences out of 15000+600000
  414140 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,15n,131p,755b,1005s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,15n,131p,755b,1007s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1501,11 +1501,12 @@ ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on category_theory.pdf (2 pages, 132364 bytes).
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on category_theory.pdf (2 pages, 140565 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 127 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  20 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

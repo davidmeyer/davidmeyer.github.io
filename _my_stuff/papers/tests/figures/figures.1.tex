@@ -76,6 +76,17 @@
 
 \begin{document}
 
+
+\begin{equation*}
+   \begin{tikzcd} [column sep={50pt},
+                   row    sep={40pt}]
+        A \arrow[r,"f"] \arrow[d, swap, "g \circ f",] & B \arrow[ld,"g"] \\
+        C 
+   \end{tikzcd}
+\end{equation*}
+
+\vspace{0.75cm}
+
 %
 %	Draw the picture
 %
@@ -92,8 +103,8 @@
 \begin{equation*}
 \begin{tikzcd} [column sep={75pt},
                 row    sep={50pt}]
-    F(A) \arrow[r, "F(f)"] \arrow[d, "\eta_{A}"'] & F(B) \arrow[d, "\eta_{B}"] \\
-    G(A) \arrow[r, "G(f)"']                       & G(B)
+    F(A) \arrow[r, "F(f)"] \arrow[d, swap, "\eta_{A}"] & F(B) \arrow[d, "\eta_{B}"] \\
+    G(A) \arrow[r, swap, "G(f)"]                       & G(B)
 \end{tikzcd}
 \end{equation*}
 

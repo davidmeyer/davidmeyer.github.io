@@ -174,6 +174,15 @@ $f \in \mathcal{C}(A,B)$. Morphisms are also frequently referred
 to as "arrows".
 \end{definition}
 
+\begin{equation*}
+   \begin{tikzcd} [column sep={45pt},
+                   row    sep={35pt}]
+        A \arrow[r,"f"] \arrow[d, swap, "g \circ f"] & B \arrow[ld,"g"] \\
+        C 
+   \end{tikzcd}
+\end{equation*}
+
+
 \subsubsection{Monomorphisms}
 \label{subsubsection:monomorphisms}
 
@@ -227,11 +236,11 @@ must commute:
 %
 %
 \begin{equation*}
-\begin{tikzcd} [column sep={60pt},
-                row    sep={35pt}]
-    F(A) \arrow[r, "F(f)"] \arrow[d, "\eta_{A}"'] & F(B) \arrow[d, "\eta_{B}"] \\
-    G(A) \arrow[r, "G(f)"']                       & G(B)
-\end{tikzcd}
+  \begin{tikzcd} [column sep={60pt},
+                  row    sep={35pt}]
+    F(A) \arrow[r,"F(f)"] \arrow[d, swap, "\eta_{A}"] & F(B) \arrow[d, "\eta_{B}"] \\
+    G(A) \arrow[r, swap, "G(f)"]                      & G(B)
+  \end{tikzcd}
 \end{equation*}
 
 
