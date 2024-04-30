@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1596,11 +1596,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
  [2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 515.
+(Font)              <20.74> on input line 517.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 515.
+(Font)              <14.4> on input line 517.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 515.
+(Font)              <12> on input line 517.
  [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
@@ -1612,7 +1612,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [7]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 908.
+LaTeX Font Warning: Command \small invalid in math mode on input line 910.
 
 [8] [9] [10] [11] (./figures.1.aux)
 
@@ -1650,7 +1650,7 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.1.pdf (11 pages, 240913 bytes).
+Output written on figures.1.pdf (11 pages, 240912 bytes).
 PDF statistics:
  192 PDF objects out of 1000 (max. 8388607)
  141 compressed objects within 2 object streams

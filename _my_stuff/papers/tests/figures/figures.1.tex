@@ -76,14 +76,16 @@
 
 \begin{document}
 
-
-\begin{equation*}
+%
+%	Draw the function composition triangle
+%
+\begin{center}
    \begin{tikzcd} [column sep={50pt},
                    row    sep={40pt}]
         A \arrow[r,"f"] \arrow[d, swap, "g \circ f",] & B \arrow[ld,"g"] \\
         C 
    \end{tikzcd}
-\end{equation*}
+\end{center}
 
 \vspace{0.75cm}
 
@@ -100,13 +102,13 @@
 %                G(f)
 %
 %
-\begin{equation*}
+\begin{center}
 \begin{tikzcd} [column sep={75pt},
                 row    sep={50pt}]
     F(A) \arrow[r, "F(f)"] \arrow[d, swap, "\eta_{A}"] & F(B) \arrow[d, "\eta_{B}"] \\
     G(A) \arrow[r, swap, "G(f)"]                       & G(B)
 \end{tikzcd}
-\end{equation*}
+\end{center}
 
 
 %
