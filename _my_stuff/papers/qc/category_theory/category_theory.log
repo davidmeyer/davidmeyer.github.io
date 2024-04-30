@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  30 APR 2024 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1474,20 +1474,20 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (32.60722pt too wide) in paragraph at lines 286--292
+Overfull \hbox (32.60722pt too wide) in paragraph at lines 289--295
 \OT1/cmr/m/n/10 Thanks to John Car-los Baez (@john-car-los-baez@mathstodon.xyz)
  and An-drew Stacey (@loopspace@mathstodon.xyz)
  []
 
 (./category_theory.bbl) [2] (./category_theory.aux)
 Package rerunfilecheck Info: File `category_theory.out' has not changed.
-(rerunfilecheck)             Checksum: 9EBFB4BA9E2C863273B335B9AADB052B;1240.
+(rerunfilecheck)             Checksum: 4AC2E4047D318CFCFF1524FD7A849655;1348.
  ) 
 Here is how much of TeX's memory you used:
- 53542 strings out of 478994
- 1354244 string characters out of 5858184
- 1977526 words of memory out of 5000000
- 70188 multiletter control sequences out of 15000+600000
+ 53545 strings out of 478994
+ 1354308 string characters out of 5858184
+ 1977571 words of memory out of 5000000
+ 70190 multiletter control sequences out of 15000+600000
  414140 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,14n,131p,711b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1503,10 +1503,10 @@ al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on category_theory.pdf (2 pages, 140493 bytes).
+Output written on category_theory.pdf (2 pages, 141106 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
