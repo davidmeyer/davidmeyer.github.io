@@ -20,10 +20,12 @@
 %   tikz et al
 %
 \usepackage{tikz}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
-\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{tikz-cd}
+\tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %

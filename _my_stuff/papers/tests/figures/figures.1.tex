@@ -16,9 +16,13 @@
 \usetikzlibrary{intersections}
 \usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,hobby,lindenmayersystems,matrix}
 \usepackage{tikz-cd}
+\tikzset{>=latex}                                                      % default to LaTeX arrow head
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
+% Set the default arrow head style to be LaTeX (TikZ)
+\tikzcdset{every arrow/.append style={-latex}}
+
 %
 %
 %
