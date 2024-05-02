@@ -24,8 +24,8 @@
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
-\usepackage{tikz-cd}													% commutative diagrams
-\tikzcdset{every arrow/.append style={-latex}}							% default to LaTeX arrow head in tikz-cd (and others)
+\usepackage{tikz-cd}                                                    % commutative diagrams
+\tikzcdset{every arrow/.append style={-latex}}                          % default to LaTeX arrow head in tikz-cd (and others)
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 
@@ -188,6 +188,64 @@ to as "arrows".
         C 
    \end{tikzcd}
 \end{center}
+
+\bigskip
+\newpage
+\noindent
+Here's a crazy (and beautiful) fact: A group $G$ is essentially
+the same thing as a category that has only one object and in
+which all the morphisms are isomorphisms.
+
+\bigskip
+\noindent
+Ok, but why? 
+
+\bigskip
+\noindent
+Well, first consider a category $\mathcal{C}$ with just one
+object, and call that object $A$. Since $\mathcal{C}$ only has
+one object ($A$), all of $\mathcal{C}$'s morphisms are in
+$\mathcal{C}(A,A)$.
+
+\bigskip
+\noindent
+Here $\mathcal{C}$ consists of
+
+\begin{itemize}
+  \item the object $A$ 
+  \item the  class of morphisms  $\mathcal{C}(A,A)$
+  \item an associative composition function $\circ:
+        \mathcal{C}(A,A) \times \mathcal{C}(A,A) \to
+        \mathcal{C}(A,A)$  
+  \item a two-sided unit $1_{A} \in \mathcal{C}(A,A)$
+\end{itemize}
+
+\medskip
+\noindent
+Interestingly, these four conditions would make
+$\mathcal{C}(A,A)$ into a group except for inverses. However, to
+say that every map in $\mathcal{C}$ is an isomorphism is exactly
+to say that every element of $\mathcal{C}(A,A)$ has an inverse
+(with respect to $\circ$).
+
+\bigskip
+\noindent
+So if $G$ is the group $\mathcal{C}(A,A)$, then we have:
+
+\begin{center}
+  \begin{table}[H]
+    \begin{tabular}{l|r}
+      \multicolumn{1}{c}{\centering {\bf Category}} & \multicolumn{1}{c}{\centering {\bf Group}} \\ 
+      \hline\hline
+      Category $\mathcal{C}$ with single object $A$ & Corresponding group $G$ \\
+      Morphisms in $\mathcal{C}(A,A)$               & Elements of $G$ \\
+      $\circ \in \mathcal{C}(A,A)$                  & $\cdot \; \in G$ \\
+      $1_{A}$                                       & $1 \in G$    \\
+      \hline \hline
+    \end{tabular}
+   \end{table}
+\end{center}
+
 
 
 \subsubsection{Monomorphisms}
