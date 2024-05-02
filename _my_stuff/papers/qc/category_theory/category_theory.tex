@@ -203,17 +203,24 @@ Ok, but why?
 \bigskip
 \noindent
 Well, first consider a category $\mathcal{C}$ with just one
-object. Call that object $A$. Since $\mathcal{C}$ only has
+object. Call that object $A$. That is, the class $\operatorname{\bf Obj}(\mathcal{C})$
+contains only one object, namely, $A$. Since $\mathcal{C}$ only has
 one object all of $\mathcal{C}$'s morphisms are in
-$\mathcal{C}(A,A)$.
+$\operatorname{\bf Hom}_{\mathcal{C}}(A,A)$. 
+
+\bigskip
+\noindent
+Note that I'll abbreviate $\operatorname{\bf Obj}(\mathcal{C})$ 
+as $\mathcal{C}$ and  $\operatorname{\bf Hom}_{\mathcal{C}}(A,B)$ 
+as $\mathcal{C}(A,B)$.
 
 \bigskip
 \noindent
 Here $\mathcal{C}$ consists of
 
 \begin{itemize}
-  \item the class of objects $\operatorname{\bf Obj}(\mathcal{C})$, consisting of the single object $A$ 
-  \item the class of morphisms $\operatorname{\bf Hom}_{\mathcal{C}}(A,A) = \mathcal{C}(A,A)$, consisting of isomorphisms $f: A \to A$
+  \item the class of objects $\mathcal{C}$ consisting of the single object $A$ 
+  \item the class of morphisms $\mathcal{C}(A,A)$ consisting of isomorphisms $f: A \to A$
   \item an associative composition function $\circ:
         \mathcal{C}(A,A) \times \mathcal{C}(A,A) \to
         \mathcal{C}(A,A)$  
@@ -247,7 +254,7 @@ So if $(G,\cdot)$ is the group $(\mathcal{C}(A,A),\circ)$ then we have:
    \end{table}
 \end{center}
 
-
+\newpage
 
 \subsubsection{Monomorphisms}
 \label{subsubsection:monomorphisms}
