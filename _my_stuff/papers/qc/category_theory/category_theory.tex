@@ -164,6 +164,69 @@
 \subsection{Morphisms}
 \label{subsection:morphisms}
 
+\subsubsection{A Few Algebraic Structures}
+\label{subsubsection:algebraic_structures}
+
+\begin{center}
+\begin{table}[H]
+\scalebox{0.83}{
+\begin{tabular}{l | c | c | c | c |  c | c}
+{{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
+                                & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
+                                & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
+\hline\hline					% separate column names from rows
+Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup plus identity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid plus inverse $\in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
+                                             & Abelian group under $+$ and $*$  \\
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Field \\
+Module		                & \checkmark & \checkmark $(+,*)$          & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Ring
+
+\end{tabular}}
+\caption{A Few Algebraic Structures and Their Features}
+\label{table:algebraic_structures}
+\end{table}
+\end{center}
+
+\noindent
+where
+
+\begin{center}
+\begin{enumerate}
+\item \textbf{ABO:} Associative Binary Operation 
+\begin{itemize}
+\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
+      for all $x, y, z \in S$
+\item $x \circ y \in S$ for all $x, y \in S$
+      ($S$ is closed under $\circ$)
+\end{itemize}
+
+\item \textbf{Distributive:} Distributive Property 
+\begin{itemize}
+\item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
+                                   all $x, y, z \in S$
+\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
+                                   for all $x, y, z \in S$
+\item $*$ is \emph{distributive}   over $+$ if $*$ is left and 
+                                   right distributive
+\end{itemize}
+
+\item \textbf{Commutative:} Commutative Property
+\begin{itemize}
+\item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
+\end{itemize}
+\end{enumerate}
+\end{center}
+
+
+
+
 \subsubsection{Notation}
 \label{subsubsection:notation}
 
@@ -276,7 +339,7 @@ group $G$.
 
 \bigskip
 \noindent
-By the same argument, we can note that a category $\mathcal{C}$
+By a similar argument, we can note that a category $\mathcal{C}$
 with one object, call it $A$, is essentially the same thing as a
 monoid. This is because unlike a group, every element of a monoid
 is not required to have an inverse. Hence the morphisms in
