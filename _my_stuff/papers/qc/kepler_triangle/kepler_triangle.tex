@@ -157,34 +157,33 @@
 A Kepler triangle is named after Johannes Kepler
 \cite{wikipedia:johannes_kepler}, is a right triangle whose sides
 are related by a geometric progression
-\cite{wiki:geometric_series,wikipedia:kepler_triangle}.
+\cite{wiki:geometric_series,wikipedia:kepler_triangle}, where the
+ratio of the progression is $\sqrt{\phi}$, the golden ratio
+\cite{wiki:golden_ratio}. The progression can be written
+$1:\sqrt{\phi}:\phi$.
 
 \bigskip
 {\setstretch{1.15}
 \noindent
-If the common ratio of this geometric progression is $\sqrt{x}$,
-then the sides are in the ratio $1 : \sqrt{x} : x$, so we have $1
-+x = x^{2}$, or $x^{2}-x-1 = 0$. This interesting triangle involves
-the golden ratio $\phi = \frac{1+\sqrt{5}}{2}$
-\cite{wiki:golden_ratio}.
-
-\bigskip
-\noindent
-Why? Well, for this triangle we can conclude that $x = \phi$,
-since $x^2 -x -1$ is $\phi$'s minimal polynomial and thus has
+Note that if the common ratio of a geometric progression is
+$\sqrt{x}$, then the sides are in the ratio $1 : \sqrt{x} : x$,
+which represents the polynomial $1 +x = x^{2}$, or $x^{2}-x-1 =
+0$. Here we can conclude that $x = \phi$
+because $x^2 -x -1$ is $\phi$'s minimal polynomial and thus has
 $\phi$ as it's positive root \cite{wiki:golden_ratio}. So $x =
 \phi = \frac{1+\sqrt{5}}{2}$, and the sides of the Kepler
 triangle are in the ratio $1 : \sqrt{\phi} : \phi \approx 1 :
-1.272 : 1.618$.  \par}
+1.272 : 1.618$. 
+\par}
 
 
 \bigskip
 \noindent
 Interestingly, a triangle with sides $k$, $k\sqrt{x}$, and
-$kx$ (for $k > 0$) is also a Kepler triangle, since if we 
-divide through by $k$ we see that that 
-by the ratio of the sides is $1 : \sqrt{\phi} : \phi$, making it a Kepler 
-triangle. 
+$kx$ is also a Kepler triangle since the ratio of its sides 
+is $k:k\sqrt{x}:kx$. If we divide through by $k$ we see 
+that that by the ratio of this triangle's sides is 
+$1:\sqrt{x}:x$.
 
 \bigskip
 \noindent
@@ -202,8 +201,6 @@ Consider following triangle:
         A \arrow[d,-,swap,"k"] \arrow[rd,-,"kx"]  \\
         B \arrow[r,-,swap,"k\sqrt{x}"] & C
     \end{tikzcd}
- %  \caption{Kepler triangle with sides $k$, $k\sqrt{x}$, and $kx$}
- % \label{figure:kepler_triangle}
 \end{figure}
 
 
@@ -234,13 +231,11 @@ By the Pythagorean theorem we know that
 
 \bigskip
 \noindent
-And again, we know that $x^{2} - x - 1$ is $\phi$'s minimal polynomial 
-and so $x = \phi = \frac{1+\sqrt{5}}{2}$ and the ratio of the sides 
-is $1:\sqrt{x}:x$. Substituting $x = \phi$, we see that the ratio of 
-the sides of this triangle is $1:\sqrt{\phi}:\phi$. $\blacksquare$ 
-
-
-
+And again, we know that $x^{2} - x - 1$ is $\phi$'s minimal
+polynomial and so $x = \phi = \frac{1+\sqrt{5}}{2}$ and the ratio
+of the sides is $1:\sqrt{x}:x$. Substituting $x = \phi$, we see
+that the ratio of the sides of this triangle is
+$1:\sqrt{\phi}:\phi$. $\blacksquare$
 %
 %
 %
