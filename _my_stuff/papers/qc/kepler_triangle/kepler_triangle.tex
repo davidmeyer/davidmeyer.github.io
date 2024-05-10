@@ -1,11 +1,11 @@
 \documentclass{article}
 %
 %
-%	LaTeX template
+%	kepler_triangle.tex
 %
 %	David Meyer
 %	dmm613@gmail.com
-%	08 Oct 2023
+%	10 May 2024
 %
 %
 %   get various packages
@@ -25,7 +25,7 @@
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
 \usepackage{tikz-cd}
-\tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
+\tikzcdset{every arrow/.append style={-latex}}                          % commutative diagrams
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %
@@ -40,22 +40,22 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{xcolor}
-\usepackage{colortbl}													% \rowcolor{yellow!75} etc
+\usepackage{colortbl}                                                   % \rowcolor{yellow!75} etc
 \usepackage{float}
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}													% use characters instead of numbers in enumerate
-\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
-\usepackage{multirow}													% \multirow and \multicolumn
+\usepackage{multirow}                                                   % \multirow and \multicolumn
 %
 %	lualatex
 %
@@ -139,10 +139,10 @@
 %
 %	Title, author and date
 %
-\title{template.tex}
+\title{A Few Notes on Kepler Triangles}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
-\date{Initial Version: October 8, 2022 \\ 
+\date{Initial Version: May 10, 2022 \\ 
 	 {\vspace{1.00mm} \normalsize Last Update: \today}}
 %
 %
@@ -154,85 +154,75 @@
 %
 \section{Introduction}
 \label{section:introduction}
+A Kepler triangle is named after Johannes Kepler
+\cite{wikipedia:johannes_kepler}, is a right triangle whose sides
+are related by a geometric progression \cite{wiki:geometric_series}.
+
+\bigskip
+{\setstretch{1.15}
+\noindent
+If the common ratio of this geometric progression is $\sqrt{x}$,
+then the sides are in the ratio $1 : \sqrt{x} : x$, so we have $1
++x = x^{2}$, or $x^{2}-x-1 = 0$. This interesting triangle involves
+the golden ratio $\phi = \frac{1+\sqrt{5}}{2}$
+\cite{wiki:golden_ratio}.
+
+\bigskip
+\noindent
+Why? Well, for this triangle we can conclude that $x = \phi$,
+since $x^2 -x -1$ is $\phi$'s minimal polynomial and thus has
+$\phi$ as it's positive root \cite{wiki:golden_ratio}. So $x =
+\phi = \frac{1+\sqrt{5}}{2}$, and the sides of the Kepler
+triangle are in the ratio $1 : \sqrt{\phi} : \phi \approx 1 :
+1.272 : 1.618$.  \par}
+
+
+\bigskip
+\noindent
+Interestingly, triangle with sides $k$, $k\sqrt{\phi}$, and
+$k\phi$ (for $k > 0$) is also a Kepler triangle since, by the
+Pythagorean theorem \cite{wiki:trig} we know that
+
+\vspace{1.75em}
+
+\begin{math}
+\begin{array}{rcll} 
+(k\phi)^{2} 
+&=& (k\sqrt{\phi})^{2} + k^{2}
+		&\hspace{1.25em} \mathrel{\#} \text{by the Pythagorean theorem} \\
+[8pt]
+&\Rightarrow& (k\phi)^{2}- (k\sqrt{\phi})^{2} - k^{2} = 0 
+		&\hspace{1.25em} \mathrel{\#} \text{move everything to the left side} \\
+[8pt]
+&\Rightarrow& k^{2}({\phi}^{2} - \phi - 1) = 0 
+		&\hspace{1.25em} \mathrel{\#} \text{factor out $k^2$} \\
+[8pt]
+&\Rightarrow& {\phi}^{2} - \phi - 1 = 0 
+		&\hspace{1.25em} \mathrel{\#} \text{divide though by $k^2$}
+\end{array}
+\end{math} 
+
+\bigskip
+\noindent
+And again, we know that the the polynomial ${\phi}^{2} - \phi -
+1$ has positive root $\phi = \frac{1+\sqrt{5}}{2}$. This triangle
+is shown in Figure \ref{figure:kepler_triangle}.
+
+\bigskip
 %
+%	Draw the function composition triangle
 %
-%	show a derivation/proof
-%
-% \begin{equation*}
-% \begin{array}{llll}
-% x
-% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
-% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
-% [10pt]
-% \end{array}
-% \end{equation*}
-%
-%
-%
-%	include an image
-%
-% \begin{figure}
-% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
-% \caption{X}
-% \label{fig:X}
-% \end{figure}
-%
-%	How to put a box around a figure
-%
-% \begin{figure}[H]
-%  \centering
-%   \fbox{\begin{minipage}{34em}
-%    \begin{equation*}
-%     \begin{array}{rlrlrlr}
-%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
-%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
-%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
-%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
-%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
-%     \end{array}
-%    \end{equation*}
-%  \end{minipage}}
-%  \caption{A Few Example Kaprekar Numbers}
-%\end{figure}
-%
-%	
-%	How to wrap (and resize) your tikzpicture in a figure
-%
-% \begin{figure}[H]
-% \centering
-%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
-%    \begin{tikzpicture} 
-%     .....
-%    \end{tikzpicture}					% end tikzpicture
-%  }									% end resizebox
-% \caption{Some Figure}
-% \label{fig:some_figure}
-% \end{figure}
-%
-%	Build a figure that is resizable and framed with \fbox
-% 
-%                                                               % start building pascal's triangle
-%       Parameters and settings                                 % start with the parameters and settings
-%                                                               %
-% \def \nrows {14}                                              % number of rows in the triangle
-% \setlength {\fboxsep} {0.75em}								% get more space between fcolorbox and content
-% \setlength {\fboxrule}{1.25pt}								% change fcolorbox line thickness
-%                                                               %
-%       Build the figure                                        % build the figure
-%                                                               %
-% \begin{figure}[H]                                             % begin the figure
-%   \centering                                                  % center everything
-%   \fcolorbox{black}{white} {									% put a color box around the figure
-%     \resizebox{0.75 \textwidth}{!} {                          % resize the figure if you want
-%     															%
-%     <whatever>												% whatever goes in the figure
-%																%
-%      }                                                        % end resizebox
-%   }                                                           % end fbox
-%  \caption{X}                                     		   		% caption the figure
-%   \label{fig:X}                                  			    % label the figure
-% \end{figure}                                                  % end figure
-% 
+\begin{figure}[H]								% build the figure
+  \centering									% center everything
+     \begin{tikzcd} [column sep={70pt},
+                     row    sep={60pt}]
+        A \arrow[d,-,swap,"k"] \arrow[rd,-,"k\phi"]  \\
+        B \arrow[r,-,swap,"k\sqrt{\phi}"]& C
+    \end{tikzcd}
+  \caption{Kepler triangle with sides $k$, $k\sqrt{\phi}$, and $k\phi$}
+  \label{figure:kepler_triangle}
+\end{figure}
+
 %
 %
 %
@@ -247,7 +237,7 @@
 %	LaTeX source on overleaf.com
 %
 \section*{\LaTeX \hspace{0.025 mm} Source}
-\url{https://www.overleaf.com/read/jyppzhgdtrvg}
+\url{https://www.overleaf.com/read/btgfkkdzktbt#adfb58}
 %
 %	get a bibliography
 %
@@ -255,7 +245,7 @@
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
 \bibliographystyle{plain}
-\bibliography{qc,ml}
+\bibliography{qc}
 %
 %
 %
