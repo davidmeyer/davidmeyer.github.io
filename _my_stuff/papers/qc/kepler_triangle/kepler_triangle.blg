@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: kepler_triangle.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 4 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            518 strings with 4754 characters,
-and the built_in function-call counts, 877 in all, are:
-= -- 85
-> -- 28
+            521 strings with 4918 characters,
+and the built_in function-call counts, 1094 in all, are:
+= -- 107
+> -- 35
 < -- 0
-+ -- 12
-- -- 8
-* -- 26
-:= -- 154
-add.period$ -- 15
-call.type$ -- 4
-change.case$ -- 16
++ -- 15
+- -- 10
+* -- 32
+:= -- 191
+add.period$ -- 19
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 28
-empty$ -- 89
-format.name$ -- 8
-if$ -- 190
+cite$ -- 5
+duplicate$ -- 35
+empty$ -- 111
+format.name$ -- 10
+if$ -- 238
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 5
 missing$ -- 0
-newline$ -- 26
-num.names$ -- 8
-pop$ -- 33
+newline$ -- 32
+num.names$ -- 10
+pop$ -- 41
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 15
 quote$ -- 0
-skip$ -- 25
+skip$ -- 31
 stack$ -- 0
-substring$ -- 20
-swap$ -- 4
+substring$ -- 25
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 20
 warning$ -- 0
-while$ -- 8
-width$ -- 5
-write$ -- 48
+while$ -- 10
+width$ -- 6
+write$ -- 60
