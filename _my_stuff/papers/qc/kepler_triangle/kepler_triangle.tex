@@ -168,9 +168,11 @@ astronomer and mathematician Johannes Kepler
 \noindent
 Note that if the common ratio of a geometric progression is
 $\sqrt{x}$, then the sides of the triangle are in the ratio 
-$1 : \sqrt{x} : x$. This ratio can be represented by the 
-polynomial $1 +x = x^{2}$, or $x^{2}-x-1 = 0$. Here we can 
-conclude that $x = \phi$. This is because $x^2 -x -1$ is 
+$1 : \sqrt{x} : x$. We know from the Pythagorean theorem
+\cite{wiki:trig} that this ratio represents the 
+polynomial $1 +x = x^{2}$ (since for a right triangle we have
+$a^{2} + b^{2} = c^{2}$ ), or $x^{2}-x-1 = 0$. Here we can 
+conclude that $x = \phi$ because $x^2 -x -1$ is 
 $\phi$'s minimal polynomial and thus has $\phi$ as it's 
 positive root \cite{wiki:golden_ratio}. So $x = \phi = 
 \frac{1+\sqrt{5}}{2}$, and the sides of the Kepler triangle 
@@ -183,13 +185,12 @@ are in the ratio $1:\sqrt{\phi}:\phi \approx 1:1.272 : 1.618$.
 Interestingly, a triangle with sides $k$, $k\sqrt{x}$, and
 $kx$ is also a Kepler triangle. This is because the ratio 
 of the sides of this triangle is $k:k\sqrt{x}:kx$, and if we 
-divide through by $k$ we see that the ratio of this 
+divide each side by $k$ we see that the ratio of this 
 triangle's sides is $1:\sqrt{x}:x$. $\blacksquare$
 
 \bigskip
 \noindent
-We can also see this using the Pythagorean theorem \cite{wiki:trig}. 
-Consider following triangle:
+We can also see this by considering following triangle:
 
 \medskip
 %
@@ -197,8 +198,8 @@ Consider following triangle:
 %
 \begin{figure}[H]								% build the figure
   \centering									% center everything
-     \begin{tikzcd} [column sep={80pt},
-                     row    sep={60pt}]
+     \begin{tikzcd} [column sep={70pt},
+                     row    sep={50pt}]
         A \arrow[d,-,swap,"k"] \arrow[rd,-,"kx"]  \\
         B \arrow[r,-,swap,"k\sqrt{x}"] & C
     \end{tikzcd}
