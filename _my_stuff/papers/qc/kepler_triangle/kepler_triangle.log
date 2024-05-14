@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  13 MAY 2024 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 MAY 2024 06:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1480,31 +1480,30 @@ Package rerunfilecheck Info: File `kepler_triangle.out' has not changed.
 (rerunfilecheck)             Checksum: B6CF35FE23C3344EEE12E1A8BA1F6AEB;201.
  ) 
 Here is how much of TeX's memory you used:
- 53476 strings out of 478994
- 1352673 string characters out of 5858184
- 1980234 words of memory out of 5000000
- 70127 multiletter control sequences out of 15000+600000
+ 53444 strings out of 478994
+ 1351613 string characters out of 5858184
+ 1978233 words of memory out of 5000000
+ 70095 multiletter control sequences out of 15000+600000
  414132 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,16n,131p,755b,1101s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,13n,131p,755b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on kepler_triangle.pdf (2 pages, 149477 bytes).
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on kepler_triangle.pdf (2 pages, 141111 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 

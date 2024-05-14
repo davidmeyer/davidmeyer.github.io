@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  6 MAY 2024 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 MAY 2024 06:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1596,11 +1596,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
  [2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 531.
+(Font)              <20.74> on input line 552.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 531.
+(Font)              <14.4> on input line 552.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 531.
+(Font)              <12> on input line 552.
  [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
@@ -1612,7 +1612,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [7]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 924.
+LaTeX Font Warning: Command \small invalid in math mode on input line 945.
 
 [8] [9] [10] [11] (./figures.1.aux)
 
@@ -1624,7 +1624,7 @@ Package rerunfilecheck Info: File `figures.1.out' has not changed.
 Here is how much of TeX's memory you used:
  48043 strings out of 478994
  1116795 string characters out of 5858184
- 1558116 words of memory out of 5000000
+ 1555122 words of memory out of 5000000
  64505 multiletter control sequences out of 15000+600000
  528484 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1650,7 +1650,7 @@ ublic/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on figures.1.pdf (11 pages, 241103 bytes).
+Output written on figures.1.pdf (11 pages, 240680 bytes).
 PDF statistics:
  192 PDF objects out of 1000 (max. 8388607)
  141 compressed objects within 2 object streams

@@ -80,6 +80,27 @@
 
 \begin{document}
 
+\begin{tikzpicture}
+    % Define named points for the vertices of the right triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (4,0);
+    \coordinate (C) at (0,3);
+    
+    % Draw the right triangle using the named points
+    \draw (A) -- (B) -- (C) -- cycle;
+    
+    \draw [draw=none] (A) -- (B) node [midway,below,yshift=-0.1mm] {$k\sqrt{x}$};
+    \draw [draw=none] (A) -- (C) node [midway,left] {$k$};
+    \draw [draw=none] (B) -- (C) node [midway,right, xshift=0.25cm] {$kx$};
+
+
+    
+    % Label the vertices
+%    \node[below left] at (A) {A};
+%    \node[below right] at (B) {B};
+%    \node[above left] at (C) {C};
+\end{tikzpicture}
+
 
 \begin{center}
   \begin{tikzcd}
