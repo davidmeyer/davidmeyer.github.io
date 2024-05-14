@@ -194,7 +194,7 @@ We can also see this by considering following triangle:
 \begin{figure}[H]                                                               % wrap it in a figure
   \centering                                                                    % center everything
   \resizebox{0.25 \textwidth}{!} {                                              % resize the figure if you like
-      \begin{tikzpicture}
+      \begin{tikzpicture} 
 %
 %       Define named points for the vertices of the right
 %       triangle
@@ -203,9 +203,10 @@ We can also see this by considering following triangle:
         \coordinate (B) at (4,0);
         \coordinate (C) at (0,3);
 %    
-%       Draw the right triangle using the named points
+%       Draw the right triangle using the named points, adjusting
+%		the line width
 %
-        \draw (A) -- (B) -- (C) -- cycle;
+        \draw [line width=0.65pt] (A) -- (B) -- (C) -- cycle;
 %
 %       Label the edges
 %
