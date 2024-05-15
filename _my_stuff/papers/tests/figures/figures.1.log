@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 MAY 2024 07:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 MAY 2024 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1598,50 +1598,17 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-\pgf@layerbox@back=\box101
-\pgf@layerboxsaved@back=\box102
-\pgf@layerbox@front=\box103
-\pgf@layerboxsaved@front=\box104
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 94.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-LaTeX Font Info:    Calculating math sizes for size <4.26773> on input line 103
-.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <4.26773> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <2.9874> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <2.13387> on input line 103.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.26773> not available
-(Font)              size <5> substituted on input line 103.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <2.9874> not available
-(Font)              size <5> substituted on input line 103.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <2.13387> not available
-(Font)              size <5> substituted on input line 103.
-
-Missing character: There is no ; in font nullfont!
-[1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Missing character: There is no ; in font nullfont!
-
-[2]
+ [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 1.
  [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 579.
@@ -1652,7 +1619,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [6]
+
+[6]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1663,28 +1631,24 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 972.
 
 [8] [9] [10] [11] (./figures.1.aux)
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 2.86613pt have occurred.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `figures.1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49048 strings out of 478994
- 1134861 string characters out of 5858184
- 1577011 words of memory out of 5000000
- 65493 multiletter control sequences out of 15000+600000
- 552561 words of font info for 154 fonts, out of 8000000 for 9000
+ 48551 strings out of 478994
+ 1124255 string characters out of 5858184
+ 1571217 words of memory out of 5000000
+ 64996 multiletter control sequences out of 15000+600000
+ 532747 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,17n,117p,806b,1178s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-21/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/
-dvips/lm/lm-mathsy.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
+ 113i,17n,117p,806b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
+e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/
+enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
@@ -1695,17 +1659,16 @@ ublic/lm/lmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lm
 mi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lms
-y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.1.pdf (11 pages, 267317 bytes).
+texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/lm/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/l
+msy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on figures.1.pdf (11 pages, 257928 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
+ 196 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
  32 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

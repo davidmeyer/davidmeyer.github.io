@@ -82,7 +82,29 @@
 
 \begin{document}
 
+%
+%	Use shift left and shift right to separate the 
+%	two arrows between A and B
+%
+\begin{tikzcd}[column sep={30pt}]
+A \arrow[r,"f_{1}",shift left] \arrow[r,"f_{2}",swap,shift right] & B \arrow[r,"g"] & C
+\end{tikzcd}
 
+\bigskip
+\noindent
+For sets a mapping $g:B \to C$ is said to be \emph{injective}
+if for $b_{1}, b_{2} \in B$ we have $g(b_{1}) = g(b_{2}) \Rightarrow b_{1} = b_{2}$.
+
+\bigskip
+\noindent
+Not a good definition because it looks inside the objects. Rather, in category
+theory we define a more general concept, \emph{monomorphism}. A morphism $g:B \to C$
+is said to be a monomorphism if for all $f_{i}: A \to B$ we have $gf_{1} 
+= gf_{2} \Rightarrow f_{1} = f_{2}$.
+
+
+
+\vspace{3.0em}
 
 
 \begin{tikzpicture}

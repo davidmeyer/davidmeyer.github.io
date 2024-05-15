@@ -364,6 +364,87 @@ isomorphisms for $\mathcal{C}$ to be a monoid.
 \subsubsection{Monomorphisms}
 \label{subsubsection:monomorphisms}
 
+\medskip
+Before looking at the definition of monomorphism, it is useful to
+look at the definition of injectivity for sets:
+
+\medskip
+\begin{definition} {\bf Injectivity}: A function $g:B \to C$ is said to be 
+\emph{injective} if, for all $b_{1}, b_{2} \in B$ we have
+$g(b_{1}) = g(b_{2}) \Rightarrow b_{1} = b_{2}$.
+\label{definition:injectivity}
+\end{definition}
+
+\smallskip
+\noindent
+This standard definition of an injective mapping (aka 1:1
+mapping) is not suitable for category theory because, among other
+things, it looks inside the objects. This is an issue because
+objects in category theory have "nothing inside them", that is,
+they have no internal structure. In the case of the definition of
+injectivity, $b_{1}$ and $b_{2}$ are "inside" the object $B$.
+
+\bigskip
+\noindent
+For functions between sets, injectivity is an important
+concept. For maps in an arbitrary category, injectivity might not
+make sense. However, but there is a concept that plays a similar
+role. So how can we define a similar but more general concept
+using only morphisms? Consider the following diagram:
+
+
+%
+%	Use shift left and shift right to separate the 
+%	two arrows between A and B
+%
+\begin{center}
+  \begin{tikzcd}[column sep={30pt}]
+     A \arrow[r,"f_{1}",shift left] \arrow[r,"f_{2}",swap,shift right] &
+     B \arrow[r,"g"] & 
+     C 
+  \end{tikzcd}
+\end{center}
+
+
+\noindent
+$g$ is called a monomorphism if it adheres to Definition 
+\ref{definition:monomorphism}:
+
+
+\begin{definition} {\bf Monomorphism}: A morphism $g:B \to C$ is called a 
+\emph{monomorphism} if, for all $f_{i}: A \to B$ we have $gf_{1} = gf_{2} 
+\Rightarrow f_{1} = f_{2}$. 
+\label{definition:monomorphism}
+\end{definition}
+
+\medskip
+\noindent
+Although monomorphism is defined solely in terms of morphisms (and not elements),
+since $g$ is a monomorphism both $f_{1}$ and $f_{2}$ must map to map 
+elements in $A$ to the same element in $B$. This suggests that monomorphism is at least 
+in part about retaining uniqueness (or non-uniqueness) in the domain in the codomain. We can see this since we know by 
+the law of contraposition \cite{wikipedia:contraposition} that
+  
+\begin{equation}
+gf_{1} = gf_{2} \Rightarrow f_{1} = f_{2}  \Rightarrow f_{1} \neq f_{2}
+\Rightarrow gf_{1} \neq gf_{2} 
+\label{equation:contraposition}
+\end{equation}
+
+\bigskip
+\noindent
+One way to interpret Equation (\ref{equation:contraposition}) is
+that different elements in the domain will be different in the
+codomain. That is, the uniqueness of $f_{1}$ and $f_{2}$ is
+preserved by $g$. The same kind of argument can be made for
+injectivity.
+
+\bigskip
+\noindent
+Finally, note that while injectivity seems to be the same thing
+as monomorphism (and injective functions are monomorphisms in {\bf
+Set}), monomorphism and injectivity are not necessarily the same.
+
 \subsubsection{Epimorphisms}
 \label{subsubsection:epimorphisms}
 
