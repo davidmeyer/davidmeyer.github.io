@@ -57,6 +57,7 @@
 \usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
 \usepackage{multirow}                                                   % \multirow and \multicolumn
+\usepackage{enumitem}
 %
 %	lualatex
 %
@@ -156,96 +157,87 @@
 %
 \section{Introduction}
 \label{section:introduction}
+A category is a collection of objects together with a collection
+of composable morphisms between these objects.  Note here that we
+say "collection of objects" to sidestep the following
+set-theoretic issue: if we instead used "the set of objects" then
+in the category of sets the set of objects would we be the set of
+all sets, which we know by Russell's Paradox does not exist
+\cite{russells_paradox}. As a result we use the idea of a
+collection from ZF set theory \cite{zf_set_theory}.
 
-\subsection{What is a Category?}
-\label{subsection:what_is_a_category}
-\cite{intro_category_theory_notes}
+\bigskip
+\noindent
+In any event, a more formal definition of a category is: 
 
+\bigskip
+\begin{definition} {\bf Category}: 
+In category theory, a category is defined by a set of axioms that
+describe its fundamental properties and behaviors. These are the
+components of a category:
+
+\begin{enumerate} [label=(\roman*).]
+
+\item {\bf Objects}: A category consists of a collection of
+objects. These objects can be anything: sets, groups, spaces,
+etc. For example, in the category of sets, the objects are sets
+themselves.
+
+\noindent
+The collection of objects in a category $\mathcal{C}$ is denoted 
+simply as $\mathcal{C}$, or sometimes $\operatorname{Ob}(\mathcal{C})$.
+Note that we refer to a generic category as $\mathcal{C}$, while bold
+for is used to indicate a specific category (for example, the category 
+of sets is called {\bf Set}).  
+
+\item {\bf Morphisms (Arrows)}: Between any two objects in a
+category, there exists a set of morphisms (also called arrows).
+Morphisms can represent various mathematical structures like
+functions, homomorphisms, transformations, etc.
+
+{\setstretch{1.25}
+\noindent
+The collection of morphisms from $A$ to $B$ in $\mathcal{C}$ is
+denoted by $\mathcal{C}(A,B)$, or sometimes
+$\operatorname{Hom}_{\mathcal{C}}(A,B)$. For $A,B \in
+\mathcal{C}$, a morphism $f$ from $A$ to $B$ is denoted as $f \in
+\mathcal{C}(A,B)$, $f: A \to B$, or sometimes $A \xrightarrow{f}
+B$. The latter form is used in commutative diagrams; see Section
+\ref{subsubsection:diagrams}. All of these forms represent a
+morphism $f$ with domain $A$ (sometimes denoted at
+$\operatorname{dom}(f)$) and codomain $B$ (sometimes denoted as
+$\operatorname{codom}(f)$). \par}
+ 
+\item {\bf Identity Morphisms}: For each object $A$ in the
+category, there exists an identity morphism denoted as
+$\text{id}_A$ or simply $1_A$. The identity morphism
+$\text{id}_A: A \to A$ is the morphism that "does nothing" when
+composed with other morphisms. It serves as an identity element
+in the category.
+ 
+\item {\bf Composition of Morphisms}: Morphisms in a category can
+be composed. If $f: A \to B$ and $g: B \to C$ are morphisms in
+the category, then there exists a composite morphism denoted as
+$g \circ f: A \to C$, which represents the composition of $f$
+followed by $g$.
+ 
+\item {\bf Associativity of Composition}: Composition of
+morphisms is associative. That is, if $f: A \to B$, $g: B \to C$,
+and $h: C \to D$ are morphisms in the category, then $h \circ (g
+\circ f) = (h \circ g) \circ f$.
+\end{enumerate}
+
+\medskip
+\noindent
+These axioms capture the essential structure of a category and
+form the basis for studying relationships and structures across
+various mathematical domains using category theory.
+
+\label{definition:category}
+\end{definition}
 
 \subsection{Morphisms}
 \label{subsection:morphisms}
-
-\subsubsection{A Few Algebraic Structures}
-\label{subsubsection:algebraic_structures}
-
-\begin{center}
-\begin{table}[H]
-\scalebox{0.75}{
-\begin{tabular}{l | c | c | c | c |  c | c}
-{{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
-                                & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
-                                & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
-\hline\hline					% separate column names from rows
-Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
-Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup plus identity $\in S$ \\
-Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid plus inverse $\in S$ \\
-Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
-$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
-$\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
-$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
-                                             & Abelian group under $+$ and $*$  \\
-Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
-                                             & Abelian group under $+$, scalars $\in$ Field \\
-Module                          & \checkmark & \checkmark $(+,*)$	   & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
-                                             & Abelian group under $+$, scalars $\in$ Ring
-
-\end{tabular}}
-\caption{A Few Algebraic Structures and Their Features}
-\label{table:algebraic_structures}
-\end{table}
-\end{center}
-
-\noindent
-where
-
-\begin{center}
-\begin{enumerate}
-\item \textbf{ABO:} Associative Binary Operation 
-\begin{itemize}
-\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
-      for all $x, y, z \in S$
-\item $x \circ y \in S$ for all $x, y \in S$
-      ($S$ is closed under $\circ$)
-\end{itemize}
-
-\item \textbf{Distributive:} Distributive Property 
-\begin{itemize}
-\item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
-                                   all $x, y, z \in S$
-\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
-                                   for all $x, y, z \in S$
-\item $*$ is \emph{distributive}   over $+$ if $*$ is left and 
-                                   right distributive
-\end{itemize}
-
-\item \textbf{Commutative:} Commutative Property
-\begin{itemize}
-\item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
-\end{itemize}
-\end{enumerate}
-\end{center}
-
-
-
-
-\subsubsection{Notation}
-\label{subsubsection:notation}
-
-\begin{definition} 
-\label{definition:morphism}
-{\setstretch{1.25} {\bf Morphism}: A morphism in a category
-$\mathcal{C}$ is a mathematical structure that connects two
-objects $A,B \in \mathcal{C}$.  The set of morphisms from $A$ to
-$B$ in $\mathcal{C}$ is denoted by $\mathcal{C}(A,B)$. For $A,B
-\in \mathcal{C}$, a morphism $f$ from $A$ to $B$ is denoted as $f
-\in \mathcal{C}(A,B)$, $f: A \to B$, or sometimes $A
-\xrightarrow{f} B$. This latter form is used in commutative
-diagrams; see Section \ref{subsubsection:diagrams}.  All of these
-forms represent a morphism $f$ with domain $A$ (sometimes denoted
-at $\operatorname{dom}(f)$) and codomain $B$ (sometimes denoted
-as $\operatorname{codom}(f)$). Morphisms are also frequently
-referred to as "arrows".  \par}
-\end{definition}
 
 \subsubsection{Diagrams}
 \label{subsubsection:diagrams}
@@ -277,14 +269,9 @@ Well, first consider a category $\mathcal{C}$ with just one
 object. Call that object $A$. That is, the class
 $\operatorname{Ob}(\mathcal{C})$ contains only one object,
 namely, $A$. Since $\mathcal{C}$ only has one object all of
-$\mathcal{C}$'s morphisms are in $\operatorname{Hom}_{\mathcal{C}}
-(A,A)$.
+$\mathcal{C}$'s morphisms are in
+$\operatorname{Hom}_{\mathcal{C}} (A,A)$.
 
-\bigskip
-\noindent
-Note that I'll abbreviate $\operatorname{Ob}(\mathcal{C})$ 
-as $\mathcal{C}$ and  $\operatorname{Hom}_{\mathcal{C}}(A,B)$ 
-as $\mathcal{C}(A,B)$.
 
 \bigskip
 \noindent
@@ -351,14 +338,11 @@ all of the morphisms are invertible and there is only one object.
 
 \bigskip
 \noindent
-By a similar argument, a category $\mathcal{C}$ with one object, 
-call it $A$, is the same thing as a monoid. This is because unlike 
-a group, every element of a monoid is not required to have an inverse. 
-Hence the morphisms in $\mathcal{C}(A,A)$ are not required to be 
-isomorphisms for $\mathcal{C}$ to be a monoid.
-
-
-\newpage
+By a similar argument, a category $\mathcal{C}$ with one object,
+call it $A$, is the same thing as a monoid. This is because
+unlike a group, every element of a monoid is not required to have
+an inverse.  Hence the morphisms in $\mathcal{C}(A,A)$ are not
+required to be isomorphisms for $\mathcal{C}$ to be a monoid.
 
 \subsubsection{Monomorphisms}
 \label{subsubsection:monomorphisms}
@@ -369,7 +353,7 @@ look at the definition of injectivity for sets:
 
 \medskip
 \begin{definition} {\bf Injectivity}: A function $f:B \to C$ is 
-said to be \emph{injective} if for all $b_{1}, b_{2} \in B$ we 
+said to be injective if for all $b_{1}, b_{2} \in B$ we 
 have 
 
 \begin{equation*}
@@ -384,8 +368,8 @@ This standard definition of an injective mapping (aka 1:1
 mapping) is not suitable for category theory because, among other
 things, it looks inside the objects. This is an issue because
 objects in category theory have "nothing inside them", that is,
-they have no internal structure. In the case of the Definition 
-\ref{definition:injectivity}, $b_{1}$ and $b_{2}$ are "inside" 
+they have no internal structure. In the case of the Definition
+\ref{definition:injectivity}, $b_{1}$ and $b_{2}$ are "inside"
 the object $B$.
 
 \bigskip
@@ -419,7 +403,7 @@ $f$ is called a monomorphism if it adheres to Definition
 \begin{definition} {\bf Monomorphism}: Consider a category
 $\mathcal{C}$ with morphisms $g \in \mathcal{C}(A,B)$ and
 $f \in \mathcal{C}(B,C)$. Then a morphism $f \in \mathcal{C}(B,C)$ 
-is called a \emph{monomorphism} if for all $g_{1},g_{2} \in 
+is called a monomorphism if for all $g_{1},g_{2} \in 
 \mathcal{C}(A,B)$ we have  
 
 
@@ -476,7 +460,6 @@ analogue of injectivity.
 
 \subsubsection{Functors}
 \label{subsubsection:functors}
-
 
 \subsection{Natural Transformations}
 \label{subsection:naturl_transformations}
@@ -580,7 +563,64 @@ comments on earlier versions of this document.
 %
 %
 %
-% \section*{Appendix A}
+\section*{Appendix A: A Few Algebraic Structures}
+
+\begin{center}
+\begin{table}[H]
+\scalebox{0.75}{
+\begin{tabular}{l | c | c | c | c |  c | c}
+{{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
+                                & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
+                                & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
+\hline\hline					% separate column names from rows
+Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup plus identity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid plus inverse $\in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
+                                             & Abelian group under $+$ and $*$  \\
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Field \\
+Module                          & \checkmark & \checkmark $(+,*)$	   & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Ring
+
+\end{tabular}}
+\caption{A Few Algebraic Structures and Their Features}
+\label{table:algebraic_structures}
+\end{table}
+\end{center}
+
+\noindent
+where
+
+\begin{center}
+\begin{enumerate}
+\item \textbf{ABO:} Associative Binary Operation 
+\begin{itemize}
+\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
+      for all $x, y, z \in S$
+\item $x \circ y \in S$ for all $x, y \in S$
+      ($S$ is closed under $\circ$)
+\end{itemize}
+
+\item \textbf{Distributive:} Distributive Property 
+\begin{itemize}
+\item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
+                                   all $x, y, z \in S$
+\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
+                                   for all $x, y, z \in S$
+\item $*$ is \emph{distributive}   over $+$ if $*$ is left and 
+                                   right distributive
+\end{itemize}
+
+\item \textbf{Commutative:} Commutative Property
+\begin{itemize}
+\item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
+\end{itemize}
+\end{enumerate}
+\end{center}
 %
 %	done
 %
