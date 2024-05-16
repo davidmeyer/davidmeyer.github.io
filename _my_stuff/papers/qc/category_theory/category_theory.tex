@@ -10,7 +10,7 @@
 %
 %   get various packages
 %
-\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\usepackage[margin=0.90in]{geometry}                                     % adjust margins
 \geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{setspace}                                                   % need this for \setstrech{...}
@@ -219,7 +219,8 @@ in the category.
 be composed. If $f: A \to B$ and $g: B \to C$ are morphisms in
 the category, then there exists a composite morphism denoted as
 $g \circ f: A \to C$, which represents the composition of $f$
-followed by $g$.
+followed by $g$. Said another way: a category $\mathcal{C}$
+is closed under $\circ$.
  
 \item {\bf Associativity of Composition}: Composition of
 morphisms is associative. That is, if $f: A \to B$, $g: B \to C$,
@@ -252,9 +253,8 @@ various mathematical domains using category theory.
    \end{tikzcd}
 \end{center}
 
-\bigskip
-\newpage
-\noindent
+
+\subsubsection{Aside: groups, monoids, and categories}
 Here's a crazy (and beautiful) fact: A group is essentially the
 same thing as a category that has only one object and in which
 all the morphisms are isomorphisms.
@@ -564,7 +564,6 @@ comments on earlier versions of this document.
 %
 %
 \section*{Appendix A: A Few Algebraic Structures}
-
 \begin{center}
 \begin{table}[H]
 \scalebox{0.75}{
