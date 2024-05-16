@@ -369,7 +369,7 @@ look at the definition of injectivity for sets:
 
 \medskip
 \begin{definition} {\bf Injectivity}: A function $f:B \to C$ is 
-said to be \emph{injective} if, for all $b_{1}, b_{2} \in B$ we 
+said to be \emph{injective} if for all $b_{1}, b_{2} \in B$ we 
 have 
 
 \begin{equation*}
@@ -411,10 +411,11 @@ using only morphisms? Consider the following diagram:
 
 \smallskip
 \noindent
+Since this diagram commutes we know that $f \circ g_{1} = f \circ g_{2}$.
 $f$ is called a monomorphism if it adheres to Definition 
-\ref{definition:monomorphism}:
+\ref{definition:monomorphism}.
 
-
+\bigskip
 \begin{definition} {\bf Monomorphism}: Consider a category
 $\mathcal{C}$ with morphisms $g \in \mathcal{C}(A,B)$ and
 $f \in \mathcal{C}(B,C)$. Then a morphism $f \in \mathcal{C}(B,C)$ 
@@ -426,18 +427,23 @@ is called a \emph{monomorphism} if for all $g_{1},g_{2} \in
 f \circ g_{1} = f \circ g_{2} \Rightarrow g_{1} = g_{2} 
 \label{equation:monomorphism}
 \end{equation}
+
+\medskip
+\noindent
+This property is also called left cancellation.
 \label{definition:monomorphism}
 \end{definition}
 
 
-\vspace{-1.20em}
+\medskip
 \noindent
 Although monomorphism is defined solely in terms of morphisms
-(and not elements), since $f$ is a monomorphism both $g_{1}$ and
-$g_{2}$ must map to map elements in $A$ to the same element in
-$B$. This suggests that monomorphism is at least in part about
-retaining uniqueness (or the lack thereof) in the domain in the
-codomain.  We can see this since we know by Equation
+(and not elements), since the above diagram commutes ($f \circ
+g_{1} = f \circ g_{2}$) both $g_{1}$ and $g_{2}$ must map to
+elements in $A$ to the same element in $B$. This suggests that
+monomorphism is at least in part about retaining uniqueness (or
+the lack thereof) in the domain in the codomain (the same is true
+for injectivity).  We can see this since we know by Equation
 (\ref{equation:monomorphism}) and the law of contraposition
 \cite{wikipedia:contraposition} that
   
@@ -457,10 +463,10 @@ injectivity.
 \bigskip
 \noindent
 Finally, note that while injectivity seems to be the same thing
-as monomorphism (and injective functions are monomorphisms in {\bf
-Set}), monomorphism and injectivity are not necessarily the same.
-Said another way, monomorphism is the generalized-element analogue
-of injectivity.
+as monomorphism (and injective functions are monomorphisms in
+{\bf Set}), monomorphism and injectivity are not necessarily the
+same.  Said another way, monomorphism is the generalized-element
+analogue of injectivity.
 
 \subsubsection{Epimorphisms}
 \label{subsubsection:epimorphisms}
