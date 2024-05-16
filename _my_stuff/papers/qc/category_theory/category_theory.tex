@@ -57,7 +57,6 @@
 \usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
 \usepackage{multirow}                                                   % \multirow and \multicolumn
-\usepackage[iso]{datetime}												% get iso date format in \date{}
 %
 %	lualatex
 %
@@ -145,7 +144,7 @@
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
 \date{Last Update: \today \\
-	 {\vspace{1.00mm} \small Initial Version: 2024-04-24}}
+	 {\vspace{1.00mm} \small Initial Version: April 4, 2024}}
 %
 %
 %
@@ -400,7 +399,7 @@ using only morphisms? Consider the following diagram:
 \begin{center}
   \begin{tikzcd}[column sep={30pt}]
      A \arrow[r,"f_{1}",shift left] \arrow[r,"f_{2}",swap,shift right] &
-     B \arrow[r,"g"] & 
+     B \arrow[r,"g"]                                                   & 
      C 
   \end{tikzcd}
 \end{center}
