@@ -57,7 +57,7 @@
 \usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
 \usepackage{multirow}                                                   % \multirow and \multicolumn
-\usepackage{enumitem}													% change bullets in \begin{enumerate}
+\usepackage{enumitem}                                                   % change bullets in \begin{enumerate}
 %
 %	lualatex
 %
@@ -157,16 +157,16 @@
 %
 \section{Introduction}
 \label{section:introduction}
-A category is a collection of objects together with 
-a collection of composable morphisms between these objects.  
-Category theorists use the language "collection of objects" 
-or "collection of morphisms" to sidestep some set-theoretic 
-issues, including: if instead "the set of objects" was used 
-then in the category of sets the set of objects would we be 
-the set of all sets, which we know by Russell's Paradox does 
-not exist \cite{russells_paradox}. As a result the vague word 
-"collection" might be interpreted as meaning "class" (in the 
-ZF set theory sense \cite{zf_set_theory}). 
+A category is a collection of objects together with a collection
+of composable morphisms between these objects.  Category
+theorists use the language "collection of objects" or "collection
+of morphisms" to sidestep some set-theoretic issues, including:
+if instead "the set of objects" was used then in the category of
+sets the set of objects would we be the set of all sets, which we
+know by Russell's Paradox does not exist
+\cite{russells_paradox}. As a result the vague word "collection"
+might be interpreted as meaning "class" (in the ZF set theory
+sense \cite{zf_set_theory}).
 
 
 \bigskip
@@ -184,20 +184,21 @@ components of a category:
 \item {\bf Objects}: A category consists of a collection of
 objects. These objects can be anything: sets, groups, spaces,
 etc. For example, in the category of sets, the objects are sets
-themselves. If the collection of objects is a set the category
-is called a "small" category.
+themselves. If the collection of objects in a category is a set 
+then the category is called a "small" category.
 
 \noindent
-The collection of objects in a category $\mathcal{C}$ is denoted 
-simply as $\mathcal{C}$, or sometimes $\operatorname{Ob}(\mathcal{C})$.
-Note that we refer to a generic category as $\mathcal{C}$, while bold
-font is used to indicate a specific category (for example, the category 
-of sets is called {\bf Set}). 
+The collection of objects in a category $\mathcal{C}$ is denoted
+simply as $\mathcal{C}$, or sometimes
+$\operatorname{Ob}(\mathcal{C})$.  Note that we refer to a
+generic category as $\mathcal{C}$, while bold font is used to
+indicate a specific category. For example, the category of sets
+is called {\bf Set}.
 
 \item {\bf Morphisms (Arrows)}: Between every two objects in a
-category, there exists a collection of morphisms (also called 
-maps or arrows). Morphisms can represent various mathematical 
-structures like functions, homomorphisms, transformations, etc. 
+category, there exists a collection of morphisms (also called
+maps or arrows). Morphisms can represent various mathematical
+structures like functions, homomorphisms, transformations, etc.
 
 {\setstretch{1.25}
 \noindent
@@ -214,8 +215,11 @@ $\operatorname{codom}(f)$). \par}
 
 \medskip
 \noindent
-If the collection of morphisms in a category is a set then the 
-category is called "locally small".
+If the collection of morphisms between every pair of objects in 
+a category is a set then the category is called "locally small".
+Said another way, if for all $A,B \in \mathcal{C}$ the collection
+of morphisms $\mathcal{C}(A,B)$ is a set then $\mathcal{C}$ is
+locally small.
  
 \item {\bf Identity Morphisms}: For each object $A$ in the
 category, there exists an identity morphism denoted as
@@ -382,10 +386,10 @@ the object $B$.
 \bigskip
 \noindent
 For functions between sets, injectivity is an important
-concept. For maps in an arbitrary category, injectivity might not
-make sense. However, but there is a concept that plays a similar
-role. So how can we define a similar but more general concept
-using only morphisms? Consider the following diagram:
+concept. But for maps in an arbitrary category, injectivity might
+not make sense. So how can we define a similar but more general
+concept for categories using only morphisms? Consider the
+following commutative diagram:
 
 \smallskip
 %
@@ -402,16 +406,16 @@ using only morphisms? Consider the following diagram:
 
 \smallskip
 \noindent
-Since this diagram commutes we know that $f \circ g_{1} = f \circ g_{2}$.
-$f$ is called a monomorphism if it adheres to Definition 
+Since this diagram commutes we know that $f \circ g_{1} = f \circ
+g_{2}$.  $f$ is called a monomorphism if it adheres to Definition
 \ref{definition:monomorphism}.
 
 \bigskip
 \begin{definition} {\bf Monomorphism}: Consider a category
-$\mathcal{C}$ with morphisms $g \in \mathcal{C}(A,B)$ and
-$f \in \mathcal{C}(B,C)$. Then a morphism $f \in \mathcal{C}(B,C)$ 
-is called a monomorphism if for all $g_{1},g_{2} \in 
-\mathcal{C}(A,B)$ we have  
+$\mathcal{C}$ with morphisms $g \in \mathcal{C}(A,B)$ and $f \in
+\mathcal{C}(B,C)$. Then a morphism $f \in \mathcal{C}(B,C)$ is
+called a monomorphism if for all $g_{1},g_{2} \in
+\mathcal{C}(A,B)$ we have
 
 
 \begin{equation}
