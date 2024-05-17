@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 MAY 2024 08:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 MAY 2024 08:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1487,7 +1487,7 @@ Package rerunfilecheck Info: File `category_theory.out' has not changed.
 Here is how much of TeX's memory you used:
  53783 strings out of 478994
  1359181 string characters out of 5858184
- 1984825 words of memory out of 5000000
+ 1984826 words of memory out of 5000000
  70391 multiletter control sequences out of 15000+600000
  424090 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
