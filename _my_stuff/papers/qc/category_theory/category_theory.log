@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  16 MAY 2024 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  17 MAY 2024 08:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1475,7 +1475,7 @@ File: uesvect.fd
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
-Overfull \hbox (18.15236pt too wide) in paragraph at lines 547--553
+Overfull \hbox (18.15236pt too wide) in paragraph at lines 550--556
 \OT1/cmr/m/n/10 Thanks to John Car-los Baez (@john-car-los-baez@mathstodon.xyz)
  and An-drew Stacey (@loopspace@mathstodon.xyz)
  []
@@ -1487,7 +1487,7 @@ Package rerunfilecheck Info: File `category_theory.out' has not changed.
 Here is how much of TeX's memory you used:
  53783 strings out of 478994
  1359181 string characters out of 5858184
- 1984826 words of memory out of 5000000
+ 1984825 words of memory out of 5000000
  70391 multiletter control sequences out of 15000+600000
  424090 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1511,7 +1511,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on category_theory.pdf (5 pages, 212200 bytes).
+Output written on category_theory.pdf (5 pages, 212395 bytes).
 PDF statistics:
  197 PDF objects out of 1000 (max. 8388607)
  170 compressed objects within 2 object streams

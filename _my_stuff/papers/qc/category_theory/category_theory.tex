@@ -10,7 +10,7 @@
 %
 %   get various packages
 %
-\usepackage[margin=0.90in]{geometry}                                     % adjust margins
+\usepackage[margin=0.90in]{geometry}                                    % adjust margins
 \geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
 \usepackage{url}                                                        % need this to use URLs in bibtex
 \usepackage{setspace}                                                   % need this for \setstrech{...}
@@ -157,14 +157,13 @@
 %
 \section{Introduction}
 \label{section:introduction}
-A category is a collection of objects together with a collection
-of composable morphisms between these objects.  Note here that we
-say "collection of objects" to sidestep the following
+A category is a collection of objects together with 
+a collection of composable morphisms between these objects.  
+Note here that we say "class of objects" to sidestep the following
 set-theoretic issue: if we instead used "the set of objects" then
 in the category of sets the set of objects would we be the set of
 all sets, which we know by Russell's Paradox does not exist
-\cite{russells_paradox}. As a result we use the idea of a
-collection from ZF set theory \cite{zf_set_theory}.
+\cite{russells_paradox,zf_set_theory}. 
 
 \bigskip
 \noindent
@@ -181,19 +180,20 @@ components of a category:
 \item {\bf Objects}: A category consists of a collection of
 objects. These objects can be anything: sets, groups, spaces,
 etc. For example, in the category of sets, the objects are sets
-themselves.
+themselves. If the collection of objects is a set the category
+is called a "small" category.
 
 \noindent
 The collection of objects in a category $\mathcal{C}$ is denoted 
 simply as $\mathcal{C}$, or sometimes $\operatorname{Ob}(\mathcal{C})$.
 Note that we refer to a generic category as $\mathcal{C}$, while bold
-for is used to indicate a specific category (for example, the category 
-of sets is called {\bf Set}).  
+font is used to indicate a specific category (for example, the category 
+of sets is called {\bf Set}). 
 
 \item {\bf Morphisms (Arrows)}: Between any two objects in a
 category, there exists a set of morphisms (also called arrows).
 Morphisms can represent various mathematical structures like
-functions, homomorphisms, transformations, etc.
+functions, homomorphisms, transformations, etc. 
 
 {\setstretch{1.25}
 \noindent
@@ -207,6 +207,11 @@ B$. The latter form is used in commutative diagrams; see Section
 morphism $f$ with domain $A$ (sometimes denoted at
 $\operatorname{dom}(f)$) and codomain $B$ (sometimes denoted as
 $\operatorname{codom}(f)$). \par}
+
+\medskip
+\noindent
+If the collection of morphisms in a category is a set then the 
+category is called "locally small".
  
 \item {\bf Identity Morphisms}: For each object $A$ in the
 category, there exists an identity morphism denoted as
@@ -346,8 +351,6 @@ required to be isomorphisms for $\mathcal{C}$ to be a monoid.
 
 \subsubsection{Monomorphisms}
 \label{subsubsection:monomorphisms}
-
-\medskip
 Before looking at the definition of monomorphism, it is useful to
 look at the definition of injectivity for sets:
 
