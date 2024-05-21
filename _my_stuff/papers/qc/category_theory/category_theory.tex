@@ -110,6 +110,8 @@
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{remark}{Remark}[section]
+\newtheorem{notation}{Notation}[section]
+
 %
 %	For drawing matrix products 
 %
@@ -457,6 +459,14 @@ injectivity.
 
 \bigskip
 \noindent
+\begin{notation} When $f$ is a monomorphism it is
+often denoted with $\hookrightarrow$. So for example the
+injection $i: \mathbb{Q} \to \mathbb{R}$ is frequently written as
+$i: \mathbb{Q} \hookrightarrow \mathbb{R}$.
+\end{notation}
+
+\bigskip
+\noindent
 Finally, note that while injectivity seems to be the same thing
 as monomorphism (and injective functions are monomorphisms in
 {\bf Set}), monomorphism and injectivity are not necessarily the
@@ -471,6 +481,27 @@ analogue of injectivity.
 
 \subsubsection{Functors}
 \label{subsubsection:functors}
+
+\vspace{1.0em}
+\begin{example}
+Let $\mathcal{C}$ be the category {\bf Set} with $A,B,S \in 
+\mathcal{C}$ and $f: A \to B$. Then there is a 
+functor $- \times S$ defined as follows:
+
+
+\bigskip
+\begin{math}
+   - \times S =
+   \begin{cases} 
+      A \times S                                        
+      		\hspace{10.0em} \mathrel{\#} \text{takes $A$ to its cartesian product with $S$} \\
+      f \times \text{id}_{S}: A \times S \to B \times S 
+      		\hspace{1.55em} \mathrel{\#} \text{by $(a,s) \mapsto (f(a),s)$}
+   \end{cases}
+\end{math}
+\label{example:functor}
+\end{example}
+
 
 \subsection{Natural Transformations}
 \label{subsection:naturl_transformations}
@@ -488,7 +519,7 @@ each object $A$ in $\mathcal{C}$, such that
 \end{equation*}
 \end{definition}
 
-\bigskip
+\medskip
 \noindent
 The morphism $\eta_{A}$ is called the component of 
 $\eta$ at object $A$.  In addition, for any morphism 
@@ -497,7 +528,7 @@ must commute:
 %
 %
 %
-\bigskip
+\medskip
 %
 %	Draw the picture
 %
@@ -512,7 +543,7 @@ must commute:
 %
 %
 \begin{center}
-  \begin{tikzcd} [column sep={60pt},
+  \begin{tikzcd} [column sep={45pt},
                   row    sep={35pt}]
     F(A) \arrow[r,"F(f)"] \arrow[d, swap, "\eta_{A}"] & F(B) \arrow[d, "\eta_{B}"] \\
     G(A) \arrow[r, swap, "G(f)"]                      & G(B)
@@ -545,6 +576,52 @@ G(f) \circ \eta_{A} = \eta_{B} \circ F(f)
 \noindent
 Note: I have seen Equation (\ref{equation:commutivity}) 
 abbreviated as $G \eta = \eta F$.
+
+\medskip
+\noindent
+\begin{example}
+Consider the functor $- \times S$ defined in Example
+\ref{example:functor}. For any function $g : S \to T$
+
+\begin{equation*}
+\text{id}\_ \times g : - \times S \to - \times T 
+\end{equation*}
+
+\medskip
+\noindent
+is a natural
+transformation between the two functors (that is, $- \times S$
+and $- \times T$). To show that $\text{id}\_ \times g$ is a
+natural transformation, pick two objects $A,B$ and a morphism $f
+: A \to B$. Then we need to show that the following diagram
+commutes:
+
+\smallskip
+%
+%	Draw the picture
+%
+%
+\begin{center}
+  \begin{tikzcd} [column sep={45pt},
+                  row    sep={40pt}]
+    A \times S \arrow[r,"f \times \text{id}_{S}"] \arrow[d, swap, "\text{id}_{A} \times g"] & 
+    		B \times S \arrow[d, "\text{id}_{B} \times g"] \\
+    A \times T \arrow[r, swap, "f \times \text{id}_{T}"]                                    & 
+    		B \times T
+  \end{tikzcd}
+\end{center}
+
+\bigskip
+\noindent
+To show that this diagram commutes, pick a pair $(a,s)$ in the
+top left corner.  Then if we go right then down we see that
+$(a,s) \mapsto (f(a),s) \mapsto (f(a),g(s))$.  On the other hand,
+if we go down then right we see that $(a,s) \mapsto (a, g(s))
+\mapsto (f (a), g(s))$.  Since both paths between $A \times S$
+and $B \times T$ map $(a,b)$ to $(f(a),g(s))$, the diagram
+commutes and hence $\text{id}\_ \times g$ a natural
+transformation \cite{intro_category_theory_notes}.
+\end{example}
 %
 %
 %
