@@ -589,11 +589,10 @@ Consider the functor $- \times S$ defined in Example
 
 \medskip
 \noindent
-is a natural
-transformation between the two functors (that is, $- \times S$
-and $- \times T$). To show that $\text{id}\_ \times g$ is a
-natural transformation, pick two objects $A,B$ and a morphism $f
-: A \to B$. Then we need to show that the following diagram
+is a natural transformation between the two functors (that is, 
+$- \times S$ and $- \times T$). To show that $\text{id}\_ \times g$ 
+is a natural transformation, pick two objects $A,B$ and a morphism 
+$f : A \to B$. Then we need to show that the following diagram
 commutes:
 
 \smallskip
@@ -622,6 +621,17 @@ and $B \times T$ map $(a,b)$ to $(f(a),g(s))$, the diagram
 commutes and hence $\text{id}\_ \times g$ a natural
 transformation \cite{intro_category_theory_notes}.
 \end{example}
+
+\begin{remark}
+On interesting thing is that a natural transformation $\eta$ 
+kind of commutes the two functors. That is, for functors 
+$F,G: \mathcal{C} \to \mathcal{D}$, if $\eta : F \to G$ is a 
+natural transformation then for any $f \in \mathcal{C}(A,B)$ 
+we have $G(f) \circ \eta_{A} = \eta_{B} \circ F(f)$ 
+(Equation (\ref{equation:commutivity})). If we drop some detail 
+we see that $G \eta = \eta F$.
+\label{remark:natural_transformation_commutes}
+\end{remark}
 %
 %
 %
