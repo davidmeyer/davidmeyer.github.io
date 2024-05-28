@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  25 MAR 2024 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  28 MAY 2024 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1281,24 +1281,24 @@ Package: esvect
 (./dirac_delta.aux)
 \openout1 = `dirac_delta.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1360,20 +1360,20 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 102.
+ on input line 103.
 
-LaTeX Info: Redefining \celsius on input line 102.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 102
+LaTeX Info: Redefining \celsius on input line 103.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 103
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 102.
-Package gensymb Info: Using \upOmega for \ohm on input line 102.
+LaTeX Info: Redefining \ohm on input line 103.
+Package gensymb Info: Using \upOmega for \ohm on input line 103.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 102.
+Package hyperref Info: Link coloring OFF on input line 103.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1386,9 +1386,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count365
 )
-LaTeX Info: Redefining \ref on input line 102.
-LaTeX Info: Redefining \pageref on input line 102.
-LaTeX Info: Redefining \nameref on input line 102.
+LaTeX Info: Redefining \ref on input line 103.
+LaTeX Info: Redefining \pageref on input line 103.
+LaTeX Info: Redefining \nameref on input line 103.
  (./dirac_delta.out) (./dirac_delta.out)
 \@outlinefile=\write4
 \openout4 = `dirac_delta.out'.
@@ -1404,26 +1404,26 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 102
+LaTeX Font Info:    Trying to load font information for U+msa on input line 103
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 102
+LaTeX Font Info:    Trying to load font information for U+msb on input line 103
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-2.
+3.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-102.
+103.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1432,172 +1432,172 @@ File: uesvect.fd
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 242.
+(hyperref)                removing `math shift' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 242.
+(hyperref)                removing `\delta' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 242.
+(hyperref)                removing `subscript' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 242.
+(hyperref)                removing `\epsilon' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 242.
+(hyperref)                removing `math shift' on input line 243.
 
 [2] [3]
-Overfull \hbox (33.75621pt too wide) detected at line 454
+Overfull \hbox (33.75621pt too wide) detected at line 455
 []
  []
 
 [4]
-<images/exponential_order.png, id=163, 454.69875pt x 323.2075pt>
+<images/exponential_order.png, id=164, 454.69875pt x 323.2075pt>
 File: images/exponential_order.png Graphic file (type png)
 <use images/exponential_order.png>
-Package pdftex.def Info: images/exponential_order.png  used on input line 495.
+Package pdftex.def Info: images/exponential_order.png  used on input line 496.
 (pdftex.def)             Requested size: 227.34882pt x 161.60335pt.
- [5 <./images/exponential_order.png>] [6] [7]
+ [5 <./images/exponential_order.png>] [6] [7] [8] [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 675.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 675.
+(hyperref)                removing `math shift' on input line 913.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\prime' on input line 675.
+(hyperref)                removing `superscript' on input line 913.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 675.
+(hyperref)                removing `\prime' on input line 913.
 
 
-Overfull \hbox (45.87851pt too wide) detected at line 720
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 913.
+
+
+Overfull \hbox (45.87851pt too wide) detected at line 958
 []
  []
 
-[8]
+[11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 733.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 733.
+(hyperref)                removing `math shift' on input line 971.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\prime' on input line 733.
+(hyperref)                removing `superscript' on input line 971.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\prime' on input line 733.
+(hyperref)                removing `\prime' on input line 971.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 733.
+(hyperref)                removing `\prime' on input line 971.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 770.
+(hyperref)                removing `math shift' on input line 971.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 770.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 770.
+(hyperref)                removing `superscript' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 812.
+(hyperref)                removing `math shift' on input line 1008.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 812.
+(hyperref)                removing `math shift' on input line 1050.
 
-[9]
-Overfull \hbox (49.32204pt too wide) detected at line 895
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1050.
+
+[12]
+Overfull \hbox (49.32204pt too wide) detected at line 1133
 []
  []
 
-[10] [11]
-Overfull \hbox (40.71396pt too wide) detected at line 979
+[13] [14]
+Overfull \hbox (40.71396pt too wide) detected at line 1217
 []
  []
 
-[12] [13] [14]
-Overfull \hbox (32.07634pt too wide) detected at line 1185
-[]
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1188.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1188.
-
-[15]
-Overfull \hbox (32.77008pt too wide) detected at line 1242
-[]
- []
-
-[16]
-Overfull \hbox (14.46042pt too wide) detected at line 1301
-[]
- []
-
-[17]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1304.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ast' on input line 1304.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1304.
-
-
-Overfull \hbox (43.22621pt too wide) detected at line 1336
+[15] [16] [17]
+Overfull \hbox (32.07634pt too wide) detected at line 1423
 []
  []
 
 
-Overfull \hbox (1.73656pt too wide) detected at line 1358
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1426.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1426.
+
+[18]
+Overfull \hbox (32.77008pt too wide) detected at line 1480
 []
  []
 
-(./dirac_delta.bbl [18]
-Underfull \hbox (badness 2302) in paragraph at lines 40--45
+[19]
+Overfull \hbox (14.46042pt too wide) detected at line 1539
+[]
+ []
+
+[20]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 1542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1542.
+
+
+Overfull \hbox (43.22621pt too wide) detected at line 1574
+[]
+ []
+
+
+Overfull \hbox (1.73656pt too wide) detected at line 1596
+[]
+ []
+
+(./dirac_delta.bbl [21]
+Underfull \hbox (badness 2302) in paragraph at lines 48--53
 []\OT1/cmr/m/n/10 Wolfram Math-World.  Fun-da-men-tal The-ory of Cal-cu-lus.  [
 ]$\OT1/cmtt/m/n/10 https : / / mathworld . wolfram . com /
  []
 
-) [19] (./dirac_delta.aux)
+) [22] (./dirac_delta.aux)
 Package rerunfilecheck Info: File `dirac_delta.out' has not changed.
 (rerunfilecheck)             Checksum: AAB50C7D6259CC344E2FD1AD19CE1B51;4297.
  ) 
 Here is how much of TeX's memory you used:
- 52593 strings out of 478994
- 1328197 string characters out of 5858184
- 1955921 words of memory out of 5000000
- 69213 multiletter control sequences out of 15000+600000
- 418267 words of font info for 93 fonts, out of 8000000 for 9000
+ 52724 strings out of 478994
+ 1331145 string characters out of 5858184
+ 1957142 words of memory out of 5000000
+ 69334 multiletter control sequences out of 15000+600000
+ 418566 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,18n,131p,751b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,18n,131p,751b,1268s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1615,17 +1615,19 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on dirac_delta.pdf (19 pages, 405745 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on dirac_delta.pdf (22 pages, 434280 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 371 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

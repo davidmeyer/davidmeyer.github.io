@@ -83,14 +83,21 @@
 
 \begin{document}
 
-\begin{tikzcd}[row    sep={35pt},
-               column sep={40pt}]
-     & X \arrow[d,dashed,"\exists !\tau"] \arrow[ddl,swap,"\sigma_{1}"] \arrow[ddr,"\sigma_{2}"] \\
-     & V \times W \arrow[dl,"\rho_{1}"] \arrow[dr,swap,"\rho_{2}"] \\
-   V & & W \\
-\end{tikzcd}
+
 
 \bigskip
+\bigskip
+
+\begin{tikzcd}[row    sep={35pt},
+               column sep={40pt}]
+     & X \arrow[d,dashed, "\exists! \tau"] \arrow[ddl,swap,"\sigma_{1}"] \arrow[ddr,"\sigma_{2}"] \\
+     & V \times W \arrow[dl,"\rho_{1}"] \arrow[dr,swap,"\rho_{2}"]                               \\
+   V & & W 
+\end{tikzcd}
+
+
+\vspace{5em}
+
 \noindent
 $A,B,S \in \mathcal{C}$ and $f: A \to B$
 
