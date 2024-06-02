@@ -594,7 +594,7 @@ plane, shown in Figure \ref{fig:complex_plane}:
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.385 \textwidth}{!} {														% resize figure if you want
+  \resizebox{0.35 \textwidth}{!} {														% resize figure if you want
     \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
 		\coordinate (O) at (0,0);														% name a coordinate for the origin
 %
@@ -700,34 +700,45 @@ We also know that
 \noindent
 Since $\int_{a}^{b} e^{-i\theta} f(t) \, dt  = r$ and 
 $\left | \int_{a}^{b} f(t) \, dt \right | = r$ we have
-$\left | \int_{a}^{b} f(t) \, dt \right | = \int_{a}^{b} 
-e^{-i\theta} f(t) \, dt$. 
+
+\bigskip
+\begin{equation}
+\left | \int_{a}^{b} f(t) \, dt \right | = \int_{a}^{b} 
+e^{-i\theta} f(t) \, dt 
+\label{equation:integral_equality}
+\end{equation}
 
 \bigskip
 \noindent
-Now, if we look at the real part of the integral we see
-that
+Since for $|x| \in \mathbb{R}$ the LHS of Equation (\ref{equation:integral_equality})
+is a real number. Interestingly, the integral on the RHS of Equation (\ref{equation:integral_equality}) 
+is also real, but the integrand is complex. So if we look at the real part of the RHS 
+we see that
 
 \begin{equation*}
 \begin{array}{llll}
-{\displaystyle \operatorname{Re} \int_{a}^{b} e^{-i\theta} f(t) \, dt} 
-&=& {\displaystyle \int_{a}^{b} \operatorname{Re} \left [e^{-i\theta} f(t) \right ] dt}
+{\displaystyle \operatorname{Re} \left [ \int_{a}^{b} e^{-i\theta} f(t) \, dt \right ]} 
+&=& {\displaystyle \int_{a}^{b} \operatorname{Re} \left [e^{-i\theta} f(t) \, dt \right ] }
 	&\hspace{3em} \mathrel{\#} \text{swap Re and $\int$, noting that $\left [e^{-i\theta} f(t) \right ] \in \mathbb{C}$} \\
 [10pt]
-&\leq& {\displaystyle \int_{a}^{b} \left | e^{-i\theta} f(t) \right | \, dt}
-	&\hspace{3em} \mathrel{\#} \text{since $\operatorname{Re}(z) \leq |z|$ for $z \in \mathbb{C}$} \\
+&\leq& {\displaystyle \int_{a}^{b} \big | e^{-i\theta} f(t) \big | \, dt}
+	&\hspace{3em} \mathrel{\#} \text{since $\operatorname{Re}(z) \leq |z|$ for $z \in \mathbb{C}$ and $\operatorname{Re}(dt) = dt$} \\
 [10pt]
-&=& {\displaystyle \int_{a}^{b} \left | e^{-i\theta} \right | \left | f(t) \right | \, dt}
+&=& {\displaystyle \int_{a}^{b} \big | e^{-i\theta} \big | \left | f(t) \right | \, dt}
 	&\hspace{3em} \mathrel{\#} |xy| = |x||y| \\
 [10pt]
+&=& {\displaystyle \big | e^{-i\theta} \big | \int_{a}^{b}  \left | f(t) \right | \, dt}
+	&\hspace{3em} \mathrel{\#} \text{$\big | e^{-i\theta} \big |$ doesn't depend on $t$} \\
+[10pt]
+
 &=& {\displaystyle \int_{a}^{b} \left | f(t) \right | \, dt}
 	&\hspace{3em} \mathrel{\#} |e^{-i\theta}| = 1 \\
 \end{array}
 \end{equation*}
 
-\smallskip
+\bigskip
 \noindent
-And so ${\displaystyle \left | \int_{a}^{b} f(t) \,  dt \right | \leq \int_{a}^{b} \left | f(t) 
+and so ${\displaystyle \left | \int_{a}^{b} f(t) \,  dt \right | \leq \int_{a}^{b} \left | f(t) 
 \right | \, dt}$. $\blacksquare$
 
 
