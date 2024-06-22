@@ -9,6 +9,7 @@ fusion</a>
    target="_blank" 
    rel="noopener noreferrer">table</a>
 that
+
 <a href="https://parasiteswithoutborders.com/daniel-griffin-md-phd/" 
    target="_blank" 
    rel="noopener noreferrer"> 
@@ -18,14 +19,14 @@ Daniel Griffin</a> was talking about on
    rel="noopener noreferrer">
 TWiV 648</a>
 
-<li>On the Complexity of Designed Systems (and its effect on technology deployment)
+<li>On the Complexity of Designed Systems (and its effect on...)
 <a href="./images/itat2013.full.pptx"
    target="_blank"
    rel="noopener noreferrer">
    [pptx]
 </a>
 
-<li>On the Complexity of Designed Systems (and its effect on technology deployment)
+<li>On the Complexity of Designed Systems (and its effect on...)
 <a href="./images/itat.pdf"
    target="_blank"
    rel="noopener noreferrer">
