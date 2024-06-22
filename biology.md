@@ -20,14 +20,14 @@ Daniel Griffin</a> was talking about on
 TWiV 648</a>
 
 <li>On the Complexity of Designed Systems (and its effect on...)
-<a href="./images/itat2013.full.pptx"
+<a href="./itat2013.full.pptx"
    target="_blank"
    rel="noopener noreferrer">
    [pptx]
 </a>
 
 <li>On the Complexity of Designed Systems (and its effect on...)
-<a href="./images/itat.pdf"
+<a href=".//itat.pdf"
    target="_blank"
    rel="noopener noreferrer">
    [pdf summary]
