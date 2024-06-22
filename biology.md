@@ -18,21 +18,19 @@ Daniel Griffin</a> was talking about on
    rel="noopener noreferrer">
 TWiV 648</a>
 
-<li>
+<li>On the Complexity of Designed Systems (and its effect on technology deployment)
 <a href="./images/itat2013.full.pptx"
    target="_blank"
    rel="noopener noreferrer">
-   On the Complexity of Designed Systems <br>
-(and its effect on technology deployment) [pptx]
+   [pptx]
 </a>
 
-<li>
+<li>On the Complexity of Designed Systems (and its effect on technology deployment)
 <a href="./images/itat.pdf"
    target="_blank"
    rel="noopener noreferrer">
-   On the Complexity of Designed Systems <br>
-(and its effect on technology deployment) [pdf summary]
-   </a>
+   [pdf summary]
+</a>
 <br>
 <br>
 <hr>
