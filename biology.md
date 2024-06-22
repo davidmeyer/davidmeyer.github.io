@@ -24,18 +24,10 @@ TWiV 648</a>
    target="_blank"
    rel="noopener noreferrer">
    [pptx]
-   <a href=".//itat.pdf"
+   <a href="./itat.pdf"
       target="_blank"
       rel="noopener noreferrer">
       [pdf summary] 
- < /a>
-</a>
-
-<li>On the Complexity of Designed Systems (and its effect on...)
-<a href=".//itat.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-   [pdf summary] 
 </a>
 <br>
 <br>
