@@ -16,12 +16,25 @@ Daniel Griffin</a> was talking about on
 <a href="https://www.microbe.tv/twiv/twiv-648/" 
    target="_blank" 
    rel="noopener noreferrer">
-TWiV 648</a>    
-<br>
+TWiV 648</a>
+
+<li>
+<a href="./images/itat2013.full.pptx"
+   target="_blank"
+   rel="noopener noreferrer">table</a>
+On the Complexity of Designed Systems\\
+(and its effect on technology deployment)</a>
+<li>
+<a href="./images/itat.pdf"
+   target="_blank"
+   rel="noopener noreferrer">table</a>
+On the Complexity of Designed Systems\\
+(and its effect on technology deployment)</a>
+
 <br>
 <br>
 <hr>
-<i>Last Update: 11.06.2022 by
+<i>Last Update: 06.22.2024 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
