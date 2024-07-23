@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  23 JUL 2024 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  23 JUL 2024 11:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -675,45 +675,45 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
  [3]
 [4]
-<images/complex_congugate.png, id=115, 301.125pt x 423.5825pt>
+<images/complex_congugate.png, id=114, 301.125pt x 423.5825pt>
 File: images/complex_congugate.png Graphic file (type png)
 <use images/complex_congugate.png>
 Package pdftex.def Info: images/complex_congugate.png  used on input line 273.
 (pdftex.def)             Requested size: 135.50499pt x 190.61037pt.
  [5 <./images/complex_congugate.png>] [6] [7]
-<images/math_physics.png, id=137, 963.6pt x 542.025pt>
+<images/math_physics.png, id=133, 963.6pt x 542.025pt>
 File: images/math_physics.png Graphic file (type png)
 <use images/math_physics.png>
 Package pdftex.def Info: images/math_physics.png  used on input line 550.
 (pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
  [8] [9 <./images/math_physics.png>] [10] [11] [12] [13]
-<images/90-45.png, id=186, 963.6pt x 542.025pt>
+<images/90-45.png, id=184, 963.6pt x 542.025pt>
 File: images/90-45.png Graphic file (type png)
 <use images/90-45.png>
 Package pdftex.def Info: images/90-45.png  used on input line 767.
 (pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
  [14 <./images/90-45.png>]
-<images/theta.png, id=195, 309.155pt x 218.8175pt>
+<images/theta.png, id=193, 309.155pt x 218.8175pt>
 File: images/theta.png Graphic file (type png)
 <use images/theta.png>
 Package pdftex.def Info: images/theta.png  used on input line 846.
 (pdftex.def)             Requested size: 200.94836pt x 142.22968pt.
  [15 <./images/theta.png>]
 [16]
-<images/cnot.png, id=210, 228.855pt x 183.68625pt>
+<images/cnot.png, id=208, 228.855pt x 183.68625pt>
 File: images/cnot.png Graphic file (type png)
 <use images/cnot.png>
 Package pdftex.def Info: images/cnot.png  used on input line 971.
 (pdftex.def)             Requested size: 183.08423pt x 146.94917pt.
  [17 <./images/cnot.png>]
-<images/one_beam_splitter_setup.png, id=221, 422.57875pt x 217.81375pt>
+<images/one_beam_splitter_setup.png, id=219, 422.57875pt x 217.81375pt>
 File: images/one_beam_splitter_setup.png Graphic file (type png)
 <use images/one_beam_splitter_setup.png>
 Package pdftex.def Info: images/one_beam_splitter_setup.png  used on input line
  1047.
 (pdftex.def)             Requested size: 338.06345pt x 174.25122pt.
  [18]
-<images/measurement_statistics_with_one_beam_splitter.png, id=234, 478.78876pt 
+<images/measurement_statistics_with_one_beam_splitter.png, id=232, 478.78876pt 
 x 201.75375pt>
 File: images/measurement_statistics_with_one_beam_splitter.png Graphic file (ty
 pe png)
@@ -723,7 +723,7 @@ ng  used on input line 1074.
 (pdftex.def)             Requested size: 383.03152pt x 161.40321pt.
  [19 <./images/one_beam_splitter_setup.png>]
 [20 <./images/measurement_statistics_with_one_beam_splitter.png>]
-<images/2_beam_splitters.png, id=255, 578.16pt x 270.00874pt>
+<images/2_beam_splitters.png, id=253, 578.16pt x 270.00874pt>
 File: images/2_beam_splitters.png Graphic file (type png)
 <use images/2_beam_splitters.png>
 Package pdftex.def Info: images/2_beam_splitters.png  used on input line 1135.
@@ -734,7 +734,7 @@ Overfull \hbox (32.524pt too wide) in paragraph at lines 1135--1136
  []
 
 [21 <./images/2_beam_splitters.png>] [22]
-<images/measurement_with_two_beam_splitters.png, id=268, 525.965pt x 269.005pt>
+<images/measurement_with_two_beam_splitters.png, id=266, 525.965pt x 269.005pt>
 
 File: images/measurement_with_two_beam_splitters.png Graphic file (type png)
 <use images/measurement_with_two_beam_splitters.png>
@@ -765,8 +765,8 @@ Package rerunfilecheck Info: File `dual_beam_experiment.out' has not changed.
 (rerunfilecheck)             Checksum: 0540459F441933C069140AB308D3F687;2891.
  ) 
 Here is how much of TeX's memory you used:
- 15982 strings out of 478994
- 277295 string characters out of 5858184
+ 15981 strings out of 478994
+ 277283 string characters out of 5858184
  593862 words of memory out of 5000000
  33100 multiletter control sequences out of 15000+600000
  419240 words of font info for 87 fonts, out of 8000000 for 9000
@@ -798,10 +798,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on dual_beam_experiment.pdf (26 pages, 511159 bytes).
+Output written on dual_beam_experiment.pdf (26 pages, 510260 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 319 compressed objects within 4 object streams
- 75 named destinations out of 1000 (max. 500000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 317 compressed objects within 4 object streams
+ 74 named destinations out of 1000 (max. 500000)
  179 words of extra memory for PDF output out of 10000 (max. 10000000)
 
