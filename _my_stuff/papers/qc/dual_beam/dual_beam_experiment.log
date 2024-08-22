@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 AUG 2024 10:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  22 AUG 2024 12:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -684,33 +684,33 @@ Package pdftex.def Info: images/complex_congugate.png  used on input line 273.
 <images/math_physics.png, id=133, 963.6pt x 542.025pt>
 File: images/math_physics.png Graphic file (type png)
 <use images/math_physics.png>
-Package pdftex.def Info: images/math_physics.png  used on input line 550.
+Package pdftex.def Info: images/math_physics.png  used on input line 551.
 (pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
  [8] [9 <./images/math_physics.png>] [10] [11] [12] [13]
 <images/90-45.png, id=184, 963.6pt x 542.025pt>
 File: images/90-45.png Graphic file (type png)
 <use images/90-45.png>
-Package pdftex.def Info: images/90-45.png  used on input line 767.
+Package pdftex.def Info: images/90-45.png  used on input line 768.
 (pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
  [14 <./images/90-45.png>]
 <images/theta.png, id=193, 309.155pt x 218.8175pt>
 File: images/theta.png Graphic file (type png)
 <use images/theta.png>
-Package pdftex.def Info: images/theta.png  used on input line 846.
+Package pdftex.def Info: images/theta.png  used on input line 847.
 (pdftex.def)             Requested size: 200.94836pt x 142.22968pt.
  [15 <./images/theta.png>]
 [16]
 <images/cnot.png, id=208, 228.855pt x 183.68625pt>
 File: images/cnot.png Graphic file (type png)
 <use images/cnot.png>
-Package pdftex.def Info: images/cnot.png  used on input line 971.
+Package pdftex.def Info: images/cnot.png  used on input line 972.
 (pdftex.def)             Requested size: 183.08423pt x 146.94917pt.
  [17 <./images/cnot.png>]
 <images/one_beam_splitter_setup.png, id=219, 422.57875pt x 217.81375pt>
 File: images/one_beam_splitter_setup.png Graphic file (type png)
 <use images/one_beam_splitter_setup.png>
 Package pdftex.def Info: images/one_beam_splitter_setup.png  used on input line
- 1047.
+ 1048.
 (pdftex.def)             Requested size: 338.06345pt x 174.25122pt.
  [18]
 <images/measurement_statistics_with_one_beam_splitter.png, id=232, 478.78876pt 
@@ -719,17 +719,17 @@ File: images/measurement_statistics_with_one_beam_splitter.png Graphic file (ty
 pe png)
 <use images/measurement_statistics_with_one_beam_splitter.png>
 Package pdftex.def Info: images/measurement_statistics_with_one_beam_splitter.p
-ng  used on input line 1074.
+ng  used on input line 1075.
 (pdftex.def)             Requested size: 383.03152pt x 161.40321pt.
  [19 <./images/one_beam_splitter_setup.png>]
 [20 <./images/measurement_statistics_with_one_beam_splitter.png>]
 <images/2_beam_splitters.png, id=253, 578.16pt x 270.00874pt>
 File: images/2_beam_splitters.png Graphic file (type png)
 <use images/2_beam_splitters.png>
-Package pdftex.def Info: images/2_beam_splitters.png  used on input line 1135.
+Package pdftex.def Info: images/2_beam_splitters.png  used on input line 1136.
 (pdftex.def)             Requested size: 462.52863pt x 216.00728pt.
 
-Overfull \hbox (32.524pt too wide) in paragraph at lines 1135--1136
+Overfull \hbox (32.524pt too wide) in paragraph at lines 1136--1137
  [] 
  []
 
@@ -739,7 +739,7 @@ Overfull \hbox (32.524pt too wide) in paragraph at lines 1135--1136
 File: images/measurement_with_two_beam_splitters.png Graphic file (type png)
 <use images/measurement_with_two_beam_splitters.png>
 Package pdftex.def Info: images/measurement_with_two_beam_splitters.png  used o
-n input line 1280.
+n input line 1281.
 (pdftex.def)             Requested size: 420.77255pt x 215.20428pt.
  [23] [24 <./images/measurement_with_two_beam_splitters.png>] [25] (./dual_beam
 _experiment.bbl
@@ -798,7 +798,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021/texmf
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on dual_beam_experiment.pdf (26 pages, 510654 bytes).
+Output written on dual_beam_experiment.pdf (26 pages, 510699 bytes).
 PDF statistics:
  393 PDF objects out of 1000 (max. 8388607)
  317 compressed objects within 4 object streams
