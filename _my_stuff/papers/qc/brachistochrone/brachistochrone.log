@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 SEP 2024 09:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 SEP 2024 10:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1285,24 +1285,24 @@ Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 (./brachistochrone.aux)
 \openout1 = `brachistochrone.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1363,18 +1363,18 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-LaTeX Info: Redefining \celsius on input line 106.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 106
+LaTeX Info: Redefining \celsius on input line 108.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 108
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 106.
-Package gensymb Info: Using \upOmega for \ohm on input line 106.
+LaTeX Info: Redefining \ohm on input line 108.
+Package gensymb Info: Using \upOmega for \ohm on input line 108.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 108.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1387,9 +1387,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count365
 )
-LaTeX Info: Redefining \ref on input line 106.
-LaTeX Info: Redefining \pageref on input line 106.
-LaTeX Info: Redefining \nameref on input line 106.
+LaTeX Info: Redefining \ref on input line 108.
+LaTeX Info: Redefining \pageref on input line 108.
+LaTeX Info: Redefining \nameref on input line 108.
  (./brachistochrone.out) (./brachistochrone.out)
 \@outlinefile=\write4
 \openout4 = `brachistochrone.out'.
@@ -1405,89 +1405,89 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 106
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 106
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-6.
+8.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-106.
+108.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<images/galileo.png, id=84, 603.25375pt x 589.20125pt>
+<images/galileo.png, id=85, 603.25375pt x 589.20125pt>
 File: images/galileo.png Graphic file (type png)
 <use images/galileo.png>
-Package pdftex.def Info: images/galileo.png  used on input line 222.
+Package pdftex.def Info: images/galileo.png  used on input line 224.
 (pdftex.def)             Requested size: 603.25227pt x 589.1998pt.
 Missing character: There is no i in font nullfont!
-<images/cycloid_coordinates.png, id=90, 361.35pt x 333.245pt>
+<images/cycloid_coordinates.png, id=91, 361.35pt x 333.245pt>
 File: images/cycloid_coordinates.png Graphic file (type png)
 <use images/cycloid_coordinates.png>
-Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 346
+Package pdftex.def Info: images/cycloid_coordinates.png  used on input line 348
 .
 (pdftex.def)             Requested size: 216.81168pt x 199.94853pt.
  [2 <./images/galileo.png>]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 385.
-
-
 LaTeX Warning: Command \textendash invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 387.
+LaTeX Warning: Command \textendash invalid in math mode on input line 389.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 394.
+LaTeX Warning: Command \textendash invalid in math mode on input line 389.
 
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 396.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 396.
+LaTeX Warning: Command \textendash invalid in math mode on input line 398.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 402.
+LaTeX Warning: Command \textendash invalid in math mode on input line 398.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 403.
+LaTeX Warning: Command \textendash invalid in math mode on input line 404.
 
 
-Overfull \hbox (16.14545pt too wide) detected at line 442
+LaTeX Warning: Command \textendash invalid in math mode on input line 405.
+
+
+Overfull \hbox (16.14545pt too wide) detected at line 444
 []
  []
 
 [3 <./images/cycloid_coordinates.png>] [4] [5] [6]
-Overfull \hbox (28.8215pt too wide) detected at line 825
+Overfull \hbox (28.8215pt too wide) detected at line 827
 []
  []
 
 [7]
-Overfull \hbox (18.88698pt too wide) detected at line 894
+Overfull \hbox (18.88698pt too wide) detected at line 896
 []
  []
 
 [8]
-<images/cycloid1.png, id=210, 711.65875pt x 338.26375pt>
+<images/cycloid1.png, id=211, 711.65875pt x 338.26375pt>
 File: images/cycloid1.png Graphic file (type png)
 <use images/cycloid1.png>
-Package pdftex.def Info: images/cycloid1.png  used on input line 934.
+Package pdftex.def Info: images/cycloid1.png  used on input line 936.
 (pdftex.def)             Requested size: 284.65845pt x 135.30309pt.
  [9 <./images/cycloid1.png>] [10] (./brachistochrone.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 38--44
@@ -1500,11 +1500,11 @@ Package rerunfilecheck Info: File `brachistochrone.out' has not changed.
 (rerunfilecheck)             Checksum: 78FF45ACA086F5647598FCC8B2ED5BA6;2580.
  ) 
 Here is how much of TeX's memory you used:
- 53844 strings out of 478994
- 1352733 string characters out of 5858184
- 1985483 words of memory out of 5000000
- 70464 multiletter control sequences out of 15000+600000
- 421289 words of font info for 105 fonts, out of 8000000 for 9000
+ 53846 strings out of 478994
+ 1352750 string characters out of 5858184
+ 1985482 words of memory out of 5000000
+ 70465 multiletter control sequences out of 15000+600000
+ 421588 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,20n,131p,755b,880s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1522,17 +1522,18 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/public/esvect/vect8.pfb>
-Output written on brachistochrone.pdf (12 pages, 655021 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/esvect/vect8.pfb>
+Output written on brachistochrone.pdf (12 pages, 666510 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
+ 375 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
  61 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

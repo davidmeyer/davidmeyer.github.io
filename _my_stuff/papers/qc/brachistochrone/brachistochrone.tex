@@ -96,7 +96,9 @@
 \title{A Few Notes on the Brachistochrone Problem}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
-\date{Last update: \today}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: January 8, 2022}}
+
 %
 %	be compatible
 %
@@ -278,7 +280,7 @@ The cycloid is shown in Figure \ref{fig:cycloid}.
      \coordinate (X)     at (\x, 0 );
      \coordinate (Y)     at (0, \y );
      \coordinate (XY)    at (\x, \y );
-     \node[anchor=north] at (X) {$x$};
+     \node[anchor=north,yshift=-1.0mm] at (X) {$x$};
      \draw[fill=black] (O) circle (1pt);                                                                % draw a dot at the origin
      \draw[fill=blue]  (C) circle (1pt);                                                                % draw center of circle
      \draw[] (C) -- node[anchor=south] {\; $a$} (XY);                                                   % draw radius of the circle
