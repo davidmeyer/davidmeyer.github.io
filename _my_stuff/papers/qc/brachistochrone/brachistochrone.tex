@@ -284,11 +284,16 @@ The cycloid is shown in Figure \ref{fig:cycloid}.
      \draw[] (C) -- node[anchor=south] {\; $a$} (XY);                                                   % draw radius of the circle
      \coordinate (B) at (\c, 0);                                                                        % bottom of circle, radius to the bottom
      \draw[] (C) -- (B) node[anchor=north] {$a \, \theta$};
+     \draw[fill=black] (B) circle (1pt);
+
 %
 %       projections of point XY
 %
-     \draw[dotted] (XY) -- (X);
-     \draw[dotted] (XY) -- (Y) node[anchor=east, xshift=1mm] {$\quad y$};
+     \draw[thick, dotted] (XY) -- (X);
+     \draw[fill=black] (X) circle (1pt);
+     \draw[thick, dotted] (XY) -- (Y) node[anchor=east, xshift=0.5mm] {$\quad y$};
+     \draw[fill=black] (Y) circle (1pt);
+
 %
 %       arc theta
 %       start arc
