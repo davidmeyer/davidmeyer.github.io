@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  15 NOV 2024 09:07
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  15 NOV 2024 09:31
  restricted system commands enabled.
  file:line:error style messages enabled.
 **pola.tex
@@ -1564,7 +1564,7 @@ Here is how much of LuaTeX's memory you used:
  1327 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 175 attribute, 64 glue_spe
 c, 175 attribute_list, 2 write, 15 pdf_action nodes
-   avail lists: 1:1,2:1673,3:684,4:56,5:577,6:26,7:5925,8:215,9:1616,10:14,11:32
+   avail lists: 1:1,2:1667,3:682,4:56,5:577,6:27,7:5925,8:215,9:1616,10:14,11:32
 8
  73980 multiletter control sequences out of 65536+600000
  127 fonts using 9785255 bytes
@@ -1594,10 +1594,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
 /texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on pola.pdf (10 pages, 215783 bytes).
+Output written on pola.pdf (10 pages, 215633 bytes).
 
-PDF statistics: 341 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
+PDF statistics: 340 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
  46 named destinations out of 1000 (max. 131072)
  64 words of extra memory for PDF output out of 10000 (max. 100000000)
 
