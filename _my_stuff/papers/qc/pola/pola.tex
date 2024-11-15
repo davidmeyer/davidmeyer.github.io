@@ -1,30 +1,106 @@
+%
+%	Use lualatex
+%
+% !TEX TS-program = LuaLaTeX
+%
+%	To get overleaf.com to use lualatex see
+%	https://www.overleaf.com/learn/how-to/Changing_compiler.
+%	Basically, change the compiler in Settings.
+%
 \documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
 %
 %   get various packages
 %
-\usepackage{geometry}							% See geometry.pdf to learn the layout options
-\geometry{margin=0.75in}
-\geometry{letterpaper}							% ... or a4paper or a5paper or ... 
-\usepackage{setspace}
-\usepackage{url}								% need this to use URLs in bibtex
-\usepackage{mathtools}							% \coloneqq
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
 %
 %   tikz et al
 %
 \usepackage{tikz}
-\usetikzlibrary{calc,patterns,angles,quotes,shapes,intersections,decorations,backgrounds}   
-\usepackage{tkz-euclide} 
-\usepackage{pgfplots}	
-\usepackage{relsize}	
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby,matrix}
+\usepackage{tikz-cd}
+\tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}													% \rowcolor{yellow!75} etc
 \usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
+\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}													% \multirow and \multicolumn
+\usepackage{enumitem}													% change bullets in \begin{enumerate}
 %
-%	math stuff
+%	lualatex
 %
-\usepackage{amsthm}
-\usepackage{amsmath}
-\usepackage{amssymb}
+%	Put this before \documentclass
 %
-%       watermarks
+%	!TEX TS-program = LuaLaTeX
+%
+%
+% \usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
 %
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
@@ -33,21 +109,56 @@
 % \SetWatermarkColor[rgb]{0.7,0,0}
 %
 %
+%	theorems, definitions, etc
+%
 \theoremstyle{definition}
-\newtheorem{thm}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{notation}{Notation}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
 %
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 %
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+
+%
 %	title, etc
 %
 \title{A Few Notes on the Principle of Least Action \\ and Newton's Second Law of Motion}
-\author{David Meyer \\ dmm@1-4-5.net}
-\date{Last update: \today}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: May 7, 2020}}
 %
 %	be compatible
 %
@@ -98,7 +209,7 @@ f(0+\epsilon) = 1$ and $ \dfrac{d}{dx} f(0)  = \dfrac{d}{dx} f(0
 \bigskip
 \begin{figure}[H]
 \centering
-  \resizebox{0.75 \textwidth}{!} {                                      % resize the figure if you want
+  \resizebox{0.65 \textwidth}{!} {                                      % resize the figure if you want
   \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}, declare function={f(\x)=\x*\x + 1;}]  % define f(x)
      \draw[thick, ->] (-5,0) -- (5,0) coordinate [label={[xshift=0.30cm, below] $x$}];
      \draw[thick, ->] (0,-1) -- (0,5) coordinate [label={[xshift=-0.30cm, left] $f(x)$}];
@@ -638,13 +749,12 @@ L = KE - PE = \dfrac{1}{2} m \dot{x}^2 - \dfrac{1}{2} k x^2
 We need one more piece of the puzzle before we can solve for $x$
 as a function of time, the  \emph{Euler-Lagrange} equation: 
 
-\bigskip
+\medskip
 \begin{equation}
 \dfrac{d}{dt} \left ( \dfrac{\partial L}{\partial \dot{x}} \right ) -  \dfrac{\partial L}{\partial x} = 0
 \label{eqn:euler-lagrange}
 \end{equation}
 
-\bigskip
 \noindent
 Essentially the Euler-Lagrange equation is a constraint that the
 Lagrangian must satisfy in order for the principle of stationary
@@ -669,10 +779,11 @@ value of $L$. Recall that the Euler–Lagrange equation is
 \noindent
 So first we want to compute $\dfrac{\partial L}{\partial x} =
 \dfrac{\partial}{\partial x}  \bigg [ \dfrac{1}{2} m \dot{x}^2  -
-\dfrac{1}{2} k x^2 \bigg ]$. Since differentiation is a linear
-operation \cite{wiki:linearity_of_differentiation} and we know
+\dfrac{1}{2} k x^2 \bigg ]$. Since $\dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m
+\dot{x}^2  \bigg ]$ depends only on $\dot{x}$ and not $x$, we know
 that $\dfrac{\partial}{\partial x} \bigg [\dfrac{1}{2} m
-\dot{x}^2  \bigg ] = 0$ we can see that  
+\dot{x}^2  \bigg ] = 0$. In addition, since differentiation is a linear
+operator \cite{wiki:linearity_of_differentiation} we know that
 
 \bigskip
 \begin{equation*}
