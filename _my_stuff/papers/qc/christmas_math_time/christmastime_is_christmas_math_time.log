@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  7 NOV 2024 10:36
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  19 NOV 2024 08:56
  restricted system commands enabled.
  file:line:error style messages enabled.
 **christmastime_is_christmas_math_time.tex
@@ -732,10 +732,14 @@ tex))) (/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/pml3array.sty
 \l_hobby_npoints_int=\count285
 \l_hobby_draw_int=\count286
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/circuitikz/circuitikz.sty
-Package: circuitikz 2021/03/14{} The CircuiTikz circuit drawing package version
- 1.3.2
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
 
+(/usr/local/texlive/2021/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -743,7 +747,11 @@ File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowlength=\dimen279
 \pgfarrowwidth=\dimen280
 \pgfarrowlinewidth=\dimen281
-)
+)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2021/03/14{} The CircuiTikz circuit drawing package version
+ 1.3.2
+
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarybending.code.tex
 File: tikzlibrarybending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -987,6 +995,14 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip54
 \dth@everypar=\toks46
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
 
@@ -1074,7 +1090,7 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup6
+\symrsfs=\mathgroup9
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
@@ -1238,28 +1254,34 @@ Package: authblk 2001/02/27 1.3 (PWD)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen338
+\ar@mcellbox=\box87
+\extrarowheight=\dimen339
+\NC@list=\toks48
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box88
+)
+\everycr=\toks49
+\minrowclearance=\skip64
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count330
-\float@exts=\toks48
-\float@box=\box87
-\@float@everytoks=\toks49
-\@floatcapt=\box88
+\float@exts=\toks50
+\float@box=\box89
+\@float@everytoks=\toks51
+\@floatcapt=\box90
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/braket/braket.sty)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen338
-\ar@mcellbox=\box89
-\extrarowheight=\dimen339
-\NC@list=\toks50
-\extratabsurround=\skip62
-\backup@length=\skip63
-\ar@cellbox=\box90
-)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
@@ -1286,8 +1308,8 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_unit_prefix_base_int=\count345
 \l__siunitx_unit_prefix_gram_int=\count346
 \l__siunitx_number_product_int=\count347
-\c__siunitx_one_fill_skip=\skip64
-\l__siunitx_table_unit_align_skip=\skip65
+\c__siunitx_one_fill_skip=\skip65
+\l__siunitx_table_unit_align_skip=\skip66
 \l__siunitx_table_exponent_dim=\dimen343
 \l__siunitx_table_integer_dim=\dimen344
 \l__siunitx_table_mantissa_dim=\dimen345
@@ -1301,8 +1323,8 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_post_box=\box95
 \l__siunitx_table_mantissa_box=\box96
 \l__siunitx_table_result_box=\box97
-\l__siunitx_table_number_align_skip=\skip66
-\l__siunitx_table_text_align_skip=\skip67
+\l__siunitx_table_number_align_skip=\skip67
+\l__siunitx_table_text_align_skip=\skip68
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
@@ -1311,14 +1333,33 @@ Package: relsize 2013/03/29 ver 4.1
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip68
+\multirow@colwidth=\skip69
 \multirow@cntb=\count348
-\multirow@dima=\skip69
+\multirow@dima=\skip70
 \bigstrutjot=\dimen352
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/esvect.sty
 Package: esvect 
-\symesvector=\mathgroup7
+\symesvector=\mathgroup10
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip71
+\enit@outerparindent=\dimen353
+\enit@toks=\toks52
+\enit@inbox=\box98
+\enit@count@id=\count349
+\enitdp@description=\count350
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count351
+\cp@tempcnt=\count352
+LaTeX Info: Redefining \checkoddpage on input line 59.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bigints/bigints.sty
+Package: bigints 2010/02/15 Writing big integrals
+Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -1327,47 +1368,48 @@ Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
 Package: luamplib 2021/03/11 v2.20.7 mplib package for LuaTeX
 Lua module: luamplib 2021/03/11 2.20.7 Lua package to typeset Metapost with LuaT
 eX's MPLib.
-\mplibtmptoks=\toks51
-\everymplibtoks=\toks52
-\everyendmplibtoks=\toks53
-\mplibscratchbox=\box98
+\mplibtmptoks=\toks53
+\everymplibtoks=\toks54
+\everyendmplibtoks=\toks55
+\mplibscratchbox=\box99
 )
-\c@theorem=\count349
-\c@definition=\count350
-\c@proposition=\count351
-\c@lemma=\count352
-\c@example=\count353
-\c@remark=\count354
+\c@theorem=\count353
+\c@definition=\count354
+\c@proposition=\count355
+\c@lemma=\count356
+\c@example=\count357
+\c@remark=\count358
+\c@notation=\count359
 
 (./christmastime_is_christmas_math_time.aux)
 \openout1 = christmastime_is_christmas_math_time.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-18.
+61.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1405,17 +1447,17 @@ LaTeX Font Info:    ... okay on input line 118.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen353
-\scratchbox=\box99
-\nofMPsegments=\count356
-\nofMParguments=\count357
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen354
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
-\everyMPtoPDFconversion=\toks55
+\scratchcounter=\count360
+\scratchdimen=\dimen354
+\scratchbox=\box100
+\nofMPsegments=\count361
+\nofMParguments=\count362
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count363
+\MPscratchDim=\dimen355
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
+\everyMPtoPDFconversion=\toks57
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1429,20 +1471,20 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 118.
+ on input line 161.
 
-LaTeX Info: Redefining \celsius on input line 118.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 118
+LaTeX Info: Redefining \celsius on input line 161.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 161
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 118.
-Package gensymb Info: Using \upOmega for \ohm on input line 118.
+LaTeX Info: Redefining \ohm on input line 161.
+Package gensymb Info: Using \upOmega for \ohm on input line 161.
 
 Package gensymb Warning: Not defining \micro.
 
-Package hyperref Info: Link coloring OFF on input line 118.
+Package hyperref Info: Link coloring OFF on input line 161.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1453,17 +1495,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count361
+\c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 118.
-LaTeX Info: Redefining \pageref on input line 118.
-LaTeX Info: Redefining \nameref on input line 118.
+LaTeX Info: Redefining \ref on input line 161.
+LaTeX Info: Redefining \pageref on input line 161.
+LaTeX Info: Redefining \nameref on input line 161.
  (./christmastime_is_christmas_math_time.out)
 (./christmastime_is_christmas_math_time.out)
 \@outlinefile=\write4
 
 \openout4 = christmastime_is_christmas_math_time.out
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen356
+\caption@adjustwidth@linewidth=\dimen357
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1474,26 +1519,26 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 onary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 118
+LaTeX Font Info:    Trying to load font information for U+msa on input line 161
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 118
+LaTeX Font Info:    Trying to load font information for U+msb on input line 161
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
-8.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+1.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-118.
+161.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
@@ -1501,21 +1546,22 @@ File: uesvect.fd
 <images/infinite_gift.jpg, id=49, 1204.5pt x 680.5425pt>
 File: images/infinite_gift.jpg Graphic file (type jpg)
 <use images/infinite_gift.jpg>
-Package luatex.def Info: images/infinite_gift.jpg  used on input line 141.
+Package luatex.def Info: images/infinite_gift.jpg  used on input line 184.
 (luatex.def)             Requested size: 1204.49707pt x 680.54083pt.
-<images/gabriels_horn.jpg, id=53, 2033.5975pt x 1521.685pt>
-File: images/gabriels_horn.jpg Graphic file (type jpg)
-<use images/gabriels_horn.jpg>
-Package luatex.def Info: images/gabriels_horn.jpg  used on input line 173.
-(luatex.def)             Requested size: 2033.59256pt x 1521.6813pt.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./images/
-infinite_gift.jpg>] [2<./images/gabriels_horn.jpg>] [3]
+infinite_gift.jpg>]
+<images/gabriels_horn.jpg, id=72, 2033.5975pt x 1521.685pt>
+File: images/gabriels_horn.jpg Graphic file (type jpg)
+<use images/gabriels_horn.jpg>
+Package luatex.def Info: images/gabriels_horn.jpg  used on input line 216.
+(luatex.def)             Requested size: 2033.59256pt x 1521.6813pt.
+ [2<./images/gabriels_horn.jpg>] [3]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 401.
+(amsmath)                 on input line 444.
 
 [4]
 Missing character: There is no   (U+2007) in font cmr10!
@@ -1526,33 +1572,33 @@ Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
 Missing character: There is no   (U+2007) in font cmr10!
-Module luamplib Info: flushing figure 1 on input line 534
- [5]
-<images/first_six_triangular_numbers.png, id=169, 441.65pt x 370.38374pt>
+Module luamplib Info: flushing figure 1 on input line 577
+ [5] [6]
+<images/first_six_triangular_numbers.png, id=176, 441.65pt x 370.38374pt>
 File: images/first_six_triangular_numbers.png Graphic file (type png)
 <use images/first_six_triangular_numbers.png>
 Package luatex.def Info: images/first_six_triangular_numbers.png  used on input
- line 591.
+ line 634.
 (luatex.def)             Requested size: 441.64891pt x 370.38283pt.
-<images/tetrahedral_numbers.png, id=173, 691.58376pt x 558.085pt>
+<images/tetrahedral_numbers.png, id=180, 691.58376pt x 558.085pt>
 File: images/tetrahedral_numbers.png Graphic file (type png)
 <use images/tetrahedral_numbers.png>
-Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 613
+Package luatex.def Info: images/tetrahedral_numbers.png  used on input line 656
 .
 (luatex.def)             Requested size: 691.58206pt x 558.08365pt.
- [6<./images/first_six_triangular_numbers.png>]
-<images/christmas_stocking_theorem.jpg, id=188, 1750.54pt x 1238.6275pt>
+<images/christmas_stocking_theorem.jpg, id=184, 1750.54pt x 1238.6275pt>
 File: images/christmas_stocking_theorem.jpg Graphic file (type jpg)
 <use images/christmas_stocking_theorem.jpg>
 Package luatex.def Info: images/christmas_stocking_theorem.jpg  used on input l
-ine 650.
+ine 693.
 (luatex.def)             Requested size: 1750.53574pt x 1238.6245pt.
-
-Overfull \hbox (25.18285pt too wide) in paragraph at lines 691--692
+ [7<./images/first_six_triangular_numbers.png><./images/tetrahedral_numbers.png>
+]
+Overfull \hbox (25.18277pt too wide) in paragraph at lines 734--735
  [][][][] 
  []
 
-[7<./images/tetrahedral_numbers.png><./images/christmas_stocking_theorem.jpg>]
+[8<./images/christmas_stocking_theorem.jpg>]
 (./christmastime_is_christmas_math_time.bbl
 Underfull \hbox (badness 2334) in paragraph at lines 4--9
 []\TU/lmr/m/n/10 Brian Hayes.  Gauss’s Day of Reck-on-ing.  []$\TU/lmtt/m/n/1
@@ -1565,7 +1611,7 @@ Underfull \hbox (badness 7740) in paragraph at lines 19--24
 mtt/m/n/10 https://mathworld.wolfram.com/
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 58--64
 []\TU/lmr/m/n/10 Vishnu Vusirikala.  The Painter’s Para-dox.  []$\TU/lmtt/m/n
 /10 https://medium.com/nerd-[]for-[]tech/
@@ -1576,23 +1622,23 @@ Underfull \hbox (badness 2245) in paragraph at lines 92--99
 []\TU/lmr/m/n/10 Wikipedia Con-trib-u-tors.  Har-monic Se-ries (math-e-mat-ics) --- Wikipedia, The Free En-cy-clo-
  []
 
-) [9] (./christmastime_is_christmas_math_time.aux)
+[9]) [10] (./christmastime_is_christmas_math_time.aux)
 Package rerunfilecheck Info: File `christmastime_is_christmas_math_time.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 1067593A3B4970C13383811EF1638D76;1934.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54306 strings out of 478531
- 195344,2373549 words of node,token memory allocated
- 4782 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1039 attribute, 64 glue_sp
+ 55440 strings out of 478531
+ 195334,2373549 words of node,token memory allocated
+ 4787 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 1039 attribute, 65 glue_sp
 ec, 1039 attribute_list, 2 write, 16 pdf_action nodes
-   avail lists: 1:2,2:7598,3:2319,4:526,5:921,6:37,7:8611,8:123,9:7190,10:14,11:
-346
- 72369 multiletter control sequences out of 65536+600000
- 103 fonts using 8395287 bytes
- 132i,18n,128p,775b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
+   avail lists: 1:1,2:7940,3:3241,4:504,5:847,6:39,7:8128,8:136,9:7844,10:14,11:
+341
+ 73432 multiletter control sequences out of 65536+600000
+ 116 fonts using 9272831 bytes
+ 132i,19n,128p,775b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
@@ -1602,24 +1648,25 @@ lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-i
 talic.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10
 -regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
 n12-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
-n12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
-oman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on christmastime_is_christmas_math_time.pdf (9 pages, 528168 byte
-s).
+n9-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmro
+man12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/l
+mroman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on christmastime_is_christmas_math_time.pdf (10 pages, 532101 byt
+es).
 
-PDF statistics: 356 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 131072)
+PDF statistics: 369 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 

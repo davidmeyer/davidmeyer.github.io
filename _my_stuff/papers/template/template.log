@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  7 NOV 2024 12:40
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  19 NOV 2024 08:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **template.tex
@@ -1361,6 +1361,18 @@ LaTeX Info: Redefining \checkoddpage on input line 59.
 Package: bigints 2010/02/15 Writing big integrals
 Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 )
+(/usr/local/texlive/2021/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+)
+(/usr/local/texlive/2021/texmf-dist/tex/luatex/luamplib/luamplib.sty
+Package: luamplib 2021/03/11 v2.20.7 mplib package for LuaTeX
+Lua module: luamplib 2021/03/11 2.20.7 Lua package to typeset Metapost with LuaT
+eX's MPLib.
+\mplibtmptoks=\toks53
+\everymplibtoks=\toks54
+\everyendmplibtoks=\toks55
+\mplibscratchbox=\box99
+)
 \c@theorem=\count353
 \c@definition=\count354
 \c@proposition=\count355
@@ -1436,15 +1448,15 @@ LaTeX Font Info:    ... okay on input line 161.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count360
 \scratchdimen=\dimen354
-\scratchbox=\box99
+\scratchbox=\box100
 \nofMPsegments=\count361
 \nofMParguments=\count362
-\everyMPshowfont=\toks53
+\everyMPshowfont=\toks56
 \MPscratchCnt=\count363
 \MPscratchDim=\dimen355
 \MPnumerator=\count364
 \makeMPintoPDFobject=\count365
-\everyMPtoPDFconversion=\toks54
+\everyMPtoPDFconversion=\toks57
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1539,13 +1551,13 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55026 strings out of 478531
+ 55104 strings out of 478531
  100000,2373549 words of node,token memory allocated
  556 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 65 glue_spec,
  7 attribute_list, 2 write nodes
-   avail lists: 1:1,2:207,3:111,4:18,5:74,6:22,7:728,8:49,9:92,10:4,11:30
- 73136 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:207,3:111,4:18,5:74,6:22,7:730,8:49,9:92,10:4,11:30
+ 73194 multiletter control sequences out of 65536+600000
  82 fonts using 6667599 bytes
  111i,5n,128p,747b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
@@ -1556,7 +1568,7 @@ tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular
 ar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-re
 gular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17
 -regular.otf>
-Output written on template.pdf (1 page, 22462 bytes).
+Output written on template.pdf (1 page, 22516 bytes).
 
 PDF statistics: 79 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
