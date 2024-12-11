@@ -96,7 +96,9 @@
 \title{A Few Notes on Projective Geometry (WIP)}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
-\date{Last update: \today}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: January 15, 2018}}
+
 %
 %
 %
@@ -117,8 +119,131 @@ this multiplication. In this case $\mathcal{O}$ serves as the identity element. 
 \noindent
 So what is a projective plane? As we will see in Section \ref{sec:projective_plane}, a projective plane is a kind of (projective) geometry. 
 
-% \newpage
+\section{The Real Projective Line}
+\label{section:real_projective_line}
+The real projective line is the set of all lines that pass
+through the origin. One way to think about this is as the
+one-dimensional subspace of "rays" 
+\cite{youtube:vector_spaces_and_quantum_mechanics,wolfram:ray}. 
+This is shown on the left in Figure
+\ref{figure:real_projective_line_setup}.
 
+\bigskip
+\noindent
+\setstretch{1.25}{If we slide the red point along the $y = 1$
+line in Figure \ref{figure:real_projective_line_setup} the angle
+$\theta$ varies between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$ as
+$x$ varies between $-\infty$ and $\infty$. In particular, as $x
+\to \pm\infty$, $\theta \to \pm \frac{\pi}{2}$.  That is \par}
+
+\begin{equation*}
+   \lim\limits_{x \to \infty} \theta = \frac{\pi}{2} 
+\end{equation*}
+\noindent
+and
+\begin{equation*}
+   \lim\limits_{x \to -\infty} \theta = -\frac{\pi}{2} 
+\end{equation*}
+
+\medskip
+\noindent
+If we then look at the points $(x,\theta)$ you find that the real
+projective line can be seen as a circle. This is shown on the
+right in Figure \ref{figure:real_projective_line_setup}.
+%
+%
+%	A few parameters
+%
+\setlength			{\fboxsep} {0.50em}						% space between fcolorbox and content
+\setlength			{\fboxrule}{0.75pt}						% fcolorbox line thickness
+\def \scalefactor	{1.00}									% resizebox scale factor
+\def \minipagescale	{0.50}									% minipage scale factor
+\def \twidth		{\textwidth}							% point size of points drawn on the cirle
+\def \pointsize		{0.50pt}
+%
+%	Draw the picture
+%
+\begin{figure}[H]
+\centering
+\fcolorbox{black}{white} {
+  \begin{minipage}[t]{\minipagescale \textwidth}
+    \centering
+    \resizebox{\scalefactor \textwidth}{!}{
+      \begin{tikzpicture}[scale=3]
+      % Draw the axes
+        \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm]               {$x$};
+        \draw[]  (1.50,0)              node[above,xshift=0.25cm]                {$\lambda[1,0]$};
+        \draw[-] (0,-0.50) -- (0,1.50) node[right,xshift=0.20cm,yshift=-0.20cm] {$y$};
+        \draw[]  (0,1.50)              node[above]                              {$\lambda[0,1]$};
+        % Draw the y = 1 line
+        \draw [-] (-1.75,1) -- (1.75,1);
+        % Draw the y = x line
+        \draw [-] (-1.00,-1.00) -- (1.25,1.25) node[above,xshift=-0.25cm] 
+        		{$\lambda[x,1] = \lambda [\cos \theta, \sin \theta]$};
+        % Intersection of y = 1 and y = x
+        \fill [red] (1,1) circle (0.75pt);
+        \node [below,yshift=-0.1cm,xshift=0.25cm] at (1,1) {$(1,\frac{\pi}{4})$};
+                \node [right,xshift=-0.75cm] at (2,1) {$y = 1$};
+        % Draw theta
+        \draw [<-] (0.3,0.3) arc (45:90:0.42);
+        \node[] at (0.10,0.25) {$\theta$};
+        % Draw upper half of unit circle in blue
+        \draw [blue,thick] (1,0) arc (0:180:1);
+        % Draw bottom half of unit circle in dashed black
+        \draw [dashed,thick](-1,0) arc (180:360:1);
+        % Put some black points on the unit circle
+        \fill [black] (1,0)  circle (\pointsize); 
+        \fill [black] (-1,0) circle (\pointsize); 
+        \fill [black] (0,1)  circle (\pointsize);
+        \fill [black] (0,-1) circle (\pointsize);
+        % Draw a dot at the origin
+        \fill [red] (0,0) circle (0.75pt);
+        % Draw a few coordinates of interest
+        \draw (1,0)  node[below]                {$(1,0)$};
+        \draw (-1,0) node[below]                {$(-1,0)$};
+        \draw (0,1)  node[below,yshift=-0.10cm] {$(0,1)$};
+        \draw (0,-1) node[below]                {$(0,-1)$};
+      \end{tikzpicture}
+      }
+  \end{minipage}
+
+%
+%	Force the figures to be side by side
+%
+  \hfill
+%
+%	Scale the second image
+%  
+\def \scalefactor {0.775}
+\def \minipagescale	{0.50}									% minipage scale factor
+
+%
+%	Draw the second figure
+%
+   \begin{minipage}[t]{\minipagescale \textwidth}
+     \centering
+     \resizebox{\scalefactor \textwidth}{!}{
+        \begin{tikzpicture}[scale=3]
+           \draw [blue,thick] (0,0) circle (1); 
+           \node[right,xshift=0.20cm] at (1,0) {$(1,\frac{\pi}{4})$};
+           \node[above] at (0,1) {$(0,0)$};
+           \node[left,xshift=-0.20cm] at (-1,0) {$(-1,-\frac{\pi}{4})$};
+           \node[below,yshift=-0.15cm] at (0,-1) {$(-\infty,-\frac{\pi}{2};\infty,\frac{\pi}{2})$};
+           \node[] at (1,1) {$\mathbf{(x},\boldsymbol{\theta}\mathbf{)}$};
+           \fill [black] (1,0)  circle (\pointsize); 
+           \fill [black] (0,1)  circle (\pointsize); 
+           \fill [black] (-1,0) circle (\pointsize);
+           \fill [black] (0,-1) circle (\pointsize); 
+       \end{tikzpicture}
+     }
+   \end{minipage}
+  }
+  \caption{Real Projective Line Setup}
+  \label{figure:real_projective_line_setup}    
+\end{figure}
+%
+%
+%
 \section{Geometries and Projective Planes}
 \label{sec:projective_plane}
 In this section we will start by defining what a Geometry is and look at a few examples.
