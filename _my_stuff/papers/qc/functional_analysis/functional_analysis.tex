@@ -95,7 +95,8 @@
 \title{A Few Notes on Functional Analysis}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
-\date{Last update: \today}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: June 8, 2018}}
 %
 %
 %
@@ -324,13 +325,100 @@ shown in Figure \ref{fig:triangle_inequality}.
 %
 %
 %
+\bigskip
 \section{Conclusions}
+
+\renewcommand{\arraystretch}{1.00}
+\setlength {\fboxrule}{0.75pt}							% set the outside \fcolorbox line thickness
+\setlength {\fboxsep} {1.00em}							% get more space between \fcolorbox and content
 %
 %
 %
+\begin{figure}[H]										% build the figure
+  \centering											% center everything
+  \fcolorbox{blue}{white} {								% make the frame blue
+        \resizebox{1.0 \textwidth}{!} {
+		\begin{tikzpicture}
 %
 %
 %
+            \coordinate (O)    at (0.00,0.00);			% origin
+            \coordinate (IPSs) at (0.00,0.50);			% IPS origin
+            \coordinate (IPSd) at (5.0,0.75);			% IPS origin
+%
+%	Inner Product Spaces
+%
+			\draw (O) ellipse (1cm and 2cm) node [midway,below,yshift=-2.50cm] 
+							{$\text{\bf IPS $(X,\langle \cdot,\cdot \rangle)$}$};	
+			\draw[fill=gray!15] (O) circle (0.50) node [] {};
+%
+%	Normed Vector Spaces
+%	
+    		\draw [->] (IPSs) -- (IPSd) node [midway,above,xshift=-0.50,yshift=0.75cm] 
+							{$\color{red}{\text{\bf Induced norm}}$};
+		    \draw [draw=none] (IPSs) -- (IPSd) node [midway,above,xshift=-0.750,yshift=-3.750cm] {};
+    		\draw [->] (0,-0.5) -- (5.0,-0.75);
+    		\draw[draw=none] (3.5,0.50) -- (1.5,0.75) node [midway,above,yshift=-1.0cm] 
+							{$\norm{\mathbf{x}} \coloneqq \sqrt{\langle {\mathbf x},{\mathbf x} \rangle}$};
+    		\draw (5,0.0) ellipse (1cm and 2cm) node [midway,below,xshift=5.0cm,yshift=-2.50cm]
+							{$\text{\bf NVS $(X,\norm{\cdot})$}$};
+			\draw[fill=gray!15] (5.0,0) circle (0.750) node [] {};   
+
+%
+%	Metric Spaces
+%	
+    		\draw (10.50,0.0) ellipse (1cm and 2cm) node [midway,below,xshift=10.50cm,yshift=-2.5cm]
+							{$\text{\bf MS $(X,d(\cdot,\cdot))$}$};	
+    		\draw [->] (5,0.75) -- (10.50,0.75) node [midway,above,xshift=-0.75,yshift=0.60cm] 
+							{$\color{red}{\text{\bf Induced metric}}$};
+		    \draw [draw=none] (5,0.5) -- (10.0,0.75) node [midway,above,xshift=-0.50,yshift=-3.750cm] {};
+    		\draw [->] (5,-0.75) -- (10.50,-0.75);
+    		\draw[fill=gray!15] (10.50,0) circle (0.750) node [] {};
+		    \draw[draw=none] (5,0.50) -- (10.50,0.75) node [midway,above,yshift=-1.0cm] 
+		    				{$d(\mathbf{x},\mathbf{y}) \coloneqq \norm{\mathbf{x}-\mathbf{y}}$};
+ 
+%
+%	Topological spaces
+%  
+			\draw (16.5,0.0) ellipse (1cm and 2cm) node [midway,below,xshift=16.5cm,yshift=-2.5cm]
+							{$\text{\bf TS $(X,{\boldsymbol \tau_{d}})$}$};	
+			\draw [->] (10.50,0.75) -- (16.5,0.85) node [midway,above,yshift=0.50cm] 
+							{$\color{red}{\text{\bf Induced topology}}$};
+			\draw [draw=none] (10,0.5) -- (16.5,0.75) node [midway,above,xshift=0.50cm,yshift=-3.750cm] {};
+			\draw [->] (10.50,-0.75) -- (16.5,-0.85);
+			\draw[fill=gray!15] (16.5,0) circle (0.85) node [] {};   
+			\draw[draw=none] (10.50,0.50) -- (16.5,0.75) node [midway,above,yshift=-1.0cm] 
+						{${\boldsymbol \tau_d} \coloneqq \{B_{d}(\mathbf{u},\epsilon) \subseteq U\}$};
+		\end{tikzpicture}
+		}
+	}
+	\caption{Induced Norm, Metric, and Topology}
+\end{figure}
+
+\bigskip
+\setlength {\fboxsep} {0.50em}							% get more space between \fcolorbox and content
+\setlength {\fboxrule}{0.75pt}							% set the outside \fcolorbox line thickness
+\begin{figure}[H]										% build the figure
+  \centering											% center everything
+  \fcolorbox{black}{gray!5} {							% make the outside frame black
+	 \resizebox{1.00\textwidth}{!} {
+	    \begin{math}
+          \begin{array}{llllll}
+            {\bf IPS} &--& \text{Inner Product Spaces}	&&	(X,\langle {\bf x},{\bf y} \rangle)\\
+            {\bf NVS} &--& \text{Normed Vector Spaces}	&&	(X,\norm{\bf x}) = (X,\sqrt{\langle \bf {x}, \bf{x}} \rangle) \\
+            {\bf MS}  &--& \text{Metric Spaces}			&&	(X,d({\bf x},{\bf y})) = (X, \norm{{\bf x} - {\bf y}}) = 
+                                                			(X,\sqrt{\langle {\bf x} - {\bf y},{\bf x} - {\bf y}}\rangle)\\
+            {\bf TS}  &--& \text{Topological Spaces}	&&	(X, {\boldsymbol \tau_d)}, \text{ where ${\boldsymbol \tau_d = }$ 
+            												\{open subsets of $(X, d)$\}}
+           \end{array}
+        \end{math}
+     }
+  }
+\end{figure}
+%
+%
+%
+\bigskip
 \section*{Acknowledgements}
 %
 %	LaTeX source on overleaf.com
