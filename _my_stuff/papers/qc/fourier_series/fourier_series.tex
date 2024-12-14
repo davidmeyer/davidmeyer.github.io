@@ -194,7 +194,7 @@ itself.
      \hline
      {\LARGE \bf Orthonormal Basis $\left (\mathbb{R}^3 \right )$} 
                                                 & $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
-                                                & $\{1, \cos mt, \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ \\
+                                                & $\{{\bf 1}, \cos mt, \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ \\
 [10pt]
      \hline
      {\LARGE \bf Representation of a Vector in the Basis} 		
@@ -217,7 +217,7 @@ itself.
  \caption{Vector Spaces: Linear Algebra vs. Fourier Series}
  \label{table:vector_spaces}
 \end{table}
- 
+
 \smallskip
 \subsection{Orthonormal Bases and the Fourier Series}
 Some people (specifically Rahul Narain (@narain@mathstodon.xyz))
@@ -231,12 +231,12 @@ Ok, but why is Narain arguing this? My guess is as follows:
 First, we know that the inner product of a vector $\mathbf{u}$ 
 with itself equals 1 ($\langle \mathbf{u},\mathbf{u} \rangle = 
 1$). However, for the Fourier series (where 1 represents the 
-constant function $1 = f(t)$) we have $\langle 1,1 \rangle = 2$. 
-Why? We can see this in Equation (\ref{table:vector_spaces}) 
+constant function $1 = f(t)$) we have $\langle {\bf 1},{\bf 1}
+\rangle = 2$. Why? We can see this in Equation (\ref{table:vector_spaces}) 
 and in a bit more detail in Figure \ref{figure:fourier_inner_product}.
 
 \begin{equation}
-	\langle 1,1 \rangle											= 
+	\langle {\bf 1},{\bf 1} \rangle											= 
 		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt	= 
 		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt				= 
 		\frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}				= 
@@ -252,7 +252,7 @@ and in a bit more detail in Figure \ref{figure:fourier_inner_product}.
   \fcolorbox{black}{white} {								% make the frame blue
     \begin{math}
       \begin{array}{llll}
-        \langle 1,1 \rangle
+        \langle {\bf 1},{\bf 1} \rangle
         &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} f(t) f(t) \, dt}
      	   &\hspace{2em} \mathrel{\#} \text{since in $1 = f(t)$ and the 
 										 definition of the inner product 
@@ -288,12 +288,12 @@ nt, \sin nt \rangle = 1$.
  
 \bigskip
 \noindent
- We can also see that the vectors in the basis $\{1, \cos mt,
+ We can also see that the vectors in the basis $\{{\bf 1}, \cos mt,
  \sin nt\}, m,n \in \mathbb{N}\backslash\{0\}$ are 
  orthogonal:
  
 \begin{equation*}
-  \langle 1,\sin nt \rangle = {\displaystyle
+  \langle {\bf 1},\sin nt \rangle = {\displaystyle
   \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \sin nt \, dt} =
   {\displaystyle \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi} \sin nt
   \, dt}  = 0
@@ -301,8 +301,17 @@ nt, \sin nt \rangle = 1$.
   
 \smallskip
 \noindent
-Similarly, $\langle 1,\cos nt \rangle = \langle \cos mt,\sin nt
+Similarly, $\langle {\bf 1},\cos nt \rangle = \langle \cos mt,\sin nt
 \rangle = 0$.
+
+
+\bigskip
+\noindent
+Note that some authors set ${\displaystyle \langle {\bf 1},
+{\bf 1} \rangle = \int\limits_{0}^{2\pi} dt = 2 \pi}$
+\cite{quora:fourier_basis_functions}.
+ 
+
 
 %
 %
