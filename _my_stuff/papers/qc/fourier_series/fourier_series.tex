@@ -140,7 +140,8 @@
 \title{A Few Notes on the Fourier Series}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
-\date{Last update: \today}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: October 3, 2019}}
 %
 %
 %
@@ -222,13 +223,18 @@ itself.
 Some people (specifically Rahul Narain (@narain@mathstodon.xyz))
 feel that the orthonormal basis for the Fourier series should be
 $\{1,\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
-\backslash \{0\}$. Ok, but why? Well, notice that $\langle
-\hat{\mathbf{u}},\hat{\mathbf{u}} \rangle = 1$ for all unit
-vectors $\hat{\mathbf{u}}$. However, $\langle 1,1 \rangle = 2$, 
-since
+\backslash \{0\}$. 
 
- 
-\medskip
+\bigskip
+\noindent
+Ok, but why is Narain arguing this? My guess is as follows:
+First, we know that the inner product of a vector $\mathbf{u}$ 
+with itself equals 1 ($\langle \mathbf{u},\mathbf{u} \rangle = 
+1$). However, for the Fourier series (where 1 represents the 
+constant function $1 = f(t)$) we have $\langle 1,1 \rangle = 2$. 
+Why? We can see this in Equation (\ref{table:vector_spaces}) 
+and in a bit more detail in Figure \ref{figure:fourier_inner_product}.
+
 \begin{equation}
 	\langle 1,1 \rangle											= 
 		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt	= 
@@ -239,34 +245,38 @@ since
 		2
 \label{eqn:1}
 \end{equation}
- 
-\noindent
-Why does Equation (\ref{table:vector_spaces}) hold? Consider
+
 
 \bigskip
-\begin{math}
-  \begin{array}{llll}
-     \langle 1,1 \rangle
-    &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} f(t) f(t) \, dt}
-     	&\hspace{2em} \mathrel{\#} \text{since in $1 = f(t)$ and the 
+\begin{figure}[H]
+  \fcolorbox{black}{white} {								% make the frame blue
+    \begin{math}
+      \begin{array}{llll}
+        \langle 1,1 \rangle
+        &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} f(t) f(t) \, dt}
+     	   &\hspace{2em} \mathrel{\#} \text{since in $1 = f(t)$ and the 
 										 definition of the inner product 
 										 (Table \ref{table:vector_spaces})} \\
-    &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt}
-     	&\hspace{2em} \mathrel{\#} \text{since in $f(t) = 1$ for all 
+        &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt}
+     	   &\hspace{2em} \mathrel{\#} \text{since in $f(t) = 1$ for all 
 										 $t \in \mathbb{R}$} \\
-	&=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt}
-		&\hspace{2em} \mathrel{\#} \text{since $1 \cdot 1 = 1$} \\
-	&=& {\displaystyle \frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}}
-		&\hspace{2em} \mathrel{\#} \text{by the FToC \cite{ftoc}} \\
-	&=& {\displaystyle \frac{1}{\pi} \left (\pi - (-\pi) \right )}
-		&\hspace{2em} \mathrel{\#} \text{evaluate at the end points} \\
-	&=& {\displaystyle \frac{1}{\pi} 2\pi}
-		&\hspace{2em} \mathrel{\#} \text{simplify} \\
-	&=& {\displaystyle 2}
-		&\hspace{2em} \mathrel{\#} \langle 1,1 \rangle = 2 \; 
+	   &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt}
+	  	   &\hspace{2em} \mathrel{\#} \text{since $1 \cdot 1 = 1$} \\
+	   &=& {\displaystyle \frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}}
+		   &\hspace{2em} \mathrel{\#} \text{by the FToC \cite{ftoc}} \\
+	   &=& {\displaystyle \frac{1}{\pi} \left (\pi - (-\pi) \right )}
+		   &\hspace{2em} \mathrel{\#} \text{evaluate at the end points} \\
+	   &=& {\displaystyle \frac{1}{\pi} 2\pi}
+		   &\hspace{2em} \mathrel{\#} \text{simplify} \\
+	   &=& {\displaystyle 2}
+		   &\hspace{2em} \mathrel{\#} \langle 1,1 \rangle = 2 \; 
 								   \cite{quora:fourier_basis_functions}
-  \end{array}
-\end{math}
+     \end{array}
+   \end{math}
+ }
+ \caption{Value of $\langle 1,1 \rangle$ for Fourier Series}
+ \label{figure:fourier_inner_product}
+\end{figure}
 
 \bigskip
 \noindent
