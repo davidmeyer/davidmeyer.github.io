@@ -160,7 +160,7 @@ the constant function $f(x) = c$, for all $x$, when the context
 indicates that $c$ is a function. On the other hand, the notation
 $c \cdot c$ denotes the scalar multiplication of the scalar value 
 $c$ with itself. Consequentially, I will use {\bf 1} to represent 
-the constant function $f(x) = {\bf 1}$ and use context to disambiguate 
+the constant function $f(x) = 1$ and use context to disambiguate 
 the function $f(x)$ from the scalar value $1$. For example, in 
 Equation (\ref{eqn:1}), $\langle {\bf 1},{\bf 1} \rangle = \langle 
 f(x),f(x) \rangle$, while the notation $1 \cdot 1$ represents the scalar 
@@ -221,7 +221,7 @@ multiplication of the scalar value 1 with itself.
 \subsection{Orthonormal Bases and the Fourier Series}
 Some people (specifically Rahul Narain (@narain@mathstodon.xyz))
 feel that the orthonormal basis for the Fourier series should be
-$\{1,\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
+$\{{\bf 1},\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
 \backslash \{0\}$. 
 
 \bigskip
@@ -230,7 +230,7 @@ Ok, but why is Narain arguing this? My guess is as follows:
 First, we know that the inner product of a vector $\mathbf{u}$ 
 with itself equals 1 ($\langle \mathbf{u},\mathbf{u} \rangle = 
 1$). However, for the Fourier series (where {\bf 1} represents the 
-constant function ${\bf 1} = f(t)$) we have $\langle {\bf 1},{\bf 1}
+constant function $f(t) = 1$) we have $\langle {\bf 1},{\bf 1}
 \rangle = 2$. Why? We can see this in Equation (\ref{table:vector_spaces}) 
 and in a bit more detail in Figure \ref{figure:fourier_inner_product}.
 
@@ -253,7 +253,7 @@ and in a bit more detail in Figure \ref{figure:fourier_inner_product}.
       \begin{array}{llll}
         \langle {\bf 1},{\bf 1} \rangle
         &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} f(t) f(t) \, dt}
-     	   &\hspace{2em} \mathrel{\#} \text{since in $1 = f(t)$ and the 
+     	   &\hspace{2em} \mathrel{\#} \text{since {\bf 1} represents $f(t) = 1$ and the 
 										 definition of the inner product 
 										 (Table \ref{table:vector_spaces})} \\
         &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt}

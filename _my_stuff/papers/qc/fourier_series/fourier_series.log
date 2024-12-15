@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  14 DEC 2024 14:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  15 DEC 2024 06:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1466,7 +1466,7 @@ File: uesvect.fd
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.80339pt too wide) in paragraph at lines 275--276
+Overfull \hbox (47.33115pt too wide) in paragraph at lines 275--276
 [][][][] 
  []
 
@@ -1483,7 +1483,7 @@ Package rerunfilecheck Info: File `fourier_series.out' has not changed.
 Here is how much of TeX's memory you used:
  52913 strings out of 478994
  1332867 string characters out of 5858184
- 1963442 words of memory out of 5000000
+ 1963441 words of memory out of 5000000
  69572 multiletter control sequences out of 15000+600000
  420523 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1503,7 +1503,7 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fourier_series.pdf (3 pages, 166792 bytes).
+Output written on fourier_series.pdf (3 pages, 167019 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
