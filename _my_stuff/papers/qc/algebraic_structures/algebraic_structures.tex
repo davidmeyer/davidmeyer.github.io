@@ -93,19 +93,19 @@
 \begin{center}
 \begin{table}[H]
 \scalebox{0.80}{
-\begin{tabular}{l | c | c | c | c |  c | c}
+\begin{tabular}{l | c | c | c | c | c | c}
 {{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
                                 & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
                                 & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
 \hline\hline					% separate column names from rows
 Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
-Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup plus identity $\in S$ \\
-Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid plus inverse $\in S$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup with identity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid with inverses: $a \in S \Rightarrow a^{-1} \in S$ \\
 Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
 $\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
 $\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
 Division Ring                   & \checkmark & \checkmark $(+,*)$      &\checkmark $(+,*)$  & \checkmark
-                                             & \checkmark $(+)$  & Ring with $r \in \text{Ring}\backslash\{0\} \Rightarrow r^{-1} \in \text{Ring}$ \\
+                                             & \checkmark $(+)$  & Ring with inverses: $a \in \text{R}\backslash\{0\} \Rightarrow a^{-1} \in \text{R}$ \\
 Field                           & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
                                              & Division ring with commutative multiplication \\
 Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
