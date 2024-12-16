@@ -90,13 +90,14 @@
 %
 \section{A Few Algebraic Structures and Their Features}
 
+\setlength{\tabcolsep}{0.50em}
 \begin{center}
 \begin{table}[H]
-\scalebox{0.80}{
+\scalebox{0.75}{
 \begin{tabular}{l | c | c | c | c | c | c}
-{{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
-                                & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
-                                & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
+{{\large \bf Structure}}        & $\textbf{\large ABO}^{\ref{item:abo}}$            & {\large \bf Identity}
+                                & {\large \bf Inverse}                              & {\large \bf $\text{Distributive}^{\ref{item:distributive}}$}
+                                & {\large\bf $\text{Commutative}^{\ref{item:commutative}}$}   & {\bf Comments} \\
 \hline\hline					% separate column names from rows
 Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
 Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup with identity $\in S$ \\
@@ -110,9 +111,10 @@ Field                           & \checkmark & \checkmark $(+,*)$      & \checkm
                                              & Division ring with commutative multiplication \\
 Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
                                              & Abelian group under $+$, scalars $\in$ Field \\
-Module		                & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
-                                             & Abelian group under $+$, scalars $\in$ Ring
-
+Module		                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Ring \\
+Algebra over a Field            & yes/no & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Vector space + bilinear $\text{product}^{\ref{item:bilinear_map}}$  \\
 \end{tabular}}
 \caption{A Few Algebraic Structures and Their Features}
 \label{tab:algebraic_structures}
@@ -120,10 +122,11 @@ Module		                & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)
 \end{center}
 
 \noindent
-\subsection{Abbreviations}
+\subsection{Definitions}
 
 \begin{enumerate}
 \item \textbf{ABO:} Associative Binary Operation 
+\label{item:abo}
 \begin{itemize}
 \item $(x \circ y) \circ z = x \circ  (y \circ z)$  
       for all $x, y, z \in S$
@@ -132,6 +135,7 @@ Module		                & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)
 \end{itemize}
 
 \item \textbf{Distributive:} Distributive Property 
+\label{item:distributive}
 \begin{itemize}
 \item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
                                    all $x, y, z \in S$
@@ -142,10 +146,56 @@ Module		                & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)
 \end{itemize}
 
 \item \textbf{Commutative:} Commutative Property
+\label{item:commutative}
 \begin{itemize}
 \item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
 \end{itemize}
+
+\item \textbf{Bilinear Map:} 
+\label{item:bilinear_map}
+A bilinear map is a function combining elements of two vector
+spaces to yield an element of a third vector space, and is linear
+in each of its arguments \cite{wikipedia:bilinear_map}.  Matrix
+multiplication is an example.
+
+\bigskip
+\noindent
+More specifically, a bilinear map is a function \( B: V \times W
+\to Z \) such that for all \( v_1, v_2 \in V \), \( w_1, w_2 \in
+W \), and scalars \( \alpha \in \mathbb{F} \):
+
+\[
+B(\alpha v_1 + v_2, w) = \alpha B(v_1, w) + B(v_2, w)
+\]
+and
+\[
+B(v, \alpha w_1 + w_2) = \alpha B(v, w_1) + B(v, w_2)
+\]
+
+\noindent
+Note that it may be the case that $V=W=Z$.
+
+\bigskip 
+\noindent
+Matrix multiplication is an example of a bilinear map because it
+satisfies the key properties of bilinearity: linearity in each
+argument.
+
+\bigskip
+\noindent
+Consider the multiplication of two matrices $A$ and $B$ where $A
+\in M(m,n)$ and $B \in M(n,p)$, producing a matrix $C = AB \in
+M(m,p)$. Matrix multiplication is linear in the first argument
+because for any matrices $A_1, A_2 \in M(m, n)$ and scalar
+$\alpha$ we have $(\alpha A_1 + A_2)B = \alpha A_1B +
+A_2B$. Similarly, matrix multiplication is linear in the second
+argument because for any matrices $B_1, B_2 \in M(n, p)$ and
+scalar $\alpha$ we have $A(\alpha B_1 + B_2) = \alpha AB_1 +
+AB_2$.
+
+
 \end{enumerate}
+
 
 
 \noindent

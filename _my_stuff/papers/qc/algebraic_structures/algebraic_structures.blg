@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: algebraic_structures.aux
 The style file: plain.bst
 Database file #1: qc.bib
-You've used 1 entry,
+You've used 2 entries,
             2118 wiz_defined-function locations,
-            503 strings with 4219 characters,
-and the built_in function-call counts, 237 in all, are:
-= -- 19
-> -- 7
+            509 strings with 4435 characters,
+and the built_in function-call counts, 454 in all, are:
+= -- 41
+> -- 14
 < -- 0
-+ -- 3
-- -- 2
-* -- 12
-:= -- 47
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 3
++ -- 6
+- -- 4
+* -- 18
+:= -- 84
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 12
-empty$ -- 23
-format.name$ -- 2
-if$ -- 47
+cite$ -- 2
+duplicate$ -- 19
+empty$ -- 45
+format.name$ -- 4
+if$ -- 95
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 2
 missing$ -- 2
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 8
+newline$ -- 14
+num.names$ -- 4
+pop$ -- 16
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 6
 quote$ -- 0
-skip$ -- 6
+skip$ -- 12
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 10
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
+type$ -- 6
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 12
+while$ -- 4
+width$ -- 3
+write$ -- 24
