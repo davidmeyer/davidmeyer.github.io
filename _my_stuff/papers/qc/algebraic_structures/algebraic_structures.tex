@@ -166,36 +166,24 @@ More specifically, a bilinear map is a function \( B: V \times W
 \to Z \) such that for all \( v_1, v_2 \in V \), \( w_1, w_2 \in
 W \), and scalars \( \alpha \in \mathbb{F} \):
 
-\[
-B(\alpha v_1 + v_2, w) = \alpha B(v_1, w) + B(v_2, w)
-\]
+\begin{center}
+  \begin{math}
+     B(\alpha v_1 + v_2, w) = \alpha B(v_1, w) + B(v_2, w)
+  \end{math}
+\end{center}
+
+\vspace{-0.25em}
 and
-\[
-B(v, \alpha w_1 + w_2) = \alpha B(v, w_1) + B(v, w_2)
-\]
+\vspace{-0.75em}
+
+\begin{center}
+  \begin{math}
+     B(v, \alpha w_1 + w_2) = \alpha B(v, w_1) + B(v, w_2)
+  \end{math}
+\end{center}
 
 \noindent
 Note that it may be the case that $V=W=Z$.
-
-\bigskip 
-\noindent
-Matrix multiplication is an example of a bilinear map because it
-satisfies the key properties of bilinearity: linearity in each
-argument.
-
-\bigskip
-\noindent
-Consider the multiplication of two matrices $A$ and $B$ where $A
-\in M(m,n)$ and $B \in M(n,p)$, producing a matrix $C = AB \in
-M(m,p)$. Matrix multiplication is linear in the first argument
-because for any matrices $A_1, A_2 \in M(m, n)$ and scalar
-$\alpha$ we have $(\alpha A_1 + A_2)B = \alpha A_1B +
-A_2B$. Similarly, matrix multiplication is linear in the second
-argument because for any matrices $B_1, B_2 \in M(n, p)$ and
-scalar $\alpha$ we have $A(\alpha B_1 + B_2) = \alpha AB_1 +
-AB_2$.
-
-
 \end{enumerate}
 
 
