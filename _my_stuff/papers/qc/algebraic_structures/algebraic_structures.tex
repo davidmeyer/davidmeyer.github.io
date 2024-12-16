@@ -80,7 +80,8 @@
 %
 \title{A Note on Algebraic Structures}
 \author{David Meyer \\ dmm613@gmail.com}
-\date{Last update: \today}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: May 8, 2018}}
 %
 \begin{document}
 \maketitle
@@ -91,7 +92,7 @@
 
 \begin{center}
 \begin{table}[H]
-\scalebox{0.83}{
+\scalebox{0.80}{
 \begin{tabular}{l | c | c | c | c |  c | c}
 {{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
                                 & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
@@ -103,11 +104,13 @@ Group                           & \checkmark & \checkmark & \checkmark & N/A    
 Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
 $\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
 $\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
-$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
-                                             & Abelian group under $+$ and $*$  \\
+Division Ring                   & \checkmark & \checkmark $(+,*)$      &\checkmark $(+,*)$  & \checkmark
+                                             & \checkmark $(+)$  & Ring with $r \in \text{Ring}\backslash\{0\} \Rightarrow r^{-1} \in \text{Ring}$ \\
+Field                           & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
+                                             & Division ring with commutative multiplication \\
 Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
                                              & Abelian group under $+$, scalars $\in$ Field \\
-Module		                & \checkmark & \checkmark $(+,*)$          & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+Module		                & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
                                              & Abelian group under $+$, scalars $\in$ Ring
 
 \end{tabular}}
