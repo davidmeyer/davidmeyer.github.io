@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}The Infinite Gift and Gabriel's Horn}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Painter's Paradox}{3}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Fermat's Christmas Theorem}{3}{section.3}%
+\contentsline {section}{\numberline {4}The 12 Days of Christmas}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}How many gifts are received each day and what is the total?}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Pascal's triangle}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Geometric interpretations}{7}{subsection.4.3}%
+\contentsline {section}{\numberline {5}The Christmas Stocking Theorem}{8}{section.5}%
+\contentsline {section}{\numberline {6}Just For (More) Fun}{9}{section.6}%
