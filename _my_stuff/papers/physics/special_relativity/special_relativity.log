@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  23 DEC 2024 13:11
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  23 DEC 2024 13:52
  restricted system commands enabled.
  file:line:error style messages enabled.
 **special_relativity.tex
@@ -1551,7 +1551,7 @@ Package rerunfilecheck Info: File `special_relativity.out' has not changed.
 )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 403 ({)
+### simple group (level 1) entered at line 404 ({)
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
@@ -1560,7 +1560,7 @@ Here is how much of LuaTeX's memory you used:
  597 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 13 attribute, 67 glue_spec
 , 13 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1893,3:948,4:36,5:241,6:29,7:4432,8:29,9:672,10:12,11:184
+   avail lists: 1:1,2:1849,3:928,4:36,5:238,6:36,7:4215,8:27,9:672,10:12,11:260
  73313 multiletter control sequences out of 65536+600000
  111 fonts using 8619927 bytes
  111i,14n,128p,757b,858s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1580,10 +1580,10 @@ cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on special_relativity.pdf (3 pages, 95867 bytes).
+Output written on special_relativity.pdf (3 pages, 96072 bytes).
 
-PDF statistics: 149 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+PDF statistics: 150 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
