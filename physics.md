@@ -65,7 +65,7 @@
        Notes on the Dual Beam Splitter Experiment </a>
 <br>
 <hr>
-<i>Last Update: 10.08.2022 by
+<i>Last Update: 12.24.2024 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
