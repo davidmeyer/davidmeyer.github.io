@@ -10,6 +10,12 @@
 -->
 <h2>Notes on various physics topics</h2>
 
+<li><a href="./special_relativity.pdf" 
+       target="_blank" 
+       rel="noopener noreferrer">
+	A Few Notes on Special Relativity</a>
+<br>
+
 <li><a href="./maxwells_equations.pdf" 
        target="_blank" 
        rel="noopener noreferrer">
