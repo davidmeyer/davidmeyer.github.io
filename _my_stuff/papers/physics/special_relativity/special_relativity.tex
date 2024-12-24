@@ -34,7 +34,7 @@
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
 \usepackage{tikz-cd}
-\tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
+\tikzcdset{every arrow/.append style={-latex}}
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %
@@ -49,23 +49,23 @@
 \usepackage{mathrsfs}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{alltt}
 \usepackage{xcolor}
-\usepackage{colortbl}													% \rowcolor{yellow!75} etc
+\usepackage{colortbl}							% \rowcolor{yellow!75} etc
 \usepackage{float}
 \usepackage{braket}
 \usepackage{siunitx}
 \usepackage{relsize}
 \usepackage{multirow}
 \usepackage{esvect}
-\usepackage{enumitem}													% use characters instead of numbers in enumerate
-\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{enumitem}							% use characters instead of numbers in enumerate
+\usepackage{changepage}         					% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
 \usepackage{bigints}
-\usepackage{multirow}													% \multirow and \multicolumn
-\usepackage{enumitem}													% change bullets in \begin{enumerate}
+\usepackage{multirow}							% \multirow and \multicolumn
+\usepackage{enumitem}							% change bullets in \begin{enumerate}
 %
 %	lualatex
 %
@@ -190,7 +190,7 @@ special theory of relativity.  It refers to the effect where time
 appears to pass more slowly for an observer in motion relative to
 a stationary observer. In simpler terms, a moving clock ticks
 more slowly compared to a clock that is at rest, as observed by
-someone who is not moving with the clock.
+someone who is not moving with the clock \cite{physics:spacetime_hughes}.
 
 \bigskip
 \noindent
@@ -213,43 +213,50 @@ though the train car is moving with velocity $v$).
 \vspace{0.65em}
 \begin{figure}[H]
   \centering
-    \resizebox{0.75 \textwidth}{!} {      % resize the figure if you want
+    \resizebox{0.75 \textwidth}{!} {                                    % resize the figure if you want
       \begin{tikzpicture}
-% Train car
-        \draw[thick] (0,0) rectangle (6,3); % main body
-%\draw[thick] (1,0) -- (1,-0.5);     % left wheel connector
-%\draw[thick] (5,0) -- (5,-0.5);     % right wheel connector
-        \draw[thick] (0.5,-0.5) circle (0.5cm); % left wheel
-        \draw[thick] (5.5,-0.5) circle (0.5cm); % right wheel
-        \draw[draw=none] (6,3) -- (6,0) node[below, right] {$I$}; % right wheel
-% Observer inside
-        \draw[thick] (4,1.5) circle (0.35cm);    % head
-        \draw[thick] (4,1.15) -- (4,0.5);         % body
-        \draw[thick] (4,0.5) -- (3.5,0);       % left leg
-        \draw[thick] (4,0.5) -- (4.5,0);       % right leg
-        \draw[thick] (4,0.8) -- (3.5,1.2);     % left arm
-        \draw[thick] (4,0.8) -- (4.5,1.2);     % right arm
-% Light source with smaller edges (rectangle)
-        \draw[fill=yellow] (1.60,3) rectangle (2.4,2.7); % light source as a rectangle
+%
+%       Draw the train car
+%
+        \draw[thick] (0,0) rectangle (6,3);                             % main body
+        \draw[thick] (0.5,-0.5) circle (0.5cm);                         % left wheel
+        \draw[thick] (5.5,-0.5) circle (0.5cm);                         % right wheel
+        \draw[draw=none] (6,3) -- (6,0) node[below, right] {$I$};
+%
+%       Draw the observer inside
+%
+        \draw[thick] (4,1.5) circle (0.35cm);                           % head
+        \draw[thick] (4,1.15) -- (4,0.5);                               % body
+        \draw[thick] (4,0.5) -- (3.5,0);                                % left leg
+        \draw[thick] (4,0.5) -- (4.5,0);                                % right leg
+        \draw[thick] (4,0.8) -- (3.5,1.2);                              % left arm
+        \draw[thick] (4,0.8) -- (4.5,1.2);                              % right arm
+%
+%       Draw the light source with smaller edges (rectangle)
+%
+        \draw[fill=yellow] (1.60,3) rectangle (2.4,2.7);                % light source as a rectangle
         \node[above] at (2.2,3.0) {Light Source};
-% Detector
-        \draw[fill=blue!50] (1.7,0.2) rectangle (2.3,0); % detector completely inside the car
+%
+%       Draw the detector
+%
+        \draw[fill=blue!50] (1.7,0.2) rectangle (2.3,0);                % detector completely inside the car
         \node[below] at (2,-0.05) {Detector};
-% Light beam (vertical line)
-        \draw[->,dashed, thick, red] (2,2.7) -- (2,0.2); % vertical light beam
-%\draw[->,dashed, red, decorate, decoration={zigzag, amplitude=3pt}] (2,2.7) -- (2,0.2);
-% Height label (h) outside the car
+%
+%       Draw the light beam (vertical line)
+%
+        \draw[->,dashed, thick, red] (2,2.7) -- (2,0.2);                % vertical light beam
         \draw[<->, thick] (-0.75,3) -- (-0.75,0) node[midway, left] {\(h\)};
-% Dotted lines parallel to the ground
-        \draw[dotted, thick] (0,3) -- (-1,3); % top dotted line
-        \draw[dotted, thick] (0,0) -- (-1,0); % bottom dotted line
-% Velocity vector
+        \draw[dotted, thick] (0,3) -- (-1,3);                           % top dotted line
+        \draw[dotted, thick] (0,0) -- (-1,0);                           % bottom dotted line
+%
+%       Draw the velocity vector
+%
         \draw[->, thick] (6.5,1.5) -- (8.5,1.5) node[midway, above] {\(v\)}; 
-% Ground
+%
+%
+%       Draw the ground
         \draw[thick] (-1,-1) -- (9,-1); % ground line
-%\draw[thick] (1,-1) -- (1,-1.5); % left ground support
-%\draw[thick] (5,-1) -- (5,-1.5); % right ground support
-\end{tikzpicture}
+      \end{tikzpicture}
    }
  \caption{Observer at rest with respect to inertial frame of reference $I$}
  \label{figure:observer_at_rest}
@@ -266,13 +273,14 @@ light source to the detector is
   \begin{array}{llll}
      h
      &=& c \Delta t_0 					
-     		&\hspace{2em} \mathrel{\#} \Delta t_0 \text{ is the time for light to travel from the source to the detector} \\
+     		&\hspace{2em} \mathrel{\#} \Delta t_0 
+		                   \text{ is the time for light to travel from the 
+		                         source to the detector} \\
 [10pt]
 	 &\Rightarrow& \Delta t_0 = \dfrac{h}{c} 
 	 		&\hspace{2em} \mathrel{\#} \text{solve for $\Delta t_0$}
   \end{array}
 \end{equation*}
-
 
 \noindent
 Now consider the same experimental setup as in Figure
@@ -283,63 +291,67 @@ $I^{\prime}$.
 \vspace{0.75em}
 \begin{figure}[H]
   \centering
-  \resizebox{0.75 \textwidth}{!} {                                                                      % resize the figure if you want
-\begin{tikzpicture}
-
-% Train car moved by delta x
-\draw[thick] (0,0) rectangle (6,3); % main body
-% \draw[thick] (1,0) -- (1,-0.5);     % left wheel connector
-% \draw[thick] (5,0) -- (5,-0.5);     % right wheel connector
-\draw[thick] (0.5,-0.5) circle (0.5cm); % left wheel
-\draw[thick] (5.5,-0.5) circle (0.5cm); % right wheel
-
-% fix this
-% External observer outside the car, in the same position but relative to the moved train
-\draw[thick] (8,0.5) circle (0.5cm);    % head
-\draw[draw=none] (8,0.35) -- (8,0.2) node [above] {$O$};         % observer O
-%\draw[thick] (8,0.35) -- (8,0.2);         % body
+  \resizebox{0.75 \textwidth}{!} {                                              % resize the figure if you want
+     \begin{tikzpicture}
+%
+%       Draw a train car moved by delta x
+%
+        \draw[thick] (0,0) rectangle (6,3);                                     % main body
+        \draw[thick] (0.5,-0.5) circle (0.5cm);                                 % left wheel
+        \draw[thick] (5.5,-0.5) circle (0.5cm);                                 % right wheel
+        \draw[draw=none] (6,3) -- (6,0) node[below, right] {$I^{\prime}$};      % label frame of reference
+%
+%       Fix this
+%
+%
+%       Draw an external observer outside the car, in the same position but relative to the moved train
+%
+        \draw[thick] (8,0.5) circle (0.5cm);    % head
+        \draw[draw=none] (8,0.35) -- (8,0.2) node [above] {$O$};                % observer O
+%
+% \draw[thick] (8,0.35) -- (8,0.2);        % body
 % \draw[thick] (8,-2.5) -- (7.5,-3);       % left leg
 % \draw[thick] (8,-2.5) -- (8.5,-3);       % right leg
 % \draw[thick] (8,-2.2) -- (7.5,-1.8);     % left arm
 % \draw[thick] (8,-2.2) -- (8.5,-1.8);     % right arm
-
-% Light source attached to the ceiling
-\draw[fill=yellow] (2,3) rectangle (2.4,2.7); % light source as a rectangle
-\node[above] at (2.2,3.2) {Light Source};
-
-% Detector moved ahead by delta x
-\draw[fill=blue!50] (3.7,0.2) rectangle (4.3,0); % detector ahead of the light source by delta x
-%\node[below] at (3, -0.51) {Detector};
-\node[above] at (3, -0.5) {$\Delta x$};
-
-% Light beam
-\draw[->,dashed, thick, red] (2.2,2.7) -- (4.0,0.2); % light beam from the light source to the detector
-\draw[->,dashed, thin] (2.2,2.7) -- (2.2,0); % straight down
-
-\draw[dotted, thick] (2.2,-0) -- (2.2,-0.52);
-\draw[dotted, thick] (4.0,-0) -- (4.0,-0.52);
-\draw[<-]     (2.2,-0.25) -- (2.70,-0.25);
-\draw[->]     (3.35,-0.25) -- (4.0,-0.25);
-
-
-% Height label (h) outside the car
-\draw[<->] (-0.50,3) -- (-0.50,0) node[midway, left] {\(h\)};
-
-% Dotted lines parallel to the ground
-\draw[dotted, thick] (0,3) -- (-1,3); % top dotted line
-\draw[dotted, thick] (0,0) -- (-1,0); % bottom dotted line
-
-% Velocity vector
-\draw[->] (6.5,1.5) -- (8.5,1.5) node[midway, above] {\(v\)}; 
-
-% Ground
-\draw[thick] (-1,-1) -- (9,-1); % ground line
-% \draw[thick] (1,-1) -- (1,-1.5); % left ground support
-% \draw[thick] (5,-1) -- (5,-1.5); % right ground support
-
-
-\end{tikzpicture}
-
+%
+%
+%       Draw the light source attached to the ceiling
+%
+        \draw[fill=yellow] (2,3) rectangle (2.4,2.7);                           % light source as a rectangle
+        \node[above] at (2.2,3.2) {Light Source};
+%
+%       Draw the detector moved ahead by delta x
+%
+        \draw[fill=blue!50] (3.7,0.2) rectangle (4.3,0);                        % detector ahead of the light source by delta x
+        \node[above] at (3, -0.5) {$\Delta x$};
+%
+%       Draw the Light beam
+%
+        \draw[->,dashed, thick, red] (2.2,2.7) -- (4.0,0.2);                    % light beam from the light source to the detector
+        \draw[->,dashed, thin] (2.2,2.7) -- (2.2,0);                            % straight down
+        \draw[dotted, thick] (2.2,-0) -- (2.2,-0.52);
+        \draw[dotted, thick] (4.0,-0) -- (4.0,-0.52);
+        \draw[<-]     (2.2,-0.25) -- (2.70,-0.25);
+        \draw[->]     (3.35,-0.25) -- (4.0,-0.25);
+%
+%       Draw the height label (h) outside the car
+%
+        \draw[<->] (-0.50,3) -- (-0.50,0) node[midway, left] {\(h\)};
+%
+%       Draw the dotted lines parallel to the ground
+%
+        \draw[dotted, thick] (0,3) -- (-1,3); % top dotted line
+        \draw[dotted, thick] (0,0) -- (-1,0); % bottom dotted line
+%
+%       Draw the velocity vector
+%
+        \draw[->] (6.5,1.5) -- (8.5,1.5) node[midway, above] {\(v\)}; 
+%
+%       Draw the ground
+%
+        \draw[thick] (-1,-1) -- (9,-1); % ground line
+    \end{tikzpicture}
    }
  \caption{Observer at rest with respect to another (moving) inertial frame of reference}
  \label{figure:observer_motion}
@@ -350,13 +362,38 @@ $I^{\prime}$.
 The question now is how much time, call it $\Delta t$, passes
 from the point of view of observer $O$ when the light travels
 from the source to the detector. $\Delta x$ is the distance the
-train moves forward in time $\Delta t$. We also know that the velocity of
+train moves forward in time $\Delta t$. We also know that the speed of
 light in a vaccum is $c$ for all observers, so distance that the light
 travels in this case is $c \Delta t$ (the hypotenuse of the triangle
-show in Figure \ref{figure:observer_motion}). So now we can use the
-Pythagorean theorem to solve for $\Delta t$:
+show in Figure \ref{figure:observer_motion}). 
 
+\bigskip
+\noindent
+The $h$, $\Delta x$, $c \Delta t$ triangle is abstracted in 
+Figure \ref{figure:triangle}. 
 
+\begin{figure}[H]
+  \centering
+  \resizebox{0.35 \textwidth}{!} {                                                                      % resize the figure if you want
+     \begin{tikzpicture} 
+        \draw[->, line width=1pt] (-1.22,0) -- (4.22,0) node[right] {$x$}; 
+        \draw[->, line width=1pt] (0,-1.22) -- (0,5.22) node[above] {$y$}; 
+        \draw (1,1) -- (3,1) -- (1,4) -- cycle; 
+        \draw[draw=none] (1,1) -- (1,4) node [midway,left] {$h$};
+        \draw[draw=none] (1,1) -- (3,1) node [midway,below] {$\Delta x$};
+        \draw[draw=none] (1,4) -- (3,1) node [midway,right,xshift=0.15cm] {$d = c \Delta t$};
+        \end{tikzpicture}
+     }
+  \caption{Triangle formed by the motion of $I^{\prime}$ relative to $I$}
+  \label{figure:triangle}
+\end{figure}
+
+\bigskip
+\noindent
+Using this triangle we can calculate $\Delta t$ using 
+Pythagorean theorem:
+
+\smallskip
 \begin{equation*}
  \begin{array}{llll}
   (c \Delta t)^2
@@ -367,7 +404,8 @@ Pythagorean theorem to solve for $\Delta t$:
      		&\hspace{2em} \mathrel{\#} h = c \Delta t_0 \\
 [15pt]
 	&\Rightarrow& (c \Delta t)^2 = (c \Delta t_{0})^2 + (v \Delta t)^2
-			&\hspace{2em} \mathrel{\#} \text{velocity $v$ of the train: } v = \dfrac{\Delta x}{\Delta t} \Rightarrow \Delta x = v \Delta t \\
+			&\hspace{2em} \mathrel{\#} \text{velocity $v$ of the train: } 
+			    v = \dfrac{\Delta x}{\Delta t} \Rightarrow \Delta x = v \Delta t \\
 [15pt]
 	&\Rightarrow& c^2 (\Delta t)^2 = c^2 (\Delta t_{0})^2 + v^2 (\Delta t)^2
 		&\hspace{2em} \mathrel{\#}  \text{square terms} \\
@@ -389,11 +427,12 @@ Pythagorean theorem to solve for $\Delta t$:
   \end{array}
 \end{equation*}
 
+
 \bigskip
 \noindent
-So for $O$ the passage of time on the moving train slows down by a factor of
+So for observer $O$ the passage of time on the moving train slows down by a factor of
 
-\medskip
+\bigskip
 \begin{equation}
   \gamma = \dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}
   \label{equation:lorentz_factor}
@@ -402,9 +441,13 @@ So for $O$ the passage of time on the moving train slows down by a factor of
 \bigskip
 \noindent
 Equation ({\ref{equation:lorentz_factor}) is called the Lorentz
-factor (or sometimes the gamma factor).
-
-\bigskip
+factor (or sometimes the gamma factor). Note also that $\Delta t$ 
+can be written using the Lorentz factor: $\Delta t = \gamma \Delta t_0$.
+%
+%
+%
+\section{Length Contraction}
+\label{section:lenght_contraction}
 %
 %
 %
@@ -419,7 +462,7 @@ factor (or sometimes the gamma factor).
 %	LaTeX source on overleaf.com
 %
 \section*{\LaTeX \hspace{0.025 mm} Source}
-%\url{}
+\url{https://www.overleaf.com/read/xfghcdxjyzhg#675841}
 %
 %	get a bibliography
 %
@@ -427,7 +470,7 @@ factor (or sometimes the gamma factor).
 %	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
 %
 \bibliographystyle{plain}
-\bibliography{qc}
+\bibliography{physics}
 %
 %
 %
