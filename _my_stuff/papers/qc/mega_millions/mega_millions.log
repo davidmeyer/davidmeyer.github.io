@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 DEC 2024 10:54
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 DEC 2024 11:01
  restricted system commands enabled.
  file:line:error style messages enabled.
 **mega_millions.tex
@@ -1541,12 +1541,7 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-
-LaTeX Warning: Reference `section:expected_value_of_a_2_dollar_ticket' on page 
-1 undefined on input line 175.
-
-[1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 249--252
@@ -1554,29 +1549,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--252
  []
 
 [2] (./mega_millions.bbl) [3] (./mega_millions.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `mega_millions.out' has not changed.
 (rerunfilecheck)             Checksum: E848563445775A99AC022C3D448AE759;1982.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55175 strings out of 478531
+ 55174 strings out of 478531
  100000,2373549 words of node,token memory allocated
  667 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 33 attribute, 65 glue_spec
 , 33 attribute_list, 2 write nodes
    avail lists: 1:1,2:430,3:250,4:56,5:258,6:52,7:3716,8:42,9:340,10:6,11:159
- 73240 multiletter control sequences out of 65536+600000
+ 73239 multiletter control sequences out of 65536+600000
  113 fonts using 8877767 bytes
  111i,8n,128p,752b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
+f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
 r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
-lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-b
-old.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-r
+lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-r
 egular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman1
 2-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman9
 -regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
@@ -1588,10 +1580,10 @@ m/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb>
-Output written on mega_millions.pdf (3 pages, 96039 bytes).
+Output written on mega_millions.pdf (3 pages, 95928 bytes).
 
-PDF statistics: 177 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+PDF statistics: 178 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  26 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
