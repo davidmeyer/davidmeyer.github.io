@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 DEC 2024 07:04
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 DEC 2024 07:13
  restricted system commands enabled.
  file:line:error style messages enabled.
 **mega_millions.tex
@@ -1543,8 +1543,12 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./mega_millions.bbl) [3] (./mega_millions.aux)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
+
+ []
+
+[2] (./mega_millions.bbl) [3] (./mega_millions.aux)
 Package rerunfilecheck Info: File `mega_millions.out' has not changed.
 (rerunfilecheck)             Checksum: 07C758D505A4632115E7A66D61E78591;2215.
 )
@@ -1555,7 +1559,7 @@ Here is how much of LuaTeX's memory you used:
  675 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 35 attribute, 65 glue_spec
 , 35 attribute_list, 2 write nodes
-   avail lists: 1:1,2:464,3:270,4:60,5:275,6:58,7:4015,8:49,9:379,10:4,11:170
+   avail lists: 1:1,2:433,3:251,4:56,5:257,6:53,7:3743,8:49,9:352,10:4,11:159
  73238 multiletter control sequences out of 65536+600000
  113 fonts using 8877767 bytes
  111i,8n,128p,752b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1576,7 +1580,7 @@ m/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb>
-Output written on mega_millions.pdf (3 pages, 97917 bytes).
+Output written on mega_millions.pdf (3 pages, 97976 bytes).
 
 PDF statistics: 178 PDF objects out of 1000 (max. 8388607)
  135 compressed objects within 2 object streams
