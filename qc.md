@@ -108,14 +108,13 @@ Quantum Teleportation</a>
 
 <li><a href="./mega_millions.pdf" target="_blank"
     rel="noopener noreferrer">
-A Bit about the Mega Millions Lottery"
+A Bit about the Mega Millions Lottery
 </a>
 <br>
 
-
 <li><a href="./12_days_of_christmas.pdf" target="_blank"
     rel="noopener noreferrer">
-Cool math is hiding in the "12 Days of Christmas"
+Cool math is hiding in the "12 Days of Christmas
 </a>
 <br>
 
