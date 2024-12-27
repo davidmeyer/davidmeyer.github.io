@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 DEC 2024 06:50
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 DEC 2024 07:04
  restricted system commands enabled.
  file:line:error style messages enabled.
 **mega_millions.tex
@@ -1541,11 +1541,7 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
- [1
+) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 (./mega_millions.bbl) [3] (./mega_millions.aux)
@@ -1578,11 +1574,12 @@ ts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb>
-Output written on mega_millions.pdf (3 pages, 90863 bytes).
+0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb>
+Output written on mega_millions.pdf (3 pages, 97917 bytes).
 
-PDF statistics: 174 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+PDF statistics: 178 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  26 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
