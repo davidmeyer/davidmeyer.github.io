@@ -33,8 +33,8 @@
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
-\usepackage{tikz-cd}
-\tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
+\usepackage{tikz-cd}                                                    
+\tikzcdset{every arrow/.append style={-latex}}
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
 %
@@ -165,12 +165,15 @@
 %
 \section{Introduction}
 \label{section:introduction}
-Mega Millions\textregistered \hspace{0.25mm} is a multi-state lottery 
-game played in 45 states plus the District of Columbia and the U. S. Virgin Islands; a total 
-of 47 jurisdictions. Section \ref{section:probability_of_winning_the_jackpot}
-describes the rules and the probability of winning. Section
-\ref{section:expected_value_of_a_2_dollar_ticket} describes the expected
-value of a \$2 Mega Millions ticket.
+Mega Millions\textregistered \hspace{0.25mm} is a multi-state
+lottery game played in 45 states plus the District of Columbia
+and the U. S. Virgin Islands; a total of 47
+jurisdictions. Section
+\ref{section:probability_of_winning_the_jackpot} of this short
+document describes the lottery rules and the probability of
+winning the jackpot. Section
+\ref{section:expected_value_of_a_2_dollar_ticket} describes the
+expected value of a \$2 Mega Millions ticket.
 
 
 \section{What is the Probability of Winning the Jackpot?}
@@ -179,7 +182,8 @@ What are the odds of winning the Mega Millions jackpot?
 
 \bigskip
 \noindent
-It turns out that the odds of winning are 1 in 302,575,350 \cite{mega_millions}.
+It turns out that the odds of winning are 1 in 302,575,350
+\cite{mega_millions}. 
 
 \bigskip
 \noindent
@@ -187,8 +191,9 @@ Ok, but why? Let's see...
 
 \smallskip
 \begin{enumerate}
-\item In the Mega Millions game there are 70 white balls, numbered 1 to 70, 
-in one drum. 5 balls are chosen from this drum in the drawing. So there are
+\item In the Mega Millions game there are 70 white balls,
+numbered 1 to 70, in one drum. 5 balls are chosen from this drum
+in the drawing. So there are
 
 \begin{equation*}
        \binom{70}{5} = 12,103,014 
@@ -196,12 +201,12 @@ in one drum. 5 balls are chosen from this drum in the drawing. So there are
 
 \bigskip
 \noindent
-ways to choose the 5 white balls. This calculation ignores order, which doesn't 
-matter in Mega Millions. 
+ways to choose the 5 white balls. This calculation ignores order,
+which doesn't matter in Mega Millions.
 
-\item We also need to choose the Mega Ball. There are 25 Mega Balls, numbered 
-1 to 25, in a different drum. 1 ball is chosen from this drum in the drawing. 
-So there are 
+\item We also need to choose the Mega Ball. There are 25 Mega
+Balls, numbered 1 to 25, in a different drum. 1 ball is chosen
+from this drum in the drawing.  So there are
 
 \smallskip
 \begin{equation*}
@@ -212,16 +217,17 @@ So there are
 \noindent
 ways to choose the Mega Ball.
 
-\item So the number of ways to choose 5 white balls and 1 Mega Ball in the Mega
- Millions game is 
+\item So the number of ways to choose 5 white balls and 1 Mega
+Ball in the Mega Millions game is
  
 \begin{equation*}
        12,103,014 \times 25 = 302,575,350
 \end{equation*}
 
 \smallskip
-\item Putting this all together we see that the probability of choosing the correct 
-5 white balls and the Mega Ball, call it p(winning), is
+\item Putting this all together we see that the probability of
+choosing the correct 5 white balls and the Mega Ball, call it
+p(winning), is
 
 \begin{equation*}
        \text{p(winning)} = \dfrac{1}{302,575,350} \approx 3.30 \times 10^{-9}
@@ -230,7 +236,7 @@ ways to choose the Mega Ball.
 
 \bigskip
 \noindent
-Said another way, the odds of winning are 1 in 302,575,350.
+Said another way, the odds of winning are 1 in 302,575,350. 
 
 
 \section{What is the Expected Value of a \$2 Mega Millions Ticket?}
@@ -274,9 +280,9 @@ For example:
 \end{itemize}
 
 \subsection{What is the Expected Number of Winners?}
-The expected number of winners depends on $T$,
-the number of tickets sold and the odds of 
-winning. That is, the expected number of winners is
+The expected number of winners depends on $T$, the number of
+tickets sold and the odds of winning. That is, the
+expected number of winners is
 
 \begin{equation*}
 \text{Expected Number of Winners} = T \times \text{p(winning)} = \dfrac{T}{302,575,350}
@@ -284,9 +290,10 @@ winning. That is, the expected number of winners is
 
 \medskip
 \noindent
-For example, suppose 500 million tickets are sold\footnote{Apparently Mega Millions 
-doesn't publish the total number of tickets sold for any given drawing.}, so that 
-$T = 500 \times 10^6$. Then the expected number of winners is
+For example, suppose 500 million tickets are
+sold\footnote{Apparently Mega Millions doesn't publish the total
+number of tickets sold for any given drawing.}, so that $T = 500
+\times 10^6$. Then the expected number of winners is
 
 \medskip
 \begin{equation*}
@@ -323,9 +330,10 @@ So $\text{EV}_{\text{jackpot}}$ is
 
 \smallskip
 \subsection{What is the Net Expected Value of a \$2 Mega Millions Ticket?}
-Given our assumptions of $500 \times 10^6$ tickets sold, personal taxes 
-of $42\%$, and a jackpot of $\$1.15 \times 10^9$, we see that the net 
-expected value of a \$2 ticket, $\text{NEV}_{\text{jackpot}}$, is
+Given our assumptions of $500 \times 10^6$ tickets sold, personal
+taxes of $42\%$, and a jackpot of $\$1.15 \times 10^9$, we see
+that the net expected value of a \$2 ticket,
+$\text{NEV}_{\text{jackpot}}$, is
 
 \medskip
 \begin{equation*}
@@ -336,10 +344,11 @@ expected value of a \$2 ticket, $\text{NEV}_{\text{jackpot}}$, is
 %
 \section{Conclusions}
 \label{section:conclusions}
-Assuming a $\$1.15 \times 10^9$ jackpot with $500 \times 10^6$ tickets sold
-and a $42\%$ personal tax rate, the expected value of a \$2 ticket is approximately 
-\$0.80. Subtracting the \$2 ticket cost, the net expected value of the \$2 ticket
-is approximately -1.20. 
+Assuming a $\$1.15 \times 10^9$ jackpot with $500 \times 10^6$
+tickets sold and a $42\%$ personal tax rate, the expected value
+of a \$2 ticket is approximately \$0.80. Subtracting the \$2
+ticket cost, the net expected value of the \$2 ticket is
+approximately -1.20.
 %
 %
 %
