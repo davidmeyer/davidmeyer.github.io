@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  26 DEC 2024 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  27 DEC 2024 06:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1592,45 +1592,25 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-3.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 218.
-
-[3]
+(Font)              <14.4> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 363.
+(Font)              <10> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 363.
+(Font)              <7> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 363.
+(Font)              <17.28> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 363.
+(Font)              <12> on input line 215.
 
-Overfull \hbox (64.48785pt too wide) in paragraph at lines 326--364
+Overfull \hbox (64.48785pt too wide) in paragraph at lines 178--216
  [][] 
  []
 
-[4]
-Overfull \hbox (1.0952pt too wide) in paragraph at lines 399--403
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+Overfull \hbox (1.0952pt too wide) in paragraph at lines 251--255
 \T1/lmr/m/n/10.95 Note also that here $\OMS/lmsy/m/n/10.95 h\OT1/lmr/bx/n/10.95
  1\OML/lmm/m/it/10.95 ; [] nt\OMS/lmsy/m/n/10.95 i \OT1/lmr/m/n/10.95 = [] = []
  = 0$\T1/lmr/m/n/10.95 . Sim-i-larly, $\OMS/lmsy/m/n/10.95 h\OT1/lmr/bx/n/10.95
@@ -1638,81 +1618,106 @@ Overfull \hbox (1.0952pt too wide) in paragraph at lines 399--403
  []
 
 
-Overfull \hbox (30.69449pt too wide) in paragraph at lines 473--474
+Overfull \hbox (30.69449pt too wide) in paragraph at lines 325--326
  [][][][] 
  []
 
-[5]
-Overfull \hbox (19.75696pt too wide) in paragraph at lines 495--496
+[2]
+Overfull \hbox (19.75696pt too wide) in paragraph at lines 347--348
  [][][][] 
  []
 
-[6]
-<images/schrodingers_cat_cartoon.png, id=116, 822.07124pt x 165.61874pt>
+[3]
+<images/schrodingers_cat_cartoon.png, id=95, 822.07124pt x 165.61874pt>
 File: images/schrodingers_cat_cartoon.png Graphic file (type png)
 <use images/schrodingers_cat_cartoon.png>
 Package pdftex.def Info: images/schrodingers_cat_cartoon.png  used on input lin
-e 503.
+e 355.
 (pdftex.def)             Requested size: 822.06923pt x 165.61833pt.
 Missing character: There is no ; in font nullfont!
- [7 <./images/schrodingers_cat_cartoon.png>] [8]
+ [4 <./images/schrodingers_cat_cartoon.png>] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 877.
- [9] [10]
+(Font)              <20.74> on input line 729.
+ [6] [7]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 1.
- [11]
+ [8]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [12]
+ [9]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 1270.
+LaTeX Font Warning: Command \small invalid in math mode on input line 1122.
 
-[13] [14] [15] [16] (./figures.aux)
+[10] [11] [12] [13] (./figures.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `figures.out' has not changed.
-(rerunfilecheck)             Checksum: F80BFBAA2FBC48DEE65220DB78235C0A;1266.
+
+Package rerunfilecheck Warning: File `figures.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `figures.out':
+(rerunfilecheck)             Before: F80BFBAA2FBC48DEE65220DB78235C0A;1266
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47618 strings out of 478994
- 1098908 string characters out of 5858184
- 1538676 words of memory out of 5000000
- 64042 multiletter control sequences out of 15000+600000
- 571667 words of font info for 160 fonts, out of 8000000 for 9000
+ 47572 strings out of 478994
+ 1097952 string characters out of 5858184
+ 1538339 words of memory out of 5000000
+ 64009 multiletter control sequences out of 15000+600000
+ 562307 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,21n,117p,804b,1111s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
-e/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/
-enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/l
-m-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/font
-s/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
-blic/lm/lmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lm
-mi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2021/texmf-dis
-t/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
-e1/public/lm/lmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/l
-m/lmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on figures.pdf (16 pages, 464032 bytes).
+ 113i,21n,117p,804b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.2.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.2} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1} has been referenced but does not exist, 
+replaced by a fixed one
+
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
+l/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/
+2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dis
+t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dv
+ips/lm/lm-mathex.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/
+lmbsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/lm/lmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lm
+mi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/lm/lmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm
+/lmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on figures.pdf (13 pages, 431246 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
  182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
