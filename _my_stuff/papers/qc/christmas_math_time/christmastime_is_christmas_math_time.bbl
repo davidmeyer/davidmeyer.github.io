@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{hitomezashi_stich_pattern}
+{Ayliean MacDonald}.
+\newblock {Hitomezashi Stitch Patterns}.
+\newblock \url{https://www.youtube.com/watch?v=JbfhzlMk2eY}, 2022.
+\newblock [Online; accessed 30-December-2024].
+
 \bibitem{gauss_day_of_reckoning}
 {Brian Hayes}.
 \newblock {Gauss's Day of Reckoning}.
@@ -39,6 +45,14 @@
 \newblock {Tetrahedral Number}.
 \newblock \url{https://mathworld.wolfram.com/TetrahedralNumber.html}, 2023.
 \newblock [Online; accessed 12-October-2023].
+
+\bibitem{mathematical_specification_of_hitomezashi_designs}
+{Katherine A. Seaton and Carol Hayes}.
+\newblock {Mathematical specification of hitomezashi designs}.
+\newblock
+  \url{https://www.tandfonline.com/doi/full/10.1080/17513472.2023.2187999},
+  2022.
+\newblock [Online; accessed 30-December-2024].
 
 \bibitem{A000292}
 {N. J. A. Sloane}.
