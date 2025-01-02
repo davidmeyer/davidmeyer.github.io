@@ -91,7 +91,9 @@
 \title{A Few Notes on Euler's Formula and Euler's Identity}
 \author{David Meyer \\ \href{mailto:dmm613@gmail.com}
                             {dmm613@gmail.com}}
-\date{Last update: \today}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: May 17, 2020}}
+
 %
 %
 \begin{document}
@@ -307,7 +309,68 @@ So we wind up with
 \noindent
 that is, Euler's formula.
 
+\subsection{Aside: Why does $e^{2\pi ik} =1$? when $k \in \mathbb{N}$}
+\label{subsection:e_to_the_2pik_equals_one}
 
+\medskip
+Consider the following:
+
+\begin{itemize}
+\item {\bf Euler's formula relates the exponential function $e^{ix}$ to the sine and cosine functions}
+
+\medskip
+The exponential function $e^{ix}$ is connected to $\cos x$ and
+$\sin x$ by Euler's formula (Equation (\ref{eqn:eulers_formula})).
+
+
+\item {\bf Sine and cosine are periodic functions}
+
+\medskip
+Both the cosine and sine functions are periodic with a period of 
+$2\pi$. This means that $\cos(x+2\pi k) = \cos x$ for $k \in \mathbb{N}$, 
+and $\sin(x+2\pi k) = \sin x$, again for $k \in \mathbb{N}$.
+
+\item {\bf $e^{2\pi ik}$ is related to the natural log of 1: $e^z = 1 \Rightarrow z = \ln 1$}
+
+\medskip
+The exponential function $e^z = 1$ has solutions when
+$z = 2\pi i k$ for $k \in \mathbb{N}$, since 
+
+smallskip
+\begin{equation*}
+\begin{array}{lllll}
+e^z
+&=& e^{2\pi ik} 
+		&\hspace{3em} \mathrel{\#} \text{set $z = 2\pi i k$ for $k \in \mathbb{N}$} \\
+[10pt]
+&=& \cos(2\pi k) + i\sin(2\pi k) 
+		&\hspace{3em} \mathrel{\#} \text{by Euler's formula (Equation (\ref{eqn:eulers_formula}))} \\
+[10pt]
+&=& 1 + 0
+		&\hspace{3em} \mathrel{\#} \text{since $\cos(2\pi k) = 1$ and $\sin(2\pi k) = 0$ for $k \in \mathbb{N}$} \\
+[10pt]
+&=& 1 
+		&\hspace{3em} \mathrel{\#} \text{since $1+0 = 1$} \\
+[10pt]
+&\Rightarrow& e^{2\pi ik} = 1 
+		&\hspace{3em} \mathrel{\#} \text{previous lines} \\
+[10pt]
+&\Rightarrow& e^{z} = 1 
+		&\hspace{3em} \mathrel{\#} \text{$z = 2\pi i k$ for $k \in \mathbb{N}$}
+
+\end{array}
+\end{equation*}
+\end{itemize}
+
+
+\medskip
+\noindent
+So interestingly, the expression $e^{2\pi ik} = 1$ reflects the periodic nature of 
+the exponential function in the complex plane. This periodicity is shown in 
+Figure \ref{fig:eulers_formula}.
+
+
+\medskip
 \subsection{Deriving Euler's Formula Using Polar Coordinates}
 \label{subsec:without_maclaurin0}
 There is also a clever way to derive Euler's formula using polar
