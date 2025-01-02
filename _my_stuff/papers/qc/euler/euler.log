@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  2 JAN 2025 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  2 JAN 2025 13:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1493,12 +1493,12 @@ f _ differentiation & oldid = 1026177205$[]\OT1/cmr/m/n/10 , 2021.
 
 [8]) [9] (./euler.aux)
 Package rerunfilecheck Info: File `euler.out' has not changed.
-(rerunfilecheck)             Checksum: 67F780F516B5F6FC06C097152E896FC7;1915.
+(rerunfilecheck)             Checksum: 82A126E2E11161D4EA2532D1CCD1F4DE;1910.
  ) 
 Here is how much of TeX's memory you used:
  52133 strings out of 478994
  1316468 string characters out of 5858184
- 1945774 words of memory out of 5000000
+ 1945773 words of memory out of 5000000
  68798 multiletter control sequences out of 15000+600000
  418220 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1523,7 +1523,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on euler.pdf (9 pages, 230209 bytes).
+Output written on euler.pdf (9 pages, 230158 bytes).
 PDF statistics:
  269 PDF objects out of 1000 (max. 8388607)
  209 compressed objects within 3 object streams
