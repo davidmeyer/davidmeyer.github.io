@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  3 JAN 2025 08:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  4 JAN 2025 09:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1476,12 +1476,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 316.
 
 [3]
-Overfull \hbox (42.05186pt too wide) detected at line 468
+Overfull \hbox (42.05186pt too wide) detected at line 469
 []
  []
 
 [4] [5]
-Overfull \hbox (22.28186pt too wide) detected at line 716
+Overfull \hbox (22.28186pt too wide) detected at line 717
 []
  []
 
@@ -1493,7 +1493,7 @@ f _ differentiation & oldid = 1026177205$[]\OT1/cmr/m/n/10 , 2021.
 
 [8]) [9] (./euler.aux)
 Package rerunfilecheck Info: File `euler.out' has not changed.
-(rerunfilecheck)             Checksum: 82A126E2E11161D4EA2532D1CCD1F4DE;1910.
+(rerunfilecheck)             Checksum: E384DBC627C1B6B5626F2502E49051AE;1910.
  ) 
 Here is how much of TeX's memory you used:
  52133 strings out of 478994
@@ -1523,7 +1523,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on euler.pdf (9 pages, 230198 bytes).
+Output written on euler.pdf (9 pages, 229778 bytes).
 PDF statistics:
  269 PDF objects out of 1000 (max. 8388607)
  209 compressed objects within 3 object streams
