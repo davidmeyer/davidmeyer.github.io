@@ -386,7 +386,7 @@ Figure \ref{figure:triangle}.
         \draw [line width=1pt,red] (1,1) -- (3,1) -- (1,4) -- cycle; 
         \draw[draw=none] (1,1) -- (1,4) node [midway,left] {$h$};
         \draw[draw=none] (1,1) -- (3,1) node [midway,below] {$\Delta x$};
-        \draw[draw=none] (1,4) -- (3,1) node [midway,right,xshift=0.15cm] {$d = c \Delta t$};
+        \draw[draw=none] (1,4) -- (3,1) node [midway,right,xshift=0.15cm] {$c \Delta t$};
         \end{tikzpicture}
      }
   \caption{Triangle formed by the motion of $I^{\prime}$ relative to $I$}
@@ -401,7 +401,7 @@ Pythagorean theorem:
 \smallskip
 \begin{equation*}
  \begin{array}{llll}
-  (c \Delta t)^2
+     (c \Delta t)^2
      &=& h^2 + (\Delta x)^2 					
      		&\hspace{2em} \mathrel{\#} \text{by the Pythagorean theorem} \\
 [15pt]
@@ -435,19 +435,14 @@ Pythagorean theorem:
 
 \bigskip
 \noindent
-So for observer $O$ the passage of time on the moving train slows down by a factor of
-
-\bigskip
-\begin{equation}
-  \gamma = \dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}
-  \label{equation:lorentz_factor}
-\end{equation}
+So for observer $O$ the passage of time on the moving train slows down by a 
+factor of $\gamma = \dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}$.
 
 \bigskip
 \noindent
-Equation ({\ref{equation:lorentz_factor}) is called the Lorentz
-factor (or sometimes the gamma factor). Note also that $\Delta t$ 
-can be written using the Lorentz factor: $\Delta t = \gamma \Delta t_0$.
+$\gamma$ is called the Lorentz factor (or sometimes the gamma factor). 
+Note also that $\Delta t$ can be written using the Lorentz factor: 
+$\Delta t = \gamma \Delta t_0$.
 %
 %
 %

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  26 JAN 2025 09:20
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  26 JAN 2025 09:42
  restricted system commands enabled.
  file:line:error style messages enabled.
 **special_relativity.tex
@@ -1549,20 +1549,16 @@ File: uesvect.fd
 Package rerunfilecheck Info: File `special_relativity.out' has not changed.
 (rerunfilecheck)             Checksum: 2DDFD320DBD7CC513D763F200F9AF463;683.
 )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 448 ({)
-### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 55263 strings out of 478531
+ 55261 strings out of 478531
  100000,2373549 words of node,token memory allocated
- 623 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 15 attribute, 67 glue_spec
-, 15 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:1880,3:1047,4:38,5:275,6:37,7:4790,8:86,9:761,10:12,11:296
+ 605 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 13 attribute, 65 glue_spec
+, 13 attribute_list, 2 write, 3 pdf_action nodes
+   avail lists: 1:1,2:1884,3:1047,4:38,5:277,6:37,7:4790,8:85,9:751,10:12,11:296
 
- 73331 multiletter control sequences out of 65536+600000
+ 73330 multiletter control sequences out of 65536+600000
  112 fonts using 8746079 bytes
  111i,14n,128p,757b,858s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
@@ -1583,10 +1579,10 @@ mr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
 .pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 
-Output written on special_relativity.pdf (4 pages, 106453 bytes).
+Output written on special_relativity.pdf (4 pages, 106132 bytes).
 
-PDF statistics: 184 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 131072)
+PDF statistics: 182 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 131072)
  56 words of extra memory for PDF output out of 10000 (max. 100000000)
 
