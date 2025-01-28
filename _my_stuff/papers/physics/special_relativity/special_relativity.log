@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 JAN 2025 11:25
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 JAN 2025 11:36
  restricted system commands enabled.
  file:line:error style messages enabled.
 **special_relativity.tex
@@ -1651,7 +1651,7 @@ m/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
 .pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb>
-Output written on special_relativity.pdf (4 pages, 102246 bytes).
+Output written on special_relativity.pdf (4 pages, 102256 bytes).
 
 PDF statistics: 186 PDF objects out of 1000 (max. 8388607)
  135 compressed objects within 2 object streams
