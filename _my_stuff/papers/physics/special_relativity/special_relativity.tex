@@ -34,6 +34,7 @@
                 through,intersections,lindenmayersystems,backgrounds,
                 hobby,matrix}
 \usepackage{tikz-cd}
+\usepackage{tikzpeople}
 \tikzcdset{every arrow/.append style={-latex}}
 \usepackage{circuitikz}                                                 % draw circuits    
 \usepackage{pgfplots}
@@ -216,10 +217,10 @@ are negligible so that the distance light travels is $h$.}. Here the
 observer, light source and detector are at rest in inertial frame of 
 reference $I$ (even though the train car is moving with velocity $v$).
 
-\vspace{0.65em}
+%\vspace{0.65em}
 \begin{figure}[H]
   \centering
-    \resizebox{0.75 \textwidth}{!} {                                    % resize the figure if you want
+    \resizebox{0.65 \textwidth}{!} {                                    % resize the figure if you want
       \begin{tikzpicture}
 %
 %       Draw the train car
@@ -227,16 +228,11 @@ reference $I$ (even though the train car is moving with velocity $v$).
         \draw[thick] (0,0) rectangle (6,3);                             % main body
         \draw[thick] (0.5,-0.5) circle (0.5cm);                         % left wheel
         \draw[thick] (5.5,-0.5) circle (0.5cm);                         % right wheel
-        \draw[draw=none] (6,3) -- (6,0) node[below, right] {$I$};
+        \draw[draw=none] (6,3) -- (6,0);
 %
 %       Draw the observer inside
 %
-        \draw[thick] (4,1.5) circle (0.35cm);                           % head
-        \draw[thick] (4,1.15) -- (4,0.5);                               % body
-        \draw[thick] (4,0.5) -- (3.5,0);                                % left leg
-        \draw[thick] (4,0.5) -- (4.5,0);                                % right leg
-        \draw[thick] (4,0.8) -- (3.5,1.2);                              % left arm
-        \draw[thick] (4,0.8) -- (4.5,1.2);                              % right arm
+		\node[bob,mirrored,minimum size=1.0cm] at (4.55,1.10) {\footnotesize Observer $O$};
 %
 %       Draw the light source with smaller edges (rectangle)
 %
@@ -264,7 +260,7 @@ reference $I$ (even though the train car is moving with velocity $v$).
         \draw[thick] (-1,-1) -- (9,-1); % ground line
       \end{tikzpicture}
    }
- \caption{Observer at rest with respect to inertial frame of reference $I$}
+ \caption{Observer $0$ at rest with respect to a light source and detector}
  \label{figure:observer_at_rest}
 \end{figure}
 
@@ -274,6 +270,7 @@ For observer at rest with respect to an inertial frame of
 reference, the time taken for a beam of light to travel from the
 light source to the detector is
 
+\smallskip
 \begin{equation*}
   \begin{array}{llll}
      h
@@ -290,13 +287,13 @@ light source to the detector is
 \noindent
 Now consider the same experimental setup as in Figure
 \ref{figure:observer_at_rest} except this time the observer is on
-the train landing. Call this inertial frame of reference
-$I^{\prime}$.
+the train landing. That is, the observer is at rest with respect
+to the train car (which is moving with velocity $v$).
 
-\vspace{0.75em}
+\bigskip
 \begin{figure}[H]
   \centering
-  \resizebox{0.75 \textwidth}{!} {                                              % resize the figure if you want
+  \resizebox{0.80 \textwidth}{!} {                                              % resize the figure if you want
      \begin{tikzpicture}
 %
 %       Draw a train car moved by delta x
@@ -304,21 +301,12 @@ $I^{\prime}$.
         \draw[thick] (0,0) rectangle (6,3);                                     % main body
         \draw[thick] (0.5,-0.5) circle (0.5cm);                                 % left wheel
         \draw[thick] (5.5,-0.5) circle (0.5cm);                                 % right wheel
-        \draw[draw=none] (6,3) -- (6,0) node[below, right] {$I^{\prime}$};      % label frame of reference
-%
-%       Fix this
+        \draw[draw=none] (6,3) -- (6,0);      									% label frame of reference
 %
 %
 %       Draw an external observer outside the car, in the same position but relative to the moved train
 %
-        \draw[thick] (8,0.5) circle (0.5cm);    % head
-        \draw[draw=none] (8,0.35) -- (8,0.2) node [above] {$O$};                % observer O
-%
-% \draw[thick] (8,0.35) -- (8,0.2);        % body
-% \draw[thick] (8,-2.5) -- (7.5,-3);       % left leg
-% \draw[thick] (8,-2.5) -- (8.5,-3);       % right leg
-% \draw[thick] (8,-2.2) -- (7.5,-1.8);     % left arm
-% \draw[thick] (8,-2.2) -- (8.5,-1.8);     % right arm
+		\node[bob,mirrored,minimum size=1.0cm] at (9.50,0.10) {\footnotesize Observer $O$};
 %
 %
 %       Draw the light source attached to the ceiling
@@ -333,8 +321,10 @@ $I^{\prime}$.
 %
 %       Draw the Light beam
 %
-        \draw[->,dashed, thick, red] (2.2,2.7) -- (4.0,0.2);                    % light beam from the light source to the detector
-        \draw[->,dashed, thin] (2.2,2.7) -- (2.2,0);                            % straight down
+%		light beam from the light source to the detector
+%
+        \draw[->,dashed, thick, red] (2.2,2.7) -- (4.0,0.2) node [midway,right,xshift=2.0mm] {$\color{black}{c\Delta t}$};   
+        \draw[->,dashed, thin]       (2.2,2.7) -- (2.2,0.0) node [midway,left,xshift=-0.25mm,yshift=1.25mm] {$h$};                          
         \draw[dotted, thick] (2.2,-0) -- (2.2,-0.52);
         \draw[dotted, thick] (4.0,-0) -- (4.0,-0.52);
         \draw[<-]     (2.2,-0.25) -- (2.70,-0.25);
@@ -355,22 +345,22 @@ $I^{\prime}$.
 %
 %       Draw the ground
 %
-        \draw[thick] (-1,-1) -- (9,-1); % ground line
+        \draw[thick] (-1,-1) -- (11,-1); % ground line
     \end{tikzpicture}
    }
  \caption{Observer at rest with respect to another (moving) inertial frame of reference}
  \label{figure:observer_motion}
 \end{figure}
 
-\smallskip
+\bigskip
 \noindent
 The question now is how much time, call it $\Delta t$, passes
 from the point of view of observer $O$ when the light travels
 from the source to the detector. $\Delta x$ is the distance the
 train moves forward in time $\Delta t$. We also know that the speed of
-light in a vaccum is $c$ for all observers, so distance that the light
-travels in this case is $c \Delta t$ (the hypotenuse of the triangle
-show in Figure \ref{figure:observer_motion}). 
+light in a vaccum is $c$ for all observers, so the distance that light
+travels (from the source to the detector) in this case is $c \Delta t$ 
+(the hypotenuse of the triangle shown in Figure \ref{figure:observer_motion}). 
 
 \bigskip
 \noindent
@@ -389,7 +379,7 @@ Figure \ref{figure:triangle}.
         \draw[draw=none] (1,4) -- (3,1) node [midway,right,xshift=0.15cm] {$c \Delta t$};
         \end{tikzpicture}
      }
-  \caption{Triangle formed by the motion of $I^{\prime}$ relative to $I$}
+  \caption{Triangle formed by the motion of the train with respect to the observer $O$}
   \label{figure:triangle}
 \end{figure}
 
