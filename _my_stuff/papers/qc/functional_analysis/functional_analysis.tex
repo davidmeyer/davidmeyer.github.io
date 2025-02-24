@@ -191,6 +191,58 @@ following three properties:
 
 
 
+%
+%	open epsilon ball
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.48 \textwidth}{!} {                                                              % resize the tikzpicture if you like
+  \tikzstyle{background rectangle}=[thin,draw=black]                                            % make the frame thinner (there must be an easier way to do this)
+     \begin{tikzpicture}[show background rectangle]                                             % couldn't control frame thickness with \begin{tikzpicture} [framed]
+       \coordinate (C)  at (0.00, 0.00);                                                        % center
+       \coordinate (R)  at (2.00, 0.00);                                                        % radius
+       \coordinate (A)  at (-2.00,0.00);                                                        % arc (3D effect)
+       \coordinate (RC) at (2.00, 2.25);                                                        % Right Corner (RC)
+       \coordinate (S)  at (-2.20,2.25);                                                        % Spacing
+       \shade [ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);                         % draw the ball
+       \draw  [densely dashed, draw=blue] (C) circle (2cm);                                     % draw the circle (use dashed because its an open ball)
+       \draw  [densely dashed, draw=blue] (A) arc (180:360:2 and 0.6);                          % 3D effect
+       \draw  [densely dashed, draw=blue] (R) arc (0:180:2 and 0.6);                            % draw the dashed line
+       \fill  [fill=black] (C) circle (1pt);                                                    % draw a dot in the center
+       \draw  [draw=none]  (C) node[font=\scriptsize, below] {$x$};                             % label x
+       \draw  [thin] (C) -- (R) node[font=\scriptsize,midway,above]{$\epsilon$};                % draw the radius (epsilon)
+       \fill  [fill=black] (R) circle (1pt);                                                    % draw a dot at the edge
+       \node  [] at  (RC) {$X$};                                                                % show X in the lower right corner
+       \draw  [draw=none] (-2,-1.5) -- (2,-1.5)                                                 % draw the definition of the epsilon ball
+				node[font=\fontsize{6.0}{1.0}\selectfont,rectangle, draw, very thin, below, midway, yshift=-0.85cm] 
+				{$B_{\epsilon}(x) =\{y \in X \mid d(x,y) < \epsilon\}$};						% defn of open epsilon ball
+       \node  [] at (S) {};                                                                     % stretch out the frame so the ball is centered (Spacing)
+     \end{tikzpicture}                                                                          % end tikzpicture
+    }                                                                                           % end resizebox
+    \caption{$B_{\epsilon}(x)$ is an open epsilon ball centered at $x$ with radius $\epsilon$}
+    \label{fig:open_epsilon_ball}
+\end{figure}
+
+\vspace{1.5em}
+\noindent
+We want the distance between $x$ and itself to be zero, hence
+property 1. However, more than that we want this only to be the
+case when $x = y$ (so if and only if). Of course we want the
+distance from $x$ to $y$ to be the same as the distance from $y$
+to $x$; this is property 2.  Finally, property 3, the triangle
+inequality, is what we would expect in normal Euclidian space
+\cite{euclidian_space}. The triangle inequality tells us that if
+we take a "detour" through a third point $z$ then the distance
+between $x$ and $y$ though $z$ will be greater than (or possibly
+equal to) the distance between $x$ and $y$ on the direct path.
+This is shown in Figure \ref{fig:triangle_inequality}. Note 
+that there are important differences (which we will get to later) 
+between distance, as measured by a metric $d(x,y)$ and length, 
+as measured by a norm $\norm{\mathbf{x}}$, but for now we'll
+consider the "distance version" of the triangle inequality as
+shown in Figure \ref{fig:triangle_inequality}.
+
+\vspace{2.5em}
 \begin{figure}[H]
 \centering
   \resizebox{0.55 \textwidth}{!} {	
@@ -226,27 +278,41 @@ following three properties:
 \end{figure}
 
 
+\begin{figure}[b]
+\centering
+  \resizebox{0.55 \textwidth}{!} {	
+    \tikzstyle{background rectangle}=[thin,draw=black]                                  % make the frame thinner (there must be an easier way) 
+    \begin{tikzpicture}[use Hobby shortcut, show background rectangle]                  % couldn't control thickness with \begin{tikzpicture} [framed]
+%
+%	\begin{tikzpicture}[use Hobby shortcut]
+%														
+%	coordinate system
+%
+		\coordinate (x)  at (1.50,-5.50);                                       % x endpoint of dashed line
+		\coordinate (xb) at (1.80,-5.15);                                       % x endpoint of the brace
+		\coordinate (y)  at (4.50,-6.00);                                       % y endpoint of the dashed line
+		\coordinate (yb) at (4.40,-5.58);                                       % y endpoint of the brace					
+		\coordinate (X)  at (5.75,-7.50);                                       % show X (the whole set) in lower right
+%
+%	draw everything
+%
+		\draw [draw=blue, rotate=-90, scale=2]                                  % draw the (blue) set boundary through these points
+		       (3,0) .. +(1,0) .. +(1,2) .. +(1,3) .. +(0,3) .. (3,0);          % make the boundary go through these points
+		\draw [] (x) node[below]{$x$};                                          % label x
+		\draw [] (y) node[below]{$y$};                                          % label y
+		\draw [densely dashed, draw=red] (x) -- (y);                            % draw the dashed line between x and y
+		\draw [decoration={brace,mirror,raise=0.5cm},decorate] (xb) -- (yb)     % draw the underbrace
+			node [rotate=-8.00,pos=0.5,anchor=north,yshift=-0.60cm] {${\small \text{distance}}$};   % label it with "distance"	
+		\node [] at (X) {$X$};                                                  % draw X in the lower right corner
+		\fill [fill=black] (x) circle (1.0pt);                                  % x dot
+		\fill [fill=black] (y) circle (1.0pt);                                  % y dot
+  \end{tikzpicture}                                                             % end tikzpicture
+  }                                                                             % end resizebox
+  \caption{The distance between $x$ and $y$ in $X$}
+  \label{fig:set}
+\end{figure}
 
-\bigskip
-\noindent
-We want the distance between $x$ and itself to be zero, hence
-property 1. However, more than that we want this only to be the
-case when $x = y$ (so if and only if). Of course we want the
-distance from $x$ to $y$ to be the same as the distance from $y$
-to $x$; this is property 2.  Finally, property 3, the triangle
-inequality, is what we would expect in normal Euclidian space
-\cite{euclidian_space}. The triangle inequality tells us that if
-we take a "detour" through a third point $z$ then the distance
-between $x$ and $y$ though $z$ will be greater than (or possibly
-equal to) the distance between $x$ and $y$ on the direct path.
-This is shown in Figure \ref{fig:triangle_inequality}. Note 
-that there are important differences (which we will get to later) 
-between distance, as measured by a metric $d(x,y)$ and length, 
-as measured by a norm $\norm{\mathbf{x}}$, but for now we'll
-consider the "distance version" of the triangle inequality as
-shown in Figure \ref{fig:triangle_inequality}.
 
-\vspace{1.00cm}
 %
 %	triangle inequality
 %
@@ -294,39 +360,6 @@ shown in Figure \ref{fig:triangle_inequality}.
   }                                                                                                             % end resizebox
   \caption{The triangle inequality for distances}
   \label{fig:triangle_inequality}
-\end{figure}
-
-
-%
-%	open epsilon ball
-%
-\begin{figure}[H]
-\centering
-  \resizebox{0.45 \textwidth}{!} {                                                              % resize the tikzpicture if you like
-  \tikzstyle{background rectangle}=[thin,draw=black]                                            % make the frame thinner (there must be an easier way to do this)
-     \begin{tikzpicture}[show background rectangle]                                             % couldn't control frame thickness with \begin{tikzpicture} [framed]
-       \coordinate (C)  at (0.00, 0.00);                                                        % center
-       \coordinate (R)  at (2.00, 0.00);                                                        % radius
-       \coordinate (A)  at (-2.00,0.00);                                                        % arc (3D effect)
-       \coordinate (RC) at (2.00, 2.25);                                                        % Right Corner (RC)
-       \coordinate (S)  at (-2.20,2.25);                                                        % Spacing
-       \shade [ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);                         % draw the ball
-       \draw  [densely dashed, draw=blue] (C) circle (2cm);                                     % draw the circle (use dashed because its an open ball)
-       \draw  [densely dashed, draw=blue] (A) arc (180:360:2 and 0.6);                          % 3D effect
-       \draw  [densely dashed, draw=blue] (R) arc (0:180:2 and 0.6);                            % draw the dashed line
-       \fill  [fill=black] (C) circle (1pt);                                                    % draw a dot in the center
-       \draw  [draw=none]  (C) node[font=\scriptsize, below] {$x$};                             % label x
-       \draw  [thin] (C) -- (R) node[font=\scriptsize,midway,above]{$\epsilon$};                % draw the radius (epsilon)
-       \fill  [fill=black] (R) circle (1pt);                                                    % draw a dot at the edge
-       \node  [] at  (RC) {$X$};                                                                % show X in the lower right corner
-       \draw  [draw=none] (-2,-1.5) -- (2,-1.5)                                                 % draw the definition of the epsilon ball
-				node[font=\fontsize{6.0}{1.0}\selectfont,rectangle, draw, very thin, below, midway, yshift=-0.85cm] 
-				{$B_{\epsilon}(x) =\{y \in X \mid d(x,y) < \epsilon\}$};						% defn of open epsilon ball
-       \node  [] at (S) {};                                                                     % stretch out the frame so the ball is centered (Spacing)
-     \end{tikzpicture}                                                                          % end tikzpicture
-    }                                                                                           % end resizebox
-    \caption{$B_{\epsilon}(x)$ is an open epsilon ball centered at $x$ with radius $\epsilon$}
-    \label{fig:open_epsilon_ball}
 \end{figure}
 %
 %
