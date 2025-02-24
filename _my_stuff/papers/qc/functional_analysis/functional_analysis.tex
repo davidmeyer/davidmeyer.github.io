@@ -115,9 +115,9 @@ if $(X,\norm{\cdot})$ is a \emph{normed space} then $(X,d)$ is a
 \coloneqq \norm{\mathbf{y}-\mathbf{x}} =
 \norm{\mathbf{x}-\mathbf{y}}$. Moreover, if
 $(X,\langle\cdot,\cdot\rangle)$ is an \emph{inner product
-space}\footnote{That is, $X$ is a vector space and
-$\langle\cdot,\cdot\rangle: X \times X \rightarrow \mathbb{R}$ is
-an inner product on the vector space $X$.} then
+space}\footnote{For $\mathbf{x}, \mathbf{y} \in \mathbb{R}^{n}$
+the inner product is given by $\langle \mathbf{x}, \mathbf{y}
+\rangle := \sum\limits_{i = 1}^{n} x_i y_i$.}  then
 $(X,\norm{\cdot})$ is a normed space with norm $\norm{\mathbf{x}}
 \coloneqq \sqrt{\langle \mathbf{x},\mathbf{x}\rangle}$ and
 consequently $(X,d)$ is a metric space with metric
@@ -125,10 +125,11 @@ $d(\mathbf{x},\mathbf{y}) = \norm{\mathbf{x}-\mathbf{y}} =
 \sqrt{\langle
 \mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.  In
 addition, the metric $d(\mathbf{x},\mathbf{y})$ induces a
-topology $\tau_d$ on $X$, namely, $\tau_d =
-\{B_{\epsilon}(\mathbf{x}) \mid \mathbf{x} \in X \}$ (see Figure
-\ref{fig:open_epsilon_ball}). The pair $(X,\tau_d)$ is called a
-topological space.
+topology $\tau_d$ on $X$, where $\tau_d :=
+\{B_{\epsilon}(\mathbf{x}) \mid \mathbf{x} \in X \}$.
+$B_{\epsilon}(\mathbf{x})$ is the open epsilon ball centered
+at $\mathbf{x}$ (see Figure \ref{fig:open_epsilon_ball}). 
+The pair $(X,\tau_d)$ is called a topological space.
 
 \bigskip
 \noindent
@@ -209,17 +210,17 @@ following three properties:
        \draw  [densely dashed, draw=blue] (A) arc (180:360:2 and 0.6);                          % 3D effect
        \draw  [densely dashed, draw=blue] (R) arc (0:180:2 and 0.6);                            % draw the dashed line
        \fill  [fill=black] (C) circle (1pt);                                                    % draw a dot in the center
-       \draw  [draw=none]  (C) node[font=\scriptsize, below] {$x$};                             % label x
+       \draw  [draw=none]  (C) node[font=\scriptsize, below] {$\mathbf{x}$};                    % label x
        \draw  [thin] (C) -- (R) node[font=\scriptsize,midway,above]{$\epsilon$};                % draw the radius (epsilon)
        \fill  [fill=black] (R) circle (1pt);                                                    % draw a dot at the edge
        \node  [] at  (RC) {$X$};                                                                % show X in the lower right corner
        \draw  [draw=none] (-2,-1.5) -- (2,-1.5)                                                 % draw the definition of the epsilon ball
 				node[font=\fontsize{6.0}{1.0}\selectfont,rectangle, draw, very thin, below, midway, yshift=-0.85cm] 
-				{$B_{\epsilon}(x) =\{y \in X \mid d(x,y) < \epsilon\}$};						% defn of open epsilon ball
+				{$B_{\epsilon}(\mathbf{x}) =\{\mathbf{y} \in X \mid d(\mathbf{x},\mathbf{y}) < \epsilon\}$}; % defn of open epsilon ball
        \node  [] at (S) {};                                                                     % stretch out the frame so the ball is centered (Spacing)
      \end{tikzpicture}                                                                          % end tikzpicture
     }                                                                                           % end resizebox
-    \caption{$B_{\epsilon}(x)$ is an open epsilon ball centered at $x$ with radius $\epsilon$}
+    \caption{$B_{\epsilon}(\mathbf{x})$ is an open epsilon ball centered at $\mathbf{x}$ with radius $\epsilon$}
     \label{fig:open_epsilon_ball}
 \end{figure}
 
