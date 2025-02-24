@@ -121,8 +121,13 @@ an inner product on the vector space $V$.} then
 $(V,\norm{\cdot})$ is a normed space with norm $\norm{\mathbf{x}}
 \coloneqq \sqrt{\langle \mathbf{x},\mathbf{x}\rangle}$ and
 consequently $(V,d)$ is a metric space with metric
-$d(\mathbf{x},\mathbf{y}) = \sqrt{\langle
-\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.
+$d(\mathbf{x},\mathbf{y}) = \norm{\mathbf{x}-\mathbf{y}}
+= \sqrt{\langle \mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.
+In addition, the metric $d(\mathbf{x},\mathbf{y})$ induces a 
+topology $\tau_d$ on $V$, namely, $\tau_d = \{B_{\epsilon}(\mathbf{x}) \mid \mathbf{x} \in V \}$
+ (see
+Figure \ref{fig:open_epsilon_ball}). The pair $(V,\tau_d)$ is called 
+a topological space.
 
 \bigskip
 \noindent
@@ -132,7 +137,7 @@ space.  More specifically
 
 \begin{equation*}
 \begin{array}{rclll}
-\text{metric:}        & d(x,y)                    
+\text{metric:}        & d(\mathbf{x},\mathbf{y})                   
 		& \longrightarrow & \text{measures distances} \\
 \text{norm:}          & \norm{\mathbf{x}}
 		& \longrightarrow & \text{measures distances, lengths} \\
@@ -179,8 +184,8 @@ following three properties:
 [8pt]
 3. & d(x,y) \leq d(x,z) + d(z,y)
                 && \hspace{5em} \mathrel{\#} \text{this property is called the \emph{triangle inequality}} 
+\vspace{0.50cm}																			% put some space between the list and the footnote
 \end{array}
-\vspace{0.75cm}
 \end{equation*}
 
 
