@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 FEB 2025 09:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.20)  24 FEB 2025 09:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1429,25 +1429,25 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 )
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 222.
+LaTeX Font Warning: Command \small invalid in math mode on input line 223.
 
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (28.16777pt too wide) in paragraph at lines 403--404
+Overfull \hbox (28.16777pt too wide) in paragraph at lines 404--405
  [][][][] 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-26.
+27.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 426.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 427.
 
-Overfull \hbox (18.19096pt too wide) in paragraph at lines 426--427
+Overfull \hbox (18.19096pt too wide) in paragraph at lines 427--428
  [][][][] 
  []
 
@@ -1485,7 +1485,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on functional_analysis.pdf (4 pages, 232751 bytes).
+Output written on functional_analysis.pdf (4 pages, 232696 bytes).
 PDF statistics:
  164 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
