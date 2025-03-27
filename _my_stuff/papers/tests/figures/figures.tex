@@ -14,7 +14,14 @@
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
-\usetikzlibrary{arrows,backgrounds,calc,patterns,angles,quotes,shapes,calc,decorations,through,hobby,lindenmayersystems}
+\usepackage{tikz}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby,matrix,positioning}
+\usepackage{tikz-cd}
+\usepackage{tikzpeople}
+\tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
@@ -82,6 +89,52 @@
 %
 \begin{document}
 
+%
+%	Scale image if you like 
+%
+\def \scalefactor {1.00}
+\renewcommand{\arraystretch}{1.00}
+\setlength {\fboxrule}{0.50pt}													% set the outside \fcolorbox line thickness
+\setlength {\fboxsep} {1.00em}													% get more space between \fcolorbox and content
+%
+%
+%
+\vspace{1em}
+%
+%	Draw the picture
+%
+\vspace{2.0em}
+
+\begin{figure}[H]
+ \centering
+ \resizebox{\scalefactor \textwidth}{!} {
+   \fcolorbox{blue}{white} {													% make the frame blue
+     \begin{tikzpicture}
+%
+%	Draw the boxes
+%
+        \node [draw] (sunrise) {Sunrise Plaza};
+        \node[draw,right=of sunrise,xshift=2.25cm]       (hjm_trust) {HJM Trust};
+        \node[draw,below left=of sunrise,xshift=1.0cm]   (magnolia) {Magnolia};
+        \node[draw,below=of sunrise,xshift=1.5cm]        (bobier_vista) {Bobier Vista};
+        \node[draw,below right=of sunrise,xshift=2.25cm] (baseline) {Baseline};
+        \node[draw,below=of magnolia]                    (x) {Avalon or Baseline};
+%
+%	Draw the edges with (tiny) labels 
+%
+        \draw[->] (hjm_trust)    -- node[midway, above]              {\tiny 32,936.16}  (sunrise);
+        \draw[<-] (sunrise)      -- node[midway, left,xshift=-1.0mm] {\tiny 32,936.16}  (magnolia);
+        \draw[<-] (sunrise)      -- node[midway, right,xshift=1.0mm] {\tiny 195,000.00} (bobier_vista);
+        \draw[->] (bobier_vista) -- node[midway, above]              {\tiny 480,000.00} (baseline);
+        \draw[->] (magnolia)     -- node[midway, above]              {\tiny 15,000.00}  (bobier_vista);
+        \draw[->] (x)            -- node[midway,right]               {\tiny 15,600.00}  (magnolia);
+     \end{tikzpicture}
+    }																			% fcolorbox
+  }                                                                             % resizebox
+  \caption{HJM Trust Loan Graph}
+  \label{figure:loan_graph}
+ \end{figure}
+
 % ----
 %
 %	Scale image if you like 
@@ -90,7 +143,7 @@
 %
 %	Draw the picture
 %
-\begin{figure}[t]
+\begin{figure}[H]
  \centering
  \resizebox{\scalefactor \textwidth}{!} {
   \begin{tikzpicture}[scale=3]

@@ -93,10 +93,10 @@
 %	Title, author and date
 %
 \title{A Few Notes on Functional Analysis}
-\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
-                            {dmm613@gmail.com}}
+\author{David Meyer \\ 
+	{\small \vspace{-2.75mm} \href{mailto:dmm613@gmail.com}{dmm613@gmail.com}}}
 \date{Last Update: \today \\
-	 {\vspace{1.00mm} \small Initial Version: June 8, 2018}}
+	{\small \vspace{1.00mm} Initial Version: June 8, 2018}}
 %
 %
 %
@@ -123,13 +123,18 @@ $(X,\norm{\cdot})$ is a normed space with norm $\norm{\mathbf{x}}
 consequently $(X,d)$ is a metric space with metric
 $d(\mathbf{x},\mathbf{y}) = \norm{\mathbf{x}-\mathbf{y}} =
 \sqrt{\langle
-\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.  In
-addition, the metric $d(\mathbf{x},\mathbf{y})$ induces a
-topology $\tau_d$ on $X$, where $\tau_d :=
-\{B_{\epsilon}(\mathbf{x}) \mid \mathbf{x} \in X \}$.
-$B_{\epsilon}(\mathbf{x})$ is the open epsilon ball centered
-at $\mathbf{x}$ (see Figure \ref{fig:open_epsilon_ball}). 
-The pair $(X,\tau_d)$ is called a topological space.
+\mathbf{x}-\mathbf{y},\mathbf{x}-\mathbf{y}\rangle}$.
+
+\bigskip
+\noindent
+A metric $d(\mathbf{x},\mathbf{y})$ induces a topology $\tau_d$
+on a set $X$, where $\tau_d := \{A \subseteq X \mid \text{for
+every $\mathbf{x} \in A$}$ there exists an $\epsilon$ such that
+$B_{\epsilon}(\mathbf{x}) \subseteq A\}$ \footnote{
+$B_{\epsilon}(\mathbf{x})$ is the open epsilon ball centered at
+$\mathbf{x}$. See Figure \ref{fig:open_epsilon_ball}.}. That is,
+$\tau_d$ is a collection of open subsets of $X$.  The pair
+$(X,\tau_d)$ is called a \emph{topological space}.
 
 \bigskip
 \noindent

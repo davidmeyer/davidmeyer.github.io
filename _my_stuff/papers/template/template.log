@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  28 JAN 2025 11:13
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  27 FEB 2025 07:02
  restricted system commands enabled.
  file:line:error style messages enabled.
 **template.tex
@@ -736,6 +736,10 @@ tex))) (/usr/local/texlive/2021/texmf-dist/tex/latex/hobby/pml3array.sty
 s/tikzlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
 
@@ -776,10 +780,6 @@ brarydecorations.markings.code.tex))
 s/tikzlibrarydecorations.pathmorphing.code.tex
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathmorphing.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tikzpeople/tikzpeople.shape.alice
 .sty)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tikzpeople/tikzpeople.shape.bob.s
@@ -1629,7 +1629,7 @@ Here is how much of LuaTeX's memory you used:
  556 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 65 glue_spec,
  7 attribute_list, 2 write nodes
-   avail lists: 1:1,2:207,3:111,4:18,5:68,6:22,7:728,8:49,9:92,10:4,11:30
+   avail lists: 1:1,2:209,3:111,4:18,5:68,6:22,7:734,8:49,9:92,10:4,11:30
  74663 multiletter control sequences out of 65536+600000
  82 fonts using 6667599 bytes
  111i,5n,128p,747b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1641,7 +1641,7 @@ tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular
 ar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-re
 gular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman17
 -regular.otf>
-Output written on template.pdf (1 page, 22642 bytes).
+Output written on template.pdf (1 page, 22549 bytes).
 
 PDF statistics: 79 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream

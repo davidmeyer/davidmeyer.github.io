@@ -32,7 +32,7 @@
 \tikzset{>=latex}                                                       % default to LaTeX arrow head
 \usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
                 through,intersections,lindenmayersystems,backgrounds,
-                hobby,matrix}
+                hobby,matrix,positioning}
 \usepackage{tikz-cd}
 \usepackage{tikzpeople}
 \tikzcdset{every arrow/.append style={-latex}}							% commutative diagrams
@@ -152,10 +152,10 @@
 %	Title, author and date
 %
 \title{template.tex}
-\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
-                            {dmm613@gmail.com}}
+\author{David Meyer \\ 
+	{\small \vspace{-2.75mm} \href{mailto:dmm613@gmail.com}{dmm613@gmail.com}}}
 \date{Last Update: \today \\
-	 {\vspace{1.00mm} \small Initial Version: October 8, 2020}}
+	{\small \vspace{1.00mm} Initial Version: October 8, 2020}}
 %
 %
 %
