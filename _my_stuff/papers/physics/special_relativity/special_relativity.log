@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  2 MAY 2025 09:32
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  2 MAY 2025 09:51
  restricted system commands enabled.
  file:line:error style messages enabled.
 **special_relativity.tex
@@ -1624,21 +1624,21 @@ Package rerunfilecheck Info: File `special_relativity.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 57144 strings out of 478531
+ 57142 strings out of 478531
  100000,2373549 words of node,token memory allocated
- 640 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 13 attribute, 72 glue_spec
+ 605 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 13 attribute, 65 glue_spec
 , 13 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:2853,3:1637,4:46,5:329,6:39,7:5422,8:85,9:746,10:14,11:339
+   avail lists: 1:1,2:2852,3:1637,4:46,5:279,6:37,7:4902,8:85,9:749,10:14,11:293
 
- 74970 multiletter control sequences out of 65536+600000
+ 74969 multiletter control sequences out of 65536+600000
  112 fonts using 8746079 bytes
- 111i,14n,128p,757b,1386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,14n,128p,757b,1380s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
+f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
 f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
 otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
-r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bol
-d.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
+r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
 lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-r
 egular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman1
 2-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman9
@@ -1651,10 +1651,10 @@ m/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
 .pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb>
-Output written on special_relativity.pdf (4 pages, 103630 bytes).
+Output written on special_relativity.pdf (4 pages, 101361 bytes).
 
-PDF statistics: 187 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 131072)
+PDF statistics: 186 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 
