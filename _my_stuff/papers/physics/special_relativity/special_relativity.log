@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  4 MAY 2025 11:35
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  7 MAY 2025 11:23
  restricted system commands enabled.
  file:line:error style messages enabled.
 **special_relativity.tex
@@ -1616,49 +1616,47 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 File: uesvect.fd 
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (48.74277pt too wide) detected at line 429
-[]
- []
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
-[3] (./special_relativity.bbl) [4] (./special_relativity.aux)
+(./special_relativity.bbl) [4] (./special_relativity.aux)
 Package rerunfilecheck Info: File `special_relativity.out' has not changed.
-(rerunfilecheck)             Checksum: 2DDFD320DBD7CC513D763F200F9AF463;683.
+(rerunfilecheck)             Checksum: 23AE81B31D01D2F5D9D65F5DE682295F;862.
 )
 
 Here is how much of LuaTeX's memory you used:
- 57143 strings out of 478531
+ 57150 strings out of 478531
  100000,2373549 words of node,token memory allocated
  616 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 14 attribute, 65 glue_spec
 , 14 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:2906,3:1649,4:50,5:279,6:37,7:4901,8:85,9:795,10:14,11:293
+   avail lists: 1:1,2:2918,3:1651,4:50,5:279,6:37,7:4901,8:87,9:779,10:14,11:293
 
- 74969 multiletter control sequences out of 65536+600000
- 112 fonts using 8746079 bytes
+ 74974 multiletter control sequences out of 65536+600000
+ 113 fonts using 8877767 bytes
  111i,14n,128p,757b,1380s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
-f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
-f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
-otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
-r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
-lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-r
-egular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman1
-2-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman9
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.ot
+f></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.
+otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.
+otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regula
+r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regu
+lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-re
+gular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10
 -regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
-n12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
-oman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+n12-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
+n9-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmro
+man12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/l
+mroman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b>
+Output written on special_relativity.pdf (4 pages, 114278 bytes).
 
-Output written on special_relativity.pdf (4 pages, 110604 bytes).
-
-PDF statistics: 192 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 131072)
- 96 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 205 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 131072)
+ 104 words of extra memory for PDF output out of 10000 (max. 100000000)
 
