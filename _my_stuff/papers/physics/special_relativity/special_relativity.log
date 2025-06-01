@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  7 MAY 2025 13:45
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2022.3.20)  1 JUN 2025 10:37
  restricted system commands enabled.
  file:line:error style messages enabled.
 **special_relativity.tex
@@ -1629,7 +1629,7 @@ Here is how much of LuaTeX's memory you used:
  651 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 14 attribute, 72 glue_spec
 , 14 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:2969,3:1666,4:54,5:272,6:37,7:5017,8:90,9:778,10:14,11:293
+   avail lists: 1:1,2:2969,3:1666,4:54,5:270,6:37,7:5017,8:90,9:779,10:14,11:293
 
  74980 multiletter control sequences out of 65536+600000
  113 fonts using 8877767 bytes
@@ -1648,15 +1648,15 @@ man12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/l
 mroman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b>
-Output written on special_relativity.pdf (4 pages, 118232 bytes).
+/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on special_relativity.pdf (4 pages, 125655 bytes).
 
-PDF statistics: 218 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
+PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  29 named destinations out of 1000 (max. 131072)
  120 words of extra memory for PDF output out of 10000 (max. 100000000)
 
