@@ -1123,17 +1123,18 @@ equations more efficiently
 unit step function (also known as the Heaviside step function) 
 as a way to represent and model sudden changes in electrical
 circuits. The Heaviside step function is shown in Definition 
-\ref{def:heaviside_function} and Figures \ref{fig:u(t)}, 
-\ref{fig:u(t-a)} and \ref{fig:u(a-t)}.
+\ref{def:heaviside_function} and Figures \ref{fig:H(t)}, 
+\ref{fig:H(t-a)} and \ref{fig:H(a-t)}.
 
 \bigskip
 \begin{definition} {\bf Heaviside Step Function:}
 \bigskip
 \begin{equation*}
-u(t) =
+H(t) =
  \begin{cases} 
    0 & t < 0  \\
-    1 & t \geq 0
+   1 & t > 0 \\
+   \text{undefined or 0.5} & \text{if $t = 0$, depending on convention}
    \end{cases}
 \end{equation*}
 \label{def:heaviside_function}
@@ -1141,7 +1142,7 @@ u(t) =
 
 \bigskip
 \noindent
-The Heaviside step function is shown in Figure \ref{fig:u(t)}.
+The Heaviside step function is shown in Figure \ref{fig:H(t)}.
 
 \bigskip
 \begin{figure}[H]
@@ -1151,14 +1152,15 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
      \draw [thick,->,dashed] (0,0) -- (0,2);                                            % draw axes
      \draw [thick,->,dashed] (0,0) -- (3,0);                                            % draw axes
      \draw (2,2) node[draw,rectangle] {                                                 % draw function to the right
-         $u(t) =  
+         $H(t) =  
            \begin{cases} 
-               0 & t < 0  \\
-               1 & t \geq 0
+               0                       & t < 0  \\
+               1                       & t > 0  \\
+               \text{undefined or 0.5} & t = 0
            \end{cases}$
        }; 
      \draw (3,0) node [label=right:{$t$}] {};
-     \draw (0,2) node [label=above:{$u(t)$}] {};
+     \draw (0,2) node [label=above:{$H(t)$}] {};
      \draw [<-,thick,red] (-2,0) -- (0,0);
      \draw [->,thick,red] (0,1) -- (3,1);
      \coordinate (y) at (0,1); \fill [red] (y) circle (1pt);                            % draw a dot on the y axis
@@ -1167,15 +1169,15 @@ The Heaviside step function is shown in Figure \ref{fig:u(t)}.
      \draw (0,0) node[below] {$0$};
   \end{tikzpicture}
   }																						% end resizebox
-  \caption{The Heaviside Function $u(t)$}
-  \label{fig:u(t)}
+  \caption{The Heaviside Function $H(t)$}
+  \label{fig:H(t)}
 \end{figure}
 
 
 \bigskip
 \noindent
-Frequently we are interested in $u(t-a)$, which is sometimes 
-written as $u_{a}(t)$ and is shown in Figure \ref{fig:u(t-a)}.
+Frequently we are interested in $H(t-a)$, which is sometimes 
+written as $u_{a}(t)$ and is shown in Figure \ref{fig:H(t-a)}.
 
 
 \bigskip
@@ -1185,18 +1187,19 @@ written as $u_{a}(t)$ and is shown in Figure \ref{fig:u(t-a)}.
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->] (0,0) -- (0,2);                                                   % draw axes
      \draw [thick,<->] (-2,0) -- (3,0);                                                 % draw axes
-     \draw (2,2) node[draw,rectangle] {                                                 % draw function to the right
-         $u(t-a) =  
+     \draw (3,2) node[draw,rectangle] {                                                 % draw function to the right
+         $H(t-a) =  
            \begin{cases} 
-               0 & t < a  \\
-               1  & t \geq a
+               0                       & t < a  \\
+               1                       & t > a \\
+               \text{undefined or 0.5} & t = a
            \end{cases}$
        }; 
      \draw (1,0) node[below] {$a$};
      \draw [thick,red] (1,0) circle [radius =0.03cm];                                   % draw an open red circle on the x axis above the "a"
      \draw [dashed] (1,0) -- (1,1);
      \draw (3,0) node [label=right:{$t$}] {};
-     \draw (0,2) node [label=above:{$u(t-a)$}] {};
+     \draw (0,2) node [label=above:{$H(t-a)$}] {};
      \draw [thick,red] (-2,0) -- (1,0);
      \draw [->,thick,red] (1,1) -- (3,1);
      \coordinate (xy) at (1,1); \fill [red] (xy) circle (1pt);                          % draw a dot on the y axis
@@ -1206,14 +1209,14 @@ written as $u_{a}(t)$ and is shown in Figure \ref{fig:u(t-a)}.
      \draw (0,1) node[left] {1};
   \end{tikzpicture}
   }																						% end resizebox
-  \caption{$u(t-a)$}
-  \label{fig:u(t-a)}
+  \caption{$H(t-a)$}
+  \label{fig:H(t-a)}
 \end{figure}
 
 \bigskip
 \noindent
-Another useful version of the Heaviside step function, $u(a - t)$,
-is shown in Figure \ref{fig:u(a-t)}.
+Another useful version of the Heaviside step function, $H(a - t)$,
+is shown in Figure \ref{fig:H(a-t)}.
 
 \bigskip
 \begin{figure}[H]
@@ -1222,15 +1225,16 @@ is shown in Figure \ref{fig:u(a-t)}.
   \begin{tikzpicture}[scale=2.0]
      \draw [thick,->] (0,0) -- (0,2);                                                   % draw axes
      \draw [thick,<->] (-2,0) -- (3,0);                                                 % draw axes
-     \draw (2,2) node[draw,rectangle] {                                                 % draw function to the right
-         $u(a - t) =  
+     \draw (3,2) node[draw,rectangle] {                                                 % draw function to the right
+         $H(a - t) =  
            \begin{cases} 
-               0 & t > a  \\
-               1  & t \leq a
+               0 & t > a \\
+               1 & t > a \\
+               \text{undefined or 0.5} & t = a
            \end{cases}$
        }; 
      \draw (3,0) node [label=right:{$t$}] {};
-     \draw (0,2) node [label=above:{$u(a - t)$}] {};
+     \draw (0,2) node [label=above:{$H(a - t)$}] {};
      \draw (1,0) node[below] {$a$};
      \draw [thick,red] (1,0) circle [radius =0.03cm];                                   % draw an open red circle on the x axis above the "a"
      \draw [<-,thick,red] (-2,1) -- (1,1);
@@ -1241,10 +1245,19 @@ is shown in Figure \ref{fig:u(a-t)}.
      \draw (0,1) node[left,above,xshift=-2.0mm] {1};
      \end{tikzpicture}
   }																						% end resizebox
-  \caption{$u(a - t)$}
-  \label{fig:u(a-t)}
+  \caption{$H(a - t)$}
+  \label{fig:H(a-t)}
 \end{figure}
 \end{itemize}
+
+\bigskip
+\noindent
+Interestingly, the derivative of the Heaviside function $H(t)$ 
+is the Dirac delta function $\delta(t)$. More specifically, 
+
+\begin{equation*}
+\dfrac{d}{dt} H(t) = \delta(t)
+\end{equation*}
 
 \bigskip
 \noindent
