@@ -1,0 +1,206 @@
+\documentclass[11pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+\usepackage{bigints}                                                    % bigger integral symbol
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{circuitikz}                                                 % draw circuits
+\usepackage{mathrsfs}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+
+
+
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%
+%	so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%
+%
+\title{What is hiding inside the number 2?}
+\author{David Meyer \\ dmm613@gmail.com}
+\date{Last update: \today}
+
+
+\begin{document}
+\maketitle
+
+\noindent
+Consider
+
+\begin{equation*}
+\begin{array}{llll}
+2 
+&=& \sqrt{4}											&\qquad \qquad \mathrel{\#} 4 = 2^2 \\
+[10pt]
+&=& \sqrt{2+2}											&\qquad \qquad \mathrel{\#} 4 = 2+2 \\
+[10pt]
+&=& \sqrt{2+ \sqrt{4}}									&\qquad \qquad \mathrel{\#} 4 = 2^2 \\
+[10pt]
+&=& \sqrt{2+ \sqrt{2+2}}								&\qquad \qquad \mathrel{\#} 4 = 2+2 \\
+[10pt]
+&=& \sqrt{2+ \sqrt{2+\sqrt{4}}}							&\qquad \qquad \mathrel{\#} 4 = 2^2 \\
+[10pt]
+&=& \sqrt{2+ \sqrt{2+\sqrt{2+2}}}						&\qquad \qquad \mathrel{\#} 4 = 2+2 \\
+[5pt]
+&=& \sqrt{2+ \sqrt{2+\sqrt{2+\sqrt{4}}}}				&\qquad \qquad \mathrel{\#} 4 = 2^2 \\
+[5pt]
+&=& \sqrt{2+ \sqrt{2+\sqrt{2+\sqrt{2+2}}}}				&\qquad \qquad \mathrel{\#} 4 = 2+2 \\
+[5pt]
+&=& \sqrt{2+ \sqrt{2+\sqrt{2+\sqrt{2+\sqrt{4}}}}}		&\qquad \qquad \mathrel{\#} 4 = 2^2 \\
+[10pt]
+&=& \cdots
+\end{array}
+\end{equation*}
+
+\noindent
+and so apparently 
+
+\begin{equation*}
+2 =  \sqrt{2+ \sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2 + \cdots}}}}}
+\end{equation*}
+%
+%
+%
+\section*{Acknowledgements}
+Thanks to Bruce Mah who pointed out that since $4 = 2 + 2 = 2 \cdot2$
+we can also write
+
+\begin{equation}
+2 = \sqrt{2 \cdot \sqrt{2 \cdot \sqrt{2 \cdot \sqrt{2 \cdot \sqrt{2 \cdot \cdots}}}}}
+\label{eqn:mah}
+\end{equation}
+
+\noindent
+Amazing.
+
+\bigskip
+\noindent
+Dave Neary also pointed out that if you take the log of both sides 
+of Equation (\ref{eqn:mah}) you get
+
+\bigskip
+\begin{equation}
+1 = \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \cdots
+\label{eqn:neary}
+\end{equation}
+
+\bigskip
+\noindent
+Here we can notice that the right-hand side (RHS) 
+of Equation (\ref{eqn:neary}) is a geometric series 
+\cite{wiki:geometric_series} with $a = \frac{1}{2}$ 
+and $r = \frac{1}{2}$. Since this geometric series 
+converges to $\frac{a}{1-r}$, we see that
+
+\begin{equation*}
+\begin{array}{llll}
+1 
+&=& \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \cdots
+		&\qquad \mathrel{\#} \text{take the log of both sides of Equation (\ref{eqn:mah})} \\
+[10pt]
+&=& \dfrac{\frac{1}{2}}{1-\frac{1}{2}}
+		&\qquad \mathrel{\#} \text{the RHS is a geometric series that 
+		                           converges to $\frac{a}{1-r}$ with $a=r=\frac{1}{2}$} \\
+[12pt]
+&=& \dfrac{\frac{1}{2}}{\frac{1}{2}}
+		&\qquad \mathrel{\#} \text{simplify} \\
+[12pt]
+&=& 1
+		&\qquad \mathrel{\#} \text{amazing} \\
+\end{array}
+\end{equation*}
+
+
+
+%
+%	LaTeX source on overleaf.com
+%
+% \section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

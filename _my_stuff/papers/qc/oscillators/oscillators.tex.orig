@@ -1,0 +1,633 @@
+\documentclass{article}
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+\usepackage{bigints}                                                    % bigger integral symbol
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{patterns,angles,arrows,quotes,shapes,intersections,decorations,hobby,backgrounds}    
+\usepackage{pgfplots}	
+\usepackage{relsize}
+\usepackage{float}
+\usepackage{enumitem}                                                   % get alpha in enumerate
+%
+%	math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}													% get \norm{x}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+
+%
+%	title, etc
+%
+\title{A Few Notes Harmonic Oscillators and Fields}
+\author{David Meyer \\ dmm@1-4-5.net}
+\date{Last update: \today}									% Activate to display a given date or no date
+%
+%	be compatible
+%
+\pgfplotsset{compat=1.17} 
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+This story begins somewhere around 1658 when Robert Hooke
+\cite{robert_hooke} began experimenting with springs and
+masses. By 1660 Hooke had made two significant steps, namely the
+use of a balance controlled by a spiral spring and an improved
+escapement called the anchor escapement. In 1660 he discovered an
+instance of what we now call Hooke's Law while working on designs
+for the balance springs of clocks. However he only announced the
+general law of elasticity in his lecture Of Spring given in 1678
+\cite{hooke_of_spring}.
+
+\bigskip
+\noindent
+Interestingly, it was the addition of the balance spring to the
+balance wheel around 1658 by Robert Hooke (and Christiaan Huygens
+\cite{wiki:huygens}) that greatly increased the accuracy of
+portable timepieces, transforming early pocket watches from
+expensive novelties to useful timekeepers.
+
+
+\bigskip
+\noindent
+These notes are organized (I hope) as follows: Section
+\ref{sec:hookes_law} looks at Hooke's Law in some detail. Section
+\ref{sec:other_smo} looks at the pendulum and RLC circuits as
+examples of other simple harmonic oscillators. Section
+\ref{sec:quantum_harmonic_oscillator} looks at the Quantum
+Harmonic Oscillator. Section \ref{sec:quantum_fields} outlines
+how quantum fields fit into all of this. Finally,
+\ref{sec:conclusions} offers a few observations and conclusions.
+
+
+\section{Hooke's Law}
+\label{sec:hookes_law}
+Hooke's law \cite{wiki:hookes_law} is a law of physics that
+states that the force (I'll just call it $F$) needed to extend or
+compress a spring by some distance ($x$) scales linearly with
+respect to that distance, that is, $F_s = -kx$, where $k$ is a
+constant factor characteristic of the spring (i.e., its
+stiffness), and $x$ is small compared to the total possible
+deformation of the spring. The law is named after 17th-century
+British physicist Robert Hooke \cite{robert_hooke}. He first
+stated the law in 1676 as a Latin anagram, and he published the
+solution of his anagram in 1678 as: ut tensio, sic vis ("as the
+extension, so the force" or "the extension is proportional to the
+force") \cite{hooke_of_spring}.
+
+\subsection{The Mathematics of Hooke's Law}
+\label{subsec:mathematics_of_hookes_law}
+Hooke's Law is most frequently stated as 
+$F \propto -x$, that is, the force $F$
+is proportional to the displacement $x$.
+However, more frequently this relationship
+is changed into an equality by the use
+of a spring constant $k$ so that
+we have\footnote{It seems to be convention
+to use $x$ and $x(t)$ and $a$ and $a(t)$ 
+interchangeably.}
+
+
+\begin{equation}
+F =-kx
+\label{eqn:hookes_law}
+\end{equation}
+
+\bigskip
+\noindent
+We also know that Newton's Second Law of Motion 
+\cite{wiki:newtons_laws} tells us that 
+
+\begin{equation}
+F = ma
+\label{eqn:newtons_2nd_law}
+\end{equation}
+
+\bigskip
+\noindent
+Now, if we set Equation \ref{eqn:hookes_law} equal to
+Equation \ref{eqn:newtons_2nd_law} we see that
+
+\begin{equation*}
+\begin{array}{llll}
+ma
+&=& -kx
+        &\qquad\qquad\mathrel{\#} \text{Newton's force equals Hooke's force} \\
+[7pt]
+&\Rightarrow& a = - \dfrac{k}{m} x
+        &\qquad\qquad\mathrel{\#} \text{solve for $a$, noting that $a$ and $x$ are functions of time} \\
+[7pt]
+&\Rightarrow& \dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x	
+        &\qquad\qquad\mathrel{\#} a = \dfrac{d}{dt} (v) = \dfrac{d}{dt} \left( \dfrac{dx}{dt} \right ) = \dfrac{d^2 x}{dt^2} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+This situation is shown in Figure \ref{fig:spring_and_mass_system}.
+
+
+\bigskip
+\begin{figure}[H]
+\centering
+  \resizebox{0.55 \textwidth}{!} {                                                              % resize figure if you want
+   \begin{tikzpicture}[black!75,thick]                                                          % make a picture
+        \draw[thick, ->] (0.00,0.00) -- (8.00,0.00) coordinate [label={[right] $x$}];           % draw x axis
+        \draw[ultra thick] (0.00,-1.00) -- (0.00,8.00);                                         % this is the support (y axis, I guess)        
+%
+% draw the first spring 
+%
+        \draw [
+              decoration={
+                 coil,
+                 aspect=0.3, 
+                 segment length=2mm, 
+                 amplitude=2mm, 
+                 pre length=3mm,
+                 post length=3mm},
+             decorate] (0,0.40) -- (5.75,0.40);
+        \fill (0.00,0.40) circle(0.05);                                                         % draw a dot connecting the spring to the vertical support
+ %      
+ %
+ %
+ % draw the first mass
+ %
+       \node[draw,
+	     fill=yellow!60,
+	     minimum width=1cm,
+	     minimum height=0.75cm,
+	     anchor=north,
+	     label=center:$m$] at (6,0.80) {};
+	     
+      \fill (5.5,0.40) circle(0.05);   
+      \path (5.5,0.0) node[yshift=-0.75mm, below] {$x$}; 
+%
+%	make some coordinates
+%        
+      \coordinate (c1) at (6.00,7.25);
+      \coordinate (c2) at (3.50,0.00);
+      \coordinate (c3) at (3.50,4.00);            
+ %
+ %	draw some text
+ %  
+      \path (c1) node[left] {\Large {\bf \underline{Physical System}}};
+      \path (c2) node[yshift=-0.5mm, below] {$0$};
+      \draw[thin,red] (c2) -- (c3) coordinate [label={[above, yshift=0.5mm] \text{{\footnotesize \color{black}{{Equilibrium Point}}}}}];   
+      \draw[-latex]   (3.50,1.75) -- (5.50,1.75) coordinate [label={[font=\footnotesize,color=black,midway,above] {$x$}}];
+      \draw[latex-]   (3.50,1.00) -- (5.50,1.00) coordinate [label={[font=\footnotesize,color=black,midway,above] {$F$}}]; 
+      \draw[thin,red] (5.50,4.00) -- (5.50,0.00);
+%
+% draw the second spring 
+%
+        \draw [
+              decoration={
+                 coil,
+                 aspect=0.3, 
+                 segment length=1.5mm, 
+                 amplitude=2mm, 
+                 pre length=3mm,
+                 post length=3mm},
+             decorate]    (0.00,2.75) -- (3.50,2.75);
+        \draw [draw=none] (0.00,2.75) -- (3.50,2.75) coordinate [label={[midway,above, yshift=0.25cm] \text{{\tiny {\bf Equilibrium State}}}}];
+        \fill (0.00,2.75) circle(0.05);                                                                 % draw a dot connecting the spring to the y axis
+        \fill (3.50,2.75) circle(0.05);                                                                 % draw a dot connecting the spring to the mass
+        \draw [draw=none] (0,2.75) -- (3.5,2.75) coordinate [label={[midway,below,yshift=-0.25cm] {\tiny $k$}}];	% draw k
+
+ %
+ % draw the second mass
+ %
+       \node[draw,
+	     fill=yellow!60,
+	     minimum width=1cm,
+	     minimum height=0.75cm,
+	     anchor=north,
+	     label=center:$m$] at (4.00,3.15) {};
+	     
+%	
+%	draw information about the graphic to the right ((12.50,Y))
+%
+%	mostly eyeballed
+%
+        \draw[dashed,thick] (8.75,-1.00) -- (8.75,8.00);						% draw dashed vertical separator
+        \begin{footnotesize}
+% 
+%	draw header
+%
+	      \draw [draw=none] (12.00,6.90) -- (12.00,6.90) coordinate [label={[font=\Large, midway] {\bf \underline{Hooke's Law}}}]; 
+%	
+%	draw the rest
+%	      
+	      \draw [draw=none] (12.00,5.75) -- (12.00,5.75) coordinate [label={[midway] \underline{{\bf Hooke's Law}}}]; 
+   	      \draw [draw=none] (12.00,5.25) -- (12.00,5.25) coordinate [label={[midway] {${\mathbf {\displaystyle F \propto -x}}$}}];
+	      \draw [draw=none] (12.00,4.50) -- (12.00,4.50) coordinate [label={[midway] \underline{{\bf Hooke's Law with Spring Constant $\mathbf {k}$}}}]; 
+	      \draw [draw=none] (12.00,4.00) -- (12.00,4.00) coordinate [label={[midway] {${\mathbf {\displaystyle F = -kx}}$}}];
+	      \draw [draw=none] (12.00,3.25) -- (12.00,3.25) coordinate [label={[midway] \underline{{\bf Newton's ${\mathbf 2^{\text{nd}}}$ Law of Motion}}}]; 
+	      \draw [draw=none] (12.00,2.75) -- (12.00,2.75) coordinate [label={[midway] {${\mathbf {\displaystyle F = ma}}$}}];	      
+	      \draw [draw=none] (12.00,2.00) -- (12.00,2.00) coordinate [label={[midway] \underline{{\bf Newton's Force Equals Hooke's Force}}}];
+	      \draw [draw=none] (12.00,1.50) -- (12.00,1.50) coordinate [label={[midway] {${\mathbf {\displaystyle ma = -kx}}$}}];
+	      \draw [draw=none] (12.00,0.50) -- (12.00,0.50) coordinate [label={[midway] \underline{{\bf Hooke's Law Equation of Motion}}}]; 
+	      \draw [draw=none] (12.00,0.00) -- (12.00,0.00) node[blue,draw,rectangle,midway] 
+                                {${\; \mathbf {\color{black}{a(t) = -\dfrac{k}{m} x(t) \;}}}$};			 
+        \end{footnotesize}
+		 
+    \end{tikzpicture}
+  }                                                             			% end resizebox
+\caption{Spring and Mass System with Spring Constant $k$ and Mass $m$}
+\label{fig:spring_and_mass_system}
+\end{figure}
+
+
+\bigskip
+\noindent
+So now we know that
+
+\begin{equation}
+\dfrac{d^2 x}{dt^2} = - \dfrac{k}{m} x
+\label{eqn:d2xdt2}
+\end{equation}
+
+\bigskip
+\noindent
+The next question is how do we solve the second order ordinary
+differential equation (Equation \ref{eqn:d2xdt2}) for $x(t)$?
+Well, if we imagine the displacement ($x(t)$) plotted on the y
+axis against $t$ (plotted on the x axis) we see the familiar
+pattern shown in Figure \ref{fig:smh_displacement_function}.
+
+
+\bigskip
+\begin{figure}[H]
+\centering
+  \resizebox{0.50 \textwidth}{!} {																% resize figure if you want
+  \begin{tikzpicture}
+    \def \A {1.0}																					% x(t) = A cos (wt)
+    \def \w {1.0}																					% x(t) = A cos (wt)
+    \begin{axis}[
+      axis line style = thick,
+      ticks=none,
+      ymin=-1.5,
+      ymax=1.5,
+      axis x line=middle,
+      axis y line=middle,
+      xlabel=$t$,
+      ylabel={$x(t)$},
+      every axis x label/.style={
+        at={(ticklabel* cs:1.05)},
+        anchor=east,
+      },
+      every axis y label/.style={
+        at={(ticklabel* cs:1.05)},
+        anchor=south,
+      },
+    ]
+   \addplot[domain=0:(4*2*pi),samples=100,smooth,brown]{\A*cos(\w*deg(x))};
+ \end{axis}
+ 
+%
+%
+% \fill [red] (0.0,4.75) circle (0.05);															% draw a dot at (0,1) (not really sure how to compute this)
+%
+  \path (0.0,4.75) node[font=\small,xshift=-1.0mm,left,red] {${A}$};							% label with A
+  \draw[thick,red] (-0.20,4.75) -- (0.20,4.75);													% draw a short line
+% 
+% \fill [red] (1.71,4.75) circle (0.05);														% again, not really sure how to compute these (eyeballed)
+% \fill [red]  ({2*1.71},4.75) circle (0.05);
+  \draw[thick,red] (1.71,4.50) -- (1.71,5.00); 
+  \draw[thick,red] ({2*1.71},4.50) -- ({2*1.71},5.00); 
+  \draw[blue,stealth-stealth] (1.71,4.75) -- ({2*1.71},4.75) coordinate [label={[font=\small,midway] {${\color{red}{T}}$}}];
+%  \path (6.00,6.25) node[font=\footnotesize,draw,rectangle] {$\; \omega = \dfrac{2 \pi}{T} = 2 \pi f \;$}; 
+%  \path (6.00,5.45) node[font=\footnotesize,draw,rectangle] {$\; x(t) = A \cos (2 \pi f t) \;$}; 
+  \draw[draw=none] (0.00,0.05) -- ({4*1.71},0.05) 
+  				coordinate [label={[draw,blue,thick,rectangle,font=\footnotesize,midway] {\color{black}{$\; x(t) = A \cos (\omega t) \; $}}}];
+ \end{tikzpicture}
+}
+\caption{Simple Harmonic Motion Displacement Function}
+\label{fig:smh_displacement_function}
+\end{figure}
+
+\bigskip
+\noindent
+Here we can think of the spring being stretched to its maximum
+displacement $(A)$ and then let go at time $t = 0$. The mass
+($m$) will continue oscillating since in the Hooke's Law setup
+the only force acting on the mass is the force due to the spring,
+that is, $-kx$. This force is frequently referred to as the
+\emph{restoring} force and is shown in Figure
+\ref{fig:spring_and_mass_system}.
+
+
+
+\bigskip
+\noindent
+We can check to see if our guess, $x(t) = A \cos (\omega t)$, is
+really a solution to Equation \ref{eqn:d2xdt2} as follows:
+
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{d^2 x}{dt^2}
+&=& - \dfrac{k}{m} x													&\qquad \qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:d2xdt2}} \\
+[10pt]
+&\Rightarrow& \dfrac{d^2}{dt^2}  \left [A \cos (\omega t) \right ] = -\dfrac{k}{m} x
+				&\qquad \qquad \qquad \mathrel{\#} \text{guess that $x(t) = A \cos (\omega t)$} \\
+[10pt]
+&\Rightarrow& \dfrac{d}{dt}  \left [-\omega A \sin (\omega t) \right ] = -\dfrac{k}{m} x
+				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+[10pt]
+&\Rightarrow& -\omega^2 A \cos (\omega t) = -\dfrac{k}{m} x
+				&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\sin (u) = \cos (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+[10pt]
+&\Rightarrow& \omega^2 A \cos (\omega t) = \dfrac{k}{m} x				&\qquad \qquad \qquad \mathrel{\#} \text{cancel minus} \\
+[10pt]
+&\Rightarrow& \omega^2 x = \dfrac{k}{m} x								&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
+[10pt]
+&\Rightarrow& \omega^2  = \dfrac{k}{m}									&\qquad \qquad \qquad \mathrel{\#} \text{cancel $x$} \\
+[10pt]
+&\Rightarrow& \omega  = \sqrt{\dfrac{k}{m}}								&\qquad \qquad \qquad \mathrel{\#} \text{take the square root of both sides}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $x(t) = A \cos (\omega t)$ is indeed a solution to Equation \ref{eqn:d2xdt2} 
+in the case that
+
+\bigskip
+\begin{equation}
+\omega  = \sqrt{\dfrac{k}{m}}	
+\label{eqn:omega0}
+\end{equation}
+
+\bigskip
+\noindent
+Here $A$ is the maximum displacement (or amplitude) and $\omega$
+is the angular frequency (in radians per second). We also know
+that the definition of angular frequency is
+
+
+\begin{equation}
+\omega = \dfrac{2 \pi}{T} = 2 \pi f
+\label{eqn:omega1}
+\end{equation}
+
+\bigskip
+\noindent
+where $T$ is the period (time for one cycle in seconds) and $f$
+is the frequency in cycles/second \cite{wiki:angular_frequency}.
+Note that $f = \dfrac{1}{T}$ so $f$ has units of
+$\text{seconds}^{-1}$.
+
+\bigskip
+\noindent
+Give this information we can write the displacement function
+$x(t)$ as in terms of the frequency $f$ as follows:
+
+\begin{equation*}
+x(t) = A \cos (2 \pi f t)
+\end{equation*}
+
+\bigskip
+\noindent
+We can also put Equations \ref{eqn:omega0} and \ref{eqn:omega1} 
+together to find
+
+\begin{equation*}
+f = \dfrac{1}{2 \pi} \sqrt{\dfrac{k}{m}}
+\end{equation*}
+
+\bigskip
+\noindent
+and
+
+\begin{equation*}
+T = 2 \pi \sqrt{\dfrac{m}{k}}
+\end{equation*}
+
+
+
+\subsection{Total Energy of a Simple Harmonic Oscillator}
+We know that the total energy of an oscillator  
+such as the spring and mass system we looked 
+at above is
+
+
+\begin{equation*}
+E_{\text{total}} = \text{KE} + \text{PE}
+\end{equation*}
+
+\bigskip
+\noindent
+All good, but what is the kinetic energy (KE) and potential
+energy (PE) of such as system?
+
+\bigskip
+\noindent
+Well, we know that \cite{oscillations_and_waves}
+
+\smallskip
+\begin{equation*}
+E_{\text{total}} = \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 
+\end{equation*}
+
+\smallskip
+\noindent
+so that
+
+\begin{equation*}
+\begin{array}{llll}
+E_{\text{total}}
+&=& \dfrac{1}{2}mv^2 + \dfrac{1}{2}kx^2 									
+						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}} = \text{KE} + \text{PE} \\
+[12pt]
+&=& \dfrac{1}{2} m \left (\dfrac{dx}{dt} \right )^2 + \dfrac{1}{2}kx^2 		
+						&\qquad \qquad \qquad \mathrel{\#} v = \dfrac{dx}{dt} \\
+[12pt]
+&=& \dfrac{1}{2} m \left (\dfrac{d}{dt} \left [A \cos (\omega t) \right ] \right )^2 + \dfrac{1}{2}kx^2 
+						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t) \\
+[12pt]
+&=& \dfrac{1}{2} m \left (- \omega A \sin (\omega t) \right )^2 + \dfrac{1}{2}kx^2 
+						&\qquad \qquad \qquad \mathrel{\#} \text{$\dfrac{d}{dt}\cos (u) = -\sin (u) \dfrac{du}{dt}$ with $u = \omega t$}  \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}kx^2 
+						&\qquad \qquad \qquad \mathrel{\#} \left (- \omega A \sin (\omega t) \right )^2 = \omega^2 A^2 \sin^2 (\omega t) \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k\left (A \cos (\omega t) \right )^2 
+						&\qquad \qquad \qquad \mathrel{\#} x(t) = A \cos (\omega t)\\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2}k A^2 \cos^2 (\omega t) 
+						&\qquad \qquad \qquad \mathrel{\#} \left ( A \cos (\omega t) \right )^2 = A^2 \cos^2 (\omega t) \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \sin^2 (\omega t) + \dfrac{1}{2} m \omega^2 A^2 \cos^2 (\omega t) 
+						&\qquad \qquad \qquad \mathrel{\#} \omega = \sqrt{\dfrac{k}{m}} \Rightarrow k = m \omega^2 \text{ (Equation \ref{eqn:omega0})} \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2 \left (\sin^2 (\omega t) + \cos^2 (\omega t) \right )
+						&\qquad \qquad \qquad \mathrel{\#} \text{factor out $\dfrac{1}{2} m \omega^2 A^2$} \\
+[12pt]
+&=& \dfrac{1}{2} m \omega^2 A^2
+						&\qquad \qquad \qquad \mathrel{\#} \sin^2 (\omega t) + \cos^2 (\omega t) = 1 \\
+[12pt]
+&=& \dfrac{1}{2} m (2 \pi f)^2 A^2 
+						&\qquad \qquad \qquad \mathrel{\#} \omega = 2 \pi f \\
+[12pt]
+&=& \dfrac{1}{2} 4 \pi^2 f^2 A^2 m
+						&\qquad \qquad \qquad \mathrel{\#} \text{expand $\left (2 \pi f \right)^2$ and rearrange} \\
+[12pt]
+&=& 2 \pi^2 f^2 A^2 m
+						&\qquad \qquad \qquad \mathrel{\#} E_{\text{total}} = 2 \pi^2 f^2 A^2 m\\
+[12pt]
+&\Rightarrow& E_{\text{total}} \propto f^2 A^2 
+						&\qquad \qquad \qquad \mathrel{\#} \text{$E_{\text{total}}$ is proportional to $f^2 A^2$}\\
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that the oscillator has $E_{\text{total}} = 2
+\pi^2 f^2 A^2 m$, or said another way $E_{\text{total}} \propto
+f^2 A^2$. This result will become useful when we consider the
+quantum harmonic oscillator.
+
+
+\section{Other Simple Harmonic Oscillators}
+\label{sec:other_smo}
+
+\section{The Quantum Harmonic Oscillator}
+\label{sec:quantum_harmonic_oscillator}
+
+\section{Quantum Fields}
+\label{sec:quantum_fields}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX Source}
+\url{https://www.overleaf.com/read/xjmyvksvtztb}
+%
+%	Holding for figures
+%
+\section*{Figures}
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.45 \textwidth}{!} {																% resize figure if you want
+    \begin{tikzpicture}
+      \pgfmathsetmacro{\Gvec}{1.5}																% save length of g-vector and theta to macros
+      \pgfmathsetmacro{\myAngle}{30}
+      \pgfmathsetmacro{\Gcos}{\Gvec*cos(\myAngle)}												% calculate lengths of vector components
+      \pgfmathsetmacro{\Gsin}{\Gvec*sin(\myAngle)}
+%
+%	make some coordinates
+%
+      \coordinate (centro) at (0,0);
+      \draw[dashed] (0,0.5) -- ++ (0,-3.5) node (mary) [black,below]{};
+      \fill (centro) circle (0.04);
+      \draw[thick] (centro) -- ++(270+\myAngle:3) coordinate (bob);
+      \path (1.00,-1.25) node[] {$\Scale[0.5] {L}$}; 
+      \draw [thick,brown,-stealth] (bob) -- ($(bob)!\Gcos cm!(centro)$) node[left,midway] {${\Scale[0.50] T}$};
+%
+%	draw the angle
+%
+     \pic [draw, -latex, "${\Scale[0.60]{\theta}}$", angle eccentricity=1.5] {angle = mary--centro--bob};
+%
+%	draw the rest of the pendulum
+%
+     \draw [-stealth] (bob) -- ($(bob)!-\Gcos cm!(centro)$)
+       coordinate (gcos)
+       node[midway,below, yshift=-0.5cm, xshift=0.50cm] {$\Scale[0.60] {m {\bf g} \cos\theta}$};
+     \draw [-stealth] (bob) -- ($(bob)!\Gsin cm!90:(centro)$)
+       coordinate (gsin)
+       node[midway,below,yshift=-0.20cm, xshift=-0.50cm] {$\Scale[0.60] {m {\bf g} \sin \theta}$};
+     \draw [thick,brown,-stealth] (bob) -- ++(0,-\Gvec)
+       coordinate (g)
+       node[below,brown] {$\Scale [0.60] {{\bf F_{g}} = m {\bf g}}$};
+     \pic [draw, ->, "{$\Scale[0.60] {\theta}$}", angle eccentricity=1.5] {angle = g--bob--gcos};
+     \filldraw [fill=black!20,draw=black] (bob) circle[radius=0.125];
+     \path (bob) node[] {$\Scale[0.35] {\bf m}$};
+%
+%	draw the x-y coordinate system
+%
+     \draw [-stealth] (2.00,-2.25) -- (2.50,-1.90)  node[xshift=0.10cm, yshift=0.10cm] {$\Scale[0.50] {x}$};
+     \draw [-stealth] (2.00,-2.25) -- (1.65,-1.750) node[xshift=-0.05cm,yshift=0.10cm] {$\Scale[0.50] {y}$};
+   \end{tikzpicture}
+}
+\caption{Free Body Diagram of a Simple Pendulum}
+\label{fig:simple_pendulum}
+\end{figure}
+
+
+
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

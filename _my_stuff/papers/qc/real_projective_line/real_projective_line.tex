@@ -1,0 +1,342 @@
+%
+%	Use lualatex
+%
+% !TEX TS-program = LuaLaTeX
+%
+%	To get overleaf.com to use lualatex see
+%	https://www.overleaf.com/learn/how-to/Changing_compiler.
+%	Basically, change the compiler in Settings.
+%
+%
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	projective_geometry.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	10 Mar 2024
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}                                                   % \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}                                                   % \multirow and \multicolumn
+\usepackage{luacode}
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+\usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Bit on the Real Projective Line}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%	A few parameters
+%
+\setlength			{\fboxsep} {0.75em}						% space between fcolorbox and content
+\setlength			{\fboxrule}{0.50pt}						% fcolorbox line thickness
+\def \scalefactor	{0.50}									% resizebox scale factor
+\def \twidth		{\textwidth}							% resizebox height = \scalefactor * \w
+%
+%
+%
+\section{The Real Projective Line}
+\label{section:real_projective_line}
+
+\vspace{2em}
+
+%
+%	Scale image if you like
+%
+\def \scalefactor {1.00}
+%
+%	Draw the picture
+%
+\begin{minipage}[c]{0.50\textwidth}
+\begin{figure}[H]
+ \centering
+ \resizebox{\scalefactor \textwidth}{!} {
+    \begin{tikzpicture}[scale=3]
+%
+%	Draw the axes
+%
+       \draw[-] (-1.75,0) -- (1.75,0) node[below,xshift=-0.15cm]               {$x$};
+       \draw[]  (1.50,0)              node[above,xshift=0.25cm]                {$\lambda[1,0]$};
+       \draw[-] (0,-0.25) -- (0,1.50) node[right,xshift=0.20cm,yshift=-0.20cm] {$y$};
+       \draw[]  (0,1.50)              node[above]                              {$\lambda[0,1]$};
+%
+%	Draw the y = 1 line
+%
+       \draw [-] (-1.75,1) -- (1.75,1);
+%
+%	Draw the y = x line
+%
+       \draw [-] (-1.00,-1.00) -- (1.25,1.25) node[above,xshift=-0.25cm] {$\lambda[x,1] = \lambda [\cos \theta, \sin \theta]$};
+%
+%	Intersection of y = 1 and y = x
+%
+       \fill [red] (1,1) circle (0.75pt);
+       \node [below,yshift=-0.1cm,xshift=0.25cm] at (1,1) {$1,\frac{\pi}{4}$};
+%
+%	Draw theta
+%
+       \draw [->] (0.3,0.3) arc (45:90:0.42);
+       \node[] at (0.10,0.25) {$\theta$};
+% 
+%	Draw upper half of unit circle in blue
+%
+      \draw [blue,thin]  (1,0)  arc (0:180:1);
+      \draw [dashed,thin](-1,0) arc (180:360:1);
+
+%
+%	Put some black points on the unit circle
+%
+      \fill [black] (1,0)  circle (0.75pt); 
+      \fill [black] (-1,0) circle (0.75pt); 
+      \fill [black] (0,1)  circle (0.75pt);
+%
+%	Draw a dot at the origin
+%
+      \fill [red] (0,0) circle (0.75pt);
+%
+%	Draw a few coordinates of interest
+% 
+      \draw (1,0)  node[below] {$(1,0)$};
+      \draw (-1,0) node[below] {$(-1,0)$};
+      \draw (0,1)  node[below,yshift=-0.10cm] {$(0,1)$};
+    \end{tikzpicture}														% end tikzpicture
+   }																		% end resizebox
+  \caption{Real Projective Line Setup}
+  \label{table:real_projective_line_setup}
+\end{figure}
+\end{minipage}
+
+\def \scalefactor {0.75}
+
+\begin{minipage}[c]{0.50\textwidth}
+\begin{figure}[H]
+ \centering
+ \resizebox{\scalefactor \textwidth}{!} {
+   \begin{tikzpicture}[scale=3]
+     \draw (0,0) circle (1);												% draw unit circle
+     %\node[right] at (1,1) {$x,\theta$};									% annotiations
+     \node[right] at (1,0) {$1,\frac{\pi}{4}$};
+     \node[above] at (0,1) {$0,0$};
+     \node[left] at (-1,0) {$-1,-\frac{\pi}{4}$};
+     \node[below,yshift=-0.15cm] at (0,-1) {$-\infty,-\frac{\pi}{2}; \infty,\frac{\pi}{2}$};
+   \end{tikzpicture}
+  }
+ \caption{The Real Projective Line is a Circle: $(x,\theta)$}
+ \label{table:real_projective_line_is_a_circle}
+\end{figure}
+\end{minipage}
+
+\vspace{2.0cm}
+
+%
+%	Experiments with \directlua{.}
+%
+%	Pass variable defined in LaTeX (\num) to the Lua interpreter
+%
+\def \num {36}												% the parameter \num is defined in LaTeX
+
+% \luaexec{tex.sprint(string.format('\%.3f', math.pi))}
+
+\directlua{													% call the Lua interpreter 
+  local result = math.sqrt(\num)							% result is defined in the Lua interpreter
+  tex.sprint("The square root of ", \num, " is: ", result)	% pass \num to the Lua interpreter
+}
+
+% $\pi = \directlua{tex.sprint(math.pi)}$
+
+
+\vspace{1.75em}
+%
+%
+%
+\begin{figure}[H]											% wrap the MetaPost figure in a LaTeX figure
+  \centering												% center the whole thing
+    \fcolorbox{black}{white} {								% make the frame black
+       \resizebox{\scalefactor \twidth}{!} {				% resize the figure if you want (change \scalefactor)
+          \begin{mplibcode}									% build the figure in MetaPost 
+             u = 100;										% set diameter
+             if u <= 0:										% diameter must be > 0
+               message "u <= 0";							% supposedly this gets written on the console and then LaTeX exits
+ 			 else:											% u > 0
+               beginfig(1)									% begin MetaPost figure
+                 draw fullcircle scaled u withcolor blue;	% draw a blue circle with diameter u
+                 pickup pencircle scaled 1.50;				% set the pen to circular shape (pencircle) with width scaled to 1.50 units
+%															%
+%	Draw dots and annotations at 0, pi/2, pi and 3pi/2		%
+%															%
+                 draw (u/2,0); draw(0,u/2); draw(-u/2,0); draw(0,-u/2);
+                 label.rt(textext("$\;\theta = 0$") scaled .75, (u/2,0));
+                 label.top(textext("$\theta = \displaystyle{\frac{\pi}{2}}$") scaled .75, (0,u/2));
+                 label.lft(textext("$\theta = \pi\;$") scaled .75, (-u/2,0));				
+                 label.bot(textext("$\theta =\displaystyle{\frac{3\pi}{2}}$") scaled .75, (0,-u/2));
+               endfig;										% end MetaPost figure
+             fi;											% end if u <= 0: 
+          \end{mplibcode}									% end MetaPost code
+       } 													% end resizebox
+    } 														% end fcolorbox
+  \label{figure:annotated_circle}
+  \caption{Annotated Circle}
+\end{figure}
+%
+%
+%
+\vspace{1.50em}
+\section*{Acknowledgements}
+\label{section:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+%\url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

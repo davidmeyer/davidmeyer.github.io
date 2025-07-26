@@ -1,0 +1,130 @@
+\begin{thebibliography}{10}
+
+\bibitem{properties_of_limits}
+{Alex Svirin}.
+\newblock {Properties of Limits}.
+\newblock \url{https://math24.net/properties-limits.html}.
+\newblock [Online; accessed 14-November-2021].
+
+\bibitem{module_theory_blyth}
+T.~S. Blyth.
+\newblock {\em Module Theory: An Approach to Linear Algebra}.
+\newblock {Oxford University Press}, July 1977.
+
+\bibitem{cofactor_expansion}
+{Dan Margalit and Joseph Rabinoff}.
+\newblock {Cofactor Expansion}.
+\newblock
+  \url{https://textbooks.math.gatech.edu/ila/determinants-cofactors.html}, May
+  2020.
+\newblock [Online; accessed 18-March-2022].
+
+\bibitem{notes:basis}
+{David Meyer}.
+\newblock {Notes on Change of Basis}.
+\newblock \url{https://davidmeyer.github.io/qc/change_of_basis.pdf}, January
+  2019.
+\newblock [Online; accessed 14-March-2022].
+
+\bibitem{euclidian_space}
+{Frank Jones}.
+\newblock {Euclidean Space}.
+\newblock \url{http://www.owlnet.rice.edu/~fjones/chap1.pdf}, August 2004.
+\newblock [Online; accessed 03-November-2021].
+
+\bibitem{galbis2012vector}
+{Galbis, A. and Maestre, M.}
+\newblock {\em {Vector Analysis Versus Vector Calculus}}.
+\newblock {Universitext}. {Springer New York}, {2012}.
+
+\bibitem{unit_tangent_and_normal_vectors}
+{Gregory Hartman}.
+\newblock {Unit Tangent and Normal Vectors}.
+\newblock
+  \url{https://sites.und.edu/timothy.prescott/apex/web/apex.Ch12.S4.html},
+  November 2021.
+\newblock [Online; accessed 08-March-2022].
+
+\bibitem{the_role_of_grad}
+{J D Gibbon}.
+\newblock {The role of grad, div and curl in vector calculus}.
+\newblock \url{https://www.ma.imperial.ac.uk/~jdg/eeveccal.pdf}, 2017.
+\newblock [Online; accessed 15-Cctober-2022].
+
+\bibitem{vector_norms_and_matrix_norms}
+{Jean H. Gallier}.
+\newblock {Vector Norms and Matrix Norms}.
+\newblock \url{https://www.cis.upenn.edu/~cis515/cis515-11-sl4.pdf}, 2020.
+\newblock [Online; accessed 10-March-2022].
+
+\bibitem{law_of_cosines}
+{Math Open Reference}.
+\newblock {Proof of the Law of Cosines}.
+\newblock \url{https://www.mathopenref.com/lawofcosinesproof.html}, 2011.
+\newblock [Online; accessed 16-March-2022].
+
+\bibitem{joplin_missouri_tornado_2011}
+{NIST}.
+\newblock {Joplin Missouri Tornado 2011}.
+\newblock
+  \url{https://www.nist.gov/disaster-failure-studies/joplin-tornado-ncst-investigation},
+  August 2011.
+\newblock [Online; accessed 10-March-2022].
+
+\bibitem{wiki:linear_map}
+{Wikipedia Contributors}.
+\newblock {Linear Map --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Linear_map&oldid=1024503856},
+  2021.
+\newblock [Online; accessed 6-June-2021].
+
+\bibitem{wiki:rule_of_sarrus}
+{Wikipedia Contributors}.
+\newblock {Rule of Sarrus --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Rule_of_Sarrus&oldid=1050637323},
+  2021.
+\newblock [Online; accessed 18-March-2022].
+
+\bibitem{wiki:cross_product}
+{Wikipedia Contributors}.
+\newblock {Cross Product --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Cross_product&oldid=1070828862},
+  2022.
+\newblock [Online; accessed 18-March-2022].
+
+\bibitem{wiki:dot_product}
+{Wikipedia Contributors}.
+\newblock {Dot Product --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Dot_product&oldid=1074690360},
+  2022.
+\newblock [Online; accessed 17-March-2022].
+
+\bibitem{wiki:jacobi_identity}
+{Wikipedia Contributors}.
+\newblock {Jacobi Identity --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Jacobi_identity&oldid=1075896608},
+  2022.
+\newblock [Online; accessed 18-March-2022].
+
+\bibitem{wiki:right_hand_rule_for_cross_products}
+{Wikipedia Contributors}.
+\newblock {Right-Hand Rule --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Right-hand_rule&oldid=1069678571},
+  2022.
+\newblock [Online; accessed 18-March-2022].
+
+\bibitem{wiki:triangle_inequality}
+{Wikipedia Contributors}.
+\newblock {Triangle Inequality --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Triangle_inequality&oldid=1074965160},
+  2022.
+\newblock [Online; accessed 10-March-2022].
+
+\end{thebibliography}

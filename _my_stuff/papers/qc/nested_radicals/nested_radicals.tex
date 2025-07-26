@@ -1,0 +1,316 @@
+\documentclass{article}
+%
+%
+%	nested_radicals.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	22 Aug 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=0.75in]{geometry}									% adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	also a handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%	Title, author and date
+%
+\title{A Bit on Ramanujan and Nested Radicals}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+In 1911, the Indian mathematical genius Srinivasa Ramanujan 
+posed the following problem in the Journal of the Indian 
+Mathematical Society \cite{ramanujan_roots}: What does the 
+nested radical shown in Equation (\ref{eqn:3}) equal?
+
+
+\bigskip
+\begin{equation}
+\sqrt{1+2 \sqrt{1+3 \sqrt{1+4  \sqrt{1+5 \sqrt{1 + \cdots}}}}}
+\label{eqn:3}
+\end{equation}
+
+\medskip
+\bigskip
+\noindent
+Having not received an answer for a few months, Ramanujan 
+solved it himself. In these notes we look at Ramanujan’s 
+solution to a more general form of this problem.
+
+\bigskip
+\noindent
+Aside: I did a special case of this problem
+in "What is hiding inside the number 3?"
+\cite{notes:what_is_hiding_inside_the_number_3},
+which is reproduced in Appendix A.
+
+\section{Ramanujan's Approach}
+What Ramanujan spotted was that for any non-negative 
+integer $x$ we have
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+x + 1
+&=& \sqrt{(x+1)^2}		&\hspace{6em} \mathrel{\#} x+1 = \sqrt{(x+1)^2} \\
+[5pt]
+&=& \sqrt{1+2x+x^2}		&\hspace{6em} \mathrel{\#} (x+1)^2 = x^2+2x+1 \\
+[5pt]
+&=& \sqrt{1+x(x + 2)}	&\hspace{6em} \mathrel{\#} x^2+2x+1 = 1+x(x+2)
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Next, notice that rewriting $(x+2)$ as $(x+1)+1$
+gives us
+
+\begin{equation*}
+\begin{array}{llll}
+x + 1
+&=& \sqrt{1+x((x+1)+1)}								
+		&\hspace{4em} \mathrel{\#} (x+2) = (x+1)+1 \\
+[10pt]
+&=& \sqrt{1+x\sqrt{((x+1)+1)^2}}	
+		&\hspace{4em}\mathrel{\#} (x+1)+1 = \sqrt{((x+1)+1)^2} \\
+[10pt]
+&=& \sqrt{1+x\sqrt{1+2(x+1)+(x+1)^2}}	
+		&\hspace{4em} \mathrel{\#} ((x+1)+1)^2 = 1 + 
+		\underbrace{2(x+1)+(x+1)^2}_{x^2+4x+3} \\
+[10pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)(x+3)}}
+		&\hspace{4em}\mathrel{\#} x^2+4x+3 = (x+1)(x+3)
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Continuing, we can rewrite $(x+3)$ as $(x+2)+1$ and so
+
+\begin{equation*}
+\begin{array}{llll}
+x + 1
+&=& \sqrt{1+x \sqrt{1+(x+1)((x+2)+1)}}								
+		&\; \mathrel{\#} (x+3) = (x+2)+1 \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{((x+2)+1)^2}}}
+		&\; \mathrel{\#} (x+2)+1 = \sqrt{((x+2)+1)^2} \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+2(x+2)+(x+2)^2}}}
+		&\; \mathrel{\#} ((x+2)+1)^2 = 1 + 2(x+2)+(x+2)^2 \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+x^2+6x+8}}}
+		&\; \mathrel{\#} 2(x+2)+(x+2)^2 = x^2+6x+8 \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1 + (x+2)(x+4)}}}
+		&\; \mathrel{\#} x^2+6x+8 = (x+2)(x+4) \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{((x+3)+1)^2}}}}
+		&\; \mathrel{\#} (x+4) = (x+3)+1 = \sqrt{((x+3)+1)^2} \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{1+x^2+8x+15}}}}
+		&\; \mathrel{\#} ((x+3)+1)^2 =  1 + x^2+8x+15 \\
+[15pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{1+(x+3)(x+5)}}}}
+		&\; \mathrel{\#} x^2+8x+15 = (x+3)(x+5) \\
+[12pt]
+&=& \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{1+(x+3) \sqrt{((x+4)+1)^2}}}}}
+		&\; \mathrel{\#} x+5 = (x+4)+1 = \sqrt{((x+4)+1)^2} 
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Now we can see that the general form of the expression is:
+
+\bigskip
+\begin{equation}
+x+1 = \sqrt{1+x\sqrt{1+(x+1)\sqrt{1+(x+2)\sqrt{1+(x+3)\sqrt{1+(x+4)\sqrt{1 + (x+5)\sqrt{1+\hdots}}}}}}}
+\label{eqn:continued_fraction}
+\end{equation}
+
+\bigskip
+\noindent
+Setting $x = 2$ in Equation (\ref{eqn:continued_fraction}) we get
+
+\bigskip
+\begin{equation*}
+3 = \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 4  \sqrt{1 + 5 \sqrt{1 + 6 \sqrt{1 + \cdots}}}}}}
+\end{equation*}
+
+\bigskip
+\noindent
+which is the result we saw in \cite{notes:what_is_hiding_inside_the_number_3}.
+But now we have the general formula so we can plug in any positive integer, 
+say $x = 124$ for example:
+
+\bigskip
+\begin{equation*}
+125 = \sqrt{1 + 124 \sqrt{1 + 125 \sqrt{1 + 126  \sqrt{1 + 127 \sqrt{1 + \cdots}}}}}
+\end{equation*}
+%
+%
+%
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/qwhvvhrzrgct}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+\section*{Appendix A: What is hiding inside the number 3?}
+\noindent
+ Well, as we saw in \cite{notes:what_is_hiding_inside_the_number_3}:
+
+\begin{center}
+\begin{equation*}
+\begin{array}{llll}
+3 
+&=&  \sqrt{9}
+				&\qquad \qquad \qquad \mathrel{\#} 3 = \sqrt{9} \\
+[6pt]
+&=&  \sqrt{1 + 8}
+				&\qquad \qquad \qquad \mathrel{\#} 9 = 1 + 8 \\
+[6pt]
+&=&  \sqrt{1 + 2*4}
+				&\qquad \qquad \qquad \mathrel{\#} 8 = 2 * 4 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{16}}
+				&\qquad \qquad \qquad \mathrel{\#} 4 = \sqrt{16}\\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 15}}
+				&\qquad \qquad \qquad \mathrel{\#} 16 = 1 + 15 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3*5}}
+				&\qquad \qquad \qquad \mathrel{\#} 15 = 3 * 5 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{25}}}
+				&\qquad \qquad \qquad \mathrel{\#} 5 = \sqrt{25} \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 24}}}
+				&\qquad \qquad \qquad \mathrel{\#} 25 = 1 + 24 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 4*6}}}
+				&\qquad \qquad \qquad \mathrel{\#} 24 = 4 * 6 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 4 \sqrt{36}}}}
+				&\qquad \qquad \qquad \mathrel{\#} 6 = \sqrt{36}  \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 4 \sqrt{1 + 35}}}}
+				&\qquad \qquad \qquad \mathrel{\#} 36 = 1 + 35 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 4 \sqrt{1 + 5*7}}}}
+				&\qquad \qquad \qquad \mathrel{\#} 35 = 5 * 7 \\
+[6pt]
+&=&  \sqrt{1 + 2 \sqrt{1 + 3 \sqrt{1 + 4 \sqrt{1 + 5 \sqrt{49}}}}}
+				&\qquad \qquad \qquad \mathrel{\#} 7 = \sqrt{49} \\
+[6pt]
+&=& \cdots
+				&\qquad \qquad \qquad \mathrel{\#} 49 = 1 + 48,\; 48 = 6*8, \; 8 = \sqrt{64}, \; \hdots 
+\end{array}
+\end{equation*}
+\end{center}
+
+\bigskip
+\noindent
+and so apparently $3 = \sqrt{1+2 \sqrt{1+3 \sqrt{1+4  \sqrt{1+5 \sqrt{1+6 \sqrt{1+\cdots}}}}}}$
+%
+%	done
+%
+\end{document} 
+
+

@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{Kay:1993:FSS:151045}
+Steven~M. Kay.
+\newblock {\em Fundamentals of Statistical Signal Processing: Estimation
+  Theory}.
+\newblock Prentice-Hall, Inc., Upper Saddle River, NJ, USA, 1993.
+
+\bibitem{2017arXiv170501064L}
+A.~{Ly}, M.~{Marsman}, J.~{Verhagen}, R.~{Grasman}, and E.-J. {Wagenmakers}.
+\newblock {A Tutorial on Fisher Information}.
+\newblock {\em ArXiv e-prints}, May 2017.
+
+\bibitem{log_derivative_trick}
+Shakir Mohamed.
+\newblock The log derivative trick.
+\newblock \url
+  {http://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/},
+  November 2015.
+\newblock Accessed: Sun Jun 3 11:33:18 PDT 2018.
+
+\bibitem{wiki:bernoulli_distribution}
+{Wikipedia Contributors}.
+\newblock {Bernoulli Distribution --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Bernoulli_distribution&oldid=1094800577},
+  2022.
+\newblock [Online; accessed 4-August-2022].
+
+\end{thebibliography}

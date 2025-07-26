@@ -1,0 +1,338 @@
+\documentclass{article}
+%
+%
+%	infinite_sum_a_over_b.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	31 Aug 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+
+%
+%	Title, author and date
+%
+\title{What does the series $S = \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^{n}$ 
+       converge to?}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\bigskip
+\section{First up: does this series converge?}
+Here we'll use the ratio test for convergence \cite{wiki:ratio_test}
+and so we want to think of $S$ as
+
+\bigskip
+\begin{equation}
+S = \sum\limits_{n = 1}^{\infty} a_n
+\label{eqn:S}
+\end{equation}
+
+\medskip
+\noindent
+where $a_n = {\left ( \frac{a}{b} \right )}^n.$
+
+\bigskip
+\noindent
+The usual form of the ratio test uses the limit 
+$L = \lim\limits_{n\to \infty}\left|{\frac {a_{{n+1}}}{a_{n}}}\right|$.
+The ratio test tells us that 
+
+\medskip
+\begin{enumerate}
+\item If $L < 1$ then the series converges absolutely.
+\label{enumerate:less_than_one}
+\item If $L > 1$ then the series diverges.
+\item If $L = 1$ (or the limit doesn't exist) then the test is 
+      inconclusive.
+\end{enumerate}
+
+\bigskip
+\noindent
+To apply the ratio test we want to compute the following
+limit:
+
+\bigskip
+\begin{equation*}
+L = \lim _{n\to \infty}\left| \dfrac{\hphantom{^15}						% \hpantom is trying to center the numerator and denominator
+								 \left ( \frac{a}{b}\right )^{n+1}} 
+                                {\left ( \frac{a}{b} \right )^{n}} \right|
+\end{equation*}
+
+\bigskip
+\noindent
+Since $\lim\limits_{n\to \infty} c = c$ for constant $c$ and since 
+$\dfrac{a}{b}$ is a constant with respect to $n$ we see that the limit 
+$L$ is
+
+\bigskip
+\begin{equation*}
+L = \lim _{n\to \infty}\left| \dfrac{\hphantom{^15}						% \hpantom is trying to center the numerator and denominator
+								\left ( \frac{a}{b}\right )^{n+1}} 
+                                {\left ( \frac{a}{b} \right )^{n}} \right|
+                                = \lim _{n\to \infty}\left| \dfrac{a}{b} \right |
+                                = \dfrac{a}{b}
+\end{equation*}
+
+\bigskip
+\noindent
+If $a < b$ then $\dfrac{a}{b} < 1$ and so by clause \ref{enumerate:less_than_one}
+of the ratio test we know that $S$ converges absolutely.
+
+
+\section{Ok, $S$ converges. What does it converge to?}
+\label{section:what_does_S_converge_to}
+
+\bigskip
+\noindent
+Since we know that $S$ converges absolutely when $a < b$,
+here is one way to think about the question:  
+      
+\begin{equation*}
+\begin{array}{lllll}
+S
+&=& \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right )}^n
+			&\hspace{5em} \mathrel{\#} \text{definiton of $S$ (Equation (\ref{eqn:S}))} \\  
+[15pt]
+&=& {\left (\frac{a}{b} \right )}^1
+        + {\left (\frac{a}{b} \right )}^2 + {\left (\frac{a}{b} \right )}^3 + \cdots
+			&\hspace{5em} \mathrel{\#} \text{expand $S$} \\  
+[15pt]
+&\Rightarrow& \big (\frac{b}{a} \big ) \cdot S = \big (\frac{b}{a} \big ) \cdot \left
+        [{\left (\frac{a}{b} \right )}^1 + {\left (\frac{a}{b} \right )}^2 + 
+        {\left (\frac{a}{b} \right )}^3 + \; \cdots \right ]
+                &\hspace{5em} \mathrel{\#} \text{multiply both sides by 
+                                       $\big (\frac{b}{a} \big )$} \\ 
+[15pt]
+&\Rightarrow& \big (\frac{b}{a} \big ) \cdot S = 1 + \left [{\left (\frac{a}{b} \right )}^1
+        + {\left (\frac{a}{b} \right )}^2 + {\left (\frac{a}{b} \right )}^3 + \; \cdots \right ]
+                &\hspace{5em}  \mathrel{\#} \text{multiply through on right side} \\
+[15pt]
+&\Rightarrow&  \big (\frac{b}{a} \big ) \cdot S = 1 + S
+                &\hspace{5em}  \mathrel{\#} \text{definition of $S$} \\
+[15pt]
+&\Rightarrow&  \big (\frac{b}{a} \big ) \cdot S - S = 1
+                &\hspace{5em}  \mathrel{\#} \text{subtract $S$ from both sides} \\
+[15pt]
+&\Rightarrow&  \big (\frac{b}{a} \big ) \cdot S - \left (\frac{a}{a} \right ) \cdot S = 1
+                &\hspace{5em}  \mathrel{\#} \text{multiply $S$ by $1 = \frac{a}{a}$} \\
+[15pt]
+&\Rightarrow&  S \cdot \left [\frac{b}{a}  - \frac{a}{a} \right ] = 1
+                &\hspace{5em}  \mathrel{\#} \text{factor out $S$} \\
+[15pt]
+&\Rightarrow& S \cdot \left [ \frac{b \:-\: a} {a} \right ] = 1
+                &\hspace{5em}  \mathrel{\#} \text{simplify} \\ 
+[15pt] 
+&\Rightarrow& S  = \frac{a}{b \:-\: a}
+                &\hspace{5em}  \mathrel{\#} \text{multiply both sides
+                 by $ \frac{a}{b \:-\: a} $} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $S = \sum\limits_{n = 1}^\infty {\left (\frac{a}{b} \right
+)}^n = \frac{a}{b \:-\: a}$, where $a,b \in \mathbb{N}$ and $a <
+b$.
+
+\bigskip
+\noindent
+For example, if we let $a =1$ and $b =2$ then $\sum\limits_{n =
+1}^\infty {\left (\frac{1}{2} \right )}^n = \frac{1}{2 \:-\: 1} =
+1$. Similarly, if $a =1$ and $b = 3$ then $\sum\limits_{n =
+1}^\infty {\left (\frac{1}{3} \right )}^n = \frac{1}{3 \:-\: 1} =
+\frac{1}{2}$.
+
+
+\section{$S$ is a Geometric Series}
+As pointed out by John Carlos Baez
+(@johncarlosbaez@mathstodon.xyz), $S$ does not depend on $a$ or
+$b$, but rather only on $x$.
+
+\bigskip
+\noindent
+More specifically, we can see that $S = \sum\limits_{n=1}^{\infty} x^n$
+is a geometric series with a first term of $x$ and a 
+common ratio of $x$. The general form of a geometric series is given by
+\cite{wiki:geometric_series}:
+
+\begin{equation*}
+S = a + ar + ar^2 + ar^3 + \ldots 
+\end{equation*}
+
+\medskip
+\noindent
+In this case, $a = x$ is the first term of the series, and $r =
+x$ is the common ratio.
+
+\bigskip
+\noindent
+The sum of an infinite geometric series is well known and can be
+calculated using the formula:
+
+\begin{equation}
+S = \frac{a}{1 - r}
+\label{equation:geometric_series_closed_form}
+\end{equation}
+
+\smallskip
+\noindent
+for $|r| < 1$. If we then substitute $a = x$ and $r = x$ into Equation 
+(\ref{equation:geometric_series_closed_form}) we get:
+
+\begin{equation}
+S = \frac{x}{1 - x}
+\label{equation:s}
+\end{equation}
+
+\medskip
+\noindent
+So we can see that for $S$ to converge, we need $|x| <
+1$. If $|x| \geq 1$ the series diverges and does not have a
+finite sum.
+
+\bigskip
+\noindent
+Summary: $S = \sum\limits_{n=1}^{\infty} x^n = \frac{x}{1 - x}$
+for $|x| < 1$. Otherwise, as we saw above, the series does not
+converge.
+
+\bigskip
+\noindent
+Finally, if $x = \frac{a}{b}$ then for $|x| < 1$
+
+\begin{equation*}
+\begin{array}{lllll}
+S 
+&=& \dfrac{x}{1 - x} 						&\hspace{5em} \mathrel{\#} \text{Equation (\ref{equation:s})} \\ 
+[12pt]
+&=& \dfrac{\frac{a}{b}}{1 - \frac{a}{b}}	&\hspace{5em} \mathrel{\#} \text{set $x = \frac{a}{b}$} \\ 
+[12pt]
+&=& \dfrac{\frac{a}{b}}{\frac{b -a}{b}} 	&\hspace{5em} \mathrel{\#} \text{get a common denominator} \\ 
+[12pt]
+&=& \dfrac{a}{b-a} 							&\hspace{5em} \mathrel{\#} \text{multiply by $1 = \dfrac{\frac{b}{1}}{\frac{b}{1}}$} \\ 
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+So we see that if we set $x = \frac{a}{b}$ then $S = \frac{a}{b-a}$ when $a < b$. 
+This is the result that we saw in Section \ref{section:what_does_S_converge_to}.
+
+
+%
+%
+% \section{Conclusions}
+%
+%
+\section*{Acknowledgements}
+Thanks again to John Carlos Baez (@johncarlosbaez@mathstodon.xyz)
+for pointing out that the sum really doesn't depend on the
+fraction $\frac{a}{b}$ but rather depends on the value of the
+variable $x$.
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

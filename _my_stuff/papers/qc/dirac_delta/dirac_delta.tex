@@ -1,0 +1,1636 @@
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	15 July 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}														% default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes On The Dirac Delta Function And \\ The Laplace Transform}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: July 15, 2021}}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+These notes began life as some thoughts on the Dirac Delta
+Function and evolved into notes on several related topics
+including Laplace Transforms. The Dirac Delta function has all
+kinds of crazy and interesting properties. More TBD.
+
+\section{The Dirac Delta Function}
+The Dirac Delta Function is defined as shown in Figure
+\ref{fig:delta}. In the limit ($\mathlarger{\epsilon} \to 0$) the
+Dirac Delta function is written $\delta_a(t)$ or sometimes
+$\delta(t - a)$. As we will see in a moment, the
+$\delta_{a,\epsilon}(t)$ form of the delta function is useful
+when we want to use the Mean Value Theorem for Integrals
+\cite{wiki:meam_value_theorem_for_integrals} to evaluate
+integrals involving the delta function.
+ 
+\bigskip
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=1.7]
+     \draw [<->] (0,3) -- (0,0) -- (4,0);                                                                      % draw axes
+     \draw (3,2) node[rectangle] {                                                                           % draw function to the right
+         $\delta_{a,\epsilon}(t) =  
+           \begin{cases} 
+             \frac{1}{\mathlarger {\epsilon}} & a \leq t \leq a + \epsilon \\
+             0                                               & \text{otherwise}
+           \end{cases}$
+       }; 
+     \draw [dashed] (1,0) node[below] {$a$}                 -- (1,1); 
+     \draw [dashed] (2,0) node[below] {$a + \epsilon$} -- (2,1);
+     \coordinate (y) at (0,1); \fill [black] (y) circle (1pt);                                           % draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \draw (0,1) node[left] {$\frac{1}{\mathlarger{\epsilon}}$};
+     \draw [thick,red] (0,0) -- (1,0);
+     \draw [thick,red] (2,0) -- (4,0);
+     \draw [thick,red] (1,1) -- (2,1);
+     \draw [dashed]   (0,1) -- (1,1);
+     \draw (4,0) node [label=right:{$t$}] {};
+     \draw (0,3) node [label=above:{$\delta_{a,\epsilon}(t)$}] {};
+  \end{tikzpicture}
+  \caption{The Dirac Delta Function $\delta_{a,\epsilon}(t)$}
+  \label{fig:delta}
+\end{figure}
+
+\bigskip
+\noindent
+So $\delta_{a,\epsilon}(t)$ is defined to be
+
+\begin{equation*}
+\delta_{a,\epsilon}(t) =  
+ \begin{cases} 
+      \frac{1}{\mathlarger {\epsilon}} & a \leq t \leq a + \epsilon \\
+      0                                               & \text{otherwise}
+   \end{cases}
+\label{eqn:delta}
+\end{equation*}
+
+\noindent
+\bigskip
+and has the constraint that
+
+
+\begin{equation*}
+  \int_{0}^{\infty} \delta_{a,\epsilon}(t) =  1
+\end{equation*}
+
+\bigskip
+\bigskip
+\noindent
+\bigskip
+That is, $\delta_{a,\epsilon}(t)$ is in some sense a probability density.
+
+\bigskip
+\noindent
+In the limit the Dirac Delta Function looks like
+
+\begin{equation*}
+\lim_{\epsilon \to 0} \delta_{a,\epsilon}(t) =
+\delta_{a}(t) =  
+ \begin{cases} 
+     \infty & t = a\\
+      0     & t \neq a
+   \end{cases}
+\end{equation*}
+
+\bigskip
+\noindent
+or sometimes
+
+\begin{equation*}
+\delta (t - a) =  
+  \begin{cases} 
+        \infty & t = a \\
+        0       & t \neq a
+  \end{cases}
+\end{equation*}
+
+\bigskip
+\noindent
+$\delta_a(t)$ also has the constraint that 
+
+
+\begin{equation*}
+  \int_{0}^{\infty} \delta_{a}(t) =  1
+\end{equation*}
+
+\bigskip
+\noindent
+and so is also a probability density. $\delta_a(t)$  is shown in
+Figure \ref{fig:delta_limit}. 
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=2.0]
+     \draw [<->] (0,2) -- (0,0) -- (4,0);                               % draw axes
+     \draw (3,1) node[rectangle] {                                      % draw function to the right
+         $\delta_{a}(t) =  
+           \begin{cases} 
+              \infty & t = a  \\
+               0      & \text{otherwise}
+           \end{cases}$
+       }; 
+     \draw (1,0) node[below] {$a$};
+     \draw [dashed] (1,0) -- (1,2);
+     \draw (4,0) node [label=right:{$t$}] {};
+     \draw (0,2) node [label=above:{$\delta_{a}(t)$}] {};
+     \draw [thick,red] (0,0) -- (1,0);
+     \draw [thick,red] (1,0) -- (4,0);
+  \end{tikzpicture}
+  \caption{The Dirac Delta Function $\delta_{a}(t)$}
+  \label{fig:delta_limit}
+\end{figure}
+
+
+\subsection{Integrals involving $\delta_{a,\epsilon}(t)$}
+$\delta_{a,\epsilon}(t)$ has all kinds of interesting
+properties. One of them involves the integral of the product
+$\delta_{a,\epsilon}(t)$ with some function $g(t)$.  Here we
+would like to evaluate integrals of the form
+
+\bigskip
+\begin{equation}
+  \int_{0}^{\infty} \delta_{a,\epsilon}(t) g(t) dt
+  \label{eqn:delta_integral}
+\end{equation}
+
+\bigskip
+\noindent
+where $g(t)$ is continuous on the interval $[a, a+\epsilon]$.  
+ 
+\bigskip
+\noindent
+The Mean Value Theorem for Integrals
+\cite{wiki:meam_value_theorem_for_integrals}  tells us that 
+
+\begin{equation}
+  \int_{a}^{b} g(t) dt = (b -a) g(c)
+  \label{eqn:mvti}
+\end{equation}
+
+\bigskip
+\noindent
+where the point $c$ lies in the interval $[a, a+\epsilon]$. Now,
+since we know that $\delta_{a,\epsilon}(t)$ is zero everywhere
+except on the interval $[a, a+\epsilon]$ we can rewrite the
+improper integral in Equation \ref{eqn:delta_integral} as the
+proper integral
+
+\begin{equation*}
+  \int_{a}^{a + \epsilon} \delta_{a,\epsilon}(t) g(t) dt
+\end{equation*}
+
+\bigskip
+\noindent
+Here we can notice that $ \delta_{a,\epsilon}(t) =
+\frac{1}{\mathlarger{\epsilon}}$ on the interval $[a,
+a+\epsilon]$ so we can rewrite our integral as
+
+\bigskip
+\begin{equation*}
+  \int_{a}^{a + \epsilon} \frac{1}{\mathlarger{\epsilon}} g(t) dt
+  =  \frac{1}{\mathlarger{\epsilon}} \int_{a}^{a + \epsilon} g(t) dt 
+\end{equation*}
+
+\bigskip
+\noindent
+Now we can use Equation \ref{eqn:mvti}, the Mean Value Theorem
+for Integrals\footnote{This is where the $\delta_{a,\epsilon}(t)$
+form of the delta function comes in handy.}, by setting $b = a +
+\epsilon$ and $a = a$ so that $b - a = \epsilon$. Then
+
+\bigskip
+\begin{equation*}
+ \frac{1}{\mathlarger{\epsilon}} \int_{a}^{a + \epsilon} g(t) dt
+ =  \frac{1}{\mathlarger{\epsilon}} \underbrace{ \Big [(a +
+ \epsilon) - a \Big]}_{b -a} g(c)
+ =  \frac{1}{\mathlarger{\epsilon}} \epsilon g(c) = g(c) 
+\end{equation*}
+
+\bigskip
+\noindent
+where $c \in [a, a + \epsilon]$. 
+
+% \newpage
+\bigskip
+\noindent
+Finally, if we look at what happens to $c$ as $\epsilon \to 0$ we
+see that $\lim\limits_{\epsilon \to 0} c = a$ (sorry about the
+notation abuse) so that
+
+\begin{equation}
+  \int_{0}^{\infty} \delta_{a}(t) g(t) dt = g(a)
+  \label{eqn:g(a)}
+\end{equation}
+
+\bigskip
+\noindent
+Essentially $\delta_{a}(t)$ pulls out the value of $g$ at $a$,
+that is, $g(a)$.
+
+\bigskip
+\noindent
+Another way to look at this \cite{youtube:suskind2008.4} is to
+notice that the integrand of
+
+\bigskip
+\begin{equation*}
+  \int_{0}^{\infty} \delta (t-a) g(t) dt
+\end{equation*}
+
+\bigskip
+\noindent
+is zero everywhere except where $t = a$, so we can rewrite our
+integral as $\int_{0}^{\infty} \delta (t-a) g(a) dt = g(a)
+\int_{0}^{\infty} \delta (t-a) dt$ (since $g(a)$ doesn't depend
+on $t$).  Then since by definition $ \int_{0}^{\infty} \delta
+(t-a) dt = 1$ we get
+
+\bigskip
+\begin{equation*}
+  \int_{0}^{\infty} \delta (t-a) g(t) dt = g(a)
+\end{equation*}
+
+\bigskip
+\section{The Laplace Transform}
+\label{sec:laplace_transform}
+We start by defining the integral transform of some function
+$f(t)$. 
+
+\bigskip
+\begin{definition} 
+{\bf Integral Transform:} If a function $f(t)$ is defined on
+$[0,\infty)$ then we can define an integral transform to be the
+improper integral 
+\end{definition}
+
+\begin{equation*}
+F(s) = \int_0^\infty K(s,t) f(t) \, dt
+\end{equation*}
+
+\bigskip
+\noindent
+Here $t \in \mathbb{R}_{\ge 0}$ and $s \in \mathbb{C}$ 
+is a complex frequency domain parameter with $s = \sigma + i\omega$
+and $\sigma, \omega \in \mathbb{R}$.
+
+\bigskip
+\noindent
+If the improper integral converges then we say that $F(s)$ is the
+\emph{integral transform} of $f(t)$. The function $K(s,t)$ is
+called the \emph{kernel} of the transform. When $K(s,t) =
+e^{-st}$ the transform is called the {\bf Laplace Transform}.
+
+\bigskip
+\begin{definition} 
+{\bf Laplace Transform:} The Laplace Transform of a function
+$f(t)$ is defined to be
+\label{def:laplace_transform}
+\end{definition}
+
+
+\begin{equation}
+\mathcal{L}\{f(t)\} = F(s) = \int_0^\infty e^{-st} f(t)\, dt
+\label{eqn:laplace_transform}
+\end{equation}
+
+\bigskip
+\noindent
+The Laplace Transform will turn out to be useful when solving
+ordinary differential equations (ODEs). Interestingly, the
+Laplace Transform of the Dirac Delta Function turns out to be
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{\delta_a(t)\} 
+&=& \int_0^\infty  e^{-st} \delta_a(t) dt
+                &\qquad \qquad \mathrel{\#} \text{Equation \ref{eqn:laplace_transform} with $f(t) = \delta_a(t)$} \\ 
+[4pt]
+&=& \int_0^\infty g(t) \delta_a(t) dt
+                &\qquad \qquad \mathrel{\#} \text{set $g(t) = e^{-st}$} \\
+[4pt]
+&=& g(a)        &\qquad \qquad \mathrel{\#} \text{by Equation \ref{eqn:g(a)}} \\
+[4pt]
+&=& e^{-sa}     &\qquad \qquad \mathrel{\#} g(a) = e^{-sa}
+\end{array}
+\end{equation*}
+
+\subsection{The Linearity Property of the Laplace Transform}
+\label{subsec:linearity}
+
+
+\bigskip
+\begin{definition} 
+{\bf Linearity Property:} $\mathcal{L}\{af (t) + bg(t)\} =
+a\mathcal{L}\{f(t)\} + b\mathcal{L}\{g(t)\}$ 
+\label{def:linearity_properity}
+\end{definition}
+
+\bigskip
+\noindent
+Interestingly, $\mathcal{L}$ is what is called a linear operator
+in vector space parlance \cite{wiki:linear_map}.
+
+\bigskip
+\noindent
+All good, but why does $\mathcal{L}$ have this property? Here's
+one way to think about it:
+
+\smallskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{af(t) + bg(t)\} 
+&=& \int_0^\infty e^{-st} \big [af (t) + bg(t) \big] dt
+                & \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[10pt]
+&=& \int_0^\infty e^{-st} af (t)  dt + \int_0^\infty e^{-st} bg(t) dt 
+                & \mathrel{\#} \text{by the linearity of improper integrals \cite{lewis2014}} \\
+[10pt]
+&=& a \int_0^\infty e^{-st}  f(t) dt + b \int_0^\infty e^{-st}
+g(t) dt
+                & \mathrel{\#} \text{neither $a$ nor $b$ depends on $t$} \\
+[10pt]
+&=& a \mathcal{L}\{f(t)\}  + b \mathcal{L}\{g(t)\}
+                & \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}
+\end{array}
+\end{equation*}
+
+
+
+\smallskip
+\subsection{So does every function have a Laplace Transform?}
+The answer is no (consider a function like $f(t) = t^{-1}$). Ok,
+then what are the properties that $f(t)$ must have in order to
+have a Laplace Transform? First, $f$ must be of "exponential
+order".
+
+
+\bigskip
+\begin{definition} 
+{\bf Exponential Order:} A function $f$ is said to be of
+exponential order $c$ if there exist constants $c, M, \text{ and
+} T > 0$ such that $|f(t)| \leq Me^{ct}$ for all $t > T$.
+\label{def:exponential_order}
+\end{definition}
+
+\bigskip
+\noindent
+Said another way, in order for $f(t)$ to be of exponential order
+$c$ we require that
+
+\bigskip
+\begin{equation*}
+\lim\limits_{t \to \infty} \frac{f(t)}{e^{ct}} = 0
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+Basically this is saying that in order for $f(t)$ to have a
+Laplace Transform then in a race between $|f(t)|$ and $e^{ct}$ as
+$t \to \infty$ $e^{ct}$ must approach its limit first. This
+situation is depicted in Figure \ref{fig:exponential_order}.
+
+\bigskip
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.50,frame] {images/exponential_order.png}}
+\caption{$f$ is of exponential order with constants $c, M$ and $T$}
+\label{fig:exponential_order}
+\end{figure}
+
+\newpage
+\bigskip
+\begin{lemma} {\bf Triangle Inequality for Integrals}: The Triangle 
+Inequality for Integrals states that 
+
+\begin{equation}
+\left | \int_{a}^{b} f(t) \,  dt \right | \leq \int_{a}^{b} \left | f(t) \right | \, dt
+\label{equation:triangle_inequality_for_integrals}
+\end{equation}
+
+\smallskip
+\noindent
+for $f(t)$ continuous on the interval $[a,b]$. 
+
+\bigskip
+\noindent
+{\bf Proof}. There are two cases: one in which $t$ is real and one in which
+$t$ is complex.
+
+\bigskip
+\noindent
+{\bf Case 1}: $a,b \in \mathbb{R}$ and $f:[a,b] \to \mathbb{R}$
+
+\bigskip
+\noindent
+First, recall that 
+\begin{equation}
+|x| \leq c \Leftrightarrow -c \leq x \leq c
+\label{equation:less_than_inequality}
+\end{equation}
+
+
+\bigskip
+\noindent
+We will use Equation (\ref{equation:less_than_inequality}) below.
+
+\bigskip
+\noindent
+Now, we know that $-|f(t)| \leq f(t) \leq | f(t) |$ from the 
+definition of absolute value. If we then take the integral
+of both (all) sides, we get
+
+\begin{equation*}
+-\int_{a}^{b} |f(t)| \, dt \leq \int_{a}^{b} f(t) \, dt \leq 
+\int_{a}^{b} |f(t)| \, dt
+\end{equation*}
+
+\smallskip
+\noindent
+If we substitute 
+$x = \int\limits_{a}^{b} f(t) \, dt$ and $c = \int\limits_{a}^{b} 
+|f(t)| \, dt$ in Equation (\ref{equation:less_than_inequality}) 
+we get 
+
+
+\bigskip
+\begin{equation*}
+\left | \int_{a}^{b} f(t) \,  dt \right | \leq \int_{a}^{b} \left | f(t) 
+\right | \, dt
+\end{equation*}
+
+\bigskip
+\noindent
+That is, Equation (\ref{equation:triangle_inequality_for_integrals}). 
+$\blacksquare$
+
+\bigskip
+\noindent
+{\bf Case 2}: $f:[a,b] \to \mathbb{C}$
+
+
+\bigskip
+\noindent
+First, notice that since $\int_{a}^{b} f(t) \, dt$
+is a complex number we know that we can represent
+the integral using polar coordinates. That is
+
+\begin{equation}
+\int_{a}^{b} f(t) \, dt = re^{i\theta}
+\label{equation:integral_polar_form}
+\end{equation}
+
+
+\noindent
+for some constants $r, i$ and $\theta$.
+
+
+\bigskip
+\noindent
+Why does this hold? First, recall that any complex number $z$ 
+can be represented as $z = a + bi$. Then consider the complex 
+plane, shown in Figure \ref{fig:complex_plane}:
+
+\bigskip
+\begin{figure}[H]
+\centering
+  \resizebox{0.35 \textwidth}{!} {														% resize figure if you want
+    \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped}]
+		\coordinate (O) at (0,0);														% name a coordinate for the origin
+%
+%	draw axes, saving the real part to calculate the angle (below)
+%
+		\draw[thick, -latex] (-0.35,0.00) -- (5.50,0.00) coordinate[yshift=-0.20cm,label=below: $\mathbb{R}$] (x);
+		\draw[thick, -latex] (0.00,-0.35) -- (0.00,5.25) node[xshift=-0.2cm,left] {$\mathbb{I}$}
+				node[draw,rectangle,thin,blue,below right=5.0mm]						%
+            		{$\color{black}{													%
+						z = a + bi = 													% z = <a bunch of stuff>
+						r \cos \theta + i r \sin \theta = 								%
+						r \mathrm{e}^{i\theta}}$};										%
+		\coordinate[label=below left:$O$] (O);                                          % label origin
+		\fill (O) circle(0.05);                                                         % draw a black dot at the origin
+		\fill (3.5,3) coordinate[label=above right:{$z = a + bi $}] (z) circle(0.05);   % draw phasor and a dot (circle(0.05))
+		\draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};              % draw dashed lines to a and b
+		\draw [draw=none] (0,0) -- (3.5,0) node [midway, below]{${r \cos \theta}$};     % use [draw=none] to put label midway
+		\draw [draw=none] (3.5,3.0) -- (3.5,0) node [midway, right]{${r \sin \theta}$};	% use [draw=none] to put label midway
+		\fill (0,3) circle(0.05);                                                       % draw a dot on the y axis at b 
+		\fill (3.5,0) circle(0.05);                                                     % draw a dot on the y axis at a
+		\draw[thick] (O) to ["$r = |z|=\sqrt{zz^*}$"] (3.5,3);                          % label r
+		\pic [draw=red, line width=0.60pt, -latex , angle radius=11mm,                  % draw the angle, making the arc a bit thicker
+				angle eccentricity=1.3, "$\theta$"] {angle = x--O--z};					% calculate the angle theta
+     \end{tikzpicture}																	% end tikzpicture
+  }																						% end resizebox
+ \caption{The Complex Plane}
+ \label{fig:complex_plane}
+\end{figure}
+
+\bigskip
+\noindent
+This picture makes it easy to see why $z = r \mathrm{e}^{i
+\theta}$. Specifically
+
+\begin{equation*}
+\begin{array}{lllll}
+z
+&=& a + ib
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{definition of a point $z$ in the complex plane} \\ 
+[5pt]
+&=&  r \cos \theta + i r \sin \theta
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{switch to polar coordinates: $a = r \cos
+					\theta$ and $b = r \sin \theta$} \\ 
+[5pt]
+&=&  r \left [ \cos \theta +i \sin \theta \right ]
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{factor out  $r$} \\ 
+[5pt]
+&=& r \mathrm{e}^{i\theta}
+                &\qquad \qquad \qquad \qquad \mathrel{\#}
+					\text{Euler's formula \cite{wiki:eulers_formula}: }  
+					e^{i\theta} = \cos \theta + i \sin \theta
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Next, if we multiply both sides of Equation (\ref{equation:integral_polar_form})
+by $e^{-i\theta}$ we see that  
+
+\begin{equation*}
+\begin{array}{llll}
+e^{-i\theta} \int_{a}^{b} f(t) \, dt 
+&=& e^{-i\theta} re^{i\theta}			
+	&\hspace{3em} \mathrel{\#} \text{multiply both sides of Equation (\ref{equation:integral_polar_form})
+by $e^{-i\theta}$} \\
+[5pt]
+&\Rightarrow& e^{-i\theta} \int_{a}^{b} f(t) \, dt  = r e^{-i\theta} e^{i\theta}			
+	&\hspace{3em} \mathrel{\#} \text{multiplication is commutative} \\
+[5pt]
+&\Rightarrow& e^{-i\theta} \int_{a}^{b} f(t) \, dt  = r
+	&\hspace{3em} \mathrel{\#}  e^{-i\theta} e^{i\theta} = 1\\
+[5pt]
+&\Rightarrow& \int_{a}^{b} e^{-i\theta} f(t) \, dt  = r
+	&\hspace{3em} \mathrel{\#} \text{$e^{-i\theta}$ is a constant with respect to $t$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+We also know that 
+
+\begin{equation*}
+\begin{array}{llll}
+\left | \int_{a}^{b} f(t) \, dt \right | 
+&=& \left | re^{i\theta} \right |
+	&\hspace{3em} \mathrel{\#} \text{take the absolute value of both sides of 
+									 Equation (\ref{equation:integral_polar_form})} \\
+[8pt]
+&=& |r||e^{i\theta}|
+	&\hspace{3em} \mathrel{\#} |xy| = |x||y| \\
+[8pt]
+&=& |r|
+	&\hspace{3em} \mathrel{\#} |e^{i\theta}| = 1 \\
+[8pt]
+&=& r
+	&\hspace{3em} \mathrel{\#} r \in \mathbb{R} \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Since $\int_{a}^{b} e^{-i\theta} f(t) \, dt  = r$ and 
+$\left | \int_{a}^{b} f(t) \, dt \right | = r$ we have
+
+\bigskip
+\begin{equation}
+\left | \int_{a}^{b} f(t) \, dt \right | = \int_{a}^{b} 
+e^{-i\theta} f(t) \, dt 
+\label{equation:integral_equality}
+\end{equation}
+
+\bigskip
+\noindent
+Since for $|x| \in \mathbb{R}$ the LHS of Equation (\ref{equation:integral_equality})
+is a real number. Interestingly, the integral on the RHS of Equation (\ref{equation:integral_equality}) 
+is also real, but the integrand is complex. So if we look at the real part of the RHS 
+we see that
+
+\begin{equation*}
+\begin{array}{llll}
+{\displaystyle \operatorname{Re} \left [ \int_{a}^{b} e^{-i\theta} f(t) \, dt \right ]} 
+&=& {\displaystyle \int_{a}^{b} \operatorname{Re} \left [e^{-i\theta} f(t) \, dt \right ] }
+	&\hspace{3em} \mathrel{\#} \text{swap Re and $\int$, noting that $\left [e^{-i\theta} f(t) \right ] \in \mathbb{C}$} \\
+[10pt]
+&\leq& {\displaystyle \int_{a}^{b} \big | e^{-i\theta} f(t) \big | \, dt}
+	&\hspace{3em} \mathrel{\#} \text{since $\operatorname{Re}(z) \leq |z|$ for $z \in \mathbb{C}$ and $\operatorname{Re}(dt) = dt$} \\
+[10pt]
+&=& {\displaystyle \int_{a}^{b} \big | e^{-i\theta} \big | \left | f(t) \right | \, dt}
+	&\hspace{3em} \mathrel{\#} |xy| = |x||y| \\
+[10pt]
+&=& {\displaystyle \big | e^{-i\theta} \big | \int_{a}^{b}  \left | f(t) \right | \, dt}
+	&\hspace{3em} \mathrel{\#} \text{$\big | e^{-i\theta} \big |$ doesn't depend on $t$} \\
+[10pt]
+
+&=& {\displaystyle \int_{a}^{b} \left | f(t) \right | \, dt}
+	&\hspace{3em} \mathrel{\#} |e^{-i\theta}| = 1 \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+and so ${\displaystyle \left | \int_{a}^{b} f(t) \,  dt \right | \leq \int_{a}^{b} \left | f(t) 
+\right | \, dt}$. $\blacksquare$
+
+
+
+
+\end{lemma}
+
+\bigskip
+\bigskip
+\noindent
+Now we can answer the question of when $f$ has a Laplace
+Transfrom: 
+
+\bigskip
+\begin{theorem} 
+{\bf Existence Theorem for Laplace Transforms:} \normalfont If
+$f$ is s piecewise continuous on the interval $[0,\infty)$ and is
+of exponential order $c$ then $F (s) = \mathcal{L}\{f (t)\}
+\text{ is defined for all $s > c$}.$
+\end{theorem}
+
+\bigskip
+\noindent
+Ok, but why? Consider
+
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{f(t)\}
+&=& F(s)
+                &\quad  \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})} \\  
+[12pt] 
+&=& \mathlarger{\int}_0^\infty \! e^{-st} f(t) dt
+                &\quad  \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[12pt] 
+&\leq& \mathlarger{\int}_0^\infty \! e^{-st} Me^{ct}dt
+                &\quad  \mathrel{\#} \text{$f$ is of exponential order $c$ (Definition \ref{def:exponential_order})} \\ 
+[12pt] 
+&=& M \mathlarger{\int}_0^\infty \! e^{-st} e^{ct} dt
+                &\quad  \mathrel{\#} \text{$M$ doesn't depend on $t$} \\   
+[12pt] 
+&=& M \mathlarger{\int}_0^\infty \! e^{-st + ct} dt
+                &\quad  \mathrel{\#} \text{$x^n \cdot x^m = x^{n+m}$} \\      
+[12pt]
+&=& M \mathlarger{\int}_0^\infty\! e^{(c-s)t} dt
+                &\quad  \mathrel{\#}  e^{-st + ct} = e^{ct -st} = e^{(c-s)t} \\      
+[12pt] 
+&=& M \mathlarger{\int}_0^\infty \! e^u dt
+                &\quad  \mathrel{\#} \text{use a $u$ substitution with $u = (c-s)t$} \\     
+[12pt] 
+&=&  M \mathlarger{\int}_0^\infty \! e^u \frac{du}{c-s}
+                &\quad  \mathrel{\#} u = (c-s)t  \: \Rightarrow \: du
+                                       = (c-s) dt \: \Rightarrow \: dt = \dfrac{du}{c-s} \\     
+[12pt] 
+&=& \Big [ \frac{M}{c-s} \Big ] \mathlarger{\int}_0^\infty \! e^u du
+                &\quad  \mathrel{\#} \text{neither $c$ nor $s$ depends on $t$} \\     
+[12pt] 
+&=& \Big [ \frac{M}{c-s} \Big ] e^u \Big |_0^\infty
+                &\quad  \mathrel{\#} \int e^u du = e^u + C \text{ and the FToC \cite{ftoc}} \\     
+[12pt] 
+&=& \Big [ \frac{M}{c-s} \Big ]  e^{(c-s)t} \Big |_0^\infty
+                &\quad  \mathrel{\#} u = (c-s)t \\
+[12pt] 
+&=& \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] - \frac{M}{c - s}e^{(c-s)0}
+                &\quad \mathrel{\#} \text{evaluate at the limits} \\
+[12pt] 
+&=& \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big
+] - \frac{M}{c - s}
+                &\quad  \mathrel{\#} e^{(c-s)0} = e^0 = 1 \text{ and } \frac{M}{c-s} \cdot 1 = \frac{M}{c-s} \\
+[12pt]
+&=& 0 - \frac{M} {\mathlarger{c-s}}
+                &\quad  \mathrel{\#} s > c \: \Rightarrow \: c -s < 0 \:
+                \Rightarrow  \lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d} \Big ] = 0 \\    
+[12pt]
+&=& \frac{M}{\mathlarger{s-c}}
+                &\quad  \mathrel{\#} \text{simplify} 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So if $s = c$ then $\frac{M}{\mathlarger{s-c}}$ is not defined
+and $\mathcal{L}\{f(t)\}$ does not exist. Similarly, if $s < c$
+then $\lim\limits_{d \to \infty}\Big [\frac{M}{c-s} e^{(c-s)d}
+\Big ]$ does not converge and $\mathcal{L}\{f(t)\}$ does not
+exist. All of this implies that functions that do not satisfy the
+conditions of the Existence Theorem do not have Laplace
+Transforms.
+
+
+
+\newpage
+\subsection{Inverse Laplace Transform}
+\label{sec:inverse_laplace_transform}
+
+\begin{definition} {\bf Inverse Laplace Transform:}
+If $F(s)$ represents the Laplace Transform of a function $f(t)$
+such that $\mathcal{L}\{f(t)\} = F(s)$ then the Inverse Laplace
+Transform of $F(s)$ is $f(t)$, i.e. $\mathcal{L}^{-1}\{F(s)\} =
+f(t)$.
+\end{definition}
+
+\bigskip
+\noindent
+Here are a few examples:
+
+\bigskip
+\bigskip
+
+\begin{minipage}[c]{0.40\textwidth}
+\centering
+\renewcommand{\arraystretch}{3}
+\begin{tabular} {| c | c  |}
+\hline
+\multicolumn{2} {| c |}{\bf Laplace Transform} \\
+\hline
+$f(t)$                  & $F(s) = \mathcal{L}\{f(t)\}$ \\
+\hline \hline
+1                       & $\frac{1}{s}$ \\
+[4pt]
+\hline
+$t^n$                   & $\frac{n!}{s^{n+1}}$ \\
+[4pt]
+\hline
+$e^{at}$                & $\frac{1}{s - a}$ \\
+[4pt]
+\hline
+$\sin(kt)$              & $\frac{k}{s^2 + k^2}$ \\
+[4pt]
+\hline
+$\cos(kt)$              & $\frac{s}{s^2 + k^2}$ \\
+[4pt]
+\hline
+$\sinh(kt)$             & $\frac{k}{s^2 - k^2}$ \\
+[4pt]
+\hline
+$\cosh(kt)$             & $\frac{s}{s^2 - k^2}$ \\
+[4pt]
+\hline
+$\dfrac{dg}{dt}$ & $sG(s) - g(0)$ \\
+[4pt]
+\hline
+\end{tabular}
+\end{minipage}
+%
+\begin{minipage}[c]{0.40\textwidth}
+\renewcommand{\arraystretch}{3}
+\centering
+\begin{tabular} {| c | c  |}
+\hline
+\multicolumn{2} {| c |}{\bf Inverse Laplace Transform} \\
+\hline
+$F(s)$                          & $f(t) = \mathcal{L}^{-1}\{F(s)\}$ \\
+\hline \hline
+$\frac{1}{s}$                   & 1 \\
+[4pt]
+\hline
+$\frac{n!}{s^{n+1}}$            & $t^n$ \\
+[4pt]
+\hline
+$\frac{1}{s - a}$               & $e^{at}$ \\
+[4pt]
+\hline
+$\frac{k}{s^2 + k^2}$           & $\sin(kt)$ \\
+[4pt]
+\hline
+$\frac{s}{s^2 + k^2}$           & $\cos(kt)$ \\
+[4pt]
+\hline
+ $\frac{k}{s^2 - k^2}$          & $\sinh(kt)$ \\
+[4pt]
+\hline
+$\frac{s}{s^2 - k^2}$           & $\cosh(kt)$ \\
+[4pt]
+\hline
+$sG(s) - g(0)$                  & $\dfrac{dg}{dt}$ \\
+[4pt]
+\hline
+\end{tabular}
+\end{minipage}
+
+\newpage
+
+\subsection{Ok, then what is the Laplace Transform of $f^\prime (t)$?}
+\label{sec:f_prime}
+Suppose $f(t)$ is continuous, piecewise smooth and of exponential
+order, and suppose $f^\prime(t)$ is the derivative of
+$f(t)$. Then the Laplace Transform of $f^\prime(t), \:
+\mathcal{L}\{f^\prime(t)\}$, turns out to be
+
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{f^\prime(t)\}
+&=& \mathlarger{\int} ^\infty_0 \! e^{-st}  f^\prime(t) dt
+                                &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[20pt] 
+&=& \mathlarger{\int}^\infty_0 \! \underbracket [0.15 ex] {\strut
+e^{-st}}_{v}  \underbracket [0.15 ex] {\strut f^\prime(t)
+dt}_{du}
+                                &\mathrel{\#} \text{use integration by parts} \\  
+[20pt] 
+&=& \underbracket [0.15 ex] {\strut e^{-st}}_{v}  \underbracket [0.15 ex] {\strut f(t)}_{u} \bigg |^\infty_0   -   
+        \mathlarger{\int}^\infty_0 \! \underbracket [0.15 ex] {\strut (-s) e^{-st}}_{dv}  \underbracket [0.15 ex] {\strut f(t)}_{u} dt 
+                                &\mathrel{\#} \mathlarger{\int}_0^\infty \! v \: du = uv - \mathlarger{\int}_0^\infty \! u \: dv \\ 
+[20pt]                                                                                                                                                                                               % get some space
+&=& \lim\limits_{d \to \infty}\Big [e^{-sd} f(d) \Big ] - e^{-s
+\cdot 0} \cdot f(0) - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st} f(t) dt
+                                &\mathrel{\#} \text{evaluate first term at the limits} \\
+[20pt]
+&=& 0  - e^{-s \cdot 0} \cdot f(0)  - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt
+                                &\mathrel{\#} \lim\limits_{d \to \infty}\Big [e^{-sd} f(d) \Big ] = 0 \\
+[20pt] 
+&=& 0 - f(0) - \mathlarger{\int}^\infty_0 \!  (-s) e^{-st}  f(t) dt
+                                &\mathrel{\#} e^{-s \cdot 0} =
+                                e^0 = 1 \text{ and } 1 \cdot f(0)
+                                = f(0) \\
+[20pt] 
+&=& -f(0) + s \mathlarger{\int}^\infty_0 \!  e^{-st}  f(t) dt
+                                &\mathrel{\#} \text{$s$ doesn't depend on $t$ and simplify} \\
+[20pt] 
+&=& -f(0) + s \mathcal{L}\{f(t)\}
+                                &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+[20pt] 
+&=& s \mathcal{L}\{f(t)\} - f(0)
+                                &\mathrel{\#} \text{rearrange} \\
+[20pt] 
+&=& s F(s) - f(0)               &\mathrel{\#} \text{definition Laplace Transform (Definition \ref{def:laplace_transform})} \\ 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+One of the interesting things to note here is that by using the
+Laplace Transform we've taken a statement about the derivative of
+$f$, namely $\mathcal{L}\{f^\prime(t)\}$, and converted it into a
+statement about $f$ itself: $s \mathcal{L}\{f(t)\} - f(0)$. That
+is, we've converted a differential equation into an algebraic
+one. This will come in handy later when we want to solve
+differential equations.
+
+\newpage
+\subsection{What about $\mathcal{L}\{f^{\prime\prime}(t)\}$?}
+\label{eqn:f_double_prime}
+
+\bigskip
+\noindent
+Once we know how to compute $\mathcal{L}\{f^{\prime}(t)\}$ it is
+pretty easy to see how to compute
+$\mathcal{L}\{f^{\prime\prime}(t)\}$: 
+
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{f^{\prime \prime}(t)\}           
+&=&  \mathcal{L}\{g^\prime (t)\}
+                        &\qquad \qquad \mathrel{\#} \text{set
+                        $g(t) = f^\prime(t) \Rightarrow
+                        g^\prime(t) = f^{\prime \prime}(t)$} \\  
+[8pt]
+&=& s \mathcal{L}\{g(t)\}  - g(0)
+                        &\qquad  \qquad \mathrel{\#}
+                        \mathcal{L}\{g(t)^\prime\} = s
+                        \mathcal{L}\{g(t)\}  - g(0) \text{
+                        (Section \ref{sec:f_prime})} \\ 
+[8pt]
+&=& s \mathcal{L}\{f^\prime(t)\} - f^\prime(0)
+                        &\qquad \qquad \mathrel{\#} g(t) = f^\prime(t) \\
+[8pt] 
+&=& s \big [ sF(s) - f(0) \big ] - f^\prime(0)
+                        &\qquad \qquad \mathrel{\#}
+                        \mathcal{L}\{f(t)^\prime\} = s F(s) -f(0)
+                        \text{ (Section \ref{sec:f_prime})} \\ 
+[8pt]
+&=& s^2F(s) - sf(0) - f^\prime(0)
+                        &\qquad \qquad \mathrel{\#} \text{simplify}
+\end{array}
+\end{equation*}
+
+\smallskip
+\subsection{So what is the general form of $\mathcal{L}\{f^{(n)}(t)\}$?}
+\bigskip
+\noindent
+The general form of the Laplace Transform of the $n^{th}$
+derivative of some function $f(t)$ is  
+
+\bigskip
+\begin{equation}
+\mathcal{L}\{f^{(n)}(t)\} =  s^{n}F(s)- \sum_{k=1}^n s^{n-k} f^{(k-1)}(0)
+\label{eqn:nth-derivative}
+\end{equation}
+
+\bigskip  
+\noindent
+Here $f$ is assumed to be n-times differentiable and that it's
+$n^{th}$ derivative, denoted $f^{(n)}$, is piecewise continuous
+and of exponential order. The result then follows by mathematical
+induction. Note that $f^{(0)}$, the $0^{\text{th}}$ derivative of
+$f$, is just $f$.
+
+\bigskip
+\noindent
+So for example, for the Laplace Transform of the second
+derivative ($n = 2$) of some function $f$ Equation
+\ref{eqn:nth-derivative} tells us
+
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{f^{(2)}(t)\}  
+&=&  s^{2}F(s)- \sum\limits_{k=1}^2 s^{2-k} f^{(k-1)}(0)                                         &\qquad \mathrel{\#} \text{Equation \ref{eqn:nth-derivative} with $n = 2$}               \\
+[10pt]
+&=&  s^{2}F(s)- s^{2-1}f^{(1-1)}(0)  - s^{2-2}f^{(2-1)}(0)                                         &\qquad \mathrel{\#} \text{expand terms}                                                                  \\
+[10pt]
+&=&  s^{2}F(s)- s^{1}f^{(0)}(0)  - s^0f^{(1)}(0)                                                        &\qquad \mathrel{\#} \text{arithmetic}                                                                        \\
+[10pt]
+&=&  s^{2}F(s)- sf(0)  - f^{(1)}(0)                                                                            &\qquad \mathrel{\#} \text{$s^1 = s$, $f^{(0)} = f$ and $s^0 = 1$}                             \\
+[10pt]
+&=& s^{2}F(s)- sf(0)  - f^{\prime}(0)                                                                       &\qquad \mathrel{\#} \text{alternate notation (Section \ref{eqn:f_double_prime})}
+\end{array}
+\end{equation*}
+
+
+\subsection{What is the derivative of $F(s)$?}
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+F^\prime(s)
+&=& \dfrac{d}{ds} F(s)                                                                                        &\qquad \qquad \mathrel{\#} \text{switch to more a convenient notation}                                                                    \\
+[20pt]
+&=& \dfrac{d}{ds} \mathlarger{\int} ^\infty_0 \! e^{-st}  f(t) dt                              &\qquad \qquad \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}          \\  
+[20pt]
+&=& \mathlarger{\int} ^\infty_0 \! \dfrac{\partial}{\partial s} e^{-st}  f(t) dt           &\qquad \qquad \mathrel{\#} \text{swap $\dfrac{d}{ds}$ with $\mathlarger{\int}$ by the Leibniz integral rule}             \\                                                                                    
+[20pt]
+&=&  \mathlarger{\int}^\infty_0 \! (-t) e^{-st} f(t) dt                                             &\qquad \qquad \mathrel{\#} \mathlarger{\dfrac{\partial}{\partial s} e^{-st}} = -t e^{-st} \text{ by the chain rule}            \\
+[20pt]
+&=&  \mathlarger{\int}^\infty_0 \! e^{-st}  (-t) f(t) dt                                            &\qquad \qquad \mathrel{\#} \text{rearrange}                                                                                                                \\
+[20pt]
+&=&  \mathlarger{\int}^\infty_0 \! e^{-st} g(t) dt                                                  &\qquad \qquad \mathrel{\#} \text{set $g(t) = -t f(t)$}                                                                                                    \\
+[20pt] 
+&=& \mathcal{L}\{g(t)\}                                                                                      &\qquad \qquad \mathrel{\#} \text{definition of the Laplace Transform (Definition \ref{def:laplace_transform})}          \\
+[20pt]
+&=& \mathcal{L}\{-tf(t)\}                                                                                     &\qquad \qquad \mathrel{\#} g(t) = -t f(t)                                                                                                                       \\
+[20pt]
+&=& -\mathcal{L}\{tf(t)\}                                                                                    &\qquad \qquad \mathrel{\#} \text{$-1$ doesn't depend on $t$ (see Section \ref{subsec:linearity})}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $F^\prime(s) = -\mathcal{L}\{tf(t)\}$. We can also pretty easily see that in general $F^{(n)}(s) = (-1)^n \mathcal{L}\{t^n f(t)\}$.
+
+\bigskip
+\subsection{Example: Solving Ordinary Differential Equations (ODEs)}
+\label{sec:example_ode}
+\bigskip
+\noindent
+Suppose we have the following Initial Value Problem (IVP)  \cite{wiki:initial_value_problem}:
+
+\smallskip
+\begin{equation}
+y^{\prime \prime} - y^\prime -2y = 0 \text{ with $y(0) = 1$ and $y^\prime (0) = 0$}
+\label{eqn:ode}
+\end{equation}
+
+\bigskip
+\noindent
+We can use the Laplace Transform to solve this ODE. The basic
+idea is to take the Laplace Transform of both sides of Equation
+\ref{eqn:ode}, set $Y(s) = \mathcal{L}\{y\}$, and then solve for
+$Y(s)$. Then we can find $y(t)$ by taking the Inverse Laplace
+Transform of $Y(s)$.
+
+\begin{equation*}
+\begin{array}{lllll}
+y^{\prime \prime} - y^\prime -2y                                                                                     
+&=& 0                                                                                                                                                                        &\mathrel{\#} \text{ODE we want to solve (Equation \ref{eqn:ode}})                                                 \\
+[15pt]
+&\Rightarrow& \mathcal{L}\{y^{\prime \prime} - y^\prime -2y\} = \mathcal{L}\{0\} 
+		&\mathrel{\#} \text{apply $\mathcal{L}\{\cdot\}$ to both sides} \\
+[15pt]
+ &\Rightarrow& \mathcal{L}\{y^{\prime \prime}\} - \mathcal{L}\{y^\prime\} -\mathcal{L}\{2y\}  = \mathcal{L}\{0\}      &\mathrel{\#} \text{$\mathcal{L}\{\cdot\}$ is a linear operator (Section \ref{subsec:linearity})}                                                                                     \\
+[15pt]
+&\Rightarrow& \mathcal{L}\{y^{\prime \prime}\} - \mathcal{L}\{y^\prime\} - 2\mathcal{L}\{y\}                 = 0             &\mathrel{\#} \text{$\mathcal{L}\{a f(t) \} = a \mathcal{L}\{f(t)\}$ and $\mathcal{L}\{0\} = 0$}             \\
+[15pt]
+&\Rightarrow& \big [ s^2 \mathcal{L}\{y\} - s y(0) - y^\prime (0) \big ] - \mathcal{L}\{y^\prime\} - 2\mathcal{L}\{y\} = 0   &\mathrel{\#} \text{$\mathcal{L}\{y^{\prime \prime}\} = \hdots$ (Section \ref{eqn:f_double_prime})}  \\
+[15pt]
+&\Rightarrow& \big [ s^2 Y(s) - s y(0) - y^\prime (0) \big ] - \mathcal{L}\{y^\prime\} - 2\mathcal{L}\{y\} = 0             &\mathrel{\#} \text{set } Y(s) = \mathcal{L}\{y\}                                                                                    \\
+[15pt]
+&\Rightarrow&  \big [ s^2 Y(s) - s y(0) - y^\prime (0) \big ] - \big [ s Y(s) - y(0) \big ]- 2\mathcal{L}\{y\} = 0             &\mathrel{\#} \text{$\mathcal{L}\{y^\prime\} = sY(s) - y(0)$ (Section \ref{sec:f_prime})}                     \\
+[15pt]
+&\Rightarrow&  \big [ s^2 Y(s) - s y(0) - y^\prime (0) \big ] - \big [ s Y(s) - y(0) \big ]-  2 Y(s)                 = 0            &\mathrel{\#}  \mathcal{L}\{y\} = Y(s)                                                                                                  \\
+[15pt]
+&\Rightarrow&  s^2 Y(s) -s \cdot 1 - 0 - sY(s) + 1 - 2 Y(s)                                                                     = 0            &\mathrel{\#} \text{IVP: $y(0) = 1$ and $y^\prime (0) = 0$}                                                                 \\
+[15pt]
+&\Rightarrow&  s^2 Y(s) -s  - sY(s) + 1 -2 Y(s)                                                                                      = 0             &\mathrel{\#} \text{simplify}                                                                                                                 \\
+[15pt]          
+&\Rightarrow&  s^2 Y(s) - s Y(s) - 2 Y(s) - (s - 1)                                                                                   = 0             &\mathrel{\#} \text{collect terms}                                                                                                         \\
+[15pt]
+&\Rightarrow&  Y(s) \big [s^2- s - 2 \big] - (s - 1)                                                                                   = 0             &\mathrel{\#} \text{factor out $Y(s)$}                                                                                                   \\
+[15pt]
+&\Rightarrow&  Y(s) \big [s^2- s - 2 \big]                                                                                               = s - 1         &\mathrel{\#} \text{add $s - 1$ to both sides}                                                                                      \\
+[12pt]
+&\Rightarrow&  Y(s) = \mathlarger{\frac{s - 1}{s^2 -s -2}}  &\mathrel{\#} \text{solve for $Y(s)$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $Y(s) = \mathlarger{\frac{s - 1}{s^2 -s -2}}$. Now we can
+split $Y(s)$ using partial fractions and solve for $y(t)$ using
+the Inverse Laplace Transform:
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+Y(s)                                                                                                                              
+&=&  \mathlarger{\frac{s - 1}{s^2 -s -2}}                                                                                                                 &\qquad \mathrel{\#} \text{see above}                                            \\
+[12pt]
+&=& \mathlarger{\frac{s-1}{(s-2)(s+1)}}                                                                                                                  &\qquad \mathrel{\#} \text{factor denominator}                               \\
+[12pt]
+&\Rightarrow& \mathlarger{\frac{s-1}{(s-2)(s+1)}} =  \mathlarger{\frac{A}{(s-2)}} + \mathlarger{\frac{B}{(s+1)}}   &\qquad \mathrel{\#} \text{use partial fractions}                              \\
+[15pt]
+&\Rightarrow& s - 1 =  A (s + 1) + B (s - 2)                                                                                                            &\qquad \mathrel{\#} \text{multiply both sides by $(s - 2)(s + 1)$}   \\
+[15pt]
+&\Rightarrow& -1 = A - 2B                                                                                                                                      &\qquad \mathrel{\#} \text{coefficients of 1}                                    \\
+[15pt]
+&\Rightarrow& 1= A + B                                                                                                                                         &\qquad \mathrel{\#} \text{coefficients of $s$}                                 \\
+[15pt]
+&\Rightarrow& A = 1 -B                                                                                                                                          &\qquad \mathrel{\#} \text{solve for $A$ in previous equation}        \\
+[15pt]
+&\Rightarrow& -1 = (1 - B) - 2B                                                                                                                              &\qquad \mathrel{\#} \text{plug $A = 1 -B$ into $-1 = A - 2B$}        \\
+[15pt]
+&\Rightarrow& -2 = -3B                                                                                                                                          &\qquad \mathrel{\#} \text{simplfy}                                                  \\
+[15pt]
+&\Rightarrow&  B =\frac{2}{3}                                                                                                                                 &\qquad \mathrel{\#} \text{solve for $B$}                                       \\
+[15pt]
+&\Rightarrow&  A =\frac{1}{3}                                                                                                                                 &\qquad \mathrel{\#} \text{plug $B$ into $A = 1 - B$}                     \\
+[12pt] 
+&\Rightarrow& Y(s) = \mathlarger{\frac{\frac{1}{3}}{s-2}} + \mathlarger{\frac{\frac{2}{3}}{s+1}}  
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So now we know that 
+\begin{equation*}
+Y(s) = \mathlarger{\frac{\frac{1}{3}}{s-2}} + \mathlarger{\frac{\frac{2}{3}}{s+1}} 
+\end{equation*}
+
+\bigskip
+\noindent
+and we also know (Section \ref{sec:inverse_laplace_transform}) that
+
+\begin{equation*}
+\mathcal{L}^{-1} \bigg \{ \frac{1}{s-a} \bigg \} =   e^{at}
+\end{equation*}
+
+\bigskip
+\noindent
+Putting this all together
+
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+Y(s)                                                                                                                           
+&=& \mathcal{L}\{y(t)\}                                                                                                   &\qquad \mathrel{\#} \text{definition of $Y(s)$ (Section \ref{sec:example_ode})}                                                        \\
+[15pt]
+ & \Rightarrow& \mathcal{L}^{-1}\{Y(s) \}  = \mathcal{L}^{-1}\{\mathcal{L}\{y(t)\}\}         &\qquad \mathrel{\#} \text{take the Inverse Laplace Transform of both sides}                                                            \\
+[15pt]
+&\Rightarrow& \mathcal{L}^{-1}\{Y(s) \}  = y(t)                                                               &\qquad \mathrel{\#}  \mathcal{L}^{-1}\{\mathcal{L}\{y(t)\}\} = y(t)                                                                                \\
+[10pt]
+&\Rightarrow& \mathcal{L}^{-1} \bigg \{ \mathlarger{\frac{\frac{1}{3}}{s-2}} + \mathlarger{\frac{\frac{2}{3}}{s+1}} \bigg \}  = y(t)
+                                          &\qquad \mathrel{\#} Y(s) = \mathlarger{\frac{\frac{1}{3}}{s-2}} + \mathlarger{\frac{\frac{2}{3}}{s+1}} \text{ (Section \ref{sec:example_ode})}                                                        \\
+[15pt]
+&\Rightarrow& \mathcal{L}^{-1}\bigg \{\mathlarger{\frac{\frac{1}{3}}{s-2}} \bigg \} + \mathcal{L}^{-1}\bigg \{ \mathlarger{\frac{\frac{2}{3}}{s+1}} \bigg \} = y(t)
+                                                                                                                                       &\qquad \mathrel{\#} \text{by the linearity of the Laplace Transform (Section \ref{subsec:linearity})}                         \\
+[15pt]
+&\Rightarrow& \frac{1}{3} \mathcal{L}^{-1}\bigg \{\mathlarger{\frac{1}{s-2}} \bigg \} + \frac{2}{3} \mathcal{L}^{-1}\bigg \{ \mathlarger{\frac{1}{s+1}} \bigg \}  = y(t)
+                                                                                                                                       &\qquad \mathrel{\#} \text{neither $\frac{1}{3}$ nor $\frac{2}{3}$ depends on $t$}                                                     \\
+[15pt]
+&\Rightarrow& \frac{1}{3} e^{2t} +  \frac{2}{3} \mathcal{L}^{-1}\bigg \{ \mathlarger{\frac{1}{s+1}} \bigg \}  = y(t)
+                                                                                                                   &\qquad \mathrel{\#} \text{$\mathcal{L}^{-1} \Big \{ \frac{1}{s-2} \Big \} = e^{2t}$ (Section \ref{sec:inverse_laplace_transform})}  \\
+[15pt]
+&\Rightarrow& \frac{1}{3} e^{2t} + \frac{2}{3} e^{-t} = y(t)                          &\qquad \mathrel{\#} \text{$\mathcal{L}^{-1} \Big \{ \frac{1}{s+1} \Big \} = e^{-t}$ (Section \ref{sec:inverse_laplace_transform})}  \\
+[15pt]
+&\Rightarrow& y(t) = \frac{1}{3} e^{2t} + \frac{2}{3} e^{-t}                          &\qquad \mathrel{\#} \text{$=$ is symmetric}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+So we've been able to use the Laplace Transform to solve the ODE
+in Section \ref{sec:example_ode} (Equation \ref{eqn:ode}):
+
+\bigskip
+\begin{equation*}
+y(t) = \frac{1}{3} e^{2t} + \frac{2}{3} e^{-t}   
+\end{equation*}
+
+\section{\large The Heaviside Function, Convolution, and the Laplace Transform}
+We saw in Section \ref{subsec:linearity} that the Laplace
+Transform has a linearity property, namely,
+
+\bigskip
+\begin{equation*}
+\mathcal{L}\{af (t) + bg(t)\} = a\mathcal{L}\{f(t)\} + b\mathcal{L}\{g(t)\}
+\end{equation*}
+
+\bigskip
+\noindent
+One natural question is whether there is a "linearity-like"
+property for multiplication. Unfortunately
+
+\bigskip
+\begin{equation*}
+\mathcal{L}\{f(t)g(t)\} \neq  \mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}
+\end{equation*}
+
+\bigskip
+\noindent
+However, convolution behaves better with respect to the Laplace
+Transform of a product. Specifically 
+
+\bigskip
+\begin{equation}
+\mathcal{L}\{f(t) \ast g(t)\} =  \mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}
+\label{eqn:lt_of_convolution}
+\end{equation}
+
+\bigskip
+\noindent
+where $\ast$ is the convolution operator.
+
+\bigskip
+\noindent
+To see why Equation \ref{eqn:lt_of_convolution} holds we need
+another piece of machinery, the Heaviside function. 
+
+\subsection{The Heaviside Function}
+The most basic definition of the Heaviside function is
+
+\medskip
+\begin{definition} {\bf Heaviside Function:}
+\bigskip
+\begin{equation*}
+u(t) =
+ \begin{cases} 
+   0 & t < 0  \\
+    1 & t \geq 0
+   \end{cases}
+\end{equation*}
+\label{def:heaviside_function}
+\end{definition}
+
+\bigskip
+\noindent
+The Heaviside function is shown in Figure \ref{fig:u(t)}.
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=2.0]
+     \draw [thick,->,dashed] (0,0) -- (0,2);						% draw axes
+     \draw [thick,->,dashed] (0,0) -- (3,0);						% draw axes
+     \draw (2,2) node[draw,rectangle] {								% draw function to the right
+         $u(t) =  
+           \begin{cases} 
+               0 & t < 0  \\
+               1 & t \geq 1
+           \end{cases}$
+       }; 
+     \draw (3,0) node [label=right:{$t$}] {};
+     \draw (0,2) node [label=above:{$u(t)$}] {};
+     \draw [<-,thick,red] (-2,0) -- (0,0);
+     \draw [->,thick,red] (0,1) -- (3,1);
+     \coordinate (y) at (0,1); \fill [red] (y) circle (1pt);		% draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \draw (0,1) node[left] {1};
+     \draw [thick,red] (0,0) circle [radius =0.03cm];				% draw an open red circle on the x axis at (0,0)             
+     \draw (0,0) node[below] {$0$};
+  \end{tikzpicture}
+  \caption{The Heaviside Function $u(t)$}
+  \label{fig:u(t)}
+\end{figure}
+
+
+\bigskip
+\noindent
+More frequently we are interested in $u(t-a)$, which is sometimes 
+written as $u_a(t)$,  is shown in Figure \ref{fig:u(t-a)}.
+
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=2.0]
+%  \draw [<->] (0,2) -- (0,0) -- (4,0);                                                                      % draw axes
+     \draw [thick,->] (0,0) -- (0,2);                                                                           % draw axes
+     \draw [thick,<->] (-2,0) -- (3,0);                                                                        % draw axes
+     \draw (2,2) node[draw,rectangle] {                                                                  % draw function to the right
+         $u(t-a) =  
+           \begin{cases} 
+               0 & t < a  \\
+               1  & t \geq a
+           \end{cases}$
+       }; 
+     \draw (1,0) node[below] {$a$};
+     \draw [thick,red] (1,0) circle [radius =0.03cm];                                                  % draw an open red circle on the x axis above the "a"              
+     \draw [dashed] (1,0) -- (1,1);
+     \draw (3,0) node [label=right:{$t$}] {};
+     \draw (0,2) node [label=above:{$u(t-a)$}] {};
+     \draw [thick,red] (-2,0) -- (1,0);
+     \draw [->,thick,red] (1,1) -- (3,1);
+     \coordinate (xy) at (1,1); \fill [red] (xy) circle (1pt);                                           % draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \draw [dashed] (0,1) -- (2,1);
+     \draw [thick,red] (1,1) circle [radius =0.03cm];                                                % draw an open red circle on the x axis above the "a"              
+     \coordinate (y) at (0,1); \fill [black] (y) circle (1pt);                                           % draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \draw (0,1) node[left] {1};
+  \end{tikzpicture}
+  \caption{$u(t-a)$}
+  \label{fig:u(t-a)}
+\end{figure}
+
+\bigskip
+\noindent
+Another useful version of the Heaviside function, $u(a-t)$, is shown in Figure \ref{fig:u(a-t)}.
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=2.0]
+     \draw [thick,->] (0,0) -- (0,2);                                                                      % draw axes
+     \draw [thick,<->] (-2,0) -- (3,0);                                                                     % draw axes
+     \draw (2,2) node[draw,rectangle] {                                                             % draw function to the right
+         $u(a - t) =  
+           \begin{cases} 
+               0 & t > a  \\
+               1  & t \leq a
+           \end{cases}$
+       }; 
+     \draw (3,0) node [label=right:{$t$}] {};
+     \draw (0,2) node [label=above:{$u(a - t)$}] {};
+     \draw (1,0) node[below] {$a$};
+     \draw [thick,red] (1,0) circle [radius =0.03cm];                                                  % draw an open red circle on the x axis above the "a"              
+     \draw [<-,thick,red] (-2,1) -- (1,1);
+     \draw [dashed] (1,0) -- (1,1);
+     \draw [->,thick,red] (1,0) -- (3,0);
+     \coordinate (xy) at (1,1); \fill [red] (xy) circle (1pt);                                           % draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \coordinate (y) at (0,1); \fill [black] (y) circle (1pt);                                           % draw a dot on the y axis (I'd like to make it smaller but I don't see how)
+     \draw (0,1) node[left] {1};
+     \end{tikzpicture}
+  \caption{$u(a - t)$}
+  \label{fig:u(a-t)}
+\end{figure}
+
+
+
+\bigskip
+\noindent
+Now the obvious question is how do we compute
+$\mathcal{L}\{u(t-a)\}$? Recall that by the definition of the
+Laplace Transform we have
+
+\begin{equation*}
+F(s) = \int^\infty_0 e^{-st} u(t-a) dt
+\end{equation*}
+
+\bigskip
+\noindent
+The first thing to observe is that $u(t-a)$ is zero for $t < a$
+and one otherwise (Figure \ref{fig:u(t-a)}), so we can rewrite
+our integral with a lower limit of $a$.
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+F(s)                                                                                                                          
+&=& \mathlarger{\int}^\infty_0 e^{-st} u(t-a) dt                        &\qquad\qquad \mathrel{\#} \text{definition of $\mathcal{L}\{u(t-a)\}$ (Section \ref{sec:laplace_transform})}                                 \\
+[15pt]
+&=& \mathlarger{\int}^\infty_a e^{-st} u(t-a) dt                        &\qquad\qquad \mathrel{\#} \text{we can change the lower integration limit since $u(t-a) = 0$ for $t < a$}                                    \\
+[15pt]
+&=& \mathlarger{\int}^\infty_a e^{-st} \cdot 1 dt                      &\qquad\qquad \mathrel{\#} \text{$u(t-a) = 1$ for $t \geq a$}                                                                                                           \\
+[15pt]
+&=& \mathlarger{\int}^\infty_a e^{-st} dt                                  &\qquad\qquad \mathrel{\#} \text{simplify}                                                                                                                                        \\
+[15pt]
+&=& \mathlarger{\frac{e^{-st}}{-s}} \bigg |^\infty_a                   &\qquad\qquad \mathrel{\#} \mathlarger{\int} e^{cx} dx = \frac{e^{cx}}{c} + C \text{ and the Fundamental Theorem of Calculus}  \\
+[15pt]
+&=& \lim\limits_{d \to \infty} \mathlarger{\frac{e^{-sd}}{-s}} - \mathlarger{\frac{e^{-sa}}{-s}}   &\qquad\qquad \mathrel{\#} \text{evaluate at limits}                                                                          \\
+[15pt]
+&=& 0 -  \mathlarger{\frac{e^{-sa}}{-s}}                                   &\qquad\qquad \mathrel{\#} \lim\limits_{d \to \infty} \mathlarger{\frac{e^{-sd}}{-s}} = 0                                                                      \\
+[15pt]
+&=& \mathlarger{\frac{e^{-sa}}{s}}                                          &\qquad\qquad \mathrel{\#} \mathcal{L}\{u(t-a)\} = \mathlarger{\frac{e^{-sa}}{s}}
+\end{array}
+\end{equation*}
+
+
+\subsection{What about $\mathcal{L}\{u(t-a) f(t-a)\}$?}
+\label{sec:lt_uf}
+
+\bigskip
+\noindent
+What can we say about the Laplace Transform of $u(t-a)f(t-a)$,
+that is, the Heaviside function multiplied by another function?
+It turns out that
+
+\bigskip
+\begin{equation*}
+e^{-as} F(s) = \mathcal{L}\{u(t-a) f(t-a)\}
+\label{eqn:lt_uf}
+\end{equation*}
+
+
+\bigskip
+\noindent
+Ok, but why? First, notice that
+
+\bigskip
+\begin{equation*}
+u(t-a)f(t-a) =  
+           \begin{cases} 
+               0        & t < a  \\
+               f(t-a)  & t \geq a
+           \end{cases}
+\end{equation*}
+
+\bigskip
+\noindent
+One way to think about this is that $u(t-a)$ "turns on" $f(t-a)$
+at $a$. So consider 
+
+
+\begin{equation*}
+\begin{array}{lllll}
+F(s)
+&=& \mathlarger{\int}_0^\infty e^{-s\tau} f(\tau) d\tau                                                       &\qquad \mathrel{\#} \text{definition of Laplace Transform (Section \ref{sec:laplace_transform})}    \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = e^{-as} \mathlarger{\int}_0^\infty e^{-s\tau} f(\tau) d\tau    &\qquad \mathrel{\#} \text{multiply both sides by $e^{-as}$}                                                              \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = \mathlarger{\int}_0^\infty e^{-as} e^{-s\tau} f(\tau) d\tau    &\qquad \mathrel{\#} \text{move $e^{-as}$ inside integral ($e^{-as}$ doesn't depend on $\tau$)}    \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = \mathlarger{\int}_0^\infty e^{-s\tau - sa} f(\tau) d\tau         &\qquad \mathrel{\#} a^n \cdot a^m = a^{(m+n)}                                                                                 \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = \mathlarger{\int}_0^\infty e^{-s(\tau+a)} f(\tau) d\tau         &\qquad \mathrel{\#} \text{factor out $s$}                                                                                            \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = \mathlarger{\int}_a^\infty e^{-st} f(t-a) dt                           &\qquad \mathrel{\#} \text{substitution: $t = \tau + a$ so $\tau = t - a$ and $d\tau = dt$}                   \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = \mathlarger{\int}_0^\infty e^{-st} u(t-a) f(t-a) dt                 &\qquad \mathrel{\#} \text{$u(t-a) = 0$ for $t < a$ so adjust lower limit to 0}                                       \\
+[15pt]
+&\Rightarrow& e^{-as} F(s) = \mathcal{L}\{u(t-a) f(t-a)\}                                                 &\qquad \mathrel{\#} \text{definition of Laplace Transform (Section \ref{sec:laplace_transform})}       \\
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\subsection{Convolution}
+\label{sec:convolution}
+Next we need the definition of the convolution of two functions
+$f$ and $g$. 
+
+\bigskip
+\begin{definition} {\bf Convolution:}
+\bigskip
+\begin{equation}
+f(t) \ast g(t) = \int^t_0 f(\tau) g(t - \tau) d\tau
+\label{eqn:convolution}
+\end{equation}
+\label{def:convolution}
+\end{definition}
+
+\noindent
+where $\ast$ is the convolution operator. Note that the righthand
+side of Equation \ref{eqn:convolution} is some function of $t$
+($\tau$ is the dummy variable for integration). That is
+
+\bigskip
+\begin{equation*}
+f(t) \ast g(t) = \underbracket [0.15 ex] {\strut \int^t_0 f(\tau) g(t - \tau) d\tau}_{\text{some function of } t}
+\end{equation*}
+
+\bigskip
+\noindent
+Convolution has quite a few interesting properties including:
+
+\bigskip
+ \begin{itemize}
+ \item Commutativity: $f \ast g = g \ast f$ 
+ \item Associativity: $f \ast (g \ast h) = (f \ast g) \ast h$
+ \item Distributivity:  $f \ast (g + h) = f \ast g + f \ast h$
+\end{itemize}
+
+\bigskip
+\noindent
+It is pretty easy to see why the commutative property holds:
+
+\begin{equation*}
+\begin{array}{lllll}
+f(t) \ast g(t)                                                                                                                          
+&=& \mathlarger{\int}^t_0 f(\tau) g(t - \tau) d\tau                  &\qquad \mathrel{\#} \text{definition of convolution (Section \ref{sec:convolution})}                                 \\
+[15pt]
+&=& -\mathlarger{\int}^t_0 f(t -u) g(u) du                              &\qquad \mathrel{\#} \text{use a u substitution with $u = t - \tau$ so $\tau = t -u$ and $d\tau = -du$}     \\
+[15pt]
+&=& - \mathlarger{\int}^0_t f(t -u) g(u) du                             &\qquad \mathrel{\#} \text{lower limit: $u = t - 0 = t$, upper limit: $u = t - t = 0$}                                     \\
+[15pt]
+&=& \mathlarger{\int}^t_0 f(t -u) g(u) du                               &\qquad \mathrel{\#} \text{by the Fundamental Theorem of Calculus}                                                      \\
+[15pt]
+&=& \mathlarger{\int}^t_0 g(u) f(t -u) du                               &\qquad \mathrel{\#} \text{multiplication is commutative}                                                                          \\
+[15pt]
+&=& g(t) \ast f(t)                                                                    &\qquad \mathrel{\#} \text{definition of convolution (Section \ref{sec:convolution})}
+\end{array}
+\end{equation*}
+
+\newpage
+\subsection{Ok, why does $\mathcal{L}\{f(t) \ast g(t)\} =  \mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}$ hold?}
+
+\bigskip
+\noindent
+Now we can use the machinery we've built up to show why Equation
+\ref{eqn:lt_of_convolution} holds:
+
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{f(t) \ast g(t)\} 
+&=& \mathlarger{\int}^\infty_0 e^{-st} \big [ f(t) \ast g(t) \big ] dt                                                                 &\quad \mathrel{\#} \text{definition of Laplace Transform (Definition \ref{def:laplace_transform})}            \\
+[15pt]                 
+&=& \mathlarger{\int}^\infty_0 e^{-st} \Bigg [ \mathlarger{\int}^t_0 f(t-v) g(v) dv \Bigg ] dt                         &\quad \mathrel{\#} \text{definition of convolution (Section \ref{sec:convolution})}                                     \\
+[15pt]
+&=& \mathlarger{\int}^\infty_0 e^{-st} \Bigg [ \mathlarger{\int}^\infty_0 f(t-v) g(v ) u(t-v) dv \Bigg ] dt        &\quad \mathrel{\#} \text{$u(t-v) = 0$ for $v > t$ so change upper limit}                                                    \\
+[15pt]
+&=& \mathlarger{\int}^\infty_0 \Bigg [ \mathlarger{\int}^\infty_0  e^{-st} f(t-v) g(v ) u(t-v) dv \Bigg ] dt       &\quad \mathrel{\#} \text{$e^{-st}$ doesn't depend on $v$}                                                                        \\    
+[15pt]
+&=& \mathlarger{\int}^\infty_0 \Bigg [ \mathlarger{\int}^\infty_0  e^{-st} f(t-v) g(v ) u(t-v) dt \Bigg ] dv       &\quad \mathrel{\#} \text{swap order of integration}                                                                                   \\    
+[15pt]
+&=& \mathlarger{\int}^\infty_0 g(v) \Bigg [ \mathlarger{\int}^\infty_0  e^{-st} f(t-v) u(t-v) dt \Bigg ] dv        &\quad \mathrel{\#} \text{$g(v)$ doesn't depend on $t$}                                                                             \\     
+[15pt]
+&=& \mathlarger{\int}^\infty_0 g(v) \: e^{-sv} \: F(s) \: dv                                                                            &\quad \mathrel{\#} \mathcal{L}\{ f(t-v) u(t-v)\} = e^{-sv} F(s) \text{ (Section \ref{sec:lt_uf})}                      \\
+[15pt]
+&=& F(s) \mathlarger{\int}^\infty_0 g(v) \: e^{-sv} \: dv                                                                               &\quad \mathrel{\#} \text{$F(s)$ doesn't depend on $v$}                                                                            \\
+[15pt]
+&=& F(s) \mathlarger{\int}^\infty_0 e^{-sv}  g(v) dv                                                                                    &\quad \mathrel{\#} \text{multiplication is commutative}                                                                              \\
+[15pt]
+&=& F(s)\:G(s)                                                                                                                   &\quad \mathrel{\#} G(s) = \mathlarger{\int}^\infty_0 \!\! e^{-sv}  g(v) dv \text{ (Definition \ref{def:laplace_transform})}      \\   
+[15pt]
+&\Rightarrow& \mathcal{L}\{f(t) \ast g(t)\} = \mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}                                        &\quad \mathrel{\#} \text{the LT of a convolution is the product of LTs}                                                       \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\bigskip
+\noindent
+This result also implies that $\mathcal{L}^{-1}\{F(s) G(s)\} =
+f(t) \ast g(t)$. It is pretty easy to see why:
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathcal{L}\{f(t) \ast g(t)\} 
+&=& \mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}                                                                                                                               &\quad \mathrel{\#} \text{above result}                                      \\
+[8pt]
+&\Rightarrow& \mathcal{L}^{-1}\{\mathcal{L}\{f(t) \ast g(t)\}\} =  \mathcal{L}^{-1}\{\mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}\}     &\quad \mathrel{\#} \text{take the inverse LT of both sides}       \\
+[8pt]
+&\Rightarrow& f(t) \ast g(t) =  \mathcal{L}^{-1}\{\mathcal{L}\{f(t)\}\mathcal{L}\{g(t)\}\}                                                          &\quad \mathrel{\#}   \mathcal{L}^{-1}\{\mathcal{L}\{f(t)\} = f(t)  \\
+[8pt]
+&\Rightarrow& f(t) \ast g(t) =  \mathcal{L}^{-1}\{F(s) G(s)\}                                                                                                  &\quad \mathrel{\#} \text{$\mathcal{L}\{f(t)\} = F(s)$ (Definition \ref{def:laplace_transform})} \\
+[8pt]
+&\Rightarrow& \mathcal{L}^{-1}\{F(s) G(s)\} = f(t) \ast g(t)                                                                                                  &\quad \mathrel{\#} \text{$=$ is symmetric}
+\end{array}
+\end{equation*}
+%
+%
+%
+\section{Conclusions}
+%
+%
+%
+\section{Acknowledgements}
+Thanks to Dave Neary for catching a typo: was $-f(0) +
+\mathcal{L}\{f(t)\}$, should be $-f(0) + s \mathcal{L}\{f(t)\}$. 
+
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 

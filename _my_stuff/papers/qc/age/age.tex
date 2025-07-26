@@ -1,0 +1,279 @@
+\documentclass[11pt, oneside]{article}          % use "amsart" instead of "article" for AMSLaTeX format
+
+
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}                  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+%
+%
+%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{setspace}
+
+
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{relsize}
+\usepackage[hyphenbreaks]{breakurl}
+ 
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+
+
+
+
+\title{What Is The Difference In Our Ages?}
+\author{David Meyer \\ dmm613@gmail.com}
+\date{Last update: \today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Suppose your age is $x_t$ and my age is $y_t$ at some time $t$.
+Then in $n$ years your age is $x_t + n$ and my age is $y_t +
+n$. This implies that as time goes by (as measured by $n \in
+\mathbb{N}$) the difference in our ages vanishes!
+
+\bigskip
+\noindent
+Why? Consider that 
+
+\begin{equation*}
+\centering
+\lim\limits_{n \to \infty} \Bigg [ \frac{x_t + n}{y_t + n} \Bigg ]  = 1
+\end{equation*}
+
+\bigskip
+\noindent
+which is another way of saying the same thing. This result is
+reassuring since it pretty much models our common experience. 
+But why is this true? As we will see in Section
+\ref{subsec:putting_it_all_together}, this "ratio of our ages"
+sequence is a \emph{convergent sequence} in $\mathbb{R}$ with
+limit one.
+
+
+\subsection{A More General Formulation}
+More generally consider the function $f_a(n) = a + n$ 
+where $a,n \in \mathbb{N}$. Then 
+
+\bigskip
+\begin{equation}
+\centering
+\lim\limits_{n \to \infty} \Bigg [ \frac{f_a(n)}{f_b(n)} \Bigg ]  = 1
+\label{eqn:lim}
+\end{equation}
+
+\bigskip
+\noindent
+for $a,b,n \in \mathbb{N}$. 
+
+\bigskip
+\noindent
+Equation (\ref{eqn:lim}) is also frequently
+written using the following alternate 
+notation: 
+
+\medskip
+\begin{equation*}
+f_a(n) \thicksim f_b(n)
+ \end{equation*}
+
+\bigskip
+\noindent
+where the $\thicksim$ symbol means that the ratio of its two
+arguments tends towards $1$ as its arguments tend toward
+$\infty$. Said another way:
+
+\medskip
+\begin{equation*}
+f(x) \thicksim g(x) \Rightarrow \lim\limits_{x \to \infty} \dfrac{f(x)}{g(x)} = 1
+\end{equation*}
+
+\smallskip
+\section{Proof Using Sequences}
+Recall our problem setup: Suppose your age at some time 
+$t$ is $x_t$ and my age at that same time is $y_t$. Then 
+in $n$ years your age will be $x_t + n$ and my age will 
+be $y_t + n$, for $n \in \mathbb{N}$. 
+
+\bigskip
+\noindent
+Now consider the "ratio of our ages" sequence:
+
+\medskip
+\begin{equation*}
+(a_n)_{n \in \mathbb{N}} = \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+\end{equation*}
+
+\bigskip
+\noindent 
+The notation $(a_n)_{n \in \mathbb{N}}$ means that $a$ is a map from
+$\mathbb{N}$ to $\mathbb{R}$, namely
+
+\begin{equation*}
+a: \mathbb{N} \to \mathbb{R}
+\end{equation*}
+
+\bigskip
+\noindent
+That is, $(a_n)_{n \in \mathbb{N}}$ is a sequence of real numbers.
+
+\bigskip
+\noindent 
+\begin{definition}{\bf Convergent Sequence: }  We say that a sequence 
+$(a_n)_{n \in \mathbb{N}}$ is \emph{convergent} to $a \in
+\mathbb{R}$ if for all $\epsilon$ greater that zero there exists
+an $N$ in $\mathbb{N}$ such that if $n \in \mathbb{N}$ is greater
+than or equal to $N$ then $\mid a_n - a \mid < \epsilon$. Put
+more concisely
+
+\begin{equation*}
+\forall \epsilon > 0 \;\; \exists N \in \mathbb{N} \;\; 
+ \forall n \geq N : \;\; \mid a_n - a \mid \; < \epsilon
+\end{equation*}
+
+\bigskip
+\noindent
+Here $a$ is called the \emph{limit} of the sequence $(a_n)_{n \in
+\mathbb{N}_{0}}$ and we write ${\displaystyle \lim_{n \to \infty} a_n
+= a}$ (or sometimes $a_n \xrightarrow{n \to \infty}{} a$).
+\end{definition}
+
+
+\noindent
+So now we want to ask the obvious question: what happens to the
+ratio of our ages sequence as $n$ goes to $\infty$? In other
+words, does this sequence converge, and if it does, to what
+value?
+
+\bigskip
+\noindent
+All of this means that we want to know if this limit 
+
+\bigskip
+\begin{equation*}
+\lim_{n \to \infty} \left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}
+\end{equation*}
+
+\bigskip
+\noindent
+exists and if it does, what is its value.
+
+
+\bigskip
+\noindent
+As we will see in Section \ref{subsec:putting_it_all_together},
+we do have some machinery we can use to evaluate this limit such
+as the algebraic rules for limits \cite{properties_of_limits} and
+the fact that the limit is a linear operator \cite{fa_mit}.
+
+\subsection{Putting It All Together}
+\label{subsec:putting_it_all_together}
+We can see that the "ratio of our ages" sequence 
+$\left (\dfrac{x_t +n}{y_t + n}\right )_{n \in \mathbb{N}}$ 
+is indeed a convergent sequence with limit equal to
+one, since
+
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \lim_{n \to \infty} \left (\dfrac{x_t + n}{y_t + n}\right )}
+&=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}} {{\displaystyle  \lim_{n \to \infty} \left (y_t + n \right)}}
+					&\qquad \qquad \qquad \mathrel{\#} \text{quotient rule for limits \cite{properties_of_limits}} \\
+[25pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (x_t + n \right )}\left (\frac{1}{n}\right )} 
+          {{\displaystyle \lim_{n \to \infty} \left (y_t + n \right)} \left ( \frac{1}{n} \right )}
+					&\qquad \qquad \qquad \mathrel{\#} \text{multiply the fraction by $1 
+					= \frac{\left ( \frac{1}{n} \right )}{\left ( \frac{1}{n} \right )}$}\\
+[25pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty} \left (\frac{x_t}{n} + \frac{n}{n} \right )}} 
+           {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + \frac{n}{n} \right)}}
+					&\qquad \qquad \qquad \mathrel{\#} \text{multiply through by $\frac{1}{n}$}\\
+[25pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty}  \left (\frac{x_t}{n} + 1 \right )}} 
+           {{\displaystyle \lim_{n \to \infty} \left (\frac{y_t}{n} + 1 \right)}}
+					&\qquad \qquad \qquad \mathrel{\#} \frac{n}{n} = 1\\
+[25pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty}   \frac{x_t}{n} + \lim_{n \to \infty} 1}} 
+           {{\displaystyle \lim_{n \to \infty}  \frac{y_t}{n} + \lim_{n \to \infty} 1}}
+					&\qquad \qquad \qquad \mathrel{\#} \text{limit is a linear operator \cite{fa_mit}} \\
+[25pt]
+&=& \dfrac{{\displaystyle \lim_{n \to \infty}  \frac{x_t}{n} + 1}} 
+           {{\displaystyle \lim_{n \to \infty} \frac{y_t}{n} + 1}}
+					&\qquad \qquad \qquad \mathrel{\#} \text{${\displaystyle \lim_{n \to \infty} c 
+					= c}$ for constant $c$ \cite{properties_of_limits}} \\
+[25pt]
+&=& \dfrac{0 + 1} {0 + 1}
+					&\qquad \qquad \qquad \mathrel{\#} 
+					{\displaystyle \lim_{n \to \infty} \frac{c}{n} = c \lim_{n \to \infty} \frac{1}{n} = 0} 
+					\text{ for constant $c$ \cite{limits_of_sequences}} \\
+[15pt]
+&=& \dfrac{1}{1}	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&=& 1				&\qquad \qquad \qquad \mathrel{\#} \text{apparently we're all roughly the same age}
+\end{array}
+\end{equation*}
+
+
+\section{Conclusions}
+So I guess that while in our short lives our ages appear to vary widely
+across our life spans, when we look at a bigger picture that difference
+disappears.
+%
+%
+%
+\section*{Acknowledgements}
+%                                                                                                                                          
+%       LaTeX source on overleaf.com                                                                                                       
+%                                                                                                                                          
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%                                                                                                                                          
+%       get a bibliography                                                                                                                 
+%                                                                                                                                          
+%       Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).                                                            
+%       You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}                                                    
+%                                                                                                                                          
+\bibliographystyle{plain}
+\bibliography{qc}
+%                                                                                                                                          
+%       done                                                                                                                               
+%                                                                                                                                          
+\end{document}

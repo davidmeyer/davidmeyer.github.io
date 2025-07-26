@@ -1,0 +1,126 @@
+\documentclass[14pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage{geometry}                                   % See geometry.pdf to learn the layout options
+\geometry{margin=0.50in}
+\geometry{letterpaper}                                  % ... or a4paper or a5paper or ... 
+\usepackage{setspace}
+\usepackage{mathtools}                                  % \coloneqq
+\usepackage{graphicx}
+%
+%	math stuff
+%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{relsize}
+
+
+
+\title{{\Huge $\pi^\pi = \; ?$}}
+\author{David Meyer \\ \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net}}
+\date{Last update: \today}
+
+
+\begin{document}
+\maketitle
+
+\large
+\noindent
+Can we find an expression for $\pi^\pi$? The first thing 
+we might do is to consider what we know about $x^x$. We 
+do know that $a^x = e^{x \ln a}$ for positive $a$, since
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+y
+&=& a^x											&\qquad \qquad \qquad \qquad \mathrel{\#} \text{define $y$} \\
+[10pt]
+&\Rightarrow& \ln y = \ln a^x					&\qquad \qquad \qquad \qquad \mathrel{\#} \text{take the log of both sides} \\
+[10pt]
+&\Rightarrow& \ln y = x \ln a 					&\qquad \qquad \qquad \qquad \mathrel{\#} \text{power rule for logarithms} \\
+[10pt]
+&\Rightarrow& e^{\ln y} = e^{x \ln a}			&\qquad \qquad \qquad \qquad \mathrel{\#} \text{exponentiate both sides} \\
+[10pt]
+&\Rightarrow& y = e^{x \ln a}					&\qquad \qquad \qquad \qquad \mathrel{\#} e^{\ln y} = y \\
+[10pt]
+&\Rightarrow& a^x = e^{x \ln a}					&\qquad \qquad \qquad \qquad \mathrel{\#} y = a^x
+\end{array}
+\end{equation*}
+
+\smallskip
+\bigskip
+\noindent
+We can use the same reasoning to show that $x^x = e^{x \ln
+x}$ for $x > 0$. Then setting $x = \pi$ we get
+
+{\Large
+\begin{equation}
+{\displaystyle \pi^{\pi} = e^{\pi \ln \pi}}
+\label{eqn:pi_to_the_pi}
+\end{equation}}
+
+\noindent
+All good, but what is $e^{\pi \ln \pi}$? We can use a Maclaurin
+series to evaluate this expression as follows:
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+e^x
+&=& {\displaystyle \sum\limits_{n=0}^{\infty} \dfrac{x^n}{n!}}
+	&\qquad \qquad \qquad \mathrel{\#} \text{Maclaurin series for $e^x$} \\
+[12pt]
+&\Rightarrow& {\displaystyle e^{\pi \ln \pi} = \sum\limits_{n=0}^{\infty} \dfrac{(\pi \ln\pi)^n}{n!}}	
+		&\qquad \qquad \qquad \mathrel{\#} \text{set $x = \pi \ln \pi$} \\
+[15pt]
+&\Rightarrow& {\displaystyle e^{\pi \ln \pi} =\sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}} 		
+	&\qquad \qquad \qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&\Rightarrow& {\displaystyle \pi^\pi = \sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}}													
+	&\qquad \qquad \qquad \mathrel{\#} \text{$e^{\pi \ln \pi} = \pi^\pi$ (Equation (\ref{eqn:pi_to_the_pi}))}
+ 
+\end{array}
+\end{equation*}
+
+
+\medskip
+\bigskip
+\noindent
+So we get the cool result that
+
+{\Large
+\begin{equation*}
+{\mathlarger \pi^\pi = \sum\limits_{n=0}^{\infty} \dfrac{\pi^n \ln^n\pi}{n!}}
+\end{equation*}}
+
+\bigskip
+\noindent
+Next question: is $\pi^\pi$ rational or irrational? 
+
+\end{document}
+

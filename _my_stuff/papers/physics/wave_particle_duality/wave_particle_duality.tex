@@ -1,0 +1,397 @@
+\documentclass{article}
+%
+%
+%	wave_particle_duality.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	22 Sep 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}														% default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Wave-Particle Duality (etc)}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+
+\smallskip
+\noindent
+We know from basic electromagnetism
+\cite{wiki:electromagnetic_radiation} that $c = \lambda \nu$,
+where $c$ is the speed of light, $\lambda$ is the wavelength, and
+$\nu$ is the frequency. Solving for $\nu$ we get
+
+
+\bigskip
+\begin{equation}
+	\nu = \dfrac{c}{\lambda}
+	\label{eqn:frequency}
+\end{equation}
+
+\bigskip
+\noindent
+We also know from Planck's work \cite{planck_energy} that
+electromagnetic waves have energy $E_{\text{{\tiny P}}}$, where
+$E_{\text{{\tiny P}}}$ is defined as
+
+
+\smallskip
+\begin{equation}
+	E_{\text{{\tiny P}}} = h \nu
+	\label{eqn:planck_energy}
+\end{equation}
+
+
+\bigskip
+\noindent
+and $h$ is Planck's constant \cite{wiki:plancks_constant}. 
+Substituting Equation (\ref{eqn:frequency}) into Equation 
+(\ref{eqn:planck_energy}) we get
+
+\medskip
+\begin{equation*}
+	E_{\text{{\tiny P}}} = h \dfrac{c}{\lambda}
+	\label{eqn:planck_c_over_lambda}
+\end{equation*}
+
+\medskip
+\noindent
+In addition, we know from Einstein
+\cite{wiki:mass_energy_equivalence} that the energy of a mass
+$m$, call it $E_{\text{{\tiny E}}}$, is
+
+
+\begin{equation*}
+	E_{\text{{\tiny E}}} = mc^2
+	\label{eqn:E=mc^2}
+\end{equation*}
+
+
+{\setstretch{1.525}
+\noindent
+What de Broglie \cite{wiki:de_broglie} realized was that matter
+must also behave like a wave\footnote{Einstein had already shown
+that an electromagnetic wave can behave like a particle
+\cite{wiki:photoelectric_effect}.}
+\cite{wiki:matter_wave,wiki:wave_particle_duality} and so
+$E_{\text{{\tiny P}}}$ must equal $E_{\text{{\tiny E}}}$.  This
+implies that matter also has a wavelength: $\lambda =
+\dfrac{h}{p}$, where $p := \norm{\mathbf{p}}$ is the Euclidean
+Norm \cite{dmm:vector_calculus} (magnitude) of the momentum vector 
+$\mathbf{p}$, and $\mathbf{p} = m \mathbf{v}$. $\lambda$ is called 
+the \emph{de Broglie wavelength}.
+\par}
+
+\smallskip
+\bigskip
+\noindent
+Here's one way to think about where $\lambda$ comes from:
+
+\begin{equation*}
+\begin{array}{llll}
+h \dfrac{c}{\lambda}
+&=& mc^2	
+			&\hspace{5em} \mathrel{\#} \text{de Broglie's insight: 
+				$E_{\text{{\tiny P}}} = E_{\text{{\tiny E}}}$} \\
+[9pt]
+&\Rightarrow& \dfrac{h}{\lambda} = mc
+			&\hspace{5em} \mathrel{\#} \text{cancel $c$} \\
+[9pt]
+&\Rightarrow& \dfrac{h}{\lambda} = mv
+			&\hspace{5em} \mathrel{\#} v := \norm{\mathbf{v}} = c \\
+[9pt]
+&\Rightarrow& \lambda = \dfrac{h}{m v}
+			&\hspace{5em} \mathrel{\#} \text{solve for $\lambda$}\\
+[9pt]
+&\Rightarrow& \lambda = \dfrac{h}{p}
+			&\hspace{5em} \mathrel{\#} \text{since $\mathbf{p} = m \mathbf{v}$ 
+			we have $p := \norm{\mathbf{p}}     = 
+			              \norm{m \mathbf{v}}   = 
+			              |m| \norm{\mathbf{v}} = 
+			              mv$} \\
+[22pt] 
+\end{array}
+\end{equation*}
+
+\subsection{Conservation of Energy in $\mathbb{R}^{1}$}
+\label{subsec:conservation_of_energy}
+The first thing to note here is that since we are in one-dimensional
+space (motion is in $\mathbb{R}^{1}$), quantities such as displacement,
+velocity, and acceleration, force, and energy are one-dimensional 
+vectors (aka scalars). So we use, for example, $F = ma$ rather than 
+$\mathbf{F} = m \mathbf{a}$.
+
+
+\bigskip
+\noindent
+Next, we need one definition:
+
+\smallskip
+\begin{definition}
+{\bf Trajectory:} A solution x(t) to the equation $F(x(t)) = m \ddot{x}(t)$,
+Newton’s Second Law, is called a trajectory.
+\end{definition}
+
+\smallskip
+\noindent
+Now, consider the case of a general force function $F(x)$. Here we define 
+the kinetic energy of a particle to be $\frac{1}{2}mv^{2}$. We also 
+define the potential energy of a particle, $V(x)$, to be 
+
+\smallskip
+\begin{equation}
+V(x) = - \int F(x) \, dx
+\label{eqn:V(x)}
+\end{equation}
+
+\noindent
+so that 
+
+\begin{equation}
+\dfrac{d}{dx}V(x) = -F(x)
+\label{eqn:F}
+\end{equation}
+
+\bigskip
+\noindent
+Then the total energy of a particle as a function of displacement 
+and velocity, $E(x,v)$, is defined to be 
+
+\begin{equation}
+E(x,v) = \dfrac{1}{2}mv^{2} + V(x)
+\label{eqn:E}
+\end{equation}
+
+\medskip
+\noindent
+One of the main reasons this energy function is important is that it is 
+\emph{conserved}, meaning that its value along any trajectory is constant.
+Switching notation ($x = x(t)$ and $v = \dot{x}(t)$) and saying this in 
+another way: An energy function is \emph{conserved} if, for each trajectory 
+$x(t)$ conforming to Newton’s Second Law, a particle's total energy 
+$E(x(t),\dot{x}(t))$ is independent of $t$.
+
+
+\medskip
+\begin{theorem}
+\label{theorem:conservation_of_energy_in_R1}
+Suppose a particle's trajectory conforms to Newton’s Second Law 
+in the form $F(x(t)) = m\ddot{x}(t)$ and let $V$ and $E$ be as 
+in Equations (\ref{eqn:V(x)}) and (\ref{eqn:E}). Then the total 
+energy of the particle is conserved.
+
+\medskip
+{\setstretch{1.50}
+\noindent
+{\bf Proof.} One way to prove Theorem \ref{theorem:conservation_of_energy_in_R1}
+is to show that the particle's total energy does not change with time, 
+that is,$\dfrac{d}{dt}E(x(t),\dot{x}(t)) = 0$:
+\par}
+%
+%
+%
+\begin{equation*}
+\begin{array}{llll}
+\dfrac{d}{dt} E(x(t),\dot{x}(t))
+&=& \dfrac{d}{dt} \bigg [\dfrac{1}{2}m(\dot{x}(t))^{2} + V(x(t)) \bigg ]
+		&\hspace{0em} \mathrel{\#} \text{definition of $E(x(t),\dot{x}(t))$ 
+		                                 (Equation (\ref{eqn:E}))} \\		
+[10pt]
+&=& \dfrac{d}{dt} \bigg [ \dfrac{1}{2}m(\dot{x}(t))^{2} \bigg ] + \dfrac{d}{dt} V(x(t))
+		&\hspace{0em} \mathrel{\#} \text{derivative is a linear 
+		                                 operator \cite{wiki:linearity_of_differentiation}} \\
+[10pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(x(t))
+		&\hspace{0em} \mathrel{\#} \text{chain \& power rules \cite{wiki:chain_rule,wiki:power_rule}:
+										 $\dfrac{d}{dt} \left [  \dfrac{1}{2}m(\dot{x}(t))^{2} \right ] = 
+										 m\dot{x}(t)\ddot{x}(t)$} \\
+[10pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \dfrac{d}{dt} V(u)
+		&\hspace{0em} \mathrel{\#} \text{let $u = x(t)$; this implies that
+		                                 $\dfrac{du}{dt} = \dfrac{dx}{dt} = \dot{x}$
+		                                 and 
+		                                 $\dfrac{du}{dx} = 1$} \\
+[10pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [\dfrac{d}{du}  V(u) \right ] \dot{x}(t)
+		&\hspace{0em} \mathrel{\#} \text{chain rule: 
+								         $\dfrac{dV}{dt} = 
+					                     \dfrac{dV}{du} \dfrac{du}{dt}$
+					                     and
+							             $\dfrac{du}{dt} = \dot{x} 
+							             \Rightarrow 
+							             \dfrac{dV}{dt} = \left [\dfrac{dV}{du} \right ]\dot{x}$} \\
+[10pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(u) \right ] \dot{x}(t)
+		&\hspace{0em} \mathrel{\#} \text{chain rule: $\dfrac{dV}{dx} = 
+									     \dfrac{dV}{du} \dfrac{du}{dx}$ 
+										 and 
+										 $\dfrac{du}{dx} = 1
+										 \, \Rightarrow
+										 \dfrac{dV}{dx} = \dfrac{dV}{du}$}\\
+[10pt]
+&=& m\dot{x}(t)\ddot{x}(t) + \left [ \dfrac{d}{dx}V(x(t)) \right ] \dot{x}(t)
+		&\hspace{0em} \mathrel{\#} \text{since $u = x(t)$} \\
+[10pt]
+&=& \dot{x}(t)\left [m \ddot{x}(t) + \dfrac{d}{dx}V(x(t)) \right ]
+		&\hspace{0em} \mathrel{\#} \text{factor out $\dot{x}(t)$} \\
+[10pt]
+&=& \dot{x}(t)\Big [m \ddot{x}(t) - F(x(t)) \Big ]
+		&\hspace{0em} \mathrel{\#} \text{$\dfrac{d}{dx}V(x(t)) = - F(x(t))$ 
+		                                 (Equation (\ref{eqn:F}))} \\
+[10pt]
+&=& 0
+		&\hspace{0em} \mathrel{\#} \text{Newton's Second Law: $m \ddot{x}(t) - F(x(t)) = 0$} 
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+So we see that the time derivative of the energy along any trajectory 
+is zero, which implies that $E(x(t), \dot{x}(t))$ is independent of $t$. 
+Energy is sometimes called a \emph{conserved quantity} (or \emph{constant 
+of motion}) because a particle neither gains nor loses energy 
+as it moves according to Newton’s Second Law.
+\end{theorem}
+%
+%	Experiment with \input
+%
+% \input{conservation_of_energy}
+%
+%
+%
+%	show a derivation/proof
+%
+% \begin{equation*}
+% \begin{array}{llll}
+% x
+% &=& y				&\qquad \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
+% [10pt]
+% \end{array}
+% \end{equation*}
+%
+%
+%
+%	include an image
+%
+% \begin{figure}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
+% \label{fig:X}
+% \end{figure}
+%
+\section{Conclusions}
+%
+%
+%
+\section{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

@@ -1,0 +1,377 @@
+%
+%	Use lualatex
+%
+% !TEX TS-program = LuaLaTeX
+%
+%	To get overleaf.com to use lualatex see
+%	https://www.overleaf.com/learn/how-to/Changing_compiler.
+%	Basically, change the compiler in Settings.
+%
+\documentclass{article}
+%
+%
+%	mega_millions.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	27 Dec 2024
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby,matrix}
+\usepackage{tikz-cd}                                                    
+\tikzcdset{every arrow/.append style={-latex}}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}													% \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
+\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}													% \multirow and \multicolumn
+\usepackage{enumitem}													% change bullets in \begin{enumerate}
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+\usepackage{luatex85,luamplib}
+\mplibnumbersystem{double}
+\mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{notation}{Notation}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{Mega Millions}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: December 27, 2024}}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{section:introduction}
+Mega Millions\textregistered \hspace{0.25mm} is a multi-state
+lottery game played in 45 states plus the District of Columbia
+and the U. S. Virgin Islands; a total of 47
+jurisdictions. Section
+\ref{section:probability_of_winning_the_jackpot} of this short
+document describes the lottery rules and the probability of
+winning the jackpot. Section
+\ref{section:expected_value_of_a_ticket} describes the
+expected value of a \$2 Mega Millions ticket.
+
+
+\section{Probability of Winning the Jackpot}
+\label{section:probability_of_winning_the_jackpot}
+What are the odds of winning the Mega Millions jackpot?
+
+\bigskip
+\noindent
+It turns out that the odds of winning are 1 in 302,575,350
+\cite{mega_millions}. 
+
+\bigskip
+\noindent
+Ok, but why? Let's see...
+
+\smallskip
+\begin{enumerate}
+\item In the Mega Millions game there are 70 white balls,
+numbered 1 to 70, in one drum. 5 balls are chosen from this drum
+in the drawing. So there are
+
+\begin{equation*}
+       \binom{70}{5} = 12,103,014 
+\end{equation*}
+
+\bigskip
+\noindent
+ways to choose the 5 white balls. This calculation ignores order,
+which doesn't matter in Mega Millions.
+
+\item We also need to choose the Mega Ball. There are 25 Mega
+Balls, numbered 1 to 25, in a different drum. 1 ball is chosen
+from this drum in the drawing.  So there are
+
+\smallskip
+\begin{equation*}
+       \binom{25}{1} = 25 
+\end{equation*}
+
+\medskip
+\noindent
+ways to choose the Mega Ball.
+
+\item So the number of ways to choose 5 white balls and 1 Mega
+Ball in the Mega Millions game is
+ 
+\begin{equation*}
+       12,103,014 \times 25 = 302,575,350
+\end{equation*}
+
+\smallskip
+\item Putting this all together we see that the probability of
+choosing the correct 5 white balls and the Mega Ball, call it
+p(winning), is
+
+\begin{equation*}
+       \text{p(winning)} = \dfrac{1}{302,575,350} \approx 3.30 \times 10^{-9}
+\end{equation*}
+\end{enumerate}
+
+\bigskip
+\noindent
+Said another way, the odds of winning are 1 in 302,575,350. 
+
+
+\section{Expected Value of a Mega Millions Ticket}
+\label{section:expected_value_of_a_ticket}
+First, this is what we know:
+
+\begin{enumerate}
+\item Advertised Jackpot: $\$1.15 \times 10^9$ as of 12/27/2024
+\item Probability of Winning: $\text{p(winning)} = \dfrac{1}{302,575,350}$
+\item Lump Sum Option: Typically \~60\% of the advertised jackpot, so take 
+	  the Lump sum to be \\ \\
+      Lump sum = $(\$1.15 \times 10^9) \times 0.60 = \$690.00 \times 10^{6}$ 
+      \vspace{0.25cm}
+\item Taxes: Both Federal and potentially state taxes apply. Assume these numbers are
+\begin{itemize}
+\item Federal tax rate: ~37\%
+\item State tax rates vary but average around 5\%
+\item Combined tax rate: ~42\%
+\end{itemize}
+
+\medskip
+Then the Post-tax lump sum = $\$690.00 \times 10^{6} \times (1.00-0.42) = \$400.20 \times 10^6$
+\end{enumerate}
+
+\subsection{Adjusted Lump Sum per Winner}
+If the jackpot is split among $n$ winners, each winner receives:
+
+\medskip
+\begin{equation*}
+\text{Post-Tax Lump Sum Share} = \dfrac{\text{Post-Tax Lump Sum}}{n} = \dfrac{\$400.20 \times 10^6}{n}
+\end{equation*}
+
+\bigskip
+\noindent
+For example:
+
+\begin{itemize}
+\item For one winner ($n=1$), the Post-Tax Lump Sum is $\$400.20 \times 10^6$
+\item For two winners ($n=2$), the Post-Tax Lump Sum is $\$200.10 \times 10^6$
+\item For three winners ($n=3$), the Post-Tax Lump Sum is $\$133.40 \times 10^6$
+\item $\cdots$
+\end{itemize}
+
+\subsection{Expected Number of Winners}
+The expected number of winners depends on $T$, the number of
+tickets sold and the odds of winning. That is, the
+expected number of winners is
+
+\begin{equation*}
+\text{Expected Number of Winners} = T \times \text{p(winning)} = \dfrac{T}{302,575,350}
+\end{equation*}
+
+\bigskip
+\noindent
+For example, suppose 500 million tickets are
+sold\footnote{Apparently Mega Millions doesn't publish the total
+number of tickets sold for any given drawing.}, so that $T = 500
+\times 10^6$. Then 
+
+
+\medskip
+\begin{equation*}
+\text{Expected Number of Winners} = \dfrac{500\times 10^6}{302,575,350} = 1.65
+\vspace{3.25 cm}
+\end{equation*}
+
+
+\subsection{Post-Tax Lump Sum per Winner}
+In our example there are 1.65 winners on average, so each winner receives:
+
+\medskip
+\begin{equation*}
+\text{Post-Tax Lump Sum Share} = \dfrac{\$400.20 \times 10^6}{1.65} = \$242.50 \times 10^6
+\end{equation*}
+
+
+\subsection{Expected Value (jackpot only) of a Mega Millions Ticket}
+The expected jackpot payout per ticket is $\text{Post-Tax Lump Sum Share} 
+\times \text{Odds of Winning}$.
+
+
+\bigskip
+\noindent
+Substituting the values for Post-Tax Lump Sum Share and the 
+Odds of Winning we get
+
+\medskip
+\begin{equation*}
+\dfrac{\$242.50 \times 10^6}{302,575,350} \approx \$0.80
+\end{equation*}
+
+\bigskip
+\noindent
+So given our assumptions the expected value of a Mega Millions 
+lottery ticket is \$0.80.
+
+\smallskip
+\subsection{Net Expected Value of a \$2 Mega Millions Ticket}
+Given our assumptions of $500 \times 10^6$ tickets sold, personal
+taxes of $42\%$, and a jackpot of $\$1.15 \times 10^9$, we see
+that the net expected value of a \$2 ticket is $\$0.80 - \$2 = -\$1.20$.
+%
+%
+%
+\section{Conclusions}
+\label{section:conclusions}
+Assuming a $\$1.15 \times 10^9$ jackpot with $500 \times 10^6$
+tickets sold and a $42\%$ personal tax rate, the expected value
+of a Mega Millions ticket is approximately \$0.80. Subtracting the \$2
+ticket cost, the net expected value of a ticket is
+approximately -1.20.
+%
+%
+%
+\section*{Acknowledgements}
+\label{section:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+%\url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

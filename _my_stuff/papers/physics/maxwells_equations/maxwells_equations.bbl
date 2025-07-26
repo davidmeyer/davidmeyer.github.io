@@ -1,0 +1,164 @@
+\begin{thebibliography}{10}
+
+\bibitem{faraday_and_the_em_theory_of_light}
+{Augusto Bel{\'e}ndez}.
+\newblock {Faraday and the Electromagnetic Theory of Light}.
+\newblock
+  \url{https://www.bbvaopenmind.com/en/science/leading-figures/faraday-electromagnetic-theory-light},
+  2015.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{module_theory_blyth}
+T.~S. Blyth.
+\newblock {\em Module Theory: An Approach to Linear Algebra}.
+\newblock {Oxford University Press}, July 1977.
+
+\bibitem{d-operator}
+{CodeCogs}.
+\newblock {The D operator}.
+\newblock
+  \url{https://www.codecogs.com/library/maths/calculus/differential/the-d-operator.php},
+  2023.
+\newblock [Online; accessed 25-September-2023].
+
+\bibitem{notes:basis}
+{David Meyer}.
+\newblock {Notes on Change of Basis}.
+\newblock \url{https://davidmeyer.github.io/qc/change_of_basis.pdf}, January
+  2019.
+\newblock [Online; accessed 14-March-2022].
+
+\bibitem{dmm:vector_calculus}
+{David Meyer}.
+\newblock {A Few Notes on Vector Calculus}.
+\newblock \url{https://davidmeyer.github.io/qc/vector_calculus.pdf}, 2022.
+\newblock [Online; accessed 23-September-2022].
+
+\bibitem{dmm:bloch_sphere}
+{David Meyer}.
+\newblock {A Few Notes on the Bloch Sphere}.
+\newblock \url{https://davidmeyer.github.io/qc/bloch_sphere.pdf}, 2023.
+\newblock [Online; accessed 22-September-2023].
+
+\bibitem{dmm:dirac_delta_and_laplace_transform}
+{David Meyer}.
+\newblock {A Few Notes On The Dirac Delta Function And The Laplace Transform}.
+\newblock \url{https://davidmeyer.github.io/qc/dirac_delta.pdf}, 2023.
+\newblock [Online; accessed 25-September-2023].
+
+\bibitem{quaternion}
+{Eric W. Weisstein}.
+\newblock {Quaternion}.
+\newblock \url{https://mathworld.wolfram.com/Quaternion.html}, 2023.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{gauss_law_for_magnetic_fields}
+{GeoSci Developers}.
+\newblock {Gauss’s Law for Magnetic Fields}.
+\newblock
+  \url{https://em.geosci.xyz/content/maxwell1_fundamentals/formative_laws/gauss_magnetic.html},
+  2012.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{faradays_law}
+{HyperPhysics}.
+\newblock {Faraday's Law}.
+\newblock
+  \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/farlaw.html}, 2010.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{impedance}
+{HyperPhysics}.
+\newblock {Impedance}.
+\newblock \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/imped.html},
+  2023.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{the_long_road_to_maxwells_equations}
+{James C. Rautio}.
+\newblock {The Long Road To Maxwell’s Equations}.
+\newblock \url{https://spectrum.ieee.org/the-long-road-to-maxwells-equations},
+  2014.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{gauss_law_for_electricity}
+{R Nave}.
+\newblock {Gauss' Law}.
+\newblock
+  \url{http://hyperphysics.phy-astr.gsu.edu/hbase/electric/gaulaw.html}, 2005.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{amperes_law}
+{Stephen Teitel}.
+\newblock { Faraday’s Law, Maxwell’s Correction to Ampere’s Law, Systems
+  of Units}.
+\newblock
+  \url{https://www.pas.rochester.edu/~stte/phy415F20/units/unit_1-3.pdf}, 2020.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{wikipedia:differential_operator}
+{Wikipedia Contributors}.
+\newblock {Differential operator --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Differential_operator&oldid=1170970755},
+  2023.
+\newblock [Online; accessed 25-September-2023].
+
+\bibitem{wikipedia:displacement_current}
+{Wikipedia Contributors}.
+\newblock {Displacement Current --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Displacement_current&oldid=1171867371},
+  2023.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{wikipedia:history_of_maxwells_equations}
+{Wikipedia Contributors}.
+\newblock {History of Maxwell's Equations --- {Wikipedia}{,} The Free
+  Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=History_of_Maxwell\%27s_equations&oldid=1176699558},
+  2023.
+\newblock [Online; accessed 24-September-2023].
+
+\bibitem{wikipedia:maxwells_equations}
+{Wikipedia Contributors}.
+\newblock {Maxwell's Equations --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Maxwell%27s_equations&oldid=1173397101},
+  2023.
+\newblock [Online; accessed 20-September-2023].
+
+\bibitem{wikipedia:operational_calculus}
+{Wikipedia Contributors}.
+\newblock {Operational Calculus --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Operational_calculus&oldid=1162448295},
+  2023.
+\newblock [Online; accessed 25-September-2023].
+
+\bibitem{wikipedia:polarization}
+{Wikipedia Contributors}.
+\newblock {Polarization (physics) --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Polarization_(physics)&oldid=1171223760},
+  2023.
+\newblock [Online; accessed 22-September-2023].
+
+\bibitem{wikipedia:quantum_electrodynamics}
+{Wikipedia Contributors}.
+\newblock {Quantum Electrodynamics --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Quantum_electrodynamics&oldid=1170977985},
+  2023.
+\newblock [Online; accessed 22-September-2023].
+
+\bibitem{wikipedia:telegraphers_equations}
+{Wikipedia Contributors}.
+\newblock {Telegrapher's Equations --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Telegrapher\%27s_equations&oldid=1162692161},
+  2023.
+\newblock [Online; accessed 24-September-2023].
+
+\end{thebibliography}

@@ -1,0 +1,318 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+
+\usepackage{geometry}                           % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}                  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                           % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+                                                % TeX will automatically convert eps --> pdf in pdflat
+                                                % TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{setspace}
+
+
+%
+% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+
+\title{Euler's Product Formula and the Riemann Zeta Function}
+\author{David Meyer \\ dmm613@gmail.com}
+
+\date{Last update: \today}							% Activate to display a given date or no date
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+In the 1730s Leonhard Euler proved one of the most important
+theorems in number theory, known today as Euler's product formula
+\cite{euler_product_formula}.  Euler's product formula exposes
+the deep relationship between the prime numbers and the Riemann
+zeta function \cite{wiki:zeta}. Euler's proof appeared in his
+thesis titled \emph{Variae observationes circa series infinitas}
+(Various Observations about Infinite Series), which was published
+by the St. Petersburg Academy in 1737
+\cite{mactutor:history_of_calculus}. The discovery of the product
+formula was an important advancement in number theory and is
+perhaps the main reason why (or at least one of the main reasons
+why) the zeta function plays such a central role in the study of
+prime numbers.
+
+\medskip
+\noindent
+The Euler product formula is
+
+\bigskip
+\begin{equation}
+\zeta (s) = \prod _{p{\text{ prime}}}{\frac {1}{1-p^{-s}}}
+\label{eqn:euler_product_zeta}
+\end{equation}
+
+\bigskip
+\noindent
+Here the left hand side is the famous Riemann zeta function 
+$\zeta (s)$: 
+
+\bigskip
+\begin{equation*}
+\zeta (s) = \sum _{n=1}^{\infty } \frac {1}{n^{s}}
+          = 1 + \frac {1}{2^{s}} + \frac {1}{3^{s}} + \frac
+          {1}{4^{s}}  + \frac {1}{5^{s}}  + \cdots  
+\end{equation*}
+
+\bigskip
+\noindent
+and the product on the right hand side extends over all prime
+numbers $p$: 
+
+\bigskip
+\begin{equation*}
+\prod _{p {\text{ prime}}}  \frac {1}{1-p^{-s}} = \frac
+{1}{1-2^{-s}} \cdot \frac {1}{1-3^{-s}} \cdot \frac {1}{1-5^{-s}}
+\cdots  \frac {1}{1-p^{-s}} \cdots  
+\end{equation*}
+
+
+\bigskip
+\noindent
+So how did Euler discover the amazing relationship 
+shown in Equation (\ref{eqn:euler_product_zeta})?
+
+
+\section{Euler's Proof of the Product Formula}
+The proof presented here (amazingly) makes use only of simple
+algebra and is the method by which Euler originally discovered
+the product formula.  Euler's proof is quite clever and takes
+advantage of a sieving process that is analogous to the ancient
+Sieve of Eratosthenes \cite{wiki:sieve_of_eratosthenes}. The
+proof is iterative and proceeds as follows:
+
+
+\bigskip
+\noindent
+Euler's proof starts with the zeta function\footnote{Euler first
+studied $\zeta(s)$ as a real function; Riemann was the first to
+view it as a complex function \cite{nichols2016}.}, Equation
+(\ref{equation1}), as the input to the first iteration of the
+proof.
+
+\bigskip
+\begin{equation}
+\zeta(s) = \sum _{n=1}^{\infty } \frac {1}{n^{s}} = 1 + \frac
+{1}{2^{s}} + \frac {1}{3^{s}} + \frac{1}{4^s} + \frac{1}{5^s} +
+\cdots     
+\label{equation1}  
+\end{equation}
+
+\bigskip
+\noindent
+The first step of the algorithm is to multiply both sides of the
+input, Equation (\ref{equation1}), by the second term on its hand
+right side, $\frac{1}{2^s}$. This gives us
+
+\bigskip
+\begin{equation}
+\frac {1}{2^{s}} \zeta (s) = \frac {1}{2^{s}} + \frac {1}{4^{s}}
++ \frac {1}{6^{s}} + \frac {1}{8^{s}} + \frac {1}{10^{s}} +
+\cdots  
+\label{equation2}
+\end{equation}
+
+\bigskip
+\noindent
+The next step is to subtract Equation (\ref{equation2}) from
+Equation (\ref{equation1}), which gives us a new equation,
+Equation (\ref{equation3}). This new equation will serve as the
+input to the next iteration.
+
+\bigskip
+\begin{equation}
+\left (1- \frac {1}{2^{s}} \right ) \zeta (s) = 1 + \frac
+{1}{3^{s}} + \frac {1}{5^{s}} + \frac {1}{7^{s}} + \frac
+{1}{9^{s}} + \frac {1}{11^{s}} + \frac {1}{13^{s}} + \cdots  
+\label{equation3}
+\end{equation}
+
+\bigskip
+\noindent
+Notice that this process knocks out all of the terms on the right
+hand side of the input equation (Equation (\ref{equation1}))
+which have a factor of 2 in the denominator. These are the terms
+that are "sieved" in this iteration of the algorithm.
+
+
+\bigskip
+\noindent
+Now we repeat the previous steps with their output (Equation
+(\ref{equation3})) as input.  Accordingly we multiply Equation
+(\ref{equation3}) by the the second term on its right hand side,
+$\frac{1}{3^s}$, which gives us
+
+\bigskip
+\begin{equation}
+\frac {1}{3^{s}} \left (1 - \frac {1}{2^{s}} \right ) \zeta (s) =
+\frac {1}{3^{s}} + \frac {1}{9^{s}} + \frac {1}{15^{s}} + \frac
+{1}{21^{s}} + \frac {1}{27^{s}} + \frac {1}{33^{s}} + \cdots  
+\label{equation4}
+\end{equation}
+
+\bigskip
+\noindent
+Subtracting Equation (\ref{equation4}) from Equation
+(\ref{equation3}) we get a new equation, Equation
+(\ref{equation5}):
+
+\bigskip
+\begin{equation}
+\left ( 1 - \frac {1}{3^{s}} \right ) \left ( 1 - \frac
+{1}{2^{s}} \right ) \zeta (s) = 1 + \frac {1}{5^{s}} + \frac
+{1}{7^{s}} + \frac {1}{11^{s}} + \frac {1}{13^{s}} + \frac
+{1}{17^{s}} + \cdots  
+\label{equation5}
+\end{equation}
+
+\bigskip
+\noindent
+This iteration knocks out all of the terms on the right hand side
+of Equation (\ref{equation3}) which have a factor of 3 in the
+denominator. The next iteration will knock out all of the terms
+on the right hand side that have a factor of 5 in the
+denominator, yielding
+
+\bigskip
+\begin{equation*}
+\left ( 1 - \frac {1}{5^{s}} \right )  \left ( 1 - \frac
+{1}{3^{s}} \right ) \left ( 1 - \frac {1}{2^{s}} \right ) \zeta
+(s) = 1 + \frac {1}{7^{s}} + \frac {1}{11^{s}} + \frac
+{1}{13^{s}} + \frac {1}{17^{s}} + \cdots  
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+What we see is that this algorithm "sieves" the right hand sides
+of these successive equations while building up the product of
+$\left ( 1 - \frac{1}{p^{s}} \right)$ terms for prime $p$ on the
+left hand side.
+
+\bigskip
+\noindent
+If we repeat this process infinitely we wind up with  
+
+\begin{equation*}
+\cdots \left ( 1 - \frac {1}{13^{s}} \right ) \left ( 1 - \frac
+{1}{11^{s}} \right ) \left ( 1 - \frac {1}{7^{s}} \right ) \left
+( 1 - \frac {1}{5^{s}} \right )  \left ( 1 - \frac {1}{3^{s}}
+\right ) \left ( 1 - \frac {1}{2^{s}} \right ) \zeta (s) = 1 
+\end{equation*}
+
+\bigskip
+\noindent
+Solving for $\zeta(s)$ we get
+
+\bigskip
+\begin{equation*}
+\zeta (s) = \frac {1}{\left ( 1 - \frac {1}{2^{s}} \right ) \left
+( 1 - \frac {1}{3^{s}} \right ) \left ( 1 - \frac {1}{5^{s}}
+\right ) \left ( 1 - \frac {1}{7^{s}} \right )  
+ \left ( 1 - \frac {1}{11^{s}} \right ) \left ( 1 - \frac {1}{13^{s}} \right )\cdots}
+\end{equation*}
+
+\bigskip
+\bigskip
+\noindent
+which can be written in a perhaps more familiar (and more
+compact) way as an infinite product over all of the primes:
+
+\bigskip
+\begin{equation*}
+\zeta (s) = \prod _{p{\text{ prime}}} \frac {1}{1-p^{-s}}
+\end{equation*}
+
+\bigskip
+\noindent
+which is Euler's product formula for the zeta
+function\footnote{This result is frequently referred to simply as
+"Euler's product formula".}.
+
+\bigskip
+\noindent
+Finally, to make this proof rigorous we need to show that when
+$\Re (s) > 1$ the right hand side of the sieved equations
+approaches 1.  Fortunately for us this follows immediately from
+the convergence of the Dirichlet series for $\zeta(s)$
+\cite{wiki:dirichlet_series}. $\blacksquare$
+
+\section{Conclusions}
+Euler's product formula is one of the most important results in
+the history of number theory and paved the way for Dirichlet,
+Riemann and others to the fuse arithmetic and analysis into
+analytic number theory \cite{wiki:analytic_number_theory}.  In
+fact, so important is Euler's product formula in the history of
+number theory that John Derbyshire, in his 2003 book \emph{Prime
+Obsession: Bernhard Riemann and the Greatest Unsolved Problem in
+Mathematics} \cite{book:prime_obsession}, calls Euler's result
+the "Golden Key" to indicate it's significance in the development
+of analytic number theory and number theory in general.
+
+\bigskip
+\noindent
+As an aside, Mathologer has a very nice video on Euler's product
+formula that has some fancy animations that make it easy to see
+how the sieve works \cite{mathologer:eulers_product_formula}.
+%
+%
+%
+\section*{Acknowledgements}
+Thanks to Matthew Anderson who found a typo in 
+Equation (\ref{equation1}).
+
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX}
+\url{https://www.overleaf.com/read/hvqdtdyftqpb}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+\end{document} 
+

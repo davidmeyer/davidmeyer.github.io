@@ -1,0 +1,1047 @@
+\documentclass{article}
+%
+%
+%	linear_algebra.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	25 Mar 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a (tikz) coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\x}{\y}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+%
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}									% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Linear Algebra}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{sec:introduction}
+%
+%
+%
+\section{Linear Subspaces}
+\label{sec:linear_subspaces}
+
+\begin{definition} {\bf Linear Subspace:} Let $U \subseteq
+\mathbb{R}^{n}$ with $U \neq \emptyset$.  Then $U$ is called a
+\emph{linear subspace} of $\mathbb{R}^{n}$ if $U$ is closed under
+linear combination \cite{wiki:linear_subspace}. More specifically, 
+let $\mathbf{u}^{(1)},\mathbf{u}^{(2)},\hdots, \mathbf{u}^{(k)}$ be 
+vectors in $U$ and let $\lambda_{1},\lambda_{2},\hdots, \lambda_{k}$ 
+be scalars in $\mathbb{R}$. Then for $U$ to be a linear subspace we 
+need that
+
+\begin{equation*}
+\sum\limits_{j=1}^{k} \lambda_{j} \mathbf{u}^{(j)} \in U
+\label{eqn:linear_subspace}
+\end{equation*}
+
+\medskip
+\noindent
+That is, all linear combinations of vectors in $U$ and scalars in
+$\mathbb{R}$ are also in $U$.
+\end{definition}
+
+
+\subsection{Characteristics of Linear Subspaces}
+$U \subseteq \mathbb{R}^{n}$ is a (linear) subspace iff
+
+\begin{enumerate}[label=(\alph*)]
+\item $\mathbf{0} \in U$ 
+\item $\mathbf{u} \in U$ and $\lambda \in \mathbb{R} 
+	   \Rightarrow \lambda \mathbf{u} \in U$ 
+\item $\mathbf{u}, \mathbf{v} \in U \Rightarrow 
+       \mathbf{u}+\mathbf{v} \in U$
+\end{enumerate}
+
+\medskip
+\noindent
+For example, consider a line $U \subseteq \mathbb{R}^{2}$.  
+Then for all $\mathbf{u}, \mathbf{v} \in U$ and 
+$\lambda \in \mathbb{R}$ we have $\lambda \mathbf{u} \in U$ 
+and $\mathbf{u}+\mathbf{v} \in U$. Thus $U$ is a linear 
+subspace of $\mathbb{R}^{2}$. This is shown (hopefully) in 
+Figure \ref{fig:linear_subspace}.
+%
+%	draw the linear subspace U
+%
+\bigskip
+\begin{figure}[H]
+  \centering
+  \resizebox{0.47 \textwidth}{!} {                      % resize figure here if you want
+    \begin{tikzpicture}[scale=0.60]                     % can also scale the tikzpicture here
+       \coordinate (O)          at (0,0);               % origin
+       \coordinate (Xstart)     at (-1,0);              % x-axis 
+       \coordinate (Xend)       at (10,0);              % x-axis
+       \coordinate (Ystart)     at (0,-1);              % y-axis
+       \coordinate (Yend)       at (0,8);               % y-axis
+       \coordinate (EP)         at (8,5);               % endpoint of U
+%
+%
+%
+	   \gettikzxy{(EP)}{\x}{\y}							% get the x and y components of EP (in units of pt)
+%
+%
+%		\x and \y (\the\pgf@x and \the\pgf@y) are in units of pt. 
+%		The pt units are Anglo-American printers' points, where 72.27pt is about 1in.
+%
+%                     
+       \def \slope {\fpeval{\y/\x}};					% the line U goes through the origin so \slope = m = y/x
+%														% \y/\x divides out the factor of 72.27pt/in
+%
+%
+%		Coordinates are of the form (x,\slope*x). Since the line U goes through
+%		the origin y = mx for some point on the line (I'm using EP = (8,5)).
+%		All of this implies that m = y/x = 5/8 = \slope
+%
+%		So coordinates on the line U are of the form (x,(\slope*x)).
+%
+       \coordinate (SP)         at (-2,\slope*-2);      % start point (U)
+       \coordinate (uEP)        at (2,\slope*2);        % end point (u)
+       \coordinate (vEP)        at (3,\slope*3);        % end point (v)
+       \coordinate (u+vEP)      at (6,\slope*6);        % end point (u+vEP)
+%	
+%	draw axes and linear subspace U
+%
+       \draw[thin,->,black] (Xstart) -- (Xend) node[right] {$x$};       % x axis
+       \draw[thin,->,black] (Ystart) -- (Yend) node[above] {$y$};       % y axis
+       \draw[thick,magenta] (SP)     -- (EP)   node [right,xshift=1.50mm,yshift=1.50mm] 
+					 {$\color{black} {\color{magenta} U} \subseteq \mathbb{R}^{2}$}; 
+%
+%	draw vectors u, v and u+v
+%    
+		\draw[thick,green,->](O) -- (uEP) node
+                     [right,below,xshift=2.00mm,yshift=0.50mm] 
+                     {$\color{green}\mathbf{u}$}; 
+		\draw[thick,red,->](uEP) -- (vEP) node
+                     [right,xshift=0.25mm,yshift=-1.0mm]
+                     {${\color{red}\mathbf{v}}
+                       {\color{black}=} 
+                       {\color{black} \lambda}
+                       {\color{green}\mathbf{u}}$};  
+		\draw[thick,blue,->](vEP) -- (u+vEP) node
+                     [right,xshift=0.25mm,yshift=-1.25mm]  
+                     {${\color{blue}\mathbf{w}}
+                       {\color{black}=}
+                       {\color{green}\mathbf{u}}
+                       {\color{black} +}
+                       {\color{red}\mathbf{v}}$}; 
+   \end{tikzpicture}
+ }
+\caption{The line $U$ is a linear subspace of $\mathbb{R}^{2}$}
+\label{fig:linear_subspace}
+\end{figure}
+%
+%
+%
+\section{Linear Maps}
+\label{sec:linear_maps}
+In linear algebra a linear map is a mapping $\mathbf{V}\to
+\mathbf{W}$ between two vector spaces which preserves the
+operations of vector addition and scalar
+multiplication. Interestingly, the same names and the same
+definition are also used for the more general case of modules
+over a ring (need module homomorphism cite).
+%
+%
+%
+\begin{definition}
+\label{def:linear_map}
+{\bf Linear Map}: A function $f:\mathbb{R}^{n} \rightarrow
+\mathbb{R}^{m}$ is called \emph{linear} if for all
+$\mathbf{x},\mathbf{y} \in \mathbb{R}^{n}$ and $\lambda \in
+\mathbb{R}$:
+
+\begin{enumerate}[label=(\alph*)]
+\item $f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y})$		
+		\hspace{3.50em} \# vector addition is \emph{distributive}
+\label{enumerate:distributive}
+
+\item $f(\lambda \mathbf{x}) = \lambda f(\mathbf{x})$				
+		\hspace{7.30em} \# scalar multiplication is
+                \emph{compatible} (aka homogeneity) 
+\label{enumerate:compatible}
+\end{enumerate}
+
+
+\noindent
+Note that in Definition \ref{def:linear_map}
+\ref{enumerate:distributive} the vector addition on the left-hand
+side is in $\mathbb{R}^{n}$ while on the right-hand side the
+vector addition is in $\mathbb{R}^{m}$. Similarly, in Definition
+\ref{def:linear_map} \ref{enumerate:compatible} the scalar
+multiplication on the left-hand side is in $\mathbb{R}^{n}$ while
+the scalar multiplication on the right-hand side is in
+$\mathbb{R}^{m}$.
+\end{definition}
+
+\subsection{Examples}
+
+\begin{enumerate}
+\item $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x$
+
+\medskip
+This is linear because 
+\begin{itemize}
+\item $f(x+y) = x + y = f(x) + f(y)$  
+\item $f(\lambda x) = \lambda x = \lambda f(x)$	
+\end{itemize}
+
+\medskip
+\item $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x^2$
+
+\medskip
+This is not linear because $f(3\cdot 1) = f(3) = 9$ and
+for $f$ a linear map we have $f(3 \cdot 1) = 3 \cdot 
+f(1) = 3 \cdot 1 = 3$. But $9 \neq 3$ so $f$ is not linear.
+
+\medskip
+\item $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x+1$
+
+\medskip
+This is not linear because $f(0 \cdot 1) = 1$ but 
+$0\cdot f(1) = 0$ and $1 \neq 0$.
+
+\smallskip
+\noindent
+Aside: $f(x) = x+1$ looks linear but under this definition
+(\ref{enumerate:distributive} and \ref{enumerate:compatible}
+above) $f$ is not linear.
+\end{enumerate}
+
+\subsection{Relationship between linear maps and group homomorphism}
+As we saw above, in linear algebra, a linear map is a function
+between two vector spaces that preserves the vector space
+structure, i.e., it preserves addition and scalar
+multiplication. A group homomorphism, on the other hand, is a
+function between two groups that preserves the group structure,
+i.e., it preserves the group operation.
+
+
+\subsubsection{Group Homomorphism}
+Let $(G,\diamond)$ and $(H, \circ)$ be groups. Common usage is to
+use $G$ to refer to $(G,\diamond)$. Similarly, $H$ will refer to
+$(H, \circ)$. Then a mapping $\phi: G \rightarrow H$ is called a
+homomorphism iff
+
+\medskip
+\begin{equation*}
+\phi(x \diamond y) = \phi(x) \circ \phi(y) \;\; \forall x,y \in G
+\end{equation*}
+
+\bigskip
+\noindent
+Essentially, a homomorphism $\phi: G \rightarrow H$ is a way of
+exploring the structure of $H$ by varying $G$ using structure
+preserving transformations. Specifically, $\phi$ preserves the
+group structure.
+
+
+\bigskip
+\noindent
+\begin{example} Define a map 
+
+\begin{equation*}
+\phi : G \rightarrow H
+\end{equation*}
+
+\bigskip
+\noindent
+where $G = \mathbb{Z}$ and $H = \mathbb{Z}_2 =
+\mathbb{Z}/2\mathbb{Z}$ is the standard group of order two. Then
+define $\phi: \mathbb{Z} \rightarrow \mathbb{Z}_2$ by the rule
+
+\begin{equation*}
+  \phi(x) =
+    \begin{cases}
+      0 & \text{if $x$ is even} \\
+      1 & \text{if $x$ is odd}  \\
+    \end{cases}       
+\end{equation*}
+
+\bigskip
+\noindent
+It is not too hard to check that $\phi$ is a homomorphism. 
+Suppose that $x$ and $y$ are two integers. Then there are 
+four cases:
+
+\begin{itemize}
+ \item $x$ and $y$ are both even
+ 
+ In this case $\phi(x+y) = 0$ (even + even = even). Here
+ $\phi(x)+\phi(y) = 0+0 = 0$ so $\phi(x+y) = \phi(x) + \phi(y) =
+ 0 + 0 = 0$.
+ 
+ \item $x$ and $y$ are both odd
+  
+In this case $\phi(x+y) = 0$ (odd + odd = even). Here $\phi(x) +
+\phi(y) = 1 + 1 = 2 \mod 2 = 0$, so $\phi(x+y) = \phi(x) +
+\phi(y) = 1 + 1 = 2 \mod 2 = 0$.
+
+ \item $x$ is even and $y$ is odd or  $x$ is odd and  $y$ is even
+ 
+In this case one is even and the other is odd and $x + y$ is odd.
+Here $\phi(x+y) = 1$ and $\phi(x)+\phi(y) = 1+0 = 1$ so
+$\phi(x+y) = \phi(x)+\phi(y)$.
+ \end{itemize}
+ 
+\smallskip
+\noindent
+Thus $\phi$ is a homomorphism. Note that in this example
+$\diamond = +$ (normal addition in $\mathbb{Z}$) and $\circ = +$
+(addition mod 2 in $\mathbb{Z}_2$).
+\end{example}
+
+
+
+\noindent
+Not surprisingly, there is a close relationship between linear
+maps and group homomorphisms because any linear map between two
+vector spaces can be seen as a group homomorphism between the
+additive groups of those vector spaces. Specifically, if we have
+a linear map $f: \mathbf{V} \to \mathbf{W}$ between two vector
+spaces $\mathbf{V}$ and $\mathbf{W}$ over the same field
+$\mathbf{F}$, then we can define a group homomorphism from
+$\phi:(\mathbf{V},+) \to (\mathbf{W},+)$ by sending each vector
+$\mathbf{v} \in \mathbf{V}$ to $f(\mathbf{v}) \in \mathbf{W}$.
+This is a group homomorphism because $f$ preserves addition (its
+a linear map, Definition \ref{def:linear_map}
+\ref{enumerate:distributive} above) and hence it preserves the
+group structure.
+
+\bigskip
+\noindent
+On the other hand, any group homomorphism between two additive
+groups of vector spaces can be seen as a linear map between those
+vector spaces. Specifically, if we have a group homomorphism
+$\phi: (\mathbf{V}, +) \to (\mathbf{W}, +)$ between two additive
+groups of vector spaces, then we can define a linear map from $f:
+\mathbf{V}$ to $\mathbf{W}$ by sending each vector $\mathbf{v}
+\in \mathbf{V}$ to $\phi(\mathbf{v}) \in \mathbf{W}$. This is a
+linear map because $\phi$ preserves vector addition and scalar
+multiplication and therefore it preserves the structure of the
+underlying vector spaces.
+
+\bigskip
+\noindent
+So basically, every linear map $f$ between two vector spaces over
+the same field can be thought of as a group homomorphism $\phi$
+between the additive groups of those vector spaces, and every
+group homomorphism between two groups can be thought of as a
+linear map between the vector spaces over the same field that are
+associated with those groups. So a linear map is a homomorphism of 
+vector spaces. However, if the vector spaces have additional structure, 
+for example a ring, an algebra, or a lie algebra, then a linear map 
+is not always a homomorphism of those additional structures.
+%
+%
+%
+\section{Matrices Induce Linear Maps}
+Consider a matrix $\bm{A} \in \mathbb{R}^{m \times n}$ and
+$\mathbf{x} \in \mathbb{R}^{n}$, and define $f_{\bm{A}}:
+\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ by $\mathbf{x}
+\mapsto \bm{A}\mathbf{x}$.
+
+\medskip
+\begin{proposition}
+$f_{\bm{A}}$ is a linear map
+
+\bigskip
+\noindent
+Ok, but why?  Here is one way to look at it:
+$f_{\bm{A}}$ a linear map means
+
+\medskip
+\begin{itemize}
+\item $f_{\bm{A}}(\mathbf{x}+\mathbf{y}) = f_{\bm{A}}(\mathbf{x})+
+		f_{\bm{A}}(\mathbf{y}) \Rightarrow		
+		\bm{A}(\mathbf{x} + \mathbf{y}) = \bm{A}\mathbf{x} + \bm{A}\mathbf{y}$
+		\hspace{4.00em} \# $f_{\bm{A}}$ is distributive (Definition \ref{def:linear_map} 
+		\ref{enumerate:distributive})
+
+\item $f_{\bm{A}}(\lambda \mathbf{x}) = \lambda f_{\bm{A}}(\mathbf{x}) \Rightarrow				
+		\bm{A}(\lambda \mathbf{x}) = \lambda \bm{A}\mathbf{x}$
+		\hspace{11.25em} \# $f_{\bm{A}}$ is compatible (Definition \ref{def:linear_map} 
+		\ref{enumerate:compatible})
+\end{itemize}
+
+\noindent
+Here's an example: Let $\bm{A} \in \mathbb{R}^{m \times 2}$ with $\bm{A} = 
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )$ 
+and let $\bm{x} = \left ( 
+					\hspace{-0.50em}
+					\begin{array}{cccc}
+						x_1 \\
+						x_2
+					\end{array} 
+					\hspace{-0.50em}
+					\right )$
+and 
+$\bm{y} = \left ( 
+					\hspace{-0.50em}
+					\begin{array}{cccc}
+						y_1 \\
+						y_2
+					\end{array} 
+					\hspace{-0.50em}
+					\right )$
+be vectors in $\mathbb{R}^{2}$. Then
+
+
+\begin{equation*}
+\begin{array}{llll}
+\bm{A}(\mathbf{x}+\mathbf{y})
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+	\left (
+	\hspace{-0.25em}
+		\left (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				x_1 \\
+				x_2
+			\end{array}
+			\hspace{-0.50em}
+		\right ) 
+	+
+		\left (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				y_1 \\
+				y_2
+			\end{array}
+			\hspace{-0.50em}
+		\right )
+	\hspace{-0.25em}
+	\right )                                                &\hspace{3.00em}\mathrel{\#} \text{definitions of $\bm{A}$, $\mathbf{x}$, and $\mathbf{y}$} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+	\Bigg (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			x_1 + y_1\\
+			x_2 + y_2
+		\end{array}
+		\hspace{-0.50em}
+	\Bigg ) 												&\hspace{3.00em}\mathrel{\#} \text{matrix (vector) addition in $\mathbb{R}^{2}$} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	\Big (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			x_1 + y_1 
+		\end{array}
+		\hspace{-0.50em}
+	\Big ) 
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\Big ( 
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			x_2 + y_2
+		\end{array}
+		\hspace{-0.50em}
+	\Big ) 												&\hspace{3.00em}\mathrel{\#} \text{definition of the matrix product} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_2
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_2 												&\hspace{3.00em}\mathrel{\#} \text{matrix product distributes over addition} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	x_2
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{1}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_1
+	+
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar \\
+			a_{2}    \\
+			\vertbar 
+		\end{array}	
+		\hspace{-0.50em}
+	\right )
+	y_2													&\hspace{3.00em}\mathrel{\#} \text{vector addition is commutative} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+		\Bigg (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				x_1 \\
+				x_2
+			\end{array}
+			\hspace{-0.50em}
+		\Bigg )
+		+
+		\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+	\hspace{-0.25em}
+		\Bigg (
+			\hspace{-0.50em}
+			\begin{array}{cccc}
+				y_1 \\
+				y_2
+			\end{array}
+			\hspace{-0.50em}
+		\Bigg )											&\hspace{3.00em}\mathrel{\#} \text{definition of the matrix product} \\
+[25pt]
+&=&
+	\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+	\right )
+		\bm{x}		+
+		\left (
+		\hspace{-0.50em}
+		\begin{array}{cccc}
+			\vertbar & \vertbar \\
+			a_{1}    & a_{2}    \\
+			\vertbar & \vertbar 
+		\end{array}
+		\hspace{-0.50em}
+		\right )
+		\bm{y}											&\hspace{3.00em}\mathrel{\#}\bm{x} = \Bigg (
+																							\hspace{-0.50em}
+																							\begin{array}{cccc}
+																								x_1 \\
+																								x_2
+																							\end{array}
+																							\hspace{-0.50em}
+																							\Bigg )
+																							\text{ and } 
+																							\bm{y} = \Bigg (
+																							\hspace{-0.50em}
+																							\begin{array}{cccc}
+																								y_1 \\
+																								y_2
+																							\end{array}
+																							\hspace{-0.50em}
+																							\Bigg ) \\
+[20pt]
+&=&
+\bm{A}\mathbf{x} + \bm{A}\mathbf{y}						&\hspace{3.00em}\mathrel{\#} \bm{A} = \left (
+																							\hspace{-0.50em}
+																							\begin{array}{cccc}
+																								\vertbar & \vertbar \\
+																								a_{1}    & a_{2}    \\
+																								\vertbar & \vertbar 
+																							\end{array}
+																							\hspace{-0.50em}
+																							\right ) \\
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So $\bm{A}(\mathbf{x}+\mathbf{y}) =
+\bm{A}\mathbf{x}+\bm{A}\mathbf{y}$. Here we see that the matrix
+$\bm{A}$, which is just a table of real (or complex) numbers,
+induces the abstract linear map $f_{\bm{A}}$ (and vice versa)
+\cite{wiki:linear_map}.
+\end{proposition}
+
+\bigskip
+\noindent
+Suppose $f$ is a linear map and let $\bm{x} = \left
+( \hspace{-0.35em} \begin{array}{cccc} x_1, x_2,\hdots,
+x_n \end{array} \hspace{-0.35em} \right)$ be a vector in
+$\mathbb{R}^{n}$. Then define the canonical unit vectors in
+$\mathbb{R}^{n}$ as follows:
+
+\begin{definition}
+\label{def:canonical_unit_vectors}
+{\bf Canonical Unit Vectors:} The canonical unit vectors in 
+$\mathbb{R}^{n}$ are the vectors $\mathbf {e}_{i}$ 
+
+
+\medskip
+\begin{equation*}
+B = \{\mathbf {e} _{i}: 1 \leq i \leq n\}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\mathbf{e}_i$ is the $i^\text{th}$ unit vector, that is,
+it has a one in the $i^\text{th}$ coordinate (position) and zeros
+everywhere else\footnote{The canonical unit vectors look
+surprisingly like the one-hot encoding used in machine learning
+\cite{wiki:one-hot}.}.  The set $B$ forms a basis, sometimes
+called the canonical basis, for the vector space
+$\mathbb{R}^{n}$.
+
+\bigskip
+\noindent
+The basis vectors $\mathbf{e}_i$ have column vector format
+
+\begin{flalign*}
+\mathbf{e}_{1} = 
+\left (
+\begin{array}{llll} 
+1 \\
+0 \\
+\vdots \\
+0 \\
+0
+\end{array}
+\right )
+\!\! , \hspace{0.25em}
+\mathbf{e}_{2} = 
+\left ( 
+\begin{array}{llll}
+0 \\
+1 \\
+\vdots \\
+0 \\
+0
+\end{array}
+\right )
+\!\! ,
+\hdots
+\!\! , \hspace{0.25em}
+\mathbf{e}_{n-1} =
+\left (
+\begin{array}{llll} 
+0 \\
+0 \\
+\vdots \\
+1 \\
+0
+\end{array} 
+\right )
+\!\! , \hspace{0.25em}
+\mathbf{e}_{n} =
+\left (
+\begin{array} {llll} 
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{array}
+\right )
+\end{flalign*}
+\end{definition}
+
+\bigskip
+\noindent
+Here is an interesting observation about linear maps and basis vectors:
+
+\begin{equation*}
+\begin{array}{llll}
+f(\bm{x})
+&=& f(x_1 \bm{e_1} + x_2 \bm{e_2} + \hdots + x_n \bm{e_n})				
+		&\hspace{1.25em} \mathrel{\#} \text{$\bm{x}$ is a linear combination 
+		of basis vectors} \\
+[5pt]
+&=& f(x_1 \bm{e_1}) + f(x_2 \bm{e_2}) + \hdots + f(x_n \bm{e_n})
+		&\hspace{1.25em} \mathrel{\#} \text{$f$ a linear map $\Rightarrow$ 
+		$f$ is distributive (Definition \ref{def:linear_map} 
+		\ref{enumerate:distributive})} \\
+[5pt]
+&=& x_1 f(\bm{e_1}) + x_2 f(\bm{e_2}) + \hdots + x_n f(\bm{e_n})
+		&\hspace{1.25em} \mathrel{\#} \text{$f$ a linear map $\Rightarrow$ 
+		$f$ is compatible (Definition \ref{def:linear_map} 
+		\ref{enumerate:compatible})} \\
+\end{array}
+\end{equation*}
+
+\medskip
+\noindent
+Since $f(\bm{x}) = x_1 f(\bm{e_1}) + x_2 f(\bm{e_2}) + \hdots + x_n f(\bm{e_n})$
+apparently in order to understand $f$ you only have to know how $f$ maps the
+basis vectors.																						
+%
+%
+%
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/pmsddwthrchw}
+%
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+\section*{Appendix A: Draw Some Matrices}
+
+\bigskip
+\begin{equation*}
+\begin{array}{llll}
+A^{n \times m} 
+&=& \left (
+		\begin{array}{ccc}
+		\horzbar & a_{1} & \horzbar \\
+		\horzbar & a_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & a_{n} & \horzbar
+	\end{array}
+	\right )
+\end{array}
+\end{equation*}
+
+\bigskip
+
+\begin{equation*}
+\begin{array}{llll}
+A^{T}
+&=& \left (
+	\begin{array}{cccc}
+		\vertbar & \vertbar &        & \vertbar \\
+		a_{1}    & a_{2}    & \ldots & a_{n}    \\
+		\vertbar & \vertbar &        & \vertbar 
+	\end{array}
+	\right )
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\setlength{\extrarowheight}{1ex}
+
+
+\begin{equation*}
+\begin{array}{llll}
+B^{n \times k} 
+&=& \left (
+		\begin{array}{ccc}
+		\horzbar & b_{1} & \horzbar \\
+		\horzbar & b_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & b_{n} & \horzbar
+	\end{array}
+	\right )
+\end{array}
+\end{equation*}
+
+\begin{equation*}
+\begin{array}{llll}
+AB := A^{T}B
+&=&
+\left(
+	\begin{array}{cccc}
+		\vertbar & \vertbar &        & \vertbar \\
+		a_{1}    & a_{2}    & \ldots & a_{n}    \\
+		\vertbar & \vertbar &        & \vertbar 
+	\end{array}
+	\right )
+	\left(
+		\begin{array}{ccc}
+		\horzbar & b_{1} & \horzbar \\
+		\horzbar & b_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & b_{n} & \horzbar
+	\end{array}
+	\right ) \\
+
+&=&
+	\left (
+		\begin{array}{cccc}
+		a_{1}^{T} b_{1} & a_{1}^{T} b_{2} & \hdots & a_{1}^{T} b_{k} \\
+		a_{2}^{T} b_{1} & a_{2}^{T} b_{2} & \hdots & a_{2}^{T} b_{k} \\
+		\vdots          & \vdots          & \ddots & \vdots       										 \\
+		a_{m}^{T} b_{1} & a_{m}^{T} b_{2} & \hdots & a_{m}^{T} b_{k}
+	\end{array}
+	\right ) \\ \\
+
+&=&
+	\left(
+		\begin{array}{cccc}
+		\langle a_{1}, b_{1} \rangle & \langle  a_{1}, b_{2} \rangle & \hdots & \langle a_{1}, b_{k} \rangle \\
+		\langle a_{2}, b_{1} \rangle & \langle a_{2}, b_{2} \rangle  & \hdots & \langle a_{2}, b_{k} \rangle \\
+		\vdots                       & \vdots                        & \ddots & \vdots       										 \\
+		\langle a_{m}, b_{1} \rangle & \langle a_{m}, b_{2} \rangle  & \hdots & \langle a_{m}, b_{k} \rangle
+	\end{array}
+	\right ) \\
+ \end{array}
+\end{equation*}
+
+
+
+\newpage
+\begin{equation*}
+\begin{array}{llll}
+A^{T} 
+&=& \left(
+		\begin{array}{ccc}
+		\horzbar & a^{T}_{1} & \horzbar \\
+		\horzbar & a^{T}_{2} & \horzbar \\
+				 & \vdots    &          \\
+		\horzbar & a^{T}_{n} & \horzbar
+	\end{array}
+	\right )
+\end{array}
+\end{equation*}
+%
+%	done
+%
+\end{document} 
+

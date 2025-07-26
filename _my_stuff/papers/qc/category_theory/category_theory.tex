@@ -1,0 +1,721 @@
+\documentclass{article}
+%
+%
+%	category_theory.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	26 Apr 2024
+%
+%
+%   get various packages
+%
+\usepackage[margin=0.90in]{geometry}                                    % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby,matrix}
+\usepackage{tikz-cd}                                                    % commutative diagrams
+\tikzcdset{every arrow/.append style={-latex}}                          % default to LaTeX arrow head in tikz-cd (and others)
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}                                                   % \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}                                                   % \multirow and \multicolumn
+\usepackage{enumitem}                                                   % change bullets in \begin{enumerate}
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+% \usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{notation}{Notation}[section]
+
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}									% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Category Theory}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: April 4, 2024}}
+%
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{section:introduction}
+A category is a collection of objects together with a collection
+of composable morphisms between these objects.  Category
+theorists use the language "collection of objects" or "collection
+of morphisms" to sidestep some set-theoretic issues, including:
+if instead "the set of objects" was used then in the category of
+sets the set of objects would we be the set of all sets, which we
+know by Russell's Paradox does not exist
+\cite{russells_paradox}. As a result the vague word "collection"
+might be interpreted as meaning "class" (in the ZF set theory
+sense \cite{zf_set_theory}).
+
+
+\bigskip
+\noindent
+In any event, a more formal definition of a category is: 
+
+\bigskip
+\begin{definition} {\bf Category}: 
+In category theory, a category is defined by a set of axioms that
+describe its fundamental properties and behaviors. These are the
+components of a category:
+
+\begin{enumerate} [label=(\roman*).]
+
+\item {\bf Objects}: A category consists of a collection of
+objects. These objects can be anything: sets, groups, spaces,
+etc. For example, in the category of sets, the objects are sets
+themselves. If the collection of objects in a category is a set 
+then the category is called a "small" category.
+
+\noindent
+The collection of objects in a category $\mathcal{C}$ is denoted
+simply as $\mathcal{C}$, or sometimes
+$\operatorname{Ob}(\mathcal{C})$.  Note that we refer to a
+generic category as $\mathcal{C}$, while bold font is used to
+indicate a specific category. For example, the category of sets
+is called {\bf Set}.
+
+\item {\bf Morphisms (Arrows)}: Between every two objects in a
+category, there exists a collection of morphisms (also called
+maps or arrows). Morphisms can represent various mathematical
+structures like functions, homomorphisms, transformations, etc.
+
+{\setstretch{1.25}
+\noindent
+The collection of morphisms from $A$ to $B$ in $\mathcal{C}$ is
+denoted by $\mathcal{C}(A,B)$, or sometimes
+$\operatorname{Hom}_{\mathcal{C}}(A,B)$. For $A,B \in
+\mathcal{C}$, a morphism $f$ from $A$ to $B$ is denoted as $f \in
+\mathcal{C}(A,B)$, $f: A \to B$, or sometimes $A \xrightarrow{f}
+B$. The latter form is used in commutative diagrams; see Section
+\ref{subsubsection:diagrams}. All of these forms represent a
+morphism $f$ with domain $A$ (sometimes denoted at
+$\operatorname{dom}(f)$) and codomain $B$ (sometimes denoted as
+$\operatorname{codom}(f)$). \par}
+
+\medskip
+\noindent
+If the collection of morphisms between every pair of objects in 
+a category is a set then the category is called "locally small".
+Said another way, if for all $A,B \in \mathcal{C}$ the collection
+of morphisms $\mathcal{C}(A,B)$ is a set then $\mathcal{C}$ is
+locally small.
+ 
+\item {\bf Identity Morphisms}: For each object $A$ in the
+category, there exists an identity morphism denoted as
+$\text{id}_A$ or simply $1_A$. The identity morphism
+$\text{id}_A: A \to A$ is the morphism that "does nothing" when
+composed with other morphisms. It serves as an identity element
+in the category.
+ 
+\item {\bf Composition of Morphisms}: Morphisms in a category can
+be composed. If $f: A \to B$ and $g: B \to C$ are morphisms in
+the category, then there exists a composite morphism denoted as
+$g \circ f: A \to C$, which represents the composition of $f$
+followed by $g$. One consequence of this requirement: categories 
+are closed under $\circ$.
+ 
+\item {\bf Associativity of Composition}: Composition of
+morphisms is associative. That is, if $f: A \to B$, $g: B \to C$,
+and $h: C \to D$ are morphisms in the category, then $h \circ (g
+\circ f) = (h \circ g) \circ f$.
+\end{enumerate}
+
+\medskip
+\noindent
+These axioms capture the essential structure of a category and
+form the basis for studying relationships and structures across
+various mathematical domains using category theory.
+
+\label{definition:category}
+\end{definition}
+
+\subsection{Morphisms}
+\label{subsection:morphisms}
+
+\subsubsection{Commutative Diagrams}
+\label{subsubsection:commutative_diagrams}
+%
+%	Draw the function composition triangle
+%
+\begin{center}
+   \begin{tikzcd} [column sep={45pt},
+                   row    sep={35pt}]
+        A \arrow[r,"f"] \arrow[d, swap, "g \circ f"] & B \arrow[ld,"g"] \\
+        C 
+   \end{tikzcd}
+\end{center}
+
+
+\subsubsection{Aside: groups, monoids, and categories}
+Here's a crazy (and beautiful) fact: A group is essentially the
+same thing as a category that has only one object and in which
+all the morphisms are isomorphisms.
+
+\bigskip
+\noindent
+Ok, but why? 
+
+\bigskip
+\noindent
+Well, first consider a category $\mathcal{C}$ with just one
+object. Call that object $A$. That is, the class
+$\operatorname{Ob}(\mathcal{C})$ contains only one object,
+namely, $A$. Since $\mathcal{C}$ only has one object all of
+$\mathcal{C}$'s morphisms are in
+$\operatorname{Hom}_{\mathcal{C}} (A,A)$.
+
+
+\bigskip
+\noindent
+Here the category $\mathcal{C}$ consists of
+
+\begin{itemize}
+  \item the class of objects $\mathcal{C}$ consisting of the single object $A$ 
+  \item the class of morphisms $\mathcal{C}(A,A)$ consisting of isomorphisms $f: A \to A$
+  \item an associative composition function $\circ:
+        \mathcal{C}(A,A) \times \mathcal{C}(A,A) \to
+        \mathcal{C}(A,A)$  
+  \item a two-sided unit $1_{A}$
+\end{itemize}
+
+\medskip
+\noindent
+Interestingly, these four conditions would make
+$\mathcal{C}(A,A)$ into a group except for inverses. However,
+saying that every morphism in $\mathcal{C}$ is an isomorphism
+implies that every element of $\mathcal{C}(A,A)$ has an inverse
+(with respect to $\circ$). Hence $(\mathcal{C}(A,A), \circ)$ is a
+group.
+
+\bigskip
+\noindent
+So if $(G,\cdot)$ is the group $(\mathcal{C}(A,A),\circ)$ then we
+have this correspondence:
+
+\begin{center}
+  \begin{table}[H]
+    \begin{tabular}{l|r}
+      \multicolumn{1}{c}{\centering {\bf Category}} & \multicolumn{1}{c}{\centering {\bf Group}} \\ 
+      \hline\hline
+      Category $\mathcal{C}$ with single object $A$ & Corresponding group $G$ \\
+      Morphisms in $\mathcal{C}$                    & Elements of $G$ \\
+      $\circ \in \mathcal{C}$                       & $\cdot \; \in G$ \\
+      $1_{A} \in \mathcal{C}$                       & $1 \in G$ \\
+      \hline \hline
+    \end{tabular}
+   \end{table}
+\end{center}
+
+\noindent
+The diagram of $\mathcal{C}$ looks something like
+
+\medskip
+\begin{tikzcd}
+    A \arrow[loop above, distance=1cm, in=120, out=60]{} 
+      \arrow[loop left,  distance=1cm, in=150, out=210]{} 
+      \arrow[loop below, distance=1cm, in=240, out=300]{}
+      \arrow[loop right, distance=1cm, in=30,  out=330]{} 
+\end{tikzcd}
+
+\medskip
+\noindent
+where the arrows represent the different $A \to A$ morphisms in
+$\mathcal{C}$. These $A \to A$ morphisms are the elements of the
+group $G$.
+
+\bigskip
+\noindent
+Summary: A group is a category with the special properties that 
+all of the morphisms are invertible and there is only one object.
+
+\bigskip
+\noindent
+By a similar argument, a category $\mathcal{C}$ with one object,
+call it $A$, is the same thing as a monoid. This is because
+unlike a group, every element of a monoid is not required to have
+an inverse (and hence the morphisms in $\mathcal{C}(A,A)$ are not
+required to be isomorphisms). Here we define the composition 
+$a \circ b$ to be the product $ab$. Then for $\mathcal{C}$ to be 
+a monoid all that is required is that there be an identity element 
+and that the operation be associative. 
+
+\subsubsection{Monomorphisms}
+\label{subsubsection:monomorphisms}
+Before looking at the definition of monomorphism, it is useful to
+look at the definition of injectivity for sets:
+
+\medskip
+\begin{definition} {\bf Injectivity}: A function $f:B \to C$ is 
+said to be injective if for all $b_{1}, b_{2} \in B$ we 
+have 
+
+\begin{equation*}
+f(b_{1}) = f(b_{2}) \Rightarrow b_{1} = b_{2}
+\end{equation*}
+
+\label{definition:injectivity}
+\end{definition}
+
+\noindent
+This standard definition of an injective mapping (aka 1:1
+mapping) is not suitable for category theory because, among other
+things, it looks inside the objects. This is an issue because
+objects in category theory have "nothing inside them", that is,
+they have no internal structure. In the case of the Definition
+\ref{definition:injectivity}, $b_{1}$ and $b_{2}$ are "inside"
+the object $B$.
+
+\bigskip
+\noindent
+For functions between sets, injectivity is an important
+concept. But for maps in an arbitrary category, injectivity might
+not make sense. So how can we define a similar but more general
+concept for categories using only morphisms? Consider the
+following commutative diagram:
+
+\smallskip
+%
+%	Use shift left and shift right to separate the 
+%	two arrows between A and B
+%
+\begin{center}
+  \begin{tikzcd}[column sep={30pt}]
+     A \arrow[r,"g_{1}",shift left] \arrow[r,"g_{2}",swap,shift right] &
+     B \arrow[r,"f"]                                                   & 
+     C 
+  \end{tikzcd}
+\end{center}
+
+\smallskip
+\noindent
+Since this diagram commutes we know that $f \circ g_{1} = f \circ
+g_{2}$.  $f$ is called a monomorphism if it adheres to Definition
+\ref{definition:monomorphism}.
+
+\bigskip
+\begin{definition} {\bf Monomorphism}: Consider a category
+$\mathcal{C}$ with morphisms $g \in \mathcal{C}(A,B)$ and $f \in
+\mathcal{C}(B,C)$. Then a morphism $f \in \mathcal{C}(B,C)$ is
+called a monomorphism if for all $g_{1},g_{2} \in
+\mathcal{C}(A,B)$ we have
+
+
+\begin{equation}
+f \circ g_{1} = f \circ g_{2} \Rightarrow g_{1} = g_{2} 
+\label{equation:monomorphism}
+\end{equation}
+
+\medskip
+\noindent
+This property is also called left cancellation.
+\label{definition:monomorphism}
+\end{definition}
+
+
+\medskip
+\noindent
+Although monomorphism is defined solely in terms of morphisms
+(and not elements), since the above diagram commutes ($f \circ
+g_{1} = f \circ g_{2}$) both $g_{1}$ and $g_{2}$ must map to
+elements in $A$ to the same element in $B$. This suggests that
+monomorphism is at least in part about retaining uniqueness (or
+the lack thereof) in the domain in the codomain (the same is true
+for injectivity).  We can see this since we know by Equation
+(\ref{equation:monomorphism}) and the law of contraposition
+\cite{wikipedia:contraposition} that
+  
+\begin{equation}
+g_{1} \neq g_{2} \Rightarrow f \circ g_{1} \neq f \circ g_{2} 
+\label{equation:contraposition}
+\end{equation}
+
+\bigskip
+\noindent
+One way to interpret Equation (\ref{equation:contraposition}) is
+that different elements in the domain will be different in the
+codomain. That is, the uniqueness of $g_{1}$ and $g_{2}$ is
+preserved by $f$. The same kind of argument can be made for
+injectivity.
+
+
+\bigskip
+\noindent
+Finally, note that while injectivity seems to be the same thing
+as monomorphism (and injective functions are monomorphisms in
+{\bf Set}), monomorphism and injectivity are not necessarily the
+same.  Said another way, monomorphism is the generalized-element
+analogue of injectivity.
+
+\subsubsection{Epimorphisms}
+\label{subsubsection:epimorphisms}
+
+\subsubsection{Isomorphisms}
+\label{subsubsection:isomorphisms}
+
+\subsubsection{Functors}
+\label{subsubsection:functors}
+
+\vspace{1.0em}
+\begin{example}
+Let $\mathcal{C}$ be the category {\bf Set} with $A,B,S \in 
+\mathcal{C}$ and $f: A \to B$. Then there is a 
+functor $- \times S$ defined as follows:
+
+
+\bigskip
+\begin{math}
+   - \times S =
+   \begin{cases} 
+      A \times S                                        
+      		\hspace{10.0em} \mathrel{\#} \text{takes $A$ to its cartesian product with $S$} \\
+      f \times \text{id}_{S}: A \times S \to B \times S 
+      		\hspace{1.55em} \mathrel{\#} \text{by $(a,s) \mapsto (f(a),s)$}
+   \end{cases}
+\end{math}
+\label{example:functor}
+\end{example}
+
+
+\subsection{Natural Transformations}
+\label{subsection:naturl_transformations}
+
+\begin{definition} 
+\label{definition:natural_transformation}
+{\bf Natural Transformation}: Let $F,G: \mathcal{C} \to
+\mathcal{D}$ be functors from a category $\mathcal{C}$ to 
+a category $\mathcal{D}$. A natural transformation $\eta$ 
+from $F$ to $G$ is a family of morphisms in $D$, one for 
+each object $A$ in $\mathcal{C}$, such that
+
+\begin{equation*}
+\eta_{A}:F(A)\to G(A)
+\end{equation*}
+\end{definition}
+
+\medskip
+\noindent
+The morphism $\eta_{A}$ is called the component of 
+$\eta$ at object $A$. The "naturality condition"
+is expressed as a commuting square. Specifically,
+for any $f \in \mathcal{C}(A,B)$ the following diagram
+commutes:
+%
+%
+%
+\medskip
+%
+%	Draw the picture
+%
+%
+%          		 F(f)
+%		   F(A) ------> F(B)
+%	  		|            |
+%	  η_{A} |            |  η_{B}
+%	        v            v
+%	       G(A) ------> G(B)
+%                G(f)
+%
+%
+\begin{center}
+  \begin{tikzcd} [column sep={45pt},
+                  row    sep={35pt}]
+    F(A) \arrow[r,"F(f)"] \arrow[d, swap, "\eta_{A}"] & F(B) \arrow[d, "\eta_{B}"] \\
+    G(A) \arrow[r, swap, "G(f)"]                      & G(B)
+  \end{tikzcd}
+\end{center}
+
+
+\medskip
+\noindent
+Here $F(f)$ and $G(f)$ 
+are the mappings $f$ under the functors $F$ and $G$ 
+(respectively), where $F(f) \in \mathcal{D}(F(A),F(B))$ 
+and $G(f) \in \mathcal{D}(G(A),G(B))$. $\eta_{A}$ and 
+$\eta_{B}$ are natural transformations with $\eta_{A} 
+\in \mathcal{D}(F(A),G(A))$ and $\eta_{B} \in 
+\mathcal{D}(F(B),G(B))$.
+
+\bigskip
+\noindent
+Commutativity here means that going from $F(A)$ to $G(B)$ via
+$F(f)$ and $\eta_{B}$ is the same as going from $F(A)$ to $G(B)$
+via $\eta_{A}$ and $G(f)$.  More specifically, commutativity
+requires that for any $f \in \mathcal{C}(A,B)$ we have 
+
+\begin{equation}
+G(f) \circ \eta_{A} = \eta_{B} \circ F(f)
+\label{equation:commutivity}
+\end{equation}
+
+\bigskip
+\noindent
+Note: I have seen Equation (\ref{equation:commutivity}) 
+abbreviated as $G \eta = \eta F$.
+
+\medskip
+\noindent
+\begin{example}
+Consider the functor $- \times S$ defined in Example
+\ref{example:functor}. For any function $g : S \to T$
+
+\begin{equation*}
+\text{id}\_ \times g : - \times S \to - \times T 
+\end{equation*}
+
+\smallskip
+\noindent
+is a natural transformation. To verify this, pick two objects 
+$A,B$ and a morphism $f : A \to B$. Then we need to show 
+that the following diagram commutes:
+
+\medskip
+%
+%	Draw the picture
+%
+%
+\begin{center}
+  \begin{tikzcd} [column sep={45pt},
+                  row    sep={40pt}]
+    A \times S \arrow[r,"f \times \text{id}_{S}"] \arrow[d, swap, "\text{id}_{A} \times g"] & 
+    		B \times S \arrow[d, "\text{id}_{B} \times g"] \\
+    A \times T \arrow[r, swap, "f \times \text{id}_{T}"]                                    & 
+    		B \times T
+  \end{tikzcd}
+\end{center}
+
+\bigskip
+\noindent
+To show that this diagram commutes, pick a pair $(a,s)$ in the
+top left corner.  Then if we go right then down we see that
+$(a,s) \mapsto (f(a),s) \mapsto (f(a),g(s))$.  On the other hand,
+if we go down then right we see that $(a,s) \mapsto (a, g(s))
+\mapsto (f (a), g(s))$.  Since both paths between $A \times S$
+and $B \times T$ map $(a,b)$ to $(f(a),g(s))$, the diagram
+commutes and hence $\text{id}\_ \times g$ a natural
+transformation \cite{intro_category_theory_notes}.
+\end{example}
+
+\begin{remark}
+On interesting thing is that a natural transformation $\eta$ 
+kind of commutes the two functors. That is, for functors 
+$F,G: \mathcal{C} \to \mathcal{D}$, if $\eta : F \to G$ is a 
+natural transformation then for any $f \in \mathcal{C}(A,B)$ 
+we have $G(f) \circ \eta_{A} = \eta_{B} \circ F(f)$ 
+(Equation (\ref{equation:commutivity})). If we drop some detail 
+we see that $G \eta = \eta F$.
+\label{remark:natural_transformation_commutes}
+\end{remark}
+%
+%
+%
+\section{Conclusions}
+\label{section:conclusions}
+%
+%
+%
+\section*{Acknowledgements}
+\label{section:acknowledgements}
+Thanks to John Carlos Baez (@johncarlosbaez@mathstodon.xyz) and
+Andrew Stacey (@loopspace@mathstodon.xyz) for their helpful
+comments on earlier versions of this document.
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/wnptmrwwfjgv#a36a79}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+\section*{Appendix A: A Few Algebraic Structures}
+\begin{center}
+\begin{table}[H]
+\scalebox{0.75}{
+\begin{tabular}{l | c | c | c | c |  c | c}
+{{\large \bf Structure}}        & $\textbf{\large ABO}^1$              & {\large \bf Identity}
+                                & {\large \bf Inverse}                 & {\large \bf $\text{Distributive}^2$}
+                                & {\large\bf $\text{Commutative}^3$}   & {\bf Comments} \\
+\hline\hline					% separate column names from rows
+Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup plus identity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    & Monoid plus inverse $\in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark $(+)$     & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
+$\text{Field}_{(+,*)}$          & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
+                                             & Abelian group under $+$ and $*$  \\
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Field \\
+Module                          & \checkmark & \checkmark $(+,*)$	   & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Ring
+
+\end{tabular}}
+\caption{A Few Algebraic Structures and Their Features}
+\label{table:algebraic_structures}
+\end{table}
+\end{center}
+
+\noindent
+where
+
+\begin{center}
+\begin{enumerate}
+\item \textbf{ABO:} Associative Binary Operation 
+\begin{itemize}
+\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
+      for all $x, y, z \in S$
+\item $x \circ y \in S$ for all $x, y \in S$
+      ($S$ is closed under $\circ$)
+\end{itemize}
+
+\item \textbf{Distributive:} Distributive Property 
+\begin{itemize}
+\item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
+                                   all $x, y, z \in S$
+\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
+                                   for all $x, y, z \in S$
+\item $*$ is \emph{distributive}   over $+$ if $*$ is left and 
+                                   right distributive
+\end{itemize}
+
+\item \textbf{Commutative:} Commutative Property
+\begin{itemize}
+\item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
+\end{itemize}
+\end{enumerate}
+\end{center}
+%
+%	done
+%
+\end{document} 
+

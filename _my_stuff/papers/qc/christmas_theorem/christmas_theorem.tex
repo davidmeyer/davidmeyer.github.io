@@ -1,0 +1,240 @@
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}                                                   % \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+% \usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%
+%
+\title{Fermat's Christmas Theorem}
+\author{David Meyer \\ dmm613@gmail.com}
+%
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+
+\section{Fermat's Christmas Theorem}
+
+\noindent
+Fermat's Christmas Theorem is a beautiful and simply stated
+theorem \cite{wiki:christmas_theorem}. The theorem (aka Fermat's
+theorem on sums of two squares) states that an odd prime number
+$p$ can be expressed as
+
+\bigskip
+\begin{center}
+\scalebox{1.25} {$p = r^{2} + s^{2}$}
+\end{center}
+\bigskip
+
+\noindent
+where $r,s \in \mathbb{N}$, if and only if $p \equiv 1 \textrm{
+(mod $4$)}$. That is, the theorem holds iff $p = 4n + 1$ for some
+$n \in \mathbb{N}$.
+
+\bigskip
+\noindent
+For example, the primes 5, 13, 17, 29, 37 and 41 are all
+congruent to 1 modulo 4 and can be expressed as sums of two
+squares in the following ways:
+
+\begin{equation*}
+\begin{array}{rcll} 
+5   &=& 1^{2} + 2^{2}   \\
+13  &=& 2^{2} + 3^{2}   \\
+17  &=& 1^{2} + 4^{2}   \\
+29  &=& 2^{2} + 5^{2}   \\
+37  &=& 1^{2} + 6^{2}   \\
+41  &=& 4^{2} + 5^{2}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+On the other hand, the primes 3, 7, 11, 19, 23 and 31 are all
+congruent to 3 modulo 4 and none of them can be expressed as the
+sum of two squares. This is the easier part of the theorem since
+it follows immediately from the observation that all squares are
+congruent to 0 or 1 modulo 4.
+
+\bigskip
+\noindent
+The prime numbers $p$ for which Fermat's Christmas Theorem holds
+are called Pythagorean primes.  See
+\cite{wiki:pythagorean_primes} for more on Pythagorean primes.
+
+\bigskip
+\noindent
+A variety of proofs of Fermat's Christmas Theorem can be found in
+\cite{wiki:christmas_theorem_proofs}.
+%
+%
+%
+\section{Why is it called Fermat's Christmas Theorem?}
+This theorem is called Fermat's Christmas Theorem 
+because Fermat announced a proof of the theorem in a letter 
+to Mersenne dated December 25, 1640 \cite{wiki:christmas_theorem}. And of course, Fermat 
+didn't include a proof in his letter.
+%
+%
+%
+\section*{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+% \url{}
+\newpage				% why?
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+
+

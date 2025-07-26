@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{euclidian_space}
+{Frank Jones}.
+\newblock {Euclidean Space}.
+\newblock \url{http://www.owlnet.rice.edu/~fjones/chap1.pdf}, August 2004.
+\newblock [Online; accessed 03-November-2021].
+
+\bibitem{metric_spaces}
+{John O'Connor}.
+\newblock {Definition and examples of metric spaces}.
+\newblock
+  \url{http://www-groups.mcs.st-andrews.ac.uk/~john/MT4522/Lectures/L5.html},
+  February 2004.
+\newblock [Online; accessed 03-November-2021].
+
+\bibitem{fa_mit}
+{Richard Melrose}.
+\newblock {Introduction to Functional Analysis}.
+\newblock
+  \url{https://ocw.mit.edu/courses/mathematics/18-102-introduction-to-functional-analysis-spring-2009},
+  2009.
+\newblock [Online; accessed 02-November-2021].
+
+\end{thebibliography}

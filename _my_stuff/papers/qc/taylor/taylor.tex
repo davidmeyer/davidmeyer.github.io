@@ -1,0 +1,181 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{relsize}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{setspace}
+
+ 
+ \theoremstyle{definition}
+ \newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+
+
+\title{A Few Notes On The Taylor Series}
+\author{David Meyer \\ dmm@1-4-5.net}
+
+\date{Last update: \today}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+\section{Taylor Series}
+\label{sec:taylor_series}
+
+\section{Taylor Inequality}
+Suppose that the function $f(x)$ is infinitely differentiable (smooth) at $x=a$. Then as we saw in Section \ref{sec:taylor_series}, 
+the Taylor series for $f(x)$, centered at $x=a$, is
+
+\medskip
+\begin{equation}
+T(x) = \sum\limits _{k=0}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}
+\label{eqn:taylor_series}
+\end{equation}
+
+
+\bigskip
+\noindent
+We can divide $T(x)$ into a Taylor polynomial of degree $n$,  denoted $T_n(x)$,  and an infinite series $R_n(x)$, called the \emph{Taylor remainder}, such that  
+
+\medskip
+\begin{equation}
+T(x) = T_n(x) + R_n(x)
+\label{eqn:T(x)}
+\end{equation}
+
+\bigskip
+\noindent
+Here  $T_n(x) =  \sum\limits _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$ and  $R_n(x) =  \!\! \sum\limits _{k=n+1}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$. 
+
+\bigskip
+\noindent
+Understanding how $R_n(x)$ relates to $T(x)$, that is, $R_n(x) = T(x) - T_n(x)$,  will allow us to understand, among other things, 
+how good of an approximation $T(x)$ is to $f(x)$, whether or not $T(x)$ converges,  and to what.
+
+\bigskip
+\noindent
+BTW, a useful form of Equation \ref{eqn:T(x)} to think of $R_n(x)$ as the difference between $f(x)$ and the Taylor
+polynomial of degree $n$ for $f(x)$ centered at $a$. That is
+
+
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+f(x)
+&=& \sum\limits _{k=0}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}                                                                                                                    &\mathrel{\#} \text{Taylor series of $f(x)$}                                    \\  
+[12pt]
+&\Rightarrow& T_n(x) =  \sum\limits _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}                                                                                          &\mathrel{\#} \text{definition of the Taylor polynomial $T_n(x)$}  \\  
+[12pt]
+&\Rightarrow& R_n(x) = f(x) - T_n(x)                                                                                                                                                       &\mathrel{\#} \text{definition of the Taylor remainder  $R_n(x)$}  \\  
+[12pt]
+&\Rightarrow& R_n(x) =  \sum\limits _{k=0}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k} - \sum\limits _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k} &\mathrel{\#} \text{expand $f(x)$ and $T_n(x)$}                           \\
+[12pt]
+&\Rightarrow& R_n(x) = \frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}                                                                                                             &\mathrel{\#} \text{see comment below}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+\doublespace
+The last line above, $R_n(x) = \sum\limits _{k=n+1}^{\infty}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k} =\frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}$, follows 
+because for $k > n+1$ $f^{(k)}(a) = 0$ ($f^{(k)}(x)$ for $k > n+1$ has a $(x-a)^k$ term which is zero at $x = a$).
+\singlespace
+
+\bigskip
+\noindent
+So now we can see that the Taylor remainder $R_n(x)$ is a kind of error in our Taylor polynomial $T_n(x)$'s  estimate of $f(x)$: 
+
+\begin{equation}
+R_n(x) = f(x) - T_n(x) = \frac{f^{(n+1)}(a)}{(n+1)!} (x-a)^{(n+1)}
+\label{eqn:R(x)}
+\end{equation}
+
+
+
+
+\bigskip
+\noindent
+We can use Equations \ref{eqn:T(x)} and \ref{eqn:R(x)} to state the Taylor Remainder Theorem:
+
+\bigskip
+\noindent
+
+
+\begin{thm}
+{\bf Taylor Remainder Theorem:}  If $|f^{(n)}| \leq M$ for $|x - a| \leq d$ then the remainder $R_n(x)$ of the
+Taylor series $T(x)$ satisfies the inequality
+
+\begin{equation*}
+\big | R_n(x) \big |  \leq \frac{M}{(n+1)!} |x -a|^{n+1}
+\end{equation*}
+\end{thm}
+\bigskip
+\noindent
+for $|x-a| \leq d$, where $M$ and $d$ are constants.
+
+\bigskip
+\noindent
+{\bf Sketch of Proof: }
+
+\newpage
+\section*{Acknowledgements}
+
+%\newpage
+\bibliographystyle{plain}
+\bibliography{/Users/dmm/papers/bib/qc}
+\end{document}
+
+\end{document} 
+ 

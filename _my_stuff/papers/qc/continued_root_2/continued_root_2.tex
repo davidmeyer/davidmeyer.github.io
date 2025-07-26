@@ -1,0 +1,122 @@
+
+\documentclass{article}
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                 		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+						% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+
+						% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{relsize}
+ \usepackage[hyphenbreaks]{breakurl}
+ \usepackage{setspace}
+
+ 
+ \newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\title{$\sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  \; = \; ?$}
+\author{David Meyer \\ dmm@1-4-5.net}
+\date{Last update: \today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+One way to think about this question is the following: 
+
+\begin{equation*}
+\begin{array}{llll}
+S
+&=&  \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
+				&\qquad \qquad \mathrel{\#} \text{define $S$} \\
+[5pt]
+&\Rightarrow& S^2 = 2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}} 
+				&\qquad \qquad \mathrel{\#} \text{square both sides} \\
+[2pt]
+&\Rightarrow& S^2 = 2 + S 
+				&\qquad \qquad \mathrel{\#} S = \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  \\
+[7pt]
+&\Rightarrow& S^2 -S - 2 = 0 
+				&\qquad \qquad \mathrel{\#} \text{collect terms} \\
+[5pt]
+&\Rightarrow& (S - 2)(S + 1) = 0
+				&\qquad \qquad \mathrel{\#} \text{factor} \\
+[5pt]
+&\Rightarrow& S \in \{2,-1\}
+				&\qquad \qquad \mathrel{\#} \text{solve for $S$} \\
+[5pt]
+&\Rightarrow& S = 2
+				&\qquad \qquad \mathrel{\#} \text{positive root of $S$ (what about the negative root?)} 
+
+\end{array}
+\end{equation*}
+
+\smallskip
+\noindent
+So apparently $ \sqrt{2 + \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots}}}}  = 2$.
+
+
+%
+%	LaTeX source on overleaf.com
+%
+% \section*{\LaTeX}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+% \bibliographystyle{plain}
+% \bibliography{qc}
+%
+%	done
+%
+\end{document}

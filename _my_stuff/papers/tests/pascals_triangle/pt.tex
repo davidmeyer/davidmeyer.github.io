@@ -1,0 +1,334 @@
+\documentclass{article}
+%
+%
+%	pt.tex -- draw Pascal's triangle
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{Pascal's Triangle Tests: This blows up when $\backslash\text{nrows} > 7$}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{sec:introduction}
+
+{\footnotesize
+\begin{verbatim}
+%
+%	I started looking at this because the below code
+%	blows up when \nrows > 7.
+%
+%
+\def \nrows {7}                                                                         % number of rows
+\pgfmathtruncatemacro \rows {\nrows + 1}                                                % we count from zero
+%                                                                                       %
+%       Draw the picture, wrapped in a figure                                           % draw the picture
+%                                                                                       %
+\begin{figure}[H]                                                                       % build the figure
+  \centering                                                                            % center everything
+  \resizebox{0.50 \textwidth}{!} {                                                      % resize figure if you want
+    \fbox {                                                                             % put a box around the figure
+       \begin{tikzpicture}[rotate=-90]                                                  % draw the triangle
+         \foreach \x in {0,1,...,\nrows} {                                              % loop over the rows
+            \foreach \y in {0,...,\x} {                                                 % loop over the columns
+               \pgfmathsetmacro \binom {factorial(\x)/(factorial(\y)*factorial(\x-\y))}	% calculate the value
+               \pgfmathsetmacro \shift {\x/2}                                          	%
+               \node[xshift=-\shift cm] at (\x,\y) {\pgfmathprintnumber \binom};        % draw the node here
+            }                                                                           % \end \foreach \x
+         }                                                                              % \end \foreach \y
+       \end{tikzpicture}                                                                %
+    }                                                                                   % end \fbox
+  }                                                                                     % end \resizebox
+  \caption{Pascal's triangle with $\rows$ rows}                                         % \caption
+  \label{fig:pascals_triangle}                                                          % \label{}
+\end{figure}
+\end{verbatim}
+}
+
+\smallskip
+%
+%
+%	Parameters
+%
+%	I started looking at this because the below code
+%	blows up when \nrows > 7.
+%
+%
+\def \nrows {7}                                                                         % number of rows; this blows up when \nrows > 7
+\pgfmathtruncatemacro \rows {\nrows + 1}                                                % we count from zero
+%                                                                                       %
+%       Draw the picture, wrapped in a figure                                           % draw the picture, wrapped in a figure
+%                                                                                       %
+\begin{figure}[H]                                                                       % build the figure
+  \centering                                                                            % center everything
+  \resizebox{0.35 \textwidth}{!} {                                                      % resize figure if you want
+    \fbox {                                                                             % put a box around the figure
+       \begin{tikzpicture}[rotate=-90]                                                  % draw the triangle
+         \foreach \x in {0,1,...,\nrows} {                                              % loop over the rows
+            \foreach \y in {0,...,\x} {                                                 % loop over the columns
+               \pgfmathsetmacro \binom {factorial(\x)/(factorial(\y)*factorial(\x-\y))}	% calculate the value
+               \pgfmathsetmacro \shift {\x/2}                                          	%
+               \node[xshift=-\shift cm] at (\x,\y) {\pgfmathprintnumber \binom};        % draw the node here
+            }                                                                           % \end \foreach \x
+         }                                                                              % \end \foreach \y
+       \end{tikzpicture}                                                                %
+    }                                                                                   % end \fbox
+  }                                                                                     % end \resizebox
+  \caption{Pascal's triangle with $\rows$ rows}                                         % \caption
+  \label{fig:pascals_triangle}                                                          % \label{}
+\end{figure}
+
+
+
+%
+%
+%	show a derivation/proof
+%
+% \begin{equation*}
+% \begin{array}{llll}
+% x
+% &=& y				&\qquad \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
+% [10pt]
+% \end{array}
+% \end{equation*}
+%
+%
+%
+%	include an image
+%
+% \begin{figure}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
+% \label{fig:X}
+% \end{figure}
+%
+%	How to put a box around a figure
+%
+% \begin{figure}[H]
+%  \centering
+%   \fbox{\begin{minipage}{34em}
+%    \begin{equation*}
+%     \begin{array}{rlrlrlr}
+%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
+%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
+%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
+%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
+%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
+%     \end{array}
+%    \end{equation*}
+%  \end{minipage}}
+%  \caption{A Few Example Kaprekar Numbers}
+%\end{figure}
+%
+%	
+%	How to wrap (and resize) your tikzpicture in a figure
+%
+% \begin{figure}[H]
+% \centering
+%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
+%    \begin{tikzpicture} 
+%     .....
+%    \end{tikzpicture}					% end tikzpicture
+%  }									% end resizebox
+% \caption{Some Figure}
+% \label{fig:some_figure}
+% \end{figure}
+%
+%
+%
+% \section{Conclusions}
+% \label{sec:conclusions}
+%
+%
+%
+\vspace{0.50 cm}
+%
+%
+\section{Acknowledgements}
+\label{sec:acknowledgements}
+
+\begin{verbatim}
+From @psu_13@mathstodon.xyz: 
+
+@dmm you are probably overflowing LaTeX's poor macro engine... 
+which was never built to do this kind of heavy lifting.
+
+if you make a small file with just this in it
+
+\tikzmath{
+    \x1 = factorial(8)/(factorial(7)*factorial(8-7));
+}
+
+you get an arithmetic overflow error when you run TeX.
+\end{verbatim}
+
+\bigskip
+\noindent
+Expanding a bit on @psu\_13@mathstodon.xyz's example, 
+note that 
+
+\begin{verbatim}
+    \tikzmath {factorial(8);} 
+\end{verbatim}
+
+\noindent
+is enough to get LaTeX to throw an arithmetic overflow error,
+while 
+
+\begin{verbatim}
+    \tikzmath {factorial(7);} 
+\end{verbatim}
+
+\noindent
+does not throw an error.
+
+\bigskip
+\noindent
+In addition, Steve VanDevender pointed out that 7! = 5040 and 
+8! = 40320, and that $40320 > 32767$, the largest number you 
+can fit into a 16-bit integer. TeX, due to its age, could 
+be using 16-bit integers, which would explain what we're
+seeing above.
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/tgkjgjnjhfjm}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+% \bibliographystyle{plain}
+% \bibliography{qc,ml}
+%
+%	done
+%
+\end{document} 
+

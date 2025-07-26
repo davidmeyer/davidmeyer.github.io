@@ -1,0 +1,70 @@
+\begin{thebibliography}{1}
+
+\bibitem{mathologer:eulers_product_formula}
+{Burkard Polster (aka Mathologer)}.
+\newblock {Euler’s Pi Prime Product and Riemann’s Zeta Function}.
+\newblock \url{https://www.youtube.com/watch?v=LFwSIdLSosI}, September 2017.
+\newblock [Online; accessed 10-August-2021].
+
+\bibitem{nichols2016}
+{Dan Nichols}.
+\newblock {Riemann’s Zeta Function and the Prime Number Theorem}.
+\newblock
+  \url{https://people.math.umass.edu/~nichols/talks/2016mathclub-zeta.pdf},
+  December 2016.
+\newblock [Online; accessed 19-September-2021].
+
+\bibitem{book:prime_obsession}
+John Derbyshire.
+\newblock {\em {Prime Obsession: Bernhard Riemann and the Greatest Unsolved
+  Problem in Mathematics}}.
+\newblock The National Academies Press, Washington, DC, 2003.
+
+\bibitem{mactutor:history_of_calculus}
+{J J O'Connor and E F Robertson}.
+\newblock {A History of the Calculus}.
+\newblock
+  \url{https://mathshistory.st-andrews.ac.uk/HistTopics/The_rise_of_calculus/},
+  February 1996.
+\newblock [Online; accessed 10-August-2021].
+
+\bibitem{euler_product_formula}
+{Timothy Murphy}.
+\newblock {Euler’s Product Formula}.
+\newblock
+  \url{https://www.maths.tcd.ie/pub/Maths/Courseware/428/Primes-II.pdf}, 2006.
+\newblock [Online; accessed 25-June-2021].
+
+\bibitem{wiki:analytic_number_theory}
+{Wikipedia Contributors}.
+\newblock {Analytic Number Theory --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Analytic_number_theory&oldid=1036896346},
+  2021.
+\newblock [Online; accessed 8-August-2021].
+
+\bibitem{wiki:dirichlet_series}
+{Wikipedia Contributors}.
+\newblock {Dirichlet Series --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Dirichlet_series&oldid=1016339331},
+  2021.
+\newblock [Online; accessed 10-August-2021].
+
+\bibitem{wiki:zeta}
+{Wikipedia Contributors}.
+\newblock {Riemann Zeta Function --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Riemann_zeta_function&oldid=1036808000},
+  2021.
+\newblock [Online; accessed 6-August-2021].
+
+\bibitem{wiki:sieve_of_eratosthenes}
+{Wikipedia Contributors}.
+\newblock {Sieve of Eratosthenes --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Sieve_of_Eratosthenes&oldid=1037751406},
+  2021.
+\newblock [Online; accessed 10-August-2021].
+
+\end{thebibliography}

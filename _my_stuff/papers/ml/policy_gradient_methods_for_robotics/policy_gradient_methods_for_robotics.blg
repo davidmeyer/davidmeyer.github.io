@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: policy_gradient_methods_for_robotics.aux
+The style file: plain.bst
+Database file #1: ml.bib
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            632 strings with 8401 characters,
+and the built_in function-call counts, 7836 in all, are:
+= -- 747
+> -- 471
+< -- 5
++ -- 185
+- -- 163
+* -- 582
+:= -- 1337
+add.period$ -- 67
+call.type$ -- 21
+change.case$ -- 142
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 271
+empty$ -- 533
+format.name$ -- 163
+if$ -- 1606
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 109
+num.names$ -- 44
+pop$ -- 148
+preamble$ -- 1
+purify$ -- 122
+quote$ -- 0
+skip$ -- 198
+stack$ -- 0
+substring$ -- 393
+swap$ -- 60
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 82
+warning$ -- 0
+while$ -- 63
+width$ -- 23
+write$ -- 232

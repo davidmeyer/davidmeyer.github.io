@@ -1,0 +1,356 @@
+% !TEX TS-program = LuaLaTeX
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
+\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+\usepackage{luatex85,luamplib}
+% \usepackage{luacode}
+\mplibnumbersystem{double}
+\mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+
+%
+%	Title, author and date
+%
+\title{template.tex}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{sec:introduction}
+
+%
+%	Draw Pascal's Triangle with binomial coefficients. The triangular numbers
+%	are shown in christmasgreen.
+%
+
+%
+%       Parameters
+%
+\newcommand \nrows {14}                                                 % number of rows
+%
+%
+%	Draw the picture
+%
+\begin{figure}[H]                                                       % build the triangle
+  \centering                                                            % center everything
+   \resizebox{0.75 \textwidth}{!} {                                     % resize the figure if you want
+    \begin{tikzpicture} [framed,scale=0.90]                             % put a frame on the tikzpicture 
+       \foreach \n in {0,...,\nrows} {                                  % iterate over rows
+          \foreach \k in {0,...,\n} {                                   % iterate over columns
+             \node at (\k-\n/2,-\n) {                                   % put the coefficient here
+             \ifnum \k = 2 {\color{blue} ${\binom{\n}{\k}}$}            % k = 2 => triangular number
+                \else                                                   % else
+                  \ifnum \k = 3 {\color{red}${\binom{\n}{\k}}$}         % k =3 => tetrahedral number
+                    \else {\color{black}${\binom{\n}{\k}}$}             % default to black
+                   \fi                                                  % end \ifnum \k = 3
+              \fi};                                                     % end \ifnum \k = 2
+          }                                                             % end \foreach \k ...
+        }                                                               % end \foreach \n ...
+    \end{tikzpicture}                                                   % end tikzpicture
+   }                                                                    % end resizebox
+  \caption{Pascal's Triangle with Binomial Coefficients}
+  \label{fig:pascals_triangle_with_binomial_coefficients}
+\end{figure}
+
+
+%
+%       Parameters
+%
+\def \nrows {14}
+%
+%	Build the figure
+%
+\begin{figure}[H]
+  \centering
+  \fbox {                                                                       % put a box around the figure
+    \resizebox{0.75 \textwidth}{!} {                                            % resize the figure if you want
+    \begin{mplibcode}                                                           %
+        vardef Pascal_triangle(expr n, u, v) =                                  % define the function
+        save b; numeric b[][]; clearxy;
+        % defaultscale := 1.60;
+        defaultscale := 16pt/fontsize bold;
+        b[0][0] = 1; b[0][1] = 0; label("1", origin);                           % special case the "ones"
+        for i = 1 upto n:                                                       % loop over the rows
+          x := -u*i/2; y := -i*v;                                               % draw the result at (x,y)
+          b[i][0] = 1; label("1", z);                                           % need one more "one"
+          for k = 1 upto i:                                                     % loop over the columnss
+              x := x + u;                                                       % coordinates
+              b[i][k] = b[i-1][k-1] + b[i-1][k]; 
+              if k = 2:    
+                label(decimal(b[i][k]),z) withcolor blue;                       % triangular numbers 
+              elseif k=3:                                                       % 
+                label(decimal(b[i][k]),z) withcolor red;                  		% tetrahedral numbers in red
+  		      else:                                                           	% default
+  		        label(decimal(b[i][k]),z) withcolor black;                  	% default to black
+              fi
+           endfor 
+           b[i][i+1]=0;
+         endfor
+       enddef;
+%
+%	Draw the triangle
+%
+    beginfig(1);
+      Pascal_triangle(\nrows, 1.4cm, 1cm);
+    endfig;
+   \end{mplibcode}
+   }                                                                            % end resizebox
+ }                                                                              % end fbox
+ \caption{Pascal's Triangle}           											% caption the figure
+ \label{fig:pascals_triangle}                                                   % label the figure
+\end{figure}                                                                    % end figure
+
+
+
+
+\begin{figure}[H]
+  \centering
+  \fbox {                                                                       % put a box around the figure
+    \resizebox{0.75 \textwidth}{!} {                                              % resize the figure if you want
+      \begin{math}
+\begin{array}{c}
+1 \\
+1 \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 2  \qquad {\bf \color{blue}{1}} \\ \noalign{\smallskip\smallskip}
+1 \qquad 3  \qquad {\bf \color{blue}{3}}  \qquad {\bf \color{red}{1}} \\ \noalign{\smallskip\smallskip}
+1 \qquad 4  \qquad {\bf \color{blue}{6}}  \qquad {\bf \color{red}{4}}   \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 5  \qquad {\bf \color{blue}{10}} \qquad {\bf \color{red}{10}}  \qquad 5    \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 6  \qquad {\bf \color{blue}{15}} \qquad {\bf \color{red}{20}}  \qquad 15   \qquad 6   \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 7  \qquad {\bf \color{blue}{21}} \qquad {\bf \color{red}{35}}  \qquad 35   \qquad 21  \qquad 7   \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 8  \qquad {\bf \color{blue}{28}} \qquad {\bf \color{red}{56}}  \qquad 70   \qquad 56  \qquad 28  \qquad 8       \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 9  \qquad {\bf \color{blue}{36}} \qquad {\bf \color{red}{84}}  \qquad 126  \qquad 126 \qquad 84  \qquad 36     \qquad 9   \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 10 \qquad {\bf \color{blue}{45}} \qquad {\bf \color{red}{120}} \qquad 210  \qquad 252 \qquad 210 \qquad 120    \qquad 45  \qquad 10 \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 11 \qquad {\bf \color{blue}{55}} \qquad {\bf \color{red}{165}} \qquad 330  \qquad 462 \qquad 462 \qquad 330    \qquad 165 \qquad 55 \qquad 11 \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 12 \qquad {\bf \color{blue}{66}} \qquad {\bf \color{red}{220}} \qquad 495  \qquad 792 \qquad 924 \qquad 792    \qquad 495 \qquad 220 \qquad 66 \qquad 12 \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 13 \qquad {\bf \color{blue}{78}} \qquad {\bf \color{red}{286}} \qquad 715  \qquad 1287 \qquad 1716 \qquad 1716 \qquad 1287 \qquad 715 \qquad 286 \qquad 78 \qquad 13 \qquad 1 \\ \noalign{\smallskip\smallskip}
+1 \qquad 14 \qquad {\bf \color{blue}{91}} \qquad {\bf \color{red}{364}} \qquad 1001 \qquad 2002 \qquad 3003 \qquad 3432 \qquad 3003 \qquad 2002 \qquad 1001 \qquad 364 \qquad 91 \qquad 14 \qquad 1
+\end{array}
+     \end{math}
+   }
+  }
+  \caption{Pascal's Triangle}
+  \label{fig:pascals_triangle}
+\end{figure}
+
+
+
+%
+%
+%	show a derivation/proof
+%
+% \begin{equation*}
+% \begin{array}{llll}
+% x
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
+% [10pt]
+% \end{array}
+% \end{equation*}
+%
+%
+%
+%	include an image
+%
+% \begin{figure}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
+% \label{fig:X}
+% \end{figure}
+%
+%	How to put a box around a figure
+%
+% \begin{figure}[H]
+%  \centering
+%   \fbox{\begin{minipage}{34em}
+%    \begin{equation*}
+%     \begin{array}{rlrlrlr}
+%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
+%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
+%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
+%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
+%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
+%     \end{array}
+%    \end{equation*}
+%  \end{minipage}}
+%  \caption{A Few Example Kaprekar Numbers}
+%\end{figure}
+%
+%	
+%	How to wrap (and resize) your tikzpicture in a figure
+%
+% \begin{figure}[H]
+% \centering
+%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
+%    \begin{tikzpicture} 
+%     .....
+%    \end{tikzpicture}					% end tikzpicture
+%  }									% end resizebox
+% \caption{Some Figure}
+% \label{fig:some_figure}
+% \end{figure}
+%
+%
+%
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/jyppzhgdtrvg}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc,ml}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

@@ -1,0 +1,290 @@
+%
+%	Use lualatex
+%
+% !TEX TS-program = LuaLaTeX
+%
+%	To get overleaf.com to use lualatex see
+%	https://www.overleaf.com/learn/how-to/Changing_compiler.
+%	Basically, change the compiler in Settings.
+%
+%
+\documentclass{article}
+%
+%
+%	lua_pascals_triangle.tex
+%
+%	To process from the command line:
+%
+%	/Users/dmm/Library/TeXShop/Engines/Inactive/LuaTeX/LuaLaTeX.engine lua_pascals_triangle.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	10 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+%
+%	Use lualatex
+%
+\usepackage{luatex85,luamplib}
+\mplibnumbersystem{double}
+\mplibtextextlabel{enable}
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+
+%
+%	Title, author and date
+%
+\title{Pascal's Triangle rendered with lualatex}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{sec:introduction}
+Figure \ref{fig:pascals_triangle} shows Pascal's 
+Triangle drawn with lualatex.
+\bigskip
+%
+%       Parameters
+%
+\def \nrows {14}
+%
+%       Build the figure
+%
+\begin{figure}[H]
+  \centering
+  \fbox {                                                                       % put a box around the figure
+  \resizebox{0.75 \textwidth}{!} {                                              % resize the figure if you want
+  \begin{mplibcode}                                                             % build Pascals_triangle
+     vardef Pascals_triangle(expr n, u, v) =                                    % define the function
+       save b, mid; numeric b[][], mid; clearxy;                                % variables
+       b[0][0] = b[1][0] = b[1][1] = 1;                                         % binomial that equal 1
+       label("1", origin); label("1", (-.5u, -v)); label("1", (.5u, -v));       % build the top of the triangle
+       for i = 2 upto n:                                                        % start at row 2
+           mid := i div 2;                                                      % calculate midpoint
+           x := -u*i/2; y := -i*v;                                              % calculate (x,y)
+           b[i][0] = 1; label("1", z); label("1", (-x, y));                     %             
+           for k = 1 upto mid:                                                  % iterate over columns
+               x := x + u;                                                      %
+               if (k < mid) or (odd i):                                         %
+                  b[i][k] = b[i-1][k-1] + b[i-1][k];                            %
+                  label(decimal b[i][k], z); label(decimal b[i][k], (-x, y));   %
+               else:                                                            %
+                  b[i][k] = 2b[i-1][k-1];                                       %
+                  label(decimal b[i][k], z);                                    %
+               fi                                                               %
+           endfor                                                               %
+       endfor                                                                   %
+     enddef;                                                                    %
+%                                                                               %
+%       Draw the triangle                                                       %
+%                                                                               %
+   beginfig(1);                                                                 % draw the triangle
+      Pascals_triangle(\nrows, 1.5cm, 1.0cm);                                   %
+   endfig;                                                                      %
+  \end{mplibcode}                                                               % end mplibcode
+  }                                                                             % end resizebox
+ }                                                                              % end fbox
+ \caption{Pascal's Triangle renedered with lualatex (nrows = \nrows)}           % caption
+ \label{fig:pascals_triangle}                                                   % label
+\end{figure}                                                                    % end figure
+%
+%
+%	show a derivation/proof
+%
+% \begin{equation*}
+% \begin{array}{llll}
+% x
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
+% [10pt]
+% \end{array}
+% \end{equation*}
+%
+%
+%
+%	include an image
+%
+% \begin{figure}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
+% \label{fig:X}
+% \end{figure}
+%
+%	How to put a box around a figure
+%
+% \begin{figure}[H]
+%  \centering
+%   \fbox{\begin{minipage}{34em}
+%    \begin{equation*}
+%     \begin{array}{rlrlrlr}
+%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
+%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
+%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
+%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
+%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
+%     \end{array}
+%    \end{equation*}
+%  \end{minipage}}
+%  \caption{A Few Example Kaprekar Numbers}
+%\end{figure}
+%
+%	
+%	How to wrap (and resize) your tikzpicture in a figure
+%
+% \begin{figure}[H]
+% \centering
+%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
+%    \begin{tikzpicture} 
+%     .....
+%    \end{tikzpicture}					% end tikzpicture
+%  }									% end resizebox
+% \caption{Some Figure}
+% \label{fig:some_figure}
+% \end{figure}
+%
+%
+%
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/qgrkpdyrwkxw}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc,ml}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

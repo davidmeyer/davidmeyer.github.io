@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: attention.aux
+The style file: plain.bst
+Database file #1: ml.bib
+Warning--empty journal in Bahdanau:2014aa
+Warning--empty journal in Cho:2014aa
+Warning--empty journal in Daniluk:2017aa
+Warning--empty journal in Graves:2014aa
+You've used 9 entries,
+            2118 wiz_defined-function locations,
+            551 strings with 6054 characters,
+and the built_in function-call counts, 3498 in all, are:
+= -- 312
+> -- 256
+< -- 1
++ -- 100
+- -- 91
+* -- 277
+:= -- 617
+add.period$ -- 30
+call.type$ -- 9
+change.case$ -- 70
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 102
+empty$ -- 211
+format.name$ -- 91
+if$ -- 686
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 7
+newline$ -- 50
+num.names$ -- 20
+pop$ -- 87
+preamble$ -- 1
+purify$ -- 61
+quote$ -- 0
+skip$ -- 74
+stack$ -- 0
+substring$ -- 135
+swap$ -- 16
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 4
+while$ -- 26
+width$ -- 10
+write$ -- 95
+(There were 4 warnings)

@@ -1,0 +1,508 @@
+%
+%	Use lualatex
+%
+% !TEX TS-program = LuaLaTeX
+%
+%	To get overleaf.com to use lualatex see
+%	https://www.overleaf.com/learn/how-to/Changing_compiler.
+%	Basically, change the compiler in Settings.
+%
+\documentclass{article}
+%
+%
+%	LaTeX template
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby,matrix}
+\usepackage{tikz-cd}
+\usepackage{tikzpeople}
+\tikzcdset{every arrow/.append style={-latex}}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}							% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}							% \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}							% use characters instead of numbers in enumerate
+\usepackage{changepage}         					% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}							% \multirow and \multicolumn
+\usepackage{enumitem}							% change bullets in \begin{enumerate}
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+\usepackage{luatex85,luamplib}
+\mplibnumbersystem{double}
+\mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{notation}{Notation}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on Special Relativity}
+\author{David Meyer \\ 
+	{\small \vspace{-2.75mm} \href{mailto:dmm613@gmail.com}{dmm613@gmail.com}}}
+\date{Last Update: \today \\
+	{\small \vspace{1.00mm} Initial Version: December 23, 2024}}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{section:introduction}
+TBD
+
+\section{The Postulates of Special Relativity}
+\label{section:postulates}
+
+\begin{enumerate} 
+
+\item The laws of physics are the same for all observers in
+uniform motion relative to each other (i.e., in inertial
+reference frames).  This means that no inertial observer can
+detect a preferred or absolute state of motion. There is no
+absolute "rest" frame; all motion is relative.
+
+\item The speed of light in a vacuum is always constant,
+regardless of the motion of the observer or the light
+source. This speed is approximately $c=299,792,458$ m/s.
+\end{enumerate}
+
+\section{Time Dilation}
+\label{section:timedialation}
+Time dilation is an unusual phenomenon predicted by Einstein's
+special theory of relativity.  It refers to the effect where time
+appears to pass more slowly for an observer in motion relative to
+a stationary observer. In simpler terms, a moving clock ticks
+more slowly compared to a clock that is at rest, as observed by
+someone who is not moving with the clock
+\cite{physics:spacetime_hughes}.
+
+\bigskip
+\noindent
+The key idea is that when an object moves at a speed close to the
+speed of light relative to an observer, time for the moving
+object (as seen by the observer) slows down. This effect becomes
+more pronounced as the speed of the object approaches the speed
+of light.
+
+\bigskip
+\noindent
+Said another way, special relativity tells us that for an
+observer $O$ in an inertial frame of reference, a clock that is
+moving relative to the observer will be measured to tick more
+slowly than a clock at rest in the observer's frame of reference
+\cite{wikipedia:time_dilation}.
+
+\bigskip
+\noindent
+To see why this happens, consider the following thought experiment. The 
+experimental setup is shown in Figure \ref{figure:observer_at_rest}. 
+\footnote{Assume here that the thickness of the source and the
+detector are negligible so that the distance light travels is
+$h$.} Here the observer, light source and detector are at rest in
+inertial frame of reference $I$ (even though the train car is
+moving with velocity $v$).
+
+
+\begin{figure}[H]
+  \centering
+    \resizebox{0.65 \textwidth}{!} {                                    % resize the figure if you want
+      \begin{tikzpicture}
+%
+%       Draw the train car
+%
+        \draw[thick] (0,0) rectangle (6,3);                             % main body
+        \draw[thick] (0.5,-0.5) circle (0.5cm);                         % left wheel
+        \draw[thick] (5.5,-0.5) circle (0.5cm);                         % right wheel
+        \draw[draw=none] (6,3) -- (6,0);
+%
+%       Draw the observer inside
+%
+		\node[bob,mirrored,minimum size=1.0cm] at (4.55,1.10) {\footnotesize Observer $O$};
+%
+%       Draw the light source with smaller edges (rectangle)
+%
+        \draw[fill=yellow] (1.60,3) rectangle (2.4,2.7);                % light source as a rectangle
+        \node[above] at (2.2,3.0) {Light Source};
+%
+%       Draw the detector
+%
+        \draw[fill=blue!50] (1.7,0.2) rectangle (2.3,0);                % detector completely inside the car
+        \node[below] at (2,-0.05) {Detector};
+%
+%       Draw the light beam (vertical line)
+%
+        \draw[->,dashed, thick, red] (2,2.7) -- (2,0.2);                % vertical light beam
+        \draw[<->, thick] (-0.75,3) -- (-0.75,0) node[midway, left] {\(h\)};
+        \draw[dotted, thick] (0,3) -- (-1,3);                           % top dotted line
+        \draw[dotted, thick] (0,0) -- (-1,0);                           % bottom dotted line
+%
+%       Draw the velocity vector
+%
+        \draw[->, thick] (6.5,1.5) -- (8.5,1.5) node[midway, above] {\(v\)}; 
+%
+%
+%       Draw the ground
+        \draw[thick] (-1,-1) -- (9,-1); % ground line
+      \end{tikzpicture}
+   }
+ \caption{Observer $O$ at rest with respect to a light source and detector}
+ \label{figure:observer_at_rest}
+\end{figure}
+
+\bigskip
+\noindent
+For observer at rest with respect to an inertial frame of
+reference, the time taken for a beam of light to travel from the
+light source to the detector is
+
+\smallskip
+\begin{equation*}
+  \begin{array}{llll}
+     h
+     &=& c t 					
+     		&\hspace{2em} \mathrel{\#} \text{$t$ is called 
+		        the proper time \cite{wikipedia:proper_time}} \\                
+[10pt]
+	 &\Rightarrow& t = \dfrac{h}{c} 
+	 		&\hspace{2em} \mathrel{\#} \text{solve for $t$}
+  \end{array}
+\end{equation*}
+
+\medskip
+\noindent
+Now consider the same experimental setup as in Figure
+\ref{figure:observer_at_rest} except this time the observer is on
+the train landing. That is, the observer's frame of reference is
+at rest with respect to the train car's frame of reference (which
+is moving with velocity $v$).\footnote{Note that the velocity $v$
+here is a the real constant representing a velocity confined to
+the x-direction.}
+
+\bigskip
+\begin{figure}[H]
+  \centering
+  \resizebox{0.80 \textwidth}{!} {                                              % resize the figure if you want
+     \begin{tikzpicture}
+%
+%       Draw a train car moved by delta x
+%
+        \draw[thick] (0,0) rectangle (6,3);                                     % main body
+        \draw[thick] (0.5,-0.5) circle (0.5cm);                                 % left wheel
+        \draw[thick] (5.5,-0.5) circle (0.5cm);                                 % right wheel
+        \draw[draw=none] (6,3) -- (6,0);      									% label frame of reference
+%
+%
+%       Draw an external observer outside the car, in the same position but relative to the moved train
+%
+		\node[bob,mirrored,minimum size=1.0cm] at (9.50,0.10) {\footnotesize Observer $O$};
+%
+%
+%       Draw the light source attached to the ceiling
+%
+        \draw[fill=yellow] (2,3) rectangle (2.4,2.7);                           % light source as a rectangle
+        \node[above] at (2.2,3.0) {Light Source};
+%
+%       Draw the detector moved ahead by delta x
+%
+        \draw[fill=blue!50] (3.7,0.2) rectangle (4.3,0);                        % detector ahead of the light source by delta x
+        \node[above] at (3, -0.5) {$x^{\prime}$};
+%
+%       Draw the Light beam
+%
+%		light beam from the light source to the detector
+%
+        \draw[->,dashed, thick, red] (2.2,2.7) -- (4.0,0.2) node [midway,right,xshift=2.0mm] {$\color{black}{ct^{\prime}}$};   
+        \draw[-,dashed, thin]       (2.2,2.7) -- (2.2,0.0) node [midway,left,xshift=-0.25mm,yshift=1.25mm] {$h$};                          
+        \draw[dotted, thick] (2.2,-0) -- (2.2,-0.52);
+        \draw[dotted, thick] (4.0,-0) -- (4.0,-0.52);
+        \draw[<-]     (2.2,-0.25) -- (2.70,-0.25);
+        \draw[->]     (3.35,-0.25) -- (4.0,-0.25);
+%
+%       Draw the height label (h) outside the car
+%
+        \draw[<->] (-0.50,3) -- (-0.50,0) node[midway, left] {\(h\)};
+%
+%       Draw the dotted lines parallel to the ground
+%
+        \draw[dotted, thick] (0,3) -- (-1,3); % top dotted line
+        \draw[dotted, thick] (0,0) -- (-1,0); % bottom dotted line
+%
+%       Draw the velocity vector
+%
+        \draw[->] (6.5,1.5) -- (8.5,1.5) node[midway, above] {\(v\)}; 
+%
+%       Draw the ground
+%
+        \draw[thick] (-1,-1) -- (11,-1); % ground line
+    \end{tikzpicture}
+   }
+ \caption{Observer $O$ at rest with respect to another inertial frame of reference}
+ \label{figure:observer_motion}
+\end{figure}
+
+\bigskip
+\noindent
+The question now is how much time, call it $t^{\prime}$, passes
+from the point of view of observer $O$ when the light travels
+from the source to the detector. $x^{\prime}$ is the distance the
+train moves forward (from the origin) in time $t^{\prime}$. We
+also know that the speed of light in a vacuum is $c$ for all
+observers, so the distance that light travels (from the source to
+the detector) in this case is $c t^{\prime}$ (the hypotenuse of
+the triangle shown in Figure \ref{figure:observer_motion}).
+
+\medskip
+\noindent
+\remark{Note that in general, the coordinates in the "stationary"
+frame of reference (call it $S$) are referred to as $(t,x,y,z)$,
+while the corresponding coordinates in the "moving" frame of
+reference (call it $S^{\prime}$) are denoted $(t^{\prime},x^{\prime}, 
+y^{\prime},z^{\prime})$. Coordinates in $S^{\prime}$ are related to 
+coordinates in $S$ by the Lorentz transformations 
+\cite{einstein1905,lorentz1904electromagnetic}.
+\label{remark:frames_of_reference}} 
+
+\bigskip
+\noindent
+To compute $t^{\prime}$, consider the $h-x^{\prime}-c t^{\prime}$ 
+triangle shown in Figure \ref{figure:observer_motion}, which is abstracted 
+in Figure \ref{figure:triangle}. 
+
+\begin{figure}[H]
+  \centering
+  \resizebox{0.35 \textwidth}{!} {                                                                      % resize the figure if you want
+     \begin{tikzpicture} 
+        \draw[->, line width=1pt] (-1.22,0) -- (4.22,0) node[right] {}; 
+        \draw[->, line width=1pt] (0,-1.22) -- (0,5.22) node[above] {}; 
+        \draw [line width=1pt,red] (1,1) -- (3,1) -- (1,4) -- cycle; 
+        \draw[draw=none] (1,1) -- (1,4) node [midway,left] {$h$};
+        \draw[draw=none] (1,1) -- (3,1) node [midway,below] {$x^{\prime}$};
+        \draw[draw=none] (1,4) -- (3,1) node [midway,right,xshift=0.15cm] {$c t^{\prime}$};
+        \end{tikzpicture}
+     }
+  \caption{Triangle formed by the motion of the train with respect to the observer $O$}
+  \label{figure:triangle}
+\end{figure}
+
+\bigskip
+\noindent
+Using this triangle we can calculate $t^{\prime}$ using the
+Pythagorean theorem:
+
+\bigskip
+\begin{equation*}
+ \begin{array}{llll}
+     (c t^{\prime})^2
+     &=& h^2 + {x^{\prime}}^2 					
+     		&\hspace{5.00em} \mathrel{\#} \text{by the Pythagorean theorem} \\
+[10pt]
+     &\Rightarrow& (c t^{\prime})^2 = {(ct)}^2 + {x^{\prime}}^2 					
+     		&\hspace{5.00em} \mathrel{\#} h = c t \\
+[15pt]
+	&\Rightarrow& (c t^{\prime})^2 = (ct)^2 + (v t^{\prime})^2
+			&\hspace{5.00em} \mathrel{\#} x^{\prime} = v t^{\prime} \\
+[15pt]
+	&\Rightarrow& c^2 {t^{\prime}}^2 = c^2t^2 + v^2 {t^{\prime}}^2
+			&\hspace{5.00em} \mathrel{\#}  \text{square terms} \\
+[15pt]
+	&\Rightarrow& {t^{\prime}}^2 = t^2 + \dfrac{v^2}{c^2} {t^{\prime}}^2
+			&\hspace{5.00em} \mathrel{\#}  \text{divide both sides by $c^2$} \\
+[15pt]
+	&\Rightarrow& {t^{\prime}}^2 - \dfrac{v^2}{c^2} {t^{\prime}}^2 = t^2 
+			&\hspace{5.00em} \mathrel{\#}  \text{subtract $\dfrac{v^2}{c^2} 
+			{t^{\prime}}^2$ from both sides} \\
+[15pt]
+	&\Rightarrow& {t^{\prime}}^2 \left (1 - \dfrac{v^2}{c^2} \right) = t^2 
+			&\hspace{5.00em} \mathrel{\#} \text{factor out ${t^{\prime}}^2$} \\
+[15pt]	
+	&\Rightarrow& {t^{\prime}}^2 = \dfrac{t^2}{\left (1 - \dfrac{v^2}{c^2} \right)}
+			&\hspace{5.00em} \mathrel{\#}  \text{divide both sides by $\left 
+			(1 - \dfrac{v^2}{c^2}\right )$} \\
+[35pt]
+	&\Rightarrow& t^{\prime} = \dfrac{t}{\sqrt{1 - \dfrac{v^2}{c^2}}}
+			&\hspace{5.00em} \mathrel{\#}  \text{take the square root of both sides}
+  \end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+So for observer $O$ the passage of time on the moving train slows
+down by a factor of $\gamma = \dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}$.
+
+\bigskip
+\noindent
+$\gamma$ is called the Lorentz factor (or sometimes the gamma
+factor). Note also that $t^{\prime}$ can be written using the
+Lorentz factor: $t^{\prime} = \gamma t$. The Lorentz factor is
+sometimes written $\gamma(v)$ or $\gamma_{v}$ to emphasize $v$.
+%
+%
+%
+\section{Length Contraction}
+\label{section:lenght_contraction}
+%
+%
+%
+\section{The Lorentz Transformations}
+\label{section:the_lorentz_transformations}
+%
+%
+%
+\section{The Andromeda Paradox}
+\label{section:the_andromeda_paradox}
+%
+%
+%
+\section{Spacetime Invariance}
+\label{section:spacetime_invariance}
+%
+%
+%
+\section{Conclusions}
+\label{section:conclusions}
+%
+%
+%
+\section*{Acknowledgements}
+\label{section:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/xfghcdxjyzhg#675841}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{physics}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

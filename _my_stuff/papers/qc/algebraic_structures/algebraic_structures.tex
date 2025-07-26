@@ -1,0 +1,233 @@
+\documentclass[11pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}    
+\usepackage{circuitikz}                                                 % draw circuits
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%
+%	so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%	Title, author and date
+%
+\title{A Note on Algebraic Structures}
+\author{David Meyer \\ dmm613@gmail.com}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: May 8, 2018}}
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{A Few Algebraic Structures and Their Features}
+
+\setlength{\tabcolsep}{0.60em}
+\begin{center}
+\begin{table}[H]
+\scalebox{0.75}{
+\begin{tabular}{l | c | c | c | c | c | c}
+{{\large \bf Structure}}        & $\textbf{\large ABO}^{\ref{item:abo}}$            & {\large \bf Identity}
+                                & {\large \bf Inverse}                              & {\large \bf $\text{Distributive}^{\ref{item:distributive}}$}
+                                & {\large\bf $\text{Commutative}^{\ref{item:commutative}}$}   & {\bf Comments} \\
+\hline\hline					% separate column names from rows
+Semigroup                       & \checkmark & no         & no         & N/A        & no    & $(S,\circ)$ \\
+Monoid                          & \checkmark & \checkmark & no         & N/A        & no    & Semigroup with identity $\in S$ \\
+Group                           & \checkmark & \checkmark & \checkmark & N/A        & no    
+ 											 & Monoid with inverses: $a \in S\backslash\{0\} \Rightarrow a^{-1} \in S$ \\
+Abelian Group                   & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(\circ)$ & Commutative group \\
+$\text{Ring}_{+}$               & \checkmark & \checkmark & \checkmark & N/A        & \checkmark $(+)$     & Abelian group under $+$ \\
+$\text{Ring}_{*}$               & \checkmark & yes/no     & no         & \checkmark & no                   & Monoid under $*$ \\
+Division Ring                   & \checkmark & \checkmark $(+,*)$      &\checkmark $(+,*)$  & \checkmark
+                                             & \checkmark $(+)$  & Ring with multiplicative inverses \\
+Field                           & \checkmark & \checkmark $(+,*)$      & \checkmark $(+,*)$ & \checkmark   & \checkmark $(+,*)$
+                                             & Division ring with commutative multiplication \\
+Module		                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Ring \\
+Vector Space                    & \checkmark & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Abelian group under $+$, scalars $\in$ Field \\
+Algebra over a Ring            & yes/no & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Module with bilinear  $\text{product}^{\ref{item:bilinear_map}}$\\
+Algebra over a Field            & yes/no & \checkmark $(+,*)$      & \checkmark $(+)$   & \checkmark   & \checkmark $(+)$
+                                             & Vector space with bilinear product
+\end{tabular}}
+\caption{A Few Algebraic Structures and Their Features}
+\label{tab:algebraic_structures}
+\end{table}
+\end{center}
+
+\noindent
+\subsection{Definitions}
+
+\begin{enumerate}
+\item \textbf{ABO:} Associative Binary Operation 
+\label{item:abo}
+\begin{itemize}
+\item $(x \circ y) \circ z = x \circ  (y \circ z)$  
+      for all $x, y, z \in S$
+\item $x \circ y \in S$ for all $x, y \in S$
+      ($S$ is closed under $\circ$)
+\end{itemize}
+
+\item \textbf{Distributive:} Distributive Property 
+\label{item:distributive}
+\begin{itemize}
+\item Left Distributive Property:  $x * (y+z )= (x*y) + (x*z)$ for
+                                   all $x, y, z \in S$
+\item Right Distributive Property: $(y + z) * x = (y*x) + (z*x)$
+                                   for all $x, y, z \in S$
+\item $*$ is \emph{distributive}   over $+$ if $*$ is left and 
+                                   right distributive
+\end{itemize}
+
+\item \textbf{Commutative:} Commutative Property
+\label{item:commutative}
+\begin{itemize}
+\item $x \circ y = y \circ x {\mbox{ for all }}x,y\in S$
+\end{itemize}
+
+\item \textbf{Bilinear Map:} 
+\label{item:bilinear_map}
+A bilinear map is a function combining elements of two vector
+spaces to yield an element of a third vector space, and is linear
+in each of its arguments \cite{wikipedia:bilinear_map}.  Matrix
+multiplication is an example.
+
+\bigskip
+\noindent
+More specifically, a bilinear map is a function \( B: V \times W
+\to Z \) such that for all \( v_1, v_2 \in V \), \( w_1, w_2 \in
+W \), and scalars \( \alpha \in \mathbb{F} \):
+
+\begin{equation*}
+   B(\alpha v_1 + v_2, w) = \alpha B(v_1, w) + B(v_2, w)
+\end{equation*}
+
+and
+
+\vspace{-0.85em}
+\begin{equation*}
+   B(v, \alpha w_1 + w_2) = \alpha B(v, w_1) + B(v, w_2)
+\end{equation*}
+
+\bigskip
+\noindent
+Note that it may be the case that $V=W=Z$.
+\end{enumerate}
+
+
+
+\noindent
+\section{Notes}
+\begin{itemize}
+\item Table \ref{tab:algebraic_structures} implies that $\text{F}
+\subset \text{R} \subset \text{G} \subset \text{M} \subset \text{SG}$.
+\item Whether or not a ring has a multiplicative identity 
+      seems to depend on the field of study. 
+
+\smallskip
+\noindent
+      In general the definition of a ring $R$ doesn't require a
+      multiplicative inverse in $R$ ($a^{-1} \notin R$ for all $a
+      \in R$) or that multiplication be commutative in
+      $R$. Specifically: $R$ is an Abelian group under $+$ but we
+      don't require that multiplication be commutative (while
+      $a+b = b+a$ for all $a,b \in R$, we don't require that $ab
+      = ba$ for all $a,b \in R$). These are perhaps the main ways
+      in which a ring differs from a field. In addition, as
+      mentioned above in some cases $R$ need not include a
+      multiplicative identity $(1 \notin R)$.
+\item $\text{VS} \subset \text{Module}$ since the scalars in a
+      module come from a ring as opposed to a field like we find
+      in vector spaces and $\text{F} \subset \text{R}$
+\cite{module_theory_blyth}.
+\end{itemize}
+%
+%
+%
+% \section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/fcfcnyxmgzwv}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 

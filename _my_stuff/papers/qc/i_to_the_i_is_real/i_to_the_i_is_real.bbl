@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{notes:eulers_formula}
+{David Meyer}.
+\newblock {A Few Notes on Euler’s Formula and Euler’s Identity}.
+\newblock \url{https://davidmeyer.github.io/qc/euler.pdf}, 2021.
+\newblock [See \url{https://davidmeyer.github.io/qc/}].
+
+\bibitem{principal_argument}
+{Juan Carlos Ponce Campuzano}.
+\newblock {The Principal Argument}.
+\newblock \url{https://complex-analysis.com/content/principal_argument.html},
+  2019.
+\newblock [Online; accessed 17-November-2022].
+
+\bibitem{eulers_formula_corollary}
+{Proof Wiki}.
+\newblock {Corollary to Euler's Formula}.
+\newblock \url{https://proofwiki.org/wiki/Euler\%27s_Formula/Corollary},
+  September 2018.
+\newblock [Online; accessed 17-November-2022].
+
+\bibitem{complex_conjugation_is_automorphism}
+{Proof Wiki}.
+\newblock {Complex Conjugation is Automorphism}.
+\newblock \url{https://proofwiki.org/wiki/Complex_Conjugation_is_Automorphism},
+  September 2020.
+\newblock [Online; accessed 15-November-2022].
+
+\bibitem{product_complex_conjugates}
+{Proof Wiki}.
+\newblock {Product of Complex Conjugates}.
+\newblock \url{https://proofwiki.org/wiki/Product_of_Complex_Conjugates},
+  September 2020.
+\newblock [Online; accessed 17-November-2022].
+
+\bibitem{sum_of_conjugates}
+{Proof Wiki}.
+\newblock {Sum of Complex Conjugates}.
+\newblock \url{https://proofwiki.org/wiki/Sum_of_Complex_Conjugates}, September
+  2020.
+\newblock [Online; accessed 17-November-2022].
+
+\bibitem{properties_of_logarithms}
+{shsu.edu}.
+\newblock {Properties of Logarithms}.
+\newblock
+  \url{https://www.shsu.edu/kws006/Precalculus/3.3_Logarithms_files/S&Z\%206.2\%20&\%206.3.pdf}.
+\newblock [Online; accessed 17-November-2022].
+
+\bibitem{wiki:eulers_formula}
+{Wikipedia Contributors}.
+\newblock {Euler's Formula --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Euler%27s_formula&oldid=866429907},
+  2018.
+\newblock [Online; accessed 11-November-2018].
+
+\bibitem{wiki:principle_branch}
+{Wikipedia Contributors}.
+\newblock {Principal Branch --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Principal_branch&oldid=1009085215},
+  2021.
+\newblock [Online; accessed 15-November-2022].
+
+\bibitem{wiki:taylor}
+{Wikipedia Contributors}.
+\newblock {Taylor Series --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Taylor_series&oldid=1033135703},
+  2021.
+\newblock [Online; accessed 6-August-2021].
+
+\bibitem{wiki:complex_logarithm}
+{Wikipedia Contributors}.
+\newblock {Complex Logarithm --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Complex_logarithm&oldid=1120921282},
+  2022.
+\newblock [Online; accessed 18-November-2022].
+
+\end{thebibliography}

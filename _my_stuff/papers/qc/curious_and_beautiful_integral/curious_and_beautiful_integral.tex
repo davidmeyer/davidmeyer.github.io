@@ -1,0 +1,243 @@
+\documentclass{article}
+%
+%
+%	curious_and_beautiful_integral.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=0.65in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}													% comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}													% \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}													% use characters instead of numbers in enumerate
+\usepackage{changepage}													% needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}													% \multirow and \multicolumn
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+% \usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Curious Integral: ${\displaystyle \int\limits_{0}^{1} x \cdot 
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx = 
+			\dfrac{1}{e}$}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last update: \today}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Ok, but why?}
+\label{sec:introduction}
+
+\bigskip
+{\Large Consider:}
+
+\begin{center}
+      \begin{math}								% turn on math mode
+      \fontsize{11.40}{8}
+	   \begin{array}{llll}						% make it an array
+	       {\displaystyle \int\limits_{0}^{1} x \cdot 
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}} \; dx
+	   &=& {\displaystyle \int\limits_{0}^{1} x^{\frac{1}{1}} \cdot x^{\frac{1}{1 \cdot 2}} \cdot 
+	   		x^{\frac{1}{1 \cdot 2 \cdot 3}} \cdot x^{\frac{1}{1 \cdot 2 \cdot 3 \cdot 4}}}
+			\cdots \; dx
+			&\hspace{0.25em} \mathrel{\#} \text{radical $\rightarrow$ exponent notation} \\
+[18pt]
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\big [ \frac{1}{1} + \frac{1}{1 \cdot 2} + 
+	   		\frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{1 \cdot 2 \cdot 3 \cdot 4} + 
+			\cdots \big ]}} \; dx
+			&\hspace{0.25em} \mathrel{\#} x^a \cdot x^b = x^{a+b} \\
+[18pt]
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [\sum\limits_{n=1}^{\infty} \frac{1}{n!} \right ]} \; dx}
+			&\hspace{0.25em} \mathrel{\#} \frac{1}{1} +\frac{1}{1\cdot 2} + \frac{1}{1\cdot 2 \cdot 3} + 
+			\frac{1}{1 \cdot 2\cdot3\cdot 4} + \cdots = 
+			\sum\limits_{n=1}^{\infty} \frac{1}{n!} \\
+[18pt]
+		&=& {\displaystyle \int\limits_{0}^{1} x^{\left [ \left ( \sum\limits_{n=0}^{\infty} \frac{1}{n!} \right ) 
+											\, - \, 1 \right ]} \; dx}
+			&\hspace{0.25em} \mathrel{\#} \sum\limits_{n=1}^{\infty} \frac{1}{n!} = 
+											\left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - \dfrac{1}{0!} =
+											\left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - 1\\
+[18pt]
+		&=& {\displaystyle \int\limits_{0}^{1} x^{e-1}} \; dx
+			&\hspace{0.25em} \mathrel{\#}  \sum\limits _{n=0}^{\infty} \frac{1}{n!} = e  
+											\Rightarrow \left (\sum\limits _{n=0}^{\infty} \frac{1}{n!} \right ) - 1 
+											= e - 1 \; \cite{wikipedia:representations_of_e} \\
+[18pt]
+		&=& \dfrac{x^{(e-1)+1}}{(e-1)+1} \bigg |_{0}^{1} 
+			&\hspace{0em} \mathrel{\#} \text{by the power rule \cite{wiki:power_rule}
+												and the FToC \cite{ftoc}} \\
+[18pt]
+		&=& \dfrac{x^{e}}{e} \bigg |_{0}^{1}
+			&\hspace{0.25em} \mathrel{\#} (e - 1) + 1 = e \\
+[18pt]
+		&=& \dfrac{1^{e}}{e} - \dfrac{0^{e}}{e}
+			&\hspace{0.25em} \mathrel{\#} \text{evaluate at the endpoints} \\
+[18pt]
+		&=& \dfrac{1}{e} - \dfrac{0}{e}
+			&\hspace{0.25em} \mathrel{\#} 1^e = 1 \text{ and } 0^e = 0 \\
+[12pt]
+		&=& \dfrac{1}{e}
+			&\hspace{0.25em} \mathrel{\#} {\displaystyle \int\limits_{0}^{1} x \cdot 
+	   		\sqrt{x \cdot \sqrt[3]{x \cdot \sqrt[4]{x \cdots}}}}
+			\; dx = \dfrac{1}{e} 
+
+	   \end{array}
+	  \end{math}
+\end{center}
+
+
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section*{Acknowledgements}
+\label{sec:acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/ydvsjrpsjphm#b24ca3}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

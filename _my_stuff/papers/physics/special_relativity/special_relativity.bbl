@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{einstein1905}
+Albert Einstein.
+\newblock Zur elektrodynamik bewegter k{\"o}rper.
+\newblock {\em Annalen der Physik}, 322(10):891--921, 1905.
+
+\bibitem{lorentz1904electromagnetic}
+Hendrik~A. Lorentz.
+\newblock Electromagnetic phenomena in a system moving with any velocity less
+  than that of light.
+\newblock {\em Proceedings of the Royal Netherlands Academy of Arts and
+  Sciences}, 6:809--831, 1904.
+
+\bibitem{physics:spacetime_hughes}
+{Scott Hughes}.
+\newblock {Spacetime: Introduction to Special Relativity}.
+\newblock \url{https://web.mit.edu/sahughes/www/8.022/lec11.pdf}, 2005.
+\newblock [Online; accessed 24-December-2024].
+
+\bibitem{wikipedia:proper_time}
+{Wikipedia contributors}.
+\newblock Proper time --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Proper_time&oldid=1238644995},
+  2024.
+\newblock [Online; accessed 24-December-2024].
+
+\bibitem{wikipedia:time_dilation}
+{Wikipedia contributors}.
+\newblock Time dilation --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Time_dilation&oldid=1260859390},
+  2024.
+\newblock [Online; accessed 24-December-2024].
+
+\end{thebibliography}

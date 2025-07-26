@@ -1,0 +1,146 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{relsize}
+ \usepackage[hyphenbreaks]{breakurl}
+ 
+ \newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+
+
+
+
+\title{A Few Notes On The Riemann Zeta Function}
+\author{David Meyer \\ dmm613@gmail.com}
+
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: June 22, 2021}}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+TBD
+
+\subsection{Dirichlet Series}
+A Dirichlet Series \cite{mccarthy2018} is an infinite series of the form
+
+\bigskip
+\begin{equation}
+f(s) = \sum\limits_{n = 1}^{\infty} \frac{a_n}{n^s}
+\label{eqn:dirichlet_series}
+\end{equation}
+
+\bigskip
+\noindent
+for $s \in \mathbb{C}$. Convention seems to be that it is unnecessary to note that $n \in \mathbb{N}^+$.  
+
+\bigskip
+\noindent
+The complex variable $s$ in Equation \ref{eqn:dirichlet_series} is represented as $s = \alpha + i t$. We use the 
+notation $ \Re(s)$ and $\Im(s)$ to indicate the real and imaginary parts of $s$ respectively. That is, 
+$\alpha = \Re(s)$ and $t = \Im(s)$.
+
+
+\bigskip
+\noindent
+Perhaps the most famous example of a Dirichlet series is the Riemann zeta function $\zeta(s)$, where
+we take $a_n = 1$ for all $n \in \mathbb{N}^+$:
+
+
+\bigskip
+\begin{equation}
+\zeta(s) = \sum^\infty_{n = 1} \frac{1}{n^s}
+\label{eqn:zeta_function}
+\end{equation}
+
+\bigskip
+\section{Euler's Product Formula}
+Recall that the Riemann zeta function (Equation \ref{eqn:zeta_function}) is defined to be
+
+\medskip
+\begin{equation*}
+\zeta(s) = \sum^\infty_{n = 1} \frac{1}{n^s}
+\end{equation*}
+
+\noindent
+for $s \in \mathbb{C}$.
+
+\bigskip
+\noindent
+In 1737 Leonhard Euler \cite{euler_product_formula} discovered the beautiful connection between the zeta function and the prime numbers by proving this identity:
+
+\medskip
+\begin{equation}
+\sum^\infty_{n = 1} \frac{1}{n^s} = \prod_{p \in \mathbb{P}}  \bigg (\frac{1}{1 - p^{-s}} \bigg )
+\label{eqn:zeta}
+\end{equation}
+
+\bigskip
+\noindent
+The left side of Equation \ref{eqn:zeta} is by definition $\zeta(s)$ (Equation \ref{eqn:zeta_function}). The infinite product on the right side of Equation \ref{eqn:zeta}  
+extends over all prime numbers $p$ and is called a Euler Product \cite{euler_product}. A Euler Product is the expansion of a Dirichlet series 
+(Equation \ref{eqn:dirichlet_series}) into an infinite product indexed by prime numbers:
+
+\begin{equation*}
+\prod_{p \in \mathbb{P}}  \bigg (\frac{1}{1 - p^{-s}} \bigg ) = \frac{1}{1 - 2^{-s}} \cdot \frac{1}{1 - 3^{-s}} \cdot  \frac{1}{1 - 5^{-s}} \cdot  \frac{1}{1 - 7^{-s}} \cdot  \frac{1}{1 - 11^{-s}} \cdots  \frac{1}{1 - p^{-s}} \cdots
+\end{equation*}
+
+\bigskip
+\noindent
+The Euler Product Formula (and therefore the zeta function) converges for $\Re(s) > 1$.
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{/Users/dmm/papers/bib/qc}
+
+
+\end{document} 
+

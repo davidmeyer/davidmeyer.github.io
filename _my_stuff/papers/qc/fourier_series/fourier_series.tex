@@ -1,0 +1,429 @@
+\documentclass{article}
+%
+%
+%	fourier_series.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	08 Oct 2023
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds,
+                hobby}
+\tikzset{>=latex}                                                       % default to LaTeX arrow head
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}                                                    % comment out if using beamer (stops \author{} from working in beamer)
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage{colortbl}                                                   % \rowcolor{yellow!75} etc
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+\usepackage{enumitem}                                                   % use characters instead of numbers in enumerate
+\usepackage{changepage}                                                 % needed for \begin{adjustwidth}{-3.25em}{-2.0em} (left justify)
+\usepackage{bigints}
+\usepackage{multirow}                                                   % \multirow and \multicolumn
+%
+%	lualatex
+%
+%	Put this before \documentclass
+%
+%	!TEX TS-program = LuaLaTeX
+%
+%
+% \usepackage{luatex85,luamplib}
+% \mplibnumbersystem{double}
+% \mplibtextextlabel{enable}
+%
+%
+%
+%	Describe floating point parameters, \fpeval
+%
+\ExplSyntaxOn
+\cs_set_eq:NN \fpeval \fp_eval:n
+\ExplSyntaxOff
+%
+%	Get the x and y components out of a coordinate, e.g.
+%
+%	\coordinate (EP) at (8,5);
+%	\gettikzxy{(EP)}{\slopex}{\slopey}
+%
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+%
+%
+%	Watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	For drawing matrix products 
+%
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy commands
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\bda}{\Big \downarrow}						% big down arrow
+\newcommand{\veq}{\mathrel{\rotatebox{90}{$=$}}}
+%
+%	Title, author and date
+%
+\title{A Few Notes on the Fourier Series}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: October 3, 2019}}
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+\label{sec:introduction}
+
+\section{Vector Spaces: Linear Algebra vs. the Fourier Series}
+\label{section:vector_spaces}
+Here we will use the convention that the constant $c$ denotes 
+the constant function $f(x) = c$, for all $x$, when the context 
+indicates that $c$ is a function. On the other hand, the notation
+$c \cdot c$ denotes the scalar multiplication of the scalar value 
+$c$ with itself. Consequentially, I will use {\bf 1} to represent 
+the constant function $f(x) = 1$ and use context to disambiguate 
+the function $f(x)$ from the scalar value $1$. For example, in 
+Equation (\ref{eqn:1}), $\langle {\bf 1},{\bf 1} \rangle = \langle 
+f(x),f(x) \rangle$, while the notation $1 \cdot 1$ represents the scalar 
+multiplication of the scalar value 1 with itself.
+
+\setlength{\tabcolsep}{15pt}
+\renewcommand{\arraystretch}{3.00}
+
+
+\smallskip
+\bigskip
+\begin{table}[H]
+ \Large
+ \centering
+ \resizebox{0.85 \textwidth}{!} {
+   \begin{tabular}{|l|c|c|} 
+     \hline
+     {\Huge \bf What} & {\Huge \bf Linear Algebra} & {\Huge \bf Fourier Series} \\ 
+     \hline
+     \hline
+     {\LARGE \bf Vector Space}                  & $\boldsymbol{\mathbb{R}}^{n}$ 
+                                                & Piecewise smooth $2\pi$-periodic functions on $\mathbb{R}$ \\
+[10pt]
+     \hline
+     {\LARGE \bf Inner Product}                 & $\langle {\bf u},{\bf v} \rangle =
+                                                        {\displaystyle \sum\limits_{i=1}^{n} u_{i}v_{i}}$
+                                                & $\langle f(t),g(t) \rangle = {\displaystyle \frac{1}{\pi} 
+                                                        \int\limits_{-\pi}^{\pi} f(t)g(t) \, dt}$ \\
+[10pt]
+     \hline
+     {\LARGE \bf Orthonormal Basis $\left (\mathbb{R}^3 \right )$} 
+                                                & $\{(1,0,0),(0,1,0),(0,0,1)\}$ 
+                                                & $\{{\bf 1}, \cos mt, \sin nt\}, \, m,n \in \mathbb{N}\backslash\{0\}$ \\
+[10pt]
+     \hline
+     {\LARGE \bf Representation of a Vector in the Basis} 		
+                                                & ${\displaystyle {\mathbf x} = \sum\limits_{i=1}^{n} a_{i}\mathbf{e}_{i}}$ 
+                                                & $f(t) = {\displaystyle \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{\infty} 
+                                                        a_{n} \cos nt + \sum\limits_{n=1}^{\infty} b_{n} \sin nt}$  \\
+[10pt]
+     \hline
+     {\LARGE \bf Coefficients are Projections} 
+                                                & $a_{i} = \langle \mathbf{x},\mathbf{e}_{i} \rangle$
+                                                & \begin{tabular}{lll}
+                                                        \multirow{3}{*} {}
+                                                                & $a_{0} = \langle f(t),1 \rangle$       \vspace{-1.10cm} \\
+                                                                & $a_{m} = \langle f(t),\cos mt \rangle$ \vspace{-1.10cm} \\
+                                                                & $b_{m} = \langle f(t),\sin mt \rangle$
+                                                        \end{tabular} \\
+     \hline
+  \end{tabular}
+ }
+ \caption{Vector Spaces: Linear Algebra vs. Fourier Series}
+ \label{table:vector_spaces}
+\end{table}
+
+\smallskip
+\subsection{Orthonormal Bases and the Fourier Series}
+Some people (specifically Rahul Narain (@narain@mathstodon.xyz))
+feel that the orthonormal basis for the Fourier series should be
+$\{{\bf 1},\sqrt{2} \cos mt,\sqrt{2} \sin nt\}, \, m,n \in \mathbb{N}
+\backslash \{0\}$. 
+
+\bigskip
+\noindent
+Ok, but why is Narain arguing this? My guess is as follows:
+First, we know that the inner product of a vector $\mathbf{u}$ 
+with itself equals 1 ($\langle \mathbf{u},\mathbf{u} \rangle = 
+1$). However, for the Fourier series (where {\bf 1} represents the 
+constant function $f(t) = 1$) we have $\langle {\bf 1},{\bf 1}
+\rangle = 2$. Why? We can see this in Equation (\ref{table:vector_spaces}) 
+and in a bit more detail in Figure \ref{figure:fourier_inner_product}.
+
+\begin{equation}
+	\langle {\bf 1},{\bf 1} \rangle											= 
+		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt	= 
+		\frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt				= 
+		\frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}				= 
+		\frac{1}{\pi} \left (\pi - (-\pi) \right )				= 
+		\frac{1}{\pi} 2\pi										= 
+		2
+\label{eqn:1}
+\end{equation}
+
+
+\bigskip
+\begin{figure}[H]
+  \fcolorbox{black}{white} {								% make the frame blue
+    \begin{math}
+      \begin{array}{llll}
+        \langle {\bf 1},{\bf 1} \rangle
+        &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} f(t) f(t) \, dt}
+     	   &\hspace{2em} \mathrel{\#} \text{since {\bf 1} represents $f(t) = 1$ and the 
+										 definition of the inner product 
+										 (Table \ref{table:vector_spaces})} \\
+        &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \cdot 1 \, dt}
+     	   &\hspace{2em} \mathrel{\#} \text{since in $f(t) = 1$ for all 
+										 $t \in \mathbb{R}$} \\
+	   &=& {\displaystyle \frac{1}{\pi}\int\limits_{-\pi}^{\pi} dt}
+	  	   &\hspace{2em} \mathrel{\#} \text{since $1 \cdot 1 = 1$} \\
+	   &=& {\displaystyle \frac{1}{\pi}  \, t \, \bigg |^{\pi}_{-\pi}}
+		   &\hspace{2em} \mathrel{\#} \text{by the FToC \cite{ftoc}} \\
+	   &=& {\displaystyle \frac{1}{\pi} \left (\pi - (-\pi) \right )}
+		   &\hspace{2em} \mathrel{\#} \text{evaluate at the end points} \\
+	   &=& {\displaystyle \frac{1}{\pi} 2\pi}
+		   &\hspace{2em} \mathrel{\#} \text{simplify} \\
+	   &=& {\displaystyle 2}
+		   &\hspace{2em} \mathrel{\#} \langle 1,1 \rangle = 2 \; 
+								   \cite{quora:fourier_basis_functions}
+     \end{array}
+   \end{math}
+ }
+ \caption{Value of $\langle 1,1 \rangle$ for Fourier Series}
+ \label{figure:fourier_inner_product}
+\end{figure}
+
+\bigskip
+\noindent
+On the other hand, $\langle \cos nt, \cos nt \rangle =
+{\displaystyle \dfrac{1}{\pi} \int\limits_{-\pi}^{\pi} \cos^2 nt
+\,dt = \dfrac{1}{\pi} \pi = 1}$. In the same way, $\langle \sin
+nt, \sin nt \rangle = 1$.
+  
+ 
+\bigskip
+\noindent
+ We can also see that the vectors in the basis $\{{\bf 1}, \cos mt,
+ \sin nt\}, m,n \in \mathbb{N}\backslash\{0\}$ are 
+ orthogonal:
+ 
+\begin{equation*}
+  \langle {\bf 1},\sin nt \rangle = {\displaystyle
+  \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi} 1 \sin nt \, dt} =
+  {\displaystyle \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi} \sin nt
+  \, dt}  = 0
+\end{equation*} 
+  
+\smallskip
+\noindent
+Similarly, $\langle {\bf 1},\cos nt \rangle = \langle \cos mt,\sin nt
+\rangle = 0$.
+
+
+\bigskip
+\noindent
+Note that some authors set ${\displaystyle \langle {\bf 1},
+{\bf 1} \rangle = \int\limits_{0}^{2\pi} dt = 2 \pi}$
+\cite{quora:fourier_basis_functions}.
+ 
+
+
+%
+%
+%	show a derivation/proof
+%
+% \begin{equation*}
+% \begin{array}{llll}
+% x
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment or} \\
+% &=& y				&\hspace{2em} \mathrel{\#} \text{comment} \\
+% [10pt]
+% \end{array}
+% \end{equation*}
+%
+%
+%
+%	include an image
+%
+% \begin{figure}
+% \center{\includegraphics[frame, scale=0.50] {images/X.png}}
+% \caption{X}
+% \label{fig:X}
+% \end{figure}
+%
+%	How to put a box around a figure
+%
+% \begin{figure}[H]
+%  \centering
+%   \fbox{\begin{minipage}{34em}
+%    \begin{equation*}
+%     \begin{array}{rlrlrlr}
+%       9^2      &=& 81           &\longrightarrow& 8 + 1           &=& 9	  \\
+%       45^2     &=& 2025         &\longrightarrow& 20 + 25         &=& 45     \\
+%       703^2    &=& 494209       &\longrightarrow& 494 + 209       &=& 703    \\
+%       7777^2   &=& 60481729     &\longrightarrow& 6048 + 1729     &=& 7777   \\
+%       857143^2 &=& 734694122449 &\longrightarrow& 734694 + 122449 &=& 857143 \\
+%     \end{array}
+%    \end{equation*}
+%  \end{minipage}}
+%  \caption{A Few Example Kaprekar Numbers}
+%\end{figure}
+%
+%	
+%	How to wrap (and resize) your tikzpicture in a figure
+%
+% \begin{figure}[H]
+% \centering
+%  \resizebox{0.40 \textwidth}{!} {		% resize the figure if you want
+%    \begin{tikzpicture} 
+%     .....
+%    \end{tikzpicture}					% end tikzpicture
+%  }									% end resizebox
+% \caption{Some Figure}
+% \label{fig:some_figure}
+% \end{figure}
+%
+%	Build a figure that is resizable and framed with \fbox
+% 
+%                                                               % start building pascal's triangle
+%       Parameters and settings                                 % start with the parameters and settings
+%                                                               %
+% \def \nrows {14}                                              % number of rows in the triangle
+% \setlength {\fboxsep} {0.75em}								% get more space between fcolorbox and content
+% \setlength {\fboxrule}{1.25pt}								% change fcolorbox line thickness
+%                                                               %
+%       Build the figure                                        % build the figure
+%                                                               %
+% \begin{figure}[H]                                             % begin the figure
+%   \centering                                                  % center everything
+%   \fcolorbox{black}{white} {									% put a color box around the figure
+%     \resizebox{0.75 \textwidth}{!} {                          % resize the figure if you want
+%     															%
+%     <whatever>												% whatever goes in the figure
+%																%
+%      }                                                        % end resizebox
+%   }                                                           % end fbox
+%  \caption{X}                                     		   		% caption the figure
+%   \label{fig:X}                                  			    % label the figure
+% \end{figure}                                                  % end figure
+% 
+%
+%
+%
+\section{Conclusions}
+\label{sec:conclusions}
+%
+%
+%
+\section*{Acknowledgements}
+\label{sec:acknowledgements}
+Thanks to Dave Neary (@dneary@mathstodon.xyz), Grégoire 
+Locqueville (@glocq@mathstodon.xyz) and Alex (@alexmath@tech.lgbt) 
+for their insightful comments on the meaning of the symbol 1 in 
+the Fourier series basis.
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.025 mm} Source}
+\url{https://www.overleaf.com/read/mtpfwbpmwcpg#b65e5d}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%
+%
+% \section*{Appendix A}
+%
+%	done
+%
+\end{document} 
+

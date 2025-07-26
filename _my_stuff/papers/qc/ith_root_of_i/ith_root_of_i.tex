@@ -1,0 +1,115 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+
+\usepackage{geometry}                   % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                  % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                   % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}          % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                   % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+
+%
+% so you can do e.g., \begin{bmatrix}[r] (or [c] or [l])
+%
+
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\begin{document}
+
+\title {Is $\sqrt[i]{i}$ a Real Number?}
+\author{David Meyer \\ dmm613@gmail.com}
+
+\date{Last update: \today}							% Activate to display a given date or no date
+\maketitle
+
+Well, consider
+
+\begin{equation*}
+\begin{array}{lllll}
+\sqrt[i]{i}
+&=& i^{\frac{1}{i}}			
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $\sqrt[n]{x} = x^{\frac{1}{n}}$} \\
+[12pt]
+&=& i^{-i}
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $x^{\frac{1}{n}} = x^{-n}$} \\
+[12pt]
+&=& \dfrac{1}{i^{i}}
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $x^{-n} = \dfrac{1}{x^{n}}$} \\
+[12pt]
+&=& \dfrac{1}{e^{{(\frac{i\pi}{2})}^i}}
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $i = e^{\frac{i \pi}{2}}$ 
+		                                                 \cite{notes:is_i_to_the_i_a_real_number}} \\
+[12pt]
+&=& \dfrac{1}{e^{\frac{i^2\pi}{2}}}
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ ${(x^m)}^n = x^{mn}$}  \\
+[12pt]
+&=& \dfrac{1}{e^{-\frac{\pi}{2}}}
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $i^2 = -1$} \\
+[12pt]
+&=& e^{\frac{\pi}{2}}
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $\dfrac{1}{x^{-n}} = x^{n}$} \\
+[12pt]
+&\approx& 4.8105
+		&\qquad \qquad \qquad \qquad \mathbin{\#} \text{ $e^{\frac{\pi}{2}} \in \mathbb{R} 
+														 \Rightarrow \sqrt[i]{i} \in \mathbb{R}$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So apparently $\sqrt[i]{i}$ is a real number and in particular $\sqrt[i]{i} = e^{\frac{\pi}{2}} \approx 4.8105$.
+%
+%
+%
+% \section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+% \section*{\LaTeX \hspace{0.10 mm} Source}
+% \url{}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

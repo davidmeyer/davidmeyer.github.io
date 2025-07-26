@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Euler_product_formula_for_the_Riemann_zeta_function.aux
+The style file: plain.bst
+Database file #1: qc.bib
+You've used 9 entries,
+            2118 wiz_defined-function locations,
+            542 strings with 5751 characters,
+and the built_in function-call counts, 1981 in all, are:
+= -- 196
+> -- 63
+< -- 0
++ -- 27
+- -- 18
+* -- 65
+:= -- 344
+add.period$ -- 35
+call.type$ -- 9
+change.case$ -- 35
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 68
+empty$ -- 199
+format.name$ -- 18
+if$ -- 432
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 2
+newline$ -- 56
+num.names$ -- 18
+pop$ -- 71
+preamble$ -- 1
+purify$ -- 27
+quote$ -- 0
+skip$ -- 54
+stack$ -- 0
+substring$ -- 45
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 34
+warning$ -- 0
+while$ -- 18
+width$ -- 10
+write$ -- 109

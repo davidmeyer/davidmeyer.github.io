@@ -1,0 +1,2311 @@
+\documentclass{article}
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % ... or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+\usepackage{bigints}                                                    % bigger integral symbol
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,through,intersections,lindenmayersystems,backgrounds}    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{circuitikz}                                                 % draw circuits
+\usepackage{mathrsfs}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+
+
+
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+
+%
+%	title, etc
+%
+\title{A Few Notes on Vector Calculus }
+\author{David Meyer \\ dmm@1-4-5.net}
+\date{Last update: \today}
+%
+%	be compatible
+%
+\pgfplotsset{compat=1.17} 
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{Introduction}
+TBD
+
+\section{Notation}
+Some of the notation we'll use is described in this section.
+
+\subsection{Vectors}
+Some authors use bold font to denote a vector, e.g. 
+$\mathbf{u}$. Adding a "hat" denotes a unit vector. 
+That is, for a vector $\mathbf{u}$, 
+$\hat{\mathbf{u}}$ is defined to be 
+
+\begin{equation*}
+\hat{\mathbf{u}} := \dfrac{\mathbf{u}}{\| \mathbf{u} \|}
+\end{equation*}
+
+\bigskip
+\noindent
+In words: $\hat{\mathbf{u}}$ is a vector of unit
+length in the $\mathbf{u}$ direction.
+
+\bigskip
+\noindent
+Similarly, $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and
+$\mathbf{\hat{i}}$ are unit vectors in $\mathbb{R}^3$ in the $x$,
+$y$, and $z$ directions respectively. Note that
+$\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{k}}$
+are the canonical basis vectors for $\mathbb{R}^3$
+\cite{notes:basis} and have column vector format
+
+\bigskip
+\begin{equation*}
+{\displaystyle \mathbf {\hat {i}} 
+= {\begin{bmatrix}1\\0\\0\end{bmatrix}},\,\,
+\mathbf {\hat {j}} = {\begin{bmatrix}0\\1\\0\end{bmatrix}},\,\,
+\mathbf {\hat {k}} = {\begin{bmatrix}0\\0\\1\end{bmatrix}}}
+\end{equation*}
+
+\medskip
+\bigskip
+\noindent
+I have also seen $\mathbf{e}_i$ used to represent the $i^{th}$
+basis vector in $\mathbb{R}^n$. So $\mathbf{e}_i$ is a vector
+with a one in the $i^{th}$ position and a zero in each of the
+other $n - 1$ positions.  In $\mathbb{R}^3$ this means that
+$\mathbf{e}_1 = \mathbf{\hat{i}}$, $\mathbf{e}_2 =
+\mathbf{\hat{j}}$, and $\mathbf{e}_3 = \mathbf{\hat{k}}$.
+
+
+\bigskip
+\noindent
+In general, the standard basis (which is sometimes called the
+computational basis) for the $n$-dimensional Euclidean space
+consists of the ordered set of $n$ distinct vectors
+
+\begin{equation*}
+\{\mathbf {e} _{i}: 1 \leq i \leq n\}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\mathbf{e}_i$ is the $i^\text{th}$ basis vector, that is,
+it has a one in the $i^\text{th}$ coordinate (position) and zeros
+everywhere else.\footnote{This is also called a "one-hot"
+encoding in machine learning parlance, where the $i$'s might be
+the classes in a classification problem.} The $\mathbf{e}_i$ have
+column vector format
+
+\begin{flalign*}
+\mathbf{e}_{1} = 
+\begin{bmatrix} 
+1 \\
+0 \\
+\vdots \\
+0 \\
+0
+\end{bmatrix}, 
+\mathbf{e}_{2} = 
+\begin{bmatrix} 
+0 \\
+1 \\
+\vdots \\
+0 \\
+0
+\end{bmatrix}, 
+\hdots, 
+\mathbf{e}_{n-1} =
+\begin{bmatrix} 
+0 \\
+0 \\
+\vdots \\
+1 \\
+0
+\end{bmatrix}, 
+\mathbf{e}_{n} =
+\begin{bmatrix} 
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{bmatrix}
+\end{flalign*}
+
+
+\bigskip
+\noindent
+Using these definitions we can define the parametric form of some
+curve $C$ in $\mathbb{R}^3$, $\mathbf{r}(t)$, as follows:
+
+\medskip
+\begin{equation*}
+\mathbf{r}(t) = g(t) \mathbf{\hat{i}} +h(t)
+\mathbf{\hat{j}} + k(t) \mathbf{\hat{k}}
+\end{equation*}
+
+\bigskip
+\noindent
+where $t \in [a,b]$ and $g(t)$, $h(t)$, and $k(t)$ are scalar
+functions\footnote{A scalar function is a function $f$ such that
+$f: \mathbb{R}^n \to \mathbb{R}$.}.
+
+
+\bigskip
+\noindent
+Another common notation for vectors is $\vec{r}(t)$, where
+$\vec{r}(t)$ might be defined as follows:
+
+
+\bigskip
+\begin{equation*}
+\vec{r}(t) = g(t) \hat{i} +h(t) \hat{j} + k(t) \hat{k} 
+\end{equation*}
+
+
+
+\bigskip
+\noindent
+In this document I'll use these notations interchangeably.
+
+\section{Definitions and a Few Theorems}
+
+\begin{definition}
+{\bf Vector Notation:} 
+
+\bigskip
+\noindent
+Here we will use $\mathbf{a} = (a_1,a_2,\hdots, a_n)$ to
+represent a column or row vector in some $n$-dimensional
+space (usually $\mathbb{R}$ or $\mathbb{C}$). 
+If $\mathbf{a}$ is a column vector then in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace {
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}}_{n \times 1}
+\end{flalign*}
+
+
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+in matrix format
+
+\begin{flalign*}
+\mathbf{a} = 
+\underbrace{
+\begin{bmatrix} 
+a_1, a_2, \hdots, a_n
+\end{bmatrix}}_{1 \times n}
+\end{flalign*}
+
+\bigskip
+\noindent
+The \emph{transpose} of a vector $\mathbf{a}$,
+$\mathbf{a}^{\intercal}$, is defined as follows. If $\mathbf{a}$
+is a column vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1, a_2, \hdots, a_n
+\end{bmatrix}
+\end{flalign*}
+
+\smallskip
+\noindent
+Alternatively, if $\mathbf{a}$ is a row vector then
+
+\begin{flalign*}
+\mathbf{a}^{\intercal} = 
+\begin{bmatrix} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix}
+\end{flalign*}
+\end{definition}
+
+\smallskip
+\begin{definition}
+{\bf Dot Product:} $\mathbf{a} \cdot \mathbf{b}$
+
+\bigskip
+\noindent
+The dot product (aka scalar product 
+or inner product) of two $n$-dimensional vectors 
+$\mathbf{a} = (a_1,a_2,\hdots, a_n)$ and 
+$\mathbf{b} = (b_1,b_2,\hdots, b_n)$,
+denoted $\mathbf{a} \cdot \mathbf{b}$,
+is defined to be the scalar value
+
+\medskip
+\begin{equation}
+\mathbf{a} \cdot \mathbf{b}
+:= \sum\limits_{j = 1}^{n} a_j b_j
+\label{eqn:dot_product}
+\end{equation}
+\end{definition}
+
+\smallskip
+\noindent
+Another common notation for the dot product of
+$\mathbf{a}$ and $\mathbf{b}$ is $\langle \mathbf{a},
+\mathbf{b} \rangle$. That is, $\langle \mathbf{a}, \mathbf{b} \rangle
+= \mathbf{a} \cdot \mathbf{b}$.
+
+
+\bigskip
+\noindent
+If $\mathbf{a}$ and $\mathbf{b}$ are column vectors then their
+dot product $\mathbf{a} \cdot \mathbf{b}$ can also be written as
+the matrix product $\mathbf{a}^{\intercal}\mathbf{b}$. Similarly,
+if $\mathbf{a}$ and $\mathbf{b}$ are row vectors then their dot
+product can be written as the matrix product
+$\mathbf{a}\mathbf{b}^{\intercal}$. For example, the dot product
+of two $n \times 1$ column vectors $\mathbf{a}$ and $\mathbf{b}$
+is equivalent to the following matrix multiplication:
+
+
+\begin{flalign*}
+\mathbf{a} \cdot \mathbf{b} = \mathbf{a}^{\intercal}\mathbf{b}
+\rightarrow \begin{bmatrix} a_1, a_2, \hdots, a_n \end{bmatrix} 
+\begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}
+\rightarrow \sum\limits_{j = 1}^{n} a_j b_j
+\rightarrow c
+\end{flalign*}
+
+
+\noindent
+where $c \in \mathbb{R}$.
+
+\medskip
+\setstretch{1.5}									% get a bit of extra space
+\noindent
+According to the Pythagorean theorem, the length of a vector
+$\mathbf{a} = (a_1,a_2,a_3) \in \mathbb{R}^3$, denoted
+$\|\mathbf{a} \|$, equals $\sqrt{a_1^2 + a_2^2 + a_3^2}$. The
+next definition is a generalization of the notion of length to
+vectors in $\mathbb{R}^n$.
+
+\setstretch{1.0}									% set it back to default
+
+
+\bigskip
+\begin{definition}
+{\bf Euclidean Norm:} $\|\mathbf{x}\|$
+
+
+\bigskip
+\noindent
+The Euclidean norm of a vector
+
+\bigskip
+\begin{equation*}
+\mathbf{x} = (x_1,x_2,\ldots, x_n) \in \mathbb{R}^{n}
+\end{equation*}
+
+\bigskip
+\noindent
+is defined to be
+
+\begin{equation}
+\|\mathbf{x}\| := \sqrt{\langle \mathbf{x}, \mathbf{x}} \rangle =
+\sqrt{\sum\limits_{j = 1}^{n} x_{j}^{2}}
+\label{eqn:magnitude}
+\end{equation}
+\end{definition}
+
+\bigskip
+\begin{definition}
+{\bf $p$-Norm:} $\left\|\mathbf {x} \right\|_{p}$
+
+\medskip
+\noindent
+The $p$-norm of a vector 
+
+\smallskip
+\begin{equation*}
+\mathbf{x} = (x_{1},x_{2}. \ldots , x_{n})
+\end{equation*}
+
+\medskip
+\noindent
+is defined to be
+
+
+\begin{equation*}
+\left\|\mathbf {x} \right\|_{p} := \left(\sum _{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1/p}
+\end{equation*}
+
+\bigskip
+\noindent
+for $p \geq 1$ and $p \in \mathbb{R}$. 
+
+\bigskip
+\setstretch{1.25}
+\noindent
+For $p = 1$, we get the taxicab norm, for $p = 2$ we get the
+Euclidean norm, and as $p$ approaches $\infty$ the $p$-norm
+approaches the infinity norm or maximum norm: ${\displaystyle
+\left\|\mathbf {x} \right\|_{\infty } :=\max
+_{i}\left|x_{i}\right|}$.
+\end{definition}
+
+\smallskip
+\setstretch{1.25}
+\noindent
+Next, assume that $\mathbf{x}$ and $\mathbf{y}$ are two linearly
+independent vectors in $\mathbb{R}^3$ and that $M$ is the plane
+spanned by them. Then these two vectors generate a triangle in
+$M$ with sides of length $\| \mathbf{x} \|$, $\| \mathbf{y} \|$,
+and $\| \mathbf{x} - \mathbf{y} \|$. If $\theta \in \{0, \pi \}$
+is the angle between the vectors $\mathbf{x}$ and $\mathbf{y}$ in
+$M$, then the Law of Cosines \cite{law_of_cosines} gives us
+
+\begin{equation*}
+\| \mathbf{x} - \mathbf{y} \|^2 
+= \| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \cos (\theta) \|
+\mathbf{x}\| \|\mathbf{y} \| 
+\end{equation*}
+
+\medskip
+\noindent
+We can also see that 
+
+\setstretch{1.0}
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{x} - \mathbf{y} \|^2
+&=&
+ \langle \mathbf{x} - \mathbf{y}, \mathbf{x} - \mathbf{y} \rangle
+ 		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&=& \sum\limits_{j = 1}^{n} (x_j - y_j)^2
+		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[12pt]
+&=& \sum\limits_{j = 1}^{n} (x_{i}^{2} - 2 x_{j} y _{j} + y_{j}^{2} )
+		&\qquad \qquad \mathrel{\#} \text{expand previous line} \\
+[12pt]
+&=& \sum\limits_{j = 1}^{n} x_j ^2 - 2 \sum\limits_{j = 1}^{n} x_j y_j + \sum\limits_{j = 1}^{n} y_j
+		&\qquad \qquad \mathrel{\#} \text{sum is a linear operator} \\
+[12pt]
+&=&  \| \mathbf{x} \|^2 + - 2  \langle \mathbf{x} , \mathbf{y} \rangle + \| \mathbf{y} \|^2 
+ 		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:magnitude})} \\
+[12pt]
+&=&  \| \mathbf{x} \|^2 + \| \mathbf{y} \|^2 - 2  \langle \mathbf{x} , \mathbf{y} \rangle
+ 		&\qquad \qquad \mathrel{\#} \text{rearrange}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Combining these expressions for $\| \mathbf{x} - \mathbf{y} \|^2$ we get
+
+
+\bigskip
+\begin{equation*}
+\| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \cos (\theta) \| \mathbf{x}\| \|\mathbf{y} \|
+= \| \mathbf{x} \|^2 + \| \mathbf{y}\|^2 - 2 \langle \mathbf{x}, \mathbf{y} \rangle
+\end{equation*}
+
+
+\bigskip
+\noindent
+Subtracting $\| \mathbf{x} \|^2 + \| \mathbf{y}\|^2$ from both sides,
+dividing by $-2$, and rearranging gives us
+
+\bigskip
+\begin{equation}
+\langle \mathbf{x}, \mathbf{y} \rangle = 
+\| \mathbf{x} \| \| \mathbf{y} \| \cos \theta
+\label{eqn:cos_identity}
+\end{equation}
+
+\bigskip
+\begin{definition} {\bf Orthogonal Vectors:} $\langle \mathbf{x}, \mathbf{y} \rangle = 0$
+
+\bigskip
+\noindent
+We say that $\mathbf{x}, \mathbf{y} \in \mathbb{R}^{n}$ are
+orthogonal if $\langle \mathbf{x}, \mathbf{y} \rangle = 0$, since
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+\langle \mathbf{x}, \mathbf{y} \rangle 
+&=& \| \mathbf{x} \| \| \mathbf{y} \| \cos \theta
+		&\qquad \qquad \mathrel{\#} \text{by Equation (\ref{eqn:cos_identity})} \\
+[10pt]
+&\Rightarrow& \langle \mathbf{x}, \mathbf{y} \rangle 
+		= \| \mathbf{x} \| \| \mathbf{y} \| \cos \frac{\pi}{2}
+		&\qquad \qquad \mathrel{\#} \text{$\mathbf{x}$ and $\mathbf{y}$ orthogonal
+		$\Rightarrow \theta = \frac{\pi}{2}$} \\
+[10pt]
+&\Rightarrow& \langle \mathbf{x}, \mathbf{y} \rangle 
+		= \| \mathbf{x} \| \| \mathbf{y} \| \; 0
+		&\qquad \qquad \mathrel{\#} \cos \frac{\pi}{2} = 0 \\
+[10pt]
+&\Rightarrow & \langle \mathbf{x}, \mathbf{y} \rangle  = 0
+		&\qquad \qquad \mathrel{\#} \| \mathbf{x} \| \| \mathbf{y} \| \; 0 = 0
+\end{array}
+\end{equation*}
+\end{definition}
+
+\bigskip
+\begin{definition} 
+{\bf Orthogonal Projection:} 
+
+\bigskip
+\noindent
+Given two linearly independent vectors $\mathbf{a},\mathbf{b} \in
+\mathbb{R}^{n}$, we want to find the orthogonal projection of
+$\mathbf{a}$ onto the line generated by $\mathbf{b}$. To analyze
+this situation, denote by $M$ the plane generated by $\mathbf{a}$
+and $\mathbf{b}$ and consider an orthonormal basis
+$\{\mathbf{v}_1,\mathbf{v}_2\}$ of $M$ consisting of
+$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}$
+($\mathbf{v}_1 = \mathbf{\hat{b}}$) and a unit vector
+$\mathbf{v}_2 \in M$ orthogonal to $\mathbf{v}_1$.  This
+situation is shown in Figure \ref{fig:orthogonal_projection}.
+
+
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[cfbox=black,scale=0.40] 
+{images/orthogonal_projection.png}}
+\caption{Orthogonal Projection}
+\label{fig:orthogonal_projection}
+\end{figure}
+
+
+
+\bigskip
+\noindent
+Since $\{ \mathbf{v}_1, \mathbf{v}_2\}$ is a basis of $M$ there
+are scalars $\alpha$ and $\beta$ such that
+
+\smallskip
+\begin{equation}
+\mathbf{a} = \alpha \mathbf{v}_1 + \beta \mathbf{v}_2
+\label{eqn:alpha_beta}
+\end{equation}
+
+\bigskip
+\noindent
+Here we want to solve for $\alpha$. One way to do that is 
+to take the inner product of $\mathbf{b}$ and Equation
+(\ref{eqn:alpha_beta}), since
+
+\begin{equation*}
+\begin{array}{lllll}
+\langle \mathbf{a}, \mathbf{b} \rangle
+&=& \langle \mathbf{b}, \mathbf{a} \rangle
+					&\qquad \mathrel{\#} \text{by Equation (\ref{eqn:dot_product})} \\
+[15pt]
+&=& \langle \mathbf{b}, (\alpha \mathbf{v}_1 + \beta \mathbf{v}_2) \rangle
+					&\qquad \mathrel{\#} \text{by Equation (\ref{eqn:alpha_beta})} \\
+[15pt]
+&=& \langle \mathbf{b}, \alpha \mathbf{v}_1 \rangle + \langle \mathbf{b}, \beta \mathbf{v}_2 \rangle
+					&\qquad \mathrel{\#} \text{dot product is distributive 
+					over vector addition \cite{wiki:dot_product}} \\
+[15pt]
+&=& \alpha \langle \mathbf{b},\mathbf{v}_1 \rangle + \beta  \langle \mathbf{b}, \mathbf{v}_2 \rangle
+					&\qquad \mathrel{\#} \text{by the scalar product rule:
+					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle
+					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$ \cite{wiki:dot_product}} \\
+[12pt]
+&=& \alpha \langle \mathbf{v}_1, \mathbf{b}\rangle + \beta \, 0
+					&\qquad \mathrel{\#} \text{since }  \langle \mathbf{v}_1, \mathbf{v}_2 \rangle = 0 
+					\text{ and } \mathbf{v}_1 = \mathbf{\hat{b}} 
+					\Rightarrow \langle \mathbf{\hat{b}}, \mathbf{v}_2  \rangle
+					= \frac{1}{\| \mathbf{b} \|}  \langle \mathbf{b}, \mathbf{v}_2  \rangle
+					= 0 
+					\Rightarrow  \langle \mathbf{b}, \mathbf{v}_2  \rangle
+					= 0 \\
+[15pt]
+&=& \alpha \langle \mathbf{v}_1, \mathbf{v_1} \| \mathbf{b} \| \rangle
+					&\qquad \mathrel{\#} \text{since $\beta \, 0 = 0$ and
+					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}$
+					 so $\mathbf{b} = \mathbf{v_1} \| \mathbf{b} \| $} \\
+[15pt]
+&=& \alpha \| \mathbf{b} \| \langle \mathbf{v}_1, \mathbf{v}_1 \rangle
+					&\qquad \mathrel{\#} \text{by the scalar product rule for dot products } \\
+[15pt]
+&=& \alpha \| \mathbf{b} \|
+					&\qquad \mathrel{\#} \text{since 
+					$\mathbf{v}_1 = \frac{\mathbf{b}}{\| \mathbf{b} \|}
+					\Rightarrow \| \mathbf{v}_1 \| = 1
+					\text{ and so } \langle \mathbf{v}_1, \mathbf{v_1} \rangle 
+					= \| \mathbf{v}_1 \|^2
+					= 1^2 = 1$}
+
+\end{array}
+\end{equation*} 
+
+
+\bigskip
+\noindent
+So we see that
+
+\bigskip
+\begin{equation*}
+\langle \mathbf{a}, \mathbf{b} \rangle = \alpha \| \mathbf{b} \|
+\end{equation*}
+
+\bigskip
+\noindent
+and so
+
+\bigskip
+\begin{equation*}
+\alpha
+= \dfrac{\langle \mathbf{a}, \mathbf{b} \rangle}{\|\mathbf{b} \|} 
+= \left \langle \mathbf{a}, \dfrac{\mathbf{b}}{\|\mathbf{b} \|} \right \rangle 
+= \langle \mathbf{a}, \mathbf{\hat{b}} \rangle 
+\end{equation*}
+
+
+\bigskip
+\noindent
+$\alpha$ represents the component of the vector $\mathbf{a}$ that is
+parallel to ("in the direction of") the vector $\mathbf{\hat{b}}$. 
+More generally, since $\mathbf{\hat{b}}$ is the unit vector in 
+the $\mathbf{b}$ direction, 
+$\langle \mathbf{a}, \mathbf{b} \rangle$ is also the component 
+of $\mathbf{a}$ in the $\mathbf{b}$ direction.
+
+\end{definition}
+
+
+\bigskip
+\begin{definition}
+{\bf The Cross Product of Two Vectors:} $\mathbf{a} \times \mathbf{b}$
+
+\bigskip
+\noindent
+The cross product is a binary operation on two vectors in a
+three-dimensional oriented Euclidean vector space
+\cite{euclidian_space}.  Specifically, given two linearly
+independent vectors $\mathbf{a}$ and $\mathbf{b}$, the cross
+product of $\mathbf{a}$ and $\mathbf{b}$, denoted $\mathbf{a}
+\times \mathbf{b}$, is defined to be a vector with the following
+three properties:
+
+\bigskip
+\begin{itemize}
+\item $\mathbf{a} \times \mathbf{b}$ is perpendicular to both
+$\mathbf{a}$ and $\mathbf{b}$ (Figure \ref{fig:cross_product_parallelogram})
+
+
+\item $\mathbf{a} \times \mathbf{b}$ has direction given by the
+right-hand rule (Figure \ref{fig:right_hand_rule_for_cross_products})
+
+ 
+\item $\mathbf{a} \times \mathbf{b}$ has magnitude equal to
+the area of the parallelogram that the vectors span (Figure
+\ref{fig:cross_product_parallelogram})
+\end{itemize}
+
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.105]
+{images/cross_product_parallelogram.png}}
+\caption{The parallelogram formed by $\mathbf{a} \times
+\mathbf{b}$ \cite{wiki:cross_product}}
+\label{fig:cross_product_parallelogram}
+\end{figure}
+
+
+\bigskip
+\noindent
+One definition of the cross product is 
+
+\bigskip
+\begin{equation}
+\mathbf{a} \times \mathbf{b} = \left \| \mathbf{a} \right \|
+\left \| \mathbf{b} \right \| \sin (\theta) \, \mathbf{n}
+\label{eqn:cross_product}
+\end{equation}
+
+\bigskip
+\noindent
+where
+
+\bigskip
+\begin{itemize}
+\item $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$
+in the plane containing them, so $0 \leq \theta \leq \pi$
+
+\item $\|\mathbf{a}\|$ and $\|\mathbf{b}\|$ are the magnitudes of
+vectors $\mathbf{a}$ and $\mathbf{b}$
+
+\item $\mathbf{n}$ is a unit vector normal to the plane
+containing $\mathbf{a}$ and $\mathbf{b}$ in the direction given
+by the right-hand rule
+\end{itemize}
+
+\begin{figure}[t]
+\center{\includegraphics[scale=0.15]
+{images/right_hand_rule_cross_product.png}}
+\caption{The right hand rule for vectors $\mathbf{a}$ and $\mathbf{b}$ \cite{wiki:right_hand_rule_for_cross_products}}
+\label{fig:right_hand_rule_for_cross_products}
+\end{figure}
+
+
+\bigskip
+\noindent
+If the cross product of two vectors is the zero vector (that is,
+$\mathbf{a \times b} = \mathbf{0}$), then either one or both of
+the inputs is the zero vector ($\mathbf{a} = \mathbf{0}$ and/or
+$\mathbf{b} = \mathbf{0}$) or the vectors are parallel or
+anti-parallel ($\theta \in \{0, \pi\}$).  In the second case
+($\theta \in \{0, \pi\}$), since the angle between a vector and
+itself is zero, Equation (\ref{eqn:cross_product}) tells us that
+the cross product of a vector with itself is the zero vector:
+$\mathbf{a} \times \mathbf{a} = \left \| \mathbf{a} \right \|
+\left \| \mathbf{a} \right \| \sin (0) \, \mathbf{n} = \left \|
+\mathbf{a} \right \| \left \| \mathbf{a} \right \| 0 \,
+\mathbf{n} = \mathbf{0}$.
+
+
+
+\bigskip
+\noindent
+Note that by the right-hand rule, if the thumb
+points at you then the fingers curl in the
+anti-clockwise (counter-clockwise) direction. 
+That is, when viewed from the top or z 
+axis the system rotates in an anti-clockwise
+direction. This is one of the reasons we take 
+the direction of a curve to be in the anti-clockwise 
+direction when we consider, for example, line integrals
+in Section \ref{sec:line_integrals}.
+
+
+
+\bigskip
+\noindent
+The cross product can also be expressed as the following
+determinant
+
+
+\bigskip
+\begin{equation*}
+\mathbf {a\times b} 
+= \det \begin{bmatrix}
+    \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+    a_{1} & a_{2} &a_{3} \\
+    b_{1} & b_{2} &b_{3}
+  \end{bmatrix} \\
+  = \begin{vmatrix}
+    \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+    a_{1} & a_{2} &a_{3} \\
+    b_{1} & b_{2} &b_{3}
+  \end{vmatrix}
+\end{equation*}
+
+\bigskip
+\noindent
+which can be computed using Sarrus's rule
+\cite{wiki:rule_of_sarrus} or cofactor expansion
+\cite{cofactor_expansion}. Using Sarrus's rule the cross product
+expands to
+
+\bigskip
+\begin{equation*}
+\begin{aligned}
+\mathbf{a\times b} 
+&= (a_{2} b_{3} \mathbf{\hat{i}} + a_{3}b_{1} \mathbf{\hat{j}} + a_{1}b_{2} \mathbf{\hat{k}})
+-  (a_{3}b_{2}\mathbf{\hat{i}} + a_{1}b_{3}\mathbf{\hat{j}} + a_{2}b_{1}\mathbf{\hat{k}}) \\
+&= (a_{2}b_{3} - a_{3}b_{2}) \mathbf{\hat{i}} + ( a_{3}b_{1} - a_{1}b_{3})
+\mathbf{\hat{j}} + ( a_{1}b_{2} - a_{2}b_{1} ) \mathbf{\hat{k}} 
+\end{aligned}
+\end{equation*}
+
+\bigskip
+\noindent
+Using cofactor expansion the $3 \times 3$ determinant can be 
+expressed in terms of $2 \times 2$ determinants:
+
+\bigskip
+\begin{equation*}
+\begin{aligned}
+\mathbf {a\times b} 
+&= {\begin{vmatrix}
+     a_{2} & a_{3} \\
+     b_{2} & b_{3}
+    \end{vmatrix}}
+    \mathbf{\hat{i}} - 
+    {\begin{vmatrix}
+      a_{1} & a_{3} \\
+      b_{1} & b_{3}
+     \end{vmatrix}}
+    \mathbf{\hat{j}} +
+    {\begin{vmatrix}
+      a_{1} & a_{2} \\
+      b_{1} & b_{2}
+     \end{vmatrix}}
+     \mathbf{\hat{k}} \\
+&= (a_{2}b_{3} - a_{3}b_{2}) \mathbf{\hat{i}} - 
+   (a_{1}b_{3} - a_{3}b_{1}) \mathbf{\hat{j}} +
+   (a_{1}b_{2} - a_{2}b_{1}) \mathbf{\hat{k}}
+\end{aligned}
+\end{equation*}
+
+
+\bigskip
+\noindent
+The cross product has the following additional properties \cite{wiki:cross_product}:
+
+\bigskip
+\begin{itemize}
+\item it is anti-commutative: $\mathbf{a} \times \mathbf{b} 
+= - (\mathbf{b} \times \mathbf{a})$
+
+
+\item it is distributive over addition: $\mathbf{a} \times
+(\mathbf{b} + \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) +
+(\mathbf{a} \times \mathbf{c})$
+
+
+\item it is compatible with scalar multiplication so that:
+$(c\,\mathbf{a}) \times \mathbf{b} = \mathbf{a} \times
+(c\,\mathbf{b}) = c \, (\mathbf{a} \times \mathbf{b})$
+
+
+\item it is not associative but satisfies the Jacobi identity
+\cite{wiki:jacobi_identity}: 
+$\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) + 
+\mathbf{b} \times (\mathbf{c} \times \mathbf{a}) + 
+\mathbf{c} \times (\mathbf{a} \times \mathbf{b}) 
+= \mathbf{0}$
+\end{itemize}
+\end{definition}
+
+
+
+\bigskip
+\begin{theorem} {\bf Cauchy–Schwarz Inequality:} 
+$\big | \langle \mathbf{a},\mathbf{b} \rangle \big | \leq \|
+\mathbf{a} \| \| \mathbf{b} \|$
+
+
+\bigskip
+\noindent
+{\bf Proof:} The inequality is trivial if either $ \mathbf{a}$ or
+$\mathbf{b}$ is zero, so assume that neither is. So without loss
+of generality let ${\displaystyle \mathbf{x} =
+\frac{\mathbf{a}}{\|\mathbf{a}\|}}$ and ${\displaystyle
+\mathbf{y} = \frac{\mathbf{b}}{\|\mathbf{b}\|}}$ and so $\|
+\mathbf{x} \| = \|\mathbf{y} \| = 1$ ($\mathbf{x} =
+\mathbf{\hat{a}}$ and $\mathbf{y} = \mathbf{\hat{b}}$).  Then
+
+
+\begin{equation*}
+\begin{array}{lllll}
+0
+&\leq& \|\mathbf{x} - \mathbf{y}\|
+					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0
+					\text{ for all } \mathbf{x}, \mathbf{y} \in \mathbb{R}^{n} 
+					\text{ by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\leq&  \| \mathbf{x} - \mathbf{y} \|^2
+					&\quad \mathrel{\#} \|\mathbf{x} - \mathbf{y}\| \geq 0 
+					\Rightarrow  \| \mathbf{x} - \mathbf{y} \|^2 \geq 0 \\ 
+[6pt]
+&\leq& {\displaystyle \sum\limits_{j = 1}^{n} (x_j - y_j)^2}
+				&\quad \mathrel{\#} \| \mathbf{x} - \mathbf{y} \|^2
+				= {\displaystyle \sum\limits_{j = 1}^{n} {(x_j - y_j)}^2}
+				\text{by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\leq& {\displaystyle \sum\limits_{j = 1}^{n} \left ( x_{j}^2 - 2 x_{j} y_{j} + y_{j}^{2} \right )}
+					&\quad \mathrel{\#} \text{expand previous line} \\
+[8pt]
+&\leq& {\displaystyle \sum\limits_{j = 1}^{n} x_{j}^2 - 2 \sum\limits_{j = 1}^{n} x_{j} y_{j}} 
+					+ \sum\limits_{j = 1}^{n} y_{j}^{2}
+					&\quad \mathrel{\#} \text{sum is a linear operator} \\
+[12pt]
+&\leq& \| \mathbf{x} \|^2 - 2 \langle \mathbf{x},\mathbf{y} \rangle 
+					+ \|\mathbf{y}\|^2
+					&\quad \mathrel{\#} {\| \mathbf{x} \|}^2 = \sum\limits_{j = 1}^{n} x_{j}^2
+					\text{ and }
+					\langle \mathbf{x},\mathbf{y} \rangle  = \sum\limits_{j = 1}^{n} x_{j} y_{j}
+					\text{ by Equation (\ref{eqn:magnitude})} \\				
+[12pt]
+&\leq& 1 - 2 \langle \mathbf{x},\mathbf{y} \rangle + 1
+					&\quad \mathrel{\#} \| \mathbf{x} \| = \|\mathbf{y} \| 
+					= 1 \Rightarrow \| \mathbf{x} \|^2 = \|\mathbf{y} \|^2 = 1 \\
+[8pt]
+&\leq& 2- 2 \langle \mathbf{x},\mathbf{y} \rangle
+					&\quad \mathrel{\#} 1 + 1 = 2 \\
+[8pt]
+&\Rightarrow& -2 \leq -2 \langle \mathbf{x},\mathbf{y} \rangle
+					&\quad \mathrel{\#} \text{subtract 2 from both sides}  \\
+[8pt]
+&\Rightarrow& 1 \geq \langle \mathbf{x},\mathbf{y} \rangle 
+					&\quad \mathrel{\#} \text{divide by -2, reversing inequality}  \\
+[8pt]
+&\Rightarrow& \langle \mathbf{x},\mathbf{y} \rangle \leq 1
+					&\quad \mathrel{\#} \text{rearrange}  \\
+[4pt]
+&\Rightarrow& \left \langle \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, 
+					{\dfrac{\mathbf{b}}{\|\mathbf{b}\|}} \right\rangle \leq 1
+					&\quad \mathrel{\#} \text{$\mathbf{x} 
+					= \dfrac{\mathbf{a}}{\| \mathbf{a} \|}, \; \mathbf{y} 
+					= \dfrac{\mathbf{b}}{\|\mathbf{b}\|}$ by definition above} \\
+[12pt]
+&\Rightarrow& \dfrac{\langle \mathbf{a},\mathbf{b} \rangle}{\|\mathbf{a}\| \|\mathbf{b}\|} \leq 1
+					&\quad \mathrel{\#} \text{scalar multiplication rule:
+					$\! \langle c_{1}\mathbf{v}_1, c_{2}\mathbf{v}_2 \rangle 
+					= c_{1} c_{2} \langle \mathbf{v}_1, \mathbf{v}_2 \rangle$} \\
+[12pt]
+&\Rightarrow& \langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b} \|
+					&\quad \mathrel{\#} \text{multiply both sides by $\|\mathbf{a}\| \|\mathbf{b}\|$}
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+If we replace $\mathbf{a}$ by $-\mathbf{a}$ we see by Equation
+(\ref{eqn:magnitude}) that $\|-\mathbf{a}\| = \|
+\mathbf{a}\|$. Further, by the scalar multiplication rule for dot
+products with $c_1 = -1$ and $c_2 = 1$ we have $\langle
+-\mathbf{a},\mathbf{b} \rangle = - \langle \mathbf{a},\mathbf{b}
+\rangle$. Taken together these results imply that $- \langle
+\mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
+\|$.
+
+\bigskip
+\noindent
+Next note that the absolute value of $x$, $|x|$,
+is defined to be
+
+\bigskip
+\begin{equation}
+|x| = {
+  \begin{cases}\hfill x, & {\text{if }} x \geq 0 \\
+                     -x, & {\text{if }} x < 0.
+  \end{cases}
+}
+\label{eqn:absolute_value}
+\end{equation}
+
+
+\bigskip
+\setstretch{1.10}
+\noindent
+So one way to see the Cauchy–Schwarz inequality is by setting $x$
+equal to $\langle \mathbf{a},\mathbf{b} \rangle$ in Equation
+(\ref{eqn:absolute_value}). Then when $\langle
+\mathbf{a},\mathbf{b} \rangle \geq 0$ we have $\big | \langle
+\mathbf{a}, \mathbf{b} \rangle \big | = \langle
+\mathbf{a},\mathbf{b} \rangle$ and we showed above that $\langle
+\mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\| \|\mathbf{b}
+\|$.  Similarily, when $\langle \mathbf{a},\mathbf{b} \rangle <
+0$ we have $\big | \langle \mathbf{a}, \mathbf{b} \rangle \big |
+= - \langle \mathbf{a},\mathbf{b} \rangle$ and we showed that $-
+\langle \mathbf{a},\mathbf{b} \rangle \leq \|\mathbf{a}\|
+\|\mathbf{b} \|$.  Together these give us $\big | \langle
+\mathbf{a},\mathbf{b} \rangle \big | \leq \|\mathbf{a}\|
+\|\mathbf{b} \|$, that is, the Cauchy–Schwarz
+inequality. $\square$
+\end{theorem}
+
+\subsection{Derivatives}
+We will also denote the derivative of a vector $\mathbf{r}$ with
+respect to $t$ by $\dot{\mathbf{r}}$, $\dfrac{d\mathbf{r}}{dt}$
+or $\mathbf{r}^{\prime}(t)$.  Note also that by definition
+
+\bigskip
+\begin{equation*}
+\dfrac{d\mathbf{r}}{dt} := \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}
+\end{equation*}
+
+\subsection{The Jacobian}
+It is common to change the variable(s) of integration, the main
+goal being to rewrite a complicated integrand into a simpler
+equivalent form. However, in doing so, the underlying geometry of
+the problem may be altered. This was seen often in
+single-variable integrals:
+
+\begin{example} Evaluate 
+\begin{equation}
+\int_{2}^{4} (3x + 1)^3  dx
+\label{eqn:example1}
+\end{equation}
+
+\bigskip
+\noindent
+{\bf Solution}: We can rewrite the integral in Equation
+(\ref{eqn:example1}) by letting $u = 3x + 1$ so that $du = 3 \,
+dx$. Notice that the expression $du = 3 \, dx \Rightarrow dx =
+\frac{1}{3} \, du$ and so the bounds of integration in the
+$xy$-plane, namely $2 \leq x \leq 4$ are transformed using $u =
+3x + 1$. So if $x = 2$ then $u = 3(2) + 1 = 7$ and when $x - 4$
+we have $u = 3(4) + 1 = 13$. So the bounds of integration with
+respect to $u$ are $7 \leq u \leq 13$. Using this substitution we
+see that
+
+\bigskip
+\begin{equation*}
+\int_{2}^{4} \! \! (3x + 1)^3 dx 
+= \int_{7}^{13} \!\!\!  u^3 \left (\frac{1}{3} \, du \right )
+= \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du
+\end{equation*}
+
+\bigskip
+\setstretch{1.75}
+\noindent
+Note that integrals ${\displaystyle \int_{2}^{4} (3x + 1)^3 dx}$
+and ${\displaystyle \frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du}$
+represent the same problem. Specifically
+
+\setstretch{1.0}
+
+\bigskip
+\begin{equation*}
+\int_{2}^{4} \! \! (3x + 1)^3 dx  
+=  \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left ( (3x+1)^4 \right ) \Bigg   |_{2}^{4} 
+= \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left  ( 13^4 - 7^4 \right ) 
+=  \left ( \frac{1}{12} \right ) 26160 
+=  2180
+\end{equation*}
+
+\bigskip
+\noindent
+and 
+
+\smallskip
+\begin{equation*}
+\frac{1}{3} \int_{7}^{13} \!\!\!  u^3 \, du  
+=  \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left ( u^4 \right )  \Bigg   |_{7}^{13} 
+= \left ( \frac{1}{4} \right ) \left ( \frac{1}{3} \right ) \left (13^4 - 7^4 \right )  
+=  \left ( \frac{1}{12} \right ) 26160 
+= 2180
+\end{equation*}
+
+\bigskip
+\noindent
+The $\frac{1}{3}$  that we see in the expression 
+for $dx$, namely $dx = \frac{1}{3} \, du$ is called the 
+(one dimensional) \emph{Jacobian}. 
+
+
+\bigskip
+\noindent
+Note also that the integral in variable $x$ is over an interval
+of length 2 units, while the integral in $u$ is over an interval
+of length 6 units. In a very rough sense then the variable $u$
+covers its interval of integration three times “as fast” as
+$x$. In particular, since $u$ and $x$ are linearly related the
+leading $\frac{1}{3}$ adjusts for the change in the underlying
+geometry of the intervals.
+\end{example}
+
+\bigskip
+\noindent
+For double integrals in $\mathbb{R}^2$ we assume that a region of
+integration defined in terms of variables $x$ and $y$ and are
+substituted for new variables $u$ and $v$ through two functions:
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+u = f_1(x,y) \\
+[5pt]
+v = f_2(x,y)
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent 
+Note that the pair of equations are written so that $u$ and $v$
+are written in terms of $x$ and $y$.  This is called a
+\emph{transformation}. Such a “change of variables” should also
+be reversible.  That is, we should be able to solve for $x$ and
+$y$ in terms of $u$ and $v$:
+
+\medskip
+\begin{equation*}
+\begin{array}{llll}
+x = g_1(u,v)  \\
+[5pt]
+y = g_2(u,v)
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+In this case the Jacobian, $J(u,v)$, is defined to be the
+determinant of a $2 \times 2$ matrix as follows:
+
+\bigskip
+\begin{equation*}
+J(u,v)
+= \det
+\begin{bmatrix}
+  \dfrac{\partial g_1}{\partial u} & \dfrac{\partial g_1}{\partial v} \\[2ex]
+  \dfrac{\partial g_2}{\partial u} & \dfrac{\partial g_2}{\partial v} 
+\end{bmatrix}
+= \det
+\begin{bmatrix}
+  \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[2ex]
+  \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} 
+\end{bmatrix}
+\end{equation*}
+
+\bigskip
+\noindent
+In three dimensions the Jacobian is
+
+\bigskip
+\begin{equation*}
+J(u,v,w) = \det
+\begin{bmatrix}
+  \dfrac{\partial u}{\partial x}  & \dfrac{\partial u}{\partial y} & \dfrac{\partial u}{\partial z} \\[2ex] 
+  \dfrac{\partial v}{\partial x}  & \dfrac{\partial v}{\partial y} & \dfrac{\partial v}{\partial z} \\[2ex]
+  \dfrac{\partial w}{\partial x} & \dfrac{\partial w}{\partial y} & \dfrac{\partial w}{\partial z}
+\end{bmatrix}
+\end{equation*}
+
+\bigskip
+\noindent
+In general suppose $f: \mathbb{R}^{n} \to \mathbb{R}^{m}$ is a
+function such that each of its first-order partial derivatives
+exist on $\mathbb{R}^{n}$ This function takes a point $\mathbf{x}
+\in \mathbb{R}^{n}$ as input and produces the vector $f(x) \in
+\mathbb{R}^{m}$ as output. Then the Jacobian matrix of $f$ is
+defined to be an $m \times n$ matrix $J$ whose $(i,j)^\text{th}$
+entry is
+
+\begin{equation*}
+\mathbf{J}_{ij} = \frac {\partial f_{i}}{\partial x_{j}}
+\end{equation*}
+
+\noindent
+More explicitly
+
+\begin{equation*}
+{\displaystyle \mathbf {J} 
+={\det \begin{bmatrix}
+ {\dfrac {\partial \mathbf {f} }{\partial x_{1}}} &\cdots & {\dfrac {\partial \mathbf {f} }{\partial x_{n}}}
+ \end{bmatrix}}
+={\det \begin{bmatrix}
+   \nabla ^{\mathrm {T} }f_{1}\\\vdots \\\nabla ^{\mathrm {T} }f_{m}
+   \end{bmatrix}}
+={\det \begin{bmatrix}
+ {\dfrac {\partial f_{1}}{\partial x_{1}}} & \cdots & {\dfrac {\partial f_{1}}{\partial x_{n}}}\\
+ \vdots &\ddots &\vdots \\
+ {\dfrac {\partial f_{m}}{\partial x_{1}}} & \cdots & {\dfrac {\partial f_{m}}{\partial x_{n}}}
+ \end{bmatrix}}}
+\end{equation*}
+
+\bigskip
+\noindent
+where $\nabla^{\mathrm {T} }f_{i}$ is the transpose (row vector)
+of the gradient of the $i^{\text{th}}$ component. 
+
+
+\setstretch{2.0}
+\noindent
+I have also seen the Jacobian matrix, whose entries are functions
+of $\mathbf{x} = (x_1,x_2,\hdots, x_n)$, denoted in various other
+ways including ${\displaystyle \nabla \mathbf {f}}$ and
+${\displaystyle {\frac {\partial (f_{1},..,f_{m})}{\partial
+(x_{1},..,x_{n})}}}$.
+
+\setstretch{1.0}
+
+\begin{figure}[t]
+\center{\includegraphics[scale=0.85] {images/r_theta_to_x_y.jpg}}
+\caption{Transforming the $r\theta$-plane to the $xy$ plane}
+\label{fig:r_theta_to_x_y}
+\end{figure}
+
+\medskip
+\begin{example} Find the Jacobian for the transformation
+shown in Figure \ref{fig:r_theta_to_x_y}.
+
+\bigskip
+\noindent
+{\bf Solution}: Here we have
+
+\bigskip
+\begin{equation*}
+\begin{array}{llll}
+J(r,\theta)
+&=& \det
+\begin{bmatrix}
+  \dfrac{\partial x}{\partial r} & \dfrac{\partial x}{\partial \theta} \\[2ex]
+  \dfrac{\partial y}{\partial r} & \dfrac{\partial y}{\partial \theta} 
+\end{bmatrix} 
+			&\qquad \qquad \mathrel{\#} \text{definition of the Jacobian} \\
+[25pt]
+&=& \det
+\begin{bmatrix}
+  \cos \theta & - r \sin \theta \\
+  \sin \theta  & r \cos \theta
+\end{bmatrix}
+			&\qquad \qquad \mathrel{\#} x = r \cos \theta, y = r \sin \theta \\
+[10pt]
+&=& \cos (\theta) r \cos (\theta) - (-r \sin (\theta)) \sin (\theta) 
+			&\qquad \qquad \mathrel{\#} \det \begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad -bc \\
+[10pt]
+&=& r \cos^2 \theta + r \sin^2  \theta 
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[10pt]
+&=& r (\cos^2 \theta +  \sin^2 \theta)
+			&\qquad \qquad \mathrel{\#} \text{factor out $r$} \\
+[10pt]
+&=& r
+			&\qquad \qquad \mathrel{\#} \cos^2 \theta + \sin^2 \theta = 1
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+$J(r,\theta) = r$ is the common Jacobian when rectangular coordinates 
+$x$ and $y$ are rewritten in polar coordinates $r$ and $\theta$.
+\end{example}
+
+\bigskip
+\noindent
+For the next example we need the definition of
+Type I and Type II regions.
+
+\bigskip
+\begin{definition}
+{\bf Type I and Type II Regions}
+
+\bigskip
+\noindent
+A region $D$ in the xy-plane is of Type I if it lies between two
+vertical lines and the graphs of two continuous functions
+$g_1(x)$ and $g_2(x)$. That is
+
+\bigskip
+\begin{equation*}
+D= \{(x, y) \, | \, a \leq x \leq b, \, g_1(x)  \leq y \leq  g_2(x)\}
+\end{equation*}
+
+\bigskip
+\noindent
+Type I regions are shown in Figure \ref{fig:type_I_region}.
+
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.30] {images/type_I_region.png}}
+\caption{Type I Region}
+\label{fig:type_I_region}
+\end{figure}
+
+\bigskip
+\noindent
+Alternatively, a region $D$ in the xy-plane is of Type II if it
+lies between two horizontal lines and the graphs of two
+continuous functions $h_1(y)$ and $h_2(y)$. That is
+
+\bigskip
+\begin{equation*}
+D = \{(x, y) \, | \, c \leq y \leq d, \, h_1(y)  \leq x \leq  h_2(y)\}
+\end{equation*}
+
+\bigskip
+\noindent
+Type II regions are shown in  Figure \ref{fig:type_II_region}.
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.30] {images/type_II_region.png}}
+\caption{Type II Regions}
+\label{fig:type_II_region}
+\end{figure}
+\end{definition}
+
+
+\begin{example}
+\setstretch{1.75}
+Evaluate ${\displaystyle \iint_{R} (x - 2y) \; dA}$, where $R$ 
+is a parallelogram in the $xy$-plane with vertices (0,0), (4,1), 
+(6,4) and (2,3). This parallelogram is shown in 
+Figure \ref{fig:parallelogram_R}.
+
+\setstretch{1.0}
+
+\medskip
+%
+%	draw parallelogram for example
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.50 \textwidth}{!} {																% resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)		at (0,0);															% origin O
+       \coordinate(Xend)	at (8,0);															% x-axis out to 8
+       \coordinate(Yend)	at (0,6);															% y-axis up to 6
+       \coordinate(C1)		at (2,3);															% parallelogram point
+       \coordinate(C2)		at (6,4);															% parallelogram point
+       \coordinate(C3)		at (4,1); 															% parallelogram point
+       \coordinate(C)		at (3,2);															% center of parallelogram is at C
+%
+%	draw axes
+%
+     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] {\Large ${\mathbf{x}}$}}];	% x axis
+     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] {\Large ${\mathbf{y}}$}}];	% y axis
+%
+%	draw parallelogram
+%
+     \draw [fill=gray!30]  (O) -- (C1) -- (C2) -- (C3) -- cycle;
+     \node[color=black,font=\Large] at (C) {$\mathbf{R}$};
+     \fill [black] (O)   circle (0.05)  node[below,left]{$(0,0)$};
+     \fill [black] (C1) circle (0.05)  node[yshift=1.0mm, xshift=-1.0mm, left] {$(2,3)$};
+     \fill [black] (C2) circle (0.05)  node[above] {$(6,4)$};
+     \fill [black] (C3) circle (0.05)  node[yshift=-1.00mm, xshift=1.0mm,right] {$(4,1)$};
+  \end{tikzpicture}
+  }	
+  \caption{Parallelogram in the $xy$-plane}
+  \label{fig:parallelogram_R}
+\end{figure}
+
+% \bigskip
+% \begin{figure}[H]
+% \center{\includegraphics[cfbox=black,scale=0.65] {images/parallelogram_R.png}}
+% \caption{Parallelogram in the xy-plane}
+% \label{fig:parallelogram_R}
+% \end{figure}
+
+\bigskip
+\noindent
+{\bf Solution}: A sketch of this region (Figure
+\ref{fig:parallelogram_R}) shows that it is a Type II region and
+would require three separate double integrals in either the $dy$,
+$dx$ or $dx dy$ orderings of integration.  Instead, note that the
+region consists of two pairs of parallel sides and so we can find
+the equation for each side:
+
+
+\bigskip
+\begin{itemize}
+\item For the region from $(0,0)$ to $(4,1)$ we have $y = \frac{1}{4}x$ or $-x + 4y = 0$
+\item For the region from $(2,3)$ to $(6,4)$ we have $y = \frac{1}{4}x + \frac{5}{2}$ or $-x + 4y = 10$
+\item For the region from $(0,0)$ to $(2,3)$ we have $y = \frac{3}{2}x$ or $-\frac{3}{2}x$  or  $-3x + 2y = 0$
+\item For the region from $(4,1)$ to $(6,4)$ we have $y = \frac{3}{2}x - 5$ or $-3x + 2y = -10$
+\end{itemize}
+
+\bigskip
+\noindent
+This is shown in Figure \ref{fig:parallelogram_sides}.
+
+\bigskip
+%
+%	draw parallelogram for example
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.75 \textwidth}{!} {                      % resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)          at (0,0);               % origin O
+       \coordinate (Xend)       at (8,0);               % x-axis out to 8
+       \coordinate (Yend)       at (0,6);               % y-axis up to 6
+       \coordinate (C1)         at (2,3);               % parallelogram point
+       \coordinate (C2)         at (6,4);               % parallelogram point
+       \coordinate (C3)         at (4,1);               % parallelogram point
+       \coordinate (C)          at (3,2);               % center of parallelogram is at C
+%
+%	coordinates for equations
+%  
+       \coordinate (D1)         at (1.00, 1.50);
+       \coordinate (D2)         at (-2.00,3.00);
+       \coordinate (E1)         at (3.50, 3.35);
+       \coordinate (E2)         at (4.00, 5.00);
+       \coordinate (F1)         at (4.85, 2.25);
+       \coordinate (F2)         at (7.00, 2.25);
+       \coordinate (G1)         at (2.50, 0.60);
+       \coordinate (G2)         at (2.50,-1.00);
+%
+%	draw axes
+%
+     \draw[thick,-latex] (O) -- (Xend) coordinate [label={[right] {\Large ${\mathbf{x}}$}}];	% x axis
+     \draw[thick,-latex] (O) -- (Yend) coordinate [label={[above] {\Large ${\mathbf{y}}$}}];	% y axis
+%
+%	draw parallelogram
+%
+     \draw [very thick,fill=gray!30]  (O) -- (C1) -- (C2) -- (C3) -- cycle;
+     \node[color=black,font=\Large] at (C) {${\mathbf{R}}$};
+     \fill [black] (O)  circle (0.05) node[below,left] {$(0,0)$};
+     \fill [black] (C1) circle (0.05) node[left,yshift=1.0mm,xshift=-1.0mm] {$(2,3)$};
+     \fill [black] (C2) circle (0.05) node[above] {$(6,4)$};
+     \fill [black] (C3) circle (0.05) node[right,yshift=-1.00mm,xshift=1.0mm] {$(4,1)$};
+%
+%	draw equations of each size
+%       
+     \draw [thick,latex-] (D1) -- (D2) coordinate [label={[font=\large,right,xshift=-2.0cm,yshift=0.50cm] 
+                ${\mathbf {-3x + 2y = 0}}$}];
+     \draw [thick,latex-] (E1) -- (E2) coordinate [label={[font=\large,right,xshift=-1.75cm,yshift=0.5cm] 
+                ${\mathbf {-x + 4y = 10}}$}];
+     \draw [thick,latex-] (F1) -- (F2) coordinate [label={[font=\large,right]
+                ${\mathbf {-3x + 2y = -10}}$}];
+     \draw [thick,latex-] (G1) -- (G2) coordinate [label={[font=\large,below,yshift=-0.25cm] 
+                ${\mathbf {-x + 4y = 0}}$}];
+  \end{tikzpicture}
+  }	
+  \caption{Equations of the sides of the parallelogram shown in Figure \ref{fig:parallelogram_R}}
+  \label{fig:parallelogram_sides}
+\end{figure}
+
+\bigskip
+\noindent
+Now we can define a transformation from $x$ and $y$ into the new variables $u$ and $v$
+by the following equations:
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+&u = -x + 4y  &&& \mathrel{\#} \text{so that $0 \leq u \leq 10$} \\
+[5pt]
+&v = -3x + 2y &&& \mathrel{\#} \text{so that $-10 \leq v \leq 0$}
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+This transformation transforms the region of integration 
+$\mathbf{R}$ in the $xy$-plane (a parallelogram,
+Figure\ref{fig:parallelogram_R}) into a rectangle in the
+$uv$-plane and so $u$ and $v$ have constant bounds. This
+rectangle is shown Figure \ref{fig:transformation_uv_plane}. 
+Note that this region is completely below the $u$ axis and 
+so the volume (the double integral) could be negative.
+
+%
+%	draw the transformation: rectangle in the uv-plane
+%
+\begin{figure}[H]
+\centering
+  \resizebox{0.50 \textwidth}{!} {                      % resize figure if you want
+  \begin{tikzpicture}
+       \coordinate (O)          at (0,0);				% origin O 
+       \coordinate (Xstart)     at (-5,0);				% x-axis start
+       \coordinate (Xend)       at (14,0);              % x-axis end
+       \coordinate (Ystart)     at (0,-14);             % y-axis start
+       \coordinate (Yend)       at (0, 5);              % y-axis end
+       \coordinate (xy1)        at (0,-10);             % parallelogram point
+       \coordinate (xy2)        at (10,-10);            % parallelogram point
+       \coordinate (xy3)        at (10,0);				% parallelogram point
+       \coordinate (E)          at (15,-5);				% put the box with the bounds here
+%
+%	draw parallelogram
+%
+%
+       \draw [ultra thick, fill=gray!30] (xy1) -- (O) -- (xy3) -- (xy2) -- cycle;
+       \fill [black] (O)   circle (0.10) node[font=\huge,above,left,xshift=-0.25cm,yshift=0.5cm]  {$(0,0)$};
+       \fill [black] (xy1) circle (0.10) node[font=\huge,left,xshift=-0.25cm]                     {$(0,-10)$};
+       \fill [black] (xy2) circle (0.10) node[font=\huge,right,xshift=0.25cm]                     {$(10,-10)$};
+       \fill [black] (xy3) circle (0.10) node[font=\huge,above,right,xshift=0.25cm,yshift=0.50cm] {$(10,0)$};
+%     
+%	draw axes making sure axes are on top
+%
+       \draw[very thick,-latex](Xstart) -- (Xend) node[right,scale=4.0] {${\mathbf{u}}$};				% u axis
+       \draw[very thick,-latex](Ystart) -- (Yend) node[above,scale=4.0] {${\mathbf{v}}$};				% v axis  
+%
+%	draw the bounds in a box
+%
+ 	   \node[ultra thick,draw,rectangle,scale=2.0] at (E) {$\begin{array}{rrlrr}
+                                                               0 \!\!\! &\leq u \leq& \!\!\! 10 \\
+                                                             -10 \!\!\! &\leq v \leq& \!\!\! 0
+                                                            \end{array}$};
+%
+%	done
+%       
+   \end{tikzpicture}
+  }																										% end \resizebox
+ \caption{The parallelogram $\mathbf{R}$ (Figure \ref{fig:parallelogram_R}) is a rectangle in the $uv$-plane}
+ \label{fig:transformation_uv_plane}
+\end{figure}
+
+\bigskip
+\noindent
+Now we need to solve for $x$ and $y$. We have expressions 
+for $u$ and $v$ and so can solve for $x$ and $y$:
+
+\bigskip
+\begin{equation*}
+\begin{array}{llll}
+&u = -x + 4y \\
+&v = -3x + 2y 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+First multiply the bottom row by -2:
+
+
+\bigskip
+\begin{equation*}
+\begin{array}{rrll}
+&u &=& -x + 4y \\
+&-2 v &=& -2 (-3x + 2y) 
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Simplifying we get
+
+\bigskip
+\begin{equation}
+\begin{array}{rrrr}
+&u &=& -x + 4y \\
+&-2 v &=& 6x - 4y 
+\label{eqn:equations_for_u_and_v}
+\end{array}
+\end{equation}
+
+\bigskip
+\noindent
+Adding these two equations we get $u - 2v = 5x$
+and so solving for $x$ we get
+
+\bigskip
+\begin{equation}
+x = \frac{1}{5} u - \frac{2}{5} v
+\label{eqn:transformation_x}
+\end{equation}
+
+\bigskip
+\noindent
+Substituting this back into the equation for $u$ 
+in Equations (\ref{eqn:equations_for_u_and_v})
+and solving for $y$ we get
+
+\bigskip
+\begin{equation}
+y = \frac{3}{10} u - \frac{1}{10} v
+\label{eqn:transformation_y}
+\end{equation}
+
+\bigskip
+\noindent
+We can now find the Jacobian:
+
+\begin{equation*}
+\begin{array}{lllll}
+J(u,v) 
+&=& \det
+\begin{bmatrix}
+  \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[2ex]
+  \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} 
+\end{bmatrix} 
+			&\qquad \mathrel{\#} \text{definition of the Jacobian} \\
+[25pt]
+&=& \det
+\begin{bmatrix}
+  \dfrac{1}{5} & \dfrac{-2}{5} \\[2ex]
+  \dfrac{3}{10} & \dfrac{-1}{10} 
+\end{bmatrix} 
+			&\qquad \mathrel{\#} x = \frac{1}{5} u - \frac{2}{5} v \text{ and } y = \frac{3}{10} u - \frac{1}{10} v \\
+[25pt]
+&=& \Bigg [\left(\dfrac{1}{5}\right )\left (\dfrac{-1}{10}\right ) \Bigg ] 
+ -  \Bigg [\left (\dfrac{3}{10}\right ) \left (\dfrac{-2}{5} \right ) \Bigg ]
+			&\qquad \mathrel{\#} \det \begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad -bc \\
+[15pt]
+&=& \dfrac{-1}{50} + \dfrac{6}{50}
+			&\qquad \mathrel{\#} \text{simplify} \\
+[10pt]
+&=& \dfrac{5}{50}
+			&\qquad \mathrel{\#} \text{simplify} \\
+[10pt]
+&=& \dfrac{1}{10}
+			&\qquad \mathrel{\#} J(u,v) = \dfrac{1}{10}
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So we see that the Jacobian in this case is
+
+\begin{equation}
+J(u,v) = \dfrac{1}{10}
+\label{eqn:jacobian}
+\end{equation}
+
+\bigskip
+\noindent
+Substituting Equations (\ref{eqn:transformation_x}) and 
+(\ref{eqn:transformation_y}) into the original  
+integral and noting that $dA = J(u,v) \, du \, dv$ we 
+get
+
+\begin{equation*}
+\begin{array}{lllll}
+{\displaystyle \iint\limits_{R} (x - 2y) \, dA}
+&=& {\displaystyle \int\limits_{-10}^{0} \int\limits_{0}^{10} \left ( \left (  \dfrac{1}{5}u - \dfrac{2}{5}v \right )
+ -  2 \left( \dfrac{3}{10} u  - \dfrac{1}{10} v \right ) \right )}
+ \left ( \dfrac{1}{10} \right ) du \, dv
+			&\mathrel{\#} {\small  dA = J(u,v) \, du \, dv} \\
+[20pt]
+&=& {\displaystyle \dfrac{1}{10} \int\limits_{-10}^{0} \int\limits_{0}^{10}}
+    \left ( - \dfrac{2}{5} u - \dfrac{1}{5} v \right ) du \, dv
+			&\mathrel{\#} \text{\small simplify, moving the Jacobian to the front} \\
+[20pt]
+&=& {\displaystyle \dfrac{1}{10} \int\limits_{-10}^{0} \! (-20 -2v) \,dv}
+			&\mathrel{\#} {\small {\displaystyle \int\limits_{0}^{10} \! \left ( - \dfrac{2}{5} u - \dfrac{1}{5} v \right ) du}
+			= \left [ - \dfrac{1}{5} u^2 - \dfrac{1}{5} uv \right ] \Bigg |_{0}^{10}} \\
+[20pt]
+&=& \dfrac{1}{10} \Big [ -20 v - v^2 \Big ] \bigg |_{-10}^{0}
+			&\mathrel{\#} \text{\small evaluate integral + FToC} \\
+[20pt]
+&=& 0 - \dfrac{1}{10}  \bigg [ - 20 (-10) - (-10)^2  \bigg ] 
+			&\mathrel{\#} \text{\small evaluate at limits} \\
+[20pt]
+&=& \left (-\dfrac{1}{10} \right ) (100)
+			&\mathrel{\#} {\small \bigg ( - \dfrac{1}{10} \bigg ) \big ( 200 - 100 \big ) = -\dfrac{1}{10} (100)}\\
+[20pt]
+&=& -10
+			&\mathrel{\#} \text{\small the volume is completely under the $u$ axis} \\
+[10pt]
+&\Rightarrow& {\displaystyle \Bigg | \iint\limits_{R} (x - 2y) \, dA} \Bigg | = 10
+			&\mathrel{\#} \text{\small the volume is $10 \text{ units}^3$} \\
+
+\end{array}
+\end{equation*}
+
+ 
+
+\bigskip
+\noindent
+This was an example of a linear transformation, 
+in which the equations transforming $x$ and $y$ into $u$ and 
+$v$ were \emph{linear} (so were the equations reversing the
+transformation). When this is the case the Jacobian will be 
+a constant like we saw here.
+
+\bigskip
+\setstretch{1.10}
+\noindent
+We can also see how the geometry changed: The original region in
+the $xy$-plane has an area of $10 \text{ units}^2$ while the
+region in the $uv$-plane has an area of $100 \text{ units}^2$.
+That is, the region in the $uv$-plane is 10 times as large as the
+region in the $xy$-plane. The Jacobian $\left (\frac{1}{10}
+\right )$ scales this change in the underlying area.
+
+\setstretch{1.0}
+
+\bigskip
+\begin{remark}
+Note that the Jacobian is usually taken to be a positive
+quantity.  This is because the naming (and ordering) of the
+functions transforming $x$ and $y$ into $u$ and $v$ (and the
+reverse) is arbitrary. Since the Jacobian is a determinant, it is
+possible that two rows may be swapped depending on the original
+naming of the functions, which may introduce a factor of $-1$
+into the result, which can be ignored.
+\label{remark:minus_jacobian}
+\end{remark}
+\end{example}
+
+\section{Arc Length}
+\label{sec:arc_length}
+Consider a segment of a parametric curve $\mathbf{r}(t) = g(t) \,
+\hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}} + k(t) \,
+\hat{\mathbf{k}}$ between two points $P =\mathbf{r}(t)$ and $Q
+=\mathbf{r}(t + \Delta t)$, as shown in Figure \ref{fig:delta-r}.
+
+\bigskip
+\noindent
+The next question we might ask is what is the length of the segment 
+of the curve between $P$ and $Q$? This length is called the arc
+length and is denoted by $\Delta s$ and can be approximated
+by the chord length $\| \Delta \mathbf{r} \|$. 
+
+
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[cfbox=black,scale=0.35] {images/delta-r.png}}
+\caption{$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$}
+\label{fig:delta-r}
+\end{figure}
+
+
+\noindent
+Specifically we can see from Figure \ref{fig:delta-r} that
+
+\medskip
+\begin{equation*}
+\| \Delta r \| = \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
+\end{equation*}
+
+\medskip
+\noindent
+and so
+
+\begin{equation*}
+\Delta s \approx \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|	
+\end{equation*}
+
+\bigskip
+\noindent
+Now we can compute the infinitesimal arc length $ds$:
+
+\begin{equation*}
+\begin{array}{lllll}
+\Delta s
+&\approx& \| \Delta \mathbf{r} \|							
+			&\qquad \mathrel{\#} \text{approximate $\Delta s$ by $\| \Delta \mathbf{r} \|$} \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \|		
+			&\qquad \mathrel{\#} \Delta \mathbf{r}= \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \\
+[15pt]
+&=& \| \mathbf{r}(t + \Delta t) - \mathbf{r}(t) \| \cdot \dfrac{\Delta t}{\Delta t} 
+			&\qquad \mathrel{\#} \text{multiply by $1 = \dfrac{\Delta t}{\Delta t}$} \\
+[15pt]
+&=& \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t 
+			&\qquad \mathrel{\#} \text{assume $\Delta t > 0$} \\
+[15pt]
+&\Rightarrow& \Delta s \approx \bigg \| \dfrac{\mathbf{r}(t + \Delta t) - 
+			\mathbf{r}(t)}{\Delta t} \bigg \| \cdot  \Delta t
+			&\qquad \mathrel{\#} \text{combine expressions for $\Delta s$} \\
+[15pt]
+&\Rightarrow& {\displaystyle \lim_{\Delta t \to 0} \Delta s =  \lim_{\Delta t \to 0} \Bigg [ 			
+			\bigg \| \dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ]
+			&\qquad \mathrel{\#} \text{take the limit of both sides} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \Bigg  [ \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \| \cdot \Delta t} \Bigg ] 
+			&\qquad \mathrel{\#} \text{$\Delta t \to 0 \Rightarrow \Delta s \to 0 \Rightarrow \!\!
+			{\displaystyle \lim_{\Delta t \to 0} \Delta s = ds}$} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds = \lim_{\Delta t \to 0} \bigg \| 			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{product rule for limits \cite{properties_of_limits}} \\
+[15pt]
+&\Rightarrow& {\displaystyle ds =  \bigg \| \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} \bigg \|
+			\cdot \lim_{\Delta t \to 0} \Delta t}
+			&\qquad \mathrel{\#} \text{for a normed vector space ${\displaystyle X \; \lim \|x_n\| = \|\lim x_n \|}$} \\
+[15pt]
+&\Rightarrow& ds = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \| \cdot dt
+			&\qquad \mathrel{\#} {\displaystyle \lim_{\Delta t \to 0}			
+			\dfrac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t} = \dfrac{d\mathbf{r}}{dt},
+			\; \lim_{\Delta t \to 0} \Delta t} = dt
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\noindent
+Interestingly we can also see this using the Pythagorean theorem.
+Specifically, if we move an infinitesimal distance in the $x$ and
+$y$ directions we get a triangle in the $xy$-plane who's sides
+have length $dx$ and $dy$ and who's hypotenuse is $ds$. This
+scenario is shown for some curve $f(x)$ in Figure
+\ref{fig:pythagorean_theorem}.
+
+%
+%	draw Pythagorean theorem stuff
+%
+\begin{figure}[t]
+\centering
+  \resizebox{0.50 \textwidth}{!} {																							% resize figure if you want 
+  \begin{tikzpicture} [every edge quotes/.append style = {anchor=south, sloped},declare function={f(\x)=1 + \x*\x*\x;}]		% define f(x)
+       \draw[thick, -latex] (-2,0) -- (8.0,0.0) coordinate [label={[right] $x$}];  											% x axis
+       \draw[thick, -latex] (0,-1) -- (0,6.5) coordinate [label={[above] $y$}]; 											% y axis
+       \draw [line width=0.25mm, smooth,samples=100,domain=-0.95:1.40] plot (\x,{f(\x)});									% draw f(x)
+       \draw [draw=none] (1.40, {f(1.40)}) coordinate [label={[above] $f(x)$}];												% label f(x)
+       \coordinate (O) at (0,0); 																							% origin
+       \path (O) node[below left] {$O$};																					% draw origin
+%
+%	various coordinates
+%     
+       \coordinate (x1y1) at (0.5,{f(0.5)});
+       \coordinate (x1y0) at (0.5,0.0);
+       \coordinate (x2y2) at (1.1,{f(1.1});
+       \coordinate (x2y0) at (1.1,0.0);
+       \coordinate (cir)  at (0.85,{f(0.85)});
+%
+       \fill (x1y1) circle (0.05);																					% put a dot on the curve at x1y1
+       \fill (x2y2) circle (0.05);																					% put a dot on the curve at x2y2
+	   \draw [very thick,blue,smooth,samples=100,domain=0.5:1.1] plot (\x,{f(\x)});											% draw blue segment on f(x)
+       \draw[draw=none] (x1y1) -- (x2y2) coordinate [label={[font=\footnotesize,yshift=-0.065cm,xshift=-0.105cm,midway,left] \color{black} $ds$}];
+       \draw[dashed] (x1y1) -- (x1y0) coordinate [label={[font=\scriptsize,below] \color{black} $x_1$}];
+       \draw[dashed] (x2y2) -- (x2y0) coordinate [label={[font=\scriptsize,below] \color{black} $x_2$}];
+       \fill (x1y0) circle (0.05);              																			% put a dot on the x axis at x1
+       \fill (x2y0) circle (0.05);                      																		% put a dot on the x axis at x2
+       \draw[red, thick] (cir) circle (0.150);																				% put a circle on f(x) where ds is
+       
+
+     
+%
+%	draw triangle and circle to show ds
+%   
+%
+%
+%	set up triangle coordinates
+%
+	   \coordinate (a) at (3.75,3.00);
+	   \coordinate (c) at (6.00,3.00);
+	   \coordinate (b) at (6.00,6.00);
+%
+%	draw the triangle
+%	   
+       \draw[] (a) -- (c) coordinate [label={[yshift=-0.1cm,midway,below] ${dx}$}];											% dx
+       \draw[] (c) -- (b) coordinate [label={[midway,right] ${dy}$}];														% dy
+       \draw[blue,very thick] (a) -- (b) coordinate [label={[xshift=-0.25cm,midway,left] \color{black} ${ds}$}];			% ds
+       \draw[red,thick] (5.15,4.29) circle (2.10);																			% big circle
+       \draw[draw=none] (0,0) -- (5.15,1.75)  node[draw,rectangle,below] {${\; ds^2 = dx^2 + dy^2 \;}$};					% draw the pythagorean theorem
+%
+%	draw the angle      
+%       
+       \node[xshift=-2mm, yshift=-2mm] at (4.75,3.60) {$\theta$};
+       \draw[-stealth,thin] (5.10,3.00) arc (0:45:1.60cm);
+%
+%	done
+%
+     \end{tikzpicture}
+    }																					 									% end resizebox                                                            
+ \caption{$f(x)$, $ds$ and the Pythagorean Theorem}
+ \label{fig:pythagorean_theorem}
+ \end{figure}
+ 
+
+\bigskip
+\noindent
+In the two dimensional case where the parameterization our $x =
+g(t)$ and $y = h(t)$ we have $\mathbf{r}(t) = g(t) \,
+\hat{\mathbf{i}} + h(t) \, \hat{\mathbf{j}}$.  Further, since
+derivative is a linear operator
+\cite{wiki:linearity_of_differentiation} we know that
+
+\bigskip
+\begin{equation}
+\dfrac{d\mathbf{r}}{dt} = \dfrac{dg}{dt} \, \hat{\mathbf{i}} + \dfrac{dh}{dt} \, \hat{\mathbf{j}}
+\label{eqn:drdt}
+\end{equation}
+
+
+\bigskip
+\noindent
+The Pythagorean theorem tells us that 
+$ds = \sqrt{dx^2 + dy^2}$. Using
+this expression for $ds$ we can see that
+
+\bigskip
+\begin{equation*}
+\begin{array}{lllll}
+ds
+&=& \sqrt{dx^2 + dy^2}				
+			&\qquad \qquad \mathrel{\#} \text{Figure \ref{fig:pythagorean_theorem}} \\
+[15pt]
+&=& \sqrt{dg^2 + dh^2}	
+			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
+			$x = g(t)$ and $y = h(t)$} \\
+[15pt]
+&=& \sqrt{dg^2 + dh^2} \cdot \dfrac{dt}{dt}
+			&\qquad \qquad \mathrel{\#} \text{multiply by 
+			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
+[15pt]
+&=& \sqrt{dg^2 + dh^2} \cdot \Bigg [\sqrt{\dfrac{1}{dt^2}} \cdot dt \Bigg ]
+			&\qquad \qquad \mathrel{\#} \dfrac{x}{x} 
+			= \sqrt{\left (\dfrac{1}{x} \right)^2} \cdot x 
+			= \sqrt{\dfrac{1}{x^2}} \cdot x, \; x > 0  \\
+[15pt]
+&=& \sqrt{\Big ( dg^2 + dh^2 \Big ) \cdot \left (\dfrac{1}{dt^2} \right)} \cdot dt
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \cdot dt		
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[15pt]
+&=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \cdot dt		
+			&\qquad \qquad \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
+			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
+[15pt]
+&=& \bigg \| \dfrac{d \mathbf{r}}{dt} \bigg \| \cdot dt
+			&\qquad \qquad \mathrel{\#} \text{Equation (\ref{eqn:drdt}) 
+			and the definition of $\|\cdot\|$}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\bigskip
+\noindent
+Now we can see that
+
+\begin{equation*}
+\dfrac{ds}{dt} = \bigg \| \dfrac{d\mathbf{r}}{dt} \bigg \|
+\end{equation*}
+
+\bigskip
+\noindent
+and so
+
+\begin{equation}
+\dfrac{ds}{dt} = \| \dot{\mathbf{r}} \| 
+\label{eqn:mag_r_dot}
+\end{equation}
+
+
+\bigskip
+\subsection{The Unit Tangent Vector $\mathbf{T}$}
+\setstretch{2.0} Since $\dfrac{ds}{dt} = \bigg \|
+\dfrac{d\mathbf{r}}{dt} \bigg \| = \big \| \dot{\mathbf{r}} \big
+\|$ we also know that the unit tangent vector $\mathbf{T} =
+\dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} =
+\dfrac{d\mathbf{r}}{ds}$ \cite{unit_tangent_and_normal_vectors}.
+One way to see this is to notice that
+
+\setstretch{1.0}
+
+
+\medskip
+\begin{equation*}
+\begin{array}{lllll}
+\mathbf{T}
+&=& \dfrac{\dot{\mathbf{r}}} {\|\dot{\mathbf{r}}\|} 
+			&\qquad \mathrel{\#} \text{definition of the unit tangent vector $\mathbf{T}$}\\
+[15 pt]
+&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\|\dot{\mathbf{r}} \|} 
+			&\qquad \mathrel{\#} \dot{\mathbf{r}} = \dfrac{d\mathbf{r}}{dt}
+			\text{ (definition of $\dot{\mathbf{r}}$)} \\
+[15 pt]
+&=& \dfrac{\left (\dfrac{d\mathbf{r}}{dt}\right )}{\left (\dfrac{ds}{dt} \right )} 
+			&\qquad \mathrel{\#} \|\dot{\mathbf{r}}\| = \dfrac{ds}{dt}
+			\text{ (Equation (\ref{eqn:mag_r_dot}))} \\
+[25 pt]
+&=& \dfrac{d\mathbf{r}}{ds}
+			&\qquad \mathrel{\#} \text{simplify}
+\end{array}
+\end{equation*}
+
+
+\bigskip
+\section{The Line Integral}
+\label{sec:line_integrals}
+Consider the definite integral shown in Figure
+\ref{fig:definte_integral}.  Here we want to find the area $S$
+that is above the line segment $[†a,b]$ and below the curve
+$f(x)$.
+
+
+\begin{figure}[H]
+\center{\includegraphics[scale=0.17]
+{images/definite_integral.png}}
+\caption{Definite Integral:  The area ${\mathbf S = {\displaystyle \int_{a}^{b} f(x) \, dx}}$}
+\label{fig:definte_integral}
+\end{figure}
+
+\smallskip
+\setstretch{1.70}
+\noindent
+The line integral, denoted ${\displaystyle \int_{C} f(x,y) \,
+ds}$, is similar except that here we want to find the area above
+the curve $C$ and below the function $f(x,y)$ (so the line
+integral is by definition in three dimensions).  The comparison
+between the definite integral ${\displaystyle \int_{a}^{b} f(x)
+\, dx}$ and the line integral ${\displaystyle \int_{C} f(x,y) \,
+ds}$ is shown in Figure \ref{fig:line_integral}.
+
+\setstretch{1.0}
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[cfbox=black,scale=0.50]
+{images/line_integral.png}}
+\caption{Definite vs. Line Integrals}
+\label{fig:line_integral}
+\end{figure}
+
+\subsubsection{Parameterizing the Curve ${C}$}
+\label{subsubsec:parameterizing_the_curve_C}
+One of the first steps in solving a line integral is to find a
+parameterization for the curve $C$. We would like to find a
+parameterization such that the integral reduces to an integral
+over a single variable, call it $t$.  Then the parametric form of
+$x$ is called $g(t)$ (or sometimes $x(t)$), the parametric form
+of $y$ is called $h(t)$ (or $y(t)$), and the parameter $t \in
+[a,b]$.  That is
+
+
+\begin{equation*}
+ \int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t)) \, ds 
+\end{equation*}
+
+\bigskip
+\setstretch{1.25}
+\noindent
+All good, but what is $ds$? We saw in Section
+\ref{sec:arc_length} that $ds$ is the infinitesimal arc length
+and that by the Pythagorean theorem $ds = \sqrt{dx^2 + dy^2}$
+(Figure \ref{fig:pythagorean_theorem}). Using this expression for
+$ds$ we can see that
+
+\setstretch{1.0}
+
+\smallskip
+\begin{equation*}
+\begin{array}{lllll}
+ds
+&=& \sqrt{dx^2 + dy^2}				
+			&\qquad \qquad \mathrel{\#} \text{by the Pythagorean theorem} \\
+[12pt]
+&=& \sqrt{dg^2 + dh^2}	
+			&\qquad \qquad \mathrel{\#} \text{switch to parametric form: 
+			$x = g(t)$ and $y = h(t)$} \\
+[12pt]
+&=& \sqrt{dg^2 + dh^2} \; \dfrac{dt}{dt}
+			&\qquad \qquad \mathrel{\#} \text{multiply by 
+			$1 = \dfrac{dt}{dt}, \; dt > 0$}  \\
+[12pt]
+&=& \sqrt{\left (\dfrac{dg}{dt} \right)^2 + \left (\dfrac{dh}{dt} \right)^2} \; dt		
+			&\qquad \qquad \mathrel{\#} \text{simplify} \\
+[12pt]
+&=& \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \;  dt		
+			&\qquad \qquad \mathrel{\#} \text{switch notation from Leibniz $\to$ Lagrange: 
+			$\dfrac{df}{dt} = f^{\prime}(t)$} \\	
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+Now we can write the line integral in terms of a single
+variable $t \in [a,b]$ as follows: 
+
+\bigskip
+\begin{equation*}
+\int_{C} f(x,y) \, ds = \int_{a}^{b} f(g(t),h(t))  \sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2} \;  dt	
+\end{equation*}
+
+
+\bigskip
+\setstretch{1.25}
+\noindent
+For example, suppose $C$ is a circle of radius $r$ where we want
+to integrate over the part of the circle in the first
+quadrant. That is, $C$ is $x^2 + y^2 = r^2$.  In this case the
+parameterization is $x(t) = g(t) = r \cos (t)$ and $y(t) = h(t) =
+r \sin (t)$.  Solving for $\sqrt{g^{\prime}(t)^2 +
+h^{\prime}(t)^2}$ we get
+
+\setstretch{1.0}
+
+\begin{equation*}
+\begin{array}{lllll}
+\sqrt{g^{\prime}(t)^2 + h^{\prime}(t)^2}
+&=& \sqrt{(-r \sin (t))^2 + (r \cos(t))^2}
+			&\qquad \mathrel{\#} g^{\prime}(t) = -r \sin (t) 
+			\text{ and }
+			h^{\prime}(t) = r \cos(t) \\
+[5pt]
+&=& \sqrt{r^2 \sin^2(t) + r^2 \cos^2(t)}
+			&\qquad \mathrel{\#} \text{squares} \\
+[5pt]
+&=& \sqrt{r^2 (\sin^2(t) + \cos^2(t))}
+			&\qquad \mathrel{\#} \text{factor out $r^2$} \\
+[5pt]
+&=&  r \sqrt{\sin^2(t) + \cos^2(t)} 
+			&\qquad \mathrel{\#} \sqrt{r^2} = r  \\
+[5pt]
+&=&  r \sqrt{1} 
+			&\qquad \mathrel{\#}  \sin^2(t) + \cos^2(t) = 1 \\
+[5pt]
+&=&  r 
+			&\qquad \mathrel{\#}  \sqrt{1} = 1
+\end{array}
+\end{equation*}
+
+\bigskip
+\noindent
+So in this example $ds = r \, dt$.
+
+\bigskip
+\noindent
+Next we need to specify the limits of integration for the
+parameterization. Since the curve $C$ is a circle in the first
+quadrant the parameter $t \in [ 0,\frac{\pi}{2} ] $ and so the
+limits of integration are $a = 0$ and $b =
+\frac{\pi}{2}$. Putting this all together we get
+
+\bigskip
+\begin{equation*}
+ \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, r \, dt 
+ = r \int_{0}^{\frac{\pi}{2}} f(r\cos (t), r\sin(t)) \, dt 
+\end{equation*}
+
+\bigskip
+\noindent
+for some function $f$.
+
+
+\bigskip
+\subsection{Vector Fields}
+\label{subsec:vector_fields}
+In vector calculus and physics, a vector field is an assignment
+of a vector to each point in a subset of some space
+\cite{galbis2012vector}.  For example, a vector field in the
+plane can be visualized as a collection of arrows with a given
+magnitude and direction, each attached to a point in the
+plane. Vector fields are often used to model the speed
+anddirection of a moving fluid throughout space, or the strength
+and direction of some force, such as the magnetic or
+gravitational force, as it changes from one point to another
+point.
+
+\bigskip
+\noindent
+For example, the wind velocity vector field for the 2011 
+Joplin, MO tornado \cite{joplin_missouri_tornado_2011}
+is shown in Figure \ref{fig:wind_velocity_vector_field}.
+Here the color represents the wind speed $\| \mathbf{v} \|$, 
+where $\mathbf{v}$ is the wind velocity vector.
+
+
+\bigskip
+\begin{figure}[H]
+\center{\includegraphics[scale=0.40] 
+{images/wind-vector-and-isotachs-representing-a-wind-velocity-field-of-2011-Joplin-MO-tornado.png}}
+\caption{2011 Joplin, MO Tornado Wind Velocity Vector Field}
+\label{fig:wind_velocity_vector_field}
+\end{figure}
+
+
+\bigskip
+\noindent
+The general form of a vector field (here in three dimensions) is
+
+\smallskip
+\begin{equation*}
+\vv{F}(x,y,z) = P(x,y,z) \, \hat{i} + Q(x,y,z) \, \hat{j} + R(x,y,z) \, \hat{k}
+\end{equation*}
+
+\bigskip
+\noindent
+where $P$, $Q$, and $R$ are scalar functions.
+
+
+\subsection{Line Integrals of Vector Fields}
+
+\subsection{Fundamental Theorem for Line Integrals}
+
+\subsection{Conservative Vector Fields}
+
+\subsection{Green’s Theorem}
+
+\subsection{Stoke's Theorem}
+
+
+\bigskip
+\section{Surface Integrals}
+
+\bigskip
+\section{Conclusions}
+\label{sec:conclusions}
+
+\section{Acknowledgements}
+Thanks to Dave Neary who pointed out that using the reverse
+triangle inequality in my proof of the Cauchy–Schwarz inequality
+was overkill. In particular, $\|\mathbf{x} - \mathbf{y} \| \geq
+0$ for all $\mathbf{x}$ and $\mathbf{y}$ by Equation
+(\ref{eqn:magnitude}), so the triangle inequality (or reverse
+triangle inequality) was not needed.
+
+\section{Appendix A}
+I had thought that one way to prove the Cauchy–Schwarz inequality
+is to use the reverse triangle inequality, but Dave Neary pointed
+out that I didn't need it.  So I'm leaving the derivation of the
+reverse triangle inequality in this appendix.
+
+\bigskip
+\noindent
+\begin{theorem} {\bf Reverse Triangle Inequality:} 
+$\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big |
+\leq \| \mathbf{x} - \mathbf{y}\|$ 
+
+
+\bigskip
+\noindent 
+We can derive the reverse triangle inequality from the
+triangle inequality
+\cite{vector_norms_and_matrix_norms,wiki:triangle_inequality} by
+observing that
+
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{x} \|
+&=& \| \mathbf{x} + (-\mathbf{y} + \mathbf{y})\| 
+					&\hspace{1.1cm} \mathrel{\#} \text{add 0 to $\mathbf{x}$: }
+					\mathbf{x} =  \mathbf{x} + 0 
+					= \mathbf{x} + (-\mathbf{y} + \mathbf{y}) \\
+[8pt]
+&=& \| (\mathbf{x} - \mathbf{y} ) + \mathbf{y} \|
+					&\hspace{1.1cm} \mathrel{\#} \text{addition is associative: 
+					$\mathbf{v}_1 + (\mathbf{v}_2 + \mathbf{v}_3) 
+					= (\mathbf{v}_1 + \mathbf{v}_2) + \mathbf{v}_3$} \\
+[8pt]
+&\leq& \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \| 
+					&\hspace{1.1cm} \mathrel{\#} \text{by the triangle inequality:
+					$\| \mathbf{v}_1 + \mathbf{v}_2 \| \leq \| \mathbf{v}_1 \| + \| \mathbf{v}_2 \|$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| \leq \| \mathbf{x} - \mathbf{y} \| + \| \mathbf{y} \|
+					&\hspace{1.1cm} \mathrel{\#} \text{combine expressions for $\| \mathbf{x} \|$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \leq \| \mathbf{x} - \mathbf{y} \| 
+					&\hspace{1.1cm} \mathrel{\#} \text{subtract $\| \mathbf{y} \|$ from both sides}
+\end{array}
+\end{equation*}
+
+
+\noindent
+and
+
+\begin{equation*}
+\begin{array}{lllll}
+\| \mathbf{y} \|
+&=& \| \mathbf{y} + (-\mathbf{x} + \mathbf{x})\|
+					&\quad \mathrel{\#} \text{add 0 to $\mathbf{y}$: }
+					\mathbf{y} = \mathbf{y} + 0
+					= \mathbf{y} + (-\mathbf{x} + \mathbf{x}) \\
+[8pt]
+&=& \| (\mathbf{y} - \mathbf{x}) + \mathbf{x} \|
+					&\quad \mathrel{\#} \text{addition is associative} \\
+[8pt] 
+&\leq& \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \| 
+					&\quad \mathrel{\#} \text{by the triangle inequality} \\
+[8pt]
+&\Rightarrow& \| \mathbf{y} \| \leq \| \mathbf{y} - \mathbf{x} \| + \| \mathbf{x} \|
+					&\quad \mathrel{\#} \text{combine expressions for $\| \mathbf{y} \|$}\\
+[8pt]
+&\Rightarrow& \| \mathbf{y} \| - \| \mathbf{x} \| \leq \| \mathbf{y} - \mathbf{x}\| 
+					&\quad \mathrel{\#} \text{subtract $\| \mathbf{x} \|$ from both sides}\\
+[8pt]
+&\Rightarrow& - \Big [ \| \mathbf{y} \| - \| \mathbf{x} \| \Big ]\geq -\| \mathbf{y} - \mathbf{x}\|
+					&\quad \mathrel{\#} \text{multiply both sides by -1: $- 1 * (\mathbf{v}_1 \leq \mathbf{v}_2) 
+					\Rightarrow -\mathbf{v}_1 \geq -\mathbf{v}_2$} \\
+[8pt]
+&\Rightarrow& \| \mathbf{x} \| - \| \mathbf{y} \| \geq -\| \mathbf{x} - \mathbf{y}\|
+					&\quad \mathrel{\#} \| \mathbf{y} - \mathbf{x}\|
+					= \| - (\mathbf{y} - \mathbf{x}) \|
+					= \| \mathbf{x} - \mathbf{y} \|
+					\text{ by Equation (\ref{eqn:magnitude})} \\
+[8pt]
+&\Rightarrow& -\| \mathbf{x} - \mathbf{y}\| \leq \| \mathbf{x} \| - \| \mathbf{y} \| 
+					&\quad \mathrel{\#} \text{rearrange}
+
+
+\end{array}
+\end{equation*}
+
+\bigskip
+\setstretch{1.5}
+\noindent
+Combining the expressions for $\| \mathbf{x} \| - \| \mathbf{y} \|$
+we get $-\| \mathbf{x} - \mathbf{y} \| 
+\leq \| \mathbf{x} \| - \| \mathbf{y} 
+\|\leq \| \mathbf{x} - \mathbf{y} \|$,
+that is, the reverse triangle inequality
+$\big | \| \mathbf{x} \| - \| \mathbf{y} \| \big | 
+\leq \| \mathbf{x} - \mathbf{y}\|. \;\; \square$ 
+\setstretch{1.0}
+\end{theorem}
+
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX}
+\url{https://www.overleaf.com/read/fgtfvmgdkbhh}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

@@ -1,0 +1,113 @@
+
+\documentclass{article}
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+
+
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometryhttps://www.washingtonpost.com/world/europe/amid-impeachment-probe-gordon-sondland-is-overseeing-a-renovation-of-his-residence-that-has-cost-1-million-in-taxpayer-money/2019/10/16/d0eece92-ef86-11e9-bb7e-d2026ee0c199_story.html?tid=sm_tw
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflat						\label{thm:integral_domain}
+
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{relsize}
+ \usepackage[hyphenbreaks]{breakurl}
+ 
+ \newtheorem{thm}{Theorem}[section]
+% \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\title{$\sqrt{?} = \sqrt[3]{ x \sqrt[3] {x \sqrt[3]{x \sqrt[3]{x \cdots}}}}$}
+\author{David Meyer \\ dmm613@gmail.com}
+\date{Last update: \today}
+
+\begin{document}
+\maketitle
+
+\noindent
+Consider:
+
+\begin{center}
+\begin{equation*}
+\begin{array}{llll}
+\sqrt{y}
+&:=&  \sqrt[3]{ x \sqrt[3] {x \sqrt[3]{x \sqrt[3]{x \cdots}}}}
+				&\qquad \qquad \mathrel{\#} \text{define $y$} \\
+[15pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\frac{1}{3}} \,  x^{\frac{1}{9}} \,  x^{\frac{1}{27}} \,  \cdots
+				&\qquad \qquad \mathrel{\#} \text{rewrite radicals as fractions} \\
+[15pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\frac{1}{3} + \frac{1}{9} + \frac{1}{27} + \cdots}
+				&\qquad \qquad \mathrel{\#} \text{rewrite product as a sum ($x^{a}x^{b} = x^{a + b}$)}  \\
+[12pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\sum\limits_{k = 1}^{\infty} {(\frac{1}{3})}^{k}}
+				&\qquad \qquad \mathrel{\#} \sum\limits_{k = 1}^{\infty} {(\frac{1}{3})}^{k}  = \frac{1}{3} + \frac{1}{9} + \frac{1}{27} +  \cdots \\
+[15pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\sum\limits_{k = 0}^{\infty} {(\frac{1}{3})}^{k} - 1}
+				&\qquad \qquad \mathrel{\#}  \sum\limits_{k = 1}^{\infty} {(\frac{1}{3})}^{k}
+				=  \sum\limits_{k = 0}^{\infty} {(\frac{1}{3})}^{k} \! -  {(\frac{1}{3})}^0 
+				= \sum\limits_{k = 0}^{\infty} {(\frac{1}{3})}^{k} \! - 1 \\
+[15pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\frac{1}{1- \frac{1}{3}}  - 1}
+				&\qquad \qquad \mathrel{\#} \text{geometric series:} \sum\limits_{k = 0}^{\infty}  ar^k  = \dfrac{a}{1-r} \text{ for }  |r| < 1 \text{; here }  a = 1  \text{ and }  r = \frac{1}{3}  \\
+[15pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\frac{3}{2}- 1}
+				&\qquad \qquad \mathrel{\#}  \dfrac{1}{1 - \frac{1}{3}}  = \frac{3}{2} \\
+[15pt]
+&\Rightarrow& y^{\frac{1}{2}} = x^{\frac{1}{2}}
+				&\qquad \qquad \mathrel{\#} \frac{3}{2} - 1 = \frac{1}{2} \\
+[15pt]
+&\Rightarrow& y  = x
+				&\qquad \qquad \mathrel{\#} \text{square both sides}
+\end{array}
+\end{equation*}
+\end{center}
+
+\bigskip
+\noindent
+and so apparently $\mathlarger{\mathlarger{\sqrt{x} = \sqrt[3]{ x \sqrt[3] {x \sqrt[3]{x \sqrt[3]{x \cdots}}}}}}$
+
+\end{document}

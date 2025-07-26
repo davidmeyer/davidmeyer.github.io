@@ -1,0 +1,79 @@
+\documentclass[11pt, oneside]{article}
+%
+%   get various packages
+%
+\usepackage{geometry}                                   % See geometry.pdf to learn the layout options
+\geometry{margin=0.50in}
+\geometry{letterpaper}                                  % ... or a4paper or a5paper or ... 
+\usepackage{setspace}
+\usepackage{mathtools}                                  % \coloneqq
+\usepackage{graphicx}
+%
+%	math stuff
+%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{bigints}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{relsize}
+
+
+
+
+\title{Can You Spot The Error?}
+\author{David Meyer \\ \href{mailto:dmm@1-4-5.net}{dmm@1-4-5.net}}
+\date{Last update: \today}
+
+
+\begin{document}
+\maketitle
+
+
+\bigskip
+\Large {
+  \begin{equation*}
+   \begin{array}{rcll} 
+S
+&\coloneqq& {\mathlarger \sum\limits_{n = 0}^{\infty}} \; 2^n	&\qquad \qquad \mathrel{\#} \text{define $S$} \\
+[18pt]
+&=& 2^0 + 2^1 + 2^2 + 2^3 + 2^4 + \cdots 						&\qquad \qquad  \mathrel{\#} \text{expand the sum} \\
+[18pt]
+&=& 1 + 2 + 4 + 8 + 16 + \cdots 								&\qquad \qquad  \mathrel{\#} \text{simplify} \\
+[18pt]
+&=& 1 + 2 \cdot (1 + 2 + 4 + 8 + 16 + \cdots)					&\qquad \qquad \mathrel{\#} \text{factor out $2$} \\
+[18pt]
+&=& 1 + 2S														&\qquad \qquad \mathrel{\#} S = 1 + 2 + 4 + 8 + 16 + \cdots \\
+[18pt]
+&\Rightarrow& S - 2S = 1										&\qquad \qquad \mathrel{\#} \text{solve for $S$} \\
+[18pt]
+&\Rightarrow& -S = 1                            				&\qquad \qquad \mathrel{\#} S - 2S = -S \\
+[18pt]
+&\Rightarrow& \text{\bf \color{red}{\emph{S} = -1}}				&\qquad \qquad \mathrel{\#} \text{{\bf \color{red}{what went wrong?}}}
+\end{array}
+\end{equation*}
+}
+
+
+
+\end{document} 

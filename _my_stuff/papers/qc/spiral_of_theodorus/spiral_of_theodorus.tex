@@ -1,0 +1,245 @@
+\documentclass{article}
+%
+%
+%	spiral_of_theodorus.tex
+%
+%	David Meyer
+%	dmm613@gmail.com
+%	18 Aug 2022
+%
+%
+%   get various packages
+%
+\usepackage[margin=1.0in]{geometry}                                     % adjust margins
+\geometry{letterpaper}                                                  % or a4paper or a5paper or ... 
+\usepackage{url}                                                        % need this to use URLs in bibtex
+\usepackage{setspace}                                                   % need this for \setstrech{...}
+\usepackage{scrextend}                                                  % need this for addmargin
+\usepackage[export]{adjustbox}                                          % need this to get frame for includegraphics
+%
+%   tikz et al
+%
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes,shapes,math,decorations,
+                through,intersections,lindenmayersystems,backgrounds}
+\usepackage{circuitikz}                                                 % draw circuits    
+\usepackage{pgfplots}
+\usepackage{pgfplots}	
+%
+%	more math stuff
+%
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{commath}                                                    % get \norm{x}
+\usepackage{fixmath}                                                    % get \mathbold
+\usepackage{gensymb}                                                    % get \degree
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{esvect}
+%
+%	watermarks
+%
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Draft}
+% \SetWatermarkScale{5}
+% \SetWatermarkLightness {0.9} 
+% \SetWatermarkColor[rgb]{0.7,0,0}
+%
+%
+%	theorems, definitions, etc
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+%
+%	The following code allows you to do
+%
+%	\begin{bmatrix}[r] (or [c] or [l])
+%
+\makeatletter
+\renewcommand*\env@matrix[1][c]{\hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols #1}}
+\makeatother
+%
+%	make \arg{min,max}_{n \to \infty} work nicely
+%
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+%
+%	also a handy command
+%
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+%
+%	Title, author and date
+%
+\title{The Spiral of Theodorus}
+\author{David Meyer \\ \href{mailto:dmm613@gmail.com}
+                            {dmm613@gmail.com}}
+\date{Last Update: \today \\
+	 {\vspace{1.00mm} \small Initial Version: August 18, 2022}}
+
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+\section{A Bit About The Spiral}
+\label{sec:spiral_of_theodorus}
+The Spiral of Theodorus is a 
+fantastic object that is composed of right
+triangles placed edge-to-edge, where the sides of $n^{\text{th}}$
+triangle are of length 1 and $\sqrt{n}$ and the hypotenuse is of
+length $\sqrt{n+1}$.
+
+\bigskip
+\noindent
+The spiral is named for Theodorus of Cyrene, the ancient Greek
+mathematician who lived during the $5^{\text{th}}$ century BC and
+who discovered the spiral \cite{wiki:theodorus_of_cyrene}. It is
+thought that Theodorus used the spiral to prove that all of the 
+square roots of the non-square integers from 3 to 17 are irrational 
+\cite{wiki:spiral_of_theodorus}. Theodorus' original spiral stopped 
+at $n = 16$, apparently because $\sqrt{16+1} = \sqrt{17}$ is the 
+length of the hypotenuse of the last triangle in the spiral that
+doesn't overlap; this is shown in Figure \ref{fig:the_spiral_of_theodorus}.
+
+\bigskip
+\noindent
+Interestingly, in 1958 Erich Teuffel showed that no two hypotenuses
+of the spiral will coincide regardless of how far the spiral
+is continued \cite{wurzelschnecke}. Said another way, no two
+hypotenuses of the spiral will coincide, no matter how big $n$
+gets.
+
+\bigskip
+\noindent
+In any event, the spiral is an incredible object.
+%
+%	Build a command that draws a picture
+%	of the Spiral of Theodorus with parameter
+%	n = the number of triangles.
+%
+\newcommand*{\sqrtspiral}[2][scale=3]{
+    \begin{tikzpicture}[#1]														% start the tikzpicture
+		\def\sqrtlast{#2}														% input parameters
+%																				%																
+%	Parameters																	%
+%																				% 										% 
+        \def \linewidth    {0.30mm}												% line width (make the lines thicker)
+        \def \currentcolor {black}												% default to black
+%																				%
+%	First triangle																% draw first triangle
+%																				%
+        \coordinate (A) at (0,0);                                               % side adjacent
+        \coordinate (B) at (1cm,0);                                             % side opposite
+        \draw[line width = \linewidth,\currentcolor] (A) edge node[fill=white]	% draw first hypotenuse (of length \sqrt{1})
+        	{$\sqrt{1}$} (B);													% first triangle
+%																				%
+%	Draw the n triangles														% draw the n triangles
+%																				%
+        \foreach \n in {1,...,\sqrtlast} {                                      % draw \n triangles
+            \ifthenelse{\equal{\n}{\sqrtlast}}                                  % if it's the last triangle then make it red
+            {                                                                   %
+                \def \currentcolor {red}                                        % draw the last triangle in red (\sqrtlast)
+            }                                                                   %
+            {                                                                   %
+                \def \currentcolor {black}                                      % otherwise make it black
+            }                                                                   % end \ifthenelse 
+            \pgfmathtruncatemacro{\currentsqrt}{\n+1}                           % hypotenuse is of length root (n+1)
+%																				%
+%	Draw everything																%
+%																				%
+            \coordinate (C) at ($(B)!1cm!-90:(A)$);                             % calculate hypotenuse
+            \draw[line width=\linewidth,\currentcolor] (A) edge node[fill=white]% draw hypotenuse
+            	{$\boldmath \sqrt{\currentsqrt}$} (C);							% ...
+            \draw[line width=\linewidth, \currentcolor] (C) edge node[auto]		% draw the side opposite (of length 1)
+            	{$\boldmath 1$} (B);											%
+            \coordinate (w) at ($(B)!4pt!-90:(A)$);                             % build the coordinates for the right angle box
+            \coordinate (z) at ($(B)!4pt!0:(A)$);                               % ...
+            \coordinate (t) at ($(w)!4pt!-90:(B)$);                             % ...
+            \draw [line width=\linewidth,\currentcolor] (w) -- (t) -- (z);		% draw the right angle box
+            \coordinate (B) at (C);                                             % update starting point
+        }                                                                       % end \foreach
+    \end{tikzpicture}                                                           % end tikzpicture
+}                                                                               % end newcommand
+%
+%	draw the spiral wrapped in a figure
+%
+%	Parameters:
+%		\numberoftriangles (aka n)
+%
+\def \numberoftriangles {17}													% number of triangles (aka n)
+%
+%
+%
+\bigskip
+\begin{figure}[H]																% wrap the spiral in a figure
+        \centering																% center the whole thing
+        \resizebox{0.60 \textwidth}{!} {                                        % resize figure if you want
+        	$\boldmath{\sqrtspiral[scale=2.75]{\numberoftriangles}}$			% draw the spiral
+        }                                                                       % end resizebox
+\caption{The Spiral of Theodorus ($n = \numberoftriangles$)}
+\label{fig:the_spiral_of_theodorus}
+\end{figure}
+%
+%	Draw a bigger spiral
+%
+\def \numberoftriangles {128}													% 128 triangles
+%
+%
+%
+\section{A Spiral of Theodorus with $n = \numberoftriangles$}
+%
+%
+%
+\bigskip
+\begin{figure}[H]																% wrap the spiral in a figure
+        \centering																% center the whole thing
+        \resizebox{0.75 \textwidth}{!} {                                        % resize figure if you want
+        	$\boldmath{\sqrtspiral[scale=2.75]{\numberoftriangles}}$			% draw the spiral
+        }                                                                       % end resizebox
+\caption{A spiral with $n = \numberoftriangles$}
+\end{figure}
+%
+%
+%
+%
+\bigskip
+\section*{Acknowledgements}
+%
+%	LaTeX source on overleaf.com
+%
+\section*{\LaTeX \hspace{0.10 mm} Source}
+\url{https://www.overleaf.com/read/scsptwzqxzdt}
+%
+%	get a bibliography
+%
+%	Note:.bib files go in ~/Library/texmf/bibtex/bib with TeXShop (MacTeX).
+%	You can also use an absolute path, e.g. \bibliography{/Users/dmm/papers/bib/qc}
+%
+\bibliographystyle{plain}
+\bibliography{qc}
+%
+%	done
+%
+\end{document} 
+

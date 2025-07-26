@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: prices_metonic_gear_train.aux
+The style file: plain.bst
+Database file #1: astronomy.bib
+You've used 17 entries,
+            2118 wiz_defined-function locations,
+            607 strings with 7263 characters,
+and the built_in function-call counts, 5053 in all, are:
+= -- 483
+> -- 243
+< -- 0
++ -- 99
+- -- 82
+* -- 343
+:= -- 882
+add.period$ -- 58
+call.type$ -- 17
+change.case$ -- 92
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 159
+empty$ -- 408
+format.name$ -- 82
+if$ -- 1039
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 10
+newline$ -- 95
+num.names$ -- 34
+pop$ -- 100
+preamble$ -- 1
+purify$ -- 75
+quote$ -- 0
+skip$ -- 112
+stack$ -- 0
+substring$ -- 260
+swap$ -- 17
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 0
+while$ -- 45
+width$ -- 19
+write$ -- 196
