@@ -19,16 +19,18 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
+	   <a href="/images/dmm.jpg">
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
-
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/astronomy">Astronomy</a>
+            <a href="{{ site.baseurl }}/biology">Biology</a>
+	    <a href="{{ site.baseurl }}/physics">Physics</a>
+            <a href="{{ site.baseurl }}/qc">Mathematics</a>
+            <a href="{{ site.baseurl }}/ml">Machine Learning</a>
           </nav>
         </header>
       </div>
@@ -45,7 +47,14 @@
         </footer>
       </div>
     </div>
-
     {% include analytics.html %}
   </body>
+<!--
+	[11/06/2022]
+	
+	The following chunk of HTML verifies this page in my
+	Profile metadata over on Mastodon... 
+-->
+  <a rel="me" href="https://mas.to/@dmm"></a>
+  <a rel="me" href="https://mathstodon.xyz/@dmm"></a>
 </html>
