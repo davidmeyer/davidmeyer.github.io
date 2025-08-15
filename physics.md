@@ -21,7 +21,7 @@
        rel="noopener noreferrer">
 	A Few Notes on Maxwell's Equations</a>
 <br>
-<li><a href="../qc//oscillators.pdf"
+<li><a href="../qc/oscillators.pdf"
        target="_blank"
 	rel="noopener noreferrer">
 	A Few Notes on Harmonic Oscillators and Fields</a>
@@ -65,7 +65,7 @@
        Notes on the Dual Beam Splitter Experiment </a>
 <br>
 <hr>
-<i>Last Update: 12.24.2024 by
+<i>Last Update: 08.15.2025 by
 <a href="mailto:dmm613@gmail.com">dmm613@gmail.com</a>
 </i>
 
